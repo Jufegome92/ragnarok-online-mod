@@ -1,0 +1,603 @@
+{
+  "class": "Novice",
+  "subclass": "Archer",
+
+  "granted_at_character_level": 2,
+
+  "hit_points": {
+    "base": 8,
+    "per_level": 6,
+    "constitution_modifier_applies": true,
+    "formula_note": "At Archer levels, gain 6 HP + Constitution modifier per level."
+  },
+
+  "spellcasting_ability": "Wisdom",
+  "spellcasting_save_dc_formula": "8 + proficiency_bonus + wisdom_modifier",
+
+  "mana_points": {
+    "base_formula": "4 + (2 * character_level)",
+    "modifier_scaling": "character_level * floor(spellcasting_modifier / 2)",
+    "total_formula": "(4 + (2 * character_level)) + (character_level * floor(spellcasting_modifier / 2))",
+    "formula_note": "For Archer, spellcasting_modifier uses Wisdom."
+  },
+
+  "proficiencies": {
+    "saving_throws": [
+      "Dexterity",
+      "Wisdom"
+    ],
+    "armor": [
+      "Light Armor"
+    ],
+    "weapons": [
+      "Longbow",
+      "Light Crossbow",
+      "Heavy Crossbow",
+      "Hand Crossbow"
+    ],
+    "tools": [],
+    "skills": {
+      "fixed": ["Perception", "Survival"],
+      "expertise": 1,
+      "note": "Archer does not grant additional skill proficiencies by default; Novice already provides the base skill package."
+    }
+  },
+
+  "design_scope": {
+    "max_level": 12,
+    "first_job_start_level": 2,
+    "second_job_target_level": 6,
+    "resource_system": {
+      "name": "MP",
+      "description": "Recurso principal usado por habilidades activas y técnicas del Archer.",
+      "design_notes": [
+        "El MP escala con nivel para evitar que el kit quede obsoleto.",
+        "El MP depende parcialmente del spellcasting ability modifier del job.",
+        "En Archer, Wisdom mejora la frecuencia de uso, pero no el daño base ni el ataque directo.",
+        "Dexterity sigue siendo el atributo principal ofensivo del Archer."
+      ]
+    }
+  },
+
+  "progression": {
+    "level_2": {
+      "class_state": "Archer",
+      "features_gained": [
+        "Owl's Eye",
+        "Vulture's Eye",
+        "Double Strafe"
+      ]
+    },
+    "level_3": {
+      "features_gained": [
+        "Arrow Crafting"
+      ]
+    },
+    "level_4": {
+      "features_gained": [
+        "Improve Concentration"
+      ]
+    },
+    "level_5": {
+      "features_gained": [
+        "Arrow Shower"
+      ]
+    },
+    "level_6": {
+      "features_gained": [
+        "Arrow Repel"
+      ],
+      "transition_note": "Nivel ideal para comenzar la especialización hacia el Second Job."
+    }
+  },
+
+  "skills": [
+    {
+      "id": "archer_owls_eye",
+      "name": "Owl's Eye",
+      "learned_at_level": 2,
+      "category": "Stance",
+      "action_type": "Bonus Action",
+      "cost_mp": 1,
+      "requires_concentration": false,
+      "requires": [
+        "Ranged weapon equipped"
+      ],
+      "duration": "Until switched off, replaced by another stance, or combat ends",
+      "description": "El Archer adopta una postura de precisión, enfocándose en leer el movimiento del objetivo y ejecutar disparos más exactos.",
+      "base_effects": {
+        "attack_roll_bonus_ranged": 2,
+        "critical_threshold_bonus": 1
+      },
+      "scaling": {
+        "type": "milestone_and_relevance",
+        "milestones": [
+          {
+            "level": 2,
+            "effects": {
+              "attack_roll_bonus_ranged": 2,
+              "critical_threshold_bonus": 1
+            }
+          },
+          {
+            "level": 5,
+            "effects": {
+              "attack_roll_bonus_ranged": 3
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "target_ac_reduction_for_your_attacks": 2
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "ignore_disadvantage_on_attacks": true
+            }
+          }
+        ]
+      },
+      "synergies": [
+        "Double Strafe gains better hit reliability",
+        "Crafted arrows become easier to apply on priority targets",
+        "Pairs naturally with single-target second job upgrades"
+      ],
+      "design_notes": [
+        "No aumenta el rango; se enfoca en precisión.",
+        "Debe sentirse como una decisión táctica, no como un buff permanente gratuito."
+      ]
+    },
+    {
+      "id": "archer_vultures_eye",
+      "name": "Vulture's Eye",
+      "learned_at_level": 2,
+      "category": "Stance",
+      "action_type": "Bonus Action",
+      "cost_mp": 1,
+      "requires_concentration": false,
+      "requires": [
+        "Ranged weapon equipped"
+      ],
+      "duration": "Until switched off, replaced by another stance, or combat ends",
+      "description": "El Archer expande su dominio del campo de batalla, priorizando alcance y presión constante sobre objetivos distantes.",
+      "base_effects": {
+        "effective_range_bonus_percent": 25,
+        "ignore_disadvantage_in_melee_with_crossbows": true
+      },
+      "scaling": {
+        "type": "milestone_and_relevance",
+        "milestones": [
+          {
+            "level": 2,
+            "effects": {
+              "effective_range_bonus_percent": 25,
+              "ignore_disadvantage_in_melee_with_crossbows": true
+            }
+          },
+          {
+            "level": 5,
+            "effects": {
+              "effective_range_bonus_percent": 50
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "bonus_damage_vs_targets_beyond_10m": "1d6"
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "reaction_attack_when_enemy_enters_effective_range": true
+            }
+          }
+        ]
+      },
+      "synergies": [
+        "Double Strafe can be used from farther positions more effectively",
+        "Arrow Shower gains stronger battlefield reach",
+        "Pairs naturally with long-range second job upgrades"
+      ],
+      "design_notes": [
+        "No compite con Owl's Eye por precisión directa.",
+        "Debe ser una postura de alcance, presión y control espacial."
+      ]
+    },
+    {
+      "id": "archer_improve_concentration",
+      "name": "Improve Concentration",
+      "learned_at_level": 4,
+      "category": "Buff",
+      "action_type": "Bonus Action",
+      "cost_mp": 3,
+      "requires_concentration": true,
+      "requires": [],
+      "duration": "2 turns",
+      "description": "El Archer entra en un estado de enfoque sostenido, mejorando su compostura, precisión y capacidad de mantenerse operativo bajo presión.",
+      "base_effects": {
+        "attack_roll_bonus_ranged": 1,
+        "armor_class_bonus": 1
+      },
+      "scaling": {
+        "type": "milestone_and_efficiency",
+        "milestones": [
+          {
+            "level": 4,
+            "effects": {
+              "attack_roll_bonus_ranged": 1,
+              "armor_class_bonus": 1
+            }
+          },
+          {
+            "level": 6,
+            "effects": {
+              "attack_roll_bonus_ranged": 2,
+              "armor_class_bonus": 2
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "duration_turns": 3
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "reduce_battle_attack_mp_cost_by_1_minimum_1": true
+            }
+          }
+        ]
+      },
+      "synergies": [
+        "Increases consistency of Double Strafe and Arrow Shower",
+        "Supports both Owl's Eye and Vulture's Eye playstyles",
+        "Can become a central throughput buff for later second job upgrades"
+      ],
+      "design_notes": [
+        "Usa concentración para que no sea gratis ni acumulable con todo.",
+        "Se siente como enfoque marcial sostenido, no como magia."
+      ]
+    },
+    {
+      "id": "archer_double_strafe",
+      "name": "Double Strafe",
+      "learned_at_level": 2,
+      "category": "Attack",
+      "action_type": "Action",
+      "cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Ranged weapon equipped",
+        "Valid target in line of sight"
+      ],
+      "duration": "Instant",
+      "description": "El Archer ejecuta dos disparos rápidos contra el mismo objetivo. Es su técnica base de presión ofensiva sostenida.",
+      "base_effects": {
+        "number_of_hits": 2,
+        "damage_profile": "Weapon-based ranged damage on each hit",
+        "crafted_arrow_interaction": "Each hit can consume and apply crafted arrow effects"
+      },
+      "scaling": {
+        "type": "milestone_damage_scaling",
+        "milestones": [
+          {
+            "level": 2,
+            "effects": {
+              "number_of_hits": 2
+            }
+          },
+          {
+            "level": 5,
+            "effects": {
+              "bonus_damage_per_hit": "1d4"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "bonus_damage_per_hit": "1d6"
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "bonus_damage_per_hit": "1d8"
+            }
+          }
+        ]
+      },
+      "synergies": [
+        "Strongest base synergy with Owl's Eye",
+        "Consumes Arrow Crafting charges efficiently",
+        "Acts as the main upgrade target for second job single-target branches"
+      ],
+      "design_notes": [
+        "No debe convertirse en una spell imitation.",
+        "Debe escalar en daño, interacción y consistencia."
+      ]
+    },
+    {
+      "id": "archer_arrow_shower",
+      "name": "Arrow Shower",
+      "learned_at_level": 5,
+      "category": "Attack",
+      "action_type": "Action",
+      "cost_mp": 4,
+      "requires_concentration": false,
+      "requires": [
+        "Ranged weapon equipped",
+        "Target point within ability range"
+      ],
+      "duration": "Instant",
+      "range": "10m",
+      "description": "El Archer descarga una lluvia de flechas sobre un área, castigando grupos y alterando el control del espacio.",
+      "base_effects": {
+        "area_of_effect": "Small cone area",
+        "damage_profile": "Each target in area takes weapon-based ranged damage",
+        "control_profile": "Pushes targets hit by the attack 2 meters away"
+      },
+      "scaling": {
+        "type": "milestone_and_control",
+        "milestones": [
+          {
+            "level": 5,
+            "effects": {
+              "area_of_effect": "70-degree cone",
+              "bonus_damage": "1d4"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "area_of_effect": "90-degree cone",
+              "bonus_damage": "1d6"
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "range": "15m",
+              "bonus_damage": "1d8"
+            }
+          }
+        ]
+      },
+      "synergies": [
+        "Benefits from Vulture's Eye for safer battlefield pressure",
+        "Can apply crafted arrow logic if desired in simplified AoE form",
+        "Natural anchor for area-focused second job branches"
+      ],
+      "design_notes": [
+        "Debe hacer menos daño por objetivo que Double Strafe.",
+        "Su valor crece por control, no solo por números."
+      ]
+    },
+    {
+      "id": "archer_arrow_crafting",
+      "name": "Arrow Crafting",
+      "learned_at_level": 3,
+      "category": "Buff",
+      "action_type": "Bonus Action",
+      "cost_mp": 1,
+      "requires_concentration": false,
+      "requires": [
+        "Ranged weapon equipped"
+      ],
+      "duration": "2 turns or until charges are spent",
+      "description": "El Archer prepara munición especial para adaptar su ofensiva a la situación del combate.",
+      "base_effects": {
+        "choose_one": [
+          "Fire Arrow",
+          "Poison Arrow",
+          "Shock Arrow",
+          "Radiant Arrow"
+        ],
+        "charges": 2,
+        "application": "Applies to the next successful ranged attacks"
+      },
+      "arrow_types": {
+        "Fire Arrow": {
+          "base_bonus_damage": "1d4",
+          "secondary_effect_at_6": "Burned on failed CON save"
+        },
+        "Poison Arrow": {
+          "base_bonus_damage": "1d4",
+          "secondary_effect_at_6": "Poisoned on failed CON save"
+        },
+        "Shock Arrow": {
+          "base_bonus_damage": "1d4",
+          "secondary_effect_at_6": "Shocked on failed CON save"
+        },
+        "Radiant Arrow": {
+          "base_bonus_damage": "1d4",
+          "secondary_effect_at_6": "Dazed on failed CON save"
+        }
+      },
+      "scaling": {
+        "type": "milestone_and_effect_growth",
+        "milestones": [
+          {
+            "level": 3,
+            "effects": {
+              "charges": 2
+            }
+          },
+          {
+            "level": 5,
+            "effects": {
+              "bonus_damage_per_arrow": "1d6"
+            }
+          },
+          {
+            "level": 6,
+            "effects": {
+              "secondary_effects_enabled": true,
+              "secondary_effect_duration": "2 turns"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "charges": 3
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "bonus_damage_per_arrow": "1d8"
+            }
+          }
+        ]
+      },
+      "synergies": [
+        "Strong with Double Strafe because both hits can consume charges",
+        "Supports varied play patterns without needing caster spell lists",
+        "One of the best hooks for second job specialization"
+      ],
+      "design_notes": [
+        "No debe sentirse como sistema de inventario tedioso.",
+        "Es preparación táctica, no crafteo logístico."
+      ]
+    },
+    {
+      "id": "archer_arrow_repel",
+      "name": "Arrow Repel",
+      "learned_at_level": 6,
+      "category": "Attack",
+      "action_type": "Action",
+      "cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Enemy in close range"
+      ],
+      "duration": "Instant",
+      "damage": "Weapon-based ranged damage",
+      "description": "El Archer repele a un enemigo cercano para recrear la distancia ideal de combate.",
+      "base_effects": {
+        "push_distance_meters": 3,
+        "ignore_disadvantage_in_melee": true,
+        "opportunity_attack_interaction": "Pushed target cannot immediately punish disengagement in the same exchange"
+      },
+      "scaling": {
+        "type": "milestone_and_control_relevance",
+        "milestones": [
+          {
+            "level": 6,
+            "effects": {
+              "push_distance_meters": 3,
+              "bonus_damage": "1d4"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "push_distance_meters": 4,
+              "bonus_damage": "1d6",
+              "advantage_on_attack_roll": true
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "bonus_damage": "1d8",
+              "additional_effect": "Chest Trauma on failed CON save",
+              "additional_effect_duration": "2 turns"
+            }
+          }
+        ]
+      },
+      "synergies": [
+        "Creates spacing to re-enter Owl's Eye or Vulture's Eye patterns",
+        "Helps sustain ranged identity without relying only on disengage",
+        "Natural upgrade target for control-oriented second job branches"
+      ],
+      "design_notes": [
+        "Debe resolver presión melee sin invalidar posicionamiento.",
+        "Es una herramienta de espacio, no de burst."
+      ]
+    }
+  ],
+
+  "summary_tables": {
+    "skill_unlocks": [
+      {
+        "level": 2,
+        "skills": [
+          "Owl's Eye",
+          "Vulture's Eye",
+          "Double Strafe"
+        ]
+      },
+      {
+        "level": 3,
+        "skills": [
+          "Arrow Crafting"
+        ]
+      },
+      {
+        "level": 4,
+        "skills": [
+          "Improve Concentration"
+        ]
+      },
+      {
+        "level": 5,
+        "skills": [
+          "Arrow Shower"
+        ]
+      },
+      {
+        "level": 6,
+        "skills": [
+          "Arrow Repel"
+        ]
+      }
+    ],
+    "quick_costs": [
+      {
+        "name": "Owl's Eye",
+        "cost_mp": 1
+      },
+      {
+        "name": "Vulture's Eye",
+        "cost_mp": 1
+      },
+      {
+        "name": "Improve Concentration",
+        "cost_mp": 3
+      },
+      {
+        "name": "Double Strafe",
+        "cost_mp": 2
+      },
+      {
+        "name": "Arrow Shower",
+        "cost_mp": 4
+      },
+      {
+        "name": "Arrow Crafting",
+        "cost_mp": 1
+      },
+      {
+        "name": "Arrow Repel",
+        "cost_mp": 2
+      }
+    ]
+  },
+
+  "core_design_rules": [
+    "El Archer no usa spells tradicionales; usa técnicas marciales con consumo de MP.",
+    "Las habilidades del first job no deben quedar obsoletas; todas deben escalar en daño, bonus, utilidad o interacciones.",
+    "El second job no debería reemplazar el kit base, sino evolucionarlo.",
+    "Owl's Eye y Vulture's Eye son decisiones activas, no pasivas permanentes.",
+    "Improve Concentration usa concentración para imponer costo de oportunidad real.",
+    "Arrow Crafting debe sentirse como adaptación táctica, no como sistema de inventario complejo.",
+    "Double Strafe es el núcleo ofensivo single-target.",
+    "Arrow Shower es la pieza de presión de área y control ligero.",
+    "Arrow Repel protege la identidad ranged frente a presión melee."
+  ]
+}

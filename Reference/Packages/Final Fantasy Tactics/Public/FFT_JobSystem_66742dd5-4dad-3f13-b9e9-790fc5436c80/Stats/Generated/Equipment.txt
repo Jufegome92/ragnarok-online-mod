@@ -1,0 +1,9 @@
+new equipment "EQP_Odin"
+add initialweaponset "Melee"
+add equipmentgroup
+add equipment entry "FFT_WPN_Spear_Gungnir"
+add equipmentgroup
+add equipment entry "ARM_Plate_Body"
+add equipmentgroup
+add equipment entry "ARM_Helmet_Leather"
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="ActionResourceDefinitions">
+        <node id="root">
+            <children>
+                <node id="ActionResourceDefinition">
+                    <attribute id="Description" type="TranslatedString" handle="hb963e1e1g3f57g82a7gd05bgf39454ab402b" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hb63decc7ga7efg8847g94ccg8f38fbfc05f3" version="1"/>
+                    <attribute id="Error" type="TranslatedString" handle="h90c420f5g4ab1g9128g466ag16a46ca11cf1" version="1"/>
+                    <attribute id="IsHidden" type="bool" value="false"/>
+                    <attribute id="IsSpellResource" type="bool" value="false"/>
+                    <attribute id="MaxLevel" type="uint32" value="0"/>
+                    <attribute id="Name" type="FixedString" value="FFTMana"/>
+                    <attribute id="PartyActionResource" type="bool" value="false"/>
+                    <attribute id="ReplenishType" type="FixedString" value="ShortRest"/>
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+                    <attribute id="UUID" type="guid" value="4e5d3e6c-8e76-4163-9d3e-d63c3b4f7625"/>
+                    <attribute id="UpdatesSpellPowerLevel" type="bool" value="false"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

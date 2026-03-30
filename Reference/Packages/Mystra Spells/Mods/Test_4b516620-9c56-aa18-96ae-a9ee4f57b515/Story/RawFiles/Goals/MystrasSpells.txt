@@ -1,0 +1,969 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+// blade cantrips
+DB_BladeAttackCantrip_Spell("Target_BoomingBladeMove");
+DB_BladeAttackCantrip_Spell("Target_GreenFlameBlade");
+
+
+// cleric cantrips
+DB_ClericCantrip_Spell("Target_TollTheDead_Mystra");
+DB_ClericCantrip_Spell("Shout_HandOfRadiance");
+DB_ClericCantrip_Spell("Shout_WordOfRadiance");
+DB_ClericCantrip_Spell("Projectile_Moonflare_Damage");
+
+
+// steel wind strike
+DB_SteelWindStrikeSpell("Projectile_SteelWindStrikeNew");
+DB_SteelWindStrikeSpell("Projectile_SteelWindStrikeNew_6");
+DB_SteelWindStrikeSpell("Projectile_SteelWindStrikeNew_7");
+DB_SteelWindStrikeSpell("Projectile_SteelWindStrikeNew_8");
+DB_SteelWindStrikeSpell("Projectile_SteelWindStrikeNew_9");
+
+
+// summon greater demon
+DB_SummonGreaterDemon_Spell("Target_SummonGreaterDemon_Vrock");
+DB_SummonGreaterDemon_Spell("Target_SummonGreaterDemon_Vrock_5");
+DB_SummonGreaterDemon_Spell("Target_SummonGreaterDemon_Vrock_6");
+DB_SummonGreaterDemon_Spell("Target_SummonGreaterDemon_Vrock_7");
+DB_SummonGreaterDemon_Spell("Target_SummonGreaterDemon_Vrock_8");
+DB_SummonGreaterDemon_Spell("Target_SummonGreaterDemon_Vrock_9");
+
+// fissure
+DB_Mystras_Spells_Fissure("Zone_Fissure");
+DB_Mystras_Spells_Fissure("Zone_Fissure_7");
+DB_Mystras_Spells_Fissure("Zone_Fissure_8");
+DB_Mystras_Spells_Fissure("Zone_Fissure_9");
+
+// forcibly give Reaper_Mystra if everything else fails
+DB_Mystras_Spells_Reaper_Cantrips("Projectile_SappingSting");
+DB_Mystras_Spells_Reaper_Cantrips("Projectile_LarlochsMinorDrain");
+
+// give out stuff like Reaper_Mystra
+DB_Mystras_Spells_LevelInit(0);
+
+// cos
+DB_Mystras_Spells_Cos(0, 1.000000);
+DB_Mystras_Spells_Cos(1, 0.999848);
+DB_Mystras_Spells_Cos(2, 0.999391);
+DB_Mystras_Spells_Cos(3, 0.998630);
+DB_Mystras_Spells_Cos(4, 0.997564);
+DB_Mystras_Spells_Cos(5, 0.996195);
+DB_Mystras_Spells_Cos(6, 0.994522);
+DB_Mystras_Spells_Cos(7, 0.992546);
+DB_Mystras_Spells_Cos(8, 0.990268);
+DB_Mystras_Spells_Cos(9, 0.987688);
+DB_Mystras_Spells_Cos(10, 0.984808);
+DB_Mystras_Spells_Cos(11, 0.981627);
+DB_Mystras_Spells_Cos(12, 0.978148);
+DB_Mystras_Spells_Cos(13, 0.974370);
+DB_Mystras_Spells_Cos(14, 0.970296);
+DB_Mystras_Spells_Cos(15, 0.965926);
+DB_Mystras_Spells_Cos(16, 0.961262);
+DB_Mystras_Spells_Cos(17, 0.956305);
+DB_Mystras_Spells_Cos(18, 0.951057);
+DB_Mystras_Spells_Cos(19, 0.945519);
+DB_Mystras_Spells_Cos(20, 0.939693);
+DB_Mystras_Spells_Cos(21, 0.933580);
+DB_Mystras_Spells_Cos(22, 0.927184);
+DB_Mystras_Spells_Cos(23, 0.920505);
+DB_Mystras_Spells_Cos(24, 0.913545);
+DB_Mystras_Spells_Cos(25, 0.906308);
+DB_Mystras_Spells_Cos(26, 0.898794);
+DB_Mystras_Spells_Cos(27, 0.891007);
+DB_Mystras_Spells_Cos(28, 0.882948);
+DB_Mystras_Spells_Cos(29, 0.874620);
+DB_Mystras_Spells_Cos(30, 0.866025);
+DB_Mystras_Spells_Cos(31, 0.857167);
+DB_Mystras_Spells_Cos(32, 0.848048);
+DB_Mystras_Spells_Cos(33, 0.838671);
+DB_Mystras_Spells_Cos(34, 0.829038);
+DB_Mystras_Spells_Cos(35, 0.819152);
+DB_Mystras_Spells_Cos(36, 0.809017);
+DB_Mystras_Spells_Cos(37, 0.798636);
+DB_Mystras_Spells_Cos(38, 0.788011);
+DB_Mystras_Spells_Cos(39, 0.777146);
+DB_Mystras_Spells_Cos(40, 0.766044);
+DB_Mystras_Spells_Cos(41, 0.754710);
+DB_Mystras_Spells_Cos(42, 0.743145);
+DB_Mystras_Spells_Cos(43, 0.731354);
+DB_Mystras_Spells_Cos(44, 0.719340);
+DB_Mystras_Spells_Cos(45, 0.707107);
+DB_Mystras_Spells_Cos(46, 0.694658);
+DB_Mystras_Spells_Cos(47, 0.681998);
+DB_Mystras_Spells_Cos(48, 0.669131);
+DB_Mystras_Spells_Cos(49, 0.656059);
+DB_Mystras_Spells_Cos(50, 0.642788);
+DB_Mystras_Spells_Cos(51, 0.629320);
+DB_Mystras_Spells_Cos(52, 0.615661);
+DB_Mystras_Spells_Cos(53, 0.601815);
+DB_Mystras_Spells_Cos(54, 0.587785);
+DB_Mystras_Spells_Cos(55, 0.573576);
+DB_Mystras_Spells_Cos(56, 0.559193);
+DB_Mystras_Spells_Cos(57, 0.544639);
+DB_Mystras_Spells_Cos(58, 0.529919);
+DB_Mystras_Spells_Cos(59, 0.515038);
+DB_Mystras_Spells_Cos(60, 0.500000);
+DB_Mystras_Spells_Cos(61, 0.484810);
+DB_Mystras_Spells_Cos(62, 0.469472);
+DB_Mystras_Spells_Cos(63, 0.453990);
+DB_Mystras_Spells_Cos(64, 0.438371);
+DB_Mystras_Spells_Cos(65, 0.422618);
+DB_Mystras_Spells_Cos(66, 0.406737);
+DB_Mystras_Spells_Cos(67, 0.390731);
+DB_Mystras_Spells_Cos(68, 0.374607);
+DB_Mystras_Spells_Cos(69, 0.358368);
+DB_Mystras_Spells_Cos(70, 0.342020);
+DB_Mystras_Spells_Cos(71, 0.325568);
+DB_Mystras_Spells_Cos(72, 0.309017);
+DB_Mystras_Spells_Cos(73, 0.292372);
+DB_Mystras_Spells_Cos(74, 0.275637);
+DB_Mystras_Spells_Cos(75, 0.258819);
+DB_Mystras_Spells_Cos(76, 0.241922);
+DB_Mystras_Spells_Cos(77, 0.224951);
+DB_Mystras_Spells_Cos(78, 0.207912);
+DB_Mystras_Spells_Cos(79, 0.190809);
+DB_Mystras_Spells_Cos(80, 0.173648);
+DB_Mystras_Spells_Cos(81, 0.156434);
+DB_Mystras_Spells_Cos(82, 0.139173);
+DB_Mystras_Spells_Cos(83, 0.121869);
+DB_Mystras_Spells_Cos(84, 0.104528);
+DB_Mystras_Spells_Cos(85, 0.087156);
+DB_Mystras_Spells_Cos(86, 0.069756);
+DB_Mystras_Spells_Cos(87, 0.052336);
+DB_Mystras_Spells_Cos(88, 0.034899);
+DB_Mystras_Spells_Cos(89, 0.017452);
+DB_Mystras_Spells_Cos(90, 0.000000);
+DB_Mystras_Spells_Cos(91, -0.017452);
+DB_Mystras_Spells_Cos(92, -0.034899);
+DB_Mystras_Spells_Cos(93, -0.052336);
+DB_Mystras_Spells_Cos(94, -0.069756);
+DB_Mystras_Spells_Cos(95, -0.087156);
+DB_Mystras_Spells_Cos(96, -0.104528);
+DB_Mystras_Spells_Cos(97, -0.121869);
+DB_Mystras_Spells_Cos(98, -0.139173);
+DB_Mystras_Spells_Cos(99, -0.156434);
+DB_Mystras_Spells_Cos(100, -0.173648);
+DB_Mystras_Spells_Cos(101, -0.190809);
+DB_Mystras_Spells_Cos(102, -0.207912);
+DB_Mystras_Spells_Cos(103, -0.224951);
+DB_Mystras_Spells_Cos(104, -0.241922);
+DB_Mystras_Spells_Cos(105, -0.258819);
+DB_Mystras_Spells_Cos(106, -0.275637);
+DB_Mystras_Spells_Cos(107, -0.292372);
+DB_Mystras_Spells_Cos(108, -0.309017);
+DB_Mystras_Spells_Cos(109, -0.325568);
+DB_Mystras_Spells_Cos(110, -0.342020);
+DB_Mystras_Spells_Cos(111, -0.358368);
+DB_Mystras_Spells_Cos(112, -0.374607);
+DB_Mystras_Spells_Cos(113, -0.390731);
+DB_Mystras_Spells_Cos(114, -0.406737);
+DB_Mystras_Spells_Cos(115, -0.422618);
+DB_Mystras_Spells_Cos(116, -0.438371);
+DB_Mystras_Spells_Cos(117, -0.453990);
+DB_Mystras_Spells_Cos(118, -0.469472);
+DB_Mystras_Spells_Cos(119, -0.484810);
+DB_Mystras_Spells_Cos(120, -0.500000);
+DB_Mystras_Spells_Cos(121, -0.515038);
+DB_Mystras_Spells_Cos(122, -0.529919);
+DB_Mystras_Spells_Cos(123, -0.544639);
+DB_Mystras_Spells_Cos(124, -0.559193);
+DB_Mystras_Spells_Cos(125, -0.573576);
+DB_Mystras_Spells_Cos(126, -0.587785);
+DB_Mystras_Spells_Cos(127, -0.601815);
+DB_Mystras_Spells_Cos(128, -0.615661);
+DB_Mystras_Spells_Cos(129, -0.629320);
+DB_Mystras_Spells_Cos(130, -0.642788);
+DB_Mystras_Spells_Cos(131, -0.656059);
+DB_Mystras_Spells_Cos(132, -0.669131);
+DB_Mystras_Spells_Cos(133, -0.681998);
+DB_Mystras_Spells_Cos(134, -0.694658);
+DB_Mystras_Spells_Cos(135, -0.707107);
+DB_Mystras_Spells_Cos(136, -0.719340);
+DB_Mystras_Spells_Cos(137, -0.731354);
+DB_Mystras_Spells_Cos(138, -0.743145);
+DB_Mystras_Spells_Cos(139, -0.754710);
+DB_Mystras_Spells_Cos(140, -0.766044);
+DB_Mystras_Spells_Cos(141, -0.777146);
+DB_Mystras_Spells_Cos(142, -0.788011);
+DB_Mystras_Spells_Cos(143, -0.798636);
+DB_Mystras_Spells_Cos(144, -0.809017);
+DB_Mystras_Spells_Cos(145, -0.819152);
+DB_Mystras_Spells_Cos(146, -0.829038);
+DB_Mystras_Spells_Cos(147, -0.838671);
+DB_Mystras_Spells_Cos(148, -0.848048);
+DB_Mystras_Spells_Cos(149, -0.857167);
+DB_Mystras_Spells_Cos(150, -0.866025);
+DB_Mystras_Spells_Cos(151, -0.874620);
+DB_Mystras_Spells_Cos(152, -0.882948);
+DB_Mystras_Spells_Cos(153, -0.891007);
+DB_Mystras_Spells_Cos(154, -0.898794);
+DB_Mystras_Spells_Cos(155, -0.906308);
+DB_Mystras_Spells_Cos(156, -0.913545);
+DB_Mystras_Spells_Cos(157, -0.920505);
+DB_Mystras_Spells_Cos(158, -0.927184);
+DB_Mystras_Spells_Cos(159, -0.933580);
+DB_Mystras_Spells_Cos(160, -0.939693);
+DB_Mystras_Spells_Cos(161, -0.945519);
+DB_Mystras_Spells_Cos(162, -0.951057);
+DB_Mystras_Spells_Cos(163, -0.956305);
+DB_Mystras_Spells_Cos(164, -0.961262);
+DB_Mystras_Spells_Cos(165, -0.965926);
+DB_Mystras_Spells_Cos(166, -0.970296);
+DB_Mystras_Spells_Cos(167, -0.974370);
+DB_Mystras_Spells_Cos(168, -0.978148);
+DB_Mystras_Spells_Cos(169, -0.981627);
+DB_Mystras_Spells_Cos(170, -0.984808);
+DB_Mystras_Spells_Cos(171, -0.987688);
+DB_Mystras_Spells_Cos(172, -0.990268);
+DB_Mystras_Spells_Cos(173, -0.992546);
+DB_Mystras_Spells_Cos(174, -0.994522);
+DB_Mystras_Spells_Cos(175, -0.996195);
+DB_Mystras_Spells_Cos(176, -0.997564);
+DB_Mystras_Spells_Cos(177, -0.998630);
+DB_Mystras_Spells_Cos(178, -0.999391);
+DB_Mystras_Spells_Cos(179, -0.999848);
+DB_Mystras_Spells_Cos(180, -1.000000);
+DB_Mystras_Spells_Cos(181, -0.999848);
+DB_Mystras_Spells_Cos(182, -0.999391);
+DB_Mystras_Spells_Cos(183, -0.998630);
+DB_Mystras_Spells_Cos(184, -0.997564);
+DB_Mystras_Spells_Cos(185, -0.996195);
+DB_Mystras_Spells_Cos(186, -0.994522);
+DB_Mystras_Spells_Cos(187, -0.992546);
+DB_Mystras_Spells_Cos(188, -0.990268);
+DB_Mystras_Spells_Cos(189, -0.987688);
+DB_Mystras_Spells_Cos(190, -0.984808);
+DB_Mystras_Spells_Cos(191, -0.981627);
+DB_Mystras_Spells_Cos(192, -0.978148);
+DB_Mystras_Spells_Cos(193, -0.974370);
+DB_Mystras_Spells_Cos(194, -0.970296);
+DB_Mystras_Spells_Cos(195, -0.965926);
+DB_Mystras_Spells_Cos(196, -0.961262);
+DB_Mystras_Spells_Cos(197, -0.956305);
+DB_Mystras_Spells_Cos(198, -0.951057);
+DB_Mystras_Spells_Cos(199, -0.945519);
+DB_Mystras_Spells_Cos(200, -0.939693);
+DB_Mystras_Spells_Cos(201, -0.933580);
+DB_Mystras_Spells_Cos(202, -0.927184);
+DB_Mystras_Spells_Cos(203, -0.920505);
+DB_Mystras_Spells_Cos(204, -0.913545);
+DB_Mystras_Spells_Cos(205, -0.906308);
+DB_Mystras_Spells_Cos(206, -0.898794);
+DB_Mystras_Spells_Cos(207, -0.891007);
+DB_Mystras_Spells_Cos(208, -0.882948);
+DB_Mystras_Spells_Cos(209, -0.874620);
+DB_Mystras_Spells_Cos(210, -0.866025);
+DB_Mystras_Spells_Cos(211, -0.857167);
+DB_Mystras_Spells_Cos(212, -0.848048);
+DB_Mystras_Spells_Cos(213, -0.838671);
+DB_Mystras_Spells_Cos(214, -0.829038);
+DB_Mystras_Spells_Cos(215, -0.819152);
+DB_Mystras_Spells_Cos(216, -0.809017);
+DB_Mystras_Spells_Cos(217, -0.798636);
+DB_Mystras_Spells_Cos(218, -0.788011);
+DB_Mystras_Spells_Cos(219, -0.777146);
+DB_Mystras_Spells_Cos(220, -0.766044);
+DB_Mystras_Spells_Cos(221, -0.754710);
+DB_Mystras_Spells_Cos(222, -0.743145);
+DB_Mystras_Spells_Cos(223, -0.731354);
+DB_Mystras_Spells_Cos(224, -0.719340);
+DB_Mystras_Spells_Cos(225, -0.707107);
+DB_Mystras_Spells_Cos(226, -0.694658);
+DB_Mystras_Spells_Cos(227, -0.681998);
+DB_Mystras_Spells_Cos(228, -0.669131);
+DB_Mystras_Spells_Cos(229, -0.656059);
+DB_Mystras_Spells_Cos(230, -0.642788);
+DB_Mystras_Spells_Cos(231, -0.629320);
+DB_Mystras_Spells_Cos(232, -0.615661);
+DB_Mystras_Spells_Cos(233, -0.601815);
+DB_Mystras_Spells_Cos(234, -0.587785);
+DB_Mystras_Spells_Cos(235, -0.573576);
+DB_Mystras_Spells_Cos(236, -0.559193);
+DB_Mystras_Spells_Cos(237, -0.544639);
+DB_Mystras_Spells_Cos(238, -0.529919);
+DB_Mystras_Spells_Cos(239, -0.515038);
+DB_Mystras_Spells_Cos(240, -0.500000);
+DB_Mystras_Spells_Cos(241, -0.484810);
+DB_Mystras_Spells_Cos(242, -0.469472);
+DB_Mystras_Spells_Cos(243, -0.453990);
+DB_Mystras_Spells_Cos(244, -0.438371);
+DB_Mystras_Spells_Cos(245, -0.422618);
+DB_Mystras_Spells_Cos(246, -0.406737);
+DB_Mystras_Spells_Cos(247, -0.390731);
+DB_Mystras_Spells_Cos(248, -0.374607);
+DB_Mystras_Spells_Cos(249, -0.358368);
+DB_Mystras_Spells_Cos(250, -0.342020);
+DB_Mystras_Spells_Cos(251, -0.325568);
+DB_Mystras_Spells_Cos(252, -0.309017);
+DB_Mystras_Spells_Cos(253, -0.292372);
+DB_Mystras_Spells_Cos(254, -0.275637);
+DB_Mystras_Spells_Cos(255, -0.258819);
+DB_Mystras_Spells_Cos(256, -0.241922);
+DB_Mystras_Spells_Cos(257, -0.224951);
+DB_Mystras_Spells_Cos(258, -0.207912);
+DB_Mystras_Spells_Cos(259, -0.190809);
+DB_Mystras_Spells_Cos(260, -0.173648);
+DB_Mystras_Spells_Cos(261, -0.156434);
+DB_Mystras_Spells_Cos(262, -0.139173);
+DB_Mystras_Spells_Cos(263, -0.121869);
+DB_Mystras_Spells_Cos(264, -0.104528);
+DB_Mystras_Spells_Cos(265, -0.087156);
+DB_Mystras_Spells_Cos(266, -0.069756);
+DB_Mystras_Spells_Cos(267, -0.052336);
+DB_Mystras_Spells_Cos(268, -0.034899);
+DB_Mystras_Spells_Cos(269, -0.017452);
+DB_Mystras_Spells_Cos(270, -0.000000);
+DB_Mystras_Spells_Cos(271, 0.017452);
+DB_Mystras_Spells_Cos(272, 0.034899);
+DB_Mystras_Spells_Cos(273, 0.052336);
+DB_Mystras_Spells_Cos(274, 0.069756);
+DB_Mystras_Spells_Cos(275, 0.087156);
+DB_Mystras_Spells_Cos(276, 0.104528);
+DB_Mystras_Spells_Cos(277, 0.121869);
+DB_Mystras_Spells_Cos(278, 0.139173);
+DB_Mystras_Spells_Cos(279, 0.156434);
+DB_Mystras_Spells_Cos(280, 0.173648);
+DB_Mystras_Spells_Cos(281, 0.190809);
+DB_Mystras_Spells_Cos(282, 0.207912);
+DB_Mystras_Spells_Cos(283, 0.224951);
+DB_Mystras_Spells_Cos(284, 0.241922);
+DB_Mystras_Spells_Cos(285, 0.258819);
+DB_Mystras_Spells_Cos(286, 0.275637);
+DB_Mystras_Spells_Cos(287, 0.292372);
+DB_Mystras_Spells_Cos(288, 0.309017);
+DB_Mystras_Spells_Cos(289, 0.325568);
+DB_Mystras_Spells_Cos(290, 0.342020);
+DB_Mystras_Spells_Cos(291, 0.358368);
+DB_Mystras_Spells_Cos(292, 0.374607);
+DB_Mystras_Spells_Cos(293, 0.390731);
+DB_Mystras_Spells_Cos(294, 0.406737);
+DB_Mystras_Spells_Cos(295, 0.422618);
+DB_Mystras_Spells_Cos(296, 0.438371);
+DB_Mystras_Spells_Cos(297, 0.453990);
+DB_Mystras_Spells_Cos(298, 0.469472);
+DB_Mystras_Spells_Cos(299, 0.484810);
+DB_Mystras_Spells_Cos(300, 0.500000);
+DB_Mystras_Spells_Cos(301, 0.515038);
+DB_Mystras_Spells_Cos(302, 0.529919);
+DB_Mystras_Spells_Cos(303, 0.544639);
+DB_Mystras_Spells_Cos(304, 0.559193);
+DB_Mystras_Spells_Cos(305, 0.573576);
+DB_Mystras_Spells_Cos(306, 0.587785);
+DB_Mystras_Spells_Cos(307, 0.601815);
+DB_Mystras_Spells_Cos(308, 0.615661);
+DB_Mystras_Spells_Cos(309, 0.629320);
+DB_Mystras_Spells_Cos(310, 0.642788);
+DB_Mystras_Spells_Cos(311, 0.656059);
+DB_Mystras_Spells_Cos(312, 0.669131);
+DB_Mystras_Spells_Cos(313, 0.681998);
+DB_Mystras_Spells_Cos(314, 0.694658);
+DB_Mystras_Spells_Cos(315, 0.707107);
+DB_Mystras_Spells_Cos(316, 0.719340);
+DB_Mystras_Spells_Cos(317, 0.731354);
+DB_Mystras_Spells_Cos(318, 0.743145);
+DB_Mystras_Spells_Cos(319, 0.754710);
+DB_Mystras_Spells_Cos(320, 0.766044);
+DB_Mystras_Spells_Cos(321, 0.777146);
+DB_Mystras_Spells_Cos(322, 0.788011);
+DB_Mystras_Spells_Cos(323, 0.798636);
+DB_Mystras_Spells_Cos(324, 0.809017);
+DB_Mystras_Spells_Cos(325, 0.819152);
+DB_Mystras_Spells_Cos(326, 0.829038);
+DB_Mystras_Spells_Cos(327, 0.838671);
+DB_Mystras_Spells_Cos(328, 0.848048);
+DB_Mystras_Spells_Cos(329, 0.857167);
+DB_Mystras_Spells_Cos(330, 0.866025);
+DB_Mystras_Spells_Cos(331, 0.874620);
+DB_Mystras_Spells_Cos(332, 0.882948);
+DB_Mystras_Spells_Cos(333, 0.891007);
+DB_Mystras_Spells_Cos(334, 0.898794);
+DB_Mystras_Spells_Cos(335, 0.906308);
+DB_Mystras_Spells_Cos(336, 0.913545);
+DB_Mystras_Spells_Cos(337, 0.920505);
+DB_Mystras_Spells_Cos(338, 0.927184);
+DB_Mystras_Spells_Cos(339, 0.933580);
+DB_Mystras_Spells_Cos(340, 0.939693);
+DB_Mystras_Spells_Cos(341, 0.945519);
+DB_Mystras_Spells_Cos(342, 0.951057);
+DB_Mystras_Spells_Cos(343, 0.956305);
+DB_Mystras_Spells_Cos(344, 0.961262);
+DB_Mystras_Spells_Cos(345, 0.965926);
+DB_Mystras_Spells_Cos(346, 0.970296);
+DB_Mystras_Spells_Cos(347, 0.974370);
+DB_Mystras_Spells_Cos(348, 0.978148);
+DB_Mystras_Spells_Cos(349, 0.981627);
+DB_Mystras_Spells_Cos(350, 0.984808);
+DB_Mystras_Spells_Cos(351, 0.987688);
+DB_Mystras_Spells_Cos(352, 0.990268);
+DB_Mystras_Spells_Cos(353, 0.992546);
+DB_Mystras_Spells_Cos(354, 0.994522);
+DB_Mystras_Spells_Cos(355, 0.996195);
+DB_Mystras_Spells_Cos(356, 0.997564);
+DB_Mystras_Spells_Cos(357, 0.998630);
+DB_Mystras_Spells_Cos(358, 0.999391);
+DB_Mystras_Spells_Cos(359, 0.999848);
+DB_Mystras_Spells_Cos(360, 1.000000);
+
+// sin
+DB_Mystras_Spells_Sin(0, 0.000000);
+DB_Mystras_Spells_Sin(1, 0.017452);
+DB_Mystras_Spells_Sin(2, 0.034899);
+DB_Mystras_Spells_Sin(3, 0.052336);
+DB_Mystras_Spells_Sin(4, 0.069756);
+DB_Mystras_Spells_Sin(5, 0.087156);
+DB_Mystras_Spells_Sin(6, 0.104528);
+DB_Mystras_Spells_Sin(7, 0.121869);
+DB_Mystras_Spells_Sin(8, 0.139173);
+DB_Mystras_Spells_Sin(9, 0.156434);
+DB_Mystras_Spells_Sin(10, 0.173648);
+DB_Mystras_Spells_Sin(11, 0.190809);
+DB_Mystras_Spells_Sin(12, 0.207912);
+DB_Mystras_Spells_Sin(13, 0.224951);
+DB_Mystras_Spells_Sin(14, 0.241922);
+DB_Mystras_Spells_Sin(15, 0.258819);
+DB_Mystras_Spells_Sin(16, 0.275637);
+DB_Mystras_Spells_Sin(17, 0.292372);
+DB_Mystras_Spells_Sin(18, 0.309017);
+DB_Mystras_Spells_Sin(19, 0.325568);
+DB_Mystras_Spells_Sin(20, 0.342020);
+DB_Mystras_Spells_Sin(21, 0.358368);
+DB_Mystras_Spells_Sin(22, 0.374607);
+DB_Mystras_Spells_Sin(23, 0.390731);
+DB_Mystras_Spells_Sin(24, 0.406737);
+DB_Mystras_Spells_Sin(25, 0.422618);
+DB_Mystras_Spells_Sin(26, 0.438371);
+DB_Mystras_Spells_Sin(27, 0.453990);
+DB_Mystras_Spells_Sin(28, 0.469472);
+DB_Mystras_Spells_Sin(29, 0.484810);
+DB_Mystras_Spells_Sin(30, 0.500000);
+DB_Mystras_Spells_Sin(31, 0.515038);
+DB_Mystras_Spells_Sin(32, 0.529919);
+DB_Mystras_Spells_Sin(33, 0.544639);
+DB_Mystras_Spells_Sin(34, 0.559193);
+DB_Mystras_Spells_Sin(35, 0.573576);
+DB_Mystras_Spells_Sin(36, 0.587785);
+DB_Mystras_Spells_Sin(37, 0.601815);
+DB_Mystras_Spells_Sin(38, 0.615661);
+DB_Mystras_Spells_Sin(39, 0.629320);
+DB_Mystras_Spells_Sin(40, 0.642788);
+DB_Mystras_Spells_Sin(41, 0.656059);
+DB_Mystras_Spells_Sin(42, 0.669131);
+DB_Mystras_Spells_Sin(43, 0.681998);
+DB_Mystras_Spells_Sin(44, 0.694658);
+DB_Mystras_Spells_Sin(45, 0.707107);
+DB_Mystras_Spells_Sin(46, 0.719340);
+DB_Mystras_Spells_Sin(47, 0.731354);
+DB_Mystras_Spells_Sin(48, 0.743145);
+DB_Mystras_Spells_Sin(49, 0.754710);
+DB_Mystras_Spells_Sin(50, 0.766044);
+DB_Mystras_Spells_Sin(51, 0.777146);
+DB_Mystras_Spells_Sin(52, 0.788011);
+DB_Mystras_Spells_Sin(53, 0.798636);
+DB_Mystras_Spells_Sin(54, 0.809017);
+DB_Mystras_Spells_Sin(55, 0.819152);
+DB_Mystras_Spells_Sin(56, 0.829038);
+DB_Mystras_Spells_Sin(57, 0.838671);
+DB_Mystras_Spells_Sin(58, 0.848048);
+DB_Mystras_Spells_Sin(59, 0.857167);
+DB_Mystras_Spells_Sin(60, 0.866025);
+DB_Mystras_Spells_Sin(61, 0.874620);
+DB_Mystras_Spells_Sin(62, 0.882948);
+DB_Mystras_Spells_Sin(63, 0.891007);
+DB_Mystras_Spells_Sin(64, 0.898794);
+DB_Mystras_Spells_Sin(65, 0.906308);
+DB_Mystras_Spells_Sin(66, 0.913545);
+DB_Mystras_Spells_Sin(67, 0.920505);
+DB_Mystras_Spells_Sin(68, 0.927184);
+DB_Mystras_Spells_Sin(69, 0.933580);
+DB_Mystras_Spells_Sin(70, 0.939693);
+DB_Mystras_Spells_Sin(71, 0.945519);
+DB_Mystras_Spells_Sin(72, 0.951057);
+DB_Mystras_Spells_Sin(73, 0.956305);
+DB_Mystras_Spells_Sin(74, 0.961262);
+DB_Mystras_Spells_Sin(75, 0.965926);
+DB_Mystras_Spells_Sin(76, 0.970296);
+DB_Mystras_Spells_Sin(77, 0.974370);
+DB_Mystras_Spells_Sin(78, 0.978148);
+DB_Mystras_Spells_Sin(79, 0.981627);
+DB_Mystras_Spells_Sin(80, 0.984808);
+DB_Mystras_Spells_Sin(81, 0.987688);
+DB_Mystras_Spells_Sin(82, 0.990268);
+DB_Mystras_Spells_Sin(83, 0.992546);
+DB_Mystras_Spells_Sin(84, 0.994522);
+DB_Mystras_Spells_Sin(85, 0.996195);
+DB_Mystras_Spells_Sin(86, 0.997564);
+DB_Mystras_Spells_Sin(87, 0.998630);
+DB_Mystras_Spells_Sin(88, 0.999391);
+DB_Mystras_Spells_Sin(89, 0.999848);
+DB_Mystras_Spells_Sin(90, 1.000000);
+DB_Mystras_Spells_Sin(91, 0.999848);
+DB_Mystras_Spells_Sin(92, 0.999391);
+DB_Mystras_Spells_Sin(93, 0.998630);
+DB_Mystras_Spells_Sin(94, 0.997564);
+DB_Mystras_Spells_Sin(95, 0.996195);
+DB_Mystras_Spells_Sin(96, 0.994522);
+DB_Mystras_Spells_Sin(97, 0.992546);
+DB_Mystras_Spells_Sin(98, 0.990268);
+DB_Mystras_Spells_Sin(99, 0.987688);
+DB_Mystras_Spells_Sin(100, 0.984808);
+DB_Mystras_Spells_Sin(101, 0.981627);
+DB_Mystras_Spells_Sin(102, 0.978148);
+DB_Mystras_Spells_Sin(103, 0.974370);
+DB_Mystras_Spells_Sin(104, 0.970296);
+DB_Mystras_Spells_Sin(105, 0.965926);
+DB_Mystras_Spells_Sin(106, 0.961262);
+DB_Mystras_Spells_Sin(107, 0.956305);
+DB_Mystras_Spells_Sin(108, 0.951057);
+DB_Mystras_Spells_Sin(109, 0.945519);
+DB_Mystras_Spells_Sin(110, 0.939693);
+DB_Mystras_Spells_Sin(111, 0.933580);
+DB_Mystras_Spells_Sin(112, 0.927184);
+DB_Mystras_Spells_Sin(113, 0.920505);
+DB_Mystras_Spells_Sin(114, 0.913545);
+DB_Mystras_Spells_Sin(115, 0.906308);
+DB_Mystras_Spells_Sin(116, 0.898794);
+DB_Mystras_Spells_Sin(117, 0.891007);
+DB_Mystras_Spells_Sin(118, 0.882948);
+DB_Mystras_Spells_Sin(119, 0.874620);
+DB_Mystras_Spells_Sin(120, 0.866025);
+DB_Mystras_Spells_Sin(121, 0.857167);
+DB_Mystras_Spells_Sin(122, 0.848048);
+DB_Mystras_Spells_Sin(123, 0.838671);
+DB_Mystras_Spells_Sin(124, 0.829038);
+DB_Mystras_Spells_Sin(125, 0.819152);
+DB_Mystras_Spells_Sin(126, 0.809017);
+DB_Mystras_Spells_Sin(127, 0.798636);
+DB_Mystras_Spells_Sin(128, 0.788011);
+DB_Mystras_Spells_Sin(129, 0.777146);
+DB_Mystras_Spells_Sin(130, 0.766044);
+DB_Mystras_Spells_Sin(131, 0.754710);
+DB_Mystras_Spells_Sin(132, 0.743145);
+DB_Mystras_Spells_Sin(133, 0.731354);
+DB_Mystras_Spells_Sin(134, 0.719340);
+DB_Mystras_Spells_Sin(135, 0.707107);
+DB_Mystras_Spells_Sin(136, 0.694658);
+DB_Mystras_Spells_Sin(137, 0.681998);
+DB_Mystras_Spells_Sin(138, 0.669131);
+DB_Mystras_Spells_Sin(139, 0.656059);
+DB_Mystras_Spells_Sin(140, 0.642788);
+DB_Mystras_Spells_Sin(141, 0.629320);
+DB_Mystras_Spells_Sin(142, 0.615661);
+DB_Mystras_Spells_Sin(143, 0.601815);
+DB_Mystras_Spells_Sin(144, 0.587785);
+DB_Mystras_Spells_Sin(145, 0.573576);
+DB_Mystras_Spells_Sin(146, 0.559193);
+DB_Mystras_Spells_Sin(147, 0.544639);
+DB_Mystras_Spells_Sin(148, 0.529919);
+DB_Mystras_Spells_Sin(149, 0.515038);
+DB_Mystras_Spells_Sin(150, 0.500000);
+DB_Mystras_Spells_Sin(151, 0.484810);
+DB_Mystras_Spells_Sin(152, 0.469472);
+DB_Mystras_Spells_Sin(153, 0.453990);
+DB_Mystras_Spells_Sin(154, 0.438371);
+DB_Mystras_Spells_Sin(155, 0.422618);
+DB_Mystras_Spells_Sin(156, 0.406737);
+DB_Mystras_Spells_Sin(157, 0.390731);
+DB_Mystras_Spells_Sin(158, 0.374607);
+DB_Mystras_Spells_Sin(159, 0.358368);
+DB_Mystras_Spells_Sin(160, 0.342020);
+DB_Mystras_Spells_Sin(161, 0.325568);
+DB_Mystras_Spells_Sin(162, 0.309017);
+DB_Mystras_Spells_Sin(163, 0.292372);
+DB_Mystras_Spells_Sin(164, 0.275637);
+DB_Mystras_Spells_Sin(165, 0.258819);
+DB_Mystras_Spells_Sin(166, 0.241922);
+DB_Mystras_Spells_Sin(167, 0.224951);
+DB_Mystras_Spells_Sin(168, 0.207912);
+DB_Mystras_Spells_Sin(169, 0.190809);
+DB_Mystras_Spells_Sin(170, 0.173648);
+DB_Mystras_Spells_Sin(171, 0.156434);
+DB_Mystras_Spells_Sin(172, 0.139173);
+DB_Mystras_Spells_Sin(173, 0.121869);
+DB_Mystras_Spells_Sin(174, 0.104528);
+DB_Mystras_Spells_Sin(175, 0.087156);
+DB_Mystras_Spells_Sin(176, 0.069756);
+DB_Mystras_Spells_Sin(177, 0.052336);
+DB_Mystras_Spells_Sin(178, 0.034899);
+DB_Mystras_Spells_Sin(179, 0.017452);
+DB_Mystras_Spells_Sin(180, 0.000000);
+DB_Mystras_Spells_Sin(181, -0.017452);
+DB_Mystras_Spells_Sin(182, -0.034899);
+DB_Mystras_Spells_Sin(183, -0.052336);
+DB_Mystras_Spells_Sin(184, -0.069756);
+DB_Mystras_Spells_Sin(185, -0.087156);
+DB_Mystras_Spells_Sin(186, -0.104528);
+DB_Mystras_Spells_Sin(187, -0.121869);
+DB_Mystras_Spells_Sin(188, -0.139173);
+DB_Mystras_Spells_Sin(189, -0.156434);
+DB_Mystras_Spells_Sin(190, -0.173648);
+DB_Mystras_Spells_Sin(191, -0.190809);
+DB_Mystras_Spells_Sin(192, -0.207912);
+DB_Mystras_Spells_Sin(193, -0.224951);
+DB_Mystras_Spells_Sin(194, -0.241922);
+DB_Mystras_Spells_Sin(195, -0.258819);
+DB_Mystras_Spells_Sin(196, -0.275637);
+DB_Mystras_Spells_Sin(197, -0.292372);
+DB_Mystras_Spells_Sin(198, -0.309017);
+DB_Mystras_Spells_Sin(199, -0.325568);
+DB_Mystras_Spells_Sin(200, -0.342020);
+DB_Mystras_Spells_Sin(201, -0.358368);
+DB_Mystras_Spells_Sin(202, -0.374607);
+DB_Mystras_Spells_Sin(203, -0.390731);
+DB_Mystras_Spells_Sin(204, -0.406737);
+DB_Mystras_Spells_Sin(205, -0.422618);
+DB_Mystras_Spells_Sin(206, -0.438371);
+DB_Mystras_Spells_Sin(207, -0.453990);
+DB_Mystras_Spells_Sin(208, -0.469472);
+DB_Mystras_Spells_Sin(209, -0.484810);
+DB_Mystras_Spells_Sin(210, -0.500000);
+DB_Mystras_Spells_Sin(211, -0.515038);
+DB_Mystras_Spells_Sin(212, -0.529919);
+DB_Mystras_Spells_Sin(213, -0.544639);
+DB_Mystras_Spells_Sin(214, -0.559193);
+DB_Mystras_Spells_Sin(215, -0.573576);
+DB_Mystras_Spells_Sin(216, -0.587785);
+DB_Mystras_Spells_Sin(217, -0.601815);
+DB_Mystras_Spells_Sin(218, -0.615661);
+DB_Mystras_Spells_Sin(219, -0.629320);
+DB_Mystras_Spells_Sin(220, -0.642788);
+DB_Mystras_Spells_Sin(221, -0.656059);
+DB_Mystras_Spells_Sin(222, -0.669131);
+DB_Mystras_Spells_Sin(223, -0.681998);
+DB_Mystras_Spells_Sin(224, -0.694658);
+DB_Mystras_Spells_Sin(225, -0.707107);
+DB_Mystras_Spells_Sin(226, -0.719340);
+DB_Mystras_Spells_Sin(227, -0.731354);
+DB_Mystras_Spells_Sin(228, -0.743145);
+DB_Mystras_Spells_Sin(229, -0.754710);
+DB_Mystras_Spells_Sin(230, -0.766044);
+DB_Mystras_Spells_Sin(231, -0.777146);
+DB_Mystras_Spells_Sin(232, -0.788011);
+DB_Mystras_Spells_Sin(233, -0.798636);
+DB_Mystras_Spells_Sin(234, -0.809017);
+DB_Mystras_Spells_Sin(235, -0.819152);
+DB_Mystras_Spells_Sin(236, -0.829038);
+DB_Mystras_Spells_Sin(237, -0.838671);
+DB_Mystras_Spells_Sin(238, -0.848048);
+DB_Mystras_Spells_Sin(239, -0.857167);
+DB_Mystras_Spells_Sin(240, -0.866025);
+DB_Mystras_Spells_Sin(241, -0.874620);
+DB_Mystras_Spells_Sin(242, -0.882948);
+DB_Mystras_Spells_Sin(243, -0.891007);
+DB_Mystras_Spells_Sin(244, -0.898794);
+DB_Mystras_Spells_Sin(245, -0.906308);
+DB_Mystras_Spells_Sin(246, -0.913545);
+DB_Mystras_Spells_Sin(247, -0.920505);
+DB_Mystras_Spells_Sin(248, -0.927184);
+DB_Mystras_Spells_Sin(249, -0.933580);
+DB_Mystras_Spells_Sin(250, -0.939693);
+DB_Mystras_Spells_Sin(251, -0.945519);
+DB_Mystras_Spells_Sin(252, -0.951057);
+DB_Mystras_Spells_Sin(253, -0.956305);
+DB_Mystras_Spells_Sin(254, -0.961262);
+DB_Mystras_Spells_Sin(255, -0.965926);
+DB_Mystras_Spells_Sin(256, -0.970296);
+DB_Mystras_Spells_Sin(257, -0.974370);
+DB_Mystras_Spells_Sin(258, -0.978148);
+DB_Mystras_Spells_Sin(259, -0.981627);
+DB_Mystras_Spells_Sin(260, -0.984808);
+DB_Mystras_Spells_Sin(261, -0.987688);
+DB_Mystras_Spells_Sin(262, -0.990268);
+DB_Mystras_Spells_Sin(263, -0.992546);
+DB_Mystras_Spells_Sin(264, -0.994522);
+DB_Mystras_Spells_Sin(265, -0.996195);
+DB_Mystras_Spells_Sin(266, -0.997564);
+DB_Mystras_Spells_Sin(267, -0.998630);
+DB_Mystras_Spells_Sin(268, -0.999391);
+DB_Mystras_Spells_Sin(269, -0.999848);
+DB_Mystras_Spells_Sin(270, -1.000000);
+DB_Mystras_Spells_Sin(271, -0.999848);
+DB_Mystras_Spells_Sin(272, -0.999391);
+DB_Mystras_Spells_Sin(273, -0.998630);
+DB_Mystras_Spells_Sin(274, -0.997564);
+DB_Mystras_Spells_Sin(275, -0.996195);
+DB_Mystras_Spells_Sin(276, -0.994522);
+DB_Mystras_Spells_Sin(277, -0.992546);
+DB_Mystras_Spells_Sin(278, -0.990268);
+DB_Mystras_Spells_Sin(279, -0.987688);
+DB_Mystras_Spells_Sin(280, -0.984808);
+DB_Mystras_Spells_Sin(281, -0.981627);
+DB_Mystras_Spells_Sin(282, -0.978148);
+DB_Mystras_Spells_Sin(283, -0.974370);
+DB_Mystras_Spells_Sin(284, -0.970296);
+DB_Mystras_Spells_Sin(285, -0.965926);
+DB_Mystras_Spells_Sin(286, -0.961262);
+DB_Mystras_Spells_Sin(287, -0.956305);
+DB_Mystras_Spells_Sin(288, -0.951057);
+DB_Mystras_Spells_Sin(289, -0.945519);
+DB_Mystras_Spells_Sin(290, -0.939693);
+DB_Mystras_Spells_Sin(291, -0.933580);
+DB_Mystras_Spells_Sin(292, -0.927184);
+DB_Mystras_Spells_Sin(293, -0.920505);
+DB_Mystras_Spells_Sin(294, -0.913545);
+DB_Mystras_Spells_Sin(295, -0.906308);
+DB_Mystras_Spells_Sin(296, -0.898794);
+DB_Mystras_Spells_Sin(297, -0.891007);
+DB_Mystras_Spells_Sin(298, -0.882948);
+DB_Mystras_Spells_Sin(299, -0.874620);
+DB_Mystras_Spells_Sin(300, -0.866025);
+DB_Mystras_Spells_Sin(301, -0.857167);
+DB_Mystras_Spells_Sin(302, -0.848048);
+DB_Mystras_Spells_Sin(303, -0.838671);
+DB_Mystras_Spells_Sin(304, -0.829038);
+DB_Mystras_Spells_Sin(305, -0.819152);
+DB_Mystras_Spells_Sin(306, -0.809017);
+DB_Mystras_Spells_Sin(307, -0.798636);
+DB_Mystras_Spells_Sin(308, -0.788011);
+DB_Mystras_Spells_Sin(309, -0.777146);
+DB_Mystras_Spells_Sin(310, -0.766044);
+DB_Mystras_Spells_Sin(311, -0.754710);
+DB_Mystras_Spells_Sin(312, -0.743145);
+DB_Mystras_Spells_Sin(313, -0.731354);
+DB_Mystras_Spells_Sin(314, -0.719340);
+DB_Mystras_Spells_Sin(315, -0.707107);
+DB_Mystras_Spells_Sin(316, -0.694658);
+DB_Mystras_Spells_Sin(317, -0.681998);
+DB_Mystras_Spells_Sin(318, -0.669131);
+DB_Mystras_Spells_Sin(319, -0.656059);
+DB_Mystras_Spells_Sin(320, -0.642788);
+DB_Mystras_Spells_Sin(321, -0.629320);
+DB_Mystras_Spells_Sin(322, -0.615661);
+DB_Mystras_Spells_Sin(323, -0.601815);
+DB_Mystras_Spells_Sin(324, -0.587785);
+DB_Mystras_Spells_Sin(325, -0.573576);
+DB_Mystras_Spells_Sin(326, -0.559193);
+DB_Mystras_Spells_Sin(327, -0.544639);
+DB_Mystras_Spells_Sin(328, -0.529919);
+DB_Mystras_Spells_Sin(329, -0.515038);
+DB_Mystras_Spells_Sin(330, -0.500000);
+DB_Mystras_Spells_Sin(331, -0.484810);
+DB_Mystras_Spells_Sin(332, -0.469472);
+DB_Mystras_Spells_Sin(333, -0.453990);
+DB_Mystras_Spells_Sin(334, -0.438371);
+DB_Mystras_Spells_Sin(335, -0.422618);
+DB_Mystras_Spells_Sin(336, -0.406737);
+DB_Mystras_Spells_Sin(337, -0.390731);
+DB_Mystras_Spells_Sin(338, -0.374607);
+DB_Mystras_Spells_Sin(339, -0.358368);
+DB_Mystras_Spells_Sin(340, -0.342020);
+DB_Mystras_Spells_Sin(341, -0.325568);
+DB_Mystras_Spells_Sin(342, -0.309017);
+DB_Mystras_Spells_Sin(343, -0.292372);
+DB_Mystras_Spells_Sin(344, -0.275637);
+DB_Mystras_Spells_Sin(345, -0.258819);
+DB_Mystras_Spells_Sin(346, -0.241922);
+DB_Mystras_Spells_Sin(347, -0.224951);
+DB_Mystras_Spells_Sin(348, -0.207912);
+DB_Mystras_Spells_Sin(349, -0.190809);
+DB_Mystras_Spells_Sin(350, -0.173648);
+DB_Mystras_Spells_Sin(351, -0.156434);
+DB_Mystras_Spells_Sin(352, -0.139173);
+DB_Mystras_Spells_Sin(353, -0.121869);
+DB_Mystras_Spells_Sin(354, -0.104528);
+DB_Mystras_Spells_Sin(355, -0.087156);
+DB_Mystras_Spells_Sin(356, -0.069756);
+DB_Mystras_Spells_Sin(357, -0.052336);
+DB_Mystras_Spells_Sin(358, -0.034899);
+DB_Mystras_Spells_Sin(359, -0.017452);
+DB_Mystras_Spells_Sin(360, -0.000000);
+KBSECTION
+// blade cantrips
+IF
+CastedSpell(_Character, _Spell, _, _, _)
+AND
+DB_BladeAttackCantrip_Spell(_Spell)
+THEN
+ApplyStatus(_Character, "ATTACK_CANTRIP_HELPER", 1.0, 100, _Character);
+
+IF
+StatusRemoved(_Character, "ATTACK_CANTRIP_ONCE", _, _)
+THEN
+RemoveStatus(_Character, "ATTACK_CANTRIP_HELPER");
+
+// cleric cantrips potent spellcasting
+IF
+StartedPreviewingSpell(_Character, _Spell, _, _)
+AND
+DB_ClericCantrip_Spell(_Spell)
+AND
+HasPassive(_Character, "PotentSpellcasting", 1)
+THEN
+ApplyStatus(_Character, "POTENT_SPELLCASTING_HELPER", 1.0, 100, _Character);
+
+// Steel Wind Strike
+// credits to Celes for helping with this
+
+IF
+CastSpell(_Character, _Spell, _, _, _)
+AND
+DB_SteelWindStrikeSpell(_Spell)
+AND
+GetPosition(_Character,_X,_Y,_Z)
+THEN
+DB_SteelWindStrikePos(_Character,_X,_Y,_Z);
+
+IF
+CastedSpell(_Character, _Spell, _, _, _)
+AND
+DB_SteelWindStrikeSpell(_Spell)
+AND
+DB_SteelWindStrikePos(_Character,_X,_Y,_Z)
+THEN
+RealtimeObjectTimerLaunch(_Character, "SteelWindStrikeTimer", 100);
+
+IF
+ObjectTimerFinished(_Character, "SteelWindStrikeTimer")
+AND
+DB_SteelWindStrikePos(_Character,_X,_Y,_Z)
+THEN
+TeleportToPosition(_Character,_X,_Y,_Z,"",0,0,0,0,1);
+
+
+// Summon Greater Demon
+IF
+UsingSpellAtPosition(_Caster, _X, _Y, _Z, _Spell, _, _, _)
+AND
+DB_SummonGreaterDemon_Spell(_Spell)
+THEN
+DB_SummonGreaterDemon_Pos(_Caster, _Spell, _X, _Y, _Z);
+
+IF
+CastSpell(_Caster, _Spell, _, _, _)
+AND
+DB_SummonGreaterDemon_Spell(_Spell)
+AND
+DB_SummonGreaterDemon_Pos(_Caster, _Spell, _X, _Y, _Z)
+AND
+Concatenate("Projectile_Helper_", _Spell, _SummonSpell)
+THEN
+CreateExplosionAtPosition(_X, _Y, _Z, _SummonSpell, 1, _Caster);
+NOT DB_SummonGreaterDemon_Pos(_Caster, _Spell, _X, _Y, _Z);
+
+
+// Fissure
+IF
+UsingSpellAtPosition(_Caster, _X2, _Y2, _Z2, _Spell, _, _, _)
+AND
+DB_Mystras_Spells_Fissure(_Spell)
+AND
+GetPosition(_Caster, _X, _Y, _Z)
+AND
+GetAngleXToDirection(_X, _Z, _X2, _Z2, _A)
+THEN
+DB_Mystras_Spells_Fissure_Pos(_Caster, _Spell, _X, _Y, _Z, _A);
+
+PROC
+PROC_Mystras_Spells_Fissure_VFX((GUIDSTRING)_Caster, (REAL)_X, (REAL)_Y, (REAL)_Z, (REAL)_Cos, (REAL)_Sin, (REAL)_Offset)
+AND
+RealProduct(_Offset, _Cos, _CA)
+AND
+RealProduct(_Offset, _Sin, _SA)
+AND
+RealSum(_X, _CA, _X2)
+AND
+RealSum(_Z, _SA, _Z2)
+AND
+Random(360, _Rotation)
+AND
+IntegerToReal(_Rotation, _R_Rotation)
+THEN
+// CreateExplosionAtPosition(_X2, _Y, _Z2, "Projectile_Helper_Fissure_VFX", 1, _Caster);
+PlayEffectAtPositionAndRotation(VFX_Spells_Cast_Damage_Force_Zone_Fissure_Position_02_d2481795-f763-b8b4-7298-48acf5f7b882, _X2, _Y, _Z2, _R_Rotation, 1.0);
+
+IF
+CastSpell(_Caster, _Spell, _, _, _)
+AND
+DB_Mystras_Spells_Fissure(_Spell)
+AND
+DB_Mystras_Spells_Fissure_Pos(_Caster, _Spell, _X, _Y, _Z, _A)
+AND
+IntegerSum(_A, 360, _A2)
+AND
+IntegerModulo(_A2, 360, _A3)
+AND
+DB_Mystras_Spells_Cos(_A3, _Cos)
+AND
+DB_Mystras_Spells_Sin(_A3, _Sin)
+THEN
+// CreateExplosionAtPosition(_X, _Y, _Z, "Projectile_Pyrotechnics_Fireworks_A", 1, _Caster);
+PROC_Mystras_Spells_Fissure_VFX(_Caster, _X, _Y, _Z, _Cos, _Sin, 1.0);
+PROC_Mystras_Spells_Fissure_VFX(_Caster, _X, _Y, _Z, _Cos, _Sin, 3.0);
+PROC_Mystras_Spells_Fissure_VFX(_Caster, _X, _Y, _Z, _Cos, _Sin, 5.0);
+PROC_Mystras_Spells_Fissure_VFX(_Caster, _X, _Y, _Z, _Cos, _Sin, 7.0);
+PROC_Mystras_Spells_Fissure_VFX(_Caster, _X, _Y, _Z, _Cos, _Sin, 9.0);
+PROC_Mystras_Spells_Fissure_VFX(_Caster, _X, _Y, _Z, _Cos, _Sin, 11.0);
+PROC_Mystras_Spells_Fissure_VFX(_Caster, _X, _Y, _Z, _Cos, _Sin, 13.0);
+PROC_Mystras_Spells_Fissure_VFX(_Caster, _X, _Y, _Z, _Cos, _Sin, 15.0);
+PROC_Mystras_Spells_Fissure_VFX(_Caster, _X, _Y, _Z, _Cos, _Sin, 17.0);
+NOT DB_Mystras_Spells_Fissure_Pos(_Caster, _Spell, _X, _Y, _Z, _A);
+
+
+// death domain reaper passive
+IF
+LevelLoaded(_)
+AND
+DB_Mystras_Spells_LevelInit(0)
+THEN
+TimerLaunch("Mystras_Spells_InitDelay", 0);
+
+IF
+TimerFinished("Mystras_Spells_InitDelay")
+THEN
+NOT DB_Mystras_Spells_LevelInit(0);
+DB_Mystras_Spells_LevelInit(1);
+
+IF
+DB_Players(_Player)
+AND
+DB_Mystras_Spells_LevelInit(1)
+THEN
+ObjectTimerLaunch(_Player, "Mystras_Spells_LeveledUp", 1);
+
+IF
+LeveledUp(_Player)
+AND
+DB_Mystras_Spells_LevelInit(1)
+THEN
+ObjectTimerLaunch(_Player, "Mystras_Spells_LeveledUp", 1);
+
+IF
+RespecCompleted(_Player)
+AND
+DB_Mystras_Spells_LevelInit(1)
+THEN
+ObjectTimerLaunch(_Player, "Mystras_Spells_LeveledUp", 1);
+
+IF
+StartedPreviewingSpell(_Player, _Spell, _, _)
+AND
+DB_Mystras_Spells_Reaper_Cantrips(_Spell)
+THEN
+PROC_Mystras_Spells_GiveReaper(_Player);
+
+IF
+ObjectTimerFinished(_Player, "Mystras_Spells_LeveledUp")
+THEN
+PROC_Mystras_Spells_GiveReaper(_Player);
+PROC_Mystras_Spells_RemoveReaper(_Player);
+
+PROC
+PROC_Mystras_Spells_GiveReaper((GUIDSTRING)_Player)
+AND
+HasPassive(_Player, "Reaper", 1)
+AND
+HasPassive(_Player, "Reaper_Mystra", 0)
+THEN
+AddPassive(_Player, "Reaper_Mystra");
+
+PROC
+PROC_Mystras_Spells_RemoveReaper((GUIDSTRING)_Player)
+AND
+HasPassive(_Player, "Reaper", 0)
+AND
+HasPassive(_Player, "Reaper_Mystra", 1)
+THEN
+RemovePassive(_Player, "Reaper_Mystra");
+EXITSECTION
+
+ENDEXITSECTION

@@ -1,0 +1,68 @@
+{
+  "subclass": "FirstJobName",
+  "parent_class": "Novice",
+
+  "granted_at_character_level": 2,
+
+  "hit_points": {
+    "base": "DEFINE_PER_CLASS",
+    "per_level": "DEFINE_PER_CLASS",
+    "constitution_modifier_applies": true
+  },
+
+  "mana_points": {
+    "base_formula": "4 + (2 * character_level)",
+    "modifier_scaling": "character_level * floor(spellcasting_modifier / 2)"
+  },
+
+  "spellcasting_ability": "DEFINE_PER_CLASS",
+  "spellcasting_save_dc_formula": "8 + proficiency_bonus + spellcasting_modifier",
+
+  "proficiencies": {
+    "saving_throws": [
+      "DEFINE_2"
+    ],
+    "armor": [
+      "DEFINE"
+    ],
+    "weapons": [
+      "DEFINE"
+    ],
+    "tools": []
+  },
+
+  "skills": {
+    "choose": "DEFINE_2",
+    "expertise": 1,
+    "from": "full_skill_list_or_restricted"
+  },
+
+  "progression": {
+    "level_2": {
+      "features_gained": []
+    },
+    "level_3": {
+      "features_gained": []
+    },
+    "level_4": {
+      "features_gained": []
+    },
+    "level_5": {
+      "features_gained": []
+    },
+    "level_6": {
+      "features_gained": [],
+      "transition_note": "Second Job unlock point"
+    }
+  },
+
+  "skills_data": [],
+
+  "design_identity": {
+    "role": "DEFINE_ROLE",
+    "combat_style": "DEFINE_STYLE",
+    "resource_usage": "DEFINE",
+    "strengths": [],
+    "weaknesses": []
+  }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="8" build="612"/>
+    <region id="LevelMapValues">
+        <node id="root">
+            <children>
+                <node id="LevelMapSeries">
+                    <attribute id="Level5" type="LSString" value="1d8"/>
+                    <attribute id="Level10" type="LSString" value="2d8"/>
+                    <attribute id="Level17" type="LSString" value="3d8"/>
+                    <attribute id="Name" type="FixedString" value="SCAGCantrips"/>
+                    <attribute id="UUID" type="guid" value="a4a2e91f-ff4a-4e83-ad8a-d2dd66401c3f"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

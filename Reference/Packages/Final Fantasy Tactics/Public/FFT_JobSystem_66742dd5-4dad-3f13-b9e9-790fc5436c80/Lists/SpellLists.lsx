@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="SpellLists">
+        <node id="root">
+            <children>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="FFT_Cadet1"/>
+                    <attribute id="Spells" type="LSString" value="Shout_FFT_Primary;Shout_FFT_Secondary;Shout_FFT_Reaction;Shout_FFT_Support;"/>
+                    <attribute id="UUID" type="guid" value="755bc00e-e3de-4e72-95a5-7bcf6d34e1bd"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="FFT_Cadet1_2"/>
+                    <attribute id="Spells" type="LSString" value="Shout_FFT_Squire_EquipAxes;Shout_FFT_Squire_CounterTackle"/>
+                    <attribute id="UUID" type="guid" value="146ff8e7-429b-44ec-bb6a-d072400a6c27"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="FFT_Cadet1_3"/>
+                    <attribute id="Spells" type="LSString" value="Shout_FFT_Chemist_PotionOfHealing1;Shout_FFT_Chemist_BasiliskOil;Shout_FFT_Chemist_PotionOfVitality;Shout_FFT_Chemist_AlchemistsFire;Shout_FFT_Chemist_HearthlightBomb;Shout_FFT_Chemist_PotionOfFeatherFall;"/>
+                    <attribute id="UUID" type="guid" value="86cc9043-ac68-4edb-91b2-abe2cfb61690"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="FFT_Cadet2"/>
+                    <attribute id="Spells" type="LSString" value="Target_FFT_Squire_Tailwind;Target_FFT_Squire_Chant;Shout_FFT_Squire_Defend;"/>
+                    <attribute id="UUID" type="guid" value="92045c07-de7f-4e32-a247-2760910c61b8"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="FFT_Cadet2_2"/>
+                    <attribute id="Spells" type="LSString" value="Shout_FFT_Chemist_PotionOfGloriousVaulting;"/>
+                    <attribute id="UUID" type="guid" value="80fff4c2-a4db-4ffa-8d9f-e7d4021e1b76"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="FFT_Cadet3"/>
+                    <attribute id="Spells" type="LSString" value="Shout_FFT_Chemist_ThrowItem;Shout_FFT_Chemist_PotionOfSpeed;Shout_FFT_Chemist_WebGrenade"/>
+                    <attribute id="UUID" type="guid" value="bfb71ea4-df4d-4de0-bf82-149b6cf72eed"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="FFT_Cadet4"/>
+                    <attribute id="Spells" type="LSString" value="Shout_FFT_Chemist_PotionOfSleep;Shout_FFT_Chemist_RemedialPotion;Shout_FFT_Chemist_NoxiousSporeGrenade"/>
+                    <attribute id="UUID" type="guid" value="6aa0c85a-b18e-4567-ad0f-6c30999ea5f2"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="FFT_Cadet5"/>
+                    <attribute id="Spells" type="LSString" value="Target_FFT_Squire_Steel;"/>
+                    <attribute id="UUID" type="guid" value="68ef2fca-d689-49bf-9b9e-cf58ed542b7b"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="FFT_Cadet5_2"/>
+                    <attribute id="Spells" type="LSString" value="Shout_FFT_Chemist_PotionOfSleep;Shout_FFT_Chemist_RemedialPotion;Shout_FFT_Chemist_NoxiousSporeGrenade;Shout_FFT_Chemist_PotionOfFlying;Shout_FFT_Chemist_FungalBamboozler"/>
+                    <attribute id="UUID" type="guid" value="3cdd444a-60a6-477c-b165-55e65142a7ae"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="FFT_Cadet6"/>
+                    <attribute id="Spells" type="LSString" value="Shout_FFT_Chemist_PotionOfInvisibility;Shout_FFT_Chemist_HasteSporeGrenade"/>
+                    <attribute id="UUID" type="guid" value="dead0370-8962-4de7-ad54-0a1c3d88f7b6"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="FFT_Cadet7"/>
+                    <attribute id="Spells" type="LSString" value="Shout_FFT_Squire_Scream;"/>
+                    <attribute id="UUID" type="guid" value="c9fa40ce-b70f-475c-8a7d-377e1df95112"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="FFT_Cadet7_2"/>
+                    <attribute id="Spells" type="LSString" value="Shout_FFT_Chemist_PotionOfAngelicReprieve"/>
+                    <attribute id="UUID" type="guid" value="b9c3ac05-733f-40da-87ab-a71c3b5a6b20"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="FFT_Cadet8"/>
+                    <attribute id="Spells" type="LSString" value="Shout_FFT_Chemist_Flashblinder"/>
+                    <attribute id="UUID" type="guid" value="14f5eab2-43fb-4ee8-b254-17faf1356fd4"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="FFT_Cadet9"/>
+                    <attribute id="Spells" type="LSString" value="Target_FFT_Squire_Ultima;"/>
+                    <attribute id="UUID" type="guid" value="8a492ecd-22e6-4be0-80c8-8c4c15dc319e"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="FFT_Cadet9_2"/>
+                    <attribute id="Spells" type="LSString" value="Shout_FFT_Chemist_PotionOfAngelicSlumber"/>
+                    <attribute id="UUID" type="guid" value="19129d8d-1b42-44c8-bf6c-a05afed9ff3f"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

@@ -1,0 +1,212 @@
+{
+  "Order": [
+    {
+      "UUID": "755a8a72-407f-4f0d-9a33-274ac0f0b53d",
+      "Name": "Mod Configuration Menu"
+    },
+    {
+      "UUID": "26922ba9-6018-5252-075d-7ff2ba6ed879",
+      "Name": "ImpUI (ImprovedUI)"
+    },
+    {
+      "UUID": "396c5966-09b0-40a1-af3f-93a5e9ce71c0",
+      "Name": "CommunityLibrary"
+    },
+    {
+      "UUID": "67fbbd53-7c7d-4cfa-9409-6d737b4d92a9",
+      "Name": "CompatibilityFramework"
+    },
+    {
+      "UUID": "fb5f528d-4d48-4bf2-a668-2274d3cfba96",
+      "Name": "5eSpells"
+    },
+    {
+      "UUID": "4b516620-9c56-aa18-96ae-a9ee4f57b515",
+      "Name": "Mystra's Spells"
+    },
+    {
+      "UUID": "5d1585fa-973a-5721-8bce-4bfbbc84072a",
+      "Name": "Use 5eSpells with Mystra's Spells"
+    },
+    {
+      "UUID": "c6c0d2bd-6198-de9e-30ad-e8cda1793025",
+      "Name": "Ancient Mega Pack + REL (random loot)"
+    },
+    {
+      "UUID": "7e0b046d-6649-298e-2e83-c9ebc38cefc8",
+      "Name": "Spell Slot x 2 and Feats Every Level"
+    },
+    {
+      "UUID": "cb92db0c-634d-438c-8580-f45555555555",
+      "Name": "2e Spells"
+    },
+    {
+      "UUID": "711bb9f7-8173-4be8-a459-c306818f122e",
+      "Name": "REL_Full_AncientCHS"
+    },
+    {
+      "UUID": "0c01af3c-671c-8cfa-a4e6-cad1cb237a85",
+      "Name": "Arcane Vanguard"
+    },
+    {
+      "UUID": "2e686664-8fbb-4e08-9ec2-3eea5d0300ab",
+      "Name": "Dread Overlord (Nexus Version)"
+    },
+    {
+      "UUID": "9d9de1c5-2d4e-1ac5-713b-e0e0e00133d9",
+      "Name": "Gold Digger Greedy"
+    },
+    {
+      "UUID": "33eec47a-b349-c938-3af3-c07e7352abc7",
+      "Name": "Homebrew Blade Cantrips"
+    },
+    {
+      "UUID": "63d2a82d-84e1-05be-60a3-fffddbacfba8",
+      "Name": "MindWeaver"
+    },
+    {
+      "UUID": "22761113-0898-41b4-aa7b-cd941b4d1a96",
+      "Name": "MSK"
+    },
+    {
+      "UUID": "93c6116d-631a-cdc4-c0d3-37c568de4b76",
+      "Name": "Mystic Class"
+    },
+    {
+      "UUID": "c86cc191-c41e-cfcd-af57-bf1f1e29d76a",
+      "Name": "Mystic Expansion"
+    },
+    {
+      "UUID": "726b130c-6139-11ee-8c99-0242ac120092",
+      "Name": "NoRomanceLimit"
+    },
+    {
+      "UUID": "af6809f6-2539-4f38-9af8-6f7b28652fb4",
+      "Name": "Rebalance_Cantrips"
+    },
+    {
+      "UUID": "14132dd7-c606-42d7-8e3f-816a63bd7a14",
+      "Name": "Rebalance_Feats"
+    },
+    {
+      "UUID": "7595d80f-dff9-4a4e-a1cc-576d7a5b9237",
+      "Name": "Rebalance_Lvl1_Spells"
+    },
+    {
+      "UUID": "262002cc-4974-4637-8c59-1f5b9416c746",
+      "Name": "Rebalance_Lvl2_Spells"
+    },
+    {
+      "UUID": "294024e1-0872-43c1-bddc-7a37a42b60fa",
+      "Name": "Rebalance_Lvl3_Spells"
+    },
+    {
+      "UUID": "86a0b6ef-91e3-4123-ae68-b950ac2fc97f",
+      "Name": "Rebalance_Lvl4_Spells"
+    },
+    {
+      "UUID": "b303e532-db02-4a58-9754-6209e9d80c9d",
+      "Name": "Rebalance_Lvl5_Spells"
+    },
+    {
+      "UUID": "8dcc6c86-b80c-4920-824d-f21ea796bb32",
+      "Name": "Rebalance_Lvl6_Spells"
+    },
+    {
+      "UUID": "a4c63285-43ba-44a8-9f29-8c66eac62168",
+      "Name": "SkillActions 2 Consolidated"
+    },
+    {
+      "UUID": "2505ca3b-c19e-4b04-9110-607643b564c6",
+      "Name": "SkillActions"
+    },
+    {
+      "UUID": "d903677e-f24b-48ec-ab20-98dcc116a371",
+      "Name": "UnlockLevelCurve"
+    },
+    {
+      "UUID": "cf0b4eed-8b58-4981-8ab8-bf210d4db97b",
+      "Name": "UnlockLevelCurve_Patch_5eSpells"
+    },
+    {
+      "UUID": "dd19db12-96c0-4bca-9ef6-e8d733801d23",
+      "Name": "VFX_Library_SHV"
+    },
+    {
+      "UUID": "f51ce3e4-fe0d-42e8-a4f1-b7234c9b7e9c",
+      "Name": "VFX_Vault_SHV"
+    },
+    {
+      "UUID": "fd03819b-cec2-c351-1680-81f1f1e52c76",
+      "Name": "VFX_Library_VladsCodex"
+    },
+    {
+      "UUID": "0dd5b581-c210-4956-ab96-7682fb519de5",
+      "Name": "VFX_Library_VladsGrimoire"
+    },
+    {
+      "UUID": "44739494-f6de-8496-23eb-203fddec50d5",
+      "Name": "Free Ability Improvement"
+    },
+    {
+      "UUID": "e285bbbb-f352-f08e-e3cf-a0a1740dcb6b",
+      "Name": "Tasha's Feats"
+    },
+    {
+      "UUID": "4d5d0f12-090c-468c-b3f7-3a6be799fd43",
+      "Name": "FeatsUni"
+    },
+    {
+      "UUID": "7b25c953-f727-cab3-38eb-edad099baf4b",
+      "Name": "Queen's Garments"
+    },
+    {
+      "UUID": "9c4b345f-8db4-fade-2fd0-760232b234e8",
+      "Name": "NIGHTBRINGER_CLASS"
+    },
+    {
+      "UUID": "bcd11356-cc19-12f7-2988-10c9710da869",
+      "Name": "NIGHTBRINGER_ARMOR"
+    },
+    {
+      "UUID": "2d70d05d-cf09-766d-209c-538626d6a70d",
+      "Name": "NIGHTBRINGER_WEAPONS_NB438"
+    },
+    {
+      "UUID": "06e7001e-c3ef-228a-1e9f-424cdf7e7ffb",
+      "Name": "Sword Dancers of Eilistraee"
+    },
+    {
+      "UUID": "d5fe8e91-2f5b-3d7e-0257-38fff4c2dcde",
+      "Name": "Dragontamer"
+    },
+    {
+      "UUID": "0b9fe8cc-f707-9980-cd34-dad38c6640d3",
+      "Name": "Duskblade"
+    },
+    {
+      "UUID": "91904cf1-28f4-4544-bbfc-6a7809930d8a",
+      "Name": "Dual Wielding Tweaks (-3 Attack Rolls)"
+    },
+    {
+      "UUID": "47bb41fa-46a2-411b-b1a6-e53150fe668b",
+      "Name": "Skilled+"
+    },
+    {
+      "UUID": "3d8d1d3b-c8e3-4dba-ae6f-19da85bc6f6c",
+      "Name": "ATF (Anxiety's Toolkit for Firearms)"
+    },
+    {
+      "UUID": "6cde95a8-2682-4645-9b38-2964962fe8e0",
+      "Name": "Firearms"
+    },
+    {
+      "UUID": "88fadf2c-152d-404e-b863-c12273559e1c",
+      "Name": "Artificer"
+    },
+    {
+      "UUID": "66742dd5-4dad-3f13-b9e9-790fc5436c80",
+      "Name": "Final Fantasy Tactics Job System"
+    }
+  ]
+}

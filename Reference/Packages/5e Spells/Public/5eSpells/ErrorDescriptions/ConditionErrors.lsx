@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="8" build="613"/>
+    <region id="ConditionErrors">
+        <node id="root">
+            <children>
+                <node id="ConditionErrors">
+                    <attribute id="DisplayName" type="TranslatedString" handle="he6842936ged43g4072gb88egdf2460a3d0d8" version="1"/>
+                    <attribute id="ErrorDescriptionType" type="uint8" value="0"/>
+                    <attribute id="Identifier" type="FixedString" value="NotHasGoldForCeremony"/>
+                    <attribute id="UUID" type="guid" value="5696e1d2-ffec-4989-a3ed-7f590aaf1a47"/>
+                </node>
+                <node id="ConditionErrors">
+                    <attribute id="DisplayName" type="TranslatedString" handle="h0b792bd3geaefg468agb33fg927ac94f786e" version="2"/>
+                    <attribute id="ErrorDescriptionType" type="uint8" value="0"/>
+                    <attribute id="Identifier" type="FixedString" value="IsNotLevelGreater"/>
+                    <attribute id="UUID" type="guid" value="c6500b80-14b1-433b-abbc-9e46b3fb7678"/>
+                </node>
+                <node id="ConditionErrors">
+                    <attribute id="DisplayName" type="TranslatedString" handle="h6ed64fdfgcd0eg4ebcg9d73gb0cbd64482ac" version="1"/>
+                    <attribute id="ErrorDescriptionType" type="uint8" value="0"/>
+                    <attribute id="Identifier" type="FixedString" value="DeadLongerThanAMinute"/>
+                    <attribute id="UUID" type="guid" value="5636d972-d971-4935-8c3b-1c3dfc2ceafa"/>
+                </node>
+                <node id="ConditionErrors">
+                    <attribute id="DisplayName" type="TranslatedString" handle="h5151be4bg1756g48f1g8a0cg676e8502d493" version="1"/>
+                    <attribute id="ErrorDescriptionType" type="uint8" value="0"/>
+                    <attribute id="Identifier" type="FixedString" value="RitualSpellsNotInCombat"/>
+                    <attribute id="UUID" type="guid" value="ba986380-ad51-4fc5-b031-f20b5352d544"/>
+                </node>
+                <node id="ConditionErrors">
+                    <attribute id="DisplayName" type="TranslatedString" handle="h2f57e8c4ge48eg4c30gb809g5f7fe2c08b05" version="1"/>
+                    <attribute id="ErrorDescriptionType" type="uint8" value="0"/>
+                    <attribute id="Identifier" type="FixedString" value="GentleReposed"/>
+                    <attribute id="UUID" type="guid" value="c076d78c-d3e9-4fd2-bcd8-4ba1eba68d67"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

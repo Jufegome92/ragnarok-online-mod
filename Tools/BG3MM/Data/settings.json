@@ -1,0 +1,21 @@
+{
+  "GameDataPath": "C:/Program Files (x86)/Steam/steamapps/common/Baldurs Gate 3/Data",
+  "GameExecutablePath": "C:/Program Files (x86)/Steam/steamapps/common/Baldurs Gate 3/bin/bg3.exe",
+  "ExtenderSettings": {
+    "InsanityCheck": true
+  },
+  "ExtenderUpdaterSettings": {
+    "TargetVersion": "30.0.0.0",
+    "TargetResourceDigest": "bb93918b3ec3ca2d9b8dbb38ea35111acdf16d43d6e8f7f196050ae9ad4cc781"
+  },
+  "Window": {
+    "X": -1.0,
+    "Y": -1.0,
+    "Width": -1.0,
+    "Height": -1.0
+  },
+  "Confirmations": {},
+  "LastUpdateCheck": 1774785254,
+  "LastOrder": "Current",
+  "LastImportDirectoryPath": "C:\\Users\\jufeg\\Downloads"
+}

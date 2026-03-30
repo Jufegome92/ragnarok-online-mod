@@ -1,0 +1,4 @@
+new equipment "EQP_SummonFey"
+add initialweaponset "Melee"
+add equipmentgroup
+add equipment entry "WPN_Shortsword"

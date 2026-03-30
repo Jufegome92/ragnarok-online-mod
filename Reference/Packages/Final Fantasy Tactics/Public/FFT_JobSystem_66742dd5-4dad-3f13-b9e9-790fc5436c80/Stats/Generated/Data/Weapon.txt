@@ -1,0 +1,13 @@
+new entry "FFT_WPN_Spear_Gungnir"
+type "Weapon"
+using "WPN_Spear_2"
+data "RootTemplate" "b63e4f6d-66cc-48a9-a29d-233260201a2a"
+data "Damage Type" "Piercing"
+data "Damage" "1d8"
+data "Rarity" "Legendary"
+data "DefaultBoosts" "WeaponEnchantment(3);WeaponProperty(Magical)"
+data "BoostsOnEquipMainHand" "UnlockSpell(Rush_SpringAttack);UnlockSpell(Zone_FFT_Odin_Cleave)"
+data "Unique" "1"
+data "VersatileDamage" "1d10"
+data "Weapon Properties" "Melee;Dippable;Versatile;Magical"
+

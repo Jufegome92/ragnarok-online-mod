@@ -1,0 +1,747 @@
+{
+  "class": "Novice",
+  "subclass": "Acolyte",
+
+  "granted_at_character_level": 2,
+
+  "hit_points": {
+    "base": 8,
+    "per_level": 6,
+    "constitution_modifier_applies": true,
+    "formula_note": "At Acolyte levels, gain 6 HP + Constitution modifier per level."
+  },
+
+  "spellcasting_ability": "Wisdom",
+  "spellcasting_save_dc_formula": "8 + proficiency_bonus + wisdom_modifier",
+
+  "mana_points": {
+    "base_formula": "4 + (2 * character_level)",
+    "modifier_scaling": "character_level * floor(spellcasting_modifier / 2)",
+    "total_formula": "(4 + (2 * character_level)) + (character_level * floor(spellcasting_modifier / 2))",
+    "formula_note": "For Acolyte, spellcasting_modifier uses Wisdom."
+  },
+
+  "proficiencies": {
+    "saving_throws": [
+      "Wisdom",
+      "Constitution"
+    ],
+    "armor": [
+      "Light Armor",
+      "Shield"
+    ],
+    "weapons": [
+      "Club",
+      "Mace",
+      "Quarterstaff"
+    ],
+    "tools": [],
+    "skills": {
+      "fixed": [
+        "Insight",
+        "Religion"
+      ],
+      "expertise": 1
+    }
+  },
+
+  "design_identity": {
+    "role": "Support / Exorcist / Protective Utility",
+    "combat_style": "Bless allies, punish the profane, create safe zones, and manage sacred charges through consecration",
+    "strengths": [
+      "Strong support flexibility",
+      "Can heal, cleanse and protect",
+      "Useful anti-undead / anti-demon pressure",
+      "Good tactical utility"
+    ],
+    "weaknesses": [
+      "Lower offensive ceiling than Magician",
+      "Relies on timing and positioning",
+      "Weaker when forced into pure damage races"
+    ]
+  },
+
+  "core_systems": {
+    "sacred_doctrine": {
+      "description": "The Acolyte chooses a guiding doctrine that changes the emphasis of their holy arts.",
+      "variants": [
+        "Divine Protection",
+        "Demon Bane"
+      ]
+    },
+    "consecration": {
+      "description": "Through Aqua Benedicta, the Acolyte creates Holy Water Charges that can empower restoration, judgement, or blessing effects.",
+      "resource_name": "Holy Water Charges",
+      "maximum_charges": 3
+    }
+  },
+
+  "progression": {
+    "level_2": {
+      "class_state": "Acolyte",
+      "features_gained": [
+        "Sacred Doctrine",
+        "Restoration",
+        "Sanctuary Rite"
+      ]
+    },
+    "level_3": {
+      "features_gained": [
+        "Benediction"
+      ]
+    },
+    "level_4": {
+      "features_gained": [
+        "Judgement"
+      ]
+    },
+    "level_5": {
+      "features_gained": [
+        "Aqua Benedicta"
+      ]
+    },
+    "level_6": {
+      "features_gained": [
+        "Pilgrim's Passage"
+      ],
+      "transition_note": "Nivel ideal para comenzar la especialización hacia el Second Job."
+    }
+  },
+
+  "skills": [
+    {
+      "id": "acolyte_sacred_doctrine",
+      "name": "Sacred Doctrine",
+      "learned_at_level": 2,
+      "category": "Stance",
+      "action_type": "Bonus Action",
+      "cost_mp": 1,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "Until switched off, replaced by another doctrine, or combat ends",
+      "description": "El Acolyte adopta una doctrina sagrada que define si sus artes priorizan protección divina o castigo contra lo impuro.",
+      "base_effects": {
+        "choose_one": [
+          "Divine Protection",
+          "Demon Bane"
+        ]
+      },
+      "doctrine_variants": {
+        "Divine Protection": {
+          "identity": "Protection, resilience and defensive support",
+          "base_effects": {
+            "healing_done_bonus": "Add your wisdom modifier to any healing you do",
+            "damage_reduction_vs_physical": 2
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 2,
+                "effects": {
+                  "healing_done_bonus": "Add your wisdom modifier to any healing you do",
+                  "damage_reduction_vs_physical": 2
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "damage_reduction_vs_physical": 4
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "blessings_gain_bonus_duration": 1
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "restoration_consumes_no_holy_water_charge_once_per_turn": true,
+                  "damage_reduction_vs_physical": 6
+                }
+              }
+            ]
+          }
+        },
+        "Demon Bane": {
+          "identity": "Exorcism, radiant punishment and anti-profane pressure",
+          "base_effects": {
+            "radiant_damage_bonus": "Add your wisdom modifier to any radiant damage you deal",
+            "bonus_against_undead_and_demons": 2
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 2,
+                "effects": {
+                  "radiant_damage_bonus": "Add your wisdom modifier to any radiant damage you deal"
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "bonus_against_undead_and_demons": 4
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "judgement_save_penalty_vs_undead_and_demons": "1d4"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "judgement_bonus_damage_vs_profane_targets": "1d8"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "synergies": [
+        "Defines whether the Acolyte leans toward support or sacred offense",
+        "Interacts strongly with Restoration and Judgement"
+      ],
+      "design_notes": [
+        "This replaces Divine Protection and Demon Bane as passive skills.",
+        "Should feel like a meaningful combat stance choice."
+      ]
+    },
+
+    {
+      "id": "acolyte_restoration",
+      "name": "Restoration",
+      "learned_at_level": 2,
+      "category": "Support",
+      "action_type": "Action",
+      "base_cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Self or ally within 9m"
+      ],
+      "duration": "Instant",
+      "range": "9m",
+      "description": "El Acolyte canaliza gracia restauradora para sanar o purificar, adaptando el milagro según la necesidad del momento.",
+      "base_effects": {
+        "choose_one": [
+          "Heal",
+          "Cure"
+        ]
+      },
+      "mode_variants": {
+        "Heal": {
+          "identity": "Direct healing",
+          "base_effect": {
+            "healing": "1d6 + wisdom_modifier"
+          },
+          "intensified_effect": {
+            "healing": "2d6 + wisdom_modifier"
+          },
+          "overload_effect": {
+            "healing": "3d6 + wisdom_modifier",
+            "extra_rider": "Consumes 1 Holy Water Charge to also grant 1d4 temporary hit points"
+          }
+        },
+        "Cure": {
+          "identity": "Cleanse and stabilize",
+          "base_effect": {
+            "healing": "1d4 + wisdom_modifier",
+            "remove_one_minor_negative_condition": true
+          },
+          "intensified_effect": {
+            "healing": "2d4 + wisdom_modifier",
+            "remove_one_major_or_two_minor_negative_conditions": true
+          },
+          "overload_effect": {
+            "healing": "2d6 + wisdom_modifier",
+            "remove_conditions": "Cleanse all removable negative conditions on target",
+            "extra_rider": "Consumes 1 Holy Water Charge"
+          }
+        }
+      },
+      "overchannel": {
+        "base": {
+          "total_mp_cost": 2,
+          "effect": "Use Restoration at base potency."
+        },
+        "intensified": {
+          "total_mp_cost": 4,
+          "effect": "Use the intensified form of the chosen Restoration mode."
+        },
+        "overload": {
+          "total_mp_cost": 6,
+          "effect": "Use the overload form of the chosen Restoration mode."
+        }
+      },
+      "scaling": {
+        "type": "milestone_support_scaling",
+        "milestones": [
+          {
+            "level": 2,
+            "effects": {
+              "base_access": true
+            }
+          },
+          {
+            "level": 5,
+            "effects": {
+              "restoration_base_healing_bonus": 1
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "restoration_intensified_healing_bonus": 2
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "restoration_overload_efficiency": "Overload costs 1 less MP, minimum 1"
+            }
+          }
+        ]
+      },
+      "design_notes": [
+        "This replaces Heal and Cure as separate base buttons.",
+        "The Acolyte should always feel like it can choose between mending and cleansing."
+      ]
+    },
+
+    {
+      "id": "acolyte_sanctuary_rite",
+      "name": "Sanctuary Rite",
+      "learned_at_level": 2,
+      "category": "Utility",
+      "action_type": "Bonus Action",
+      "base_cost_mp": 2,
+      "requires_concentration": "Depends on chosen rite",
+      "requires": [],
+      "duration": "Variant-dependent",
+      "range": "Self or target area",
+      "description": "El Acolyte consagra el espacio cercano para revelar amenazas ocultas o crear un refugio momentáneo contra el castigo a distancia.",
+      "base_effects": {
+        "choose_one": [
+          "Ruwach",
+          "Pneuma"
+        ]
+      },
+      "rite_variants": {
+        "Ruwach": {
+          "identity": "Reveal and purify hidden presences",
+          "base_effect": {
+            "range": "Self aura",
+            "duration": "3 turns",
+            "reveal_hidden_and_invisible_units_in_radius": "6m"
+          },
+          "intensified_effect": {
+            "duration": "4 turns",
+            "reveal_hidden_and_invisible_units_in_radius": "9m"
+          },
+          "overload_effect": {
+            "duration": "4 turns",
+            "reveal_hidden_and_invisible_units_in_radius": "9m",
+            "extra_rider": "Enemies revealed by this rite take 1d4 radiant damage"
+          }
+        },
+        "Pneuma": {
+          "identity": "Protective sacred zone against ranged pressure",
+          "base_effect": {
+            "range": "9m",
+            "duration": "2 turns",
+            "requires_concentration": true,
+            "effect": "Create a 3m radius zone that nullifies or heavily reduces ranged weapon damage entering it"
+          },
+          "intensified_effect": {
+            "duration": "3 turns",
+            "effect": "Zone also grants +1 AC against ranged spell attacks"
+          },
+          "overload_effect": {
+            "duration": "3 turns",
+            "effect": "Zone nullifies ranged weapon damage and reduces incoming ranged spell damage by 50%",
+            "extra_rider": "Consumes 1 Holy Water Charge"
+          }
+        }
+      },
+      "overchannel": {
+        "base": {
+          "total_mp_cost": 2,
+          "effect": "Use the base form of Ruwach or Pneuma."
+        },
+        "intensified": {
+          "total_mp_cost": 4,
+          "effect": "Use the intensified form of the chosen rite."
+        },
+        "overload": {
+          "total_mp_cost": 5,
+          "effect": "Use the overload form of the chosen rite."
+        }
+      }
+    },
+
+    {
+      "id": "acolyte_benediction",
+      "name": "Benediction",
+      "learned_at_level": 3,
+      "category": "Support",
+      "action_type": "Bonus Action",
+      "base_cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Ally or enemy within 9m depending on chosen blessing"
+      ],
+      "duration": "3 turns",
+      "range": "9m",
+      "description": "El Acolyte pronuncia una bendición o una negación sagrada que acelera, fortalece o debilita el flujo del combate.",
+      "base_effects": {
+        "choose_one": [
+          "Blessing",
+          "Agility Rite",
+          "Angelus"
+        ]
+      },
+      "blessing_variants": {
+        "Blessing": {
+          "identity": "General divine empowerment",
+          "base_effect": {
+            "target": "Ally",
+            "effect": "+1 attack rolls, +1 saving throws"
+          },
+          "intensified_effect": {
+            "effect": "+2 attack rolls, +2 saving throws"
+          },
+          "overload_effect": {
+            "effect": "+2 attack rolls, +2 saving throws, +1d4 radiant damage on first successful hit each turn",
+            "extra_rider": "Consumes 1 Holy Water Charge"
+          }
+        },
+        "Agility Rite": {
+          "identity": "Increase or decrease combat speed",
+          "base_effect": {
+            "choose_one": [
+              "Increase Agility",
+              "Decrease Agility"
+            ]
+          },
+          "submodes": {
+            "Increase Agility": {
+              "target": "Ally",
+              "effect": "+3m movement and +1 initiative"
+            },
+            "Decrease Agility": {
+              "target": "Enemy",
+              "effect": "-3m movement and disadvantage on opportunity attacks"
+            }
+          },
+          "intensified_effect": {
+            "Increase Agility": "+3m movement, +1 initiative, +1 AC",
+            "Decrease Agility": "-3m movement, -1 AC"
+          },
+          "overload_effect": {
+            "Increase Agility": "+6m movement, +1 initiative, +1 AC",
+            "Decrease Agility": "-6m movement, -1 AC, target cannot take reactions",
+            "extra_rider": "Consumes 1 Holy Water Charge"
+          }
+        },
+        "Angelus": {
+          "identity": "Physical protection through sacred reinforcement",
+          "base_effect": {
+            "target": "Ally or small allied area",
+            "effect": "Reduce incoming physical damage by 1"
+          },
+          "intensified_effect": {
+            "effect": "Reduce incoming physical damage by 2"
+          },
+          "overload_effect": {
+            "effect": "Reduce incoming physical damage by 2 and grant 1d6 temporary hit points",
+            "extra_rider": "Consumes 1 Holy Water Charge"
+          }
+        }
+      },
+      "overchannel": {
+        "base": {
+          "total_mp_cost": 2,
+          "effect": "Use the base version of the chosen blessing."
+        },
+        "intensified": {
+          "total_mp_cost": 4,
+          "effect": "Use the intensified version of the chosen blessing."
+        },
+        "overload": {
+          "total_mp_cost": 6,
+          "effect": "Use the overload version of the chosen blessing."
+        }
+      },
+      "design_notes": [
+        "This replaces Blessing, Increase Agility, Decrease Agility and Angelus as separate first-job buttons."
+      ]
+    },
+
+    {
+      "id": "acolyte_judgement",
+      "name": "Judgement",
+      "learned_at_level": 4,
+      "category": "Attack",
+      "action_type": "Action",
+      "base_cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Valid target within 18m"
+      ],
+      "duration": "Instant",
+      "range": "18m",
+      "description": "El Acolyte invoca juicio santo para castigar a un enemigo con luz divina o para marcar a una presencia impura con condena sagrada.",
+      "base_effects": {
+        "choose_one": [
+          "Holy Light",
+          "Signum Crucis"
+        ]
+      },
+      "judgement_variants": {
+        "Holy Light": {
+          "identity": "Reliable single-target radiant damage",
+          "base_effect": {
+            "damage_type": "Radiant",
+            "damage": "2d6 + wisdom_modifier"
+          },
+          "intensified_effect": {
+            "damage": "3d6 + wisdom_modifier"
+          },
+          "overload_effect": {
+            "damage": "4d6 + wisdom_modifier",
+            "extra_rider": "Consumes 1 Holy Water Charge to blind the target for 1 turn on failed Constitution save"
+          }
+        },
+        "Signum Crucis": {
+          "identity": "Exorcising debuff and anti-profane pressure",
+          "base_effect": {
+            "damage_type": "Radiant",
+            "damage": "1d6 + wisdom_modifier",
+            "saving_throw": "Wisdom",
+            "on_failed_save": "Target suffers -1 attack rolls and -1 saving throws for 2 turns"
+          },
+          "intensified_effect": {
+            "damage": "2d6 + wisdom_modifier",
+            "on_failed_save": "Target suffers -2 attack rolls and -1 saving throws for 2 turns"
+          },
+          "overload_effect": {
+            "damage": "2d8 + wisdom_modifier",
+            "on_failed_save": "Target suffers -2 attack rolls, -2 saving throws, and takes +1d4 radiant damage from holy sources for 2 turns",
+            "extra_rider": "Against undead or demons, Signum Crucis has disadvantage penalty increased by 1"
+          }
+        }
+      },
+      "overchannel": {
+        "base": {
+          "total_mp_cost": 2,
+          "effect": "Use the base version of the chosen judgement."
+        },
+        "intensified": {
+          "total_mp_cost": 4,
+          "effect": "Use the intensified version of the chosen judgement."
+        },
+        "overload": {
+          "total_mp_cost": 6,
+          "effect": "Use the overload version of the chosen judgement."
+        }
+      }
+    },
+
+    {
+      "id": "acolyte_aqua_benedicta",
+      "name": "Aqua Benedicta",
+      "learned_at_level": 5,
+      "category": "Resource",
+      "action_type": "Bonus Action",
+      "cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "Instant",
+      "range": "Self",
+      "description": "El Acolyte consagra agua ordinaria y la transforma en una reserva de poder litúrgico que alimenta milagros más intensos.",
+      "base_effects": {
+        "generate_holy_water_charges": 1
+      },
+      "scaling": {
+        "type": "milestone_resource_scaling",
+        "milestones": [
+          {
+            "level": 5,
+            "effects": {
+              "generate_holy_water_charges": 1,
+              "max_charges": 3
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "generate_holy_water_charges": 2
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "using_a_charge_restores_1_mp_once_per_turn": true
+            }
+          }
+        ]
+      },
+      "synergies": [
+        "Empowers Restoration, Benediction and Judgement overload states",
+        "Gives the Acolyte a distinct technical layer separate from raw MP"
+      ],
+      "design_notes": [
+        "This is the defining internal resource tool of the Acolyte."
+      ]
+    },
+
+    {
+      "id": "acolyte_pilgrims_passage",
+      "name": "Pilgrim's Passage",
+      "learned_at_level": 6,
+      "category": "Utility",
+      "action_type": "Action",
+      "base_cost_mp": 3,
+      "requires_concentration": false,
+      "requires": [
+        "Self, ally, or valid destination depending on chosen mode"
+      ],
+      "duration": "Instant or out-of-combat utility",
+      "range": "Variant-dependent",
+      "description": "El Acolyte invoca un tránsito sagrado: un paso breve para reposicionarse o una apertura litúrgica para guiar el viaje.",
+      "base_effects": {
+        "choose_one": [
+          "Teleportation",
+          "Warp Portal"
+        ]
+      },
+      "passage_variants": {
+        "Teleportation": {
+          "identity": "Short tactical reposition",
+          "base_effect": {
+            "range": "Self or ally within 9m",
+            "effect": "Teleport target up to 6m to a visible point"
+          },
+          "intensified_effect": {
+            "effect": "Teleport target up to 9m"
+          },
+          "overload_effect": {
+            "effect": "Teleport self and one adjacent ally up to 9m",
+            "extra_rider": "Consumes 1 Holy Water Charge"
+          }
+        },
+        "Warp Portal": {
+          "identity": "Travel and ritual passage",
+          "base_effect": {
+            "effect": "Create an out-of-combat portal or travel anchor as allowed by campaign rules"
+          },
+          "intensified_effect": {
+            "effect": "Extend portal duration or expand party utility"
+          },
+          "overload_effect": {
+            "effect": "Enable stronger ritual travel effect at GM/system discretion"
+          }
+        }
+      },
+      "overchannel": {
+        "base": {
+          "total_mp_cost": 3,
+          "effect": "Use the base form of the chosen passage."
+        },
+        "intensified": {
+          "total_mp_cost": 5,
+          "effect": "Use the intensified form of the chosen passage."
+        },
+        "overload": {
+          "total_mp_cost": 6,
+          "effect": "Use the overload form of the chosen passage."
+        }
+      },
+      "design_notes": [
+        "Teleportation should matter in combat.",
+        "Warp Portal can remain mostly ritual/out-of-combat until later testing."
+      ]
+    }
+  ],
+
+  "summary_tables": {
+    "skill_unlocks": [
+      {
+        "level": 2,
+        "skills": [
+          "Sacred Doctrine",
+          "Restoration",
+          "Sanctuary Rite"
+        ]
+      },
+      {
+        "level": 3,
+        "skills": [
+          "Benediction"
+        ]
+      },
+      {
+        "level": 4,
+        "skills": [
+          "Judgement"
+        ]
+      },
+      {
+        "level": 5,
+        "skills": [
+          "Aqua Benedicta"
+        ]
+      },
+      {
+        "level": 6,
+        "skills": [
+          "Pilgrim's Passage"
+        ]
+      }
+    ],
+    "quick_costs": [
+      {
+        "name": "Sacred Doctrine",
+        "cost_mp": 1
+      },
+      {
+        "name": "Restoration",
+        "cost_mp": "2 / 4 / 6"
+      },
+      {
+        "name": "Sanctuary Rite",
+        "cost_mp": "2 / 4 / 5"
+      },
+      {
+        "name": "Benediction",
+        "cost_mp": "2 / 4 / 6"
+      },
+      {
+        "name": "Judgement",
+        "cost_mp": "2 / 4 / 6"
+      },
+      {
+        "name": "Aqua Benedicta",
+        "cost_mp": 2
+      },
+      {
+        "name": "Pilgrim's Passage",
+        "cost_mp": "3 / 5 / 6"
+      }
+    ]
+  },
+
+  "core_design_rules": [
+    "El Acolyte es un support táctico, protector y exorcista, no solo un sanador.",
+    "Sacred Doctrine reemplaza Divine Protection y Demon Bane como elección activa de identidad.",
+    "Restoration reemplaza Heal y Cure como skill modular de restauración y purificación.",
+    "Benediction reemplaza Blessing, Increase Agility, Decrease Agility y Angelus como familia de bendiciones.",
+    "Sanctuary Rite reemplaza Ruwach y Pneuma como sistema de santuario y revelación.",
+    "Judgement reemplaza Holy Light y Signum Crucis como skill ofensiva sagrada modular.",
+    "Aqua Benedicta es el sistema técnico diferencial del Acolyte y genera Holy Water Charges.",
+    "Pilgrim's Passage reemplaza Teleportation y Warp Portal como movilidad táctica y utilidad ritual.",
+    "El Second Job no debería reemplazar este kit, sino profundizar sus doctrinas, bendiciones y exorcismos."
+  ]
+}

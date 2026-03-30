@@ -1,0 +1,1108 @@
+<?xml version="1.0"?>
+<contentList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <content contentuid="hb63decc7ga7efg8847g94ccg8f38fbfc05f3" version="1">Mana</content>
+  <content contentuid="hb963e1e1g3f57g82a7gd05bgf39454ab402b" version="1">Primary casting resource.</content>
+  <content contentuid="hae1e0a86g7719g6030gccebga59e44a39d11" version="1">Job Mastery: Squire</content>
+  <content contentuid="hde9caf8ega6afgdfceg52e9g3863194805bc" version="1">Unlock: Basic Skill</content>
+  <content contentuid="h1b2e52efg7fa6g7a78g3897gf16dbe3490a5" version="1">Job Mastery: Chemist</content>
+  <content contentuid="hd6ade8d6gf587gac22g920cg2215decdcee8" version="1">Unlock: Item</content>
+  <content contentuid="he9deaf30g9ff8g6bb6gd99agccd44adbbe55" version="1">Job Mastery: Knight</content>
+  <content contentuid="h6955e33eg15ddg1423g4872g4a64174ed61a" version="1">Unlock: Art of War</content>
+  <content contentuid="h539a920bgd90cg6083gfd33gdba21057dc9b" version="1">Job Mastery: Archer</content>
+  <content contentuid="hd1d327cag8163gef54g8749ga48199a699ce" version="1">Unlock: Aim</content>
+  <content contentuid="hb446d6d0g6d87gee96g211ag56b99f2076a0" version="1">Job Mastery: White Mage</content>
+  <content contentuid="h4ce252edg4f54g5371g80bbgc649d175d768" version="1">Unlock: White Magic</content>
+  <content contentuid="h3fbd66a3gd69fge37fgebafg1e50c33e1529" version="1">Job Mastery: Black Mage</content>
+  <content contentuid="h19b34ec6g1640g98c8gf65cg1a29fada4df4" version="1">Unlock: Black Magic</content>
+  <content contentuid="hdc5f5ee8g620cg82ddgdb06g4777bdb43361" version="1">Job Mastery: Onion Knight</content>
+  <content contentuid="h0d243d37gbc49g6f9dg16d0g26fafc63fa2f" version="1">Power grows with each class mastery.</content>
+  <content contentuid="h9763ba15g89e5g30ebg064dg6ded27469bcd" version="1">Job Mastery: Monk</content>
+  <content contentuid="hfef5e3d9g8ea8gef82g098fg9391fe4e60ab" version="1">Unlock: Punch Art</content>
+  <content contentuid="h558ac599gfb34ge251g4efage3eb5167c043" version="1">Job Mastery: Geomancer</content>
+  <content contentuid="h6ce8fd4dg2eabgac76g04f0g955d7fdf74dd" version="1">Unlock: Geomancy</content>
+  <content contentuid="h9fbb94d6gacc2ga105gef56g1480eaf96942" version="1">Job Mastery: Summoner</content>
+  <content contentuid="h8ec8e03cgc0c8g36a3gca23g072bc2994c2a" version="1">Unlock: Summon</content>
+  <content contentuid="h8b9028b5gaf16g6cebgd34bg5d5b867314a6" version="1">Job Mastery: Samurai</content>
+  <content contentuid="hf1368a37g342dg4418gd8e3g5f809bfa22af" version="1">Unlock: Iaido</content>
+  <content contentuid="hf3ee796dg1a58g092dg52fegda3f9d795d5d" version="1">Job Mastery: Holy Knight</content>
+  <content contentuid="hf057db82g2d7dgb1ccge688g4bffe80f82e0" version="1">Unlock: Holy Sword</content>
+  <content contentuid="hefe5116bg29a3gb06eg7745g813a1697f585" version="1">Job Mastery: Dark Knight</content>
+  <content contentuid="hf2fcdc20g1642g11b2ge1a5g47fecf57bb21" version="1">Unlock: Darkness</content>
+  <content contentuid="h43d7459fgdf80ga6f5gb084g361bde77a845" version="1">Job Mastery: Thief</content>
+  <content contentuid="hfd2825e1g9cf5ga4f7gd0f7g3fe1392382d0" version="1">Unlock: Steal</content>
+  <content contentuid="h2d285ffcg859ag20d8g00a7g257c2c3628ee" version="1">Job Mastery: Dragoon</content>
+  <content contentuid="hd3915d40g487dg6c28g5e35g71db15b25b8a" version="1">Unlock: Jump</content>
+  <content contentuid="ha3b7b105g432cgfb5cgb3b7g5d5210326843" version="1">Job Mastery: Ninja</content>
+  <content contentuid="h3f373378g273cg3762g58a0g4b5b4ab29240" version="1">Unlock: Throw</content>
+  <content contentuid="h55525e11gab11g7dddgfef4g32465c526743" version="1">Job Mastery: Sky Pirate</content>
+  <content contentuid="hc4c71fb3g2a40g4f36g3ff7g192469fb07ff" version="1">Unlock: Pillage</content>
+  <content contentuid="hbc0ac9aag2adagaa07g7826g67e38957ce3d" version="1">Job Mastery: Dragoner</content>
+  <content contentuid="h24fb9c55gf66dg80e4g39b1g9030462c13e5" version="1">Unlock: Dragon</content>
+  <content contentuid="he8f4506ag67fbg5bf0g96f0g13edd8acb2b7" version="1">Job Mastery: Soldier</content>
+  <content contentuid="hccde5c28ge146gb95bgbcabgcb177eddcfe8" version="1">Unlock: Limit</content>
+  <content contentuid="h083535beg30cegcfaege874g67556bd32b96" version="1">Job Mastery: Mystic</content>
+  <content contentuid="hb82e433bgf6dfge6e6gade6gd00294eef11f" version="1">Unlock: Mystic Arts</content>
+  <content contentuid="hbd03baabgb4c1g3bfcgd7f0g568adee2d624" version="1">Job Mastery: Orator</content>
+  <content contentuid="h39ece1f0g82c1g376fg7885g95e40c590186" version="1">Unlock: Speechcraft</content>
+  <content contentuid="h1314377bgebceg891agd57ag2eb426dce150" version="1">Job Mastery: Bard</content>
+  <content contentuid="h1299237bg2ba7g786cgac32gbc1e860a2e8d" version="1">Unlock: Bardsong</content>
+  <content contentuid="hc84a6570g3899g84b1g9409ga6aefc7f4477" version="1">Job Mastery: Skyseer</content>
+  <content contentuid="h43930af4g5bd8g3db9g6364ge2d91e735b81" version="1">Unlock: Sky Mantra</content>
+  <content contentuid="h9584c44eg858dg1df5g7531g70ae7399c3f8" version="1">Job Mastery: Templar</content>
+  <content contentuid="h92b4c7aaga477g25cdg8e9cgce0a847c047b" version="1">Unlock: Spellblade</content>
+  <content contentuid="h715b85feg2f87gc828g4254g1f606a5747c4" version="1">Job Mastery: Time Mage</content>
+  <content contentuid="ha91dccf9g38a7gf70fg24b4gf8dffaef193b" version="1">Unlock: Time Magic</content>
+  <content contentuid="ha77b4a44g6b3fga6a7g1cf3g89413ffbafc9" version="1">Job Mastery: Dancer</content>
+  <content contentuid="hb845a518g3cc2gcf40g9fcbg6f8efa3e6930" version="1">Unlock: Dance</content>
+  <content contentuid="h9491297cg9e4bgd6aegf584gf252ca12137b" version="1">Job Mastery: Netherseer</content>
+  <content contentuid="h742971abg224egde77g3013g45625f192572" version="1">Unlock: Nether Mantra</content>
+  <content contentuid="h3532b9b2g9e63g8d5cg5d1bgc2bb563b0c46" version="2">Job Mastery: Sorcerer</content>
+  <content contentuid="h9dde2ef9gdf9dg403eg20d6g81a8c90a7d55" version="2">Unlock: Magics</content>
+  <content contentuid="h9353d67dg4742g2849g83a7gb657d93f70a2" version="1">Primary Skill</content>
+  <content contentuid="h7b282c7agbabaga38aga6c6gdfba39b85961" version="1">Select one primary skill set that also influences your equipment proficiencies.</content>
+  <content contentuid="had367035g7868g1687g1416g23a80f4e0277" version="1">Secondary Skill</content>
+  <content contentuid="h014dc7ccg8840g6849gbc9eg8407263f524d" version="1">Select one secondary skill set to open up further abilities.</content>
+  <content contentuid="hbfe11bc7g61f8gd506g4d70g5f417a6461d6" version="1">Reaction</content>
+  <content contentuid="h023c1685gac2cg03b5gdd88g3f84a8c7aeb5" version="1">Select one reaction from the reactions you have mastered.</content>
+  <content contentuid="h9ffbbf9bgd917ge4a9g9fb0g2bc2a47f1567" version="1">Support</content>
+  <content contentuid="hd19e4394g5a74gac36g527cge66ae8248ef6" version="1">Select one support skill to bolster your abilities.</content>
+  <content contentuid="h7d86486egdcfbga5eag4b94g0b0ca46eabfd" version="1">Basic Skill</content>
+  <content contentuid="h89081a45g7564g0b86gec0fg3933f37e80b3" version="1">Item</content>
+  <content contentuid="h1b77aca6g34c2g7f3ageb54g9f10d67e119d" version="1">Art of War</content>
+  <content contentuid="h114b1369gbc03gd2edg14c9ge093d4fa178f" version="1">Punch Art</content>
+  <content contentuid="h2cbc1731g59f5g61b7gd136gbe20743b0eca" version="1">Geomancy</content>
+  <content contentuid="he1e5ef60g917eg9d8ag18b8g13a3a1c4db30" version="1">Iaido</content>
+  <content contentuid="hc13d8d09g70a6g75adgc7f8g611e1dc6b4eb" version="1">Holy Sword</content>
+  <content contentuid="h804bdbf5g975dg6e25g2189g9b9120afa76f" version="1">Darkness</content>
+  <content contentuid="h436eb6e2gff1ag8830g2215ga9e517886af6" version="1">Aim</content>
+  <content contentuid="h2303c685g509ag2c05g297cga9dd817c4837" version="1">Steal</content>
+  <content contentuid="h3565258fg83d9ga1a0g4524gb272ed213e31" version="1">Jump</content>
+  <content contentuid="ha29c7e40gfdb1g09ffg3b2fg07ac1652494c" version="1">Throw</content>
+  <content contentuid="hb6279a69g2b7ag8391ga14bg8c2b6eb923ca" version="1">Pillage</content>
+  <content contentuid="h847589abg289ag16e8g8d36g7af1550f7f46" version="1">Dragon</content>
+  <content contentuid="h52a49c32g6616g8905g6b1cgf68a72bad0cf" version="1">Limit</content>
+  <content contentuid="hca81653ag3cd3gab05g37ebg69c72a466ef0" version="1">White Magic</content>
+  <content contentuid="h13b1fe07gff6bg7f00g81bcg7d5c7eea22bd" version="1">Mystic Arts</content>
+  <content contentuid="h9a2b78d6g1c97g2e2egc15fg0a3c576aca9c" version="1">Speechcraft</content>
+  <content contentuid="h23e373d3g5400g728agb4d9gac389c0a4868" version="1">Bardsong</content>
+  <content contentuid="h462ff82eg2937gf3d9gdbf2g4175b3e734d5" version="1">Sky Mantra</content>
+  <content contentuid="h613e88feg4f3eg8488g6210g60660b1557c8" version="1">Spellblade</content>
+  <content contentuid="h4608fc6aga129ge67agf761g788aa29395f6" version="1">Black Magic</content>
+  <content contentuid="heea923b1g0b89g9529g3ae1g518bef76c04c" version="1">Time Magic</content>
+  <content contentuid="h7282764bgdabcgf81fg7b5ag208e7825d72f" version="1">Summon</content>
+  <content contentuid="hb6dd9eedg7cf1g7092g8ca7g1689ed3b92cd" version="1">Dance</content>
+  <content contentuid="h85d69770ge2ebga4eegf7a1g36fd3ffdbb9e" version="1">Nether Mantra</content>
+  <content contentuid="hfe114df9g8e08g5e79g7caegdfef86af09dd" version="2">Magics</content>
+  <content contentuid="h50fa98e9g7ec0g64f5g92a3g4e490f52fa5c" version="2">Basic Skill (Secondary)</content>
+  <content contentuid="h92854248g6e4egc94fg207bgdfd386e611f0" version="2">Item (Secondary)</content>
+  <content contentuid="hdf60ef71g6acfg538fg3877g6cd137531939" version="2">Art of War (Secondary)</content>
+  <content contentuid="h620ec80eg18beg1879gbba0g449601f9bc4c" version="2">Punch Art (Secondary)</content>
+  <content contentuid="hcb7ae7c0g7811gef46gb12dg88289d3e3940" version="2">Geomancy (Secondary)</content>
+  <content contentuid="h62be61feg81c6g886dgc97dg4c6ad3fe7c12" version="2">Iaido (Secondary)</content>
+  <content contentuid="h3b81040fg97acg3df5gcec8g0715a5870507" version="2">Holy Sword (Secondary)</content>
+  <content contentuid="he97160c4ga0d6g1b62g005bg710228b6ce0a" version="2">Darkness (Secondary)</content>
+  <content contentuid="hf81e6876g977dg717fgfcd8gda3e51ed0af6" version="2">Aim (Secondary)</content>
+  <content contentuid="h0aaef6cdg0499g4a36gfa9cg8daef7c98230" version="2">Steal (Secondary)</content>
+  <content contentuid="hcddcbf96g3e6fg7a8eg880ag75d065d62c2c" version="2">Jump (Secondary)</content>
+  <content contentuid="h6e8e8254g5900gd124g3cb2gfbfe9b6f644b" version="2">Throw (Secondary)</content>
+  <content contentuid="h24f2b847g4dd6g4489g7866g871e7ef297dc" version="2">Pillage (Secondary)</content>
+  <content contentuid="h605c1db5g63dbg0811g9688g15cfe97d289c" version="2">Dragon (Secondary)</content>
+  <content contentuid="hdc3480cbg9727g0bffgc3ebgbd0a68a8d801" version="2">Limit (Secondary)</content>
+  <content contentuid="h763dc8b2gf93egc671g5348g2d910f462810" version="2">White Magic (Secondary)</content>
+  <content contentuid="h2cf0931dg4e5bg2732ga8f1ge010ca9c1f08" version="2">Mystic Arts (Secondary)</content>
+  <content contentuid="haf895207g6706g40d9g0f49g6b4f9f8e32aa" version="2">Speechcraft (Secondary)</content>
+  <content contentuid="hb42b5994g20ddg40a8g3c07g88f54b09ddb1" version="2">Bardsong (Secondary)</content>
+  <content contentuid="he2841013g7e46g80e0gcc5ag5642797f6bd5" version="2">Sky Mantra (Secondary)</content>
+  <content contentuid="h468948f0g7e4ag78a7gc91ag0a7e4b4edf6f" version="2">Spellblade (Secondary)</content>
+  <content contentuid="ha5669dcbg656egbc03gc832gc86afe93adbe" version="2">Black Magic (Secondary)</content>
+  <content contentuid="h8324befcg5798g964ag2bd3g2d891b456b06" version="2">Time Magic (Secondary)</content>
+  <content contentuid="h073b7ebcg2cc4gb32fg87efgbfa49ee83d79" version="2">Summon (Secondary)</content>
+  <content contentuid="hac8bba77g14dage260gb58cg221cd110059e" version="2">Dance (Secondary)</content>
+  <content contentuid="h82dae49fgd6aeg4313g2243g28de1c2c58eb" version="2">Nether Mantra (Secondary)</content>
+  <content contentuid="h03548bbag5074g3b56gb159g0e775b74be51" version="3">Magics (Secondary)</content>
+  <content contentuid="h0d93ffb8g3646gcac9g64edgd37a975ce8c2" version="2">Squire job command. These are the most fundamental of all battle techniques. &lt;br&gt;&lt;br&gt;Primary Unlocks: Medium Armor, Flails, Morningstars, Shortswords, Longswords, Battleaxes, and Greataxes.</content>
+  <content contentuid="hfd007962g0d2cg8fb5gbb6dg7697bc65efe7" version="2">Chemist job command. Enables the use of items to assist allies in need. &lt;br&gt;&lt;br&gt;Primary Unlocks: Guns and Throw Item.</content>
+  <content contentuid="h33d65f50g9834g6135g0184g452a99a0bfd6" version="2">Knight job command. Enables the use of "Rend" skills that destroy equipment or reduce attributes. &lt;br&gt;&lt;br&gt;Primary Unlocks: Medium Armor, Heavy Armor, Shields, and all one-handed and versatile melee martial weapons. </content>
+  <content contentuid="hc0e8f871g72a5g2308g3899geeef70f3b658" version="2">Monk job command. Turns bare fists into lethal weapons. &lt;br&gt;&lt;br&gt;Primary Unlocks: Brawler.</content>
+  <content contentuid="hf9e9cbebgde60gf4e0gd912gfd86b16f3685" version="2">Geomancer job command. Attacks with mystical powers drawn from the earth itself. &lt;br&gt;&lt;br&gt;Primary Unlocks: Shortswords, Longswords, Greatswords, Battleaxes, and Greataxes. </content>
+  <content contentuid="h71aa51d1g0f8bg731fgd991g90f7593ebfa3" version="4">Samurai job command. Unleashes the mystical powers contained within katana. Iaido usage may temporarily drain mystical powers and temporarily restrict use. &lt;br&gt;&lt;br&gt;Primary Unlocks: Medium Armor, Heavy Armor, Scimitars, Shortswords, Longswords, and Greatswords.</content>
+  <content contentuid="hefdc45c4g44bfge00ag9092gc87b009d13eb" version="2">Holy knight job command. Smite the foe with holy sword techniques. &lt;br&gt;&lt;br&gt;Primary Unlocks: Medium Armor, Heavy Armor, Shields, Rapiers, Scimitars, Shortswords, and Longswords.</content>
+  <content contentuid="haa8354a2g4123g6c28gd6cagb7e95c538315" version="2">Dark knight job command. Cursed sword techniques cut down the foe. &lt;br&gt;&lt;br&gt;Primary Unlocks: Medium Armor, Heavy Armor, Shields, Shortswords, Longswords, Greatswords, Flails, Battleaxes, and Greataxes.</content>
+  <content contentuid="h82e64624gdb15gb015g5b63g4fcd8da0a9e8" version="2">Archer job command. Allows attacks to be carefully aimed in order to deal greater damage. &lt;br&gt;&lt;br&gt;Primary Unlocks: Medium Armor, Shields, Hand Crossbows, Heavy Crossbows, and Longbows.</content>
+  <content contentuid="h94394072gc45cgc4e3g8f69g21b016636988" version="2">Thief job command. Allows a unit to steal gil, items, and even non-material things. &lt;br&gt;&lt;br&gt;Primary Unlocks: Medium Armor, Rapiers, Shortswords, and War Picks.</content>
+  <content contentuid="hee2b6b8dg7684gbe33g68aeg684208928ae4" version="2">Dragoon job command. Jumps high into the air, then dives downward into the opponent. &lt;br&gt;&lt;br&gt;Primary Unlocks: Medium Armor, Heavy Armor, Shields, Tridents, Glaives, Halberds, and Pikes.</content>
+  <content contentuid="h3083470fgb7aagd9deg570ag8854f25cd13c" version="2">Ninja job command. Attack by throwing weapons from the party inventory. &lt;br&gt;&lt;br&gt;Primary Unlocks: Dual Wield and all one-handed melee martial weapons.</content>
+  <content contentuid="he5fc4ab7g592eg3de4g96c9g05284b66786a" version="2">Sky pirate job command. Unsurpassed in gunplay and thievery. No prey goes uncaught, no target unscathed. &lt;br&gt;&lt;br&gt;Primary Unlocks: Medium Armor, Heavy Armor, Shields, Guns, Hand Crossbows, Heavy Crossbows, Longbows, Rapiers, Scimitars, Shortswords, Longswords, Tridents, Glaives, Greatswords, Halberds, and Pikes.</content>
+  <content contentuid="h8e4530bbgd0fdg7e85gd028gb44390d6227f" version="2">Dragonkin job command. Only usable by those with dragonblood in their veins. &lt;br&gt;&lt;br&gt;Primary Unlocks: Dual Wield.</content>
+  <content contentuid="hc3f69bc6g9e70geaa2gdcd3gbdebd037922d" version="2">Soldier job command. Unmatched martial skills made possible by fury pushed to its limit. &lt;br&gt;&lt;br&gt;Primary Unlocks: Medium Armor, Scimitars, Shortswords, Longswords, Greatswords, and Mauls.</content>
+  <content contentuid="h7439aed5g0cb9g1665g1759g695b79c4599a" version="1">White mage job command. Enables the use of healing and support magicks in battle.</content>
+  <content contentuid="h6ce6ddb3g1b81g7243g4724g8df6e46b98b9" version="1">Mystic job command. Manipulates the mystic weave of the universe to inflict harm on enemies.</content>
+  <content contentuid="hfe5a9701gecd8g946age70bg232ab5016322" version="2">Orator job command. Manipulates enemies through skilled rhetoric. &lt;br&gt;&lt;br&gt;Primary Unlocks: Guns.</content>
+  <content contentuid="hab5f5b83g55d2gdd3dg3699g8226215680b3" version="2">Bard job command. Sing melodies in an exquisite voice to cause various mysterious effects. &lt;br&gt;&lt;br&gt;Primary Unlocks: Medium Armor and Instruments.</content>
+  <content contentuid="h00fcf66agdf94ge955gba73g70a9e666c7b5" version="2">Skyseer job command. Attacks with a power that does not rely upon faith. &lt;br&gt;&lt;br&gt;Primary Unlocks: Medium Armor and Shields.</content>
+  <content contentuid="had731e98g407eg5e53gc732g8be00c0abe5f" version="2">Templar job command. Brings a magick sword strike down upon the foe. &lt;br&gt;&lt;br&gt;Primary Unlocks: Medium Armor, Heavy Armor, Shields, Rapiers, Scimitars, Shortswords, and Longswords.</content>
+  <content contentuid="h18f154d6g8572gb630ga450gdc0fd6bbacd9" version="1">Black mage job command. Enables the use of attack magicks in battle.</content>
+  <content contentuid="hf00d1a11ge68cg28f3gba42gf03846ebd780" version="1">Time mage job command. Enables the use of magicks that manipulate time and space.</content>
+  <content contentuid="hfcb515c4gc31bg96d6g46edg027b503cd6b1" version="1">Summoner job command. Calls forth espers from the highest realms of the spirit world.</content>
+  <content contentuid="hab5040f6gf68dga8e3g08e2gcc1a2140a2d6" version="2">Dancer job command. Perform mysterious dances to create unusual effects. &lt;br&gt;&lt;br&gt;Primary Unlocks: Medium Armor, Rapiers, and Shortswords.</content>
+  <content contentuid="h59e0bba4g4379g3d99g0728g7ca3d16b9c6a" version="2">Netherseer job command. Attacks with a power that does not rely upon faith. &lt;br&gt;&lt;br&gt;Primary Unlocks: Medium Armor and Shields.</content>
+  <content contentuid="h878e21aeg3673gc47dg2162g1040cdde46e5" version="2">Sorcerer job command. Magicks scorch foes with the power of light.</content>
+  <content contentuid="h5833fc82g459dg94a1g64cbgef92a66de8df" version="1">Squire job command. These are the most fundamental of all battle techniques.</content>
+  <content contentuid="h76f81010ga6e6g86ddg8d2bgc51594901851" version="1">Chemist job command. Enables the use of items to assist allies in need.</content>
+  <content contentuid="hc13fbe6dgc5c2g25adg70e9gec5ac3761e23" version="1">Knight job command. Enables the use of "Rend" skills that destroy equipment or reduce attributes.</content>
+  <content contentuid="h43fd5df5gb7e6gf0bdg0026g4d1ed3df5f12" version="1">Monk job command. Turns bare fists into lethal weapons.</content>
+  <content contentuid="h596f61dfg905egfc41ge2d6g3f0367e56874" version="1">Geomancer job command. Attacks with mystical powers drawn from the earth itself.</content>
+  <content contentuid="h37e90631gc6ccgd81bgdc7bg29f563e54eab" version="3">Samurai job command. Unleashes the mystical powers contained within katana. Iaido usage may temporarily drain mystical powers and temporarily restrict use.</content>
+  <content contentuid="h291f3f8fg01b7g55c2g997fg414f210524fc" version="1">Holy knight job command. Smite the foe with holy sword techniques.</content>
+  <content contentuid="hc0c834b7g625ag2a0age570g7ae605290779" version="1">Dark knight job command. Cursed sword techniques cut down the foe.</content>
+  <content contentuid="h668272deg95fdg4f84g7f20gd98441515315" version="1">Archer job command. Allows attacks to be carefully aimed in order to deal greater damage.</content>
+  <content contentuid="hd73434f6g931cge4a6g20a4g3830c1ddd61e" version="1">Thief job command. Allows a unit to steal gil, items, and even non-material things.</content>
+  <content contentuid="h18716886gc268g39b4gcaa9g827c14911f0f" version="1">Dragoon job command. Jumps high into the air, then dives downward into the opponent.</content>
+  <content contentuid="h8a07beebg1816g9c36g0590gb641dca944b2" version="1">Ninja job command. Attack by throwing weapons from the party inventory.</content>
+  <content contentuid="h9d15a07egf56cg6c8cg30a3g3c5d130c1083" version="1">Sky pirate job command. Unsurpassed in gunplay and thievery. No prey goes uncaught, no target unscathed.</content>
+  <content contentuid="h24264450gba3dgddfeg6c2bgbc8eec7787e1" version="1">Dragonkin job command. Only usable by those with dragonblood in their veins.</content>
+  <content contentuid="h47494876g8d3aga284g7145g48f360685172" version="1">Soldier job command. Unmatched martial skills made possible by fury pushed to its limit.</content>
+  <content contentuid="hc32e1892g9c74gcf18geb6bg625e6ea0282c" version="1">White mage job command. Enables the use of healing and support magicks in battle.</content>
+  <content contentuid="h23d9389cgc25dg8068g5447geaf3143e7ab6" version="1">Mystic job command. Manipulates the mystic weave of the universe to inflict harm on enemies.</content>
+  <content contentuid="h5e1e4145gc8ffgf63agc2degfe71e2ae0cca" version="1">Orator job command. Manipulates enemies through skilled rhetoric.</content>
+  <content contentuid="ha59e44adgd27eg5dfeg54d0ged03a3867d16" version="1">Bard job command. Sing melodies in an exquisite voice to cause various mysterious effects.</content>
+  <content contentuid="hf0543c08g5e54g6025gb95cg5a5ec4d8b55c" version="1">Skyseer job command. Attacks with a power that does not rely upon faith.</content>
+  <content contentuid="hdf1ef9c6gbe3cg85b5gf00dge3413cc90ddb" version="1">Templar job command. Brings a magick sword strike down upon the foe.</content>
+  <content contentuid="h5fe62fdfg97f3gf88fgcec3gb3f7dae0ee1f" version="1">Black mage job command. Enables the use of attack magicks in battle.</content>
+  <content contentuid="h2e2b4504g0498gdfc8ga037gfb65b0c1e195" version="1">Time mage job command. Enables the use of magicks that manipulate time and space.</content>
+  <content contentuid="hff6799d3g2e5age7e3gabd5gcbc6deaaf159" version="1">Summoner job command. Calls forth espers from the highest realms of the spirit world.</content>
+  <content contentuid="hd6ebe368g418fgd906g4224g0aa6be2fe582" version="1">Dancer job command. Perform mysterious dances to create unusual effects.</content>
+  <content contentuid="h88673d98g2caag21b8g2c41ga0757448f302" version="1">Netherseer job command. Attacks with a power that does not rely upon faith.</content>
+  <content contentuid="h06bf840bg0624g6de4g741dg1d7959548768" version="2">Sorcerer job command. Magicks scorch foes with the power of light.</content>
+  <content contentuid="hbdf55ab2ge3f9g3580gd7b0g0b4e64a5f072" version="3">Primary Unlocks: Medium Armor, Flails, Morningstars, Shortswords, Longswords, Battleaxes, and Greataxes.</content>
+  <content contentuid="h4998ff4agc646ga7f6g3dbeg95d8cb40696a" version="3">Primary Unlocks: Guns and Throw Item.</content>
+  <content contentuid="h887100e1geb7fg8012gb140g3b54f9bbef61" version="2">Primary Unlocks: Medium Armor, Heavy Armor, Shields, and all one-handed and versatile melee martial weapons. </content>
+  <content contentuid="h24372d9ega7b1gf368g77a5g07b57cb6dbab" version="2">Primary Unlocks: Brawler.</content>
+  <content contentuid="h659810b7g1190g4d2aga384g98ede7c3bba3" version="2">Primary Unlocks: Shortswords, Longswords, Greatswords, Battleaxes, and Greataxes. </content>
+  <content contentuid="h394b65e5g2778g20dcgf9efgb74d6c4d1489" version="2">Primary Unlocks: Medium Armor, Heavy Armor, Scimitars, Shortswords, Longswords, and Greatswords.</content>
+  <content contentuid="h90109141g0308gfb5ag9b9fg85fcf7630315" version="2">Primary Unlocks: Medium Armor, Heavy Armor, Shields, Rapiers, Scimitars, Shortswords, and Longswords.</content>
+  <content contentuid="hba0789c6g986egaf0egb6a3g2557fa41b930" version="2">Primary Unlocks: Medium Armor, Heavy Armor, Shields, Shortswords, Longswords, Greatswords, Flails, Battleaxes, and Greataxes.</content>
+  <content contentuid="h3e21d3c6g5e96g6c76gb2f1ga4afe0ca1748" version="2">Primary Unlocks: Medium Armor, Shields, Hand Crossbows, Heavy Crossbows, and Longbows.</content>
+  <content contentuid="hb1f0c03bg28d4g18a0g5394gba1f0dd4a8c1" version="2">Primary Unlocks: Medium Armor, Rapiers, Shortswords, and War Picks.</content>
+  <content contentuid="hf25adea5ge501g7df3g2e4dgdc5b1b65719e" version="2">Primary Unlocks: Medium Armor, Heavy Armor, Shields, Tridents, Glaives, Halberds, and Pikes.</content>
+  <content contentuid="h26d78355ga7f6g4026gc45eg2e71a598cc14" version="2">Primary Unlocks: Dual Wield and all one-handed melee martial weapons.</content>
+  <content contentuid="h1271f2cdgf12ag45dcg1196g19f1549eb08b" version="3">Primary Unlocks: Medium Armor, Heavy Armor, Shields, Guns, Hand Crossbows, Heavy Crossbows, Longbows, Rapiers, Scimitars, Shortswords, Longswords, Tridents, Glaives, Greatswords, Halberds, and Pikes.</content>
+  <content contentuid="h3307207dg44ffg09c1g2fc4gbdc1cf86b0f3" version="2">Primary Unlocks: Dual Wield.</content>
+  <content contentuid="hf7350a29gf92dg54dcgef6dg55aed9422f7a" version="2">Primary Unlocks: Medium Armor, Scimitars, Shortswords, Longswords, Greatswords, and Mauls.</content>
+  <content contentuid="hc7101cd4g8af4gd68ag50b5geb045a5a6976" version="2">Primary Unlocks: Guns.</content>
+  <content contentuid="h3df5c8b5gc053ge5d3g9fb6g239f39c9c1c5" version="2">Primary Unlocks: Medium Armor and Instruments.</content>
+  <content contentuid="he115c686g383dg0285gf51bg8716801ab40f" version="2">Primary Unlocks: Medium Armor and Shields.</content>
+  <content contentuid="he88e97b8gd18bgcc85g9b03g97c0ff601657" version="2">Primary Unlocks: Medium Armor, Heavy Armor, Shields, Rapiers, Scimitars, Shortswords, and Longswords.</content>
+  <content contentuid="h8b4f45degca47gb8e7g1850gc2b432038e12" version="2">Primary Unlocks: Medium Armor, Rapiers, and Shortswords.</content>
+  <content contentuid="h9604b59agb13cg718fg1a74gaf90681ee190" version="2">Primary Unlocks: Medium Armor and Shields.</content>
+  <content contentuid="h212f3425g21c9g919dg8e83g3ce5b3fe133c" version="1">Primary: Basic Skill</content>
+  <content contentuid="h44238679gd9e9gbc10g3cb3g9b695f32046f" version="1">Primary: Item</content>
+  <content contentuid="h0589f8c0gb4b8g55fdg0e19gb19609e192da" version="1">Primary: Art of War</content>
+  <content contentuid="hf5c08654gb76fg4f86g7345g6026fb9e0f19" version="1">Primary: Punch Art</content>
+  <content contentuid="h93ca6d52g2cf1gdfb4g88e6geced33b2c4da" version="1">Primary: Geomancy</content>
+  <content contentuid="h02ac8928g0851g19a7g765cgd82d0bbd2c16" version="1">Primary: Iaido</content>
+  <content contentuid="hc04eb44eg7dd3ga17fg8e4bgd2c83869df52" version="1">Primary: Holy Sword</content>
+  <content contentuid="hf4ee572cga460g5b14g0eb5gcc2bfe8e7cec" version="1">Primary: Darkness</content>
+  <content contentuid="h4ba5b707g55b9g8ac0gfdcdg98cd7d45048d" version="1">Primary: Aim</content>
+  <content contentuid="hcebc2b62g3378g76a1g33c4g44e21c23325a" version="1">Primary: Steal</content>
+  <content contentuid="hc3d467ffg6cddg9f1bg371bgb5e240df9347" version="1">Primary: Jump</content>
+  <content contentuid="h7f5bc0e9gd6c6g197ag5562g4af6a810a3c1" version="1">Primary: Throw</content>
+  <content contentuid="h7445e94fg7b77g832dgc809g16b34a481400" version="1">Primary: Pillage</content>
+  <content contentuid="h87dec96ege8afg536eg4136gc3bff5ccd7b0" version="1">Primary: Dragon</content>
+  <content contentuid="hc41017a4g2aedg8aa4g9adcg6121c030baee" version="1">Primary: Limit</content>
+  <content contentuid="h76592c91g4649g33cbge26cg1e6dbf233ac5" version="1">Primary: White Magic</content>
+  <content contentuid="hbe051b9eg1631g6e18g6afag1f76675ee33b" version="1">Primary: Mystic Arts</content>
+  <content contentuid="h12d4e985g9e35g32fag2543gfbeb342a2625" version="1">Primary: Speechcraft</content>
+  <content contentuid="hec4a3c79g48e6g2505g94b5g27cd29b8d1d3" version="1">Primary: Bardsong</content>
+  <content contentuid="h20509fe6g5466gd65age95eg63d435662070" version="1">Primary: Sky Mantra</content>
+  <content contentuid="haded07a5gd164gedc3gbffbg230120ba23ec" version="1">Primary: Spellblade</content>
+  <content contentuid="h2d17b5a1gf4e2g5fddg6844g615643cda486" version="1">Primary: Black Magic</content>
+  <content contentuid="h0f7ea32cga10ag671cg9927ga7091e012a88" version="1">Primary: Time Magic</content>
+  <content contentuid="haaabde62gb13cgddd7g1c60g26bd094d1fd6" version="1">Primary: Summon</content>
+  <content contentuid="h47308af3g93d2g4336g638cg69c4035c64d7" version="1">Primary: Dance</content>
+  <content contentuid="h01989945g344cg8539gf1c9g58d991a7a0f4" version="1">Primary: Nether Mantra</content>
+  <content contentuid="hdca2c9b4g8ec0g4228geba6g0e5b0468c973" version="2">Primary: Magics</content>
+  <content contentuid="h6ca4a187g230ag769bgd35ag93cdcda9b7c6" version="1">Secondary: Basic Skill</content>
+  <content contentuid="h6e1d9360g1187g2b40g0302gecee68c33d3a" version="1">Secondary: Item</content>
+  <content contentuid="h67d03199g71bdge06ag3f5cg34cc748243a8" version="1">Secondary: Art of War</content>
+  <content contentuid="h01349c1bg8160gb7bdg77b7g6148d9fc321f" version="1">Secondary: Punch Art</content>
+  <content contentuid="hf17e50a3g9e06gdc5bg262eg6db099d275bb" version="1">Secondary: Geomancy</content>
+  <content contentuid="h815bfffbgb078gda25g387fgb8d46cac6956" version="1">Secondary: Iaido</content>
+  <content contentuid="h9bf4c7f4g6d72gdf84gf461g8cbfbc4a7582" version="1">Secondary: Holy Sword</content>
+  <content contentuid="hce98df03g0157gc4eeg9308g96ae3431c017" version="1">Secondary: Darkness</content>
+  <content contentuid="h84cbc639g0d53g1bb4g960agbe28f7d0013a" version="1">Secondary: Aim</content>
+  <content contentuid="hba143b1ag6da7gd59fg6bdfg6893ea1a7870" version="1">Secondary: Steal</content>
+  <content contentuid="h3802ff22g2028gd4c7g7fe8gdb9107c0f824" version="1">Secondary: Jump</content>
+  <content contentuid="h10326516gc2b9gc457g75eag2d0aa20c5957" version="1">Secondary: Throw</content>
+  <content contentuid="hf5ee1e72gae8ag186dg8ee2gbe1139bc8da3" version="1">Secondary: Pillage</content>
+  <content contentuid="h0a72d204ga21cg2911g5d05g3f9b0d068c19" version="1">Secondary: Dragoon</content>
+  <content contentuid="hdd56311agdce3gdbc6geefdg646f426dde0c" version="1">Secondary: Limit</content>
+  <content contentuid="he213c746g4738gef1fg7345g0f890cca99c6" version="1">Secondary: White Magic</content>
+  <content contentuid="ha9fc71cfg61f0g3972ge3edg7b2fa994941d" version="1">Secondary: Mystic Arts</content>
+  <content contentuid="h382579deg110dg01edg1aacg73b3a67a118a" version="1">Secondary: Speechcraft</content>
+  <content contentuid="hbd4375e2g8d79g0bb3g7520gb308d7f18ee8" version="1">Secondary: Bardsong</content>
+  <content contentuid="hd43e2515gaf5bg228cg832bg5a5306fc19bd" version="1">Secondary: Sky Mantra</content>
+  <content contentuid="h4c00bb2cga2c2g25b1g2a82g6d14a4f69e32" version="1">Secondary: Spellblade</content>
+  <content contentuid="h817752e3g5789g5dd5g150bga44599671d30" version="1">Secondary: Black Magic</content>
+  <content contentuid="h86e51d8dg8d44g82d5g8724gdcf3510dd441" version="1">Secondary: Time Magic</content>
+  <content contentuid="h39493afbgd581gf893ga074gb3c5ac0e9c16" version="1">Secondary: Summon</content>
+  <content contentuid="he9750762g9551gfab9g4074gbcb7c37d73fe" version="1">Secondary: Dance</content>
+  <content contentuid="h296bf34dgae0ag0023g6383g22e1462066ad" version="1">Secondary: Nether Mantra</content>
+  <content contentuid="hbb83aa88g7c8ag4371gcb59g6be2c0976fd0" version="2">Secondary: Magics</content>
+  <content contentuid="hc6380920g3aa7gc351g0f6agf7da7d0b8939" version="1">Cadet</content>
+  <content contentuid="hff231f53ge52dg5e9cga101gaa4f4815dceb" version="2">This job serves as the foundation for all others, forming the first step on the road to becoming a legendary warrior. Proficiencies are determined by the primary job skill set.</content>
+  <content contentuid="h3cf95870ga490g9d27gadb4gdd3fcc45c7d2" version="1">Knight</content>
+  <content contentuid="h8c074c51geb71gc698gf70cg167e0220ad73" version="4">A brave and chivalrous warrior of unmatched skill. Uses a knight's sword to unleash the Arts of War. &lt;br&gt;&lt;br&gt;Knight uses strength for primary ability and intelligence for spell casting ability with high health growth and low mana growth. &lt;br&gt;&lt;br&gt;Unique Class Progressions: &lt;br&gt;Samurai, Holy Knight, Dark Knight, Soldier</content>
+  <content contentuid="h52aa858ag88fag27d9g867fgc76fa69cd887" version="1">Archer</content>
+  <content contentuid="h539effc8g7e59g580bg7eb8g8a8164239506" version="4">Equipped with a bow and arrow, this warrior provides valuable long-range attacks. May Aim for higher damage.&lt;br&gt;&lt;br&gt;Archer uses dexterity for primary ability and intelligence for spell casting ability with moderate health growth and low mana growth.&lt;br&gt;&lt;br&gt;Unique Class Progressions: &lt;br&gt;Ninja, Dragoner, Sky Pirate, Soldier</content>
+  <content contentuid="h22c39c4fg75eegc7b2g9b3cg20966c5696ec" version="1">White Mage</content>
+  <content contentuid="h7f1a3b63g1698g79cfgb34cg5cca47002450" version="4">A warrior who taps into the powers of the divine, using White Magicks to cast spells of recovery and protection.&lt;br&gt;&lt;br&gt;White Mage uses strength for primary ability and wisdom for spell casting ability with low health growth and high mana growth.&lt;br&gt;&lt;br&gt;Unique Class Progressions: &lt;br&gt;Bard, Skyseer, Templar</content>
+  <content contentuid="h8fd0bb75gb8e5g4db5gc2afgdf73543383d3" version="1">Black Mage</content>
+  <content contentuid="h68e34346g2ac6gc822ge261gdee3383f1ae5" version="4">A warrior who uses Black Magicks to channel elemental powers into powerful offensive spells.&lt;br&gt;&lt;br&gt;Black Mage uses strength for primary ability and intelligence for spell casting ability with low health growth and high mana growth.&lt;br&gt;&lt;br&gt;Unique Class Progressions: &lt;br&gt;Dancer, Netherseer, Sorcerer</content>
+  <content contentuid="h58d28dcdg4c34g4761g7cadg36258c2467f9" version="1">Knight</content>
+  <content contentuid="h573f7043gb72egfbd7g06d2gba36082321cd" version="1">Archer</content>
+  <content contentuid="hc19a2c03gb49bg30a5g5f7ag8f3b3c0ea165" version="1">White Mage</content>
+  <content contentuid="hd5cacc7fgfc07g293cg833dgb5c52fcb1d3c" version="1">Black Mage</content>
+  <content contentuid="h824c34afgaa39gb725g0bdfgc159f293abaa" version="1">Job Mastery</content>
+  <content contentuid="h7f1f328fgc622g6ef4gf850g27e0953d6f94" version="1">Select a job mastery.</content>
+  <content contentuid="h01d4e85egebeegb2eag0ebeg993354dc966c" version="1">Unique Job Mastery</content>
+  <content contentuid="h181643a4g2605g66b4ge718g811a9fc43777" version="1">Choose one unique job mastery.  This is a one time selection.</content>
+  <content contentuid="h97492261g5cccg4758g2365g4f55533dcc1b" version="1">Throw a sharp stone at a foe dealing [1].</content>
+  <content contentuid="hc8493d11gd579g111egccf6gfdecd1fe6917" version="1">Rush</content>
+  <content contentuid="h0d765654g2e0eg0536ga964g72a5c012d45e" version="1">Salve</content>
+  <content contentuid="h342ed924g12b8g9fcaga7fcg95b9ca4d8323" version="1">Tailwind</content>
+  <content contentuid="h157494d3g111agcd95g2664gf64722f1047a" version="1">Chant</content>
+  <content contentuid="hadfb30acge627g278cgb907gf290bb2a3328" version="2">Damages caster to heal a creature you can touch.  </content>
+  <content contentuid="h46bc7c70g8d92g3f8bg38b3g3afff9737c42" version="1">Steel</content>
+  <content contentuid="h093b7fa4gfdd7gbef3g8ab4g29b6e3539b6f" version="2">Inspire an ally to add a [1] to weapon damage for 3 turns.</content>
+  <content contentuid="hc90594f1g4cb2g56cfg103ag9cc7ebca4e19" version="1">Steel</content>
+  <content contentuid="h9bb72a7cg326cgaa8agb7d1g59b7b1762056" version="2">Deals additional [1] on melee weapon and unarmed damage.</content>
+  <content contentuid="ha2cc3325g23degd83ag95a4gf54265682502" version="1">Scream</content>
+  <content contentuid="h9cb94720g5eb7ge21ega4bcg549b44c18cae" version="3">Increases all damage done by 2 and applies haste.</content>
+  <content contentuid="h189c331bgbb0egd89ag5904g44a8d55435da" version="1">Scream</content>
+  <content contentuid="h9769b4b8g3d10gdca5g9b27g7ca5f7088c45" version="2">Increases all damage done by 2 and applies haste for 3 turns.</content>
+  <content contentuid="h769f6af9g54bbg96ffg83cbg96fc8237e4ef" version="1">Ultima</content>
+  <content contentuid="hca492230g80a5ga78cg31fegcd8750cbe2a4" version="1">Magic that inflicts damages with pure energy.</content>
+  <content contentuid="h5aac7f0cg86b4g0670ge7b9ge0e5ecad8ce3" version="1">Throw Item</content>
+  <content contentuid="h1ae5f52ag15d5ge572g59deg6ad1c3daff0a" version="1">Throw potions or greandes as a bonus action.</content>
+  <content contentuid="hdb61233fg4d63g22f6gcb99gd0e46ac5fd7b" version="2">Brew Potion of Healing</content>
+  <content contentuid="h5b96eafagd618g1ac7g839dg334bce9805a4" version="2">Craft Healing Potion</content>
+  <content contentuid="h60639986gcaa2g186fg31d5gf5a9b1e8157d" version="1">Craft Grenade</content>
+  <content contentuid="h88295039g310aga194ge77cg54ff211b46f9" version="1">Brew Potion of Greater Healing</content>
+  <content contentuid="h690ba59eg53feg4fa5gfc6egefb1d6219a95" version="1">Brew Potion of Superior Healing</content>
+  <content contentuid="hf0d88ea2g9e81g04afg7c38g4788db6ea4ad" version="1">Brew Potion of Supreme Healing</content>
+  <content contentuid="h7cab177eg3f50gbd2bg119cg1e033780ca38" version="1">Brew Basilisk Oil</content>
+  <content contentuid="h877ce02agcf06g7064g4776g95efc61bfe69" version="1">Turns a petrified creature back to its organic form.</content>
+  <content contentuid="h76ee2962g80b1g74edgfd44g67677d484c97" version="2">Craft Utility Potion</content>
+  <content contentuid="hc70a5787g6d72g2dcag688age37d8cfc16cd" version="1">Brew Potion of Vitality</content>
+  <content contentuid="h20e071deg1c47g4e35gb301gd92f174e6a92" version="1">Cures any Poison or Disease.</content>
+  <content contentuid="h954b7405g9a6dg3d62g0817gbb96e8b4b9f6" version="1">Brew Potion of Sleep</content>
+  <content contentuid="h7f3d9e29g3039g840bga0f8g2e00b4ac78e2" version="1">Inflicts sleeping for 3 turns.</content>
+  <content contentuid="hb1b1ecc2gf751g4321g858bg911dea159a84" version="1">Brew Potion of Glorious Vaulting</content>
+  <content contentuid="h570dda72ga74fg48fbgc94agae8798176926" version="1">Jump distance is tripled for 10 turns.</content>
+  <content contentuid="h26005298g0285gf745g7d87gc2e9a461617f" version="1">Brew Potion of Feather Fall</content>
+  <content contentuid="h19ab2248g2c40gef63gd2a6gec93341e413c" version="1">Grants feather fall for 10 turns.</content>
+  <content contentuid="h400a9eb6gb7a7g95b4g3e24g1a36fa741603" version="1">Brew Potion of Speed</content>
+  <content contentuid="h664d4e92g4f01g1a50gad5bg32229632c6f4" version="1">Grants haste for 3 turns.</content>
+  <content contentuid="h9b61bc73g914agff6ag5380gb8f178b2b4d1" version="1">Brew Remedial Potion</content>
+  <content contentuid="h1332bcc7ge195g3b16g91c9g1852e57408c0" version="1">Cures blind, silence, paralysed, and poisoned conditions.</content>
+  <content contentuid="h967182afgff77g5de1g1c75gc6cb853dade5" version="1">Brew Potion of Flying</content>
+  <content contentuid="h7c80405fg6b05g9ee1gdf4cg3ed5c888af39" version="1">Grants flight for 10 turns.</content>
+  <content contentuid="h0744b927g7849gd7b6gd68ag7db6f2de0015" version="1">Brew Potion of Invisibility</content>
+  <content contentuid="h33de4b87ge50dgeee8g9177g0b9fb19e73f2" version="1">Grants invisibility for 10 turns.</content>
+  <content contentuid="hde6d3e50g5790gfb34gcdc8gfa8862a5f04a" version="1">Brew Potion of Angelic Reprieve</content>
+  <content contentuid="hdeae467eg21c9g69b6g8d55gf8d14726414a" version="1">Fall asleep for 2 turns.  Unless interrupted gain the benefits of a short rest and regain all 1st and 2nd level spell slots.</content>
+  <content contentuid="heaaffefbg9e2dg3185g1030g9091d5015fc4" version="1">Brew Potion of Angelic Slumber</content>
+  <content contentuid="h2f8d5e99gb31dg36e3gc7fcgf0c1bfe53dd8" version="1">Fall asleep for 2 turns.  Unless interrupted gain the benefits of a long rest.</content>
+  <content contentuid="hb649b69dgce8eg97f5g7d7bg6fccb6b574fe" version="1">Brew Alchemist's Fire</content>
+  <content contentuid="hab808f9age9abg8c60ga757g9f39e5858437" version="1">A flask of liquid fire that explodes on impact.</content>
+  <content contentuid="hd94517b4gda0fg3c92gb877g34a01796328b" version="1">Brew Hearthlight Bomb</content>
+  <content contentuid="h9dbf6d7bg0f45gb14eg96c8g70f80280515e" version="1">A flask that bathes an area in light upon impact.</content>
+  <content contentuid="hb8e41a88g4042gc14cg2f4egd87bb48b84fb" version="1">Brew Web Grenade</content>
+  <content contentuid="hfe2ddc12g925dgcc61gec6cge0db3f099991" version="1">Once thrown explodes into a tangly mess that enwebs creatures within.</content>
+  <content contentuid="h68976742gb4c9g8f65ge62ag6db96b9cb62e" version="1">Brew Fungal Bamboozler</content>
+  <content contentuid="hd85d9585gd767g4031gc19cga9092ee07262" version="1">Lob this vaporous decoction to Befuddle nearby foes.</content>
+  <content contentuid="h01b8ecd9g98cdg7e77g609bgb31deb771786" version="1">Brew Haste Spore Grenade</content>
+  <content contentuid="h0e7ea64ag4c71g0031gf617ge9a7b536c660" version="1">Explodes in a cloud of invigorating energy.</content>
+  <content contentuid="h2926a290g9fafg3f9agcd9eg9e7f55694c26" version="1">Brew Noxious Spore Grenade</content>
+  <content contentuid="hf9654d0agb6e1g95afgd121g51ef7607a2a6" version="1">Explodes into a virulent cloud that can inflict Noxious Fumes Condition upon creatures within.</content>
+  <content contentuid="hfcfbbf1ag0546g5a0cgbb9dg86ef3770b68b" version="1">Brew Flashbinder</content>
+  <content contentuid="ha31b766egc367gd97cg99f8g9fd35fb93afc" version="1">A bomb that explodes on impact and blinds the surrounding area.</content>
+  <content contentuid="h8420fe83g1fa3g1650g88c7g966c3e2f3ed1" version="2">Support: Beastmaster</content>
+  <content contentuid="h2f93aff9gf670g1478g240fgf8f0d53e55ca" version="2">Support: Beastmaster</content>
+  <content contentuid="h98a11c60g6681gcfecg856eg710040bddde3" version="1">Gain the ability to comprehend and communicate with beasts.</content>
+  <content contentuid="hc93734aegaf7cg5066g90e4gf7e14a69fbdf" version="2">Support: Equip Axes</content>
+  <content contentuid="h04c91502g3e38g2beag0a32gb63f40be0f8e" version="1">Gain the ability equip axes.</content>
+  <content contentuid="h15489595gc9ffg53c0g2afeg4ac529f646de" version="2">Support: Equip Axes</content>
+  <content contentuid="h5622697cgcbe0g631dgef27gbd6fcb1fa6da" version="2">Gain the ability equip axes.</content>
+  <content contentuid="hdb8fdda2g23e4g4648g0a42gfd0979366ce8" version="2">Support: Defend</content>
+  <content contentuid="h564de971g574ag7a81g7617gb0cbec5ff621" version="1">Gain the ability to defend.</content>
+  <content contentuid="h7d84329dgff00g3657gf915g937fa7e55267" version="1">Defend</content>
+  <content contentuid="hc2f2df79g20dbg1254g8384g7fdd71311e0d" version="1">Increase your AC by 2 until the next turn.</content>
+  <content contentuid="h548055efg5b0agde82gee5bgd43326900f25" version="1">Support: Defend</content>
+  <content contentuid="h47b08206g13b3g0c3fg8e43gd1139e668577" version="1">Gain the ability to defend.</content>
+  <content contentuid="h9f72ae33g4a16gd4bcg26c7g54f94fc13464" version="1">Defend</content>
+  <content contentuid="hf207c35fgaa3dgb0a2g058dgfd7b370f1b20" version="1">Improves AC by 2 until beginning of next turn.</content>
+  <content contentuid="h10465725g34c3g2c08g06cag255e7b17fdb7" version="1">Counter Tackle</content>
+  <content contentuid="h62d84bd5g1623g9944gb2e2g0990aee988e1" version="1">When a creature attack you with a melee attack, you can retaliate with Rush.</content>
+  <content contentuid="h2527ae0cga299gace4g9fccgf38450ee9e11" version="1">Reaction: Counter Tackle</content>
+  <content contentuid="ha3f9f4bbg50f9g5138gd640g57ee94240c01" version="1">Gain the reaction Counter Tackle.</content>
+  <content contentuid="h477347abg7d2fg7140g6cc5gc16f5eea9a7d" version="1">Reaction: Counter Tackle</content>
+  <content contentuid="hc7b122c1gf04cgcb2fgdbb7g02623a43a860" version="1">Gain the reaction Counter Tackle.</content>
+  <content contentuid="hb8f448eagfba7g29d3g6f74g510a9e7131a4" version="1">Support: Throw Item</content>
+  <content contentuid="h7b1e1665gf034g6454g7b7dg6ee9823f3b2f" version="1">Gain the ability to throw potions and grenades with a bonus action.</content>
+  <content contentuid="h90c24fe0g7beag09f8gdb26g4e0bee1f4dee" version="1">Support: Throw Item</content>
+  <content contentuid="h1057956egb4cega4a9g705fgda086bd05ee9" version="1">Gain the ability to throw potions and grenades with a bonus action.</content>
+  <content contentuid="h4d489d25g3a17g5002g16adg886af1199aa3" version="1">Rend Helm</content>
+  <content contentuid="hd0453cd9g5fa0ga845g8960gabc5e619700b" version="2">A technique that aims for the target's head potentially making them dazed. Does not consume mana on a miss.</content>
+  <content contentuid="h22bf9f42gfd22g5267g90cbg25f9702d407e" version="1">Rend Armor</content>
+  <content contentuid="h333eea33ga171g473egad39g3496f036154a" version="2">A technique that rends the target's armor causing chest trauma. Does not consume mana on a miss.</content>
+  <content contentuid="h3cb31bf7g3981g3506g0516g1d2a85952be3" version="1">Rend Shield</content>
+  <content contentuid="hda8b822bg27c8gf471gef8bg7a5c8fc97b93" version="2">A technique that aims for the target's shield to reduce AC and saving throws. Does not consume mana on a miss.</content>
+  <content contentuid="hf1c40f1dg8255g7763gb179g07f18d3f63e7" version="1">Rend Weapon</content>
+  <content contentuid="h0809fea5gbcc4g6ae1gbb3fg7298acc6d386" version="2">A technique that disarms the target's equipped weapon. Does not consume mana on a miss.</content>
+  <content contentuid="h1e7cb506ge209g94dcgd6f9g32a87c506297" version="1">Rend Mind</content>
+  <content contentuid="habef7e03g9e86ge882g6aa3gf3b438e3c1c0" version="2">A technique that coats your blade with poison that causes the target's mind causing them to have disadvantage on attack and ability rolls. Does not consume mana on a miss.</content>
+  <content contentuid="hbe6f5e75g4459g4b47gce32g99d65a484fae" version="1">Rend Speed</content>
+  <content contentuid="hef847056ga6e7g7a66gc4d3gc5231581e4f2" version="2">A technique that reduces for the target's movement. Does not consume mana on a miss.</content>
+  <content contentuid="h3e6c9671g1e0bg7ec8g1d54g5caab041c947" version="1">Rend Power</content>
+  <content contentuid="hcb6cb9d0g4df3ge252g3dd7g5585889a8603" version="3">A technique that causes the target's strength to wither. Does not consume mana on a miss.</content>
+  <content contentuid="hd4af2a58g7dd4g23d6g5e82g7aed7d6fdc58" version="1">Rend Magic</content>
+  <content contentuid="hcfc5501ag3d3cg11fbg6929g1e3d9c5dc099" version="2">A technique that may silence the target. Does not consume mana on a miss.</content>
+  <content contentuid="h6be3b207g8a8ega36cga788g52e58c09a660" version="1">Charging</content>
+  <content contentuid="hc87d6eebg36d0g2906gd234gff240d09b996" version="1">Deals additional 1 bonus damage per stack.  Attacking consumes all current stacks.</content>
+  <content contentuid="h8f73bfa8g9c4ag5337g636cgd780710164b6" version="1">Aim: Charge</content>
+  <content contentuid="h67d99a00g1f76gad33g53aeg2269b089730b" version="3">Provides ability to Charge every turn.  Charging provides an additional 1 bonus damage per stack.  Attacking consumes all current stacks and stacks will be removed at the end of combat.</content>
+  <content contentuid="h5d5b1dd4g2463g1c2cg0cbeg3d978067a99e" version="1">Fast Charge</content>
+  <content contentuid="hd5e8c97dgf774g531dg532ag849737c8f84c" version="1">Immediately apply 5 stacks of Charging. This can temporarily exceed the limit of 10 stacks of Charging.</content>
+  <content contentuid="h5bab20e4g7f46g3d84g307dgfed7006819ef" version="2">Reaction: Missile Snaring</content>
+  <content contentuid="h31f1622fg53c8g4f99g48efgf83c83888ab7" version="1">You can intercept missiles from ranged weapon attacks, reducing their damage by [1] + your Dexterity &lt;LSTag Tooltip="AbilityModifier"&gt;Modifier&lt;/LSTag&gt;.</content>
+  <content contentuid="h03c3e49dg7dc9g215agfe48gefe413919ea6" version="2">Reaction: Missile Snaring</content>
+  <content contentuid="h3b47b823g7d5bg0239g12dfg173e51a95c58" version="1">Use your reaction to reduce the damage from a ranged weapon attack by 1d10 + your Dexterity &lt;LSTag Tooltip="AbilityModifier"&gt;Modifier&lt;/LSTag&gt; + your monk level.</content>
+  <content contentuid="h172f172fgacd7g0d10gcfb3g8ac1daa9822c" version="1">You can intercept missiles from ranged weapon attacks, reducing their damage by [1] + your Dexterity &lt;LSTag Tooltip="AbilityModifier"&gt;Modifier&lt;/LSTag&gt;.</content>
+  <content contentuid="h52bd48a1g9f66gda4age13ag0cdc4a12af1b" version="1">Charge</content>
+  <content contentuid="hdb228d37ge30dg7450gc138g5ead1d8896af" version="5">Begin charging your next weapon attack.  A Charging stack will be applied each turn for 10 turns or until the user's next weapon attack.  Charging increases weapon damage by 1 per stack.  &lt;br&gt;&lt;br&gt;This skill cannot be used while actively charging. Charges will expire at the end of combat.</content>
+  <content contentuid="h85abcebag3a29gb097gbbefg7b3d27b76f7f" version="1">This skill cannot be cast while already charging.</content>
+  <content contentuid="h2ffcdb0cgb1a5gd80fg70begf2952f4c29e0" version="1">Aim: Charge</content>
+  <content contentuid="h6896b314g65c3g4317gdba3g08274bc45f29" version="2">Provides ability to Charge every turn.  Charging provides an additional 1 bonus damage per stack.  Attacking consumes all current stacks and stacks will be removed at the end of combat.</content>
+  <content contentuid="h08b94687gf23ag59cbg430ag5d19275016bf" version="1">Spin Fist</content>
+  <content contentuid="he0009ebdge00dgc8cag4429ga66b48a91847" version="1">Turn in a circle, attacking with backhand blows.</content>
+  <content contentuid="he5345803gfe4bg9638gcd0bgd902d7c5b5a5" version="1">Aurablast</content>
+  <content contentuid="h3f00eea8ga6bag73d0gf481g305cb97373e6" version="2">Employ one's martial spirit to strike a distant foe. Does not consume mana on a miss.</content>
+  <content contentuid="hab3f8a2ag8c8fg88c3g1b1bg261627b072c7" version="1">Shockwave</content>
+  <content contentuid="hbc4cdfbfg04b4g28d0ga22fg4e4625d3c944" version="1">Release spiritual energy mighty enough to rend the earth.</content>
+  <content contentuid="h2a9592e0g2424g0fc5g05beg2d3c30103690" version="2">Doom Fist</content>
+  <content contentuid="hac9068e4gc7fbg5d25g89d6gf83be2df3f97" version="1">Invite slow, certain death with blows to pressure points.</content>
+  <content contentuid="h91f6452cg8becg1a23g25bbg431224e63583" version="1">Doom</content>
+  <content contentuid="hb542c7f5g69dag8e7fg3b1bg29b45fe300fd" version="1">Owner is cursed.  Death is coming.</content>
+  <content contentuid="h07713807ge751ge66fgadabg00e497047bb2" version="1">Purification</content>
+  <content contentuid="h9e6d1452g3a1bg847agc7fag4ad480715d6e" version="1">Release positive energy to remove most status ailments.</content>
+  <content contentuid="h62c5cecbg0175ge3a1g2c1dg3a303290e106" version="1">Chakra</content>
+  <content contentuid="hde3bfa96geb55g1073g3a77g3433fb58f04e" version="3">Draw out the energy within the body's chakra points to restore HP and MP.</content>
+  <content contentuid="hd5c98eb6g7d0dg13bcg46d4gb0758b0e55b4" version="1">Revive</content>
+  <content contentuid="h3ab164e6g87c4ga44ag57f4g812b7ab62ada" version="1">Attempts to call back dead units with a loud cry. Revives target with 20% HP with a 50% success rate.</content>
+  <content contentuid="h2d8c24b3g821fg9e37gfae3g05563d0b57d8" version="2">Support: Brawler</content>
+  <content contentuid="hafc06716g1d38gdfefg9b9cgcc7a5274c627" version="1">Hamedo</content>
+  <content contentuid="h5534b635gbecegf794gc436gddffbc6ea53e" version="2">The user can use their reaction to make an unarmed strike against any melee attacker prior to taking damage.</content>
+  <content contentuid="h1af6cb78g6ecbg0f87g6203gc394b9a45f9c" version="1">Reaction: Hamedo</content>
+  <content contentuid="h739680c1g13cfg3a8eg93e8g735f86e0f244" version="1">The user can use their reaction to make an unarmed strike against any melee attacker prior to taking damage.</content>
+  <content contentuid="h6f91efdcg51e3g0a8cg1694g3d56b9eca66a" version="1">Reaction: Hamedo</content>
+  <content contentuid="hb3fb5ac4g9ff8g9f40gdf9cga81b8adbfa98" version="1">The user can use their reaction to make an unarmed strike against any melee attacker prior to taking damage.</content>
+  <content contentuid="h982c97b2g5bf2g8cc2g4009g8318e6e7c344" version="1">Support: Brawler</content>
+  <content contentuid="hbb4507f2g5decgee87ga6cag7faa58490d0a" version="1">When you make an unarmed attack, use an improvised weapon, or throw something, your Strength &lt;LSTag Tooltip="AbilityModifier"&gt;Modifier&lt;/LSTag&gt; is added twice to the damage and &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;.</content>
+  <content contentuid="hdafe31f4g31f5ge870gd82bg5cef01eca597" version="1">Support: Brawler</content>
+  <content contentuid="he7d30b06g6568gf27eg39c6ge1f333c881df" version="1">When you make an unarmed attack, use an improvised weapon, or throw something, your Strength &lt;LSTag Tooltip="AbilityModifier"&gt;Modifier&lt;/LSTag&gt; is added twice to the damage and &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;.</content>
+  <content contentuid="hb37e0cb1g48d8g7ba0g4b56g2f9cdf60af83" version="1">Steal Weapon</content>
+  <content contentuid="h80cddbc6g28f1g72ebg6769g26d8d6c388fb" version="2">Purloin the target's equipped weapon. Does not consume mana on a miss.</content>
+  <content contentuid="hbe7a182ag771egdb67g7d13g097e4c145aae" version="1">Charm</content>
+  <content contentuid="hd414a2fcgc86cg19cbg2078g16d5d1458a5e" version="1">Make a humanoid fight alongside you. Every time the creature takes damage, it makes a Wisdom &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; against your domination. Allies cannot be charmed.</content>
+  <content contentuid="h4fbf6699g2b20g1500g4c3egd329eb97e9ea" version="1">Feint</content>
+  <content contentuid="h77052c9eg4d07g1c5bgd66eg9dd6b2da5af0" version="1">Increase your armor by 5 for 1 turn.</content>
+  <content contentuid="h9c3de4adgfdf8gf080g1efdg8c5b21cf0476" version="1">Feint</content>
+  <content contentuid="h170ccb72g96b5g2f0dgedbbg36921eb3aa5b" version="2">Deal weapon damage to a foe and on a successful hit, increase armor by 5 for 1 turn. Does not consume mana on a miss.</content>
+  <content contentuid="h3f1a227dged95ge5efg260bg4da77173a4c4" version="1">Mug</content>
+  <content contentuid="h444f0018ga90ag6dbagd702gd230edd32fcd" version="3">Deal weapon damage to a foe and steal 10 gil on a successful hit. Does not consume mana on a miss.</content>
+  <content contentuid="hb46f8be8g3ee5g8847g0221g469368948c9d" version="2">Collecting Gil</content>
+  <content contentuid="hcb4cc4b3gc7e1gba20g8054g66d73e430022" version="5">Collecting 10 gil at the start of your next turn.</content>
+  <content contentuid="hf120c036gc92cg1e02g464bge5bffd3cd0b0" version="1">Collected Gil</content>
+  <content contentuid="hb78e5d3cg7c05g30f0gc0ffg089a42b39542" version="1">Received 10 gil.</content>
+  <content contentuid="he988b12dg3fbfg9bc9g7b39ga45f8331c679" version="1">Sinkhole</content>
+  <content contentuid="hffacb933gfc3dgde4ag477dg14cb7923c8f7" version="3">A geomancy skill that inflicts damage by opening rifts in space-time. May inflict ensnare.</content>
+  <content contentuid="h3faf8942g83e6g4e07g37cag90e9928b3c71" version="1">Torrent</content>
+  <content contentuid="hbe0a1529gefa2gc43bge7b4g44f1c9f695a8" version="2">A geomancy skill that inflicts damage and leaves water in an area. May inflict toad.</content>
+  <content contentuid="hef4ccfd4g72a5ga5b1g1061g4c04497fde5c" version="1">Tanglevine</content>
+  <content contentuid="hbe088849g7c7fg1c85gc17dg191a66cc4aa1" version="2">A geomancy skill that inflicts damage and leaves vines in the area. May inflict stop.</content>
+  <content contentuid="hefa11ef1g25f5gdae0g6deeg5458bebad946" version="1">Contorton</content>
+  <content contentuid="hf352570cg6b75g7462g57ddg46498d7f3e36" version="2">A geomancy skill that inflicts acid damage. May inflict petrification.</content>
+  <content contentuid="h7250bfd2g59b1g7eacg6960gd403f543d5d9" version="1">Tremor</content>
+  <content contentuid="h99f775c2g53e8ga9a1g7a20ge71dc8b8e2ea" version="2">A geomancy skill that inflicts force damage with the power of the earth. May inflict confuse.</content>
+  <content contentuid="h0bed907eg92fagb244g9d7fgc1561325fd26" version="1">Wind Slash</content>
+  <content contentuid="hc248cf2egc60ag6632gdf61ge6ab995ee9bf" version="2">A geomancy skill that inflicts thunder damage with the roaring power of the wind.  May inflict incapacitated.</content>
+  <content contentuid="h7a319465g54cbg2399gf69cg375d8598b3ff" version="1">Will-o'-the-Wisp</content>
+  <content contentuid="h51275e2dg1995g0d75g1b11gf28275fba611" version="1">A geomancy skill that inflicts fire damage leaving scorching earth behind.  May inflict sleep.</content>
+  <content contentuid="hda71c552g9fb9g3549g19cfgab7b2dc23dfc" version="1">Quicksand</content>
+  <content contentuid="hb93a6fecgb781g61f7g09dcg4eefe6ab8db1" version="1">A geomancy skill that inflicts damage by creating a muddy quicksand pit. May inflict doom.</content>
+  <content contentuid="h1fe8ec45gb5d7gb397g8bf5gbe0fcac62fa0" version="1">Sandstorm</content>
+  <content contentuid="h0f3aecc5ge76ag0c15gbde9g94066bc2ad69" version="1">A geomancy skill that inflicts damage by creating a poisonous sandstorm. May inflict blind.</content>
+  <content contentuid="h52a9a37ag7675g070cgc44ag95623f29a11a" version="1">Snowstorm</content>
+  <content contentuid="hd32fe997g661fg4d52g7536g8cb36bbbf993" version="1">A geomancy skill that inflicts damage with the power of snow leaving an icy path behind. May inflict silence.</content>
+  <content contentuid="h9d84e8dag6927gddffg5698ge8a58e4a4ce7" version="1">Lightning Blast</content>
+  <content contentuid="h71f1223agab31g3e54gcca2gcdd675d33609" version="3">A geomancy skill that inflicts damage with the power of lightning. May inflict silence.</content>
+  <content contentuid="h0c42f482gaa91g4159gebf6g7d56ea84be71" version="1">Magma Surge</content>
+  <content contentuid="hf99dd4d0gd9fbgeb6cg2bd0ge9fd37dc732e" version="3">A geomancy skill the inflicts fire damage and erupts magma from the ground leaving the area ablaze. May inflict KO to enemies below 50 HP.</content>
+  <content contentuid="h26e03affgb241gd7c6g8689g6fc30ce52391" version="1">Support: Attack Boost</content>
+  <content contentuid="h679bdad5gc37bg8014g5332g143979f3b44e" version="7">Increases physical attack power to deal an additional 25% damage.</content>
+  <content contentuid="h6453e389g451cg5432ga9e5ge17f3b2030fd" version="1">Support: Attack Boost</content>
+  <content contentuid="hb0f9f952gb4f7gfb57g88ddg8ef85bd0d092" version="7">Increases physical attack power to deal an additional 25% damage.</content>
+  <content contentuid="h89c07761g4f37gcbf6g06bfgb929a29b17d7" version="2">Support: Attack Boost</content>
+  <content contentuid="hd9f9fcdegbb04g4516g8bb9gec4e9e32db2b" version="7">Increases physical attack power to deal an additional 25% damage.</content>
+  <content contentuid="hae56d081ge9dfg1cdcg83f8g73a4dddf2280" version="1">Jump</content>
+  <content contentuid="hedbb4417gb3a5gbae0ga3e9gbc09302f3182" version="2">Jump into the air and crash down on your target.  Dealing weapon damage in the area.  Deals double damage with a polearm equipped.</content>
+  <content contentuid="he1be36cbg171eg76e3g453fg971d0268e72b" version="1">Launch</content>
+  <content contentuid="h50980aceg5876gd109ge965gb154637f0b22" version="4">Performs a melee attack that sends your target flying up to [1]. Does not consume mana on a miss.</content>
+  <content contentuid="ha30ee45dg6f6cg53a7gf1c2g7b60154ceeb3" version="1">Lancet</content>
+  <content contentuid="hf29897d1g1752g91dcg85a7g43df11c08c7f" version="4">Performs a melee attack and drain health and mana equal to half of the damage dealt.  Does not consume mana on a miss.</content>
+  <content contentuid="hd8739db7gaf36g4ea8g11f3g53b2d96d3722" version="1">Crescent Moon</content>
+  <content contentuid="h0a2f6699g745ag8c50g4acfg6a2408d41c29" version="1">Swing your weapon in a large arc.  Deals twice the damage with a polearm equipped.</content>
+  <content contentuid="h1e479d73g77b0geedfg5402g73f9d2ac4d14" version="1">Reaction: Dragonheart</content>
+  <content contentuid="h6925e10agb1c0g77dbg0f04gd3aa15ecac8c" version="2">The dragon spirit prevents you from an early death.  Upon being attacked, use a reaction to apply death ward.</content>
+  <content contentuid="h67b81946g2ff7g36b9g139bgbf12a0151d0c" version="1">Reaction: Dragonheart</content>
+  <content contentuid="hd3669eefg503dgc965gd0c8g0238ac905ca9" version="2">The dragon spirit prevents you from an early death.  Upon being attacked, use a reaction to apply death ward.</content>
+  <content contentuid="h4a8c59b7gf759gdfa7g8912g8813043b7b81" version="1">Dragonheart</content>
+  <content contentuid="h940f144cg2c12gdd08g4787g65e5d0b5e940" version="1">The dragon spirit prevents you from an early death.  Upon taking damage, use a reaction to apply death ward.</content>
+  <content contentuid="h5e59a059g8010g4840gb49bge2bd09aa9530" version="1">Dragonheart</content>
+  <content contentuid="h66a6b465gf3e6g7c43g87d4gc70200d8a72b" version="2">The dragon spirit prevents you from an early death.  Upon being attacked, use a reaction to apply death ward.</content>
+  <content contentuid="h697c2393g1e3eg997bg6d56gb3b1fd4243cd" version="1">Ashura</content>
+  <content contentuid="h43f4a876ge700ga63ag4b1eg16de06e9c352" version="2">A technique that releases the spirit in the user's weapon, causing an unseen specter-sword to slash at the target.</content>
+  <content contentuid="h38fb6411g2029g2686g6121g9c77ad01c0cd" version="1">Kotetsu</content>
+  <content contentuid="ha76c7df3gcff9g6cbcg551bg3a844c35f322" version="2">A technique that releases the spirit in the user's weapon, loosing a wave of howling dark spirits.</content>
+  <content contentuid="h4f951855gd44ag94adge2c5g84574ef15d76" version="1">Osafune</content>
+  <content contentuid="h5ac97fa6g67cfg8462g8af6g3f356d16131b" version="2">A technique that releases the spirit in the user's weapon, sending the whispering dead to feed on the target's MP. Reduces affected entities spell slots up to level 4 by 1.</content>
+  <content contentuid="h9070e3e2gc6d0g6cd1ge945g86f0e1b4fc0d" version="1">Murasame</content>
+  <content contentuid="hb0417e31g5904g594bgf711gc8bdfaab14ec" version="1">A technique that releases the spirit in the user's weapon, raining tears of an enlightened soul to restore HP.</content>
+  <content contentuid="hb83eb546gb30bg523egc3ccg260e7c2c00c3" version="1">Ame-no-Murakumo</content>
+  <content contentuid="h89e46778g0f68g9bebgd2f9ga2cd9b53b748" version="1">A technique that releases the spirit in the user's weapon, releasing a phantom of pure mist to attack the target. May apply slow.</content>
+  <content contentuid="h9792dc42g7a3bge498g6442g2c02798431a6" version="2">Kiyomori</content>
+  <content contentuid="h253f9130gd247g9cc5geea9gc927eb7ca7ca" version="3">A technique that releases the spirit in the user's weapon, bestowing the protection of its effervescent life force.  Applies Wall for 3 turns.</content>
+  <content contentuid="hf1f03b13g30b2g56f4gc735g8fd96d920bf1" version="1">Wall</content>
+  <content contentuid="hdab2bd1bg98f4g09d6g7db5g3019c291acde" version="1">Reduces damage taken from magic and physical damage by half.</content>
+  <content contentuid="heea4e188gd20age7c4gf8f0g9964a9ae0023" version="1">Regen</content>
+  <content contentuid="h12821590g64b8g427fgfd6fg99b9403e73e7" version="1">Replenishes 5% HP every turn.</content>
+  <content contentuid="hd1af0ad0g0de8gffd5g857egf1ef39d078e0" version="1">Haste</content>
+  <content contentuid="h5156aac6g4d5ag5bd3gb24ag4a76308b70df" version="1">Creature has a +2 bonus to &lt;LSTag Tooltip="ArmourClass"&gt;Armour Class&lt;/LSTag&gt;, &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on Dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;, its &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; is doubled, and it can take one additional action per turn. </content>
+  <content contentuid="h8a8d85f7ge027g22ebg57aagd7dd0f8acc3b" version="1">Masamune</content>
+  <content contentuid="h83fc9df2g2156gd8a5g3382g2eddc2866cdd" version="1">A technique that releases the spirit in the user's katana, bestowing physical healing and increased speed. Apply haste for 3 turns and regen for 10 turns.</content>
+  <content contentuid="hd6ae8e67ge5d4gf170gc87bg3808775df675" version="1">Kiku-ichimonji</content>
+  <content contentuid="h57a1811bg2603g05d3g572bg3f7cca4315ac" version="2">A technique that releases the spirit in the user's weapon, wreaking havoc with its all-consuming hatred.</content>
+  <content contentuid="h0ff859f8g1baege101g9088gd2f2bbdb46ae" version="1">Chirijiraden</content>
+  <content contentuid="hf4e9a64eg901ag2dbaga270g36be2a7a3766" version="1">A technique that releases the spirit in the user's weapon, which pursues the living as a band of blue flame.</content>
+  <content contentuid="h72a7f014g6172g7325gc798gc981abc2ada3" version="2">Iaido: Drained</content>
+  <content contentuid="he8347a1dg82f9g288fgb197g2f27c5afac4d" version="2">User is unable to use Iaido skills.</content>
+  <content contentuid="hbbecfd68g30c3g188eg4b09gc3044866e11e" version="3">Iaido</content>
+  <content contentuid="h5f4d1d42g0cd3gb726g824ag6ca4504fc291" version="2">Iaido use may be temporarily disrupted on a failed save.</content>
+  <content contentuid="h3eaa8be2gbd74gd44eg2ad2gc6636c9fd47a" version="2">Support: Doublehand</content>
+  <content contentuid="he2c739c4g86f6ge74dg43deg411f13b5944a" version="3">Wield a one handed melee weapon with both hands, dealing an additional 50% weapon damage. Does not apply while using versatile weapons or a shield.</content>
+  <content contentuid="hce50fddfga076g79c3g0225gad6e0e144820" version="1">Support: Doublehand</content>
+  <content contentuid="h4d3098bage271gd895g0418g8563a93a0248" version="3">Wield a one handed melee weapon with both hands, dealing an additional 50% weapon damage. Does not apply while using versatile weapons or a shield.</content>
+  <content contentuid="he27a7d73g6471g98cegbed7g241068e814e2" version="1">Reaction: Shirahadori</content>
+  <content contentuid="h7bc34f13g17e4g4952g660agc428074d58d8" version="1">Use a reaction to evade a melee attack.</content>
+  <content contentuid="h3121123fg646fgcd27gc9a1g8952c65d929e" version="1">Shirahadori</content>
+  <content contentuid="hbb3b7787g8bb5g220bg231ege8e5be50ff8a" version="1">Use a reaction to evade a melee attack.</content>
+  <content contentuid="hd153e89cg46ddga5d6gf782gf037b3d318df" version="2">Reaction: Shirahadori</content>
+  <content contentuid="h77ae3e97g8289g4062g989fg2447a5c18dd2" version="1">Use a reaction to evade a melee attack.</content>
+  <content contentuid="h58070053g0b55g1a38g7eebga2d3c4dfef8b" version="1">Support: Doublehand</content>
+  <content contentuid="hfa8af07ag78eeg75d8g1778g932428ba5c07" version="4">Wield a one handed melee weapon with both hands, dealing an additional 50% weapon damage. Does not apply while using versatile weapons or a shield.</content>
+  <content contentuid="h9be3af58g83a2g553agd86fg6ab915d4c7be" version="1">Throw a character or item from the world or your inventory using a bonus action.</content>
+  <content contentuid="hbbc7a7faga078g6d85g52e0ga71f20562805" version="1">Shuriken</content>
+  <content contentuid="hd6ffa6b6g9abfgf112ga8cdg40eee0ce008c" version="2">Throw a sharp shuriken at a foe. Does not consume mana on a miss.</content>
+  <content contentuid="hc9a8f891gb3e1g2aebg8134gcd98728e35c4" version="1">Snowmelt Bomb</content>
+  <content contentuid="h749c2e13g12f6gbe68gb596gc5295b85be90" version="1">An explosive sphere that deals cold damage when thrown.</content>
+  <content contentuid="h9a7e592bg5f09g7061g4ec8gcc9111b8ae91" version="1">Flameburst Bomb</content>
+  <content contentuid="hc5b3ecf7g931cg5d8cg0845g34acc8a92f4f" version="1">An explosive sphere that deals fire damage when thrown.</content>
+  <content contentuid="he29a2aa1gf4e7g08a5g5d94ge6ad9439c0de" version="1">Spark Bomb</content>
+  <content contentuid="hea0c3d23gebc8g869eg24b7g64e12fd575c6" version="1">An explosive sphere that deals lightning damage when thrown.</content>
+  <content contentuid="hefbc5099ga0a3gc60fge788g395aee94318b" version="1">Support: Dual Wield</content>
+  <content contentuid="hd60cc356g3723g8ab7g4569g39654a342524" version="1">Provides Dual Wielder and Two Weapon Fighting feats.</content>
+  <content contentuid="hd844674fg6d57g81c0g618dg27a72faebb30" version="1">Support: Dual Wield</content>
+  <content contentuid="hff76a026g781egbeacgcc4dgf756bda4c5bc" version="1">Support: Dual Wield</content>
+  <content contentuid="hbb80709ag349bg6620gbf11g1b2b5b019e42" version="1">Provides Dual Wielder and Two Weapon Fighting feats.</content>
+  <content contentuid="h139333fbg09c9g6a1cgadd7g277a1840d884" version="1">Support: Dual Wield</content>
+  <content contentuid="h50291a54g8dd4g3f54g7a49gbe6c744a1c01" version="1">Provides Dual Wielder and Two Weapon Fighting feats.</content>
+  <content contentuid="h43e36e46g5fcbgfde5g997fg5a7dff902c65" version="1">Vanish</content>
+  <content contentuid="h5e071c5ag7af7gd054g8706g06ce85323cec" version="1">The user can use their reaction to become invisible.</content>
+  <content contentuid="h0e0dd62fgd6b5gf965g0603gb680c9f5e8a9" version="1">Reaction: Vanish</content>
+  <content contentuid="hc62f9772g6f99g723dgfcf5g3ae08089796f" version="1">The user can use their reaction to become invisible.</content>
+  <content contentuid="h403ce21eg7387g09f9g2e62gdde6ae79de85" version="1">Reaction: Vanish</content>
+  <content contentuid="hdefb9100ge63cgfaccg2809gdf8add6f74e7" version="1">The user can use their reaction to become invisible.</content>
+  <content contentuid="hf4330d0ag2c74g3248gbb02gba3f39d8249f" version="1">Judgment Blade</content>
+  <content contentuid="h98cd12eaga376gb52bg6986g1a6078dc4c64" version="1">Channel energy through weapon to inflict cold damage. May inflict stop.</content>
+  <content contentuid="he50e9593g44f0g7ad6g97d8ga9aa42415d77" version="1">Cleansing Strike</content>
+  <content contentuid="h96283c7fg39beg5863g56ddge82a6e720da6" version="1">Channel energy through weapon to inflict damage. May inflict doom.</content>
+  <content contentuid="h63683cd6ge50dg9d4eg36bbg209b59b48245" version="1">Crush Punch</content>
+  <content contentuid="hd01abf4ag2e1cge75dg36dbga61b8d748eac" version="2">Channel energy through weapon to inflict damage. May do double damage.</content>
+  <content contentuid="h0bbbf3c3gdd5bgc676g757ag9f4017194362" version="1">Hallowed Bolt</content>
+  <content contentuid="h685f205fga2cag2d7bgd758g7cd68f829299" version="1">Channel energy through weapon to inflict lightning damage. May inflict silence.</content>
+  <content contentuid="h8664fbedg613cgb4a1gcd0fg3dc4d8fc6d7c" version="1">Divine Ruination</content>
+  <content contentuid="h51420c2ag9971g7dc6g4f4fgadd8713fe204" version="1">Channel energy through weapon to inflict lightning damage. May inflict confuse.</content>
+  <content contentuid="haa2c74b5g0d4bg08a4gfe37gfcb148445ad1" version="1">Sanguine Sword</content>
+  <content contentuid="h166ee234ga741ga963ga844g3d7dfcf2d934" version="1">Absorb HP from the target.</content>
+  <content contentuid="h423f73e3gfe51gff01g604egbbb1a030909d" version="1">Infernal Sword</content>
+  <content contentuid="h315c41d4g61a8g662ag4399g93687a42865d" version="1">Absorb MP from the target.</content>
+  <content contentuid="h53af6cf2g79e4g2e47ga408g862a4d3c588d" version="1">Crushing Blow</content>
+  <content contentuid="haefe60d1gb035g9dd0g5383g1c1956864e0f" version="1">Inflict damage with sinister weapon energy. May inflict stop.</content>
+  <content contentuid="h3406439fgf5c5g65d9ga845gce5a4f01e50d" version="1">Abyssal Blade</content>
+  <content contentuid="h882e4006g6213g065dge8bcg06f6e0bb2656" version="6">Sacrifice own 20% of caster's max HP to deal damage to others equal to weapon damage and lost HP.&lt;br&gt;Deals: [1] plus HP sacrificed.</content>
+  <content contentuid="h97ec85fag3c11g78e2gbe29g3a1cf0e18bee" version="1">%%Technical for Dark Knight</content>
+  <content contentuid="h3b93cf77ga9beg5468gd1a4g66a4b41fda13" version="1">Dark Knight: Self Damage</content>
+  <content contentuid="hfd58117egc46eg4995g590cg612cbadf679a" version="1">Dark Knight: Self Damage</content>
+  <content contentuid="hdc5aebcag4bdcg425dg4c0dg099c7cae64a9" version="1">Unholy Sacrifice</content>
+  <content contentuid="hd840cb63g9e7dg1414g0d7ag4cb84dd8fedb" version="4">Sacrifice 33% of own HP to deal weapon damage and lost HP to all units in range.&lt;br&gt;Deals [1] plus HP sacrificed.</content>
+  <content contentuid="ha288a6f1g514cga585g130bg6036028c8156" version="1">Support: HP Boost</content>
+  <content contentuid="h2f9e6f3ag1265g269eg8e39gf2c2ff8b0381" version="1">Increase maximum HP by 20 percent.</content>
+  <content contentuid="h61430bf2g8a7cgafd3gd326gf2a33174d7df" version="1">Support: Vehemence</content>
+  <content contentuid="haf302744g4505g1141gcc85gb2b86357ff0c" version="2">Increase attack power by 50% and become vulnerable to all damage.</content>
+  <content contentuid="h357fa2d6gfc9fge2b7gaf1eg104f7ea6bb9d" version="1">Support: HP Boost</content>
+  <content contentuid="h8036cdf1gbc51g6d1fgbb47g2904fb7779bc" version="1">Increase maximum HP by 20 percent.</content>
+  <content contentuid="hec7cc649gc7a7g27fbgdc66g12a69476aa75" version="1">Support: Vehemence</content>
+  <content contentuid="hc6d0ddf0g2440gc8fbg736bg54213138f22b" version="2">Increase attack power by 50% and become vulnerable to all damage.</content>
+  <content contentuid="h61aaf2b1g7d36gd898g87e1g39dcb90e4b28" version="1">Support: HP Boost</content>
+  <content contentuid="h880c5832gfa24g873ag6e94gf584271132c4" version="1">Increase maximum HP by 20 percent.</content>
+  <content contentuid="h42300bdeg9fb7g8c94g319ag7d68ff557600" version="1">Support: Vehemence</content>
+  <content contentuid="h53275a9dga71dg309ag4155g009296675843" version="2">Increase attack power by 50% and become vulnerable to all damage.</content>
+  <content contentuid="ha0833048g3bcagd2a2g2d3bg11f8772f5921" version="1">Omnislash</content>
+  <content contentuid="h8de63cbegd004geca0gaeffg363d7c98e8f3" version="7">Deal eight consecutive melee weapon attacks in rapid succession dealing 1/4 of your weapon damage with each attack.&lt;br&gt;&lt;br&gt;Current Melee Weapon Damage:&lt;br&gt;[1]</content>
+  <content contentuid="h8df05387g0582gb2b0ga325g197ffe2fb636" version="1">Braver</content>
+  <content contentuid="h42d7df36ga843g9655gc8f6g697ab74f9bf6" version="1">Increases next weapon attack by 50%. Removed after 1 turn or on user's next attack</content>
+  <content contentuid="h57821fbcg3d78ge3a7g7bf3g306ddd78d835" version="1">Braver</content>
+  <content contentuid="hba5ee223ga935g85adgb0e3g3229eeaac73b" version="4">Deals [1] and on a successful hit, increases your next weapon damage by 10. Does not consume mana on a miss.</content>
+  <content contentuid="hf4187994g05e9g1e79g45e9g8cbef13eec38" version="1">Braver</content>
+  <content contentuid="h95a0ee28g0886g6a9fg03f6g98c9831306cc" version="1">Increases next weapon attack by 50%. Removed after 1 turn or on user's next attack</content>
+  <content contentuid="ha5e5520dgfb19g51bbg8357g8b4170fe16bd" version="1">Cross Slash</content>
+  <content contentuid="hf214862fge52fg5a3eg60e0gb96ab16f33f5" version="3">Slices the target in a cross-cut pattern dealing damage twice. Does not consume mana on a miss.</content>
+  <content contentuid="h5316e79eg8206g02edga5b7g607839022d74" version="1">Blade Beam</content>
+  <content contentuid="he04f0f74g4637g5f47g31a4gfcdd8b3b511b" version="2">Deals [1] to the target before the beam splits to hit up to [2] adjacent enemies for half damage. Does not consume mana on a miss.</content>
+  <content contentuid="h460fcca9g5888gf437g9f5dgb3224d3dec5c" version="1">Blade Beam</content>
+  <content contentuid="hea17c7c2g0da0ge6b8gc59ag5944c42c6577" version="1">Deals [1] to the target before the beam splits to hit up to [2] adjacent enemies for half damage.</content>
+  <content contentuid="h200f3047gb7c7g27b7ge95eg0cb4698e9c2e" version="1">Meteorain</content>
+  <content contentuid="h5f75e189gf2c9gd4dagea90ga89267a2cf93" version="7">Damages enemies by summoning meteors out of the sky.&lt;br&gt;Attacks with four meteors dealing fire damage the targets.</content>
+  <content contentuid="hc350e320ge96dg5970g4ec9g71c375c0f33d" version="1">Finishing Touch</content>
+  <content contentuid="h3b2d7993g5b92gce17gb83fg87c920a9f9cb" version="2">Damages enemies for [1].  Instantly kills targets below 10% HP.  May inflict stone and stop.</content>
+  <content contentuid="hb0ebcdb5gb816ge46dg0b84gd66c7f94973d" version="1">Climhazzard</content>
+  <content contentuid="h1d15743cg5443gb4a3g46dcg92ecda564975" version="3">Damages and enemy for [1]. Deals an additional [1] per 25% HP the target is missing. Does not consume mana on a miss.</content>
+  <content contentuid="hb7e45cd3g92ddg0378g3272g9b4e4f464659" version="1">Cherry Blossom</content>
+  <content contentuid="h3b0cf477g5d5bg0258ge5e1g4d87b078e8d4" version="2">Deals damage in a large area.</content>
+  <content contentuid="h683820c8gab95g5333g9455g26c61b8bfd1c" version="1">Leg Shot (Melee)</content>
+  <content contentuid="hf56ba764gd9c4g2367gbe44gbfc46c9cb5bf" version="2">Aim to impair the legs, preventing movement. Does not consume mana on a miss.</content>
+  <content contentuid="he815ea96gac59g9405g69c5g1f55390e3462" version="1">Leg Shot (Ranged)</content>
+  <content contentuid="h60ec0ca5gcfb7gef59gca8fg98b72335d642" version="2">Aim to impair the legs, preventing movement. Does not consume mana on a miss.</content>
+  <content contentuid="h400e19dcgf8ddgab69gffe7ge108a5d001c0" version="2">Aim to impair the arm, preventing actions and reactions. Does not consume mana on a miss.</content>
+  <content contentuid="h2f723a10g202agaaa3g5fb9g771a8027887c" version="1">Seal Evil (Ranged)</content>
+  <content contentuid="h045d81d9g7497g9d4ag8a25g8c15d8c7a1fa" version="2">Petrifies the target if they are undead or a fiend. Does not consume mana on a miss.</content>
+  <content contentuid="h0d870f84g7d42g8c07g62degb98a317d8407" version="1">Seal Evil (Melee)</content>
+  <content contentuid="h2e034a16g237cg08fegf270g927e890b48bf" version="2">Petrifies the target if they are undead or a fiend. Does not consume mana on a miss.</content>
+  <content contentuid="hf29809adge791g26d7gfde0g559077720ec1" version="1">Arm Shot (Melee)</content>
+  <content contentuid="hd29a0ea0gfe39gb05dga1c0g0c91d16f141c" version="2">Aim to impair the arm, preventing actions and reactions. Does not consume mana on a miss.</content>
+  <content contentuid="hc28949c6g9e78g1793gdcc7g183679e6be9a" version="1">Arm Shot (Ranged)</content>
+  <content contentuid="h5322461ag6e5dg59f8g783eg25bbe3245fc8" version="1">Barrage (Melee)</content>
+  <content contentuid="h554d6174g311eg41cag2b7bgd4490b9233db" version="6">Unleash 4 attacks. Each strike inflicts [1].</content>
+  <content contentuid="h8001291cga1a5gcc68g3002g5c325b0bef13" version="1">Barrage (Ranged)</content>
+  <content contentuid="h28c4ccaeg8a7fg7448gd02ag1ccd5c20b2ad" version="3">Unleash 4 attacks. Each strike inflicts half of the usual damage [1].</content>
+  <content contentuid="hc299169cg2e3dg362fgbf1dgbef0250834ab" version="3">Unleash 4 attacks. Each strike inflicts [1].</content>
+  <content contentuid="he5cbae1ag6fb6gde2ag9f57g75a4218078d0" version="1">Ice Breath</content>
+  <content contentuid="h6bb3932eg6b84ge51bged76g614ddc9c6661" version="1">Holy Breath</content>
+  <content contentuid="h9718748ag4098ge393g0f4cgc31442f204e2" version="1">Spew forth a cone of holy energy.</content>
+  <content contentuid="h8cc3cd25gca2fgf12dg1f4ag8725f9849092" version="1">Dragon's Charm</content>
+  <content contentuid="h5b1a0a0cgac3ag5bcfgec36g7cb36731a18a" version="1">Make a beast or dragon fight alongside you. Every time the beast takes damage, it makes a Wisdom &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; against your domination.</content>
+  <content contentuid="ha56e7ae6g1b61g9feeg5b97g35cd3d3519a5" version="1">Dragon's Gift</content>
+  <content contentuid="h6cfd6e5eg26beg5be7g7ecag03e18c083b57" version="4">Sacrifice 25% current HP to heal an ally for twice the amount. Removes most status effects.</content>
+  <content contentuid="h00a006f5g0042g11e1gb9cdg181edff4114f" version="1">Dragon's Might</content>
+  <content contentuid="h7d6bcf06g0a55g20b1g6ebeg4b3891f0ae55" version="2">Increases all damage done by 2, AC by 2, and increases movement by 3m.</content>
+  <content contentuid="hb3702b45gf1a7g2a16g6dbbgfef6bd28024f" version="1">Dragon's Might</content>
+  <content contentuid="h65c1aad1g0f88g3ed2ge633gf9de7d67c47c" version="2">Increases all damage done by 2, AC by 2, and increases movement by 3m.</content>
+  <content contentuid="h0ffaef94gfab1gebf6gc3aeg5dee51951e51" version="1">Dragon's Speed</content>
+  <content contentuid="hd9d30635gefd8gf71cg18edg50f8cc8e2a7d" version="1">Applies action surge to an ally.</content>
+  <content contentuid="h90c420f5g4ab1g9128g466ag16a46ca11cf1" version="1">Out of Mana</content>
+  <content contentuid="hdecd7126g0c38gcfabgb765gb282b326a42f" version="1">Fire</content>
+  <content contentuid="h1fdeb0a9g058bgea66g4165gc8851d4c85b7" version="1">Black magick that envelops targets in ferocious flames.</content>
+  <content contentuid="h077db3bfg7b24g7ca8g4897ga81ae64a1dc3" version="1">Thunder</content>
+  <content contentuid="h371fffbfg98beg9f28g68e3g8c451dfe06ad" version="1">Black magick that strikes targets with lightning.</content>
+  <content contentuid="heaa3f066g739dg222fg77d5g79e523ecd3a9" version="1">Blizzara</content>
+  <content contentuid="hb49f264bgaf0cg7ad1g6500g007ba4cad732" version="1">Fira</content>
+  <content contentuid="h6b82e79agb9f7g8935g87c1g6f9ecf8e22a3" version="1">Firaga</content>
+  <content contentuid="he67ab0e3g5e30g9c08g8583g75111d59a7dc" version="1">Firaja</content>
+  <content contentuid="hc6d6440ag65ccgbab3g4679g1c141b5093a7" version="1">Thundara</content>
+  <content contentuid="h14201198gcf68g68ffg2a66gbccc345c81c2" version="1">Thundaga</content>
+  <content contentuid="hb36d9a15gebddgbca8gf3f3g6de75d1805f8" version="1">Thundaga</content>
+  <content contentuid="h6476780bgb7d6g3f61gba2eg868b57294533" version="1">Blizzard</content>
+  <content contentuid="hdaa9163cg2b23g62e1g9d0cg482bedc00a19" version="1">Black magick that conjures forth bone-chilling icicles.</content>
+  <content contentuid="hb8dd1e0bgc66fgf713g810ag1d1220437546" version="1">Poison</content>
+  <content contentuid="h0328c9bag7d0agc5b5geedag64ff8a2a3b27" version="1">Black magick that induces poisoning within the body, causing [1] damage per turn.</content>
+  <content contentuid="hdbc9904fgf5f5gcea1gad11gbc5f546507ad" version="1">Blizzaga</content>
+  <content contentuid="h22986496gacc6gce96gd758g39ee56982538" version="1">Blizzaja</content>
+  <content contentuid="h3710b43dg3f42g8a7egaefcgdc63d374eb0c" version="1">Toad</content>
+  <content contentuid="h6c43d7dega039g52a1ge5c0gded4199ac30a" version="1">Black magick that turns its target into a toad.</content>
+  <content contentuid="h0b21b896gb6dag6c05g93e3g884b84ef2423" version="1">Death</content>
+  <content contentuid="h8b2b7110ge5bdga5bdgc823g0a1c3af4106b" version="2">Black magick that offers up the target's soul to the spirits of the dead for an instant KO if they have 50 HP remaining or less.</content>
+  <content contentuid="hc8e126a0g41beg877cgde20g44ee61b8ab5c" version="1">Flare</content>
+  <content contentuid="h75b9f0fcg1522gc0abg9badgc6a758517c9e" version="2">Support: Arcane Strength</content>
+  <content contentuid="h324889b8g0a0bg069bgb8f4g71b8bb7f07a2" version="1">Increases magical damage dealt by an additional 33% damage.</content>
+  <content contentuid="h46097640gdd5agd860g531cg5040fc9e48b1" version="2">Support: Arcane Strength</content>
+  <content contentuid="hc0808fe9g5025g10bag39ffgee2ba4dc3587" version="1">Increases magical damage dealt by an additional 33% damage.</content>
+  <content contentuid="h3d3b6d49gfb3ag337eg6bb1g93766140ec47" version="2">Support: Arcane Strength</content>
+  <content contentuid="haea948dbg3905g0b00gac5cgf7c89594bef8" version="1">Increases magical damage dealt by an additional 33% damage.</content>
+  <content contentuid="h7aa1608cgea64g683eg7d3dg5e8f31459ba7" version="1">Magic Counter: Fire</content>
+  <content contentuid="h479d0624g609eg2bb6gc87fg3fafca22ad88" version="1">Counterattack using Fire when attacked with a spell.</content>
+  <content contentuid="hdac7d479gb6edg152dg20c7g9e875ee11757" version="1">Magic Counter: Blizzard</content>
+  <content contentuid="hcff930c3gca9dga231gdefcg39dd992e8691" version="1">Counterattack using Blizzard when attacked with a spell.</content>
+  <content contentuid="hb68d8adeg3f6cg7916gc698g3554c6d511a3" version="1">Magic Counter: Thunder</content>
+  <content contentuid="h759c13b4g289cgc600g8badg21e3498139d4" version="1">Counterattack using Thunder when attacked with a spell.</content>
+  <content contentuid="hbe63bf2dg89d6g46a1g7dd7gae03995646d9" version="2">Reaction: Magic Counter</content>
+  <content contentuid="h3adc7fd1g4f2ag9554g5263g5878ecf02b82" version="1">Counterattack using Fire, Blizzard, or Thunder when attacked with a spell.</content>
+  <content contentuid="h140b4decg7c43g4637g4ac4gf251bf2fa49f" version="1">Reaction: Magic Counter</content>
+  <content contentuid="hd49e28a3g1bc9g1738g017aga58b452876cc" version="1">Counterattack using Fire, Blizzard, or Thunder when attacked with a spell.</content>
+  <content contentuid="h9bfb03a2g78bcgf53egc894g1aebed5db877" version="2">Reaction: Magic Counter</content>
+  <content contentuid="h85c01e46g7b35g2b7cg7b29g378d0a570b58" version="1">Counterattack using Fire, Blizzard, or Thunder when attacked with a spell.</content>
+  <content contentuid="h9245aed0g3134g3b21g82e8gf14f393ccc37" version="1">Cure</content>
+  <content contentuid="h19625405gdcf5g6bd5gf933g31f5226cad09" version="1">White Magick that soothes injuries, restoring HP.</content>
+  <content contentuid="h4dc9dff1gc128g9eb4gb829g9028aef18595" version="1">Cura</content>
+  <content contentuid="h7abc2a4ag0e21g4636ga1c9g689e0c35a39d" version="1">Curaga</content>
+  <content contentuid="hbc99995bgc1cag9925g16a3gc407a49eb5b1" version="1">Curaja</content>
+  <content contentuid="hf9e62cc8ge494g76bbgc437g05ad237a410e" version="1">Raise</content>
+  <content contentuid="h554f4879gd903gcabbg5ff1g0b6101467cfe" version="1">White Magick to fetch a warrior from the brink of death. Restores 50% of HP on success.</content>
+  <content contentuid="h1919e2c0g2a49g87cfg516fga39af46689ba" version="1">Arise</content>
+  <content contentuid="h4af9942fg58f1gcd4cg25f6g3ae3dc6431f5" version="1">White Magick to fetch a warrior from the brink of death. Restores 100% of HP on success.</content>
+  <content contentuid="h5349ad8fg771eg2087g2cfegbb931829c81e" version="1">Reraise</content>
+  <content contentuid="h6b2e6086ge257gc01eg78b8ge883e2d1196f" version="1">White Magick that endows a unit with a protective force that applies death ward.</content>
+  <content contentuid="hc40db0dcg6a1dg9380g51a2gb8b69d4936ff" version="1">Regen</content>
+  <content contentuid="h47482297g4517gc6c0g62edgf6aa0e206f90" version="1">White Magick that invigorates the life force, gradually restoring HP as long as its protection is in effect.</content>
+  <content contentuid="hfd21b254g1320g5607g7038g768ec2edbc5b" version="1">Protect</content>
+  <content contentuid="h286e1aeeg2acfg96c8gca97gaadd33cb57dc" version="1">Reduces damage taken from bludgeoning, piercing, and slashing damage by half.</content>
+  <content contentuid="h21ce0e20g0d4fgcce8ga47fg94b42260bcde" version="1">Shell</content>
+  <content contentuid="hbfea1084ge160g36f1g4f72g4cd9eb995042" version="1">Reduces damage taken from elemental damage by half.</content>
+  <content contentuid="h73a1ec4cg3e38g8e1fgc1bfgd2f5d1374427" version="1">Protectja</content>
+  <content contentuid="h0da60a6bg114agad26g43bag54626f914dc2" version="1">Reduces damage taken from bludgeoning, piercing, and slashing damage by half.</content>
+  <content contentuid="he8c37c6agbb2agbefdgc206gfcfa70ec281a" version="1">Shellja</content>
+  <content contentuid="h2118c3f7ga409g3ffdg97acge97e4b275977" version="1">Reduces damage taken from elemental damage by half.</content>
+  <content contentuid="haa554e30g4c6fg2082gad94gd0e946fe6325" version="1">Wall</content>
+  <content contentuid="hf6c18cedg077agd9f3g3369g75c8dbd73df1" version="1">Reduces damage taken from magic and physical damage by half.</content>
+  <content contentuid="h8bb72f4dge6f0g1b02g60b7g7c95cdf1cc87" version="1">Esuna</content>
+  <content contentuid="hcea9e4a0g6573gfe72g52e0gcfcbe975cef4" version="1">White Magick that removes negative status effects.</content>
+  <content contentuid="h7fa71423gc5d7gcef4gdb37g47419af29b88" version="1">Holy</content>
+  <content contentuid="h9509ea71gc546g6fe9ge422g481f6ce525df" version="1">White Magick that attacks the target with sacred light.</content>
+  <content contentuid="h8f63bb3ag2c6bgdeb6gcca7g046fd1d20745" version="1">Reaction: Regenerator</content>
+  <content contentuid="hd3cce671g5091g4c4egdb65g6c6d60c76a12" version="1">Receive the blessing of HP regeneration upon taking damage.</content>
+  <content contentuid="heab80018g4985g9126ged1ag6ae6f02fb001" version="1">Reaction: Regenerator</content>
+  <content contentuid="hb044b8c7g2e77g6c83g3e2fg59dea4194548" version="1">Receive the blessing of HP regeneration upon taking damage.</content>
+  <content contentuid="h35fbd491g2b17g176fga02bgeb2df5978913" version="1">Reaction: Regenerator</content>
+  <content contentuid="h0b1cb83eg32dcg6f3fg2ba1g403adf1732c1" version="1">Receive the blessing of HP regeneration upon taking damage.</content>
+  <content contentuid="h2eabad03g2852g5425g13d6g2fdc4e9ef839" version="1">Support: Arcane Defense</content>
+  <content contentuid="hcb576aa2gabcbgb48agfd20g729dc179b607" version="2">Reduces elemental damage taken by 50%.</content>
+  <content contentuid="h9440b595g2f5egc9eeg131agc96f6ffcdf69" version="1">Support: Arcane Strength</content>
+  <content contentuid="h76d0a80bg56c0g8978gc947g258095e8fba4" version="2">Reduces elemental damage taken by 50%.</content>
+  <content contentuid="he2560f3fg6073g4349g9cb4g785f930a98c7" version="1">Support: Arcane Defense</content>
+  <content contentuid="h55364af6g4a3dg0e01g314age0df9eb8efad" version="2">Reduces elemental damage taken by 50%.</content>
+  <content contentuid="hdcac141fgc6e4g2c1fgd62fge33a5d69e3ac" version="1">Faith</content>
+  <content contentuid="h7763294cg977fg5dcag07f7g6ee396f46620" version="1">Fill the target's soul with a zealous fervor. Provides a [1] damage bonus to all spell damage while also causing vulnerability to all elemental damage.</content>
+  <content contentuid="h0cb5cebeg187agb62dg97d9g4892b5e59112" version="1">Atheist</content>
+  <content contentuid="h12c6d71eg561cgd2ddg4e0ag684e9a4895bd" version="1">Drain the target's soul of piety. Blocks spellcasting, but provides resistance to all elemental damage.</content>
+  <content contentuid="h84ace1bcg1daeg9ebbg3236g63cda1853c00" version="1">Umbra</content>
+  <content contentuid="h49205e52g95d5ge56fgce3fgf5fc2d925888" version="1">&lt;LSTag Type="Status" Tooltip="BLINDED"&gt;Blind&lt;/LSTag&gt; a creature. &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; against it have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; and the foe attacks with &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt;.</content>
+  <content contentuid="hbb822248gbb52g43bcg0d7fgc38d4d68b902" version="1">Empowerment</content>
+  <content contentuid="h1bc7c29dgece6g34a8g494fg983a2fa1f225" version="3">Drain [1] mana from the target.</content>
+  <content contentuid="hc4ad73cfg3ec4gf7ccg9c81gceeb1b8eccde" version="1">Belief</content>
+  <content contentuid="haa08e63dgd8e5g6085gb6eegdbc707dd31ed" version="1">Fill the target's soul with a zealous fervor. Provides a [1] damage bonus to all spell damage while also causing vulnerability to all elemental damage.</content>
+  <content contentuid="hc21e6408g354egfb9cg312dg0d6c0f0b6ed3" version="1">Invigoration</content>
+  <content contentuid="h7030eb89ge78dga685geb81ga5a6b3f9e48d" version="1">Deal damage and replenish health by half of the amount.</content>
+  <content contentuid="h029e213cgc368g637dg666agfe470603d072" version="1">Disbelief</content>
+  <content contentuid="h01d86299gc2bfgaef6g14bbgf591915ac741" version="1">Drain the target's soul of piety. Blocks spellcasting, but provides resistance to all elemental damage.</content>
+  <content contentuid="hc92e6edfg4022ga185gaa60gc577d55e4665" version="1">Corruption</content>
+  <content contentuid="hc7cec5e9gf727g4eddg33feg23bfb5f4c45e" version="2">Transform the target into a zombie, preventing healing and becoming vulnerable to radiant damage.</content>
+  <content contentuid="ha03d4210g6802gd077g1c55gd5a350584287" version="1">Quiescence</content>
+  <content contentuid="h2ae62f2bgdb17g153cge84bgfe3aa97f7091" version="1">Rob targets of speech, rendering them unable to cast magicks.</content>
+  <content contentuid="hd8d99c9cg2a8ag1667g6bacgbd68899e4752" version="1">Fervor</content>
+  <content contentuid="hef18fb28ga125g4d48gf191g67b6524ebc59" version="1">Impart a thirst for destruction, rendering the target mad for blood. Will attack the nearest person regardless of allegiance.</content>
+  <content contentuid="h7af6beaag5b19g382fg6fd1ga28dd424560e" version="1">Trepidation</content>
+  <content contentuid="hc2050fa3g9eb2gde72g59aagce0814539aeb" version="1">Reduces the targets bravery causing them to deal [1] less damage.</content>
+  <content contentuid="hb6eb3ac9g3545g7f0fgf9d0g35105ac36810" version="1">Delirium</content>
+  <content contentuid="h99c1d296g5f7agd979g070cg50c1426fc1cd" version="1">Cause the target to become delirious and act irrationally.</content>
+  <content contentuid="hd908cf4cg4978gaf48g58cfgf0996ff70414" version="1">Trepidation</content>
+  <content contentuid="h13852ca6g5832g028cg62efg4758646daf07" version="1">Reduces the targets bravery causing them to deal [1] less damage.</content>
+  <content contentuid="h7b3f46dcgb923g0e11g36e2g819b5398f8e7" version="1">Hesitation</content>
+  <content contentuid="h16bfcb0cg1d60g9c41g7861ge9b36dae013f" version="1">Render the target incapable of action.</content>
+  <content contentuid="hd65eb904gdb89gb080g3d72gb6ca21695f6b" version="1">Repose</content>
+  <content contentuid="hd9c9de2dg56cfg4fefg6518g7f1e133a3248" version="1">Put the target into a deep slumber.</content>
+  <content contentuid="h923f3433g3ca9g8449ge0d1gd354b5c49172" version="1">Induration</content>
+  <content contentuid="hc621e804g4f83ge1a5gea7fge2b290d36f84" version="1">Turn the target's body into stone.</content>
+  <content contentuid="hc9bd2380gaacfg2638gaf7egc6a75b263b3a" version="1">Defense Boost</content>
+  <content contentuid="h13a4e28eg1c82ge025g3eb0g0938f56b81fc" version="1">Reduces bludgeoning, slashing, and piercing damage taken by 50%.</content>
+  <content contentuid="h7fba1af0g31f2g918dgfecfge377ee4c011c" version="1">Support: Defense Boost</content>
+  <content contentuid="h4639f43cg6b15g2329g8725gd07ee023770a" version="1">Reduces bludgeoning, slashing, and piercing damage taken by 50%.</content>
+  <content contentuid="h04475bdcg4e72g9fa1gf2aegfe44c93eee52" version="1">Support: Defense Boost</content>
+  <content contentuid="hc7ba3547g63f8g6322gb612gc88429043227" version="1">Reduces bludgeoning, slashing, and piercing damage taken by 50%.</content>
+  <content contentuid="h573f82efg85bbgef14g26bbgbfa798be6571" version="2">Hasteja</content>
+  <content contentuid="h42817acag0cf1ga5c6g4cffg78578b8e6628" version="1">Time magick that hastens the passage of time for its targets.</content>
+  <content contentuid="h0de83209gbf71g5d45g5d56g45cc771fecec" version="2">Slowja</content>
+  <content contentuid="hb3b797fdg82caga2d3g302cg124bf54add7e" version="1">Time magick that inhibits the passage of time for its targets.</content>
+  <content contentuid="h175847aag3d95g1f47g0154g65c7b5dc0734" version="1">Stop</content>
+  <content contentuid="h247cdbdbg99cbg1668g3243gd03269bebd41" version="1">Time magick that halts the passage of time for its targets, preventing them from receiving turns.</content>
+  <content contentuid="hd59849ffg65fbg548bg0171gafccd2750f27" version="1">Immoblize</content>
+  <content contentuid="hb3d19e6bg7073g84adgac1bg11191b0cba78" version="1">Time magick that creates an anomaly in space to prevent its targets from moving.</content>
+  <content contentuid="hbf312e06g2c88g0115gc3dcge9cba40a8a62" version="1">Float</content>
+  <content contentuid="h9799edd5gfc2bgf953gc228ga93770273a5d" version="1">Time magick that warps space, allowing its targets to float above the ground.</content>
+  <content contentuid="h46d443ecgdfaegb426g341ag3c2911ee5de9" version="1">Reflect</content>
+  <content contentuid="h92821117g8085ga9d8g6ec1g335812de4b5b" version="1">Time magick that creates a magick-reflecting field.</content>
+  <content contentuid="hbb599872gbc18g0845gbc7egd958db73f829" version="1">Gravity</content>
+  <content contentuid="h6b0db57cg10ebgd2beg5a22g1b05be81a714" version="1">Time magick that conjures up a supermassive field, inflicting damage with powerful gravitational forces. Deals 25% of target's Max HP up to a maximum of 50 damage.</content>
+  <content contentuid="hcee50108g5676ge6b5g8f7bgd3c8a0e7c1c6" version="1">Reflect</content>
+  <content contentuid="h0a117362ge24bgba47g3d0fg9246ab092b70" version="1">Time magick that creates a magick-reflecting field.</content>
+  <content contentuid="hb0becaddge077g625agdc83g553b9ce5347a" version="1">Quick</content>
+  <content contentuid="hf1e6d728gc8c2g8477gde20gc54b627a985c" version="2">Time magick that hastens the localized passage of time, causing the target to have an additional action.</content>
+  <content contentuid="hb6a19eb3g2933g5412gd326gd2eab6329e08" version="1">Graviga</content>
+  <content contentuid="h9d26be69g655dgac89gba7fg7b7b483ee32a" version="2">Time magick that conjures up a supermassive field, inflicting damage with powerful gravitational forces. Deals 50% of target's Max HP up to a maximum of 75 damage.</content>
+  <content contentuid="ha1a63be4g6039g0660g1a10g08e34426fdd9" version="1">Meteor</content>
+  <content contentuid="h64d23d29ge3c9g6b80gf092g3583aa6270fa" version="1">Time magick that warps space-time, causing an enormous meteor to fall on the battlefield.</content>
+  <content contentuid="he30dc814g18aag2666g1598g62adafc73200" version="1">Time magick that warps space-time, causing an enormous meteor to fall on the battlefield.</content>
+  <content contentuid="h7ce1b315g5abdg11b3g0619gdc6c0192793a" version="1">Reaction: Mana Shield</content>
+  <content contentuid="h5fc27436g9989gff8dg85eeg3b813ea8c597" version="3">Convert 25% of max mana pool into temporary hit points equal to 25% of the caster's max HP prior to being attacked.</content>
+  <content contentuid="ha829b217g41b0g2f60gdfa9g601cb131da7d" version="1">Reaction: Mana Shield</content>
+  <content contentuid="hc0585546gf2bcg4d21g3541g3a721beff3aa" version="3">Convert 25% of max mana pool into temporary hit points equal to 25% of the caster's max HP prior to being attacked.</content>
+  <content contentuid="hf63e93d6g54f8g8543g6a54g043a623acffd" version="1">Mana Shield</content>
+  <content contentuid="h26a467a5g8f92g8b04g8e91g9cff83eef2d0" version="1">Convert 25% of your current mana pool into temporary hit points prior to being attacked.</content>
+  <content contentuid="hc3127dd3ge53dge244gb32bg1b09d533bbbb" version="1">Mana Shield</content>
+  <content contentuid="h880c1f8cgeba9gf100gc8b9g85a8e9bbf67f" version="3">Convert 25% of max mana pool into temporary hit points equal to 25% of the caster's max HP prior to being attacked.</content>
+  <content contentuid="he2af751dga0fbg2b9cg6089g6c6785a8d0b9" version="1">Mana Shield</content>
+  <content contentuid="h1f9b2ad9g9fa7gd43dgd6efgca3ce7a2cf57" version="1">Gained 25% of Max HP in &lt;LSTag Tooltip="TemporaryHitPoints"&gt;temporary hit points&lt;/LSTag&gt;.</content>
+  <content contentuid="he7de4327gce13ga66eg5f0cgffb5b10ffb04" version="1">Reflect</content>
+  <content contentuid="hb07c30eag7306g9146g6db9g1b021a996b6b" version="1">Time magick that creates a magick-reflecting field.</content>
+  <content contentuid="h905823ebg3d88gc043g084ege648ca30d950" version="2">Preach</content>
+  <content contentuid="hd5ddc26ag5341g09f5gbb0egf7ea3deb0760" version="2">Increases next spell damage by [1] per turn remaining.</content>
+  <content contentuid="h49fe7ba9g82b5g0e57g68bcg16e4564c51f8" version="1">Praise</content>
+  <content contentuid="hfc6498cag6b7ag4444g20c0g3c196c59e211" version="1">Increases next weapon damage by [1] per turn remaining.</content>
+  <content contentuid="h6f2fa35fga046gb57cga2dcga48a2c8a59ef" version="1">Intimidated</content>
+  <content contentuid="h42480214gc5ebg3516ga23cgd515d59fa096" version="1">Reduces the target's bravery causing them to deal [1] less weapon damage.</content>
+  <content contentuid="h8052b922g9374ge68ag22b9g3e30d05c6940" version="1">Enlighten</content>
+  <content contentuid="hcb2a3355g6cc5gf473g2e12gdff8b18e4fa4" version="1">Reduces the target's faith causing them to deal [1] less spell damage.</content>
+  <content contentuid="hc12c27ccg8e99ga869gd6bag9a11ced99acf" version="1">Stall</content>
+  <content contentuid="h75a73dc7ged8eg7d3bgc1b7g9cc200522d53" version="1">A speechcraft skill that persuades a foe to wait before acting.</content>
+  <content contentuid="h360541b2g6c12g1c6fgca62g88eefcabb9ea" version="1">Entice</content>
+  <content contentuid="h4cb963a2gd674g2062g547dg73e9d6ae8743" version="1">A speechcraft skill that persuades a foe to become an ally.</content>
+  <content contentuid="h1f5dbfdfg17ddgad5cg3188g40aad3af4b7b" version="1">Praise</content>
+  <content contentuid="hc80d6098g7b31gab77g6c49gb8197498874c" version="1">A speechcraft skill that praises the target's feats and strengths, increasing their next weapon damage by [1].</content>
+  <content contentuid="h31db50ecgdec4g3a21g9936gd51cf935189b" version="1">Preach</content>
+  <content contentuid="h7a49367fgee26g6736g78f9gce0f905fda94" version="1">A speechcraft skill that explains the nature of divine miracles, deepening belief and increasing their next spell damage by [1].</content>
+  <content contentuid="h04961305g459bg6013gecd5g0eca3409bf74" version="1">Intimidate</content>
+  <content contentuid="hb879eebagd9d2g1ebagc873gb4de355f6aa3" version="1">A speechcraft skill that reduces the targets bravery causing them to deal [1] less weapon damage.</content>
+  <content contentuid="h53ed029ag22b1g0026g9e8dg975e6402dda0" version="1">Enlighten</content>
+  <content contentuid="hbc1c0b26g4c6bg623agedaag85e450e67bd0" version="1">A speechcraft skill that decreases Faith by using cold logic and secular doctrine causing them to deal [1] less spell damage.</content>
+  <content contentuid="h943cf726g713eg5ff3g903eg74c773d34d9b" version="1">Condemn</content>
+  <content contentuid="h270bb7ccgb823g0997gcd58g9af253a359f0" version="1">A speechcraft skill that convinces the target that his or her demise is soon at hand.</content>
+  <content contentuid="hd3472d7dge8ddga7d5gcf90g6c36330e5657" version="1">Beg</content>
+  <content contentuid="h4a5ffb5bgc93cge053g1228g7dd431ace95d" version="1">A speechcraft skill that spins tales in return for gil.</content>
+  <content contentuid="hc456de54g38a1ge0a2gb8abgfb3e63c6f6fb" version="1">Insult</content>
+  <content contentuid="hd8ffe8feg7592g06d4g5b20gae4c0133e480" version="1">A speechcraft skill that infuriates with foul invective.</content>
+  <content contentuid="h0c55f594gb0aag6a4ag8316gbedf16c509ca" version="1">Mimic Daravon</content>
+  <content contentuid="hd2c61841g8141g2023gbdd8g26a8aa46fbfa" version="1">A speechcraft skill that uses dull tales to induce slumber.</content>
+  <content contentuid="h3402993fg2817g3173g3738g1da0909e552a" version="1">Throw Item</content>
+  <content contentuid="h43847ac2g4298g336fgb70cg90329005ad25" version="1">Throw potions or greandes as a bonus action.</content>
+  <content contentuid="h659c3950g67c8g881bg6a46g36d64a9d2b41" version="1">Support: Equip Guns</content>
+  <content contentuid="h74321501g4bf9g95ecg9e04g232b54dc1471" version="1">Gain the ability equip guns.</content>
+  <content contentuid="h64af4e73gc63cg8e2cg1337g1bd76e587607" version="1">Support: Equip Guns</content>
+  <content contentuid="h1867a123gf26bge620gaf43g1fbe90e3686c" version="1">Gain the ability equip guns.</content>
+  <content contentuid="hdefb2849g19d0ga220g5de1g073072a1da5c" version="1">Support: Tame</content>
+  <content contentuid="hba16947fg33c3g4eaag9a02g5b52d4f8330c" version="2">Chance for a critically wounded enemy monster to become an ally. Targets must be below 25% of their max HP.</content>
+  <content contentuid="h5d72f323g0c82g3e5eg98bfg213b3a90f4dc" version="2">Tame</content>
+  <content contentuid="h93fc1264g0795g9e77g80dfg0bf921c94316" version="2">Must succeed a Wisdom &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; while below 25% max HP or become dominated.</content>
+  <content contentuid="h23fb01cdg8cb9g8808g325dga849d0fbc5e1" version="2">Support: Tame</content>
+  <content contentuid="h37bba110gfdb5gf0b7gae70gdad119550d6e" version="2">Chance for a critically wounded enemy monster to become an ally. Targets must be below 25% of their max HP.</content>
+  <content contentuid="h990b9064g18f8g7e22g38b6g9b2d4202cf2e" version="8">Moogle</content>
+  <content contentuid="he0cde01cg7629gdb8ag42a6g3c67e581c04a" version="1">Summon Moogle</content>
+  <content contentuid="h49e64fb2gd9dbg0c7dged0bg9e30ebcc8c1e" version="2">An esper that soothes injuries with a purifying breeze, restoring HP. Summon lasts for 3 rounds.</content>
+  <content contentuid="h2326b80ag0a71gaf4fgfab9g2f8449eb431b" version="1">Moogle Charm</content>
+  <content contentuid="h9fa63774gc79eg8aadgbf64ge24619b5f004" version="1">Heal all allies in range.</content>
+  <content contentuid="h2fcf00e0g9b6cg32f7g9bdcg0eb39e7aec1e" version="1">Moogle Claws</content>
+  <content contentuid="ha09eb71bgf5c2gdb3cg04c8gc19f6496b524" version="1">Lash out with claws, dealing [1].</content>
+  <content contentuid="h58714832ge428g5454g3b8dg67e79a063a64" version="8">Shiva</content>
+  <content contentuid="hd61375f2g048ega79eg0c5bga18cf82220ed" version="1">Summon Shiva</content>
+  <content contentuid="he2d69ba2g6cb4gd2fbg8093g8f7a8553b1f6" version="2">An esper with punishingly frigid breath. Summon lasts for 3 rounds.</content>
+  <content contentuid="h655a3871gc0dag665cg696dg4693f41ab2ce" version="1">Glacial Shards</content>
+  <content contentuid="he08e65a5gf646ge122gfa30g6894d06ba1a0" version="1">Damages all enemies in range for [1].</content>
+  <content contentuid="h43e0c177g5ecdge4c1gac62g9391c9d399f5" version="11">Ramuh</content>
+  <content contentuid="h38ae06c1g94cag9d56g8614g1ecb0ce53865" version="1">Summon Ramuh</content>
+  <content contentuid="h0438ba2bg3856gb652gcccbgc7f8c1734d96" version="2">An esper that relentlessly rains down lightning. Summon lasts for 3 rounds.</content>
+  <content contentuid="h3be5f7dfg4b54g12d2gca28g5160a911e8d1" version="1">Judgment Bolt</content>
+  <content contentuid="h7bef05a5g14d4ge0beg1f9bgeb1febccd325" version="1">Summon Ifrit</content>
+  <content contentuid="h68f2431cge814g3a63ga6d6g8c57d576c79b" version="2">An esper whose breath of flame scorches the battlefield. Summon lasts for 3 rounds.</content>
+  <content contentuid="h3705b4b1g0985gb713g6016gb47d64680e3c" version="12">Ifrit</content>
+  <content contentuid="ha090fbecg86e5gd4f1g2765gd5abaf12bd27" version="1">Infernal Blaze</content>
+  <content contentuid="hc565a5a4gd048g59dag79cag2afdd2afcbe0" version="7">Titan</content>
+  <content contentuid="ha2635e56g2607g3664g431agea5b35112345" version="1">Gaia's Wrath</content>
+  <content contentuid="hd0803e8bg6270g1812gb1fbg97be13b240de" version="1">Summon Titan</content>
+  <content contentuid="h9424ae13gf7b4gf413g0441gb9ec3ef6384f" version="2">An esper that levels the earth with a mighty blow. Summon lasts for 3 rounds.</content>
+  <content contentuid="h1cb614e7g6e8ag4a6fg9d4eg26e16d792612" version="1">Summon Golem</content>
+  <content contentuid="h0dd49addgaafega035g1018gfd6edf2b7ddd" version="3">An esper that absorbs half of the damage from physical attacks on behalf of allies. Summon lasts for 3 rounds.</content>
+  <content contentuid="h14457453g73cfgd615g8d1eg70688ed5c734" version="7">Golem</content>
+  <content contentuid="haa35b355g24d8geebbg3788g829542a9a54e" version="1">Redirect Damage: Golem</content>
+  <content contentuid="hb4bb3761g69f9gb5f9g7bbfg95111cbc21ae" version="1">Golem blocks incoming damage taken from weapon attacks.</content>
+  <content contentuid="h24c35108g9035g2b79g9fe7g391ebdccbbc0" version="1">Redirect Damage: Golem</content>
+  <content contentuid="h9a99c08agb333g0eccg9dbfg20a39db6d3a5" version="1">Golem blocks incoming damage taken from weapon attacks.</content>
+  <content contentuid="hc8a54b60g5e13gd340g3578ga6d53f866dc1" version="1">Redirect Damage: Golem</content>
+  <content contentuid="h5881b794g068cg9badg9e64g9feffa6314dd" version="2">Golem blocks half incoming damage taken from weapon attacks.</content>
+  <content contentuid="hfb427636g2d82g6634ge395gf49e12fa4f87" version="1">Redirect Damage: Golem</content>
+  <content contentuid="h0b6fd437gc1e2gdf12gb749ga3402c62514b" version="2">Golem blocks half incoming damage taken from weapon attacks.</content>
+  <content contentuid="hd3306376g0a8egce36g826bg1eb47d67f07f" version="1">Reflect: Carbuncle</content>
+  <content contentuid="hae948e01ga5eag9795g7a79gff6d663e4972" version="1">Reflects magick attacks.</content>
+  <content contentuid="hdfc625c2g0e97g1cc5gc930g9a2ff86b1160" version="1">Reflect: Carbuncle</content>
+  <content contentuid="hd4eb02e2g7239ge6d1g4149g741649600337" version="1">Reflects magick attacks.</content>
+  <content contentuid="hb5a7ed59gb5cag881eg8211g6a2d507963da" version="1">Summon Carbuncle</content>
+  <content contentuid="h8af310bcgd392g7fbcg78aag7b7359c32650" version="2">An esper whose ruby light reflects magicks cast on allies. Summon lasts for 3 rounds.</content>
+  <content contentuid="h5fd2dc77g8ae6gd012gdd55gf62548104acd" version="7">Carbuncle</content>
+  <content contentuid="h41696dcdg34a8g9408gf6dbgbdafe61a77c9" version="1">Summon Bahamut</content>
+  <content contentuid="h6a4c0c80g2da6g640cg8a0age0b60f50cfa3" version="2">An esper that attacks with its fearsome breath. Summon lasts for 3 rounds.</content>
+  <content contentuid="h49182b1fg2e95gbc79gec97ge184b6815321" version="1">Megaflare</content>
+  <content contentuid="h06bb0a9ag631ega5d8g035cge57e66b1065c" version="12">Odin</content>
+  <content contentuid="h89b9649agba0agb301g485cg68c031a89ca9" version="1">Summon Odin</content>
+  <content contentuid="hada35c39ga70eg12e0g1778g801bd7d1fc4e" version="2">An esper that charges through the battlefield doing great damage. Summon lasts for 3 rounds.</content>
+  <content contentuid="h7fd66a12g0b88ge744ge3f9g295b72993a93" version="1">Gungnir</content>
+  <content contentuid="he1b19f8cg1654g87f7g2217gf9190416a107" version="1">Swing your weapon in a large arc.</content>
+  <content contentuid="h95d520a8gf661ge821g24f6gb1b067bc153f" version="1">Allfather</content>
+  <content contentuid="h9499d88ag34c0gdc10g93c7ga40a41d83d72" version="1">Bonus damage when attacking.</content>
+  <content contentuid="hf76f5e59g3424g3d94g5094gd12c5c6f240c" version="4">Leviathan</content>
+  <content contentuid="h7369ad86g27f2g571fg0796g6ada41409abd" version="1">Summon Leviathan</content>
+  <content contentuid="hb02a30ddg5ef2gadbbg2485ga2ec26f2bfab" version="2">An esper that engulfs the battlefield in a water. Summon lasts for 3 rounds.</content>
+  <content contentuid="hdf45eeb6g1259g5aa0gb335g291c0095a770" version="1">Tidal Wave</content>
+  <content contentuid="h4f6807f7gab92g934dgc6a9g7b89f89f54fe" version="4">Salamander</content>
+  <content contentuid="h9e1525fbgcf7cgfdd3gf4e4g913686e6995d" version="1">Summon Salamander</content>
+  <content contentuid="hf405a711gc95cg5f25g30e6ga98db1376e05" version="2">An esper that scorches the battlefield with its savage flames. Summon lasts for 3 rounds.</content>
+  <content contentuid="hf1782b20g1a0fg8596gd716ge0d27b76bd03" version="1">Wyrmfire</content>
+  <content contentuid="h9e657f1dg65b4gaec5gf988g7348f0ba8738" version="6">Sylph</content>
+  <content contentuid="h51eb9f29g9f1cg9647ga594g2a32303f4814" version="1">Summon Sylph</content>
+  <content contentuid="he3dc6aa2g5feege0f3gbe09g639b0ed57cd9" version="2">An esper that employs the lingering life force of windswept leaves to silence enemies. Summon lasts for 3 rounds.</content>
+  <content contentuid="h435ee3ebg340agf4eegf82fg100c40a67ace" version="2">Silence Aura</content>
+  <content contentuid="hadf0704fg6f77gf3f9g24f2gda94de23191c" version="1">Silences enemies within [1].</content>
+  <content contentuid="hdfab3f92g876dgc662g4e74gc7239a63fba4" version="1">Summon Faerie</content>
+  <content contentuid="hb28bb494g7c2dg5d82g923fgc376b213c110" version="2">An esper that restores HP. Summon lasts for 3 rounds.</content>
+  <content contentuid="hd11a8e42g6466g8653geebdge6bd3729a314" version="1">Fey Light</content>
+  <content contentuid="h3dc1accbg7675g472agedebgaff0ef82b0e8" version="8">Faerie</content>
+  <content contentuid="ha757a348gd661gdf16gb1cdg1bb6eca12556" version="5">Lich</content>
+  <content contentuid="h4610a9b7gc69bgde37g45dfg8de1d828488a" version="1">Descending Darkness</content>
+  <content contentuid="h8c0632f6g2e72gb471gdb32gd6c3d26190e1" version="2">Deals 1/8 of current HP in necrotic damage to enemies in range each turn. </content>
+  <content contentuid="h5f6a4f06g80a3gb876gbea2gdd195408c7d8" version="1">Descending Darkness</content>
+  <content contentuid="hcf296eddg6153g91ffge028g4cd3f9c64d31" version="2">Deals necrotic damage equal to 1/8 of current HP each turn.</content>
+  <content contentuid="hcb39dad2g21d0gad0egb4fcg2ee2c2349577" version="1">Summon Lich</content>
+  <content contentuid="h3c01a70cg66d2g90c8g49d2g995029910f61" version="2">An esper born in, of, and to darkness. Deals out devastating dark damage. Summon has a necrotic aura that damages opponents for 1/8 of their current health each turn. Summon lasts for 3 rounds.</content>
+  <content contentuid="hda0c34ebg3ff7g28aagb054g5bd545b114d2" version="7">Cyclops</content>
+  <content contentuid="ha25e46dbg1342g12f4g640ag46754bccc50d" version="1">Summon Cyclops</content>
+  <content contentuid="h08976dceg6142g9e45gbc88g92d24e92bbc7" version="2">An esper whose forceful blows tear the battlefield asunder. Summon lasts for 3 rounds.</content>
+  <content contentuid="h5b16ceccg8e64g12b2ga9b0g13cf60b9a847" version="1">Climactic Fear</content>
+  <content contentuid="h30f4301eg4a5ag7658gddb8g6ad785474b28" version="6">Zodiark</content>
+  <content contentuid="h3118fec7gc654geea0g0575g5c57f085309c" version="1">Darkening Cloud</content>
+  <content contentuid="hcee69d1dgae73g884egb90egd3e1f1f72ba6" version="1">Summon Zodiark</content>
+  <content contentuid="h5b9bf907g15b8gcd31g56b9g2dee1ff24e5d" version="2">An esper that bathes the earth in radiant beams of focused starlight. Summon lasts for 3 rounds.</content>
+  <content contentuid="h46281a5eg10c6g6cedg869ag9836b914efb0" version="1">Critical: Recover MP</content>
+  <content contentuid="h7e173fd6gd8eeg38f1gfbdag22ca06fd2eae" version="1">Restore 25% of max mana pool as a reaction when below 50% of the caster's max HP.</content>
+  <content contentuid="ha62bf340gf19cg5871g65e4gd2df66ee8346" version="1">Reaction: [Critical] Recover MP</content>
+  <content contentuid="hb1f75d99gcebeg19b1g4589g88e981dbcc59" version="1">Recover MP when critically wounded.</content>
+  <content contentuid="h2d6d008agf0e6gd440g5c0fg3c0d8a437013" version="1">Reaction: [Critical] Recover MP</content>
+  <content contentuid="h35f2389bg7ee9g2cf3g8aeeg1157de716d2b" version="1">Recover MP when critically wounded.</content>
+  <content contentuid="h46f33872gf8dbgf1a8g8745g8498a9ea712f" version="1">Witch Hunt</content>
+  <content contentuid="h5fefd6e9g7312g524fge8d5g9bfc681de86c" version="3">A dance whose esoteric drains enemies MP within [1]. Dancing cancels upon your next attack, spell, or dance.</content>
+  <content contentuid="hc59da0a0g91f9g05a1gcfccga0c46f044cff" version="1">Dance: Witch Hunt</content>
+  <content contentuid="hae83b3eega1a2gd104gdbbbgdbfaddb5a2f0" version="1">Drains 6 mana from each enemies in range.</content>
+  <content contentuid="hca5f261ag6698g7260gb558gd96c72944cec" version="1">Dance: Witch Hunt</content>
+  <content contentuid="h101579d0gb2dcg323eg305cgf22ed675ebe7" version="1">Drains 6 mana each turn.</content>
+  <content contentuid="h7785afd5gdc97ga6f5g38c2gf743d88e1076" version="1">Mincing Minuet</content>
+  <content contentuid="hee33bf79g3d4dg6952g5180gb97a3c82ba83" version="2">A dance whose fervent steps damage enemies' HP within [1]. Dancing cancels upon your next attack, spell, or dance.</content>
+  <content contentuid="h99d441dbg225bgb47fgc263g09def8849543" version="1">Dance: Mincing Minuet</content>
+  <content contentuid="h1a46751ag1b04gab3egce05gd43a16d33d2c" version="1">A dance whose fervent steps damage enemies' HP. Dancing cancels upon your next attack, spell, or dance.</content>
+  <content contentuid="hbdc4f855g628dg3348gac4bg8ef9747e8487" version="1">Dance: Mincing Minuet</content>
+  <content contentuid="heb7d4e97gaa86g75aag4e98g9e1506ff38f6" version="1">Deals [1].</content>
+  <content contentuid="h04daa322g5362g9db5g9e5bg5f35d6ba961c" version="1">Slow Dance</content>
+  <content contentuid="h1cbfa868g0b73g17d7g5c71g69d9a2be5a0d" version="2">A dance that attempts to reduce enemies' speed within [1] at a 50% chance. Dancing cancels upon your next attack, spell, or dance.</content>
+  <content contentuid="h87e010e0gbf88ga9ddg8ed1gb7e8510709a2" version="1">Dance: Slow Dance</content>
+  <content contentuid="h7e8ee6c2gf6f8g5c79gb790g4c31266247d4" version="1">A dance with a 50% chance to reduces enemies' speed within [1]. Dancing cancels upon your next attack, spell, or dance.</content>
+  <content contentuid="hbeadd5e6gd752g3802gbb60gb0ba9df206c3" version="1">Dance: Slow Dance</content>
+  <content contentuid="h30c51686g5520g954bgff22gd48026fe358a" version="1">50% chance to be slowed each turn.</content>
+  <content contentuid="hb0e48603ge223g87d9gf336gb1a7130397a4" version="1">Polka</content>
+  <content contentuid="h9198d326g5995gbe0bgbc86g4be63753139d" version="2">A quick, vivacious dance that may enfeeble enemies within [1] at a 50% chance. Dancing cancels upon your next attack, spell, or dance.</content>
+  <content contentuid="he6dd5c58g2fdeg8facg0995gd4c7ae7901f4" version="1">Dance: Polka</content>
+  <content contentuid="hd0832530g9066g3c67g339fg3bbf69b6a421" version="1">A quick, vivacious dance that may enfeeble enemies within [1] at a 50% chance.</content>
+  <content contentuid="hb39a2b1cg1f36g7b78ga08cgdbd3c6af685c" version="1">Dance: Polka</content>
+  <content contentuid="hb8f5dac3g107cg4c65g38d8g6e40b96b1ce5" version="1">50% chance to be enfeebled each turn.</content>
+  <content contentuid="h70471a86g0f80g1e75gbbd7g16bff2c9d6bb" version="1">Heathen Frolick</content>
+  <content contentuid="h5946e2ccg5c6eg2e2eg2101g3681913b12e9" version="1">An exotic dance that clouds the mind, causing Spell Rot to enemies within [1] at a 50% chance. Dancing cancels upon your next attack, spell, or dance.</content>
+  <content contentuid="head0f259g3017g03a2g515cg21dabaca58b0" version="1">Dance: Heathen Frolick</content>
+  <content contentuid="h9756491ag4739gfb86gf311g24edd2c21b30" version="1">An exotic dance that clouds the mind, causing Spell Rot to enemies within [1] at a 50% chance. Dancing cancels upon your next attack, spell, or dance.</content>
+  <content contentuid="h02bf0eaeg5f19gd081g81edg1bbaeeea02b0" version="1">Dance: Heathen Frolick</content>
+  <content contentuid="h0225d36cg4617g9798gff7dg414cc1a162b1" version="1">50% chance to be afflicted by spell rot each turn.</content>
+  <content contentuid="hb478c52dgb939g1dbfg4593g1addfc233988" version="2">Forbidden Dance: Blind</content>
+  <content contentuid="hd8901e52ge7f3g708eg68afgf6b2520ca6ef" version="2">Forbidden Dance: Confuse</content>
+  <content contentuid="h1e52af8ag6763g3419g2810g9eb8b0573aff" version="2">Forbidden Dance: Silence</content>
+  <content contentuid="hc67f7531gd40dgccacgafc5gbda3245c8fcb" version="2">Forbidden Dance: Toad</content>
+  <content contentuid="h3da60adag73acgc7dcga3b5g11b3e49f9ac6" version="2">Forbidden Dance: Poison</content>
+  <content contentuid="hb43b3c97gbd21g4c51g08dcga5b38666d01b" version="2">Forbidden Dance: Slow</content>
+  <content contentuid="hc3b6d1d0gd969g35d9g1233g8c9bfbd19153" version="2">Forbidden Dance: Stop</content>
+  <content contentuid="h4ea84b8fg9be5gdb94g8590gbb1f7025101a" version="2">Forbidden Dance: Sleep</content>
+  <content contentuid="h548277cdg4610ga9c0g5c43gc4d3a5e61e6b" version="1">Dance: Forbidden Dance</content>
+  <content contentuid="h472a3542g522ag54f4gbe1cg096399af6cbc" version="1">50% chance to be blinded, confused, silenced, toad, poisoned, slowed, stopped, or slept.</content>
+  <content contentuid="h623ba8d6g4359gd9a7ge9cfge9e210a0b133" version="1">Dance: Forbidden Dance</content>
+  <content contentuid="h763654d5g57degb4b9g4ccag0ed1e01eaa45" version="1">A mesmerizing dance that inflicts status effects to enemies within [1]. 50% chance to blind, confuse, silence, toad, poison, slow, stop, or sleep opponents.</content>
+  <content contentuid="h7811da45g42e4g8c11g3d00g6509961398df" version="1">Forbidden Dance</content>
+  <content contentuid="h6ad592dag501dg1f4agde9cg53565b7ce966" version="1">A mesmerizing dance that inflicts status effects to enemies within [1]. 50% chance to blind, confuse, silence, toad, poison, slow, stop, or sleep opponents.</content>
+  <content contentuid="hcd73c7dbge6c9gb4b1gd9b0ga78cfb6639d2" version="1">Last Waltz</content>
+  <content contentuid="h91c978cegabc3g26b8g9485gb19fc701babf" version="1">The ultimate dance. 33% chance to stun each enemy within [1].</content>
+  <content contentuid="h3821cf97g37e2g4b73g66b8g057181376e12" version="1">Dance: Last Waltz</content>
+  <content contentuid="h0e52e196gf348g6936gf593g95243ea04a43" version="1">The ultimate dance. 33% chance to stun each enemy within [1].</content>
+  <content contentuid="h4c2e92c9g7effg0c3fg96a5g4d46f467d46c" version="1">Dance: Last Waltz</content>
+  <content contentuid="h8843d145gb3efg3c25ga613ga1429e5d12f7" version="1">33% chance to be stunned every round.</content>
+  <content contentuid="h4f365e37ga407gf8e9gab1cg423503295c9e" version="1">Fury</content>
+  <content contentuid="h0fa953c8gd254ge12bg1e66g5125edacfd01" version="3">Increase weapon attack power by [1] when damaged. Lasts until the next weapon attack or the end of combat.</content>
+  <content contentuid="hcc23ac1ege9fag2b91ga7e1g7933559fe0fa" version="1">Reaction: Fury</content>
+  <content contentuid="h590fd276g4707g3455g33bagb4cfa06a1fcd" version="1">Increase weapon attack power by [1] when damaged. Lasts until the next weapon attack or the end of combat.</content>
+  <content contentuid="hd1b7ead5g6ba9gc11bg1bf2g728a256e67c1" version="1">Fury</content>
+  <content contentuid="hf567c457g3fa8gf804g52c7g370532612a04" version="1">Weapon attack power increased by [1]. Lasts until the next weapon attack or the end of combat.</content>
+  <content contentuid="h1e7928c7g1248gc5e4g0f72g720f5c13906d" version="1">Reaction: Fury</content>
+  <content contentuid="hfeb83309g7cf6gdce8g3b4fgfa88e3a5fdbd" version="1">Increase weapon attack power by [1] when damaged.</content>
+  <content contentuid="h06535c1dgce8cg7723gc1afg0eccc70ded2b" version="1">Seraph Song</content>
+  <content contentuid="h58d57c52ge864g1f4bge96dg4317fa765232" version="2">A song pleading for angelic protection. Restores 20 mana to allies within [1]. Singing cancels upon your next attack, spell, or song.</content>
+  <content contentuid="hfe5707cagba27ge807g0cb6g091a6edb0597" version="1">Life's Anthem</content>
+  <content contentuid="h31e37e4bgd6e2gfd8cg7c59g4838229340ae" version="3">A song praising the vibrance of life. Restores [2] HP to allies within [1]. Singing cancels upon your next attack, spell, or dance.</content>
+  <content contentuid="hb7682cdeg7612g5b34g5d03g8da29de9a6a1" version="1">Rousing Melody</content>
+  <content contentuid="hc817afc8gc641gc5f3g5d31g9477c8ba6ae6" version="2">A song of encouragement and inspiration. Increases allies' dexterity by 2 within [1] at a 50% chance. Singing cancels upon your next attack, spell, or song.</content>
+  <content contentuid="hbf38b778g8084ge03ag03dcge1230348b418" version="1">Battle Chant</content>
+  <content contentuid="he46ca7d7g0a58gb616g5d27g4e6b17e12003" version="3">A gallant song of battles fought and won. Increases weapon damage of allies within [1] by [2] at a 50% chance. Singing cancels upon your next attack, spell, or song.</content>
+  <content contentuid="he504c6e5g3e6bg84ddg2bacgb626edd03a81" version="1">Magical Refrain</content>
+  <content contentuid="h40ca3830gdb8fg07cagbe5agd3d69ec3d0b6" version="2">A song of the laws of sorcery and of the source of magick. Increases magickal power of allies by within [1] by [2] at a 50% chance. Singing cancels upon your next attack, spell, or song.</content>
+  <content contentuid="h0612c4fcg7963g74ecg4235gaef72ff607a6" version="1">Nameless Song</content>
+  <content contentuid="ha6ffebacg5aefgd12cg882ag2c346236e755" version="2">A thoroughly mysterious song passed down through many an age. Randomly applies reraise, regen, protect, shell, or haste to allies within [1] at a 50% chance. Singing cancels upon your next attack, spell, or song.</content>
+  <content contentuid="had681c26gfc5bg657bg3303g6393c42be537" version="1">Finale</content>
+  <content contentuid="hdee76d1egb8ccg0da9g02ebgd2f54f7f3743" version="2">The ultimate song. Applies action surge to allies within [1] with a 50% chance. Singing cancels upon your next attack, spell, or song.</content>
+  <content contentuid="h4ed631e0ga806g4055g9490g8d347ab582bd" version="1">Magic Boost</content>
+  <content contentuid="h892214b0gb5e6ga24cg8f17g3de6a1e623fe" version="2">Increase magic power by [1] when damaged. Lasts until the next spell attack or the end of combat.</content>
+  <content contentuid="hbb180331g5ed5gaa23ga51dgc4b85a631f79" version="1">Song: Seraph Song</content>
+  <content contentuid="hd0475d64g4bedgf248g9961g82357fee3c5f" version="1">A song pleading for angelic protection. Restores 20 mana to allies within [1]. Singing cancels upon your next attack, spell, or song.</content>
+  <content contentuid="h67250276g74acg2904g2d12g734b9e1a6078" version="1">Song: Seraph Song</content>
+  <content contentuid="ha9b6854bg905aga347gcb09g833d5406af99" version="1">Restores 20 MP each turn.</content>
+  <content contentuid="h0b59a9bbg41eag2949g2617gf9fd6c3b1076" version="1">Song: Life's Anthem</content>
+  <content contentuid="hbf08109bga102g1673gce05g3bed7c52923b" version="2">A song praising the vibrance of life. Restores [2] HP to allies within [1]. Singing cancels upon your next attack, spell, or dance.</content>
+  <content contentuid="h58e337dfgfe61gca88g97b0g1bf5d1675b51" version="1">Song: Life's Anthem</content>
+  <content contentuid="hbee93dd5ge4c4g8a70g6847g1294373f21e8" version="2">Restores HP equal to [1] plus caster's spellcasting modifier each turn.</content>
+  <content contentuid="he8a2f60bga889gd53cg1aa0g1bd86a284ab0" version="1">Song: Rousing Melody</content>
+  <content contentuid="h431e8d25gc32fg47e4gc616gbc40307ee058" version="1">A song of encouragement and inspiration. Increases allies' dexterity by 2 within [1] at a 50% chance. Singing cancels upon your next attack, spell, or song.</content>
+  <content contentuid="h1ed376b2g590bgff27g4cf2g14b5e056fc58" version="1">Song: Rousing Melody</content>
+  <content contentuid="h3a05f81fg7f02g3673g7f0ag295c512f0074" version="1">Increases dexterity by 2 at a 50% chance each turn.</content>
+  <content contentuid="hd4dcacbbg4c43ga1fag40bfg612cbcd5cee6" version="1">Song: Battle Chant</content>
+  <content contentuid="hc1ad9864gb76eg2210g1ac2g5b3ec687afe3" version="1">A gallant song of battles fought and won. Increases weapon damage of allies within [1] by [2] at a 50% chance. Singing cancels upon your next attack, spell, or song.</content>
+  <content contentuid="h87edd1a9gf78ag676fg1351gba22a2267f0e" version="1">Song: Battle Chant</content>
+  <content contentuid="h81b62bfdga5cagf70ag4a5fga2ad368daa06" version="1">Increases weapon damage by [1] at a 50% chance each turn.</content>
+  <content contentuid="hb1cf9d4agd576g73a5g68a4g66d00a3fccdc" version="1">Song: Magical Refrain</content>
+  <content contentuid="h09df2573ge959g83c7gb74fg108755502e80" version="1">A song of the laws of sorcery and of the source of magick. Increases magickal power of allies by within [1] by [2] at a 50% chance. Singing cancels upon your next attack, spell, or song.</content>
+  <content contentuid="h3ebec99dg8e20g3bbcg168fg20b0eb19c417" version="1">Song: Magical Refrain</content>
+  <content contentuid="h51454e79g3128g631bg6a24g70de26158ea3" version="2">Increases magickal power by [1] at a 50% chance each turn.</content>
+  <content contentuid="h32cb8ad6g3fe1g0dc3g8c75gd7fde6a9a5dc" version="1">Song: Nameless Song</content>
+  <content contentuid="hb27182eag9ba5geb26g75edgd403b6f8fa8a" version="1">A thoroughly mysterious song passed down through many an age. Randomly applies reraise, regen, protect, shell, or haste to allies within [1] at a 50% chance. Singing cancels upon your next attack, spell, or song.</content>
+  <content contentuid="he9262893g57dfgc0d9g172ag5459402310f5" version="1">Song: Nameless Song</content>
+  <content contentuid="h4a914de4g067fgcda4gb882g27b4d9c13665" version="1">Randomly applies reraise, regen, protect, shell, or haste at a 50% chance each turn.</content>
+  <content contentuid="h77833bfdga99dg1f3fga079gcf7700359779" version="1">Song: Finale</content>
+  <content contentuid="haef56389g08cbg1905g17e6g8b564ca9904d" version="1">The ultimate song. Applies action surge to allies within [1] with a 50% chance. Singing cancels upon your next attack, spell, or song.</content>
+  <content contentuid="h41704b5eg03bfg5082gfe36g311482a73132" version="1">Song: Finale</content>
+  <content contentuid="h97215133g97a4g016cg3d6bg09fb314d56e6" version="1">Applies action surge with a 50% chance.</content>
+  <content contentuid="h60adedf5g9fe3g604fg018agaaa1839cebae" version="1">Magical Refrain</content>
+  <content contentuid="h604ee314gb65cg1154gc299g9668760ee61b" version="1">Increases magickal power by [1].</content>
+  <content contentuid="h98dba96eg2994g974fg67ddg6dd920e761df" version="1">Nameless Song: Reraise</content>
+  <content contentuid="h7ceb4e93g133fg45abg99e1g34895956a6e2" version="1">Nameless Song: Regen</content>
+  <content contentuid="h2671288fg7485g3d81gc93bg1bd87d76de8e" version="1">Nameless Song: Protect</content>
+  <content contentuid="h06d6e20ag3df9gf87dg3507gccaa5c187022" version="1">Nameless Song: Shell</content>
+  <content contentuid="he2290158g171ag99dfg1e7dgc48c97928146" version="1">Nameless Song: Haste</content>
+  <content contentuid="he0b7eba2g1c81g098cgea8ag993d1de8ffa2" version="1">Rousing Melody</content>
+  <content contentuid="h6effe186g3a98g71d5ga9f7gc00dd782fd22" version="1">Increases dexterity by 2.</content>
+  <content contentuid="h4d44c4c6g6c21gb9a8g10b5g577c2ec7be66" version="1">Battle Chant</content>
+  <content contentuid="h62744f12g97c3g9eb0g7afdg14062329a65e" version="1">Increases weapon damage by [1].</content>
+  <content contentuid="h2769f3c1gb427gbfe0gacb6g6c69679f582a" version="1">Magical Refrain</content>
+  <content contentuid="h55df783ag782cg7731g3da4g06de48e5209f" version="1">Increases magickal power by [1].</content>
+  <content contentuid="hc34fd110gc78fg482ege3ccgbfd54f1d6f14" version="1">Reaction: Magic Boost</content>
+  <content contentuid="h59ef7efag201dg75b9g8325gc2f73e2eeac4" version="2">Increase magic power by [1] when damaged. Lasts until the next spell attack or the end of combat.</content>
+  <content contentuid="hf3145e2cgb010g0abbg47b9g251708860a5c" version="1">Magical Refrain</content>
+  <content contentuid="h7233cca8g7225g6058g3fcdga8c9c5488bbb" version="1">Increases magickal power by [1].</content>
+  <content contentuid="h4959c699geae9g046bgaa3bg7274fdc3d0f8" version="1">Reaction: Magic Boost</content>
+  <content contentuid="h0212d45egcf8dg42f9g122bg7923327b3520" version="2">Increase magic power by [1] when damaged. Lasts until the next spell attack or the end of combat.</content>
+  <content contentuid="hd5693b84g0db2g215dg51ceg75d2c93ddaed" version="1">Magic Boost</content>
+  <content contentuid="h821abd84g76e1g7bf2g36b7g13cc407b0ab6" version="2">Increase magic power by [1] when damaged. Lasts until the next spell attack or the end of combat.</content>
+  <content contentuid="h6397c16bgdc91gf81fg6aeeg5f6bc2a610b1" version="1">Heaven's Wrath</content>
+  <content contentuid="h0c551c75ga971g9b0fg8a9cg1380fefbf0d3" version="3">Heaven's Wrath</content>
+  <content contentuid="h3d8eaa62gf1b1g327cge1a7ga2bde87f0da6" version="2">A mantra that attacks with words of enlightenment. Randomly strikes with lightning bolts 5 times within the area of effect.</content>
+  <content contentuid="hdaa92b3agd5d7g7482g4cd0ge9808799b1cc" version="3">Heaven's Wrath</content>
+  <content contentuid="hd3ea51eageccbgc378g9a4ag00567aac76cd" version="1">A mantra that attacks with words of enlightenment. Randomly strikes with 5 lightning bolts within the area of effect.</content>
+  <content contentuid="ha9c2aca9g9151gf564gc296gdba1aab98028" version="1">Ashura</content>
+  <content contentuid="h54fa7f7ag6fe0g6eb7g083eg3bbffe13a4b9" version="1">A mantra that attacks with words of enlightenment. Randomly strikes with lightning bolts 5 times within the area of effect.</content>
+  <content contentuid="h3617e1d6g748dg625cgb28fgd12a9d9da420" version="1">Ashura</content>
+  <content contentuid="hb294d865gbfaeg930dg81cbg81a37e9a2465" version="1">A mantra that attacks with words of enlightenment. Randomly strikes with fire 5 times within the area of effect.</content>
+  <content contentuid="h49705b74g9083g887cg722eg2020c4efec4a" version="1">Adamantine Blade</content>
+  <content contentuid="h804b1bc5g673dg7947g87cdg297bdcd6f165" version="1">A mantra that attacks with words of enlightenment. Randomly strikes with 5 concussive blasts within the area of effect.</content>
+  <content contentuid="h39e95cc0gd23bg5ffeg0e5cg63ae11a02cbf" version="1">Adamantine Blade</content>
+  <content contentuid="h0e4b3cc2g3f1eg307dg2fd3g2993598be574" version="1">A mantra that attacks with words of enlightenment. Randomly strikes with 5 concussive blasts within the area of effect.</content>
+  <content contentuid="h61b7790eg5c39g3203gb9cdg09c824f4cff3" version="1">A mantra that attacks with words of enlightenment. Randomly strikes with lightning bolts 5 times within the area of effect.</content>
+  <content contentuid="ha1914006g5be9gd64dg0ae9g229d4d5b612c" version="1">Maelstrom</content>
+  <content contentuid="ha2fa4182gd151g755bge660gbb212729aab1" version="1">A mantra that attacks with words of enlightenment. Randomly strikes with ice 5 times within the area of effect.</content>
+  <content contentuid="ha4b3691cgdc40g9635gd7b5g7602be80b539" version="1">Maelstrom</content>
+  <content contentuid="h62f45dafgd9c5g2b5cg484eg171665e6aa5f" version="1">A mantra that attacks with words of enlightenment. Randomly strikes with ice 5 times within the area of effect.</content>
+  <content contentuid="h9414ef52ga81fgebebg0eddg147df3b3d434" version="2">Seer: Blind</content>
+  <content contentuid="h0a339837g07beg972dg2da7gac8cc2df2445" version="2">Seer: Confuse</content>
+  <content contentuid="he3467b41gc298gc9c0g157ag127d85972dc3" version="2">Seer: Silence</content>
+  <content contentuid="h47eb3caeg56a3gb920g9d07g7da290a27a90" version="2">Seer: Toad</content>
+  <content contentuid="hde293966g3770gc1ebgbfccg77f207380fe4" version="2">Seer: Poison</content>
+  <content contentuid="ha1116e89gc2e7g9a3ag21efg9b1bcf7c0671" version="2">Seer: Slow</content>
+  <content contentuid="h2b1308a4g64e8g6212g0413geb838a384c3c" version="2">Seer: Sleep</content>
+  <content contentuid="heebe12b7gdfa1g2174gefcfga4b5e758acba" version="1">Celestial Void</content>
+  <content contentuid="h81541e6bgfa68g181dga9b6gb5f2a9f6dd1b" version="1">Celestial Void</content>
+  <content contentuid="h88c70c4ag1037gd24fg7308g4e16810247f1" version="1">A mantra that inflicts status effects with words of enlightenment. Randomly strikes with statuses within the area of effect. Randomly strikes 5 times in the area, potentially causing blind, confuse, silence, toad, poison, slow, or sleep.</content>
+  <content contentuid="h41ea6f56g2e22gf25fg02d8g82916ba3fea2" version="1">A mantra that inflicts status effects with words of enlightenment. Randomly strikes with statuses within the area of effect. Randomly strikes 5 times in the area, potentially causing blind, confuse, silence, toad, poison, slow, or sleep.</content>
+  <content contentuid="hd8f0b7d9g3d06g27bcgfa52gb0333a7644c2" version="1">Divinity</content>
+  <content contentuid="hb136d841gd4ebg3c74g429dgccd9c4bc4bf7" version="1">A mantra that attacks with words of enlightenment. Randomly strikes with radiant damage 5 times within the area of effect.</content>
+  <content contentuid="he6768cfagead3ge46cg3fedga141ce0ba206" version="1">Divinity</content>
+  <content contentuid="h00443522gdde4g0f78g9e95g7c52e6789e6d" version="1">A mantra that attacks with words of enlightenment. Randomly strikes with radiant damage 5 times within the area of effect.</content>
+  <content contentuid="hcad69300g708eg78f4g5a86gd8dad6d7359d" version="1">Hell's Wrath</content>
+  <content contentuid="hbc4eebbfge330g6f23g0c43gc71d94336069" version="1">Hell's Wrath</content>
+  <content contentuid="he7fd4d6eg2cfeg7301g0063g15c36a8c537b" version="1">Nether Ashura</content>
+  <content contentuid="h90414750g124dgd3a4g37e4g71986af46bb9" version="1">Nether Ashura</content>
+  <content contentuid="hb872fad5g7b83gefc4geb0agec348350654b" version="1">Nether Blade</content>
+  <content contentuid="h93e006d4g6773g8599gf7d7gc9f2d9b3e246" version="1">Nether Blade</content>
+  <content contentuid="h744eaa95g927cg68bfg3f21g0c988bd42d9e" version="1">Nether Maelstrom</content>
+  <content contentuid="hbc2b6a73g8d0eg2b8dg57e8g8851e571bb49" version="1">Nether Maelstrom</content>
+  <content contentuid="he3bc26f4gd08cga4e6g1d18g1db52afbd0c5" version="1">Corporeal Void</content>
+  <content contentuid="hd07e9a16g7217gf17dg9a8agbd473ce19c42" version="1">Corporeal Void</content>
+  <content contentuid="hd69514bbgb077g5554gf87egd5a6afec2c88" version="1">Impiety</content>
+  <content contentuid="h97e7f39bgd687g235ege092g5d7bdc77eec3" version="1">A mantra that attacks with words of enlightenment. Randomly strikes with necrotic damage 5 times within the area of effect.</content>
+  <content contentuid="hb185a8afg7ca3g5a32g4315gcd0cde45bc41" version="1">Impiety</content>
+  <content contentuid="hc140276bgeccbg0f03gf2ffgf0d01c6af03c" version="1">A mantra that attacks with words of enlightenment. Randomly strikes with necrotic damage 5 times within the area of effect.</content>
+  <content contentuid="h2a66eca9g3e52gd31bg2b5cg016284927103" version="1">Blind</content>
+  <content contentuid="h831a5cf8g6833g2eabg5f2fg4d5a688ea347" version="1">Syphon</content>
+  <content contentuid="hd220205bg0a19g02c9gbf12g04aa2fa9a48e" version="1">Drain</content>
+  <content contentuid="hb05703d7ge4aeg32fbg30dbg9ca60aa16e65" version="1">Faith</content>
+  <content contentuid="h4d6d451ag6b43g4298gbeb8g78b184acc6cf" version="1">Doubt</content>
+  <content contentuid="h4b7a9ac9g3afcg53d9gfc1dg445d4d826899" version="1">Zombie</content>
+  <content contentuid="h5580108dgf060g38e7ge1afg0f7128b7114b" version="1">Silence</content>
+  <content contentuid="h3e296ba9g27d0gdae3g6788g23c8705adf75" version="1">Berserk</content>
+  <content contentuid="h25abdc4dg09c6g5fbag204ag92a25efa75f0" version="1">Disable</content>
+  <content contentuid="h35cf25b2gacacgd8d3g0914gbfb653e91b6d" version="1">Sleep</content>
+  <content contentuid="h2b99c896g266fg0d7agf448g4bb1e7a2bdb5" version="1">Break</content>
+  <content contentuid="hedfbdc2egad22g78c0g169cga58412c72196" version="1">Vengeance</content>
+  <content contentuid="h01fcf8ffg4cc5gc116g22e0ga65adc00e469" version="2">Inflict radiant damage commensurate with the damage received.  Deals damage equal to amount of HP loss.</content>
+  <content contentuid="h15454ccfg684bg641fg8128gbf8b9b9a5b20" version="1">Unholy Darkness</content>
+  <content contentuid="h8c2fd1b2gccdfg93degbc06g5f5decfaf799" version="1">Magick that inflicts damage by enveloping the target in a pitch-black void.</content>
+  <content contentuid="h9e2a0d8eg3dedg7e99g9178gf5f707bb0197" version="1">Arise 2</content>
+  <content contentuid="hd7a4a9b0gb5b9gb66dg4e74g8b4d60921c76" version="1">White Magick to fetch a warrior from the brink of death. Restores 100% of HP on success. Higher success rate than Arise.</content>
+  <content contentuid="h92199de0gfcc3g51c1g0f3ag9f57dfa2f8b2" version="2">Mana</content>
+  <content contentuid="h0bb2e829g5f4cg0230g5568g4880e84a405d" version="1">Gained 8 max mana.</content>
+  <content contentuid="hf22b155fg2bf9g2db2g3c31g0e723161e1b7" version="2">Mana</content>
+  <content contentuid="hbe0a1198gf8c1ga398g35beg457fb80c9f16" version="1">Gained 12 max mana.</content>
+  <content contentuid="h08af3ebega109g9343g342agce6c15f581e3" version="1">Zombie</content>
+  <content contentuid="h6fc5d87cgfac6g9517gc75cg0684374fc1ef" version="1">Cannot be healed and vulnerable to radiant damage.</content>
+  <content contentuid="ha125818fg4aeag9fb8ga516g4c0fd063b781" version="1">Floating</content>
+  <content contentuid="h9148654eg9243g867bge2c5g18e090a11021" version="2">Mithras Regen test boost</content>
+  <content contentuid="h627a4c20ge0c1gaad6ge1b9ga3a22fd3c9b7" version="2">Mithras test</content>
+  <content contentuid="h252e39eeg095fge5e1gc889g214807284ff2" version="1">Mithras test</content>
+  <content contentuid="hef36b916g8558g9466g581ag55a156b10bfa" version="1">Repeating Fist</content>
+  <content contentuid="h37925ab4g010dge5fbg6a2dg2de3ad394d34" version="2">Deals two unarmed attacks for [1] each. Does not consume mana on a miss. </content>
+  <content contentuid="h04474358g17bcgce04g5101g645fa8e7871e" version="1">Does not consume mana on a miss.</content>
+  <content contentuid="h98694544g7ee4g75c4g3346g38f3618feb9b" version="1">Does not consume mana on a miss.</content>
+</contentList>

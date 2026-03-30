@@ -1,0 +1,4 @@
+new entry "Target_FlockOfFamiliars"
+type "SpellData"
+using "Target_FlockOfFamiliars"
+data "ContainerSpells" "Target_FlockOfFamiliars_Cat;Target_FlockOfFamiliars_Crab;Target_FlockOfFamiliars_Frog;Target_FlockOfFamiliars_Rat;Target_FlockOfFamiliars_Raven;Target_FlockOfFamiliars_Spider"

@@ -1,0 +1,816 @@
+local __util = require 'larian.util'
+
+function StrengthGreaterThan(value, entity)
+    entity = entity or context.Target
+    local errorTrue = {ConditionError("StrengthGreaterThan_True", {ConditionErrorData.MakeFromNumber(value, EErrorDataType.SimpleNumber)})}
+    local errorFalse = {ConditionError("StrengthGreaterThan_False", {ConditionErrorData.MakeFromNumber(1+value, EErrorDataType.SimpleNumber)})}
+    return ConditionResult(entity.Strength > value, errorFalse, errorTrue)
+end
+
+function DexterityGreaterThan(value, entity)
+    entity = entity or context.Target
+    local errorTrue = {ConditionError("DexterityGreaterThan_True", {ConditionErrorData.MakeFromNumber(value, EErrorDataType.SimpleNumber)})}
+    local errorFalse = {ConditionError("DexterityGreaterThan_False", {ConditionErrorData.MakeFromNumber(1+value, EErrorDataType.SimpleNumber)})}
+    return ConditionResult(entity.Dexterity > value, errorFalse, errorTrue)
+end
+
+function ConstitutionGreaterThan(value, entity)
+    entity = entity or context.Target
+    local errorTrue = {ConditionError("ConstitutionGreaterThan_True", {ConditionErrorData.MakeFromNumber(value, EErrorDataType.SimpleNumber)})}
+    local errorFalse = {ConditionError("ConstitutionGreaterThan_False", {ConditionErrorData.MakeFromNumber(1+value, EErrorDataType.SimpleNumber)})}
+    return ConditionResult(entity.Constitution > value, errorFalse, errorTrue)
+end
+
+function WisdomGreaterThan(value, entity)
+    entity = entity or context.Target
+    local errorTrue = {ConditionError("WisdomGreaterThan_True", {ConditionErrorData.MakeFromNumber(value, EErrorDataType.SimpleNumber)})}
+    local errorFalse = {ConditionError("WisdomGreaterThan_False", {ConditionErrorData.MakeFromNumber(1+value, EErrorDataType.SimpleNumber)})}
+    return ConditionResult(entity.Wisdom > value, errorFalse, errorTrue)
+end
+
+function HasProficiencyInAcrobatics()
+	return HasProficiencyBonus(Ability.Dexterity,Skill.Acrobatics,context.Source)
+end
+
+function HasProficiencyInAnimalHandling()
+	return HasProficiencyBonus(Ability.Wisdom,Skill.AnimalHandling,context.Source)
+end
+
+function HasProficiencyInAthletics()
+	return HasProficiencyBonus(Ability.Strength,Skill.Athletics,context.Source)
+end
+
+function HasProficiencyInArcana()
+	return HasProficiencyBonus(Ability.Intelligence,Skill.Arcana,context.Source)
+end
+
+function HasProficiencyInDeception()
+	return HasProficiencyBonus(Ability.Charisma,Skill.Deception,context.Source)
+end
+
+function HasProficiencyInHistory()
+	return HasProficiencyBonus(Ability.Intelligence,Skill.History,context.Source)
+end
+
+function HasProficiencyInInsight()
+	return HasProficiencyBonus(Ability.Wisdom,Skill.Insight,context.Source)
+end
+
+function HasProficiencyInIntimidation()
+	return HasProficiencyBonus(Ability.Charisma,Skill.Intimidation,context.Source)
+end
+
+function HasProficiencyInInvestigation()
+	return HasProficiencyBonus(Ability.Intelligence,Skill.Investigation,context.Source)
+end
+
+function HasProficiencyInMedicine()
+	return HasProficiencyBonus(Ability.Wisdom,Skill.Medicine,context.Source)
+end
+
+function HasProficiencyInNature()
+	return HasProficiencyBonus(Ability.Intelligence,Skill.Nature,context.Source)
+end
+
+function HasProficiencyInPerception()
+	return HasProficiencyBonus(Ability.Wisdom,Skill.Perception,context.Source)
+end
+
+function HasProficiencyInPerformance()
+	return HasProficiencyBonus(Ability.Charisma,Skill.Performance,context.Source)
+end
+
+function HasProficiencyInPersuasion()
+	return HasProficiencyBonus(Ability.Charisma,Skill.Persuasion,context.Source)
+end
+
+function HasProficiencyInReligion()
+	return HasProficiencyBonus(Ability.Intelligence,Skill.Religion,context.Source)
+end
+
+function HasProficiencyInSleightOfHand()
+	return HasProficiencyBonus(Ability.Dexterity,Skill.SleightOfHand,context.Source)
+end
+
+function HasProficiencyInStealth()
+	return HasProficiencyBonus(Ability.Dexterity,Skill.Stealth,context.Source)
+end
+
+function HasProficiencyInSurvival()
+	return HasProficiencyBonus(Ability.Wisdom,Skill.Survival,context.Source)
+end
+
+function HasCurseStatus()
+    return HasStatus('CURSE_ABILITY_CHARISMA',context.Target,context.Source) | HasStatus('CURSE_ABILITY_STRENGTH',context.Target,context.Source) | HasStatus('CURSE_ABILITY_CONSTITUTION',context.Target,context.Source) | HasStatus('CURSE_ABILITY_DEXTERITY',context.Target,context.Source) | HasStatus('CURSE_ABILITY_INTELLIGENCE',context.Target,context.Source) | HasStatus('CURSE_ABILITY_WISDOM',context.Target,context.Source) | HasStatus('CURSE_ATTACK',context.Target,context.Source) | HasStatus('CURSE_ATTACK',context.Target,context.Source) | HasStatus('CURSE_EXTRA_DAMAGE',context.Target,context.Source) | HasStatus('CURSE_SKIP_TURN',context.Target,context.Source)
+end
+
+function ScorchingRay()
+    return SpellId('Projectile_ScorchingRay') | SpellId('Projectile_ScorchingRay_3') | SpellId('Projectile_ScorchingRay_4') | SpellId('Projectile_ScorchingRay_5') | SpellId('Projectile_ScorchingRay_6') | SpellId('Projectile_ScorchingRay_7') | SpellId('Projectile_ScorchingRay_8') | SpellId('Projectile_ScorchingRay_9') | SpellId('Projectile_ScorchingRay_CircletOfBlasting')
+end
+
+function FireSpellExemptions()
+    return SpellId('Projectile_GreenFlameBlade_Free') | SpellId('Projectile_MinuteMeteors_Bonus_I') | SpellId('Projectile_MinuteMeteors_Bonus_II') | SpellId('Projectile_MinuteMeteors_4_Bonus_II') | SpellId('Projectile_MinuteMeteors_5_Bonus_II') | SpellId('Projectile_MinuteMeteors_6_Bonus_II') | SpellId('Projectile_MinuteMeteors_7_Bonus_II') | SpellId('Projectile_MinuteMeteors_8_Bonus_II') | SpellId('Projectile_MinuteMeteors_9_Bonus_II')
+end
+
+function CompanionsBondStatus()
+    return HasStatus('COMPANIONS_BOND_BEAR') | HasStatus('COMPANIONS_BOND_BEAR_2') | HasStatus('COMPANIONS_BOND_BEAR_3') | HasStatus('COMPANIONS_BOND_BEAR_4') | HasStatus('COMPANIONS_BOND_BEAR_5') | HasStatus('COMPANIONS_BOND_BOAR') | HasStatus('COMPANIONS_BOND_BOAR_2') | HasStatus('COMPANIONS_BOND_BOAR_3') | HasStatus('COMPANIONS_BOND_BOAR_4') | HasStatus('COMPANIONS_BOND_BOAR_5') | HasStatus('COMPANIONS_BOND_GIANT_SPIDER') | HasStatus('COMPANIONS_BOND_GIANT_SPIDER_2') | HasStatus('COMPANIONS_BOND_GIANT_SPIDER_3') | HasStatus('COMPANIONS_BOND_GIANT_SPIDER_4') | HasStatus('COMPANIONS_BOND_GIANT_SPIDER_5') | HasStatus('COMPANIONS_BOND_RAVEN') | HasStatus('COMPANIONS_BOND_RAVEN_2') | HasStatus('COMPANIONS_BOND_RAVEN_3') | HasStatus('COMPANIONS_BOND_RAVEN_4') | HasStatus('COMPANIONS_BOND_RAVEN_5') | HasStatus('COMPANIONS_BOND_OWLBEAR_CUB') | HasStatus('COMPANIONS_BOND_OWLBEAR_CUB_2') | HasStatus('COMPANIONS_BOND_OWLBEAR_CUB_3') | HasStatus('COMPANIONS_BOND_OWLBEAR_CUB_4') | HasStatus('COMPANIONS_BOND_OWLBEAR_CUB_5') | HasStatus('COMPANIONS_BOND_WOLF') | HasStatus('COMPANIONS_BOND_WOLF_2') | HasStatus('COMPANIONS_BOND_WOLF_3') | HasStatus('COMPANIONS_BOND_WOLF_4') | HasStatus('COMPANIONS_BOND_WOLF_5')
+end
+
+function MDrow()
+    return Tagged('DROW',context.Source) & Tagged('MALE',context.Source)
+end
+
+function FDrow()
+    return Tagged('DROW',context.Source) & Tagged('FEMALE',context.Source)
+end
+
+function MDwarf()
+    return Tagged('DWARF',context.Source) & Tagged('MALE',context.Source)
+end
+
+function FDwarf()
+    return Tagged('DWARF',context.Source) & Tagged('FEMALE',context.Source)
+end
+
+function MElf()
+    return Tagged('ELF',context.Source) & Tagged('MALE',context.Source)
+end
+
+function FElf()
+    return Tagged('ELF',context.Source) & Tagged('FEMALE',context.Source)
+end
+
+function MGithyanki()
+    return Tagged('GITHYANKI',context.Source) & Tagged('MALE',context.Source)
+end
+
+function FGithyanki()
+    return Tagged('GITHYANKI',context.Source) & Tagged('FEMALE',context.Source)
+end
+
+function MHalfDrow()
+    return Tagged('HALFDROW',context.Source) & Tagged('MALE',context.Source)
+end
+
+function FHalfDrow()
+    return Tagged('HALFDROW',context.Source) & Tagged('FEMALE',context.Source)
+end
+
+function MHalfElf()
+    return Tagged('HALFELF',context.Source) & Tagged('MALE',context.Source)
+end
+
+function FHalfElf()
+    return Tagged('HALFELF',context.Source) & Tagged('FEMALE',context.Source)
+end
+
+function MHalfling()
+    return Tagged('HALFLING',context.Source) & Tagged('MALE',context.Source)
+end
+
+function FHalfling()
+    return Tagged('HALFLING',context.Source) & Tagged('FEMALE',context.Source)
+end
+
+function MHuman()
+    return Tagged('HUMAN',context.Source) & Tagged('MALE',context.Source)
+end
+
+function FHuman()
+    return Tagged('HUMAN',context.Source) & Tagged('FEMALE',context.Source)
+end
+
+function MTiefling()
+    return Tagged('TIEFLING',context.Source) & Tagged('MALE',context.Source)
+end
+
+function FTiefling()
+    return Tagged('TIEFLING',context.Source) & Tagged('FEMALE',context.Source)
+end
+
+function NonVersatile()
+    return (WieldingWeapon('Versatile', false, false, context.Source) & WieldingWeapon('Melee', false, false, context.Source) & HasShieldEquipped(context.Source)) | (WieldingWeapon('Versatile', false, false, context.Source) & WieldingWeapon('Melee', false, false, context.Source) & HasShieldEquipped(context.Source))
+end
+
+function Versatile()
+    return WieldingWeapon('Versatile', false, false, context.Source) & ~WieldingWeapon('Melee', true, false, context.Source) & ~WieldingWeapon('Ammunition', true, false, context.Source) & ~HasShieldEquipped(context.Source)
+end
+
+function NinjaSageSummoner()
+    return HasStatus('SAGE_SUMMONER',context.Source)
+end
+
+function HigherDex()
+    return ConditionResult(GetModifier(context.Source.Dexterity) > GetModifier(context.Source.Strength))
+end
+
+function HigherStr()
+    return ConditionResult(GetModifier(context.Source.Dexterity) <= GetModifier(context.Source.Strength))
+end
+
+function MagicMissileSpellCheck()
+    return SpellId('Projectile_UND_MagicMissile_SocietyOfBrilliance_Amulet') | SpellId('Projectile_MagicMissile') | SpellId('Projectile_MagicMissile_2') | SpellId('Projectile_MagicMissile_3') | SpellId('Projectile_MagicMissile_4') | SpellId('Projectile_MagicMissile_5') | SpellId('Projectile_MagicMissile_6') | SpellId('Projectile_MagicMissile_7') | SpellId('Projectile_MagicMissile_8') | SpellId('Projectile_MagicMissile_9')
+end
+
+function HasTemporaryHPEqual(value, entity)
+    entity = entity or context.Target
+    value = value or 0
+    return ConditionResult(entity.TemporaryHP == value)
+end
+
+function HasTemporaryHPInterrupt(value, entity)
+    entity = entity or context.Observer
+    value = value or 0
+    return ConditionResult(entity.TemporaryHP == value)
+end
+
+function HasTemporaryHPLessThanInterrupt(value, entity)
+    entity = entity or context.Observer
+    value = value or 0
+    return ConditionResult(entity.TemporaryHP > value)
+end
+
+function BaseLevelClericSpells()
+    return SpellId('Target_Bane') | SpellId('Target_Bless') | SpellId('Target_Ceremony') | SpellId('Target_Ceremony_BlessWater') | SpellId('Target_Ceremony_ComingOfAge') | SpellId('Target_Ceremony_Dedication') | SpellId('Target_Command_Container') | SpellId('Target_Command_Halt') | SpellId('Target_Command_Approach') | SpellId('Target_Command_Drop') | SpellId('Target_Command_Flee') | SpellId('Target_Command_Grovel') | SpellId('Target_CreateWater') | SpellId('Target_DestroyWater') | SpellId('Target_CureWounds') | SpellId('Shout_DetectEvilAndGood') | SpellId('Shout_DetectMagic') | SpellId('Projectile_GuidingBolt') | SpellId('Target_HealingWord') | SpellId('Target_InflictWounds') | SpellId('Target_ProtectionFromEvilAndGood') | SpellId('Target_Sanctuary') | SpellId('Target_ShieldOfFaith') | SpellId('Shout_Aid') | SpellId('Target_Blindness') | SpellId('Shout_BorrowedKnowledge') | SpellId('Shout_BorrowedKnowledge_Acrobatics') | SpellId('Shout_BorrowedKnowledge_AnimalHandling') | SpellId('Shout_BorrowedKnowledge_Athletics') | SpellId('Shout_BorrowedKnowledge_Arcana') | SpellId('Shout_BorrowedKnowledge_Deception') | SpellId('Shout_BorrowedKnowledge_History') | SpellId('Shout_BorrowedKnowledge_Insight') | SpellId('Shout_BorrowedKnowledge_Intimidation') | SpellId('Shout_BorrowedKnowledge_Investigation') | SpellId('Shout_BorrowedKnowledge_Medicine') | SpellId('Shout_BorrowedKnowledge_Nature') | SpellId('Shout_BorrowedKnowledge_Perception') | SpellId('Shout_BorrowedKnowledge_Performance') | SpellId('Shout_BorrowedKnowledge_Persuasion') | SpellId('Shout_BorrowedKnowledge_Religion') | SpellId('Shout_BorrowedKnowledge_SleightOfHand') | SpellId('Shout_BorrowedKnowledge_Stealth') | SpellId('Shout_BorrowedKnowledge_Survival') | SpellId('Target_CalmEmotions') | SpellId('Target_EnhanceAbility') | SpellId('Target_EnhanceAbility_BearsEndurance') | SpellId('Target_EnhanceAbility_BullsStrength') | SpellId('Target_EnhanceAbility_CatsGrace') | SpellId('Target_EnhanceAbility_EaglesSplendor') | SpellId('Target_EnhanceAbility_FoxsCunning') | SpellId('Target_EnhanceAbility_OwlsWisdom') | SpellId('Target_HoldPerson') | SpellId('Target_LesserRestoration') | SpellId('Shout_PrayerOfHealing') | SpellId('Target_ProtectionFromPoison') | SpellId('Target_Silence') | SpellId('Target_SpiritualWeapon') | SpellId('Target_WardingBond') | SpellId('Target_AnimateDead') | SpellId('Shout_AuraOfVitality') | SpellId('Shout_BeaconOfHope') | SpellId('Target_BestowCurse') | SpellId('Target_CreateFoodAndWater') | SpellId('Target_Daylight_Container') | SpellId('Target_Daylight') | SpellId('Target_Daylight_Enchantment') | SpellId('Target_FeignDeath') | SpellId('Target_GlyphOfWarding') | SpellId('Target_LifeTransference') | SpellId('Shout_HealingWord_Mass') | SpellId('Target_MotivationalSpeech') | SpellId('Target_ProtectionFromEnergy') | SpellId('Target_RemoveCurse') | SpellId('Teleportation_Revivify') | SpellId('Target_SpeakWithDead') | SpellId('Shout_SpiritGuardians') | SpellId('Shout_WaterWalk') | SpellId('Target_Banishment') | SpellId('Target_DeathWard') | SpellId('Target_FreedomOfMovement') | SpellId('Target_GuardianOfFaith') | SpellId('Target_Contagion') | SpellId('ProjectileStrike_FlameStrike') | SpellId('Target_GreaterRestoration') | SpellId('Target_MassCureWounds') | SpellId('Target_RaiseDead') | SpellId('Target_Regenerate') | SpellId('Target_Resurrection') | SpellId('Target_MassHeal') | SpellId('Target_PowerWordHeal') | SpellId('Target_TrueResurrection') | SpellId('Shout_FalseLife') | SpellId('Projectile_RayOfSickness') | SpellId('Projectile_RayOfEnfeeblement') | SpellId('Shout_VampiricTouch') | SpellId('Target_Blight') | SpellId('Target_Cloudkill') | SpellId('Projectile_Fireball') | SpellId('Zone_Fear') | SpellId('Target_Polymorph') | SpellId('Target_DominatePerson')
+end
+
+function NormalFamiliar()
+    return ~HasPassive('PactOfTheChain',context.Source) & ~HasPassive('Coven_BlackCoven',context.Source) & ~HasPassive('Coven_GreenCoven',context.Source) & ~HasPassive('Coven_WhiteCoven',context.Source) & ~HasPassive('Conve_RedCoven',context.Source)
+end
+
+function HasFamiliarBond()
+    return (HasPassive('Coven_BlackCoven',context.Source) | HasPassive('Coven_GreenCoven',context.Source) | HasPassive('Coven_WhiteCoven',context.Source) | HasPassive('RedCoven',context.Source)) & ConditionResult(context.Source.Level > 2)
+end
+
+function HasHitDice6(entity)
+    entity = entity or context.Target
+    return ClassLevelHigherOrEqualThan(1,'Wizard',entity) | ClassLevelHigherOrEqualThan(1,'Sorcerer',entity) | ClassLevelHigherOrEqualThan(1,'Psion',entity) | ClassLevelHigherOrEqualThan(1,'Occultist',entity) | ClassLevelHigherOrEqualThan(1,'Spellcaster',entity)
+end
+
+function HasHitDice8(entity)
+    entity = entity or context.Target
+    return ClassLevelHigherOrEqualThan(1,'Bard',entity) | ClassLevelHigherOrEqualThan(1,'Cleric',entity) | ClassLevelHigherOrEqualThan(1,'Druid',entity) | ClassLevelHigherOrEqualThan(1,'Rogue',entity) | ClassLevelHigherOrEqualThan(1,'Warlock',entity) | ClassLevelHigherOrEqualThan(1,'Monk',entity) | ClassLevelHigherOrEqualThan(1,'Ninja',entity) | ClassLevelHigherOrEqualThan(1,'Troubadour',entity) | ClassLevelHigherOrEqualThan(1,'Expert',entity) | ClassLevelHigherOrEqualThan(1,'Artificer',entity)
+end
+
+function HasHitDice10(entity)
+    entity = entity or context.Target
+    return ClassLevelHigherOrEqualThan(1,'Fighter',entity) | ClassLevelHigherOrEqualThan(1,'Ranger',entity) | ClassLevelHigherOrEqualThan(1,'DragonKnight',entity) | ClassLevelHigherOrEqualThan(1,'Paladin',entity) | ClassLevelHigherOrEqualThan(1,'Warrior',entity)
+end
+
+function HasHitDice12(entity)
+    entity = entity or context.Target
+    return ClassLevelHigherOrEqualThan(1,'Barbarian',entity)
+end
+
+function NoClassHitDice(entity)
+    entity = entity or context.Target
+    return ~(HasHitDice6(entity) | HasHitDice8(entity) | HasHitDice10(entity) | HasHitDice12(entity))
+end
+
+function UpToHitDie6()
+    return HasHitDice6(context.Target) & ~(HasHitDice8(context.Target) | HasHitDice10(context.Target) | HasHitDice12(context.Target))
+end
+
+function UpToHitDie8()
+    return (HasHitDice8(context.Target) & ~(HasHitDice6(context.Target) | HasHitDice10(context.Target) | HasHitDice12(context.Target)))
+	| (HasHitDice8(context.Target) & HasHitDice6(context.Target) & ~(HasHitDice10(context.Target) | HasHitDice12(context.Target)))
+	| (NoClassHitDice(context.Target))
+end
+
+function UpToHitDie10()
+    return (HasHitDice10(context.Target) & ~(HasHitDice6(context.Target) | HasHitDice8(context.Target) | HasHitDice12(context.Target)))
+	| (HasHitDice10(context.Target) & HasHitDice(8) & ~(HasHitDice6(context.Target) | HasHitDice12(context.Target))) 
+	| (HasHitDice10(context.Target) & HasHitDice6(context.Target) & ~(HasHitDice8(context.Target) | HasHitDice12(context.Target)))
+	| (HasHitDice10(context.Target) & HasHitDice6(context.Target) & HasHitDice8(context.Target) & ~HasHitDice12(context.Target))
+end
+
+function UpToHitDie12()
+    return (HasHitDice12(context.Target) & ~(HasHitDice6(context.Target) | HasHitDice8(context.Target) | HasHitDice10(context.Target))) 
+	| (HasHitDice12(context.Target) & HasHitDice6(context.Target) & ~(HasHitDice8(context.Target) | HasHitDice10(context.Target))) 
+	| (HasHitDice12(context.Target) & HasHitDice8(context.Target) & ~(HasHitDice6(context.Target) | HasHitDice10(context.Target))) 
+	| (HasHitDice12(context.Target) & HasHitDice10(context.Target) & ~(HasHitDice6(context.Target) | HasHitDice8(context.Target))) 
+	| (HasHitDice12(context.Target) & HasHitDice6(context.Target) & HasHitDice8(context.Target) & ~HasHitDice10(context.Target)) 
+	| (HasHitDice12(context.Target) & HasHitDice8(context.Target) & HasHitDice10(context.Target) & ~HasHitDice6(context.Target)) 
+	| (HasHitDice12(context.Target) & HasHitDice6(context.Target) & HasHitDice10(context.Target) & ~HasHitDice8(context.Target)) 
+	| (HasHitDice12(context.Target) & HasHitDice10(context.Target) & HasHitDice8(context.Target) & HasHitDice6(context.Target))
+end
+
+function HasDurable()
+    entity = entity or context.Source
+    return HasPassive('Durable',entity)
+end
+
+function HasRAWMod()
+    entity = entity or context.Source
+    return HasPassive('RAW_OnTurnTracker',entity)
+end
+
+function HasHitDice()
+    return HasStatus('RAW_HIT_DICE_6_LEFT_0',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_1',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_2',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_3',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_4',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_5',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_6',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_7',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_8',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_9',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_10',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_11',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_12',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_13',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_14',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_15',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_16',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_17',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_18',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_19',context.Source) | HasStatus('RAW_HIT_DICE_6_LEFT_20',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_0',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_1',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_2',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_3',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_4',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_5',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_6',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_7',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_8',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_9',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_10',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_11',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_12',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_13',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_14',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_15',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_16',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_17',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_18',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_19',context.Source) | HasStatus('RAW_HIT_DICE_8_LEFT_20',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_0',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_1',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_2',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_3',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_4',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_5',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_6',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_7',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_8',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_9',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_10',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_11',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_12',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_13',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_14',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_15',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_16',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_17',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_18',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_19',context.Source) | HasStatus('RAW_HIT_DICE_10_LEFT_20',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_0',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_1',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_2',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_3',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_4',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_5',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_6',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_7',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_8',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_9',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_10',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_11',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_12',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_13',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_14',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_15',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_16',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_17',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_18',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_19',context.Source) | HasStatus('RAW_HIT_DICE_12_LEFT_20',context.Source)
+end
+
+function HasHitDiceRAW6(entity)
+    entity = entity or context.Source
+    return HasStatus('RAW_HIT_DICE_6_LEFT_1',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_2',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_3',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_4',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_5',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_6',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_7',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_8',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_9',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_10',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_11',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_12',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_13',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_14',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_15',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_16',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_17',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_18',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_19',entity) | HasStatus('RAW_HIT_DICE_6_LEFT_20',entity)
+end
+
+function HasHitDiceRAW8(entity)
+    entity = entity or context.Source
+    return HasStatus('RAW_HIT_DICE_8_LEFT_1',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_2',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_3',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_4',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_5',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_6',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_7',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_8',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_9',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_10',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_11',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_12',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_13',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_14',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_15',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_16',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_17',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_18',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_19',entity) | HasStatus('RAW_HIT_DICE_8_LEFT_20',entity)
+end
+
+function HasHitDiceRAW10(entity)
+    entity = entity or context.Source
+    return HasStatus('RAW_HIT_DICE_10_LEFT_1',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_2',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_3',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_4',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_5',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_6',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_7',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_8',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_9',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_10',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_11',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_12',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_13',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_14',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_15',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_16',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_17',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_18',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_19',entity) | HasStatus('RAW_HIT_DICE_10_LEFT_20',entity)
+end
+
+function HasHitDiceRAW12(entity)
+    entity = entity or context.Source
+    return HasStatus('RAW_HIT_DICE_12_LEFT_1',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_2',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_3',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_4',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_5',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_6',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_7',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_8',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_9',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_10',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_11',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_12',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_13',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_14',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_15',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_16',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_17',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_18',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_19',entity) | HasStatus('RAW_HIT_DICE_12_LEFT_20',entity)
+end
+
+function LevelGreater(value, entity)
+    entity = entity or context.Source
+    return ConditionResult(entity.Level > value, {ConditionError("IsNotLevelGreater")})
+end
+
+function LevelLess(value, entity)
+    entity = entity or context.Source
+    return ConditionResult(entity.Level < value)
+end
+
+function HasMediumArmor(entity)
+    entity = entity or context.Target
+    local armor = GetActiveArmor(entity)
+    local hasMediumArmor = armor.ArmorType == ArmorType.Hide or armor.ArmorType == ArmorType.ChainShirt or armor.ArmorType == ArmorType.ScaleMail or armor.ArmorType == ArmorType.BreastPlate or armor.ArmorType == ArmorType.HalfPlate
+    return ConditionResult(hasMediumArmor)
+end
+
+function HasIceWeaponEquipped(target)
+    local entity = entity or context.Target
+    local items = GetItemsInInventory(target)
+    if items ~= nil then
+        for _, entity in ipairs(items.Items) do
+            if HasStatus('ICE_WEAPON', GetActiveWeapon(context.Target, true)).Result and IsEquipped(entity).Result then
+                return ConditionResult(true)
+            end
+        end
+    end
+
+    return ConditionResult(false)
+end
+
+function RequiresDunamancyTag(entity)
+    entity = entity or context.Source
+    result = ~Tagged('WIZARD_DUNAMANCY',entity)
+    return ConditionResult(result.Result,{ConditionError("RequiresDunamancyTag")})
+end
+
+function IsIntelligenceSkillCheck()
+    return (IsSkillChecked(Skill.Arcana) | IsSkillChecked(Skill.History) | IsSkillChecked(Skill.Investigation) | IsSkillChecked(Skill.Nature) | IsSkillChecked(Skill.Religion) | IsSkillChecked(Skill.SleightOfHand))
+end
+
+function IsWisdomSkillCheck()
+    return (IsSkillChecked(Skill.AnimalHandling) | IsSkillChecked(Skill.Medicine) | IsSkillChecked(Skill.Perception) | IsSkillChecked(Skill.Survival))
+end
+
+function IsIntelligenceOrWisdomCheck()
+    return (IsAbilityChecked(Ability.Intelligence) | IsAbilityChecked(Ability.Wisdom))
+end
+
+function IsConcentrationSavingThrow()
+    return (IsConcentrating(context.Source) & HasSavingThrowWithAbility(Constitution))
+end
+
+function CharacterLevel(value, entity)
+    entity = entity or context.Source
+    return ConditionResult(entity.Level == value)
+end
+
+function WisdomModifier(value, entity)
+    entity = entity or context.Source
+    return ConditionResult(GetModifier(entity.Wisdom) == value)
+end
+
+function WhiteCoven()
+    return HasPassive('Coven_WhiteCoven',context.Source)
+end
+
+function Level1SpellSlot(entity)
+    entity = entity or context.Source
+    result = HasActionResource('SpellSlot', 1, 1, false, entity)
+    return ConditionResult(result.Result,{ConditionError("No1stLevelSpellSlot")})
+end
+
+function Level2SpellSlot(entity)
+    entity = entity or context.Source
+    result = HasActionResource('SpellSlot', 1, 2, false, entity)
+    return ConditionResult(result.Result,{ConditionError("No2ndLevelSpellSlot")})
+end
+
+function Level3SpellSlot(entity)
+    entity = entity or context.Source
+    result = HasActionResource('SpellSlot', 1, 3, false, entity)
+    return ConditionResult(result.Result,{ConditionError("No3rdLevelSpellSlot")})
+end
+
+function Level4SpellSlot(entity)
+    entity = entity or context.Source
+    result = HasActionResource('SpellSlot', 1, 4, false, entity)
+    return ConditionResult(result.Result,{ConditionError("No4thLevelSpellSlot")})
+end
+
+function Level5SpellSlot(entity)
+    entity = entity or context.Source
+    result = HasActionResource('SpellSlot', 1, 5, false, entity)
+    return ConditionResult(result.Result,{ConditionError("No5thLevelSpellSlot")})
+end
+
+function Level6SpellSlot(entity)
+    entity = entity or context.Source
+    result = HasActionResource('SpellSlot', 1, 6, false, entity)
+    return ConditionResult(result.Result,{ConditionError("No6thLevelSpellSlot")})
+end
+
+function Level7SpellSlot(entity)
+    entity = entity or context.Source
+    result = HasActionResource('SpellSlot', 1, 7, false, entity)
+    return ConditionResult(result.Result,{ConditionError("No7thLevelSpellSlot")})
+end
+
+function Level8SpellSlot(entity)
+    entity = entity or context.Source
+    result = HasActionResource('SpellSlot', 1, 8, false, entity)
+    return ConditionResult(result.Result,{ConditionError("No8thLevelSpellSlot")})
+end
+
+function Level9SpellSlot(entity)
+    entity = entity or context.Source
+    result = HasActionResource('SpellSlot', 1, 9, false, entity)
+    return ConditionResult(result.Result,{ConditionError("No9thLevelSpellSlot")})
+end
+
+function FamiliarTempHP()
+    return HasStatus('WHITE_COVEN_TEMPHP') | HasStatus('WHITE_COVEN_TEMPHP_2') | HasStatus('WHITE_COVEN_TEMPHP_3') | HasStatus('WHITE_COVEN_TEMPHP_4') | HasStatus('WHITE_COVEN_TEMPHP_5') | HasStatus('WHITE_COVEN_TEMPHP_6') | HasStatus('WHITE_COVEN_TEMPHP_7') | HasStatus('WHITE_COVEN_TEMPHP_8') | HasStatus('WHITE_COVEN_TEMPHP_9') | HasStatus('WHITE_COVEN_TEMPHP_10') | HasStatus('WHITE_COVEN_TEMPHP_11') | HasStatus('WHITE_COVEN_TEMPHP_12') | HasStatus('WHITE_COVEN_TEMPHP_13') | HasStatus('WHITE_COVEN_TEMPHP_14') | HasStatus('WHITE_COVEN_TEMPHP_15') | HasStatus('WHITE_COVEN_TEMPHP_16') | HasStatus('WHITE_COVEN_TEMPHP_17') | HasStatus('WHITE_COVEN_TEMPHP_18') | HasStatus('WHITE_COVEN_TEMPHP_19') | HasStatus('WHITE_COVEN_TEMPHP_20') | HasStatus('WHITE_COVEN_TEMPHP_21') | HasStatus('WHITE_COVEN_TEMPHP_22') | HasStatus('WHITE_COVEN_TEMPHP_23') | HasStatus('WHITE_COVEN_TEMPHP_24') | HasStatus('WHITE_COVEN_TEMPHP_25') | HasStatus('WHITE_COVEN_TEMPHP_26') | HasStatus('WHITE_COVEN_TEMPHP_27') | HasStatus('WHITE_COVEN_TEMPHP_28') | HasStatus('WHITE_COVEN_TEMPHP_29') | HasStatus('WHITE_COVEN_TEMPHP_30') | HasStatus('WHITE_COVEN_TEMPHP_31') | HasStatus('WHITE_COVEN_TEMPHP_32') | HasStatus('WHITE_COVEN_TEMPHP_33') | HasStatus('WHITE_COVEN_TEMPHP_34') | HasStatus('WHITE_COVEN_TEMPHP_35') | HasStatus('WHITE_COVEN_TEMPHP_36') | HasStatus('WHITE_COVEN_TEMPHP_37') | HasStatus('WHITE_COVEN_TEMPHP_38') | HasStatus('WHITE_COVEN_TEMPHP_39') | HasStatus('WHITE_COVEN_TEMPHP_40') | HasStatus('WHITE_COVEN_TEMPHP_41') | HasStatus('WHITE_COVEN_TEMPHP_42') | HasStatus('WHITE_COVEN_TEMPHP_43') | HasStatus('WHITE_COVEN_TEMPHP_44') | HasStatus('WHITE_COVEN_TEMPHP_45')
+end
+
+function NonTwoHandedWeapon(entity)
+    entity = entity or context.Target
+    result = Character(entity) & ~WieldingWeapon('Twohanded', false, false, entity)
+    return ConditionResult(result.Result, {ConditionError("TwoHandedWeapon")})
+end
+
+function MindOverMatterStrength()
+    return HasStatus('MIND_OVER_MATTER_STRENGTH',context.Source)
+end
+
+function MindOverMatterDexterity()
+    return HasStatus('MIND_OVER_MATTER_DEXTERITY',context.Source)
+end
+
+function MindOverMatterConstitution()
+    return HasStatus('MIND_OVER_MATTER_CONSTITUTION',context.Source)
+end
+
+function SpellAutoResolveOnUndead(ability, dc, result)
+    result = result or false
+    undead = Tagged('UNDEAD')
+    if not undead.Result then
+        st = ~SavingThrow(ability, dc)
+        return ConditionResult(st.Result,{},{},st.Chance)
+    end
+    return ConditionResult(result)
+end
+
+function HasGoldForCeremony(entity)
+    entity = entity or context.Source
+    result = HasStatus('CEREMONY_GOLD_COST',entity)
+    return ConditionResult(result.Result,{ConditionError("NotHasGoldForCeremony")})
+end
+
+function NoChaosBolt()
+    return ~HasAnyStatus({'CHAOS_BOLT_ACID','CHAOS_BOLT_COLD','CHAOS_BOLT_FIRE','CHAOS_BOLT_FORCE','CHAOS_BOLT_LIGHTNING','CHAOS_BOLT_POISON','CHAOS_BOLT_PSYCHIC','CHAOS_BOLT_THUNDER'},{},{},context.Target)
+end
+
+function SCAGtrips()
+	return Attack(AttackType.MeleeWeaponAttack)
+end
+
+function S5E_IsInvisibleSeen(entity)
+    local entity = entity or context.Target
+    return HasStatus('INVISIBLE_SEEN',entity) 
+        |  HasStatus('INVISIBLE_MAGEHAND_SEEN',entity) 
+        |  HasStatus('INVISIBILITY_SEEN',entity) 
+        |  HasStatus('ONE_WITH_SHADOWS_SEEN',entity) 
+        |  HasStatus('POTION_OF_INVISIBILITY_SEEN',entity) 
+        |  HasStatus('CLOAK_OF_SHADOWS_SEEN',entity) 
+        |  HasStatus('CLOAK_OF_SHADOWS_MONK_SEEN',entity) 
+        |  HasStatus('UMBRAL_CLOAK_SEEN',entity) 
+        |  HasStatus('GREATER_INVISIBILITY_SEEN',entity) 
+        |  HasStatus('SHADOWBLEND_SEEN',entity) 
+        |  HasStatus('INVISIBILITY_SHADARKAI_GLOOMWEAVER_SEEN',entity) 
+        |  HasStatus('HIDE_IN_PLAIN_SIGHT_SEEN',entity) 
+        |  HasStatus('MISTY_ESCAPE_INVISIBLE_SEEN',entity) 
+        |  HasStatus('INVISIBILITY_PANTHER_SEEN',entity) 
+        |  HasStatus('SHROUD_SELF_SEEN',entity) 
+        |  HasStatus('SUPREME_SNEAK_SEEN',entity) 
+        |  HasStatus('MAG_INVISIBLE_WEAPON_SEEN',entity) 
+        |  HasStatus('LOW_POLTERGEIST_INVISIBLE_SEEN',entity)
+end
+
+function S5E_RangedWeaponAttackSpellCheck()
+    return (HasStringInSpellRoll('AttackType.RangedWeaponAttack') | SpellId('Projectile_ArrowOfSmokepowder')) & ~(SpellId('Projectile_EnsnaringStrike') | SpellId('Projectile_EnsnaringStrike_2') | SpellId('Projectile_EnsnaringStrike_3') | SpellId('Projectile_EnsnaringStrike_4') | SpellId('Projectile_EnsnaringStrike_5') | SpellId('Projectile_EnsnaringStrike_6') | SpellId('Projectile_EnsnaringStrike_7') | SpellId('Projectile_EnsnaringStrike_8') | SpellId('Projectile_EnsnaringStrike_9') | SpellId('Projectile_EnsnaringStrike_Container'))
+end
+
+function S5E_RangedWeaponAttackCheck()
+    return S5E_RangedWeaponAttackSpellCheck() & HasUseCosts('ActionPoint',false)
+end
+
+function IsLastAttackRollSuccess()
+    local isSavingThrow = IsAttack()
+    if isAttack then
+        return IsLastConditionRollSuccess(ConditionRollType.ConditionAttack)
+    end
+    return ConditionResult(false)
+end
+
+function MagicCircleFoe(entity)
+    entity = entity or context.Target
+    return Tagged('ELEMENTAL', entity) | Tagged('FEY', entity) | Tagged('FIEND', entity) | Tagged('CELESTIAL', entity) | Tagged('UNDEAD', entity)
+end
+
+function NotDeadLongerThanAMinute(entity)
+    entity = entity or context.Target
+    result = ~HasStatus('DEAD_ONE_MINUTE',entity)
+    return ConditionResult(result.Result,{ConditionError("DeadLongerThanAMinute")})
+end
+
+function BoomingBladeSpellCheck()
+    return (SpellId('Target_BoomingBlade') | SpellId('Target_BoomingBlade_Default') | SpellId('Target_BoomingBlade_SneakAttack') | SpellId('Target_BoomingBlade_DivineStrike_Life') | SpellId('Target_BoomingBlade_DivineStrike_Cold') | SpellId('Target_BoomingBlade_DivineStrike_Fire') | SpellId('Target_BoomingBlade_DivineStrike_Lightning') | SpellId('Target_BoomingBlade_DivineStrike_Thunder') | SpellId('Target_BoomingBlade_DivineStrike_Poison') | SpellId('Target_BoomingBlade_DivineStrike_MeleeWeapon') | SpellId('Target_BoomingBlade_DivineStrike_Necrotic') | SpellId('Target_BoomingBlade_DivineStrike_Psychic'))
+end
+
+function GreenFlameBladeSpellCheck()
+    return (SpellId('Target_GreenFlameBlade') | SpellId('Target_GreenFlameBlade_Default') | SpellId('Target_GreenFlameBlade_SneakAttack') | SpellId('Target_GreenFlameBlade_DivineStrike_Life') | SpellId('Target_GreenFlameBlade_DivineStrike_Cold') | SpellId('Target_GreenFlameBlade_DivineStrike_Fire') | SpellId('Target_GreenFlameBlade_DivineStrike_Lightning') | SpellId('Target_GreenFlameBlade_DivineStrike_Thunder') | SpellId('Target_GreenFlameBlade_DivineStrike_Poison') | SpellId('Target_GreenFlameBlade_DivineStrike_MeleeWeapon') | SpellId('Target_GreenFlameBlade_DivineStrike_Necrotic') | SpellId('Target_GreenFlameBlade_DivineStrike_Psychic'))
+end
+
+function IsHumanM(entity)
+	local entity = entity or context.Source
+	return Tagged('HUMAN',entity) & Tagged('MALE',entity)
+end
+
+function IsElfM(entity)
+	local entity = entity or context.Source
+	return Tagged('ELF',entity) & Tagged('MALE',entity)
+end
+
+function IsDrowM(entity)
+	local entity = entity or context.Source
+	return Tagged('DROWELF',entity) & Tagged('MALE',entity)
+end
+
+function IsDwarfM(entity)
+	local entity = entity or context.Source
+	return Tagged('DWARF',entity) & Tagged('MALE',entity)
+end
+
+function IsHalfElfM(entity)
+	local entity = entity or context.Source
+	return Tagged('HALFELF',entity) & Tagged('MALE',entity)
+end
+
+function IsGnomeM(entity)
+	local entity = entity or context.Source
+	return Tagged('GNOME',entity) & Tagged('MALE',entity)
+end
+
+function IsHalflingM(entity)
+	local entity = entity or context.Source
+	return Tagged('HALFLING',entity) & Tagged('MALE',entity)
+end
+
+function IsTieflingM(entity)
+	local entity = entity or context.Source
+	return Tagged('TIEFLING',entity) & Tagged('MALE',entity)
+end
+
+function IsGithyankiM(entity)
+	local entity = entity or context.Source
+	return Tagged('GITHYANKI',entity) & Tagged('MALE',entity)
+end
+
+function IsDragonbornM(entity)
+	local entity = entity or context.Source
+	return Tagged('DRAGONBORN',entity) & Tagged('MALE',entity)
+end
+
+function IsHalfOrcM(entity)
+	local entity = entity or context.Source
+	return Tagged('HALFORC',entity) & Tagged('MALE',entity)
+end
+
+function IsHumanF(entity)
+	local entity = entity or context.Source
+	return Tagged('HUMAN',entity) & Tagged('FEMALE',entity)
+end
+
+function IsElfF(entity)
+	local entity = entity or context.Source
+	return Tagged('ELF',entity) & Tagged('FEMALE',entity)
+end
+
+function IsDrowF(entity)
+	local entity = entity or context.Source
+	return Tagged('DROWELF',entity) & Tagged('FEMALE',entity)
+end
+
+function IsDwarfF(entity)
+	local entity = entity or context.Source
+	return Tagged('DWARF',entity) & Tagged('FEMALE',entity)
+end
+
+function IsHalfElfF(entity)
+	local entity = entity or context.Source
+	return Tagged('HALFELF',entity) & Tagged('FEMALE',entity)
+end
+
+function IsGnomeF(entity)
+	local entity = entity or context.Source
+	return Tagged('GNOME',entity) & Tagged('FEMALE',entity)
+end
+
+function IsHalflingF(entity)
+	local entity = entity or context.Source
+	return Tagged('HALFLING',entity) & Tagged('FEMALE',entity)
+end
+
+function IsTieflingF(entity)
+	local entity = entity or context.Source
+	return Tagged('TIEFLING',entity) & Tagged('FEMALE',entity)
+end
+
+function IsGithyankiF(entity)
+	local entity = entity or context.Source
+	return Tagged('GITHYANKI',entity) & Tagged('FEMALE',entity)
+end
+
+function IsDragonbornF(entity)
+	local entity = entity or context.Source
+	return Tagged('DRAGONBORN',entity) & Tagged('FEMALE',entity)
+end
+
+function IsHalfOrcF(entity)
+	local entity = entity or context.Source
+	return Tagged('HALFORC',entity) & Tagged('FEMALE',entity)
+end
+
+function IsCircleofPowerInterruptInteresting()
+    local rollSuccess = false
+    if context.InterruptedRoll.RollCritical == RollCritical.None then
+        rollSuccess = context.InterruptedRoll.Total >= context.InterruptedRoll.Difficulty
+    else
+        rollSuccess = context.InterruptedRoll.RollCritical == RollCritical.Success
+    end
+    
+	return ConditionResult(rollSuccess)
+end
+
+function RitualSpellsInCombat(entity)
+    entity = entity or context.Source
+    result = ~(Combat(entity) & HasStatus('S5E_RITUAL_CASTING',entity))
+    return ConditionResult(result.Result,{ConditionError("RitualSpellsNotInCombat")})
+end
+
+function RitualSpells()
+    return (SpellId('Shout_DetectMagic') & (ClassLevelHigherOrEqualThan(2,'Artificer') | ClassLevelHigherOrEqualThan(1,'Bard') | ClassLevelHigherOrEqualThan(1,'Cleric') | ClassLevelHigherOrEqualThan(1,'Druid')))
+	|  (SpellId('Target_UnseenServant') & ClassLevelHigherOrEqualThan(1,'Bard'))
+	|  ((SpellId('Target_Ceremony') | SpellId('Target_Ceremony_BlessWater') | SpellId('Target_Ceremony_ComingOfAge') | SpellId('Target_Ceremony_Dedication')) & ClassLevelHigherOrEqualThan(1,'Cleric'))
+	|  (SpellId('Shout_WaterWalk') & (ClassLevelHigherOrEqualThan(9,'Artificer') | ClassLevelHigherOrEqualThan(5,'Cleric') | ClassLevelHigherOrEqualThan(5,'Druid')))
+	|  (SpellId('Shout_CommuneWithNature') & ClassLevelHigherOrEqualThan(9,'Druid'))
+	|  (SpellId('Shout_SpeakWithAnimals') & (ClassLevelHigherOrEqualThan(1,'Druid') | ClassLevelHigherOrEqualThan(1,'Bard')))
+	|  (SpellId('Target_Silence') & ClassLevelHigherOrEqualThan(3,'Cleric'))
+	|  (SpellId('Target_FeignDeath') & (ClassLevelHigherOrEqualThan(5,'Druid') | ClassLevelHigherOrEqualThan(5,'Bard') | ClassLevelHigherOrEqualThan(5,'Cleric')))
+	|  SpellId('Target_GentleRepose') & ClassLevelHigherOrEqualThan(3,'Cleric')
+end
+
+function WarlockLearnRitualSpells()
+    return HasPassive('PactOfTheTome',context.Source) and HasPassive('BookOfAncientSecrets',context.Source)
+end
+
+function NotGentleReposed(entity)
+    entity = entity or context.Target
+    result = ~HasStatus('GENTLE_REPOSE',entity)
+    return ConditionResult(result.Result,{ConditionError("GentleReposed")})
+end
+
+function HasMagicWeaponInInventory(target)
+    local entity = entity or context.Target
+    local items = GetItemsInInventory(target)
+    if items ~= nil then
+        for _, entity in ipairs(items.Items) do
+            if HasWeaponProperty(WeaponProperties.Magical, entity).Result then
+                return ConditionResult(true)
+            end
+        end
+    end
+
+    return ConditionResult(false)
+end
+
+function HasMagicItemInInventory(target)
+    target = target or context.Target
+    local items = GetItemsInInventory(target)
+    if items ~= nil then
+        for _, item in ipairs(items.Items) do
+            if  Tagged('ORI_GALE_CONSUMABLEARTEFACT', item).Result
+            or  Tagged('POTION', item).Result
+            or  Tagged('HEALING_POTION', item).Result
+            or  Tagged('ALCH_SOLUTION_POTION', item).Result
+            or  Tagged('SCROLL', item).Result
+            or  Tagged('ACT3_LOW_TRESSYMTRADE_MAGICITEM', item).Result
+            then
+                return ConditionResult(true)
+            end
+        end
+    end
+    return ConditionResult(false)
+end
+
+function HasMagicalItemInInventoryInContainer(target)
+    local entity = entity or context.Target
+    local items = GetItemsInInventory(target)
+    if items ~= nil then
+        for _, entity in ipairs(items.Items) do
+            if HasStatus('DETECTED_MAGIC_ITEM_INVENTORY', entity).Result then
+                return ConditionResult(true)
+            end
+        end
+    end
+
+    return ConditionResult(false)
+end
+
+function IsMagicItem()
+    return Tagged('ORI_GALE_CONSUMABLEARTEFACT') | Tagged('POTION') | Tagged('HEALING_POTION') | Tagged('ALCH_SOLUTION_POTION') | Tagged('SCROLL') | Tagged('ACT3_LOW_TRESSYMTRADE_MAGICITEM')
+end
+
+function IsIntelligenceCaster(entity)
+    local entity = entity or context.Source
+    local ability = context.PreferredCastingAbility
+    return ConditionResult(
+        ability == Ability.Intelligence 
+    )
+end
+
+function IsWisdomCaster(entity)
+    local entity = entity or context.Source
+    local ability = context.PreferredCastingAbility
+    return ConditionResult(
+        ability == Ability.Wisdom 
+    )
+end
+
+function IsCharismaCaster(entity)
+    local entity = entity or context.Source
+    local ability = context.PreferredCastingAbility
+    return ConditionResult(
+        ability == Ability.Charisma 
+    )
+end
+
+function HasDragonsBreathStatus()
+	return HasStatus('DRAGONS_BREATH_FIRE') | HasStatus('DRAGONS_BREATH_COLD') | HasStatus('DRAGONS_BREATH_LIGHTNING') | HasStatus('DRAGONS_BREATH_POISON') | HasStatus('DRAGONS_BREATH_ACID') | HasStatus('DRAGONS_BREATH_FIRE_3') | HasStatus('DRAGONS_BREATH_COLD_3') | HasStatus('DRAGONS_BREATH_LIGHTNING_3') | HasStatus('DRAGONS_BREATH_POISON_3') | HasStatus('DRAGONS_BREATH_ACID_3') | HasStatus('DRAGONS_BREATH_FIRE_4') | HasStatus('DRAGONS_BREATH_COLD_4') | HasStatus('DRAGONS_BREATH_LIGHTNING_4') | HasStatus('DRAGONS_BREATH_POISON_4') | HasStatus('DRAGONS_BREATH_ACID_4') | HasStatus('DRAGONS_BREATH_FIRE_5') | HasStatus('DRAGONS_BREATH_COLD_5') | HasStatus('DRAGONS_BREATH_LIGHTNING_5') | HasStatus('DRAGONS_BREATH_POISON_5') | HasStatus('DRAGONS_BREATH_ACID_5') | HasStatus('DRAGONS_BREATH_FIRE_6') | HasStatus('DRAGONS_BREATH_COLD_6') | HasStatus('DRAGONS_BREATH_LIGHTNING_6') | HasStatus('DRAGONS_BREATH_POISON_6') | HasStatus('DRAGONS_BREATH_ACID_6') | HasStatus('DRAGONS_BREATH_FIRE_7') | HasStatus('DRAGONS_BREATH_COLD_7') | HasStatus('DRAGONS_BREATH_LIGHTNING_7') | HasStatus('DRAGONS_BREATH_POISON_7') | HasStatus('DRAGONS_BREATH_ACID_7') | HasStatus('DRAGONS_BREATH_FIRE_8') | HasStatus('DRAGONS_BREATH_COLD_8') | HasStatus('DRAGONS_BREATH_LIGHTNING_8') | HasStatus('DRAGONS_BREATH_POISON_8') | HasStatus('DRAGONS_BREATH_ACID_8') | HasStatus('DRAGONS_BREATH_FIRE_9') | HasStatus('DRAGONS_BREATH_COLD_9') | HasStatus('DRAGONS_BREATH_LIGHTNING_9') | HasStatus('DRAGONS_BREATH_POISON_9') | HasStatus('DRAGONS_BREATH_ACID_9')
+end
+
+function WitherAndBloomHPSpells()
+	return SpellId('Shout_WitherAndBloom_RegainHP_d6') | SpellId('Shout_WitherAndBloom_RegainHP_d8') | SpellId('Shout_WitherAndBloom_RegainHP_d10') | SpellId('Shout_WitherAndBloom_RegainHP_d12') | SpellId('Shout_WitherAndBloom_RegainHP_3_d6') | SpellId('Shout_WitherAndBloom_RegainHP_3_d8') | SpellId('Shout_WitherAndBloom_RegainHP_3_d10') | SpellId('Shout_WitherAndBloom_RegainHP_3_d12') | SpellId('Shout_WitherAndBloom_RegainHP_4_d6') | SpellId('Shout_WitherAndBloom_RegainHP_4_d8') | SpellId('Shout_WitherAndBloom_RegainHP_4_d10') | SpellId('Shout_WitherAndBloom_RegainHP_4_d12') | SpellId('Shout_WitherAndBloom_RegainHP_5_d6') | SpellId('Shout_WitherAndBloom_RegainHP_5_d8') | SpellId('Shout_WitherAndBloom_RegainHP_5_d10') | SpellId('Shout_WitherAndBloom_RegainHP_5_d12') | SpellId('Shout_WitherAndBloom_RegainHP_6_d6') | SpellId('Shout_WitherAndBloom_RegainHP_6_d8') | SpellId('Shout_WitherAndBloom_RegainHP_6_d10') | SpellId('Shout_WitherAndBloom_RegainHP_6_d12') | SpellId('Shout_WitherAndBloom_RegainHP_7_d6') | SpellId('Shout_WitherAndBloom_RegainHP_7_d8') | SpellId('Shout_WitherAndBloom_RegainHP_7_d10') | SpellId('Shout_WitherAndBloom_RegainHP_7_d12') | SpellId('Shout_WitherAndBloom_RegainHP_8_d6') | SpellId('Shout_WitherAndBloom_RegainHP_8_d8') | SpellId('Shout_WitherAndBloom_RegainHP_8_d10') | SpellId('Shout_WitherAndBloom_RegainHP_8_d12') | SpellId('Shout_WitherAndBloom_RegainHP_9_d6') | SpellId('Shout_WitherAndBloom_RegainHP_9_d8') | SpellId('Shout_WitherAndBloom_RegainHP_9_d10') | SpellId('Shout_WitherAndBloom_RegainHP_9_d12')
+end
+
+function S5E_StatusDoesNotInterruptPerform()
+    return StatusId('MAGIC_STONE_MODIFIER_REMOVAL') | StatusId('DRAGONS_BREATH_MODIFIER_REMOVAL')
+end
+
+function MagicStoneThrowAttack()
+    return Attack(AttackType.RangedSpellAttack)
+end
+
+function GetCasterDC(fallbackDC)
+    if context.Source == nil then
+        return fallbackDC
+    end
+
+    ability = context.Source.SpellCastingAbility
+
+    if ability == Ability.Intelligence then
+        return 8 + context.Source.IntelligenceModifier + context.Source.ProficiencyBonus
+    end
+
+    if ability == Ability.Wisdom then
+        return 8 + context.Source.WisdomModifier + context.Source.ProficiencyBonus
+    end
+
+    if ability == Ability.Charisma then
+        return 8 + context.Source.CharismaModifier + context.Source.ProficiencyBonus
+    end
+
+    return fallbackDC
+end

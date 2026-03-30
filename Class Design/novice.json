@@ -1,0 +1,67 @@
+{
+  "class": "Novice",
+  "level": 1,
+
+  "hit_points": {
+    "base": 6,
+    "per_level": 6,
+    "constitution_modifier_applies": true
+  },
+
+  "mana_points": {
+    "base": 6,
+    "scaling": "none"
+  },
+
+  "proficiencies": {
+    "saving_throws": [],
+    "armor": [],
+    "weapons": [
+      "Dagger",
+      "Shortsword",
+      "Club",
+      "Shortbow"
+    ],
+    "tools": [],
+    "skills": {
+      "choose": 1
+    }
+  },
+
+  "features": [
+    {
+      "name": "Feign Death",
+      "type": "Active",
+      "category": "Utility",
+      "action_type": "Action",
+      "cost_mp": 3,
+      "uses": "1 per Short Rest",
+      "range": "Self",
+      "duration": "2 turns",
+      "effect_details": "You are treated as dead and cannot be targeted by enemies unless directly interacted with."
+    },
+    {
+      "name": "First Aid",
+      "type": "Active",
+      "category": "Utility",
+      "action_type": "Action",
+      "cost_mp": 2,
+      "range": "Touch",
+      "healing": "1d4"
+    },
+    {
+      "name": "Valkyrie's Blessing",
+      "type": "Passive",
+      "uses": "1 per Short Rest",
+      "trigger": "When you fail an ability check or attack roll",
+      "effect": "You may reroll the result. You must use the new result."
+    }
+  ],
+  "design_notes": [
+    "Novice does not have a spellcasting ability.",
+    "Novice uses fixed MP and does not scale with attributes.",
+    "All scaling mechanics (damage, healing, MP scaling, saving throws) are defined by the First Job.",
+    "Novice is designed to be adaptable, not powerful.",
+    "This level establishes player flexibility before specialization."
+  ]
+}

@@ -1,0 +1,12 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+IF
+StatusApplied((CHARACTER)_Character, "REGENSHORT", (GUIDSTRING)_Causee,_)
+THEN
+ApplyStatus(_Character, "REGENSHORT_FFT",0.0,0,_Causee);
+EXITSECTION
+
+ENDEXITSECTION

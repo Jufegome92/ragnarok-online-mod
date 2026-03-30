@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="Outcomes">
+        <node id="root">
+            <children>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_ForbiddenDance"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Dancer_ForbiddenDance_Blind"/>
+                    <attribute id="UUID" type="guid" value="e854b3ca-d682-46ef-9fa5-a891f9d795d8"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_ForbiddenDance"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Dancer_ForbiddenDance_Confuse"/>
+                    <attribute id="UUID" type="guid" value="5f70cae7-9a95-470e-91ea-1a926d749bbc"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_ForbiddenDance"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Dancer_ForbiddenDance_Silence"/>
+                    <attribute id="UUID" type="guid" value="5b0a19b1-0da2-48b3-878c-97974aaf2ab1"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_ForbiddenDance"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Dancer_ForbiddenDance_Toad"/>
+                    <attribute id="UUID" type="guid" value="f92ec3f2-49b7-4cae-9df7-6e7dfeab06df"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_ForbiddenDance"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Dancer_ForbiddenDance_Poison"/>
+                    <attribute id="UUID" type="guid" value="ffab3693-1f42-40c9-9e36-aaef8960b088"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_ForbiddenDance"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Dancer_ForbiddenDance_Slow"/>
+                    <attribute id="UUID" type="guid" value="82a2046f-0be2-4821-bed1-baac5680846c"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_ForbiddenDance"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Dancer_ForbiddenDance_Stop"/>
+                    <attribute id="UUID" type="guid" value="b75134a6-e3b9-429e-84fe-f04fe4dbb7c8"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_ForbiddenDance"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Dancer_ForbiddenDance_Sleep"/>
+                    <attribute id="UUID" type="guid" value="dca26a25-0e68-4f96-bea1-ff29a95b470f"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_NamelessSong"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Bard_NamelessSong_Reraise"/>
+                    <attribute id="UUID" type="guid" value="26048d16-55f6-4134-b92c-e363220dd0f0"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_NamelessSong"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Bard_NamelessSong_Regen"/>
+                    <attribute id="UUID" type="guid" value="f653fa40-0892-40e7-b26b-95a2596bea0d"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_NamelessSong"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Bard_NamelessSong_Protect"/>
+                    <attribute id="UUID" type="guid" value="4192bb16-bc89-41e2-b260-da39573bfa3a"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_NamelessSong"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Bard_NamelessSong_Shell"/>
+                    <attribute id="UUID" type="guid" value="6fe82e65-b4e0-4533-8a11-1aaa882fa6eb"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_NamelessSong"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Bard_NamelessSong_Haste"/>
+                    <attribute id="UUID" type="guid" value="2d83c9cf-aa38-46c4-be16-b671e4e0acf3"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_CelestialVoid"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Skyseer_CelestialVoid_Blind"/>
+                    <attribute id="UUID" type="guid" value="85a14d9b-bdc3-45f6-9927-3de581ccc38a"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_CelestialVoid"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Skyseer_CelestialVoid_Confuse"/>
+                    <attribute id="UUID" type="guid" value="85cc27eb-a9b2-4fc5-9e68-e1445b3976ca"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_CelestialVoid"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Skyseer_CelestialVoid_Silence"/>
+                    <attribute id="UUID" type="guid" value="e6a6e87e-18d3-4d43-b44e-3d1cc374166d"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_CelestialVoid"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Skyseer_CelestialVoid_Toad"/>
+                    <attribute id="UUID" type="guid" value="910a1c8c-5cff-4bdf-871c-4dfcb2b4c897"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_CelestialVoid"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Skyseer_CelestialVoid_Poison"/>
+                    <attribute id="UUID" type="guid" value="2e083c3e-8a82-44c1-a215-5bf567795dee"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_CelestialVoid"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Skyseer_CelestialVoid_Slow"/>
+                    <attribute id="UUID" type="guid" value="a10337d6-2386-4af9-9edb-f3a3d9265715"/>
+                </node>
+                <node id="Outcome">
+                    <attribute id="GroupName" type="FixedString" value="FFT_CelestialVoid"/>
+                    <attribute id="Spell" type="FixedString" value="Shout_FFT_Skyseer_CelestialVoid_Sleep"/>
+                    <attribute id="UUID" type="guid" value="a968b146-3362-4d0c-bfe6-f1bbbd93e24c"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

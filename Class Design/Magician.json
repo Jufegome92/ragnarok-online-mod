@@ -1,0 +1,748 @@
+{
+  "class": "Novice",
+  "subclass": "Magician",
+
+  "granted_at_character_level": 2,
+
+  "hit_points": {
+    "base": 6,
+    "per_level": 4,
+    "constitution_modifier_applies": true,
+    "formula_note": "At Magician levels, gain 4 HP + Constitution modifier per level."
+  },
+
+  "spellcasting_ability": "Intelligence",
+  "spellcasting_save_dc_formula": "8 + proficiency_bonus + intelligence_modifier",
+
+  "mana_points": {
+    "base_formula": "4 + (2 * character_level)",
+    "modifier_scaling": "character_level * floor(spellcasting_modifier / 2)",
+    "total_formula": "(4 + (2 * character_level)) + (character_level * floor(spellcasting_modifier / 2))",
+    "formula_note": "For Magician, spellcasting_modifier uses Intelligence."
+  },
+
+  "proficiencies": {
+    "saving_throws": [
+      "Intelligence",
+      "Constitution"
+    ],
+    "armor": [],
+    "weapons": [
+      "Dagger",
+      "Quarterstaff",
+      "Club"
+    ],
+    "tools": [],
+    "skills": {
+      "fixed": [
+        "Arcana",
+        "History"
+      ],
+      "expertise": 1
+    }
+  },
+
+  "design_identity": {
+    "role": "Ranged Magical DPS / Tactical Control",
+    "combat_style": "Element-based casting with MP management and overchannel decisions",
+    "strengths": [
+      "High magical pressure",
+      "Elemental flexibility",
+      "Strong zone and status control"
+    ],
+    "weaknesses": [
+      "Low HP",
+      "Very vulnerable in melee",
+      "Resource-dependent"
+    ]
+  },
+
+  "core_systems": {
+    "elements": [
+      "Fire",
+      "Cold",
+      "Lightning",
+      "Force"
+    ],
+    "casting_system": {
+      "name": "Overchannel",
+      "description": "The Magician may invest additional MP into core spells to intensify their effects.",
+      "tiers": {
+        "base": {
+          "additional_mp_cost": 0,
+          "effect": "Use the spell at its normal power level."
+        },
+        "intensified": {
+          "additional_mp_cost": 2,
+          "effect": "Improve the spell's numerical output, usually by adding hits, damage, or radius."
+        },
+        "overload": {
+          "additional_mp_cost": 4,
+          "effect": "Unlock the strongest version of the spell, usually adding a stronger rider effect or an extra scaling layer."
+        }
+      }
+    }
+  },
+
+  "progression": {
+    "level_2": {
+      "class_state": "Magician",
+      "features_gained": [
+        "Increase Spiritual Power",
+        "Sight",
+        "Element Bolt"
+      ]
+    },
+    "level_3": {
+      "features_gained": [
+        "Frost Diver",
+        "Stone Curse"
+      ]
+    },
+    "level_4": {
+      "features_gained": [
+        "Energy Coat",
+        "Safety Wall"
+      ]
+    },
+    "level_5": {
+      "features_gained": [
+        "Element AoE"
+      ]
+    },
+    "level_6": {
+      "features_gained": [
+        "Fire Wall"
+      ],
+      "transition_note": "Nivel ideal para comenzar la especialización hacia el Second Job."
+    }
+  },
+
+  "skills": [
+    {
+      "id": "magician_increase_spiritual_power",
+      "name": "Increase Spiritual Power",
+      "learned_at_level": 2,
+      "category": "Passive",
+      "action_type": "Passive",
+      "cost_mp": 0,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "Permanent",
+      "description": "El Magician profundiza su reserva espiritual y mejora su dominio del flujo arcano.",
+      "base_effects": {
+        "bonus_max_mp": 2
+      },
+      "scaling": {
+        "type": "milestone_resource_scaling",
+        "milestones": [
+          {
+            "level": 2,
+            "effects": {
+              "bonus_max_mp": 2
+            }
+          },
+          {
+            "level": 5,
+            "effects": {
+              "bonus_max_mp": 4
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "bonus_max_mp": 6
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "bonus_max_mp": 8
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "magician_sight",
+      "name": "Sight",
+      "learned_at_level": 2,
+      "category": "Utility",
+      "action_type": "Bonus Action",
+      "cost_mp": 1,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "3 turns",
+      "range": "Self aura",
+      "description": "El Magician perturba la luz y la ilusión a su alrededor, revelando presencias ocultas.",
+      "base_effects": {
+        "reveal_hidden_and_invisible_units_in_radius": "6m"
+      },
+      "scaling": {
+        "type": "milestone_utility_scaling",
+        "milestones": [
+          {
+            "level": 2,
+            "effects": {
+              "reveal_hidden_and_invisible_units_in_radius": "6m"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "duration_turns": 4
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "reveal_hidden_and_invisible_units_in_radius": "9m"
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "magician_element_bolt",
+      "name": "Element Bolt",
+      "learned_at_level": 2,
+      "category": "Attack",
+      "action_type": "Action",
+      "base_cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Valid target in line of sight"
+      ],
+      "duration": "Instant",
+      "range": "18m",
+      "description": "El Magician condensa energía elemental en una secuencia de impactos sobre un solo objetivo. La progresión principal del hechizo está en su número de impactos, simulando los niveles de Bolt de Ragnarok.",
+      "base_effects": {
+        "delivery_method": "Single spell attack roll; on hit, all impacts connect",
+        "damage_per_hit": "1d4",
+        "spellcasting_modifier_applies_once": true,
+        "number_of_hits": 2
+      },
+      "element_variants": {
+        "Fire": {
+          "identity": "Highest raw single-target pressure",
+          "damage_type": "Fire",
+          "base_rider": "No additional rider at base tier",
+          "intensified_rider": "Add +1 flat damage per hit",
+          "overload_rider": "On hit, target must pass a Constitution save or become Burned for 1d4 turns"
+        },
+        "Cold": {
+          "identity": "Single-target slowing and setup",
+          "damage_type": "Cold",
+          "base_rider": "If at least half the hits land, target becomes Chilled for 1 turn",
+          "intensified_rider": "Chilled duration becomes 2 turns",
+          "overload_rider": "If target is already Chilled, it must pass a Constitution save or become Rooted for 1 turn"
+        },
+        "Lightning": {
+          "identity": "Disruption and volatility",
+          "damage_type": "Lightning",
+          "base_rider": "If at least half the hits land, target becomes Shocked for 1 turn",
+          "intensified_rider": "Shocked duration becomes 2 turns",
+          "overload_rider": "One extra impact arcs to a secondary enemy within 3m of the main target"
+        },
+        "Force": {
+          "identity": "Most reliable universal option",
+          "damage_type": "Force",
+          "base_rider": "+1 spell attack bonus for this cast",
+          "intensified_rider": "Add +1 flat damage per hit",
+          "overload_rider": "Gains +2 spell attack bonus for this cast"
+        }
+      },
+      "overchannel": {
+        "base": {
+          "total_mp_cost": 2,
+          "effect": "Use Element Bolt with its current milestone hit count."
+        },
+        "intensified": {
+          "total_mp_cost": 4,
+          "effect": "+1 hit and unlock the intensified rider of the chosen element."
+        },
+        "overload": {
+          "total_mp_cost": 6,
+          "effect": "+2 hits and unlock the overload rider of the chosen element."
+        }
+      },
+      "scaling": {
+        "type": "multi_hit_progression",
+        "milestones": [
+          {
+            "level": 2,
+            "effects": {
+              "number_of_hits": 2
+            }
+          },
+          {
+            "level": 3,
+            "effects": {
+              "number_of_hits": 3
+            }
+          },
+          {
+            "level": 5,
+            "effects": {
+              "number_of_hits": 4
+            }
+          },
+          {
+            "level": 7,
+            "effects": {
+              "number_of_hits": 5
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "number_of_hits": 6
+            }
+          },
+          {
+            "level": 11,
+            "effects": {
+              "number_of_hits": 7
+            }
+          }
+        ]
+      },
+      "design_notes": [
+        "This replaces Fire Bolt, Cold Bolt, Lightning Bolt and Soul Strike as separate first-job spells.",
+        "Soul Strike is represented by the Force variant."
+      ]
+    },
+
+    {
+      "id": "magician_frost_diver",
+      "name": "Frost Diver",
+      "learned_at_level": 3,
+      "category": "Control",
+      "action_type": "Action",
+      "cost_mp": 4,
+      "requires_concentration": false,
+      "requires": [
+        "Valid target in line of sight"
+      ],
+      "duration": "Instant plus status",
+      "range": "18m",
+      "description": "El Magician concentra frío violento sobre un objetivo para inmovilizarlo por completo.",
+      "base_effects": {
+        "damage_type": "Cold",
+        "damage": "2d6 + intelligence_modifier",
+        "saving_throw": "Constitution",
+        "on_failed_save": "Frozen for 1 turn"
+      },
+      "scaling": {
+        "type": "milestone_control_scaling",
+        "milestones": [
+          {
+            "level": 3,
+            "effects": {
+              "damage": "2d6 + intelligence_modifier",
+              "status_duration": "1 turn"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "damage": "3d6 + intelligence_modifier",
+              "status_duration": "2 turns"
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "damage": "4d6 + intelligence_modifier"
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "magician_stone_curse",
+      "name": "Stone Curse",
+      "learned_at_level": 3,
+      "category": "Control",
+      "action_type": "Action",
+      "cost_mp": 4,
+      "requires_concentration": false,
+      "requires": [
+        "Valid target in line of sight"
+      ],
+      "duration": "2 turns",
+      "range": "18m",
+      "description": "El Magician endurece el cuerpo del enemigo con materia arcana petrificante, volviéndolo rígido y vulnerable.",
+      "base_effects": {
+        "saving_throw": "Constitution",
+        "on_failed_save": {
+          "condition": "Stone-Cursed",
+          "effects": [
+            "Movement reduced to 0",
+            "Disadvantage on Dexterity-based checks and saves"
+          ]
+        }
+      },
+      "scaling": {
+        "type": "milestone_control_scaling",
+        "milestones": [
+          {
+            "level": 3,
+            "effects": {
+              "duration_turns": 2
+            }
+          },
+          {
+            "level": 3,
+            "effects": {
+              "failed_save_third_penalty": "Enemy makes another Constitution save or becomes incapacitated"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "failed_save_third_penalty": "Target takes 1d4 bonus bludgeoning damage whenever hit by a physical attack"
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "duration_turns": 3
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "magician_energy_coat",
+      "name": "Energy Coat",
+      "learned_at_level": 4,
+      "category": "Utility",
+      "action_type": "Bonus Action",
+      "cost_mp": 2,
+      "requires_concentration": true,
+      "requires": [],
+      "duration": "2 turns",
+      "range": "Self",
+      "description": "El Magician recubre su cuerpo con una malla de energía que reduce el daño recibido a cambio de consumir MP al resistir.",
+      "base_effects": {
+        "damage_reduction_flat": 3,
+        "mp_consumed_when_reduction_triggers": 1
+      },
+      "scaling": {
+        "type": "milestone_defense_scaling",
+        "milestones": [
+          {
+            "level": 4,
+            "effects": {
+              "damage_reduction_flat": 4
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "damage_reduction_flat": 6
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "damage_reduction_flat": 8
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "magician_safety_wall",
+      "name": "Safety Wall",
+      "learned_at_level": 4,
+      "category": "Utility",
+      "action_type": "Action",
+      "cost_mp": 4,
+      "requires_concentration": true,
+      "requires": [
+        "Self, ally, or valid target tile within 9m"
+      ],
+      "duration": "2 turns",
+      "range": "9m",
+      "description": "El Magician erige una barrera temporal que bloquea impactos cuerpo a cuerpo y le permite sobrevivir en espacios donde normalmente sería aniquilado.",
+      "base_effects": {
+        "protected_melee_hits_negated": 2
+      },
+      "scaling": {
+        "type": "milestone_defense_scaling",
+        "milestones": [
+          {
+            "level": 4,
+            "effects": {
+              "protected_melee_hits_negated": 2
+            }
+          },
+          {
+            "level": 6,
+            "effects": {
+              "protected_melee_hits_negated": 3
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "duration_turns": 3
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "protected_melee_hits_negated": 4
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "magician_element_aoe",
+      "name": "Element AoE",
+      "learned_at_level": 5,
+      "category": "Attack",
+      "action_type": "Action",
+      "base_cost_mp": 4,
+      "requires_concentration": "Depends on chosen variant",
+      "requires": [
+        "Valid target area within range"
+      ],
+      "duration": "Variant-dependent",
+      "range": "18m",
+      "description": "El Magician libera una manifestación elemental de área. La variante de Fuego representa explosión inmediata; la variante de Lightning representa descarga persistente y múltiple.",
+      "element_variants": {
+        "Fire": {
+          "identity": "Immediate burst AoE",
+          "damage_type": "Fire",
+          "base_effect": {
+            "delivery": "Instant explosion",
+            "area_radius": "3m",
+            "damage": "3d6 + intelligence_modifier"
+          },
+          "intensified_effect": {
+            "area_radius": "3m",
+            "damage": "4d6 + intelligence_modifier"
+          },
+          "overload_effect": {
+            "area_radius": "4m",
+            "damage": "5d6 + intelligence_modifier",
+            "extra_rider": "Targets must pass a Constitution save or become Burned for 1 turn"
+          }
+        },
+        "Lightning": {
+          "identity": "Persistent AoE pressure",
+          "damage_type": "Lightning",
+          "base_effect": {
+            "delivery": "Storm zone",
+            "requires_concentration": true,
+            "duration": "2 turns",
+            "area_radius": "3m",
+            "strikes_per_turn": 2,
+            "damage_per_strike": "1d6"
+          },
+          "intensified_effect": {
+            "requires_concentration": true,
+            "duration": "2 turns",
+            "area_radius": "3m",
+            "strikes_per_turn": 3,
+            "damage_per_strike": "1d6"
+          },
+          "overload_effect": {
+            "requires_concentration": true,
+            "duration": "3 turns",
+            "area_radius": "4m",
+            "strikes_per_turn": 3,
+            "damage_per_strike": "1d8"
+          }
+        }
+      },
+      "overchannel": {
+        "base": {
+          "total_mp_cost": 4,
+          "effect": "Use the base Fire or Lightning AoE variant."
+        },
+        "intensified": {
+          "total_mp_cost": 6,
+          "effect": "Use the intensified version of the chosen AoE variant."
+        },
+        "overload": {
+          "total_mp_cost": 8,
+          "effect": "Use the overload version of the chosen AoE variant."
+        }
+      },
+      "scaling": {
+        "type": "milestone_access_and_power",
+        "milestones": [
+          {
+            "level": 5,
+            "effects": {
+              "Fire_variant_unlocked": true,
+              "Lightning_variant_unlocked": true
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "base_casts_gain_improved_numerical_scaling": true
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "overload_casts_gain_final_scaling": true
+            }
+          }
+        ]
+      },
+      "design_notes": [
+        "This replaces Fire Ball and Thunder Storm as separate first-job buttons.",
+        "The Fire variant is burst; the Lightning variant is persistent pressure."
+      ]
+    },
+
+    {
+      "id": "magician_fire_wall",
+      "name": "Fire Wall",
+      "learned_at_level": 6,
+      "category": "Zone Control",
+      "action_type": "Action",
+      "cost_mp": 4,
+      "requires_concentration": true,
+      "requires": [
+        "Valid line placement within 12m"
+      ],
+      "duration": "2 turns",
+      "range": "12m",
+      "description": "El Magician erige una barrera de llamas persistentes que castiga el cruce enemigo y le permite rediseñar el campo de batalla.",
+      "base_effects": {
+        "damage_type": "Fire",
+        "wall_length": "6m",
+        "damage_on_enter_or_end_turn": "3d6 + intelligence_modifier"
+      },
+      "scaling": {
+        "type": "milestone_zone_scaling",
+        "milestones": [
+          {
+            "level": 6,
+            "effects": {
+              "wall_length": "6m",
+              "damage_on_enter_or_end_turn": "4d6 + intelligence_modifier"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "damage_on_enter_or_end_turn": "5d6 + intelligence_modifier"
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "wall_length": "8m",
+              "duration_turns": 3
+            }
+          }
+        ]
+      }
+    }
+  ],
+
+  "summary_tables": {
+    "skill_unlocks": [
+      {
+        "level": 2,
+        "skills": [
+          "Increase Spiritual Power",
+          "Sight",
+          "Element Bolt"
+        ]
+      },
+      {
+        "level": 3,
+        "skills": [
+          "Frost Diver",
+          "Stone Curse"
+        ]
+      },
+      {
+        "level": 4,
+        "skills": [
+          "Energy Coat",
+          "Safety Wall"
+        ]
+      },
+      {
+        "level": 5,
+        "skills": [
+          "Element AoE"
+        ]
+      },
+      {
+        "level": 6,
+        "skills": [
+          "Fire Wall"
+        ]
+      }
+    ],
+    "quick_costs": [
+      {
+        "name": "Increase Spiritual Power",
+        "cost_mp": 0
+      },
+      {
+        "name": "Sight",
+        "cost_mp": 1
+      },
+      {
+        "name": "Element Bolt",
+        "cost_mp": "2 / 4 / 6"
+      },
+      {
+        "name": "Frost Diver",
+        "cost_mp": 4
+      },
+      {
+        "name": "Stone Curse",
+        "cost_mp": 4
+      },
+      {
+        "name": "Energy Coat",
+        "cost_mp": 2
+      },
+      {
+        "name": "Safety Wall",
+        "cost_mp": 4
+      },
+      {
+        "name": "Element AoE",
+        "cost_mp": "4 / 6 / 8"
+      },
+      {
+        "name": "Fire Wall",
+        "cost_mp": 4
+      }
+    ]
+  },
+
+  "core_design_rules": [
+    "El Magician es un caster frágil basado en elementos, control y gestión estricta de MP.",
+    "Element Bolt es el núcleo ofensivo single-target y reemplaza los bolts separados del primer job.",
+    "Soul Strike existe dentro de Element Bolt como la variante Force.",
+    "Element AoE reemplaza Fire Ball y Thunder Storm como skill modular de área.",
+    "Overchannel es el sistema central del Magician y define su profundidad táctica.",
+    "Frost Diver y Stone Curse son herramientas de control fuerte y deben conservar una identidad clara separada del daño puro.",
+    "Energy Coat y Safety Wall existen para compensar la fragilidad estructural del Magician.",
+    "Fire Wall representa control de zona y preparación del campo, no burst inmediato.",
+    "Napalm Beam queda absorbido en la identidad Force del primer job y puede reaparecer más adelante como herramienta de Second Job."
+  ]
+}

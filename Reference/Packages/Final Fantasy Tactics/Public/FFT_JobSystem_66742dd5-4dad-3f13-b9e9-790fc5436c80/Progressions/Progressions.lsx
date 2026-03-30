@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="Progressions">
+        <node id="root">
+            <children>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0);Proficiency(LightArmor);Proficiency(SimpleWeapons);ProficiencyBonus(SavingThrow,Constitution);"/>
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_SquirePassive;FFT_ChemistPassive;FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSkills(ed664663-93b9-4070-a54b-3c7b19c0e7b4,2);SelectAbilityBonus(b9149c8e-52c8-46e5-9cb6-fc39301c05fe,AbilityBonus,2,1);AddSpells(755bc00e-e3de-4e72-95a5-7bcf6d34e1bd);AddSpells(146ff8e7-429b-44ec-bb6a-d072400a6c27);AddSpells(86cc9043-ac68-4edb-91b2-abe2cfb61690)"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="0e39de7f-6a78-43be-af4a-68ccd9047739"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0);Proficiency(LightArmor);Proficiency(SimpleWeapons);ProficiencyBonus(SavingThrow,Constitution);"/>
+                    <attribute id="IsMulticlass" type="bool" value="true"/>
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_SquirePassive;FFT_ChemistPassive;FFT_CC_Mana8;FFT_Mithras_Regen_ManaPassive"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSkills(ed664663-93b9-4070-a54b-3c7b19c0e7b4,2);AddSpells(755bc00e-e3de-4e72-95a5-7bcf6d34e1bd);AddSpells(146ff8e7-429b-44ec-bb6a-d072400a6c27);AddSpells(86cc9043-ac68-4edb-91b2-abe2cfb61690)"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="f3b5dd77-e711-474e-a2f4-e5ac9b869fd2"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="2"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(92045c07-de7f-4e32-a247-2760910c61b8);AddSpells(80fff4c2-a4db-4ffa-8d9f-e7d4021e1b76)"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="8330dc59-d737-4be4-935d-9433d25a8082"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(bfb71ea4-df4d-4de0-bf82-149b6cf72eed)"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="811fc421-2605-44b9-9181-00a193c7709a"/>
+                    <children>
+                        <node id="SubClasses">
+                            <children>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="a885ea94-a84a-4c87-a2bd-00f924f18336"/>
+                                </node>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="d9caf462-6906-4471-b90c-6a18fbfb1af8"/>
+                                </node>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="acc90174-65c0-40b1-99d8-651c6de853be"/>
+                                </node>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="ffa102a6-9997-4233-a467-5760f659ea45"/>
+                                </node>
+                            </children>
+                        </node>
+                    </children>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(6aa0c85a-b18e-4567-ad0f-6c30999ea5f2)"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="8d7aa9ff-b790-4818-83d5-9e332eb2bf17"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="PassivesAdded" type="LSString" value="ExtraAttack"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(68ef2fca-d689-49bf-9b9e-cf58ed542b7b);AddSpells(3cdd444a-60a6-477c-b165-55e65142a7ae)"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="0e7cc176-0f4d-47ac-8bb7-c1db176fccc8"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(dead0370-8962-4de7-ad54-0a1c3d88f7b6)"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="17d2bb9d-557f-4812-9ad7-d45e568f3180"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(c9fa40ce-b70f-475c-8a7d-377e1df95112);AddSpells(b9c3ac05-733f-40da-87ab-a71c3b5a6b20)"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="eca81fb0-cd62-491f-9d36-1d8e37f0dd12"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(14f5eab2-43fb-4ee8-b254-17faf1356fd4)"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="737be0d9-0910-4c03-b64e-665022264605"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(8a492ecd-22e6-4be0-80c8-8c4c15dc319e);AddSpells(19129d8d-1b42-44c8-bf6c-a05afed9ff3f)"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="3e9289b8-ca19-4abd-90a1-71d8af865de3"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="fabe8742-17c6-4c9a-b603-09523b4a5423"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="0bd4ed70-7a34-4756-a6b5-8f525e9ec54c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="c436227f-93c4-40ed-9a28-a4f64fd48bb9"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="2bb28893-bcc6-43f7-bb1a-4878d8e5cbc9"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="dd030714-a707-4f1d-9813-f19d2a3c5641"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="a84727d2-8e73-4f29-a947-c94a893c46ff"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="aa1c0b75-3524-43b5-8a80-56ef3515c800"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="40e0ad68-9240-43c7-addc-ade0da7a4d89"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="2fba540d-03c8-4c40-9f50-66f1e3f25055"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="8c1ec337-aa6f-4e82-a2f8-58e539fd0851"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,8,0)"/>
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="FFT_Cadet"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="0a8eb46d-6b6c-4313-bf89-89b7b3efa5e5"/>
+                    <attribute id="UUID" type="guid" value="9888b032-c442-4d6d-bfe8-2d015cccf968"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ProficiencyBonus(SavingThrow,Strength);"/>
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="FFT_Knight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_KnightPassive;FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="97410ce3-cd36-4572-9834-87246e9f7825"/>
+                    <attribute id="UUID" type="guid" value="9e6b39b3-bd30-4062-b5ec-d4a569a103b1"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="FFT_Knight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4b861ba1-0197-48bb-b9ce-d14180c8c352,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="97410ce3-cd36-4572-9834-87246e9f7825"/>
+                    <attribute id="UUID" type="guid" value="3d6d0c17-2a90-4bda-887f-001105fa0ba1"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="FFT_Knight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(816c65c2-68d6-4c06-8c57-36b275c3d6d1,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="97410ce3-cd36-4572-9834-87246e9f7825"/>
+                    <attribute id="UUID" type="guid" value="492985be-0d5e-4120-853a-753ac94ff3bc"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="FFT_Knight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(8939699e-deb8-46b4-acd2-63a8414c727a,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="97410ce3-cd36-4572-9834-87246e9f7825"/>
+                    <attribute id="UUID" type="guid" value="72342830-8aa3-421b-95b5-5c4238378e05"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="FFT_Knight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(9173252b-8a34-4b29-988b-aa3e237408cc,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="97410ce3-cd36-4572-9834-87246e9f7825"/>
+                    <attribute id="UUID" type="guid" value="9de9a724-2114-4f7a-a237-beaac763ae1c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="FFT_Knight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(b3f7082f-8cd7-40cc-908a-a095ffe8efd6,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="97410ce3-cd36-4572-9834-87246e9f7825"/>
+                    <attribute id="UUID" type="guid" value="b1b3a43f-0a36-45aa-b695-b00161d9e251"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="FFT_Knight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(65dc5bc4-7207-4bd8-8545-678c488b160a,1,FFTUniqueJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="97410ce3-cd36-4572-9834-87246e9f7825"/>
+                    <attribute id="UUID" type="guid" value="53508ed1-b244-4d08-8199-bd6a2e36a0d0"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="FFT_Knight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(b3f7082f-8cd7-40cc-908a-a095ffe8efd6,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="97410ce3-cd36-4572-9834-87246e9f7825"/>
+                    <attribute id="UUID" type="guid" value="4c0a4709-9fcd-4a78-9437-85edfd6c254f"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="FFT_Knight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(b3f7082f-8cd7-40cc-908a-a095ffe8efd6,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="97410ce3-cd36-4572-9834-87246e9f7825"/>
+                    <attribute id="UUID" type="guid" value="aaad5243-537a-4203-9599-666bb1a354fb"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="FFT_Knight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(b3f7082f-8cd7-40cc-908a-a095ffe8efd6,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="97410ce3-cd36-4572-9834-87246e9f7825"/>
+                    <attribute id="UUID" type="guid" value="72fa991a-6351-42a7-b07e-4092ed8ca978"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="FFT_Knight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(b3f7082f-8cd7-40cc-908a-a095ffe8efd6,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="97410ce3-cd36-4572-9834-87246e9f7825"/>
+                    <attribute id="UUID" type="guid" value="2552044c-2fdb-4871-a7b8-f32c1d80affa"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="FFT_Knight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(b3f7082f-8cd7-40cc-908a-a095ffe8efd6,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="97410ce3-cd36-4572-9834-87246e9f7825"/>
+                    <attribute id="UUID" type="guid" value="49276cd3-ad1c-416c-9cb0-e5f9a3786a5f"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="FFT_Knight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(b3f7082f-8cd7-40cc-908a-a095ffe8efd6,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="97410ce3-cd36-4572-9834-87246e9f7825"/>
+                    <attribute id="UUID" type="guid" value="79c38177-918d-4215-b1dc-5c4a626584f2"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="FFT_Knight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(b3f7082f-8cd7-40cc-908a-a095ffe8efd6,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="97410ce3-cd36-4572-9834-87246e9f7825"/>
+                    <attribute id="UUID" type="guid" value="211770ba-0627-4dc9-82e4-039ed65db081"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="FFT_Knight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(b3f7082f-8cd7-40cc-908a-a095ffe8efd6,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="97410ce3-cd36-4572-9834-87246e9f7825"/>
+                    <attribute id="UUID" type="guid" value="4ac0a645-9e86-4182-b352-51859dd5ca13"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="FFT_Knight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(b3f7082f-8cd7-40cc-908a-a095ffe8efd6,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="97410ce3-cd36-4572-9834-87246e9f7825"/>
+                    <attribute id="UUID" type="guid" value="c5231a65-9018-46b8-a75d-8226ee9eae10"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="FFT_Knight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(b3f7082f-8cd7-40cc-908a-a095ffe8efd6,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="97410ce3-cd36-4572-9834-87246e9f7825"/>
+                    <attribute id="UUID" type="guid" value="e5c335b8-ae06-4744-b7ad-de786ff1cc1e"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="FFT_Knight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(b3f7082f-8cd7-40cc-908a-a095ffe8efd6,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="97410ce3-cd36-4572-9834-87246e9f7825"/>
+                    <attribute id="UUID" type="guid" value="60a54c76-108f-44b4-8424-078578fb4cfc"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ProficiencyBonus(SavingThrow,Dexterity);"/>
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="FFT_Archer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_ArcherPassive;FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="1de4cfff-0b1e-4e24-91b6-ee615abf7831"/>
+                    <attribute id="UUID" type="guid" value="5bbdfa10-b742-411a-bbb1-d95d4a8d61cc"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="FFT_Archer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(7cb089cd-90ef-486b-974f-77c6739e0f59,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="1de4cfff-0b1e-4e24-91b6-ee615abf7831"/>
+                    <attribute id="UUID" type="guid" value="e159a6c5-f25f-4b35-b3e6-9b6d90b60360"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="FFT_Archer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(bd6544e0-2df9-4264-9b00-3b0c7ac2c35a,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="1de4cfff-0b1e-4e24-91b6-ee615abf7831"/>
+                    <attribute id="UUID" type="guid" value="56fcb5ea-ec4c-4ebc-a276-d63889504948"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="FFT_Archer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(ac1174c5-f7a7-4c9c-929f-87e683f2f1b7,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="1de4cfff-0b1e-4e24-91b6-ee615abf7831"/>
+                    <attribute id="UUID" type="guid" value="0ba415d8-cc8b-44a6-9c4e-4594bb577f02"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="FFT_Archer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(86829c24-76ad-490c-b2cc-7ccd467cfd51,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="1de4cfff-0b1e-4e24-91b6-ee615abf7831"/>
+                    <attribute id="UUID" type="guid" value="2a21bf0a-6332-477b-9544-b307755972d7"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="FFT_Archer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(c083588a-0768-4c0a-b553-0214e579d71d,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="1de4cfff-0b1e-4e24-91b6-ee615abf7831"/>
+                    <attribute id="UUID" type="guid" value="e7154eb3-9650-48b5-b619-60fae8b35f9b"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="FFT_Archer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(893f6cff-1686-4569-ab92-44310ef654c3,1,FFTUniqueJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="1de4cfff-0b1e-4e24-91b6-ee615abf7831"/>
+                    <attribute id="UUID" type="guid" value="2f26f88f-10b9-4407-8519-852d5826c2da"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="FFT_Archer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(c083588a-0768-4c0a-b553-0214e579d71d,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="1de4cfff-0b1e-4e24-91b6-ee615abf7831"/>
+                    <attribute id="UUID" type="guid" value="3befe42b-2217-4749-80b4-28cd39c6db18"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="FFT_Archer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(c083588a-0768-4c0a-b553-0214e579d71d,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="1de4cfff-0b1e-4e24-91b6-ee615abf7831"/>
+                    <attribute id="UUID" type="guid" value="a77cd7a4-a2c4-48b6-9051-fa17fc1a28c8"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="FFT_Archer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(c083588a-0768-4c0a-b553-0214e579d71d,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="1de4cfff-0b1e-4e24-91b6-ee615abf7831"/>
+                    <attribute id="UUID" type="guid" value="c6437417-cff8-47ea-9a87-ce0d65b871a4"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="FFT_Archer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(c083588a-0768-4c0a-b553-0214e579d71d,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="1de4cfff-0b1e-4e24-91b6-ee615abf7831"/>
+                    <attribute id="UUID" type="guid" value="bb48b639-0734-4245-923c-8a1394a00b2f"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="FFT_Archer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(c083588a-0768-4c0a-b553-0214e579d71d,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="1de4cfff-0b1e-4e24-91b6-ee615abf7831"/>
+                    <attribute id="UUID" type="guid" value="88ce05fd-1846-46ed-bf77-bad4e4a607e3"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="FFT_Archer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(c083588a-0768-4c0a-b553-0214e579d71d,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="1de4cfff-0b1e-4e24-91b6-ee615abf7831"/>
+                    <attribute id="UUID" type="guid" value="9a551692-3c75-41aa-a7de-109d7d5b2695"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="FFT_Archer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(c083588a-0768-4c0a-b553-0214e579d71d,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="1de4cfff-0b1e-4e24-91b6-ee615abf7831"/>
+                    <attribute id="UUID" type="guid" value="d67ee8dd-6b50-4b27-a06d-393d5d2c1f2a"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="FFT_Archer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(c083588a-0768-4c0a-b553-0214e579d71d,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="1de4cfff-0b1e-4e24-91b6-ee615abf7831"/>
+                    <attribute id="UUID" type="guid" value="2dbcb784-6af6-47a6-af48-1ecf855c149c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="FFT_Archer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(c083588a-0768-4c0a-b553-0214e579d71d,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="1de4cfff-0b1e-4e24-91b6-ee615abf7831"/>
+                    <attribute id="UUID" type="guid" value="8db21583-3114-426e-a26a-6b8879737363"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="FFT_Archer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(c083588a-0768-4c0a-b553-0214e579d71d,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="1de4cfff-0b1e-4e24-91b6-ee615abf7831"/>
+                    <attribute id="UUID" type="guid" value="85e201f8-6616-4afd-9f45-3ef07715887e"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="FFT_Archer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana8"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(c083588a-0768-4c0a-b553-0214e579d71d,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="1de4cfff-0b1e-4e24-91b6-ee615abf7831"/>
+                    <attribute id="UUID" type="guid" value="d9b63c88-ee98-4198-85e5-373658da578f"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0);ProficiencyBonus(SavingThrow,Wisdom);"/>
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="FFT_WhiteMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_WhiteMagePassive;FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="fff843df-9489-4249-8f56-feaf03ed75c1"/>
+                    <attribute id="UUID" type="guid" value="e5be189e-ee96-4a84-8f87-5e2578af4906"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="FFT_WhiteMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(7d46a3b3-f851-4190-a07c-54cd436b343f,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="fff843df-9489-4249-8f56-feaf03ed75c1"/>
+                    <attribute id="UUID" type="guid" value="f620e143-6407-47ec-be85-e3dcb37f6eac"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="FFT_WhiteMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(fa2b441f-645c-4389-bb4b-020c840546fa,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="fff843df-9489-4249-8f56-feaf03ed75c1"/>
+                    <attribute id="UUID" type="guid" value="ac4c4a3f-1952-407f-be47-0e032ea30300"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="FFT_WhiteMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(0dff405f-965a-4a31-ba46-994c4276c9e7,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="fff843df-9489-4249-8f56-feaf03ed75c1"/>
+                    <attribute id="UUID" type="guid" value="4711f2b0-9b17-4494-9726-7c5c5b55b890"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="FFT_WhiteMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(6f646662-5118-470b-a092-692e091d38b7,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="fff843df-9489-4249-8f56-feaf03ed75c1"/>
+                    <attribute id="UUID" type="guid" value="445beb40-5328-4f1a-a6ba-f40a1940c356"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="FFT_WhiteMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(108336c8-f308-48b7-a920-149a6a5048ec,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="fff843df-9489-4249-8f56-feaf03ed75c1"/>
+                    <attribute id="UUID" type="guid" value="82d4b47f-3228-4bc2-96a8-71049cd1b20e"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="FFT_WhiteMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(8f5ab7ce-5525-488e-a8d7-6dbb89516cf3,1,FFTUniqueJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="fff843df-9489-4249-8f56-feaf03ed75c1"/>
+                    <attribute id="UUID" type="guid" value="33eb3e4f-0e18-477e-982d-0e07c0120daf"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="FFT_WhiteMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(108336c8-f308-48b7-a920-149a6a5048ec,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="fff843df-9489-4249-8f56-feaf03ed75c1"/>
+                    <attribute id="UUID" type="guid" value="e956bb2d-837b-4a88-8181-0d9f1ac6b912"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="FFT_WhiteMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(108336c8-f308-48b7-a920-149a6a5048ec,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="fff843df-9489-4249-8f56-feaf03ed75c1"/>
+                    <attribute id="UUID" type="guid" value="f0bc06fa-218a-446e-a062-11230c2765d0"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="FFT_WhiteMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(108336c8-f308-48b7-a920-149a6a5048ec,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="fff843df-9489-4249-8f56-feaf03ed75c1"/>
+                    <attribute id="UUID" type="guid" value="1ff8664c-cf74-44fa-9f6c-a99cfeeb5148"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="FFT_WhiteMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(108336c8-f308-48b7-a920-149a6a5048ec,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="fff843df-9489-4249-8f56-feaf03ed75c1"/>
+                    <attribute id="UUID" type="guid" value="4ab873b1-97b1-43f8-8a45-5c630bdfe52e"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="FFT_WhiteMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(108336c8-f308-48b7-a920-149a6a5048ec,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="fff843df-9489-4249-8f56-feaf03ed75c1"/>
+                    <attribute id="UUID" type="guid" value="cce3ab6f-112c-4a02-803d-bfa88a544c14"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="FFT_WhiteMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(108336c8-f308-48b7-a920-149a6a5048ec,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="fff843df-9489-4249-8f56-feaf03ed75c1"/>
+                    <attribute id="UUID" type="guid" value="8bef00e9-f140-481b-8b9f-f687378cda5e"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="FFT_WhiteMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(108336c8-f308-48b7-a920-149a6a5048ec,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="fff843df-9489-4249-8f56-feaf03ed75c1"/>
+                    <attribute id="UUID" type="guid" value="631c1009-a759-4b9c-a4b8-ea0343cbb283"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="FFT_WhiteMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(108336c8-f308-48b7-a920-149a6a5048ec,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="fff843df-9489-4249-8f56-feaf03ed75c1"/>
+                    <attribute id="UUID" type="guid" value="952e5cfc-0aa4-41d5-9a31-9c7e19c67a08"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="FFT_WhiteMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(108336c8-f308-48b7-a920-149a6a5048ec,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="fff843df-9489-4249-8f56-feaf03ed75c1"/>
+                    <attribute id="UUID" type="guid" value="0d4a101a-d663-4fa3-ac16-d4ec92797a70"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="FFT_WhiteMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(108336c8-f308-48b7-a920-149a6a5048ec,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="fff843df-9489-4249-8f56-feaf03ed75c1"/>
+                    <attribute id="UUID" type="guid" value="ff74c789-2424-4f36-a335-3dc8c3ac5389"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="FFT_WhiteMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(108336c8-f308-48b7-a920-149a6a5048ec,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="fff843df-9489-4249-8f56-feaf03ed75c1"/>
+                    <attribute id="UUID" type="guid" value="bf6644de-a91a-4251-be68-3b947881d341"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0);ProficiencyBonus(SavingThrow,Intelligence);"/>
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="FFT_BlackMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_BlackMagePassive;FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="9fc2c7a6-61e0-46ca-9120-769b1d85de39"/>
+                    <attribute id="UUID" type="guid" value="74575337-be50-46a5-93c6-c2874db4a02d"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="FFT_BlackMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(c982db73-d0e8-401c-8c71-8fc730c45cf6,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="9fc2c7a6-61e0-46ca-9120-769b1d85de39"/>
+                    <attribute id="UUID" type="guid" value="799ad8ea-ab5a-4565-bdf8-a92b9858af8b"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="FFT_BlackMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(d535b732-6687-4bef-926a-158cbd400735,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="9fc2c7a6-61e0-46ca-9120-769b1d85de39"/>
+                    <attribute id="UUID" type="guid" value="22a0b975-1896-4acb-85cd-3e4a6945e9dc"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="FFT_BlackMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(00437d2f-854c-4696-ae5c-5fb5f21bba99,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="9fc2c7a6-61e0-46ca-9120-769b1d85de39"/>
+                    <attribute id="UUID" type="guid" value="1419882f-4e4a-4c83-b2a8-097c951b29d3"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="FFT_BlackMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(3ee34f99-1650-457e-9def-47a522609866,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="9fc2c7a6-61e0-46ca-9120-769b1d85de39"/>
+                    <attribute id="UUID" type="guid" value="21692421-087c-4098-a104-18f27c86aeb6"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="FFT_BlackMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(89166ecb-277b-4178-a82c-713b97e7afea,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="9fc2c7a6-61e0-46ca-9120-769b1d85de39"/>
+                    <attribute id="UUID" type="guid" value="4f9a1cb4-f351-44c1-94a8-85723a4362c2"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="FFT_BlackMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(fa725358-f28e-4f71-8d89-6ee436521f4b,1,FFTUniqueJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="9fc2c7a6-61e0-46ca-9120-769b1d85de39"/>
+                    <attribute id="UUID" type="guid" value="c3b84766-89d6-49c6-ac97-4c2cdfc3bd9a"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="FFT_BlackMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(89166ecb-277b-4178-a82c-713b97e7afea,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="9fc2c7a6-61e0-46ca-9120-769b1d85de39"/>
+                    <attribute id="UUID" type="guid" value="292d5c57-f33a-4629-a47b-31bf303d9e38"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="FFT_BlackMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(89166ecb-277b-4178-a82c-713b97e7afea,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="9fc2c7a6-61e0-46ca-9120-769b1d85de39"/>
+                    <attribute id="UUID" type="guid" value="16dcef77-0574-4b7b-99e7-24403623a878"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="FFT_BlackMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(89166ecb-277b-4178-a82c-713b97e7afea,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="9fc2c7a6-61e0-46ca-9120-769b1d85de39"/>
+                    <attribute id="UUID" type="guid" value="6dbcddce-3d60-4538-8af4-f41bc3c49953"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="FFT_BlackMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(89166ecb-277b-4178-a82c-713b97e7afea,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="9fc2c7a6-61e0-46ca-9120-769b1d85de39"/>
+                    <attribute id="UUID" type="guid" value="cb0d2622-7900-4524-a6ee-64dbd816dd8a"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="FFT_BlackMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(89166ecb-277b-4178-a82c-713b97e7afea,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="9fc2c7a6-61e0-46ca-9120-769b1d85de39"/>
+                    <attribute id="UUID" type="guid" value="58b1cdb6-b71f-49f1-aa1c-87259bf4c6e3"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="FFT_BlackMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(89166ecb-277b-4178-a82c-713b97e7afea,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="9fc2c7a6-61e0-46ca-9120-769b1d85de39"/>
+                    <attribute id="UUID" type="guid" value="57a99600-46d6-429d-ba07-d1221d1a0f60"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="FFT_BlackMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(89166ecb-277b-4178-a82c-713b97e7afea,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="9fc2c7a6-61e0-46ca-9120-769b1d85de39"/>
+                    <attribute id="UUID" type="guid" value="70796194-0204-471d-884e-50f6edaa210c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="FFT_BlackMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(89166ecb-277b-4178-a82c-713b97e7afea,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="9fc2c7a6-61e0-46ca-9120-769b1d85de39"/>
+                    <attribute id="UUID" type="guid" value="2c597587-3233-462e-a0bf-35ae58efc2f7"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="FFT_BlackMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(89166ecb-277b-4178-a82c-713b97e7afea,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="9fc2c7a6-61e0-46ca-9120-769b1d85de39"/>
+                    <attribute id="UUID" type="guid" value="39fbacef-468f-4d7a-a820-9fafe56546ad"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="FFT_BlackMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(89166ecb-277b-4178-a82c-713b97e7afea,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="9fc2c7a6-61e0-46ca-9120-769b1d85de39"/>
+                    <attribute id="UUID" type="guid" value="9f1deef9-f178-4b08-b6dd-bfdc97a40add"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(FFTMana,12,0)"/>
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="FFT_BlackMage"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FFT_CC_Mana12"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(89166ecb-277b-4178-a82c-713b97e7afea,1,FFTJobMastery)"/>
+                    <attribute id="TableUUID" type="guid" value="9fc2c7a6-61e0-46ca-9120-769b1d85de39"/>
+                    <attribute id="UUID" type="guid" value="c177a07c-0da4-4ef8-9d85-73cdd1b04960"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

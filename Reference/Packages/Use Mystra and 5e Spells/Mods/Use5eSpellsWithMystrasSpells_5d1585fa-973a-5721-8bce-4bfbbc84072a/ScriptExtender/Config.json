@@ -1,0 +1,5 @@
+{
+    "RequiredVersion": 25,
+    "ModTable": "Use5eSpellsWithMystrasSpells_5d1585fa-973a-5721-8bce-4bfbbc84072a",
+    "FeatureFlags": ["Lua"]
+}

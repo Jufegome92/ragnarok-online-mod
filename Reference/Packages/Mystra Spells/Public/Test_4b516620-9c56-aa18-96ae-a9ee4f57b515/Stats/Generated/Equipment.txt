@@ -1,0 +1,20 @@
+new equipment "Cambion_InfernalCalling"
+add initialweaponset "Melee"
+add equipmentgroup
+add equipment entry "WPN_Trident_1_Infernal"
+
+new equipment "Cambion_InfernalCalling_6"
+add initialweaponset "Melee"
+add equipmentgroup
+add equipment entry "WPN_Trident_2_Infernal"
+
+new equipment "EQP_Redcap_Sickle_1"
+add initialweaponset "Melee"
+add equipmentgroup
+add equipment entry "WPN_Redcap_Sickle_1"
+
+new equipment "EQP_SummonDragon"
+add initialweaponset "Melee"
+add equipmentgroup
+add equipment entry "ARM_Underwear_Humans"
+

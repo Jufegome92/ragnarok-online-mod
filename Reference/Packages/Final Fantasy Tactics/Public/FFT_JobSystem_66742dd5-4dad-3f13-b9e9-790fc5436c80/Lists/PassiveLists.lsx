@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="PassiveLists">
+        <node id="root">
+            <children>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_Knight4"/>
+                    <attribute id="Passives" type="LSString" value="FFT_MonkPassive,FFT_GeomancerPassive,FFT_ArcherPassive"/>
+                    <attribute id="UUID" type="guid" value="4b861ba1-0197-48bb-b9ce-d14180c8c352"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_Knight5"/>
+                    <attribute id="Passives" type="LSString" value="FFT_MonkPassive,FFT_GeomancerPassive,FFT_ArcherPassive,FFT_ThiefPassive,FFT_DragoonPassive"/>
+                    <attribute id="UUID" type="guid" value="816c65c2-68d6-4c06-8c57-36b275c3d6d1"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_Knight6"/>
+                    <attribute id="Passives" type="LSString" value="FFT_MonkPassive,FFT_GeomancerPassive,FFT_ArcherPassive,FFT_ThiefPassive,FFT_DragoonPassive,FFT_WhiteMagePassive,FFT_BlackMagePassive"/>
+                    <attribute id="UUID" type="guid" value="8939699e-deb8-46b4-acd2-63a8414c727a"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_Knight7"/>
+                    <attribute id="Passives" type="LSString" value="FFT_MonkPassive,FFT_GeomancerPassive,FFT_ArcherPassive,FFT_ThiefPassive,FFT_DragoonPassive,FFT_SamuraiPassive,FFT_WhiteMagePassive,FFT_BlackMagePassive"/>
+                    <attribute id="UUID" type="guid" value="9173252b-8a34-4b29-988b-aa3e237408cc"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_Knight8"/>
+                    <attribute id="Passives" type="LSString" value="FFT_MonkPassive,FFT_GeomancerPassive,FFT_ArcherPassive,FFT_ThiefPassive,FFT_DragoonPassive,FFT_SamuraiPassive,FFT_WhiteMagePassive,FFT_BlackMagePassive,FFT_MysticPassive,FFT_OratorPassive,FFT_TimeMagePassive,FFT_SummonerPassive"/>
+                    <attribute id="UUID" type="guid" value="b3f7082f-8cd7-40cc-908a-a095ffe8efd6"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_Knight9"/>
+                    <attribute id="Passives" type="LSString" value="FFT_HolyKnightPassive,FFT_DarkKnightPassive,FFT_SoldierPassive"/>
+                    <attribute id="UUID" type="guid" value="65dc5bc4-7207-4bd8-8545-678c488b160a"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_Archer4"/>
+                    <attribute id="Passives" type="LSString" value="FFT_ThiefPassive,FFT_DragoonPassive,FFT_KnightPassive"/>
+                    <attribute id="UUID" type="guid" value="7cb089cd-90ef-486b-974f-77c6739e0f59"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_Archer5"/>
+                    <attribute id="Passives" type="LSString" value="FFT_ThiefPassive,FFT_DragoonPassive,FFT_KnightPassive,FFT_MonkPassive,FFT_GeomancerPassive"/>
+                    <attribute id="UUID" type="guid" value="bd6544e0-2df9-4264-9b00-3b0c7ac2c35a"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_Archer6"/>
+                    <attribute id="Passives" type="LSString" value="FFT_ThiefPassive,FFT_DragoonPassive,FFT_KnightPassive,FFT_MonkPassive,FFT_GeomancerPassive,FFT_WhiteMagePassive,FFT_BlackMagePassive"/>
+                    <attribute id="UUID" type="guid" value="ac1174c5-f7a7-4c9c-929f-87e683f2f1b7"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_Archer7"/>
+                    <attribute id="Passives" type="LSString" value="FFT_ThiefPassive,FFT_DragoonPassive,FFT_KnightPassive,FFT_MonkPassive,FFT_GeomancerPassive,FFT_NinjaPassive,FFT_WhiteMagePassive,FFT_BlackMagePassive"/>
+                    <attribute id="UUID" type="guid" value="86829c24-76ad-490c-b2cc-7ccd467cfd51"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_Archer8"/>
+                    <attribute id="Passives" type="LSString" value="FFT_ThiefPassive,FFT_DragoonPassive,FFT_KnightPassive,FFT_MonkPassive,FFT_GeomancerPassive,FFT_NinjaPassive,FFT_WhiteMagePassive,FFT_BlackMagePassive,FFT_MysticPassive,FFT_OratorPassive,FFT_TimeMagePassive,FFT_SummonerPassive"/>
+                    <attribute id="UUID" type="guid" value="c083588a-0768-4c0a-b553-0214e579d71d"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_Archer9"/>
+                    <attribute id="Passives" type="LSString" value="FFT_SkyPiratePassive,FFT_DragonerPassive,FFT_SoldierPassive"/>
+                    <attribute id="UUID" type="guid" value="893f6cff-1686-4569-ab92-44310ef654c3"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_WhiteMage4"/>
+                    <attribute id="Passives" type="LSString" value="FFT_MysticPassive,FFT_OratorPassive,FFT_BlackMagePassive"/>
+                    <attribute id="UUID" type="guid" value="7d46a3b3-f851-4190-a07c-54cd436b343f"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_WhiteMage5"/>
+                    <attribute id="Passives" type="LSString" value="FFT_MysticPassive,FFT_OratorPassive,FFT_BlackMagePassive,FFT_TimeMagePassive,FFT_SummonerPassive"/>
+                    <attribute id="UUID" type="guid" value="fa2b441f-645c-4389-bb4b-020c840546fa"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_WhiteMage6"/>
+                    <attribute id="Passives" type="LSString" value="FFT_MysticPassive,FFT_OratorPassive,FFT_BlackMagePassive,FFT_TimeMagePassive,FFT_SummonerPassive,FFT_KnightPassive,FFT_ArcherPassive"/>
+                    <attribute id="UUID" type="guid" value="0dff405f-965a-4a31-ba46-994c4276c9e7"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_WhiteMage7"/>
+                    <attribute id="Passives" type="LSString" value="FFT_MysticPassive,FFT_OratorPassive,FFT_BlackMagePassive,FFT_TimeMagePassive,FFT_SummonerPassive,FFT_BardPassive,FFT_KnightPassive,FFT_ArcherPassive"/>
+                    <attribute id="UUID" type="guid" value="6f646662-5118-470b-a092-692e091d38b7"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_WhiteMage8"/>
+                    <attribute id="Passives" type="LSString" value="FFT_MysticPassive,FFT_OratorPassive,FFT_BlackMagePassive,FFT_TimeMagePassive,FFT_SummonerPassive,FFT_BardPassive,FFT_KnightPassive,FFT_ArcherPassive,FFT_MonkPassive,FFT_GeomancerPassive,FFT_ThiefPassive,FFT_DragoonPassive"/>
+                    <attribute id="UUID" type="guid" value="108336c8-f308-48b7-a920-149a6a5048ec"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_WhiteMage9"/>
+                    <attribute id="Passives" type="LSString" value="FFT_SkyseerPassive,FFT_TemplarPassive"/>
+                    <attribute id="UUID" type="guid" value="8f5ab7ce-5525-488e-a8d7-6dbb89516cf3"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_BlackMage4"/>
+                    <attribute id="Passives" type="LSString" value="FFT_TimeMagePassive,FFT_SummonerPassive,FFT_WhiteMagePassive"/>
+                    <attribute id="UUID" type="guid" value="c982db73-d0e8-401c-8c71-8fc730c45cf6"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_BlackMage5"/>
+                    <attribute id="Passives" type="LSString" value="FFT_TimeMagePassive,FFT_SummonerPassive,FFT_WhiteMagePassive,FFT_MysticPassive,FFT_OratorPassive"/>
+                    <attribute id="UUID" type="guid" value="d535b732-6687-4bef-926a-158cbd400735"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_BlackMage6"/>
+                    <attribute id="Passives" type="LSString" value="FFT_TimeMagePassive,FFT_SummonerPassive,FFT_WhiteMagePassive,FFT_MysticPassive,FFT_OratorPassive,FFT_KnightPassive,FFT_ArcherPassive"/>
+                    <attribute id="UUID" type="guid" value="00437d2f-854c-4696-ae5c-5fb5f21bba99"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_BlackMage7"/>
+                    <attribute id="Passives" type="LSString" value="FFT_TimeMagePassive,FFT_SummonerPassive,FFT_WhiteMagePassive,FFT_DancerPassive,FFT_MysticPassive,FFT_OratorPassive,FFT_KnightPassive,FFT_ArcherPassive"/>
+                    <attribute id="UUID" type="guid" value="3ee34f99-1650-457e-9def-47a522609866"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_BlackMage8"/>
+                    <attribute id="Passives" type="LSString" value="FFT_TimeMagePassive,FFT_SummonerPassive,FFT_WhiteMagePassive,FFT_DancerPassive,FFT_MysticPassive,FFT_OratorPassive,FFT_KnightPassive,FFT_ArcherPassive,FFT_MonkPassive,FFT_GeomancerPassive,FFT_ThiefPassive,FFT_DragoonPassive"/>
+                    <attribute id="UUID" type="guid" value="89166ecb-277b-4178-a82c-713b97e7afea"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="FFT_BlackMage9"/>
+                    <attribute id="Passives" type="LSString" value="FFT_NetherseerPassive,FFT_SorcererPassive"/>
+                    <attribute id="UUID" type="guid" value="fa725358-f28e-4f71-8d89-6ee436521f4b"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

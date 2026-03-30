@@ -1,0 +1,638 @@
+{
+  "class": "Novice",
+  "subclass": "Swordsman",
+
+  "granted_at_character_level": 2,
+
+  "hit_points": {
+    "base": 12,
+    "per_level": 10,
+    "constitution_modifier_applies": true,
+    "formula_note": "At Swordsman levels, gain 10 HP + Constitution modifier per level."
+  },
+
+  "spellcasting_ability": "Wisdom",
+  "spellcasting_save_dc_formula": "8 + proficiency_bonus + wisdom_modifier",
+
+  "mana_points": {
+    "base_formula": "4 + (2 * character_level)",
+    "modifier_scaling": "character_level * floor(spellcasting_modifier / 2)",
+    "total_formula": "(4 + (2 * character_level)) + (character_level * floor(spellcasting_modifier / 2))",
+    "formula_note": "For Swordsman, spellcasting_modifier uses Wisdom."
+  },
+
+  "proficiencies": {
+    "saving_throws": [
+      "Strength",
+      "Constitution"
+    ],
+    "armor": [
+      "Light Armor",
+      "Medium Armor",
+      "Heavy Armor",
+      "Shield"
+    ],
+    "weapons": [
+      "Longsword",
+      "Greatsword",
+      "Shortsword",
+      "Rapier",
+      "Scimitar",
+      "Spear",
+      "Pike",
+      "Halberd",
+      "Glaive",
+      "Battleaxe",
+      "Greataxe",
+      "Warhammer",
+      "Maul",
+      "Flail",
+      "Morningstar",
+      "Trident"
+    ],
+    "tools": [],
+    "skills": {
+      "fixed": [
+        "Athletics",
+        "Intimidation"
+      ],
+      "expertise": 1
+    }
+  },
+
+  "design_identity": {
+    "role": "Frontliner / Melee Control",
+    "combat_style": "Provokes enemies, resists disruption, and controls melee exchanges through discipline and pressure",
+    "strengths": [
+      "High durability",
+      "Strong melee control",
+      "Can hold enemy attention",
+      "Stable sustained damage"
+    ],
+    "weaknesses": [
+      "Limited ranged pressure",
+      "Relies on staying engaged",
+      "Can be kited if unsupported"
+    ]
+  },
+
+  "design_scope": {
+    "max_level": 12,
+    "first_job_start_level": 2,
+    "second_job_target_level": 6,
+    "resource_system": {
+      "name": "MP",
+      "description": "Recurso principal usado por técnicas marciales, posturas y habilidades de control del Swordsman.",
+      "design_notes": [
+        "El Swordsman no usa magia tradicional; canaliza su resistencia física y temple como recurso.",
+        "Wisdom mejora la frecuencia de uso y fortalece varias habilidades de aguante y control.",
+        "La identidad del job está en fijar enemigos, resistir castigo y devolver presión en melee."
+      ]
+    }
+  },
+
+  "progression": {
+    "level_2": {
+      "class_state": "Swordsman",
+      "features_gained": [
+        "Weapon Discipline",
+        "Bash",
+        "Provoke"
+      ]
+    },
+    "level_3": {
+      "features_gained": [
+        "Endure"
+      ]
+    },
+    "level_4": {
+      "features_gained": [
+        "Increase Recuperative Power"
+      ]
+    },
+    "level_5": {
+      "features_gained": [
+        "Magnum Break"
+      ]
+    },
+    "level_6": {
+      "features_gained": [
+        "Auto Berserk"
+      ],
+      "transition_note": "Nivel ideal para comenzar la especialización hacia el Second Job."
+    }
+  },
+
+  "skills": [
+    {
+      "id": "swordsman_weapon_discipline",
+      "name": "Weapon Discipline",
+      "learned_at_level": 2,
+      "category": "Stance",
+      "action_type": "Bonus Action",
+      "cost_mp": 1,
+      "requires_concentration": false,
+      "requires": [
+        "Melee weapon equipped"
+      ],
+      "duration": "Until switched off, replaced by another discipline, or combat ends",
+      "description": "El Swordsman adopta una disciplina de combate según el arma que porta. La disciplina define cómo controla el espacio y responde al castigo.",
+      "base_effects": {
+        "choose_one": [
+          "One-Hand Discipline",
+          "Two-Hand Discipline"
+        ]
+      },
+      "discipline_variants": {
+        "One-Hand Discipline": {
+          "identity": "Control, defense and stable dueling",
+          "base_effects": {
+            "armor_class_bonus": 1,
+            "bash_control_bonus": true
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 2,
+                "effects": {
+                  "armor_class_bonus": 1
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "provoke_bonus_damage_vs_goaded_targets": "Adds 1d4 to every attack against a Goaded target"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "armor_class_bonus": 2
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "bash_against_goaded_targets_has_advantage": true,
+                  "provoke_bonus_damage_vs_goaded_targets": "Adds 1d6 to every attack against a Goaded target"
+                }
+              }
+            ]
+          }
+        },
+        "Two-Hand Discipline": {
+          "identity": "Pressure, break and offensive melee commitment",
+          "base_effects": {
+            "melee_damage_bonus": "1d4 bonus damage on all melee attacks"
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 2,
+                "effects": {
+                  "melee_damage_bonus": "1d4 bonus damage on all melee attacks"
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "magnum_break_bonus_damage": "1d6 bonus Fire damage added to Magnum Break"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "melee_damage_bonus": "1d8 bonus damage on all melee attacks"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "attacks_against_goaded_targets_ignore_minor_damage_reduction": true
+                }
+              }
+            ]
+          }
+        }
+      },
+      "synergies": [
+        "Defines whether the Swordsman behaves as a duelist-controller or offensive breaker",
+        "Affects how Bash, Provoke and Magnum Break feel in play"
+      ],
+      "design_notes": [
+        "This replaces Sword Mastery and Two-Hand Sword Mastery as separate passive skills.",
+        "It should feel like a real combat choice, not passive background math."
+      ]
+    },
+
+    {
+      "id": "swordsman_provoke",
+      "name": "Provoke",
+      "learned_at_level": 2,
+      "category": "Control",
+      "action_type": "Bonus Action",
+      "cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Valid target within 9m"
+      ],
+      "duration": "2 turns",
+      "range": "9m",
+      "description": "El Swordsman desafía a un enemigo de forma abierta y violenta, obligándolo a centrar su agresión en él.",
+      "base_effects": {
+        "applies_condition": "Goaded",
+        "condition_behavior": [
+          "Target must attack the Swordsman if possible",
+          "Target has disadvantage on attack rolls against other targets"
+        ]
+      },
+      "scaling": {
+        "type": "milestone_control_scaling",
+        "milestones": [
+          {
+            "level": 2,
+            "effects": {
+              "duration_turns": 2
+            }
+          },
+          {
+            "level": 5,
+            "effects": {
+              "bonus_damage_against_goaded_target": "Adds 1d4 to every source of attack against a Goaded target (from other players)"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "duration_turns": 3
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "target_takes_penalty_to_escape_or_disengage_from_swordsman": true
+            }
+          }
+        ]
+      },
+      "synergies": [
+        "Creates ideal targets for Bash and Two-Hand Discipline",
+        "Combines with Endure to hold dangerous enemies in place"
+      ],
+      "design_notes": [
+        "This is the center of the Swordsman control identity.",
+        "Two turns is a better baseline than one turn for this system."
+      ]
+    },
+
+    {
+      "id": "swordsman_bash",
+      "name": "Bash",
+      "learned_at_level": 2,
+      "category": "Attack",
+      "action_type": "Action",
+      "cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Melee weapon equipped",
+        "Enemy in melee range"
+      ],
+      "duration": "Instant",
+      "description": "Golpe técnico y contundente diseñado para interrumpir, desestabilizar y castigar a un enemigo cercano.",
+      "base_effects": {
+        "damage_profile": "Weapon-based melee damage",
+        "bonus_damage": "1d6",
+        "saving_throw": "Constitution",
+        "on_failed_save": "Target becomes Dazed for 1 turn"
+      },
+      "scaling": {
+        "type": "milestone_attack_and_control_scaling",
+        "milestones": [
+          {
+            "level": 2,
+            "effects": {
+              "bonus_damage": "1d6",
+              "on_failed_save": "Target becomes Dazed for 1 turn"
+            }
+          },
+          {
+            "level": 5,
+            "effects": {
+              "bonus_damage": "1d8",
+              "fatal_blow_evolution": "If target is Goaded, Bash can Stun instead of Daze on failed save"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "bonus_damage": "1d12"
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "against_goaded_targets_bash_has_advantage": true
+            }
+          }
+        ]
+      },
+      "synergies": [
+        "Its strongest setup comes from Provoke",
+        "One-Hand Discipline improves its control identity",
+        "Two-Hand Discipline improves its offensive identity"
+      ],
+      "design_notes": [
+        "Fatal Blow is absorbed into Bash as a milestone evolution instead of becoming another button."
+      ]
+    },
+
+    {
+      "id": "swordsman_endure",
+      "name": "Endure",
+      "learned_at_level": 3,
+      "category": "Buff",
+      "action_type": "Bonus Action",
+      "cost_mp": 3,
+      "requires_concentration": true,
+      "requires": [],
+      "duration": "2 turns",
+      "description": "El Swordsman se afirma con voluntad brutal y decide no ceder terreno ni ritmo ante la presión enemiga.",
+      "base_effects": {
+        "cannot_be_forced_moved_by_minor_effects": true,
+        "advantage_on_saves_against_prone_stun_and_forced_movement": true
+      },
+      "scaling": {
+        "type": "milestone_defensive_scaling",
+        "milestones": [
+          {
+            "level": 3,
+            "effects": {
+              "cannot_be_forced_moved_by_minor_effects": true
+            }
+          },
+          {
+            "level": 6,
+            "effects": {
+              "gain_temporary_hit_points": "1d6 + constitution_modifier"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "duration_turns": 3
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "gain_temporary_hit_points": "2d6 + constitution_modifier"
+            }
+          }
+        ]
+      },
+      "synergies": [
+        "Keeps Provoke functional under pressure",
+        "Lets the Swordsman maintain frontline presence while surrounded"
+      ],
+      "design_notes": [
+        "This should feel like standing your ground, not magical shielding."
+      ]
+    },
+
+    {
+      "id": "swordsman_increase_recuperative_power",
+      "name": "Increase Recuperative Power",
+      "learned_at_level": 4,
+      "category": "Buff",
+      "action_type": "Bonus Action",
+      "cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "3 turns",
+      "description": "El Swordsman acelera su recuperación física en combate a través de disciplina, respiración y movimiento continuo.",
+      "base_effects": {
+        "heal_at_start_of_turn": "1d4",
+        "moving_hp_recovery_integration": "If you moved at least 3m during your previous turn, heal an additional amount of HP equal to your wisdom modifier (minimum of 1)"
+      },
+      "scaling": {
+        "type": "milestone_sustain_scaling",
+        "milestones": [
+          {
+            "level": 4,
+            "effects": {
+              "heal_at_start_of_turn": "1d4"
+            }
+          },
+          {
+            "level": 6,
+            "effects": {
+              "heal_at_start_of_turn": "1d8"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "moving_hp_recovery_integration": "If you moved at least 3m during your previous turn, heal an additional amount of HP equal to twice your wisdom modifier (minimum of 2)"
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "heal_at_start_of_turn": "1d12"
+            }
+          }
+        ]
+      },
+      "synergies": [
+        "Pairs well with Endure and prolonged frontline presence",
+        "Moving HP Recovery is absorbed here as a scaling layer instead of a separate passive"
+      ],
+      "design_notes": [
+        "This should not outheal dedicated support, but it should make the Swordsman noticeably stubborn."
+      ]
+    },
+
+    {
+      "id": "swordsman_magnum_break",
+      "name": "Magnum Break",
+      "learned_at_level": 5,
+      "category": "Attack",
+      "action_type": "Action",
+      "cost_mp": 4,
+      "requires_concentration": false,
+      "requires": [
+        "Melee weapon equipped"
+      ],
+      "duration": "Instant",
+      "range": "Self-centered burst",
+      "description": "El Swordsman libera una explosión violenta desde su posición, dañando y apartando enemigos cercanos mientras rompe formaciones.",
+      "base_effects": {
+        "damage_profile": "Weapon-based melee damage plus 1d6 Fire damage",
+        "area_radius": "3m",
+        "push_distance_meters": 2
+      },
+      "scaling": {
+        "type": "milestone_burst_scaling",
+        "milestones": [
+          {
+            "level": 5,
+            "effects": {
+              "bonus_fire_damage": "1d6"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "bonus_fire_damage": "1d8",
+              "push_distance_meters": 3
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "bonus_fire_damage": "1d10",
+              "goaded_targets_take_bonus_damage": "1d4"
+            }
+          }
+        ]
+      },
+      "synergies": [
+        "Best used when surrounded after using Provoke",
+        "Two-Hand Discipline enhances its pressure fantasy"
+      ],
+      "design_notes": [
+        "This is the Swordsman's burst-space-control skill.",
+        "It should be strong in close quarters, but not replace Bash as the default attack technique."
+      ]
+    },
+
+    {
+      "id": "swordsman_auto_berserk",
+      "name": "Auto Berserk",
+      "learned_at_level": 6,
+      "category": "Passive",
+      "action_type": "Passive",
+      "cost_mp": 0,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "2 turns when triggered",
+      "description": "Cuando el Swordsman queda al borde del colapso, su instinto de supervivencia se impone y entra automáticamente en un estado de combate feroz.",
+      "base_effects": {
+        "trigger_condition": "Once per Short Rest, when HP falls below 35%",
+        "effects_on_trigger": [
+          "+2 melee damage",
+          "+3m movement speed",
+          "-1 Armor Class"
+        ]
+      },
+      "scaling": {
+        "type": "milestone_reactive_scaling",
+        "milestones": [
+          {
+            "level": 6,
+            "effects": {
+              "duration_turns": 2
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "melee_damage_bonus": 3
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "duration_turns": 3
+            }
+          }
+        ]
+      },
+      "synergies": [
+        "Turns desperate health states into offensive momentum",
+        "Works naturally with Increase Recuperative Power and Endure"
+      ],
+      "design_notes": [
+        "This should be reactive, not manually activated.",
+        "It represents Auto Berserk much better as a trigger state than as a normal skill."
+      ]
+    }
+  ],
+
+  "summary_tables": {
+    "skill_unlocks": [
+      {
+        "level": 2,
+        "skills": [
+          "Weapon Discipline",
+          "Bash",
+          "Provoke"
+        ]
+      },
+      {
+        "level": 3,
+        "skills": [
+          "Endure"
+        ]
+      },
+      {
+        "level": 4,
+        "skills": [
+          "Increase Recuperative Power"
+        ]
+      },
+      {
+        "level": 5,
+        "skills": [
+          "Magnum Break"
+        ]
+      },
+      {
+        "level": 6,
+        "skills": [
+          "Auto Berserk"
+        ]
+      }
+    ],
+    "quick_costs": [
+      {
+        "name": "Weapon Discipline",
+        "cost_mp": 1
+      },
+      {
+        "name": "Bash",
+        "cost_mp": 2
+      },
+      {
+        "name": "Provoke",
+        "cost_mp": 2
+      },
+      {
+        "name": "Endure",
+        "cost_mp": 3
+      },
+      {
+        "name": "Increase Recuperative Power",
+        "cost_mp": 2
+      },
+      {
+        "name": "Magnum Break",
+        "cost_mp": 4
+      },
+      {
+        "name": "Auto Berserk",
+        "cost_mp": 0
+      }
+    ]
+  },
+
+  "core_design_rules": [
+    "El Swordsman es un frontliner de control, presión y disciplina física.",
+    "Weapon Discipline reemplaza masteries pasivas como decisiones activas de combate.",
+    "Provoke es el centro del control del Swordsman y utiliza la lógica de Goaded como base.",
+    "Bash absorbe la identidad de Fatal Blow a través de su escalado.",
+    "Increase Recuperative Power absorbe la identidad de Moving HP Recovery mediante sustain ligado al movimiento y la permanencia.",
+    "Endure y Auto Berserk representan dos respuestas distintas al daño: resistir o desatarse.",
+    "El Second Job no debería reemplazar este kit, sino especializar su estilo defensivo u ofensivo."
+  ]
+}
