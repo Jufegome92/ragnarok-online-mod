@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="SpellLists">
+        <node id="root">
+            <children>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Cantrips Choice"/>
+                    <attribute id="Spells" type="LSString" value="Target_ChillTouch;Target_Guidance;Target_Light;Shout_ProduceFlame;Target_Resistance"/>
+                    <attribute id="UUID" type="guid" value="42422fcc-03d3-4d56-b47a-7139afdcc153"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter SLevel 1"/>
+                    <attribute id="Spells" type="LSString" value="Target_DH_DemonsBite;Projectile_DH_ThrowGlaive"/>
+                    <attribute id="UUID" type="guid" value="edac2aad-d01a-4a0d-8f2b-204ecd521c80"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter SLevel 2"/>
+                    <attribute id="Spells" type="LSString" value="Shout_DH_Glide"/>
+                    <attribute id="UUID" type="guid" value="e0e3ab0d-d889-49b8-91c0-5207f773ac38"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter SLevel 2 Choice"/>
+                    <attribute id="Spells" type="LSString" value="Target_DH_ConsumeMagic;Shout_DH_Immolation_Aura;Target_DH_Imprison;Shout_DH_SpectralSight;Shout_DH_VengefulRetreat"/>
+                    <attribute id="UUID" type="guid" value="677a1d4d-98cf-4c17-aeeb-343af692f7e8"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter CLevel 7"/>
+                    <attribute id="Spells" type="LSString" value="Target_DH_Disrupt"/>
+                    <attribute id="UUID" type="guid" value="a341c53e-bdf4-4a83-ae16-47efbf84efa3"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="HAVOC SPELL LISTS"/>
+                    <attribute id="UUID" type="guid" value="2eecf2f7-becc-4066-a28a-42f04ff2be48"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Havoc SLevel 3"/>
+                    <attribute id="Spells" type="LSString" value="Rush_DH_FelRush"/>
+                    <attribute id="UUID" type="guid" value="e2058d41-b957-4a34-b152-1077eb2b2a43"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Havoc SLevel 4"/>
+                    <attribute id="Spells" type="LSString" value="Projectile_DH_BladeDance;Target_DH_ChaosStrike"/>
+                    <attribute id="UUID" type="guid" value="f86f5b81-eba1-45d6-838a-eacf89e36178"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Havoc SLevel 4 Choice"/>
+                    <attribute id="Spells" type="LSString" value="Target_DH_ConsumeMagic;Shout_DH_Immolation_Aura;Target_DH_Imprison;Shout_DH_Netherwalk;Shout_DH_SpectralSight;Shout_DH_VengefulRetreat"/>
+                    <attribute id="UUID" type="guid" value="f5539c79-452a-4b71-bdfb-667a2f4905ae"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Havoc SLevel 5"/>
+                    <attribute id="Spells" type="LSString" value="Shout_DH_Blur;Zone_DH_EyeBeam"/>
+                    <attribute id="UUID" type="guid" value="5fe613c7-3d26-4ca8-babc-d221ed2ab508"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Havoc SLevel 5 Choice"/>
+                    <attribute id="Spells" type="LSString" value="Target_DH_ConsumeMagic;Target_DH_FelEruption;Shout_DH_Immolation_Aura;Target_DH_Imprison;Shout_DH_Netherwalk;Shout_DH_SpectralSight;Shout_DH_VengefulRetreat"/>
+                    <attribute id="UUID" type="guid" value="7ab556b0-fb8e-4445-9047-ba0694a019db"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Havoc SLevel 6"/>
+                    <attribute id="Spells" type="LSString" value="Projectile_DH_Metamorphosis_Havoc;Target_DH_SigilOfFlame"/>
+                    <attribute id="UUID" type="guid" value="e5133f63-5693-4f5f-82ff-4ab68c5781d0"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Havoc SLevel 7 Choice"/>
+                    <attribute id="Spells" type="LSString" value="Target_DH_ConsumeMagic;Shout_DH_Darkness;Target_DH_FelEruption;Shout_DH_Immolation_Aura;Target_DH_Imprison;Shout_DH_Netherwalk;Target_DH_SigilOfMisery;Shout_DH_SpectralSight;Shout_DH_VengefulRetreat"/>
+                    <attribute id="UUID" type="guid" value="2a6f3394-023e-4d9a-a975-cf0db41c7eae"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Havoc SLevel 10"/>
+                    <attribute id="Spells" type="LSString" value="Zone_DH_EssenceBreak"/>
+                    <attribute id="UUID" type="guid" value="091aae8c-a6c9-4ac4-94d7-dab96b5c1c9c"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Havoc SLevel 10 Choice"/>
+                    <attribute id="Spells" type="LSString" value="Target_DH_ConsumeMagic;Shout_DH_Darkness;Target_DH_FelEruption;Shout_DH_Immolation_Aura;Target_DH_Imprison;Shout_DH_Netherwalk;Target_DH_SigilOfMisery;Shout_DH_SpectralSight;Rush_DH_Hunt;Shout_DH_VengefulRetreat"/>
+                    <attribute id="UUID" type="guid" value="613d4acc-abe4-4cd6-8ed9-8eae9b8ef4db"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="VENGEANCE SPELL LISTS"/>
+                    <attribute id="UUID" type="guid" value="3f9dccfb-86fe-4a08-8dae-31a2cec2dbea"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Vengeance SLevel 3"/>
+                    <attribute id="Spells" type="LSString" value="Shout_DH_DemonSpikes;Rush_DH_Felblade"/>
+                    <attribute id="UUID" type="guid" value="0d7e6d65-6200-457e-ac9a-aa1ab01485de"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Vengeance SLevel 4"/>
+                    <attribute id="Spells" type="LSString" value="Shout_DH_SoulBarrier;Zone_DH_SoulCleave;Shout_DH_Torment"/>
+                    <attribute id="UUID" type="guid" value="53003dea-221c-4a2e-8464-2477b9bc0254"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Vengeance SLevel 4 Choice"/>
+                    <attribute id="Spells" type="LSString" value="Target_DH_ConsumeMagic;Zone_DH_FelDevastation;Shout_DH_Immolation_Aura;Target_DH_Imprison;Shout_DH_SpectralSight;Shout_DH_VengefulRetreat;"/>
+                    <attribute id="UUID" type="guid" value="a1412c17-994f-46b4-b3f2-0989724a366d"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Vengeance SLevel 5"/>
+                    <attribute id="Spells" type="LSString" value="Target_DH_FieryBrand;Target_DH_Shear;Shout_DH_SpiritBomb;"/>
+                    <attribute id="UUID" type="guid" value="bb0fb006-d73e-41b7-90e2-4bf592d8b8d4"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Vengeance SLevel 5 Choice"/>
+                    <attribute id="Spells" type="LSString" value="Target_DH_ConsumeMagic;Zone_DH_FelDevastation;Shout_DH_Immolation_Aura;Target_DH_Imprison;Shout_DH_SpectralSight;Shout_DH_VengefulRetreat"/>
+                    <attribute id="UUID" type="guid" value="79438f13-185f-4783-a64a-ba03461729b6"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Vengeance SLevel 6"/>
+                    <attribute id="Spells" type="LSString" value="Shout_DH_Metamorphosis_Vengeance;Target_DH_SigilOfFlame"/>
+                    <attribute id="UUID" type="guid" value="091f62aa-af51-4272-baec-9d606bde3088"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Vengeance SLevel 7"/>
+                    <attribute id="Spells" type="LSString" value="Shout_DH_ChaosNova;Projectile_DH_InfernalStrike"/>
+                    <attribute id="UUID" type="guid" value="0cc5fcac-e354-4791-908f-caf3f7821e71"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Vengeance SLevel 7 Choice"/>
+                    <attribute id="Spells" type="LSString" value="Target_DH_ConsumeMagic; Shout_DH_Darkness;Zone_DH_FelDevastation;Shout_DH_Immolation_Aura;Target_DH_Imprison;Target_DH_SigilOfChains;Target_DH_SigilOfMisery;Target_DH_SigilOfSilence;Shout_DH_SpectralSight;Shout_DH_VengefulRetreat"/>
+                    <attribute id="UUID" type="guid" value="7ff2bb3a-db42-4cea-9f15-8d6a8cf86939"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Vengeance SLevel 10"/>
+                    <attribute id="Spells" type="LSString" value="Target_DH_SoulCarver"/>
+                    <attribute id="UUID" type="guid" value="a0429602-8311-4510-aead-8d917364f0ac"/>
+                </node>
+                <node id="SpellList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Vengeance SLevel 10 Choice"/>
+                    <attribute id="Spells" type="LSString" value="Target_DH_ConsumeMagic;Shout_DH_Darkness;Zone_DH_FelDevastation;Shout_DH_Immolation_Aura;Target_DH_Imprison;Target_DH_SigilOfChains;Target_DH_SigilOfMisery;Target_DH_SigilOfSilence;Rush_DH_Hunt;Shout_DH_SpectralSight;Shout_DH_VengefulRetreat"/>
+                    <attribute id="UUID" type="guid" value="74fd1f1f-2c88-458c-9bdb-25ad4d6f097c"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

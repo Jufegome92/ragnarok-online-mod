@@ -1,0 +1,101 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+// The following entries are NPC who seem to NOT have a Treasure Table so this was our only way to inject the item.
+
+/// ---------- ACT 1: WILDS----------------------
+// Fezzerk - Add loot on death
+IF
+Died((CHARACTER)S_FOR_GnomeGoblin1_b2c582af-bc69-48b3-a004-648562dab404)
+AND
+TemplateIsInInventory((ITEMROOT)WPN_DHGW_TotemicSkullWarglaive_A_OH_cef0ae6c-13e3-497b-a409-b96ed77dab2f, (GUIDSTRING)S_FOR_GnomeGoblin1_b2c582af-bc69-48b3-a004-648562dab404, _Count)
+AND
+_Count == 0
+THEN
+TemplateAddTo((ITEMROOT)WPN_DHGW_TotemicSkullWarglaive_A_OH_cef0ae6c-13e3-497b-a409-b96ed77dab2f, (GUIDSTRING)S_FOR_GnomeGoblin1_b2c582af-bc69-48b3-a004-648562dab404, 1, 0);
+
+
+// True Soul Gut - Add loot on death
+IF
+Died((CHARACTER)S_GOB_GoblinPriest_b983c336-9a14-4e9b-adb9-4689e7e0afa9)
+AND
+TemplateIsInInventory((ITEMROOT)WPN_DHGW_SpikedWarglaive_A_OH_b6bf9d6e-d180-460c-a1d3-44eb3d94080a, (GUIDSTRING)S_GOB_GoblinPriest_b983c336-9a14-4e9b-adb9-4689e7e0afa9, _Count)
+AND
+_Count == 0
+THEN
+TemplateAddTo((ITEMROOT)WPN_DHGW_SpikedWarglaive_A_OH_b6bf9d6e-d180-460c-a1d3-44eb3d94080a, (GUIDSTRING)S_GOB_GoblinPriest_b983c336-9a14-4e9b-adb9-4689e7e0afa9, 1, 0);
+
+
+// Polma - Add loot on death
+IF
+Died((CHARACTER)S_GOB_GoblinPriestOgre_658c5f80-33ea-4f8d-bded-8ef6ac2ed511)
+AND
+TemplateIsInInventory((ITEMROOT)WPN_DHGW_OgreWarglaives_OH_564475ff-cdff-4c0c-901b-4b042cdce1d5, (GUIDSTRING)S_GOB_GoblinPriestOgre_658c5f80-33ea-4f8d-bded-8ef6ac2ed511, _Count)
+AND
+_Count == 0
+THEN
+TemplateAddTo((ITEMROOT)WPN_DHGW_OgreWarglaives_OH_564475ff-cdff-4c0c-901b-4b042cdce1d5, (GUIDSTRING)S_GOB_GoblinPriestOgre_658c5f80-33ea-4f8d-bded-8ef6ac2ed511, 1, 0);
+
+
+// Dror Ragzlin - Add loot on death
+IF
+Died((CHARACTER)S_GOB_GoblinKing_11337af0-6a57-426b-a820-c4b00923dd54)
+AND
+TemplateIsInInventory((ITEMROOT)WPN_DHGW_TotemicSkullWarglaive_MH_f0a5a83c-eb9a-402b-a826-6158b49088ba, (GUIDSTRING)S_GOB_GoblinKing_11337af0-6a57-426b-a820-c4b00923dd54, _Count)
+AND
+_Count == 0
+THEN
+TemplateAddTo((ITEMROOT)WPN_DHGW_TotemicSkullWarglaive_MH_f0a5a83c-eb9a-402b-a826-6158b49088ba, (GUIDSTRING)S_GOB_GoblinKing_11337af0-6a57-426b-a820-c4b00923dd54, 1, 0);
+
+
+// Gandrel (Gur Hunter) - Add loot on death
+IF
+Died((CHARACTER)S_GLO_GurHunter_0e47fcb9-c0c4-4b0c-902b-2d13d209e760)
+AND
+TemplateIsInInventory((ITEMROOT)WPN_DHGW_MonsterSlasherWarglaive_A_16676359-9c8e-4528-a3c0-7d66b509ee89, (GUIDSTRING)S_GLO_GurHunter_0e47fcb9-c0c4-4b0c-902b-2d13d209e760, _Count)
+AND
+_Count == 0
+THEN
+TemplateAddTo((ITEMROOT)WPN_DHGW_MonsterSlasherWarglaive_A_16676359-9c8e-4528-a3c0-7d66b509ee89, (GUIDSTRING)S_GLO_GurHunter_0e47fcb9-c0c4-4b0c-902b-2d13d209e760, 1, 0);
+
+/// ---------- ACT 1: MOUNTAIN PASS----------------------
+// Kobold Inventor- Add loot on death
+IF
+Died((CHARACTER)S_CRE_Brewery_Kobold3_8608477a-9b58-42af-8618-3d132cefdc9b)
+AND
+TemplateIsInInventory((ITEMROOT)WPN_DHGW_SkinRipperWarglaive_A_82d23035-2f33-4ce3-beb4-b000c3a18d69, (GUIDSTRING)S_CRE_Brewery_Kobold3_8608477a-9b58-42af-8618-3d132cefdc9b, _Count)
+AND
+_Count == 0
+THEN
+TemplateAddTo((ITEMROOT)WPN_DHGW_SkinRipperWarglaive_A_82d23035-2f33-4ce3-beb4-b000c3a18d69, (GUIDSTRING)S_CRE_Brewery_Kobold3_8608477a-9b58-42af-8618-3d132cefdc9b, 1, 0);
+
+// Raider G'r'ath - Add loot on death
+IF
+Died((CHARACTER)S_CRE_HiddenCheckpointMainGuard_3bcbf8fb-5a90-4439-bd81-d9113d74f27e)
+AND
+TemplateIsInInventory((ITEMROOT)WPN_DHGW_ArcaneForce_A_312a5bf8-c6e7-47e8-b460-bd9ead4a41eb, (GUIDSTRING)S_CRE_HiddenCheckpointMainGuard_3bcbf8fb-5a90-4439-bd81-d9113d74f27e, _Count)
+AND
+_Count == 0
+THEN
+TemplateAddTo((ITEMROOT)WPN_DHGW_ArcaneForce_A_312a5bf8-c6e7-47e8-b460-bd9ead4a41eb, (GUIDSTRING)S_CRE_HiddenCheckpointMainGuard_3bcbf8fb-5a90-4439-bd81-d9113d74f27e, 1, 0);
+
+// Ch'r'ai W'wargaz (Inquisitor) - Add loot on death
+IF
+Died((CHARACTER)S_CRE_Templar_378ac93e-03a0-40b4-904c-f37989ac7a8c)
+AND
+TemplateIsInInventory((ITEMROOT)WPN_DHGW_KazzaksFieryWarglaives_MH_2d3523af-19db-41ed-9140-013b1174b21f, (GUIDSTRING)S_CRE_Templar_378ac93e-03a0-40b4-904c-f37989ac7a8c, _Count)
+AND
+_Count == 0
+THEN
+TemplateAddTo((ITEMROOT)WPN_DHGW_KazzaksFieryWarglaives_MH_2d3523af-19db-41ed-9140-013b1174b21f, (GUIDSTRING)S_CRE_Templar_378ac93e-03a0-40b4-904c-f37989ac7a8c, 1, 0);
+
+
+/// ---------- ACT 3 ----------------------
+
+
+
+EXITSECTION
+
+ENDEXITSECTION

@@ -1,0 +1,83 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_DHClassTormentStatus_DemonHunter("DH_TORMENT");
+DB_DHClassTormentStatus_DemonHunter("DH_TORMENT_GOAD_TECHNICAL");
+
+DB_DHClassTormentStatusHelper_DemonHunter("DH_TORMENT_HELPER");
+KBSECTION
+// Set Taunter as the AI Preferred Target
+IF
+StatusApplied(_Character,_Status,(GUIDSTRING)_Causee,_)
+AND
+DB_DHClassTormentStatus_DemonHunter(_Status)
+THEN
+AddPreferredAiTargetTag((CHARACTER)_Causee,(TAG)DH_TORMENT_TAUNTER_6f866983-0419-4c24-b38a-218b6a00df33);
+
+// Iterate through Players and Characters around Taunter
+// And tag them to be Unpreferred Targets
+IF
+StatusApplied(_Character,_Status,(GUIDSTRING)_Causee,_)
+AND
+DB_DHClassTormentStatus_DemonHunter(_Status)
+THEN
+IteratePlayerCharacters("DH_TormentUnpreferred", "DH_TormentUnpreferred_Completion");
+IterateCharactersAround(_Causee,45.0,"DH_TormentUnpreferred","DH_TormentUnpreferred_Completion");
+DB_DHClassTormentStatus_Taunter((CHARACTER)_Causee);
+
+IF
+EntityEvent((CHARACTER)_Character,"DH_TormentUnpreferred")
+AND
+IsOnStage(_Character,1)
+AND
+NOT DB_Defeated(_Character)
+AND
+DB_DHClassTormentStatus_Taunter(_Taunter)
+AND
+_Character != _Taunter
+AND 
+IsEnemy(_Character,_Taunter,0)
+THEN
+SetTag((GUIDSTRING)_Character, (TAG)AI_UNPREFERRED_TARGET_9787450d-f34d-43bd-be88-d2bac00bb8ee);
+NOT DB_DHClassTormentStatus_Taunter(_Taunter);
+
+// - When Torment is done.
+// Iterate through Players and Characters around Taunter
+// And Clear the Tag to be Unpreferred Targets
+IF
+StatusRemoved(_Character,_Status,_,_)
+AND
+DB_DHClassTormentStatusHelper_DemonHunter(_Status)
+THEN
+IteratePlayerCharacters("DH_TormentRemoved", "DH_TormentRemoved_Completion"); // Make sure we remove it from party memebers
+IterateCharactersAround(_Character,45.0,"DH_TormentRemoved","DH_TormentRemoved_Completion");
+DB_DHClassTormentStatus_Taunter((CHARACTER)_Character);
+
+IF
+EntityEvent((CHARACTER)_Character,"DH_TormentRemoved")
+AND
+IsOnStage(_Character,1)
+AND
+NOT DB_Defeated(_Character)
+AND
+DB_DHClassTormentStatus_Taunter(_Taunter)
+AND
+_Character != _Taunter
+AND 
+IsEnemy(_Character,_Taunter,0)
+THEN
+ClearTag((GUIDSTRING)_Character, (TAG)AI_UNPREFERRED_TARGET_9787450d-f34d-43bd-be88-d2bac00bb8ee);
+NOT DB_DHClassTormentStatus_Taunter(_Taunter);
+
+
+// Make sure tag is removed from Taunter
+IF
+StatusRemoved(_Character, "DH_TORMENT_HELPER", _Causee, _)
+THEN
+ClearTag(_Character, (TAG)DH_TORMENT_TAUNTER_6f866983-0419-4c24-b38a-218b6a00df33);
+ClearTag(_Character, (TAG)AI_PREFERRED_TARGET_64bc9da1-9262-475a-a397-157600b7debd);
+
+
+EXITSECTION
+
+ENDEXITSECTION

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="ActionResourceDefinitions">
+        <node id="root">
+            <children>
+                <node id="ActionResourceDefinition">
+                    <attribute id="Description" type="TranslatedString" handle="h03c8dbfcg09cfgbaa6g3a0dg9a01be5d92da" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h4bc2920ag8c22ga1fagb09dgabe87e13dacd" version="1"/>
+                    <attribute id="Error" type="TranslatedString" handle="h832d4da6gbc66gb79egb951ga92698f3adba" version="1"/>
+                    <attribute id="MaxLevel" type="uint32" value="0"/>
+                    <attribute id="Name" type="FixedString" value="DH_Fury"/>
+                    <attribute id="ReplenishType" type="FixedString" value="ShortRest"/>
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+                    <attribute id="UUID" type="guid" value="f7098b4a-9199-4b50-ae6e-2ae6f895c2af"/>
+                </node>
+                <node id="ActionResourceDefinition">
+                    <attribute id="Description" type="TranslatedString" handle="hb56d98eagfaaagc807g8cf1gf8f2dc7c36a9" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hd959e8e2ge8c5gdd3cgd80bg3a38b12bd436" version="1"/>
+                    <attribute id="Error" type="TranslatedString" handle="hb5fcf08dgce06g2df0gca8dg86b1b69ec30d" version="1"/>
+                    <attribute id="MaxLevel" type="uint32" value="0"/>
+                    <attribute id="Name" type="FixedString" value="DH_SoulFragments"/>
+                    <attribute id="ReplenishType" type="FixedString" value="ShortRest"/>
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+                    <attribute id="UUID" type="guid" value="cd47e33a-c058-4610-9d9e-d7abfefb8fe8"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

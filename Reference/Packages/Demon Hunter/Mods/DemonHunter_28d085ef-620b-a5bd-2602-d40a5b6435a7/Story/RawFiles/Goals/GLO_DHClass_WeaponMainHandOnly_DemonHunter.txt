@@ -1,0 +1,27 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+// List of Main Hand Only Weapons
+// Anything on this list gets automatically Unequipped.
+// This is done to ensure it is never equipped as an Offhand Weapon.
+DB_DHClassMainHandWeaponOnly_DemonHunter((GUIDSTRING)WPN_DHGW_AzzinothWarglaives_MH_d4f1073e-710e-4cdc-bd90-b9fe73a2389e);
+DB_DHClassMainHandWeaponOnly_DemonHunter((GUIDSTRING)WPN_DHGW_KazzaksFieryWarglaives_MH_2d3523af-19db-41ed-9140-013b1174b21f);
+DB_DHClassMainHandWeaponOnly_DemonHunter((GUIDSTRING)WPN_DHGW_OgreWarglaives_MH_2b050514-51b6-4e7f-8183-6cb02c12e0ca);
+DB_DHClassMainHandWeaponOnly_DemonHunter((GUIDSTRING)WPN_DHGW_TotemicSkullWarglaive_A_MH_f0a5a83c-eb9a-402b-a826-6158b49088ba);
+DB_DHClassMainHandWeaponOnly_DemonHunter((GUIDSTRING)WPN_DHGW_TotemicSkullWarglaive_B_MH_c177d952-7606-4615-96ac-b5cd8a6ab7a4);
+DB_DHClassMainHandWeaponOnly_DemonHunter((GUIDSTRING)WPN_DHGW_SpikedWarglaive_A_MH_110842c3-981f-4327-880c-e5c6dfdfcd44);
+DB_DHClassMainHandWeaponOnly_DemonHunter((GUIDSTRING)WPN_DHGW_AldrochiWarblades_MH_45da93fe-53ba-46e2-9838-6a94ca1f32db);
+KBSECTION
+IF
+Equipped(_Item, _Character)
+AND
+GetEquippedItem(_Character, "Melee Offhand Weapon", _Item)
+AND
+GetTemplate(_Item, _Template)
+AND
+DB_DHClassMainHandWeaponOnly_DemonHunter(_Template)
+THEN
+Unequip(_Character, _Item);
+EXITSECTION
+
+ENDEXITSECTION

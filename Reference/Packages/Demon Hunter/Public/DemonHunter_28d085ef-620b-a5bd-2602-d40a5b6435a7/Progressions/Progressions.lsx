@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="Progressions">
+        <node id="root">
+            <children>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Constitution);Proficiency(HandCrossbows);Proficiency(LightCrossbows);Proficiency(Shortbows);Proficiency(LightArmor);Proficiency(Rapiers);Proficiency(Scimitars);Proficiency(Shortswords);Proficiency(Longswords);Proficiency(Battleaxes);Proficiency(Handaxes);Proficiency(Longbows);ActionResource(DH_Fury,10,0)"/>
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="PassivesAdded" type="LSString" value="DH_DemonHunter_Class;FightingStyle_TwoWeaponFighting"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSkills(a1c2b712-2ed6-4e5b-820f-c5db654fe006,3);AddSpells(edac2aad-d01a-4a0d-8f2b-204ecd521c80);SelectSpells(42422fcc-03d3-4d56-b47a-7139afdcc153,1,0);SelectAbilityBonus(b9149c8e-52c8-46e5-9cb6-fc39301c05fe,AbilityBonus,2,1);SelectSkillsExpertise(f974ebd6-3725-4b90-bb5c-2b647d41615d,2)"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="8315189e-531a-4f15-b417-5620d126f041"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Constitution);Proficiency(HandCrossbows);Proficiency(LightCrossbows);Proficiency(Shortbows);Proficiency(LightArmor);Proficiency(Rapiers);Proficiency(Scimitars);Proficiency(Shortswords);Proficiency(Longswords);Proficiency(Battleaxes);Proficiency(Handaxes);Proficiency(Longbows);ActionResource(DH_Fury,10,0)"/>
+                    <attribute id="IsMulticlass" type="bool" value="true"/>
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FightingStyle_TwoWeaponFighting"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(edac2aad-d01a-4a0d-8f2b-204ecd521c80);SelectSpells(42422fcc-03d3-4d56-b47a-7139afdcc153,1,0);SelectSkillsExpertise(f974ebd6-3725-4b90-bb5c-2b647d41615d,2)"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="2201dd93-26ba-417f-b358-8bce616aa619"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(DH_SoulFragments,3,0)"/>
+                    <attribute id="Level" type="uint8" value="2"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="PassivesAdded" type="LSString" value="DH_DoubleJump"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(e0e3ab0d-d889-49b8-91c0-5207f773ac38);SelectSpells(677a1d4d-98cf-4c17-aeeb-343af692f7e8,1,0,DHSpells)"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="e0b21026-d00f-47ce-978b-c20dfcb9e068"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(DH_SoulFragments,1,0);"/>
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(507c49ce-a23d-4c1c-9016-fc2988d3b98c,1,DemonicFeats);AddSpells(e0e3ab0d-d889-49b8-91c0-5207f773ac38);SelectSpells(677a1d4d-98cf-4c17-aeeb-343af692f7e8,1,0,DHSpells)"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="bcd18b47-bc33-4385-9dea-5229db72e4ca"/>
+                    <children>
+                        <node id="SubClasses">
+                            <children>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="d5d2ee82-b20f-4099-95f2-ea5030e1e6b0"/>
+                                </node>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="fd8f9a47-89f7-4c21-b93c-737ab1d8e5bb"/>
+                                </node>
+                            </children>
+                        </node>
+                    </children>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(DH_SoulFragments,1,0);"/>
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="PassivesAdded" type="LSString" value="DH_Pursuit"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(42422fcc-03d3-4d56-b47a-7139afdcc153,1,0)"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="f6154247-5683-40d6-8fa9-ceb42cec4ade"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(DH_SoulFragments,1,0);"/>
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(42422fcc-03d3-4d56-b47a-7139afdcc153,1,0)"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="7b3e4181-9f27-47a7-8e86-acc53c8a1012"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(DH_SoulFragments,2,0);"/>
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(52dae3e4-1962-4d52-8e62-3fb64f5b6b2d,1,DemonicFeats)"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="6d23b699-3609-47ef-ad5b-79b9971a23b0"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(DH_SoulFragments,2,0);"/>
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(a341c53e-bdf4-4a83-ae16-47efbf84efa3)"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="df28824a-9176-420a-98ba-042e7412e54d"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(DH_SoulFragments,2,0);"/>
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="466f5128-585f-4763-88db-40a06b1a0b7b"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(DH_SoulFragments,2,0);"/>
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(52dae3e4-1962-4d52-8e62-3fb64f5b6b2d,1,DemonicFeats)"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="634b45e2-35ee-43d6-91b8-097d31dad24c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(DH_SoulFragments,2,0);"/>
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="8b1b0a05-43a3-46cb-8e73-17eee7a56e4d"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(DH_SoulFragments,3,0);"/>
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="1f2675b2-78d3-45ef-b424-8093167a02be"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(DH_SoulFragments,1,0);"/>
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(52dae3e4-1962-4d52-8e62-3fb64f5b6b2d,1,DemonicFeats)"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="2e214430-ee88-4392-a6c1-45e14f7616d9"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(DH_SoulFragments,2,0);"/>
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="fef72285-6892-4d29-aaba-1ce05538b6f1"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(DH_SoulFragments,2,0);"/>
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(52dae3e4-1962-4d52-8e62-3fb64f5b6b2d,1,DemonicFeats)"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="b9e3fb09-008e-4ffc-b925-450b7f2ab93f"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(52dae3e4-1962-4d52-8e62-3fb64f5b6b2d,1,DemonicFeats)"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="eab0984c-0fbd-4702-9019-03c350d76b01"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="e3a2af32-3389-498d-8fb2-a5a6edcd1c60"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(DH_SoulFragments,2,0);"/>
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(52dae3e4-1962-4d52-8e62-3fb64f5b6b2d,1,DemonicFeats)"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="a052cbaf-589c-414a-b4fc-40a9c24bc11f"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(52dae3e4-1962-4d52-8e62-3fb64f5b6b2d,1,DemonicFeats)"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="d820d22c-8a0c-43a2-87a0-f0bedc537cfe"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(DH_SoulFragments,2,0);"/>
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(52dae3e4-1962-4d52-8e62-3fb64f5b6b2d,1,DemonicFeats)"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="6d55c13c-c14b-4402-a393-bd672ef7a0f5"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(DH_SoulFragments,2,0);"/>
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="DemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(52dae3e4-1962-4d52-8e62-3fb64f5b6b2d,1,DemonicFeats)"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="bfae8a4a-9724-4b54-be22-ca0fcda07b1b"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Name" type="LSString" value="HAVOC PROGRESSION"/>
+                    <attribute id="UUID" type="guid" value="ae415dbd-9d0e-40f1-a148-951ffc35605d"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="HavocDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(e2058d41-b957-4a34-b152-1077eb2b2a43);SelectPassives(d86d0e3d-c75e-491b-976b-c4d71ec5df8d,1,HavocTalents)"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="5c8bf6bc-f6a0-4c0f-84f1-79e249b92ea3"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="HavocDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(f86f5b81-eba1-45d6-838a-eacf89e36178);SelectSpells(f5539c79-452a-4b71-bdfb-667a2f4905ae,1,0,HavocSpells)"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="f050e905-3de5-4a9f-9d25-d8dde087ee40"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="HavocDemonHunter"/>
+                    <attribute id="PassivesAdded" type="LSString" value="DH_MasteryDemonicPresence;DH_SoulRending"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(5fe613c7-3d26-4ca8-babc-d221ed2ab508);SelectSpells(7ab556b0-fb8e-4445-9047-ba0694a019db,1,0,HavocSpells)"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="e88bb7b9-d9be-4984-a445-167abdbca7aa"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="HavocDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(5ec5a3ca-728b-4775-9717-e2d370f40abd,1,HavocTalents);AddSpells(e5133f63-5693-4f5f-82ff-4ab68c5781d0)"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="eb764907-1363-47c4-a994-2cd59028280c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="HavocDemonHunter"/>
+                    <attribute id="PassivesAdded" type="LSString" value="DH_ShatteredSouls_Havoc"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(2a6f3394-023e-4d9a-a975-cf0db41c7eae,1,0,HavocSpells)"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="cb4930a4-3122-48df-a910-0261c503f37c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="HavocDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(2a6f3394-023e-4d9a-a975-cf0db41c7eae,1,0,HavocSpells);SelectSkillsExpertise(455a61d3-323b-4639-9787-38cc215f5b96,1)"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="62087828-b5fe-4ee5-a358-e44d1c0cc146"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="HavocDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(5ec5a3ca-728b-4775-9717-e2d370f40abd,1,HavocTalents)"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="9587b8c0-5bcc-45dc-8e4d-2cc1478537cf"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="HavocDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(091aae8c-a6c9-4ac4-94d7-dab96b5c1c9c);SelectSpells(613d4acc-abe4-4cd6-8ed9-8eae9b8ef4db,1,0,HavocSpells)"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="fdf33b4f-cc3c-45ea-b811-6c5dada61d97"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="HavocDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(613d4acc-abe4-4cd6-8ed9-8eae9b8ef4db,1,0)"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="dad5ca25-90cd-4921-a9b5-471787c25c12"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="HavocDemonHunter"/>
+                    <attribute id="PassivesAdded" type="LSString" value="DH_GlaiveTempest"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(5ec5a3ca-728b-4775-9717-e2d370f40abd,1,HavocTalents)"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="c57d438a-a7d3-454f-a2eb-50a6938a470d"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="HavocDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="ac5f2391-37b1-4a4b-926d-a4245abd1bb0"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="HavocDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(613d4acc-abe4-4cd6-8ed9-8eae9b8ef4db,1,0)"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="a4ed8ba4-d41f-490e-bd88-93ec984306e0"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="HavocDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(5ec5a3ca-728b-4775-9717-e2d370f40abd,1,HavocTalents)"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="c48b2a98-8e66-4d89-953c-228bc995bfe2"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="HavocDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="986bc6cd-afc4-42cc-861c-53a69d0c1a48"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="HavocDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(5ec5a3ca-728b-4775-9717-e2d370f40abd,1,HavocTalents)"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="0185bbce-9f64-4005-adf7-f8055df2e3f9"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="HavocDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="2b579201-4806-418a-ab39-0a55f8c8d22f"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="HavocDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(613d4acc-abe4-4cd6-8ed9-8eae9b8ef4db,1,0)"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="70b2d824-f8f3-45e7-8222-f7460e2db233"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="HavocDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(5ec5a3ca-728b-4775-9717-e2d370f40abd,1,HavocTalents)"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="31630f10-c342-42f2-a0a2-51f46c80e662"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Name" type="LSString" value="VENGEANCE PROGRESSION"/>
+                    <attribute id="UUID" type="guid" value="dcf2e5fb-fdef-4234-9d8d-1453e6f766dd"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="Proficiency(MediumArmor);"/>
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="VengeanceDemonHunter"/>
+                    <attribute id="PassivesAdded" type="LSString" value="DH_MasteryFelBlood;DH_InfernalArmor"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(053853e9-cc7c-40f0-8853-c7935129ec40,1,VengeanceTalents);AddSpells(0d7e6d65-6200-457e-ac9a-aa1ab01485de)"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="7a2d62ce-b641-473b-999a-e5ea719af2ab"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="VengeanceDemonHunter"/>
+                    <attribute id="PassivesAdded" type="LSString" value="DH_Critical Strikes"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(53003dea-221c-4a2e-8464-2477b9bc0254);SelectSpells(a1412c17-994f-46b4-b3f2-0989724a366d,1,0,VengeanceSpells)"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="85c65a25-8014-4151-b8b4-6a36d7cfc9bd"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="VengeanceDemonHunter"/>
+                    <attribute id="PassivesAdded" type="LSString" value="DH_SoulRending;DH_ThickSkin"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(bb0fb006-d73e-41b7-90e2-4bf592d8b8d4);SelectSpells(79438f13-185f-4783-a64a-ba03461729b6,1,0,VengeanceSpells)"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="e3c2b938-5398-41cb-a760-e50ea9a16cfe"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="VengeanceDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(72e5c6ab-651c-495c-bae6-ceb63720f193,1,VengeanceTalents);AddSpells(091f62aa-af51-4272-baec-9d606bde3088)"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="f965df56-bbdf-4280-8c4d-97b5372f3ade"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="VengeanceDemonHunter"/>
+                    <attribute id="PassivesAdded" type="LSString" value="DH_ShatteredSouls_Vengeance"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(0cc5fcac-e354-4791-908f-caf3f7821e71);SelectSpells(7ff2bb3a-db42-4cea-9f15-8d6a8cf86939,1,0,VengeanceSpells)"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="191aae96-1c5f-43c8-8419-2bdd263290c0"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="VengeanceDemonHunter"/>
+                    <attribute id="PassivesAdded" type="LSString" value="DH_CalcifiedSpikes"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(7ff2bb3a-db42-4cea-9f15-8d6a8cf86939,1,0,VengeanceSpells);SelectSkillsExpertise(39b7b558-e9e9-4b37-80a4-76d7f1c803b5,1)"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="dc335f0a-e274-4a9e-83c4-2eeffc0dc61b"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="VengeanceDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(72e5c6ab-651c-495c-bae6-ceb63720f193,1,VengeanceTalents)"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="4ba7136f-f21f-45cf-b54f-0c36e33a8d16"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="VengeanceDemonHunter"/>
+                    <attribute id="PassivesAdded" type="LSString" value="DH_LastResort"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(a0429602-8311-4510-aead-8d917364f0ac);SelectSpells(74fd1f1f-2c88-458c-9bdb-25ad4d6f097c,1,0,VengeanceSpells)"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="9959d25d-9fa2-4be3-80e7-4ac45507b328"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="VengeanceDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(74fd1f1f-2c88-458c-9bdb-25ad4d6f097c,1,0,VengeanceSpells)"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="38e605b1-64a2-44e1-96ec-b74585bae965"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="VengeanceDemonHunter"/>
+                    <attribute id="PassivesAdded" type="LSString" value="DH_GlaiveTempest"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(72e5c6ab-651c-495c-bae6-ceb63720f193,1,VengeanceTalents)"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="dc53c534-c11a-4688-bbd1-9a3e3b163235"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="VengeanceDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="ffc77cab-9111-47ca-b964-2e4ea68e8d6a"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="VengeanceDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(74fd1f1f-2c88-458c-9bdb-25ad4d6f097c,1,0,VengeanceSpells)"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="1f7dea73-e137-4c85-999f-307349d1a24d"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="VengeanceDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(72e5c6ab-651c-495c-bae6-ceb63720f193,1,VengeanceTalents)"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="4f0f1e76-db73-4390-83da-c95bf19c1ba9"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="VengeanceDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="bbf956cf-925c-40ca-af05-956d072251d7"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="VengeanceDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(72e5c6ab-651c-495c-bae6-ceb63720f193,1,VengeanceTalents);SelectSpells(74fd1f1f-2c88-458c-9bdb-25ad4d6f097c,1,0,VengeanceSpells)"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="95279a33-b76f-4f4f-919d-e7d03c870f76"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="VengeanceDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="68760437-3972-48a9-980b-6c4efae4fd7c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="VengeanceDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(72e5c6ab-651c-495c-bae6-ceb63720f193,1,VengeanceTalents);SelectSpells(74fd1f1f-2c88-458c-9bdb-25ad4d6f097c,1,0,VengeanceSpells)"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="2cd15da5-3c9d-4cb7-8ea8-fb4c626f0c8a"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="VengeanceDemonHunter"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(72e5c6ab-651c-495c-bae6-ceb63720f193,1,VengeanceTalents)"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="7ac5087b-03d9-4171-8cbd-c4e5048c32a2"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

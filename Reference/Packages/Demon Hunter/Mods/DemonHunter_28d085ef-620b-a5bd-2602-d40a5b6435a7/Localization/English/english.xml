@@ -1,0 +1,627 @@
+<?xml version="1.0"?>
+<contentList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <content contentuid="h0fc301b9g5b88ga55eg4880gfc8dbf55f859" version="1">Demon Hunter</content>
+  <content contentuid="h8e281c4cg31bfg890fg17ecg8466c22b18e6" version="2">Demon Hunters, disciples of Illidan Stormrage, uphold a dark legacy, one that frightens their allies and enemies alike. The Illidari embrace fel and chaotic magics - energies that have long threatened the world of Azeroth - believing them necessary to challenge the Burning Legion. Wielding the powers of demons they’ve slain, they develop demonic features that incite revulsion and dread in their enemies. The main thing that makes Demon Hunters truly special is Metamorphosis.</content>
+  <content contentuid="h5ddf2011g04c6gccaag202fg6b294e2920f8" version="2">Havoc</content>
+  <content contentuid="hc102d500g52e0gfd7ag60edg30817b5644ac" version="1">Havoc</content>
+  <content contentuid="hb26bc828gd091g0a76gd719g966fcfe8de98" version="2">A Havoc Demon Hunter is an aggressive melee damage dealer with high mobility, a brooding master of warglaives and the destructive power of Fel magic. They have adopted traits of demons and use that power to destroy their foes. </content>
+  <content contentuid="h56f9ed2bg1f69g95d9g2319g5da41bc6b68c" version="2">Vengeance</content>
+  <content contentuid="h74907bb1g32b2g3d3bg3909g1c3cc241c3ba" version="1">Vengeance</content>
+  <content contentuid="h45d362acgf3a8gfb9dg3a85gc6d55192229d" version="2">A Vengeance Demon Hunter is an aggressive, fast-paced tank that rips souls from the enemy to use for their own benefit. They embrace the demon within to incinerate enemies and protect their allies on the front line.</content>
+  <content contentuid="hdc2057dag1ff6ge791gb535g8b26bb3de415" version="2">Demonic Mastery</content>
+  <content contentuid="h54e56e79gba32g3a75g3061gdf10bb74a7ab" version="2">Fel energy grows within you, enhancing your abilities and vigor. Choose the Demonic Mastery you wish to enhance.</content>
+  <content contentuid="h90ff5b72g2abegbbb0gb8d7g04f411f967eb" version="1">Touch of Fire</content>
+  <content contentuid="hfd5fd8c8g7fb7gd72bga831gec2666db5fe0" version="1">Touch an enemy with the force of a fireball. Everyone in the area will take [1] and the caster will be [2].</content>
+  <content contentuid="h6874054dg0d65gaf80g13deg72cc7011bba2" version="1">Arrow of Many Targets</content>
+  <content contentuid="hd02e79bdg9f23g0e34ga2e8gfe4fe2f11e7d" version="1">Deal an additional half damage to three other targets in range.</content>
+  <content contentuid="hece2fb5fgb361g1676g6636g42fe3250bc83" version="1">Throw Glaive</content>
+  <content contentuid="h652a0e25gdb94g356bg944ag275f2f047ae7" version="5">Throw a demonic glaive at the target, dealing [1].  The glaive can ricochet and deal damage to three other targets in range.</content>
+  <content contentuid="hde4ccf3egbcccg853ag372cg3a40384e7b9b" version="2">Chaos Strike</content>
+  <content contentuid="h177419f4gcd07gc3e7g5ab7g4699d83c6543" version="1">The target cannot use reactions. This spell has &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on creatures with metal armour.</content>
+  <content contentuid="h81e00346g101bg77d8g6450gc143e149b7bc" version="1">Ogre's Mark</content>
+  <content contentuid="h6d956989g8687g99e6g310eg19772e9ae33a" version="1">Damage is increased by 1d6.</content>
+  <content contentuid="hf5352755g2cc1g3cbcg61ddg22d10083045e" version="2">Mastery: Demonic Presence</content>
+  <content contentuid="hf2564364ge4ebg0e2agac05ga5107cdd8f3b" version="4">Increase Chaos Damage by ( [1], [2], [3] ).</content>
+  <content contentuid="hd3be65a1ga845gd0f5gd41cg219d71671cfa" version="1">Demonic Appetite</content>
+  <content contentuid="hb255eeb7g7197g99feg5a14g5cc893a5b932" version="3">&lt;LSTag Type="Spell" Tooltip="Target_DH_ChaosStrike"&gt;Chaos Strike&lt;/LSTag&gt; has a chance to heal yourself for 20% of damage dealt.</content>
+  <content contentuid="hc4819088g5149g8b6bg7c22g412f1d1cd384" version="1">Essence Break</content>
+  <content contentuid="h3f7370dcg84b1g9d96g2885g04d64e6743f9" version="1">Essence Break</content>
+  <content contentuid="h21ad19f4ga83ag7733gad67g5800499aab3c" version="3">Able to use &lt;LSTag Type="Spell" Tooltip="Target_DH_Annihilation"&gt;Annihilation&lt;/LSTag&gt; and &lt;LSTag Type="Spell" Tooltip="Projectile_DH_DeathSweep"&gt;Death Sweep&lt;/LSTag&gt;</content>
+  <content contentuid="hc91a8f29g2c1fg109dg1607gf6e5ba9c3f8c" version="1">Slice your target for [1] and inflict Chaos Damage ( [2], [3], [4] )</content>
+  <content contentuid="h383818c7gf0bbge32fg9e05gf2521ced2503" version="1">Chaos Strike</content>
+  <content contentuid="h30ea21eag490cgf280gf0f6g503806fe9634" version="7">Slice your target for [1] and inflict &lt;LSTag Type="Status" Tooltip="DH_CHAOS_DMG"&gt;Chaos Damage&lt;/LSTag&gt;.</content>
+  <content contentuid="ha5e3a35fg15cbgdd47g296fg9d8e6983f4fb" version="1">Chaos Damage</content>
+  <content contentuid="h6f7e89d5gea22g9c72gf991gafe3faaa819e" version="1">Testing</content>
+  <content contentuid="h4a03b636g31d3gb6bagdeb9g327c7493be6b" version="1">Chaos Strike</content>
+  <content contentuid="h7fb41a46g18f8gee00g2e2dga8bfa7dcc4fc" version="1">Slice your target for [1] and inflict Chaos Damage ( [2], [3], [4] )</content>
+  <content contentuid="hb30824a4g6545g48bag07b4g28af69494095" version="1">Flurry of Blows</content>
+  <content contentuid="hf3780403gfa8cg03d8gad7bg0c54f5b1edef" version="1">Punch twice in quick succession.</content>
+  <content contentuid="hde835b9dgc092g7917g2d96gecccc97d0e79" version="1">ChaosDamage</content>
+  <content contentuid="h272ab312g7ebag6a59ge132g13f711a66370" version="1">Chaos Damage</content>
+  <content contentuid="h020d9dd8gc88cg5fc3gd8f2gba75406657c3" version="1">Testing</content>
+  <content contentuid="h3ba1c89cg1a8bgb49cgcea6ge64fc55cc6ea" version="3">Inflicts [1], [2], [3]</content>
+  <content contentuid="h9952ee71g5436g5525g582egc0ab23e82bb9" version="1">Chaos Damage: Essence Break</content>
+  <content contentuid="hdd953581g3babg9549g9bb7g613e50934ab2" version="2">%%%|Chaos Damage Technical|</content>
+  <content contentuid="hf42c58d2gf017g21f9g1218g1dbeace59abb" version="1">Essence Break</content>
+  <content contentuid="ha94c4943g7f51gba2cgd44ag55f44462bade" version="2">&lt;LSTag Type="Spell" Tooltip="Target_DH_ChaosStrike"&gt;Chaos Strike&lt;/LSTag&gt; has a chance to [1].</content>
+  <content contentuid="h00655875gf7e5g8485gc3c0gea72edbf2d7b" version="1">Essence Break</content>
+  <content contentuid="hed82bfc0g6dccg8605gb8e1g0a19b593f214" version="2">Increase &lt;LSTag Type="Spell" Tooltip="Target_DH_ChaosStrike"&gt;Chaos Strike&lt;/LSTag&gt; damage by [1].</content>
+  <content contentuid="hf48cb4eeg43b3g73aeg4593gda2e11909ba9" version="5">When dealing &lt;LSTag Type="Status" Tooltip="Target_DH_ChaosStrike"&gt;Chaos Strike&lt;/LSTag&gt; or &lt;LSTag Type="Spell" Tooltip="DH_Metamorphosis_Havoc"&gt;Metamorphosis: Havoc&lt;/LSTag&gt;, dormant Chaos Magic explodes inflicting an additional [1] [2] [3].  </content>
+  <content contentuid="hb4961b2ag77d7ga376g3455gf9e95b742b83" version="3">&lt;LSTag Type="Spell" Tooltip="Target_DH_ChaosStrike"&gt;Chaos Strike&lt;/LSTag&gt; has a chance to heal you for [1].</content>
+  <content contentuid="h2001a015g9202g191cg2eebg892fcb61b5aa" version="1">Fel Restoration</content>
+  <content contentuid="he562661bg015eg5f36gdf3fg3cc9965852d2" version="2">Fel Energy courses through you healing you for [1].</content>
+  <content contentuid="h93e48ca9g2203g6ae8g6c40gb0440c5a3dd5" version="1">Chaos Damage: Demonic Presence</content>
+  <content contentuid="h25a82167ga33cgd517g4a86gc09b8ba27937" version="1">Chaos Magic explodes inflicting [1], [2], [3]</content>
+  <content contentuid="h25a6cc7dg74a2g12bcg0c29g28d1ca09a739" version="1">Double Jump</content>
+  <content contentuid="h7f76508fg7db4g9488g33dag6922abadec2f" version="1">&lt;LSTag Type="Spell" Tooltip="Projectile_Jump"&gt;Jump&lt;/LSTag&gt; distance is doubled</content>
+  <content contentuid="hfeb1cd17gd845g6437g7e3dg28bfc4845121" version="1">Shattered Souls: Havoc</content>
+  <content contentuid="hbd1a3ce3g22fcg5504ga713g85fda1da6367" version="1">Killing an enemy sometimes releases a soul fragment that heals you for 20% of maximum health.</content>
+  <content contentuid="h4c3f8201g82a0ge9fagee42g94f26fc9d3f4" version="6">Melee Attacks also deal &lt;LSTag Type="Status" Tooltip="DH_CHAOS_DMG"&gt;Chaos Damage&lt;/LSTag&gt; for 2 turns.</content>
+  <content contentuid="h936d62c9g0ab9g59d2g777bgf2fbbdb51b0a" version="1">Shattered Souls: Vengeance</content>
+  <content contentuid="h13a94c25g809dg88bfga240g3c7fa081c036" version="3">Killing an enemy sometimes releases a soul fragment that heals you for 30%-40% of maximum health.</content>
+  <content contentuid="ha3fbf5dcg698cgad9eg7b5egb57c145ac55e" version="1">Shattered Souls: Havoc</content>
+  <content contentuid="h7e3de79fg38aag4c29g6a02g78676b0cef4b" version="5">Melee Attacks also deal &lt;LSTag Type="Status" Tooltip="DH_CHAOS_DMG"&gt;Chaos Damage&lt;/LSTag&gt;.</content>
+  <content contentuid="h62770650g9a22gd298gef29g166c10643c48" version="3">All incoming damage will be reduced by half for 2 turns.</content>
+  <content contentuid="hd5cbe377gc768gce86gad30gdfab625ca60f" version="1">Shattered Souls: Vengeance</content>
+  <content contentuid="h9769def5g8a91g0a52g5791g5f5f1f69dfb1" version="1">INnnd</content>
+  <content contentuid="h28d643e4gea7dg4ff2g3b82g6c5b15e2d15c" version="2">Shattered Souls: Vengeance</content>
+  <content contentuid="hc46936cagf1d7g745fg8278g9197c008a95e" version="4">All incoming damage reduced by half.</content>
+  <content contentuid="hcbb1be78gef4fg68e5g5121g946988897410" version="1">Thick Skin</content>
+  <content contentuid="h30739213gbe7dg4fd3gd362g928a48bd7adc" version="3">At the first turn of each combat, fel energy thickens your skin to demonic proportions granting &lt;LSTag Type="Status" Tooltip="DH_THICK_SKIN"&gt;Thick Skin&lt;/LSTag&gt;.</content>
+  <content contentuid="h4282edccg1af1ga130g82begb6dbc2696458" version="1">8892b93b-721f-4b99-b9b4-05ac25aadb33</content>
+  <content contentuid="hebc77d21gf875g8b66gaf7cg3ea75647a36b" version="1">Thick Skin</content>
+  <content contentuid="h153763bbg3deageb28ga9c1g6979c7c1713d" version="2">Gain temporary hit points equal to 20% of maximum hit points + &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; Modifier</content>
+  <content contentuid="h4a7c4afbg9346geda9g0f97gd0cf7dfe5d68" version="1">Mastery: Fel Blood</content>
+  <content contentuid="h15778076g6b49g1bf6gc05ag6e28ec7d02d2" version="4">Strengthens your blood gaining &lt;LSTag Tooltip="Resistance"&gt;Resistance&lt;LSTag&gt; to Slashing, Piercing, and Bludgeoning damage.</content>
+  <content contentuid="h8b1ab199g6209ge50dg5313g99f473521b1b" version="2">Damage reduction is doubled while &lt;LSTag Type="Status" Tooltip="DH_DEMON_SPIKES_TECHNICAL"&gt;Demon Spikes&lt;LSTag&gt; is active.</content>
+  <content contentuid="h9a6bfc63gbde1ge2a0gc2a1g4aba74a9ace5" version="1">Mastery: Fel Blood</content>
+  <content contentuid="h08834f57g54e6ge445gd5b1g41b4902a4fd6" version="1">Strengthens your blood reducing damage taken by your &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;LSTag&gt; Modifier. </content>
+  <content contentuid="h6cd19d0fg2814g2aa2gc271ged0689877bf2" version="1">Demon Spikes</content>
+  <content contentuid="h1821a809gdef6g6719ga1e9g60a370950b64" version="1">Demon Spikes</content>
+  <content contentuid="h394f5d2ag5412g7951g70b7ge210f113635c" version="1">Surge with fel power, imposing &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on an attacker, possibly causing their attack to miss.</content>
+  <content contentuid="ha812de7fg7c24gfa15g354bg7955fe489cc1" version="1">Demon Spikes</content>
+  <content contentuid="h25f59294gba78g8633g67fagce660f3f2c58" version="3">Surge with fel power, healing yourself for 20% of the damage taken.</content>
+  <content contentuid="h79e721a8g8168ge3b4g79dagbb4f64ac8ef6" version="3">Surge with fel power, healing yourself for 20% of the damage taken.</content>
+  <content contentuid="hf1db5159g5409g272ega9e3g1709845904dc" version="1">Retaliation</content>
+  <content contentuid="h2e5aae0cg6035g2d4cga58ag1cec3f914b77" version="2">While Demon Spikes is active, melee attacks against you cause the attacker to take half of the damage dealt.</content>
+  <content contentuid="hc6fea493g7bf1gbd35g615fg80c7f8d5c79d" version="3">On hit, succeeding a Dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; deals Retaliation damage</content>
+  <content contentuid="h74c5e348g4774g251bg3e61g90bbb1239462" version="2">Demonic Wards</content>
+  <content contentuid="hea0ef435g8af1g4dd4g8ca4geb9d1c136cf3" version="1">%%%|Technical status to add Chaos Damage Status Effect|</content>
+  <content contentuid="he565ad8bg87a6g136bg29dfg0ffe653ca79f" version="1">%%%|Demonic Ward Technical|</content>
+  <content contentuid="h8c5d703fg4972gfdd4g8fa9gff20202c2416" version="1">%%%|Technical status to add the Demonic Ward status effect at the start of the turn|</content>
+  <content contentuid="hc56bfb5fg7a61g701ag2348g41fdbc127f9c" version="2">%%%|Technical status to add Chaos Damage Status Effect (Wisdom Modifier)|</content>
+  <content contentuid="h298f344cg73acg0f18g2dd0g9981bcbda4a2" version="1">%%%|Demonic Ward Technical|</content>
+  <content contentuid="hef2bc89cgfe69g65d0g4062g7e38db752aee" version="1">%%%|Technical status to add the Demonic Ward status effect at the start of the turn|</content>
+  <content contentuid="h1fbb5bbdg4ca4g451eg6e5fg2138e62587b8" version="1">Demonic Wards</content>
+  <content contentuid="h0036f098g7b26g3ba5g27bbg58fd110c602d" version="3">At the beginning of each turn, activate your Demonic Wards, granting enemies &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; against you.  Will not be applied while Tormenting creatures.</content>
+  <content contentuid="h8d5166eag01edgeff4g44f8g7cc1885bf216" version="1">This effect lasts until you takes damage.</content>
+  <content contentuid="hc3a7fca4g6c1dg6493g4147g3397429d82f6" version="3">When a hostile creature misses you with a melee attack, sacrifice 20% of your hit points + &lt;LSTag Tooltip="Constitution" &gt;Constitution&lt;/LSTag&gt; Modifier of your health to inflict &lt;LSTag Type="Spell" Tooltip="DH_CHAOS_DMG"&gt;Chaos Damage&lt;/LSTag&gt; on your attacker.</content>
+  <content contentuid="h2225a567g2bc7g7820g5a9ega4449475e11d" version="1">&lt;LSTag type="Image" Info="SoftWarning"/&gt;Sacrificed damage and Riposte damage scales with your level.</content>
+  <content contentuid="h15a6466fg2232g0afdgab75g8f1e93c0adfb" version="1">When a hostile creature misses you with a melee attack, sacrifice [1] + &lt;LSTag Tooltip="Constitution" &gt;Constitution&lt;/LSTag&gt; Modifier of your health inflict &lt;LSTag Type="Spell" Tooltip="DH_CHAOS_DMG"&gt;Chaos Damage&lt;/LSTag&gt; on your attacker.</content>
+  <content contentuid="hc3c96694g5144g8a5fg431egfb58af4f4370" version="1">&lt;LSTag type="Image" Info="SoftWarning"/&gt;Sacrificed damage and Riposte damage scales with your level.</content>
+  <content contentuid="h5821edccg207ega57cg263cg1e356de744bf" version="1">%%%|Chaos Damage Technical|</content>
+  <content contentuid="h8fcf384ag2700gc2d8gbe5age7c7e2928be4" version="1">%%%|Technical status to add Chaos Damage Status Effect (Constitution Modifier|</content>
+  <content contentuid="h097a26e5g132bgd2bcg70b2gcae986158517" version="3">Retaliate with  &lt;LSTag Type="Status" Tooltip="DH_CHAOS_DMG"&gt;Chaos Damage&lt;/LSTag&gt; when a creature misses you with a melee attack.</content>
+  <content contentuid="h0c962985gd093g2aabg0312g9a32fb57b8b1" version="1">Charred Warblades</content>
+  <content contentuid="h280e4e09gc1aag30abg28c2g6b9ff338acfb" version="2">Imbue your weapons with Fel Fire dealing an additional [1] &lt;LSTag Tooltip="Fire"&gt;Fire&lt;/LSTag&gt; Damage.</content>
+  <content contentuid="hac4ab3f9ge513gff7ag3218gb70d85ef40d0" version="1">&lt;LSTag type="Image" Info="SoftWarning"/&gt;Sacrificed damage and Riposte damage scales with your level.</content>
+  <content contentuid="h2cbe0d26g9f1dg2b40gc53bg0244284870a7" version="1">Master of the Glaive</content>
+  <content contentuid="h68fe1820gd59egb05dg40ebgd0f87226f702" version="5">&lt;LSTag Type="Spell" Tooltip="Projectile_ThrowGlaive"&gt;Throw Glaive&lt;/LSTag&gt; has a chance to apply &lt;LSTag Type="Status" Tooltip="SLOW"&gt;Slow&lt;/LSTag&gt; enemies hit for 2 turns</content>
+  <content contentuid="hd9abfca6ga1c9gb527g9ad5g4f88be160ac4" version="1">Pursuit</content>
+  <content contentuid="h9ff499b6gde1cgeb79gf57eg0d747d0171af" version="1">Increase your &lt;LSTag Tooltip="MovementSpeed"&gt;Movement Speed&lt;/LSTag&gt; by 3m</content>
+  <content contentuid="hc058023cgee5ag32efg4994g265af1674981" version="1">Demon Blades</content>
+  <content contentuid="h74eb6c35g0205gab5agc972gf85e94333089" version="3">Chill your weapons adding [1] &lt;LSTag Tooltip="Cold"&gt;Cold&lt;/LSTag&gt; Damage.</content>
+  <content contentuid="h00c59294g3f7bg7b36gfa4dg18bd2c64e7a3" version="1">&lt;LSTag type="Image" Info="SoftWarning"/&gt;Sacrificed damage and Riposte damage scales with your level.</content>
+  <content contentuid="hd3cc03adga3ffgc12fg67f6gd2f67af87634" version="1">Demon Hide</content>
+  <content contentuid="h543106e4gb4b3g409fg36bfgd381558ee03d" version="5">Reduce Slashing, Piercing, and Bludgeoning damage taken by [1] + &lt;LSTag Tooltip="Constitution" &gt;Constitution&lt;/LSTag&gt; Modifier .</content>
+  <content contentuid="h4ff3ac77g12feg2937ga0c8g28c9f0b052e8" version="1">Demonic Initiative</content>
+  <content contentuid="hc5a8a803gbc8bgd521g7c9dgcf682602849e" version="1"> You are deadliest against unprepared enemies. In combat, you have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt;.</content>
+  <content contentuid="hb9e74f66g876dg6e76g992agee20c9e977c7" version="1">Illidari Knowledge</content>
+  <content contentuid="hfa7e9513gcd51g70d1gca8eg204d2db6170b" version="5">You gain a 30% Chance to reduce &lt;LSTag Tooltip="Fire"&gt;Fire&lt;/LSTag&gt;, &lt;LSTag Tooltip="Cold"&gt;Cold&lt;/LSTag&gt;, &lt;LSTag Tooltip="Thunder"&gt;Thunder&lt;/LSTag&gt;, &lt;LSTag Tooltip="Lightning"&gt;Lightning&lt;/LSTag&gt;, &lt;LSTag Tooltip="Psychic"&gt;Psychic&lt;/LSTag&gt;, and &lt;LSTag Tooltip="Force"&gt;Force&lt;/LSTag&gt; damage taken by half.</content>
+  <content contentuid="hcf834931ga405ga675g4909ge61294356d07" version="1">Soul Rending</content>
+  <content contentuid="h556f9394gd773g33ebg899ag8a6bfbd128be" version="1">Gain an extra Action Attack.</content>
+  <content contentuid="h84511fa1g2b56g916fg37e8g070b3196442e" version="1">Last Resort</content>
+  <content contentuid="h36b57773g96aag8b75g7b1cgc1b3824f648e" version="4">If you reach 0 &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt;, you regain 30% of your hit points instead of becoming &lt;LSTag Tooltip="Downed"&gt;Downed&lt;/LSTag&gt;.  And gain &lt;LSTag Type="Spell" Tooltip="DH_METAMORPHOSIS_VENGEANCE_TECHNICAL"&gt;Metamorphosis: Vengeance&lt;/LSTag&gt; for 3 turns.</content>
+  <content contentuid="hbd60e728ga255g73b8g8720g5068def417a0" version="1">Last Resort</content>
+  <content contentuid="h99a94a60gf4c6g2dfagd828gf892e9232940" version="1">Last Resort</content>
+  <content contentuid="h3bc9e5ffg79d2ga0c9gd27bga45d028e37a5" version="1">Felblade</content>
+  <content contentuid="h2b27d16ag23d5g6153gbe9fg5b4c2c07d565" version="2">Charge forward and attack the first enemy in your way, dealing [1], burning them with Fel [2], and goad them into attacking you.</content>
+  <content contentuid="h7098ef9ag71d9g74d8g4611gb4e884e350a8" version="1">Torment</content>
+  <content contentuid="h2680d761ge9f2g87b1gadfcg175fe25fc9c5" version="5">Torment nearby enemies taunting them to attack only you whenever possible.</content>
+  <content contentuid="h67971ae6gae82g3cd8gbc3bg582842ad09bb" version="1">Glide</content>
+  <content contentuid="hda8786dfgc214g89d6gc599gb6ad76ad3a72" version="1">Spread your wings slowing your rate of descent, granting &lt;LSTag Tooltip="Immune"&gt;Immunity&lt;/LSTag&gt; to Falling damage.</content>
+  <content contentuid="h55b80abcgbcafgdaf0ge2acg091da1026067" version="1">Glide</content>
+  <content contentuid="hc47a9c4fg7c55ga3c0g9ef8g72180c4cc0f6" version="2">Spread your wings slowing your rate of descent, granting &lt;LSTag Tooltip="Immune"&gt;Immunity&lt;/LSTag&gt; to Falling damage  and increasing your jump distance by an additional [1].</content>
+  <content contentuid="hdcbe6a6bgbbc7g2a5bg3497g3f3950932169" version="2">Spread your wings slowing your rate of descent, granting &lt;LSTag Tooltip="Immune"&gt;Immunity&lt;/LSTag&gt; to Falling damage and increasing your jump distance by an additional [1].</content>
+  <content contentuid="h532e6f93gb26bg0dacg8723ge9aadd279b6e" version="1">Glide</content>
+  <content contentuid="h4e39bcd9gd4fbga872ge3dfgb182305883ec" version="1">Spectral Sight</content>
+  <content contentuid="h01238e47gc69cg0fafge1eag0d033ae65661" version="1">Spectral Sight</content>
+  <content contentuid="h31c47016ge809g8445g34ccgb8e87cad920d" version="1">Fel Rush</content>
+  <content contentuid="h09c376dfg303dgd2f6gfe70g6e454af70145" version="3">Rush forward, dealing &lt;LSTag Type="Status" Tooltip="DH_CHAOS_DMG"&gt;Chaos Damage&lt;/LSTag&gt;. to all enemies in the way.</content>
+  <content contentuid="h861f29e9gef90gee88gb739g02f8d017a526" version="1">Demon's Bite</content>
+  <content contentuid="hf84e47d8g1a0ag3c91g886cg2dab7dcaec0c" version="3">Attack with both your main and off-hand weapons.</content>
+  <content contentuid="ha1c807d3g9a08ge664g444dgb1cc5990be6e" version="2">Vengeful Retreat: Blink</content>
+  <content contentuid="h53d908d1g12f8g06bag29d7g1c8d41dd3eb7" version="4">Teleport to an unoccupied space you can see. </content>
+  <content contentuid="h6ceb1957ge8a7g2a89g8520g1770a9d2f6dd" version="1">%%%|Vengeful Retreat Technical|</content>
+  <content contentuid="hd79b6935g03e6g8611gecd4gcc31682889cd" version="2">%%%|Vengeful Retreat Technical| to unlock Blink|</content>
+  <content contentuid="h5b7396c7g7434g1bccg89bdgf47e3ef3a562" version="1">Vengeful Retreat</content>
+  <content contentuid="h00372624g05a8g3ccbg06f0g4b8ab3dbf53e" version="2">Retreat by releasing energy hitting nearby enemies for [1] and gaining the ability &lt;LSTag Type="Spell" Tooltip="DH_VengefulRetreat_Blink"&gt;Blink&lt;/LSTag&gt; to vault away from danger for that turn.</content>
+  <content contentuid="h75435c03g4065g0940g330fgd16986c3bf96" version="1">Vengeful Retreat</content>
+  <content contentuid="hdff674b0g7591g83e7g405dgce406a3e5642" version="1">Vault away from danger teleporting to an unoccupied space you can see.  Enemies you leave behind take [1].</content>
+  <content contentuid="h9cede3cdg0070g0e7dg36bdg5cc590729f5e" version="1">Vengeful Retreat</content>
+  <content contentuid="he54d6f9eg9439ga773ge4c6g9a10a99b7ab6" version="1">Vault away from danger teleporting to an unoccupied space you can see.  Enemies you leave behind take [1].</content>
+  <content contentuid="hfdd7e6a2g8d64g56a9g261bgd61d748b9bc4" version="2">Sigil of Flames</content>
+  <content contentuid="h92a5aaffg28adgd668g906dg507c3f8f67bb" version="10">Sigil of Flames</content>
+  <content contentuid="h5f1de196g03ceg5b90gde71g5b29af0851b5" version="2">Place a demonic sigil at the target location dealing Fel Fire damage to enemies in the vicinity. </content>
+  <content contentuid="h1fddd6cbga911gadc8gc473gc4bab0829b83" version="1">Sigil of Flames</content>
+  <content contentuid="hf09607cag0475g9eecg75a9gc524b57d6b67" version="1">Place a demonic sigil at the target location dealing Fel Fire damage to enemies in the vicinity. </content>
+  <content contentuid="h74412596geab9g242eg0cb9g4b9c32ef3d9a" version="2">Ascending Flame</content>
+  <content contentuid="h79f56d75gb00eg2149g865bg9278ac9384ae" version="2">Sigil of Flame has a chance to deal another set of &lt;LSTag Tooltip="Fire"&gt;Fire&lt;/LSTag&gt; damage per enemy hit.</content>
+  <content contentuid="h0c1b9df7gd5c4g1f83g05d4g87738c29d171" version="1">Flames of Fury</content>
+  <content contentuid="h3d52c786gebd7g4362g585cg71be7f40f622" version="1">Sigil of Flame deals an extra 30% of &lt;LSTag Tooltip="Fire"&gt;Fire&lt;/LSTag&gt; damage.</content>
+  <content contentuid="he0f6e2adgfc35g6b9cg325ega642ece9956c" version="1">Flames of Fury</content>
+  <content contentuid="hd79bd24bg489cg8d73gd5b7g81846ea18411" version="1">Sigil of Flame deals an extra 30% of &lt;LSTag Tooltip="Fire"&gt;Fire&lt;/LSTag&gt; damage.</content>
+  <content contentuid="ha128c27bged6bg9c43g3b5cg234502a2e8d1" version="1">Ascending Flame</content>
+  <content contentuid="hd6cee102g1feegfec7g46d4g6467f060f927" version="1">Sigil of Flame has a chance to deal another set of &lt;LSTag Tooltip="Fire"&gt;Fire&lt;/LSTag&gt; damage per enemy hit.</content>
+  <content contentuid="h512b96begbccegacc6gd9b9g9a43da8b08d9" version="1">Essence Break</content>
+  <content contentuid="h37c7f3c2g490egf76cg4f7bg854a4a2221db" version="3">Slash all enemies in front of you for 200% of attack power + &lt;LSTag Type="Status" Tooltip="DH_CHAOS_DMG"&gt;Chaos Damage&lt;/LSTag&gt;, and increase the damage you deal on your next Chaos Strike or Blade Dance by [1].</content>
+  <content contentuid="hc80a1184gae7age92cg17a2g47d13509df98" version="1">Gain an Extra Action.</content>
+  <content contentuid="h16c870a2g91fdgbef7g5d79ge83c567226cd" version="2">Slice your target with both weapons for double their damage and inflict &lt;LSTag Type="Status" Tooltip="DH_CHAOS_DMG"&gt;Chaos Damage&lt;/LSTag&gt;.</content>
+  <content contentuid="h6adb7953g4bccg8e76g4887g66cb756ec1ec" version="1">Annihilation</content>
+  <content contentuid="he66d885cga616g03f8gf61dgfe51e0ccb4d9" version="1">Death Sweep</content>
+  <content contentuid="h5a5dcdc0g646eg201dg683dga12b1fa1fadb" version="1">Blade Dance</content>
+  <content contentuid="h2ec513b2g9c32gbe3bg5b06g160808c297f2" version="2">Blade Dance</content>
+  <content contentuid="ha145280bg0b36g275bg036dg59306b81f4a8" version="1">Throw a demonic glaive at the target, dealing [1].  The glaive can ricochet to deal additional half damage to three other targets in range.</content>
+  <content contentuid="h7c68bde4gf6c5gd176g2c31g1ec7166c786f" version="1">Strike up to 6 nearby enemies for [1].</content>
+  <content contentuid="hf9d0a3a7gb936gabc7ga258gcb0096082b67" version="1">First Blood</content>
+  <content contentuid="ha976e283gb26dg8504gc40bgd312172576f7" version="4">&lt;LSTag Type="Spell" Tooltip="Projectile_BladeDance"&gt;Blade Dance&lt;/LSTag&gt; deals extra damage from your main hand weapon + [1] and &lt;LSTag Type="Status" Tooltip="DH_CHAOS_DMG"&gt;Chaos Damage&lt;/LSTag&gt; to the first target struck.</content>
+  <content contentuid="heec0ac33g7031gea30gbefbga9cbb4a1de70" version="2">Deflecting Dance</content>
+  <content contentuid="h01d2700cgc8dcg7fa5g6291g4752289d65f8" version="5">After using &lt;LSTag Type="Spell" Tooltip="Projectile_BladeDance"&gt;Blade Dance&lt;/LSTag&gt; gain a shield which reduces the next damage you take by half.</content>
+  <content contentuid="h020c1614g87a1g33cdg0014g4bec7dc9d006" version="1">Deflecting Dance: Shield</content>
+  <content contentuid="he3f76cdagc8eag1d69gdba7g1fb8533c68b9" version="4">Reduces the next damage you take by half.</content>
+  <content contentuid="h55a65501gb2c7g77c9g3998g0db31f4e2a85" version="1">Death Sweep</content>
+  <content contentuid="hc9968b0dg498egfbdcgc6b9g047d20491543" version="1">Slice up to 6 nearby enemies for [1] and inflict &lt;LSTag Type="Status" Tooltip="DH_CHAOS_DMG"&gt;Chaos Damage&lt;/LSTag&gt; and triggering &lt;LSTag Type="Status" Tooltip="DH_DEMONIC_PRESENCE_TECHNICAL"&gt;Demonic Presence&lt;/LSTag&gt;.</content>
+  <content contentuid="h6cea9b0bg8c5cgc44fga6a9ga4af73642d7c" version="1">Eye Beam</content>
+  <content contentuid="h1d71c57agac26g87a5g1b05g357af82cc400" version="1">Unleash the fel within you, blasting all enemies in front of you, dealing &lt;LSTag Type="Status" Tooltip="DH_CHAOS_DMG"&gt;Chaos Damage&lt;/LSTag&gt;.</content>
+  <content contentuid="hea603a94geacfg1e25g8bfbg2aee44440d1d" version="1">Blind Fury</content>
+  <content contentuid="h0fbb5158g4ea3g1e4cg44b3g0c0bbe1c2f1c" version="3">&lt;LSTag Type="Spell" Tooltip="Zone_DH_EyeBeam"&gt;Eye Beam&lt;/LSTag&gt; deals an additional [1] per hit.</content>
+  <content contentuid="h3e7f4260g0866g6d7cg373fg86c0c41c6d38" version="1">Blind Fury</content>
+  <content contentuid="h34ba6035ge401gb109gb248g964e1a1fe6dc" version="2">&lt;LSTag Type="Spell" Tooltip="Zone_DH_EyeBeam"&gt;Eye Beam&lt;/LSTag&gt; deals an additional [1] per hit.</content>
+  <content contentuid="h3ec4b3cbg2d17g5142g9c20g9f5d10c16e2d" version="1">Shear</content>
+  <content contentuid="hb1b090afgb133g7e62g6558gd71fa981fb75" version="6">Shear an enemy with both weapons shattering their soul and &lt;LSTag Tooltip="HitPoints"&gt;healing you for 60-70% of the damage dealt&lt;/LSTag&gt;.</content>
+  <content contentuid="hef1d1459g7181g58c6g9981gd74afbb9715f" version="2">Soul Cleave</content>
+  <content contentuid="hdb98c7c6gac04g58efga793g44e23d656460" version="2">Viciously strike enemies in front of you for 150% of attack power and heal yourself for 40% of the damage dealt.</content>
+  <content contentuid="h9225a519gbb06g1d1fg0f6bg3c67b7c52d7a" version="1">Focused Cleave</content>
+  <content contentuid="hcb145bafg037fg2834ga83cgdf5bf4ced948" version="2">&lt;LSTag Type="Spell" Tooltip="Zone_DH_SoulCleave"&gt;Soul Cleave&lt;/LSTag&gt; has a chance to deal double damage to each enemey struck.</content>
+  <content contentuid="h02b776e0g698ag1b71gce4bg151196701352" version="1">Fel Devastation</content>
+  <content contentuid="hc9c7b932g6018gc123g6f91ge58c55ebcfa6" version="1">Unleash the fel within you, blasting all enemies in front of you, dealing &lt;LSTag Type="Status" Tooltip="DH_CHAOS_DMG"&gt;Chaos Damage&lt;/LSTag&gt;.</content>
+  <content contentuid="h5d4bc27ag233ag1a4cgd055g1ec438837645" version="2">Metamorphosis: Vengeance</content>
+  <content contentuid="hb3ed024egb15dg8ab3gebd6gf0ec1fe14d1e" version="1">Metamorphosis</content>
+  <content contentuid="h39da7b18gd1f9g98c0gc287gf124d870720a" version="2">Transformed into a demon.</content>
+  <content contentuid="h89e064afga7e8g0b49g0ca5g2ba37d878d53" version="3">Metamorphosis: Vengeance</content>
+  <content contentuid="hcdbe74cbg6c21g331fg810egc87723310042" version="2">%%%|Eyebeam Technical|</content>
+  <content contentuid="h11af644dg79b5ga83dg7ccegc14b2a00ea31" version="2">%%%|Eyebeam Technical apply damage|</content>
+  <content contentuid="hbb5d74eeg67e4g804bg90d0g4319d16915be" version="1">%%%|Eyebeam Metamorphosis Technical|</content>
+  <content contentuid="h2b74eeefga473g9391g4cb2geef85040e281" version="1">%%%|Eyebeam Technical - Handle Meta Shape|</content>
+  <content contentuid="he3639a1bg4973g7c3dg0dd4gf96a8dc4f511" version="1">Fel Devastation</content>
+  <content contentuid="h4af9c292g01ceg3ab9gd360g34a39489d5f5" version="1">%%%|Fel Devastation Technical|</content>
+  <content contentuid="hf15e55bcg5d9fg857cgc426g8f2b8dedcb70" version="1">%%%|Fel Devastation Technical apply damage|</content>
+  <content contentuid="heea9c9bbg7082g6e02g45aagf43d6a77c119" version="1">Roaring Fire</content>
+  <content contentuid="h307d847cg09dag9edagb31ag2cd073eba6e3" version="2">&lt;LSTag Type="Spell" Tooltip="Zone_DH_FelDevastation"&gt;Fel Devastation&lt;/LSTag&gt; heals your for 30% of your missing health.</content>
+  <content contentuid="h7a2c6bd8g5a40gdf61g74a9g379f372ea884" version="1">Ruinous Bulwark</content>
+  <content contentuid="h0f19b0a8g3cdeg6659g9642g0fcd9e8c76bd" version="2">&lt;LSTag Type="Spell" Tooltip="Zone_DH_FelDevastation"&gt;Fel Devastation&lt;/LSTag&gt; heals for an additional [1].</content>
+  <content contentuid="hfe5e126bg4187ge858g845ag5b4def2fa276" version="1">The extra healing is converted into a shield, reducing damage until the next turn.</content>
+  <content contentuid="h050f774bgb08bg5410g518bg1134861d05d3" version="1">Stoke The Flames</content>
+  <content contentuid="h701c0428g16b2g9f4agea76g15b7023f8b15" version="3">&lt;LSTag Type="Spell" Tooltip="Zone_DH_FelDevastation"&gt;Fel Devastation&lt;/LSTag&gt; deals additional [1].</content>
+  <content contentuid="hef084235g4b46gca34gd9bdgfcf8f868f14a" version="3">Unleash the fel within you, damaging enemies directly in front of you for [1]. Retores up to 50% &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; of the damage dealt.</content>
+  <content contentuid="h970f5cd9g7fe0g7a3age7cbg06753ce50054" version="1">Damage dealt heals you for upto 50% of the damage dealth.</content>
+  <content contentuid="h5558c923g8a76ga48aga25ag12f7d6e3fed3" version="1">Roaring Fire</content>
+  <content contentuid="h7aff365bg19aeg5e4ag8db8g8cd584e8a975" version="2">&lt;LSTag Type="Spell" Tooltip="Zone_DH_FelDevastation"&gt;Fel Devastation&lt;/LSTag&gt; heals your for 30% of your missing health.</content>
+  <content contentuid="h21715b60g232fg81d8gf9f0g30c9b566ac0c" version="1">Infernal Strike</content>
+  <content contentuid="h0929a3a3g56ccgaf65gab3ag492638bb9a37" version="1">Leap through the air toward a targeted location, dealing (41.7% of Attack power) Fire damage to all enemies within 6 yards.</content>
+  <content contentuid="he8946976gad2fg9a1dg84ccg023711b459e9" version="1">Felfire Haste</content>
+  <content contentuid="hd6b2ed46g2a12gd4d9g8520g0129cb96838a" version="6">&lt;LSTag Type="Spell" Tooltip="Rush_DH_FelRush"&gt;Fel Rush&lt;/LSTag&gt; and &lt;LSTag Type="Spell" Tooltip="Projectile_DH_InfernalStrike"&gt;Infernal Strike&lt;/LSTag&gt; increases your movement speed by [1] for 2 turns and does not provoke &lt;LSTag Tooltip="OpportunityAttack"&gt;Opportunity Attacks&lt;/LSTag&gt;.</content>
+  <content contentuid="h753af52cgdc08g6137gc6c2g438150bc38a0" version="1">Infernal Strike</content>
+  <content contentuid="hb39dededgc6c0gceabga760g65771d5f70be" version="1">Leap through the air toward a targeted location, dealing (41.7% of Attack power) Fire damage to all enemies within 6 yards.</content>
+  <content contentuid="h447090c6gc5dcg91c5ge06eg38dbf7447146" version="1">Infernal Strike</content>
+  <content contentuid="ha81607c6g4ce1g3b95ga767g879cb55f9ef7" version="7">Leap through the air toward a targeted location, dealing [1] and [2]. Affected enemies must make a &lt;LSTag Tooltip="Charisma"&gt;Charisma&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or be &lt;LSTag Type="Status" Tooltip="DH_TORMENT"&gt;Tormented&lt;/LSTag&gt;, forcing them to attack you for 2 turns.</content>
+  <content contentuid="h196f7c72g5254g4adeg4a06gb2561b2d636d" version="2">Does not provoke &lt;LSTag Tooltip="OpportunityAttack"&gt;Opportunity Attacks&lt;/LSTag&gt;.  Allies will feel the heat of the strike, but will not take any damage.</content>
+  <content contentuid="h90133ed0g6412g8548gf771g23ebfaf533c9" version="1">Felfire Haste</content>
+  <content contentuid="h176a3a8bg9c49g8178gbef7g190694c37a8f" version="2">Movement speed increased by [1] and do not &lt;LSTag Tooltip="OpportunityAttack"&gt;Opportunity Attacks&lt;/LSTag&gt;.</content>
+  <content contentuid="h7f2c996fg321dg3b56g8e23g71a716d78748" version="1">Chaos Brand</content>
+  <content contentuid="hb6fa88b5g5568g30f9gd9cagd68d6f89a352" version="1">Brands enemies in a target area, making them vulnerable to magic damage for 3 turns.</content>
+  <content contentuid="hba1b4862gf8a2g26edg84d2gc60fe4ce3e1b" version="1">Chaos Brand</content>
+  <content contentuid="h7628d7e9ga0fcg074egb311gf01d09184817" version="1">Vulnerable to  magic damage.</content>
+  <content contentuid="h91b35100g92a7g11abgd494g41c9ce699d9a" version="1">Chaos Brand</content>
+  <content contentuid="hca110a0cg305bg8bcbg8828g7dc57d9c4c51" version="2">Learn to use &lt;LSTag Type="Spell" Tooltip="Target_DH_ChaosBrand"&gt;Chaos Brand&lt;/LSTag&gt;.</content>
+  <content contentuid="hdb4bef7cgab01g0d23geb66g61378e26fa88" version="1">Consume Magic</content>
+  <content contentuid="h48334424gba9eg3a23g7508g24bdc61b14af" version="1">Fel Eruption</content>
+  <content contentuid="h0dc2787agbdc4g6beeg3c14g0392f10f2cc2" version="1">Impales the target with &lt;LSTag Type="Status" Tooltip="DH_CHAOS_DMG"&gt;Chaos Damage&lt;/LSTag&gt;.  The target must succeed a Wisdom &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or be &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;Stunned&lt;/LSTag&gt; until the end of its next turn.</content>
+  <content contentuid="h39a9b2a3g8cdbgf21cg2b7bgbeb7f7cc8a04" version="1">Imprison</content>
+  <content contentuid="h9fdf68b8g5388g4327gd2c9g33de7bea3ed2" version="1">Imprison</content>
+  <content contentuid="h456d5993gd38cgfd90g8d3eg5ef07109cfb8" version="3">%%%|Immolation Aura Flag|</content>
+  <content contentuid="ha831d5a6g187eg5f82g6fa2gc225dc719886" version="3">%%%|Immolation Aura Flag|</content>
+  <content contentuid="h1316ed4bg36c4gebf5g9396g883a91cb489b" version="1">Immolation Aura</content>
+  <content contentuid="ha1975e68gad1eg8902g51eeg3fc8fc2fd813" version="1">Immolation Aura</content>
+  <content contentuid="hed14c8a0g8262gc78ageb14g9c96de26be50" version="5">Engulf yourself in flames dealing [1].  &lt;LSTag Tooltip="DH_HAVOC"&gt;Havoc&lt;/LSTag&gt;: Damages nearby enemies each turn. &lt;LSTag Tooltip="DH_VENGEANCE"&gt;Vengeance&lt;/LSTag&gt;: Damages attackers when they hit with a melee attack.</content>
+  <content contentuid="h82ef70d4gb258gf697g9bbcg1cdfdaa01092" version="1">Infernal Armor</content>
+  <content contentuid="he20c9e34gcee9g5b8eg47aeg12deca5a7293" version="7">&lt;LSTag Type="Spell" Tooltip="Shout_DH_Immolation_Aura"&gt;Immolation Aura&lt;/LSTag&gt; gives you &lt;LSTag Tooltip="Resistance"&gt;Resistance&lt;/LSTag&gt; to magical damage. &lt;LSTag Type="Spell" Tooltip="Shout_DH_Immolation_Aura"&gt;Immolation Aura&lt;/LSTag&gt; has the chance to &lt;LSTag Type="Spell" Tooltip="Shout_DH_Torment"&gt;Torment&lt;/LSTag&gt; enemies forcing them to attack the Demon Hunter.</content>
+  <content contentuid="h841e80fdg92a3g7f4dg2d59g9674e9b4c2bf" version="1">Infernal Armor</content>
+  <content contentuid="hfab1c1f6gfe53g5bf9gaf66g2ebdf100e66b" version="1">Damage taken reduce by [1].</content>
+  <content contentuid="hc0e983e7ga4f1g5abcg6c52g6dd962c451c4" version="1">Netherwalk</content>
+  <content contentuid="h259ee7f6g2434g9441g252bgda33190075c7" version="1">Slip into the nether, increasing movement speed by [1] and becoming immune to damage, but unable to attack. For the rest of your turn.</content>
+  <content contentuid="hcae08e87g4b0fgb869g655ag1c2f3d022d82" version="1">Netherwalk</content>
+  <content contentuid="h5d1e8d25g9da4gbc46g149egb81c6cebce65" version="1">Slip into the nether, increasing movement speed by [1] and becoming immune to damage, but unable to attack. For the rest of your turn.</content>
+  <content contentuid="h7153240dgea7ag463ege2b5g1d6354b0c32b" version="1">Fiery Brand</content>
+  <content contentuid="h6928ae4fg3c82gb05fgdb76g117bfeeea331" version="2">Branded, all abilities have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt;.</content>
+  <content contentuid="h5e99c0ceg2f56g280eg5416g93ba4d80d689" version="1">Fiery Brand</content>
+  <content contentuid="hc290f083gc980g35f9g0159gc3b51bd49996" version="4">Brand an enemy with a demonic symbol, instantly dealing [1] causing the enemy to be &lt;LSTag Tooltip="Disadvantage"&gt;disadvantaged&lt;/LSTag&gt; on all abilities for 2 turns.</content>
+  <content contentuid="h7de3cbffg544fg47e8gd50ag86eca91d0dd9" version="1">Sigil of Silence</content>
+  <content contentuid="hc6e616adg5cbcg4f2fg4733g77081318e636" version="1">Place a demonic sigil at the target location silencing enemies in the vicinity. </content>
+  <content contentuid="hb7ce2052g4c36g57cdg27e4g769016d7b222" version="4">Sigil of Silence</content>
+  <content contentuid="hf04db163g50d9g28b8g3998ga5e1f8ffbdc9" version="2">Sigil of Silence</content>
+  <content contentuid="hdfc03f8fgb409g7419g61f9g3dc0587d2a5d" version="1">Place a demonic sigil at the target location dealing Fel Fire damage to enemies in the vicinity. </content>
+  <content contentuid="h0267bac2g7ea7g4a11gbef4gb791fe1530dd" version="1">Spirit Bomb</content>
+  <content contentuid="hb52082f3g26d2g4215g9718g4a4695ff8928" version="1">Shatter the souls of nearby enemies, damaging them for [1] and absorbing their soul healing you for 30% of the damage done.  </content>
+  <content contentuid="hee117661gc8b9g5d2fg0189g202ed8d76e13" version="1">Frailty</content>
+  <content contentuid="hcb222dc7gb1cbgf924gb283gd3eea1985b8f" version="1">Vulnerable to &lt;LSTag Tooltip="Slashing"&gt;Slashing&lt;/LSTag&gt;, &lt;LSTag Tooltip="Piercing"&gt;Piercing&lt;/LSTag&gt;, &lt;LSTag Tooltip="Bludgeoning"&gt;Bludgeoning&lt;/LSTag&gt;, and &lt;LSTag Tooltip="Fire"&gt;Fire&lt;/LSTag&gt; damage.</content>
+  <content contentuid="h52f76e93g35ffge91bg6cdeg3b32dd529973" version="1">Soul Barrier</content>
+  <content contentuid="h2bc1fd9cgb9e8ge9c6g882eg7cac7fc54011" version="1">Soul Barrier</content>
+  <content contentuid="hcb50f9cagbe6ag15b1gb310g55502828453e" version="1">%%% EMPTY</content>
+  <content contentuid="h46c79051g28b4g4cb2g89bcgfd163d8cbb0f" version="1">Soul Barrier</content>
+  <content contentuid="hcb493eafgd89dg9f2cg8031g5d0da5add815" version="1">Place a demonic sigil at the target location silencing enemies in the vicinity. </content>
+  <content contentuid="hec5db8d2g8732g879cg3672ga8573c71f270" version="1">Sigil of Chains</content>
+  <content contentuid="hbc6b4fa4gef32g4ebdg5fb6g27e7d065106b" version="2">Place a demonic sigil at the target location damaging enemies for [1] and pulling in nearby objects and creatures.  Enemies are slowed for 2 turns.</content>
+  <content contentuid="haa3d64a9g27e2gb784g8c32ge7885803761b" version="16">Sigil of Chains</content>
+  <content contentuid="h9aaec0d1g94c3g7005g042dg1ad388689ec7" version="1">Sigil of Chains</content>
+  <content contentuid="h6b8afdb2g5dc9g14c8gde0cg7919d11018ec" version="1">Place a demonic sigil at the target location damaging enemies for [1] and pulling in nearby objects and creatures.  Enemies are slowed for 2 turns.</content>
+  <content contentuid="h969260f9g9ebeg2b9bga3f4gb5f955e9825a" version="2">Shattered Restoration</content>
+  <content contentuid="h8a05fcb0g047ag2adbg99cfga2c6427d4703" version="3">At the beginning of each turn, you have a chance to shatter the souls of enemies within [1], healing you for [2] + &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; Modifier. </content>
+  <content contentuid="h955a90e8g05d8g5f6cg3697g722a0f292b87" version="1">Immune to Magic Missile. &lt;LSTag Tooltip="ArmourClass"&gt;Armour Class&lt;/LSTag&gt; is increased by 5. </content>
+  <content contentuid="h2e9be62egac57g589dg47ecg2b04a24ea688" version="1">Immune to Magic Missile. &lt;LSTag Tooltip="ArmourClass"&gt;Armour Class&lt;/LSTag&gt; is increased by 5. </content>
+  <content contentuid="hf83665e4gc45eg58e9gf617g05783f97ed49" version="1">Immune to Magic Missile. &lt;LSTag Tooltip="ArmourClass"&gt;Armour Class&lt;/LSTag&gt; is increased by 5. </content>
+  <content contentuid="h7c0b09fcgd74cg7d49gcaeag4880ec101769" version="2">Shattered Restoration</content>
+  <content contentuid="hd5cbefbdg991dgfe0fge69egae456235b223" version="2">You shatter the souls around you, healing you for [1] + &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; Modifier. </content>
+  <content contentuid="h1affa0d2g1b13ga77bg3601g228b0ef5e359" version="1">Shattered Soul</content>
+  <content contentuid="hb2a98146gb4b4gc4f7gef3dgeb2a5d6595ff" version="1">Soul Shattered giving life to the Demon Hunter.</content>
+  <content contentuid="ha1a4b806gb3b3g194dge45bg910f1a7f2e22" version="1">Shattered Soul</content>
+  <content contentuid="h6fa9ce38g92e1g5d68ge171ga26673bc6426" version="1">Soul Shattered giving life to the Demon Hunter.</content>
+  <content contentuid="hcd268d14gfad4g8250gfb29g47c46cbe1bc6" version="1">Shattered Soul</content>
+  <content contentuid="h73a64240gfce4g337fg647eg56ccf3e5d60a" version="1">Soul Shattered giving life to the Demon Hunter.</content>
+  <content contentuid="h541cd953g8102gfe67g4719g1babab3e08fa" version="1">Shattered Soul</content>
+  <content contentuid="he77d0944g5a0fg1dcag3650g3e098d118466" version="1">Soul Shattered giving life to the Demon Hunter.</content>
+  <content contentuid="h58aaf936gc205g1db5gf149ga9208a13f3e9" version="1">Insatiable Hunger</content>
+  <content contentuid="h2c83f9b0g8eeagf07dg0c06gf0a32d409209" version="3">&lt;LSTag Type="Spell" Tooltip="Target_DH_DemonsBite"&gt;Demon's Bite&lt;/LSTag&gt; deals an extra 50% &lt;LSTag Tooltip="Piercing"&gt;Piercing&lt;/LSTag&gt; damage.</content>
+  <content contentuid="h6a30ea25g9aebg4060g518bgb516dd974e41" version="1">Chaos Nova</content>
+  <content contentuid="h8aacb27ag2757g80c5gf1ecg9ea6b051bc90" version="1">Unleash an eruption of fel energy dealing &lt;LSTag Type="Status" Tooltip="DH_CHAOS_DMG"&gt;Chaos Damage&lt;/LSTag&gt; and enemies must succeed a Dexterity Saving Throw or be &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;Stunned&lt;/LSTag&gt;.</content>
+  <content contentuid="ha7befb30gf0bdg405ag4494ge8e64ae71a9c" version="1">Blur</content>
+  <content contentuid="he742fe25gc46cg1fdbgf794g224d4efbfe45" version="1">Blur</content>
+  <content contentuid="h9d9e21fdg855fg351ag806cgabaaf4082516" version="1">Sigil of Misery</content>
+  <content contentuid="h7e96480egd47fg623cg871eg623944fc6fb1" version="1">Place a demonic sigil at the target location causing enemies in the vicinity to be &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened&lt;/LSTag&gt; for a  turn and &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;Confusing&lt;/LSTag&gt; them for 3 turns.</content>
+  <content contentuid="h9dbcc573gc144gfd88g6018g1de957f7053f" version="2">Sigil of Misery</content>
+  <content contentuid="h3fd5074dg458dgde54g23a1gc9e5ba74deff" version="1">Place a demonic sigil at the target location causing enemies in the vicinity to be &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened&lt;/LSTag&gt; for a  turn and &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;Confusing&lt;/LSTag&gt; them for 3 turns.</content>
+  <content contentuid="h0e2e4325gd627g0e72g47e2g1911a2482d97" version="5">Sigil of Misery</content>
+  <content contentuid="hc8c78ae8g1214gedb3g154cgd609d9a1940f" version="1">Disrupt</content>
+  <content contentuid="h83036ba1g78efgce96gfae4gd471f9f5a8d0" version="2">Disrupt a spell from being cast.</content>
+  <content contentuid="h970123eegecebga6c7g8681gd0310cadf508" version="1">;</content>
+  <content contentuid="h5f978812gb56cg69f1g26fcg43fa6c57b0b7" version="2">If target is higher level than you, you must make an &lt;LSTag Tooltip="AbilityCheck"&gt;check&lt;/LSTag&gt; using your spellcasting ability to prevent it. The check's difficulty is equal to [1] plus your difference in level. </content>
+  <content contentuid="h66f4b083gc520g8b94g231dg3c7417ce66d3" version="1">Disrupt</content>
+  <content contentuid="hd576b014gc965gaec0gad92g7f1fb02e726a" version="1">Disrupt a spell from being cast.</content>
+  <content contentuid="h954d7140gdebcg423dg1053gc4445f913915" version="1">If target is higher level than you, you must make an &lt;LSTag Tooltip="AbilityCheck"&gt;check&lt;/LSTag&gt; using your spellcasting ability to prevent it. The check's difficulty is equal to [1] plus your difference in level. </content>
+  <content contentuid="h77c07c3bg98e0g33b6ge98ag8fd8aa37686e" version="1">Failed Disrupt</content>
+  <content contentuid="hb912d3b1gaf3eg8fc0g1f1fg741d6d8ce6f8" version="1">Disrupt</content>
+  <content contentuid="h6a6ddb7dgfc5eg3722g3bc6gcbeefd66aeff" version="1">Disrupt a spell from being cast.</content>
+  <content contentuid="h127a5078g45abgc250g7566gfd4b636cece8" version="1">If target is higher level than you, you must make an &lt;LSTag Tooltip="AbilityCheck"&gt;check&lt;/LSTag&gt; using your spellcasting ability to prevent it. The check's difficulty is equal to [1] plus your difference in level. </content>
+  <content contentuid="h389cd67bgcb2eg1b09g530eg075e550e4ecf" version="1">Demon Sight</content>
+  <content contentuid="h168b1177g0da9gcd98g65d5g2f3a082437da" version="1">You can see normally in darkness, both magical and non-magical, to a distance of [1].</content>
+  <content contentuid="hfc94851eg258fgaff3g256dg84c45c72d2ca" version="1">Darkness</content>
+  <content contentuid="hb0574176g4773g4e79g4a60g62babd728285" version="3">Create a shroud of darkness around you, granting friendly targets within it, avoidance to all damage for 2 turns.</content>
+  <content contentuid="h71ac245eg60e0g4317gd2b9g87d3484c96ea" version="1">Enemies within are Heavily Obscures and &lt;LSTag Type="Status" Tooltip="BLINDED"&gt;Blinds&lt;/LSTag&gt; and cannot make ranged attacks into or out of it.</content>
+  <content contentuid="h7fcb86f3g2fdbgdd10gb00bgd7d134be4f53" version="1">Darkness Protection</content>
+  <content contentuid="he477057ag5cd1g0da0g96cfg82fc1cd0ae22" version="1">Darkness Protection</content>
+  <content contentuid="hd07682b9gdfe2ga3dcgababgae71bb690634" version="10">Invulnerable Area</content>
+  <content contentuid="h86b5bccbg2f3fg7febgb23cgd6a716acc034" version="1">Soul Carver</content>
+  <content contentuid="h9b608ad9g7ab1g9fa6ga641g42cf3769ef9b" version="1">Carve into the soul of your target, dealing [1] + [2] Fire damage and &lt;LSTag Type="Status" Tooltip="BURNING"&gt;burning&lt;/LSTag&gt; them for 3 turns.  Immediately healing you for 80% of the damage dealt.</content>
+  <content contentuid="h2098ce92gdfc7g0721g351fg7429827552ee" version="1">The Hunt</content>
+  <content contentuid="h399f4bb0g3b19g660fg29bfg7a4a1aa94c1d" version="2">Charge to your target, striking enemies in your path for 300% of your main weapon's attack power as Chaos damage. The pursuit invigorates your soul, healing you for 10% of the damage dealt.</content>
+  <content contentuid="hdf225c51gbae2ga6acg8efcg17fa87c0ad7d" version="2">Enemies hit will need to succeed a &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; Saving throw or they will be &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened&lt;/LSTag&gt; for 2 turns.</content>
+  <content contentuid="hce8ead64ga7ffg7ff9g9e92g3fa3667a72e6" version="3">Transform to a demon and regaining 50% of your health and gaining your maximum &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; as temporary health. And you passively heal at the beginning of each turn for [1].  &lt;LSTag Type="Spell" Tooltip="Target_DH_Shear"&gt;Shear&lt;/LSTag&gt; heals for an extra 40%.  </content>
+  <content contentuid="ha3d4d78eg56bdgc32cg3a7fg019b7eeeed9f" version="2">Transformed into gaining your maximum &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; as temporary health. And you passively heal at the beginning of each turn for [1].  &lt;LSTag Type="Spell" Tooltip="Target_DH_Shear"&gt;Shear&lt;/LSTag&gt; heals for an extra 40%.  </content>
+  <content contentuid="hcc6a5720g5ea3g0231ge532g8db5180dd369" version="1">&lt;LSTag Type="Spell" Tooltip="Target_DH_Shear"&gt;Shear&lt;/LSTag&gt; heals for an extra 40%.  </content>
+  <content contentuid="h5b8b198cg44d6g4dd6gc87ag5a635ed7509c" version="1">Calcified Spikes</content>
+  <content contentuid="haea35c93g1939g4819g7163ga6f370cae210" version="2">While &lt;LSTag Type="Status" Tooltip="DH_METAMORPHOSIS_VENGEANCE_TECHNICAL"&gt;Metamorphosis: Vengeance&lt;/LSTag&gt; is active, all damage taken is reduced by 50%</content>
+  <content contentuid="h131b1e14g8928gae2cgf83cg1b76c26892fe" version="2">Metamorphosis: Havoc</content>
+  <content contentuid="h5c35a27fgb810g917dg54afgb3566a19441b" version="2">Transformed into a hellish demon strengthening melee attacks by [3]</content>
+  <content contentuid="hd76a69a8g3a1agbca8gbeefge3bc18959eec" version="1">Metamorphosis: Vengeance</content>
+  <content contentuid="he78d433dg96d0gf0f3gef5cgfdafece28422" version="1">Transform to a demon and regaining 50% of your health and double your maximum &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; as temporary health. And you passively heal at the beginning of each turn for [1].  &lt;LSTag Type="Spell" Tooltip="Target_DH_Shear"&gt;Shear&lt;/LSTag&gt; heals for an extra 40%.  </content>
+  <content contentuid="hb6cf7f15ga0cegcc14g7b1dge9bc58f2c715" version="2">Metamorphosis: Havoc</content>
+  <content contentuid="hba473c95gcb0ag213ag93ddg870d893b9d9c" version="1">Transformed into a demon and regaining 50% of your health and double your maximum &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; as temporary health. And you passively heal at the beginning of each turn for [1].  &lt;LSTag Type="Spell" Tooltip="Target_DH_Shear"&gt;Shear&lt;/LSTag&gt; heals for an extra 40%.  </content>
+  <content contentuid="hf170112dg6586g712dg1d89g761a519c8e02" version="1">Metamorphosis: Havoc</content>
+  <content contentuid="hc4d1f6cag2a15g4a7agf593g6c328bf9a041" version="3">Leap into the air and land with explosive force, dealing [1] and &lt;LSTag Type="Status" Tooltip="DH_CHAOS_DMG"&gt;Chaos Damage&lt;/LSTag&gt; to enemies within 8 yds. Enemies must make a &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; Saving Throw or be &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;stunned&lt;/LSTag&gt; for 3 sec. Upon landing, you are transformed into a hellish demon strengthening melee attacks by [2] and able to use &lt;LSTag Type="Spell" Tooltip="Target_DH_Annihilation"&gt;Annihilation&lt;/LSTag&gt; and &lt;LSTag Type="Spell" Tooltip="Projectile_DH_DeathSweep"&gt;Death Sweep&lt;/LSTag&gt;.</content>
+  <content contentuid="h5468cec9g4c3fg5cd5g9ebfgddb1b97f63f6" version="1">Does not provoke &lt;LSTag Tooltip="OpportunityAttack"&gt;Opportunity Attacks&lt;/LSTag&gt;.</content>
+  <content contentuid="h318e5be4gce4cga3a6g5a1fgfb70be65ffe0" version="1">Transformed into a hellish demon and able to use &lt;LSTag Type="Spell" Tooltip="Target_DH_Annihilation"&gt;Annihilation&lt;/LSTag&gt; and &lt;LSTag Type="Spell" Tooltip="Projectile_DH_DeathSweep"&gt;Death Sweep&lt;/LSTag&gt;.</content>
+  <content contentuid="h52d6ce13g3cdbgd1c4g018bge3b6a91b5362" version="2">Leap into the air and land with explosive force, dealing [1] and &lt;LSTag Type="Status" Tooltip="DH_CHAOS_DMG"&gt;Chaos Damage&lt;/LSTag&gt; to enemies within [2]. Enemies must make a &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; Saving Throw or be &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;stunned&lt;/LSTag&gt; for 3 sec. Upon landing, you are transformed into a hellish demon dealing an extra [3] to each attack and able to use &lt;LSTag Type="Spell" Tooltip="Target_DH_Annihilation"&gt;Annihilation&lt;/LSTag&gt; and &lt;LSTag Type="Spell" Tooltip="Projectile_DH_DeathSweep"&gt;Death Sweep&lt;/LSTag&gt;.</content>
+  <content contentuid="h436bcee1g21b6g393dg021cgd6cf897acfc1" version="1">Glaive Tempest</content>
+  <content contentuid="h3a2443acg65b0gf6acg5e79g1dc8209b3d12" version="1">Gain an extra Action Attack.</content>
+  <content contentuid="head04b53g3583g3e9egf575ge9c674624eee" version="2">Havoc Specialization</content>
+  <content contentuid="hc831580fgfc78g5e94g9ed4g85f36cfb6150" version="2">Vengeance Specialization</content>
+  <content contentuid="hfabdded3g94c0ga280g731eg16431285e082" version="1">As a Havoc Demon Hunter you can choose a specialized talent to increase your power to destroy your enemies.</content>
+  <content contentuid="h292e662cg5fdbg8a1fgde89g48d86549e73d" version="1">As a Vengeance Demon Hunter you can choose a specialized talent that will enhance your ability to defend and keep your allies safe.</content>
+  <content contentuid="h5438c789g8a0dgcce6g0db3g020094b7ee21" version="1">Havoc Spells</content>
+  <content contentuid="hd8cd5655g78d1ge675g419ag41aeb305565d" version="1">Choose abilities specific to a Havoc Demon Hunter who specializes in dealing damage.</content>
+  <content contentuid="h6f26b8e2g324agffeeg3427g7ad4162ecd78" version="1">Vengeance Spells</content>
+  <content contentuid="h306ea584gf91bg372ag8041g1d5ba2328ea7" version="1">Choose abilities specific to a Vengeance Demon Hunter who specializes as a tank excelling in damage mitigation.</content>
+  <content contentuid="hee13161eg4321gc9d7g28d0g4d8dd8d3e52e" version="2">Demon Hunter Spells</content>
+  <content contentuid="h75f66392g0034g9194gca6ag95f1c6f510f4" version="2">Choose abilities you learned in your training as a Demon Hunter.</content>
+  <content contentuid="h3a316824g5f12g4411gc6c5gb6e71b163e4a" version="1">Aura of Pain</content>
+  <content contentuid="h577c50e3g3715g30eeg258eg0d200f2350c3" version="1">Critical Strikes</content>
+  <content contentuid="h74add58dg61afga4a5g8048gb75a99e6d45a" version="1">Riposte</content>
+  <content contentuid="h66d470b6g10b1gfd9egb8d4g02a939142f63" version="1">Select Specialization</content>
+  <content contentuid="h4bc2920ag8c22ga1fagb09dgabe87e13dacd" version="1">Fury</content>
+  <content contentuid="h03c8dbfcg09cfgbaa6g3a0dg9a01be5d92da" version="1">Your primary resource for drawing upon your demonic fury to power your actions.</content>
+  <content contentuid="h832d4da6gbc66gb79egb951ga92698f3adba" version="1">Not enough Fury</content>
+  <content contentuid="hd959e8e2ge8c5gdd3cgd80bg3a38b12bd436" version="1">Soul Fragments</content>
+  <content contentuid="hb56d98eagfaaagc807g8cf1gf8f2dc7c36a9" version="1">Shattered from the souls surrounding you allowing you to use specialized actions.</content>
+  <content contentuid="hb5fcf08dgce06g2df0gca8dg86b1b69ec30d" version="1">Out of Soul Fragments</content>
+  <content contentuid="h63b662b0g684agcde4g57e7g21e5feffe3d1" version="2">Untethered Fury</content>
+  <content contentuid="h87cc81d6g777cg0e01g0c73g81487156238e" version="3">At the beginning of each turn, gain 1-4 &lt;LSTag Tooltip="DH_Fury"&gt;Fury&lt;/LSTag&gt;</content>
+  <content contentuid="hcd5c537bg5095g8399g683dg545d96e0eab2" version="1">%%%| EMPTY |</content>
+  <content contentuid="h9c36e4dcg719agadd0gb52ag5248295598a7" version="1">%%%| EMPTY |</content>
+  <content contentuid="h5d1582e5g8fb9g6cc8g7036g63c8c0097b11" version="1">Generates 1 &lt;LSTag Tooltip="DH_Fury"&gt;Fury&lt;/LSTag&gt; per hit.</content>
+  <content contentuid="h5eea3cfcg4724ga430g9d5bg02de9f9ebf51" version="1">Generates 2 &lt;LSTag Tooltip="DH_Fury"&gt;Fury&lt;/LSTag&gt; per hit.</content>
+  <content contentuid="hd9a40c85g36b5gfb66gc2d8gb3bd9c856303" version="1">Generates 10 &lt;LSTag Tooltip="DH_Fury"&gt;Fury&lt;/LSTag&gt;.</content>
+  <content contentuid="h94ca21eagfd04gcb3fg66aeg80ceb4a31516" version="1">Generates 2 &lt;LSTag Tooltip="DH_Fury"&gt;Fury&lt;/LSTag&gt; each turn.</content>
+  <content contentuid="h92b6430fge89cg1ad1g173fgb4dc489a6204" version="1">Generates 2-8 &lt;LSTag Tooltip="DH_Fury"&gt;Fury&lt;/LSTag&gt; each turn.</content>
+  <content contentuid="h2b324e48gfab1gab91g5a89g9fdfa5db8355" version="2">test</content>
+  <content contentuid="hfe5bf864gbe29g2ebagdb80g3083a214bfcc" version="1">Spread your wings slowing your rate of descent, granting &lt;LSTag Tooltip="Immune"&gt;Immunity&lt;/LSTag&gt; to Falling damage.</content>
+  <content contentuid="h8a37111dg76aegbe9cg5786gf3022ff665c8" version="1">;</content>
+  <content contentuid="h02e5895agc5ffgb4c2g2e40g0ddfb2128827" version="1">Has a 30% Chance to absorb 2 &lt;LSTag Tooltip="DH_SoulFragments"&gt;Soul Fragments&lt;/LSTag&gt; on cast.</content>
+  <content contentuid="h33fd615dg611fge431g6786gebdbd14ead64" version="3">Fury</content>
+  <content contentuid="hf9610e27g7d7fgaecbg9b3cgb730f7ce3aaf" version="2">Your primary resource for drawing upon your demonic fury to power your actions.</content>
+  <content contentuid="he91b2c14g985fgf376g20a7g0a4f2bfba48d" version="4">Soul Fragments: [3] Unlocked</content>
+  <content contentuid="h0db2e77fge1eeg52a6g1bbbg4e2dedd5cc87" version="2">Shattered from the souls surrounding you allowing you to use specialized actions.</content>
+  <content contentuid="h44b9c45bg1fb3g31e3g4193gb56289bd4279" version="3">You gain  additional &lt;LSTag Type="ActionResource" Tooltip="DH_SoulFragments"&gt;Soul Fragments&lt;/LSTag&gt; shattered from your defeated foes.</content>
+  <content contentuid="h1597eb38gc297g0355g28c1g8987b3a9e6cb" version="6">Gained [2] Soul Fragments</content>
+  <content contentuid="h359ce704g51d8gb056g1fd0g393181ca4020" version="2">Fury</content>
+  <content contentuid="h8cc7141dg3456gc123g1f89gfe37e0ecfc1f" version="1">Your primary resource for drawing upon your demonic fury to power your actions.</content>
+  <content contentuid="h6a38b170gcee3g7f5fge218g43d25c1facf4" version="1">Generates 1-4 &lt;LSTag Tooltip="DH_Fury"&gt;Fury&lt;/LSTag&gt; each turn.</content>
+  <content contentuid="ha29c373fgaa2dg78dfgdc3bgee55096d8277" version="1">Level [3]  Unlocked</content>
+  <content contentuid="ha45d3610gc128g7e29gbfacgc6111e3e17ee" version="1">You gain [3] Level spell slot(s), which are restored on a &lt;LSTag Tooltip="ShortRest"&gt;Short Rest&lt;/LSTag&gt;.</content>
+  <content contentuid="hb637bfc3g732bg837bgbfcbg08554e495e0c" version="1">Channel Divinity Charges: [3]</content>
+  <content contentuid="h4699bdadgd3abg438agd78cg6258509c81bd" version="1">You gain the ability to channel divine energy, starting with two effects: Turn Undead and an effect determined by your domain. Replenished by &lt;LSTag Tooltip="ShortRest"&gt;Short&lt;/LSTag&gt; or &lt;LSTag Tooltip="LongRest"&gt;Long Rest&lt;/LSTag&gt;.</content>
+  <content contentuid="hb29e184fg3fd0g1f47g2608gcc5d885d6f8f" version="1">Demon Hunter Class</content>
+  <content contentuid="h33e810b4gafeeg2fa6gbbc1ge1635d795fdb" version="1">A disciple of Illidan Stormrage,  you uphold a dark legacy, one that frightens your allies and enemies alike. The Illidari embrace fel and chaotic magics—energies and wield the powers of demons they’ve slain; to inflict havoc on enemies, or focus your powers to resist damage.</content>
+  <content contentuid="h73efe685g07b0gf5c0g125fga7ac8cbf6550" version="1">TESTING</content>
+  <content contentuid="hcd017fc3g150eg0590g2483g594c0e81a39f" version="2">Test1</content>
+  <content contentuid="h45741120gb727g025fg29deg9c8b2b75423d" version="1">While &lt;LSTag Type="Status" Tooltip="RAGE"&gt;Raging&lt;/LSTag&gt;, you can use &lt;LSTag Type="Spell" Tooltip="Shout_FerociousAppetite"&gt;Unrelenting Ferocity&lt;/LSTag&gt;, and have Resistance to all damage except Psychic damage.</content>
+  <content contentuid="h3f0dcee8ge765gab86g84b6g2d37abe544ee" version="1">Test2</content>
+  <content contentuid="hb7a98993gac8bgdd2eg2cf6ga18b9afcd426" version="1">Test3</content>
+  <content contentuid="h240e41c3g0ce8gfc94gdb35g954f0abe671e" version="1">Testing Looks</content>
+  <content contentuid="h5f712a23ga959g7859gc080g8aeb1bc8133b" version="1">This is justa  test blah</content>
+  <content contentuid="h4fa72c81g7b9dg7e39g4cd0g7193c2385563" version="1">Testmats</content>
+  <content contentuid="h51727dc8g6386gc21eg95bfgfd89ea11d9ba" version="1">testingmats</content>
+  <content contentuid="h0ea58bcdg5797g8a05gea16g020805dfcd95" version="1">Demon Hunter Class</content>
+  <content contentuid="hef2d2f61gcb18g5d3ag39bbg594b37119b6f" version="1">Testing this sucker</content>
+  <content contentuid="h0f7dbf8cg3cd1g4ba9gc171g969397d493b4" version="1">%%% EMPTY</content>
+  <content contentuid="h2b3dd042g249ege70cg2a66g7086cf68cbad" version="1">Felfire Heart</content>
+  <content contentuid="hb4d6ad1fg36c3g523ag9670g8412a258c125" version="1">&lt;LSTag Type="Spell" Tooltip="Shout_DH_Immolation_Aura"&gt;Immolation Aura&lt;/LSTag&gt; has  chance to &lt;LSTag Type="Status" Tooltip="TAUNT"&gt;Taunt&lt;/LSTag&gt; enemies hit.</content>
+  <content contentuid="hec15480ag113eg3aefg991eg712b4355e654" version="1">Engulfed in flames taking [1].</content>
+  <content contentuid="h46211cddgcb95ga490gf269g6ae2080e41ea" version="1">Flame Bound</content>
+  <content contentuid="hee706b86g3fdcg605bg84e9gabe4eb8d6037" version="3">Learn &lt;LSTag Type="Spell" Tooltip="DH_Flamebound"&gt;Flamebound&lt;/LSTag&gt; a spell which causes your &lt;LSTag Type="Spell" Tooltip="DH_Immolation_Aura"&gt;Immolation Aura&lt;/LSTag&gt; to regenerate some &lt;LSTag Type="ActionResource" Tooltip="DH_SoulFragments"&gt;Soul Fragments&lt;/LSTag&gt;.</content>
+  <content contentuid="hec83b377g6471ge99cgb0dfg97d9408bdbf0" version="1">Flamebound</content>
+  <content contentuid="h20ff35c1gd1fdg0f27gfa82ga9273535de97" version="2">Soul Fragment Shattered returning to the Demon Hunter.</content>
+  <content contentuid="hb8ad9ff5ga845g0ac7g3d62g7a68f500ab75" version="2">Flamebound</content>
+  <content contentuid="hcdaaa362g14b3gbc88g8c69g5632e1e87776" version="3">%%%|Flamebound Technical|</content>
+  <content contentuid="h7598b9bfg2f3egbd23gd297g846c339cbbd8" version="3">Flamebound: Soul Fragments</content>
+  <content contentuid="hdafdb031g419bg2f18g2befg1c0280d5290c" version="3">You gained a &lt;LSTag Type="ActionResource" Tooltip="DH_SoulFragments"&gt;Soul Fragment&lt;/LSTag&gt; from the shattered souls of your enemies.</content>
+  <content contentuid="h252f6872g35bfgcabeg4d3fgc90d5fc19a43" version="1">Flamebound</content>
+  <content contentuid="hd263688fg715fg6218g809eg4148aaaa6ad0" version="3">&lt;LSTag Type="Spell" Tooltip="DH_Immolation_Aura"&gt;Immolation Aura&lt;/LSTag&gt; has a 30% chance to shatter the souls of your enemies giving you 1 &lt;LSTag Type="ActionResource" Tooltip="DH_SoulFragments"&gt;Soul Fragment&lt;/LSTag&gt; up to 4 souls.</content>
+  <content contentuid="h60168575g2550gd247gcaf2gc29c25e1623e" version="1">Flamebound</content>
+  <content contentuid="h1e565011g34dcg0eb5g492dgd3df4a63a8d9" version="3">&lt;LSTag Type="Spell" Tooltip="DH_Immolation_Aura"&gt;Immolation Aura&lt;/LSTag&gt; has a 30% chance to shatter the souls of your enemies giving you 1 &lt;LSTag Type="ActionResource" Tooltip="DH_SoulFragments"&gt;Soul Fragment&lt;/LSTag&gt; up to 4 souls.</content>
+  <content contentuid="h31c89a4dg17a1g8478g2101g1b93a8df8fb1" version="1">%%%|Flamebound Technical|</content>
+  <content contentuid="h214465c1g1941g7cffg2c3bgbb8125721e96" version="1">Army Unto Oneself</content>
+  <content contentuid="h03b679edg9ba8gf443gd7fdg7e155d769cfe" version="1">&lt;LSTag Type="Spell" Tooltip="DH_Felblade"&gt;Felbade&lt;/LSTag&gt; grants a 50% damage reduction for 2 turns after successfully hitting an enemy.</content>
+  <content contentuid="h4c56386cg3b26g44a1g0029gb56dd9f9c8b1" version="2">Army Unto Oneself</content>
+  <content contentuid="h698dd523gb0d4g0d9fga4fegef6ebe1f9349" version="1">50% damage reduction.</content>
+  <content contentuid="hde472bdegbda3g0e65gf465g257b509c782c" version="1">Burning Alive</content>
+  <content contentuid="hb4a3463eg0935gff43g1055g236b4f6c8c51" version="1">&lt;LSTag Type="Spell" Tooltip="Target_DH_FieryBrand"&gt;Fiery Brand&lt;/LSTag&gt; has a 20% chance to spread to enemies within [1] of the affected creature.</content>
+  <content contentuid="h7e4c06d6g08aag7a01gaa73gae74cc07c639" version="1">%%%| EMPTY |</content>
+  <content contentuid="hfbb8c282g1522ga99dga16cg6cdfef8a965c" version="1">%%%| EMPTY |</content>
+  <content contentuid="h7123c6bega92agb0a3g4982ga4aabd80ec79" version="1">Unlocks the use of &lt;LSTag Type="ActionResource" Tooltip="DH_Fury"&gt;Fury&lt;/LSTag&gt; at Level 1 and &lt;LSTag Type="ActionResource" Tooltip="DH_SoulFragments"&gt;Soul Fragments&lt;/LSTag&gt; at Level 2.</content>
+  <content contentuid="h9cf18c40gbc3fg5b59gb504gaa5585abb6d9" version="1">Ability_DemonHunter_Glide</content>
+  <content contentuid="h6c3fc0afgc15bg2947gb36fg0b1de367995d" version="3">Affected entity is Imprisoned and incapacitated. Damage will cancel this effect.</content>
+  <content contentuid="h8a8263e0g725cg3e99gbd66g2cb5cebc9c83" version="21">Warglaive</content>
+  <content contentuid="h2189d47cg0bbbgea4dgb0c6g7cc84ddaa8e3" version="19">A common and effective warglaive, carried and wielded by Demon Hunters.</content>
+  <content contentuid="h82379700g9d9eg8b64gdd32g65d33a10ea8a" version="13" />
+  <content contentuid="h6e6b190fg9b90ge3bfg9c2cge49a31eb8fe6" version="2">Tormented</content>
+  <content contentuid="h14953538ga3f3g9df4g201dgebe6d5f2f207" version="2">Froced to attack the spellcaster if possible.</content>
+  <content contentuid="h68f0dfffg1486g320cg5d29g4b876a659970" version="1">Tormented: Goaded</content>
+  <content contentuid="h2e893113g664bg0f7cg82e2g2711894d948b" version="1">&lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; against targets other than the spellcaster.</content>
+  <content contentuid="h345b947fge28eg6693g8acagad5e296e462f" version="5">Warglaive +1</content>
+  <content contentuid="h71526f9cg8f7bge322gf347g3952deded6bd" version="4">Warglaive +2</content>
+  <content contentuid="h842c48abg99aage3aag217ag30f33f4b348f" version="5">Horned Warglaive</content>
+  <content contentuid="h6501b2fdg0a96gee41g4a40gf56b8c193dec" version="5">Only Demon Hunters can wield this weapon.</content>
+  <content contentuid="h2cccaef9ge1fcg938fg32e8g129b8b9f2152" version="5">An effective warglaive, carried and wielded by Demon Hunters.</content>
+  <content contentuid="hb5e9c209g03feg3934gd666g18f5c04acae8" version="11">Lord Kazzak's Blazefury Warglaive</content>
+  <content contentuid="h9622aeecga5c2gd38ag8920g573ed6ba59f1" version="11">Can only be equipped as a Main Hand Weapon.</content>
+  <content contentuid="he520fee6g0652g271bg67afg7bb6768a132f" version="11">You face the might of the Burning Legion! All life will be eradicated, pathetic wretch!</content>
+  <content contentuid="h2088fa55g9ba5g60f3gab12gd514e715d180" version="13">&lt;LSTag Type="Image" Info="SoftWarning"/&gt;Only Demon Hunters can wield this weapon.</content>
+  <content contentuid="hf71188fdg8056g7e9cgcdd8g1e725523c2c6" version="1">This weapon can only be wielded as an Off Hand Weapon.</content>
+  <content contentuid="h4d27232eg90ecg3fa7g8b07g99201fde47ca" version="4" />
+  <content contentuid="hf4739c8dgaf5dg6d0eg65e4g05f74e1450b3" version="4">A common and effective warglaive, carried and wielded by Demon Hunters.</content>
+  <content contentuid="h459a9b04g2d30g281dg5907g44358678cdd0" version="13">Lord Kazzak's Firesoul Warglaive</content>
+  <content contentuid="h75bf1a3fg0309gc71dg769dg4ba239880968" version="13">Can only be equipped as an Off Hand Weapon.</content>
+  <content contentuid="hb678be86g411ag0508g3ccag3f086272f795" version="13">I remember well the sting of defeat at the conclusion of the Third War. I have waited far too long for my revenge. Now the shadow of the Legion falls over this world. It is only a matter of time until all of your failed creation... is undone.</content>
+  <content contentuid="h1b190449g2a28g8668ga61cg6288e847a522" version="16">Warglaive of Azzinoth, Illidan</content>
+  <content contentuid="hedc6b036g9a53g49d9g5afcga775940e2a98" version="16">Can only be equipped as a Main Hand Weapon.</content>
+  <content contentuid="hf93fe3beg089fgebcbg895fg6c6d4a48ed2c" version="16">The Main Hand Weapon of the The Twin Blades of Azzinoth taken by Illidan Stormrage from a doom guard commander. </content>
+  <content contentuid="h3c75455eg65e3ga772gc3c6g36ca6f288ef9" version="6">Warglaive of Azzinoth, Stormrage</content>
+  <content contentuid="hb7bb7582ged1bg4676gb309g691c299128af" version="6">Can only be equipped as an Off Hand Weapon.</content>
+  <content contentuid="h01ff69c2ge588g4eb8g7eb8gc85811eba49f" version="6">The Off Hand Weapon of the The Twin Blades of Azzinoth taken by Illidan Stormrage from a doom guard commander. </content>
+  <content contentuid="h47c3cc26ga8b3g5618g90ebg5391fc271397" version="2">Bone Warglaive</content>
+  <content contentuid="hb1bfb5f9g8387geee8g8fa2g1d482f1923cc" version="2">A common and effective warglaive, carried and wielded by Demon Hunters.</content>
+  <content contentuid="h290cee04g9ad1ge3e8g03d9g85710125242a" version="2">Glide: Metamorphosis</content>
+  <content contentuid="hf2fbf55dg7f00gbda1gea1ag0cdbdfdb4fc2" version="1">Spread your wings slowing your rate of descent, granting &lt;LSTag Tooltip="Immune"&gt;Immunity&lt;/LSTag&gt; to Falling damage and increasing your jump distance by an additional [1].</content>
+  <content contentuid="h67d73624ga170gb21bg9087g738e6470a55d" version="2">Immolation Aura</content>
+  <content contentuid="h25f7295fg3a64ge7b0gd63dg71b7bcb6a99b" version="2">Engulfed in flames radiating [1] each turn.</content>
+  <content contentuid="hb207d54dgeef1g7fc5gc393g7de738fb4db0" version="1">Immolation Aura: Vengeance</content>
+  <content contentuid="heecd467cgb8efg93b1g3be3g36e146222624" version="4">Engulfed in flames dealing[1] to attackers when  hit with a melee attack.</content>
+  <content contentuid="h95f77f8bg635fgd39egb32dg9021c8ff65cb" version="1">Immolation Aura</content>
+  <content contentuid="hfe26921egf839g6194ga436g0c16621e4332" version="1">Engulfed in flames dealing [1].  Havoc: Damages nearby enemies. Vengeance: Damages attackers.</content>
+  <content contentuid="h42958e51g0496g37e4g6d8dg706cefb152f2" version="1">Immolation Aura: Vengeance</content>
+  <content contentuid="h3f15ebedgcfc4g0c4dg6138g0b563f67a3f9" version="1">Engulfed in flames dealing[1] to attackers when  hit with a melee attack.</content>
+  <content contentuid="h92921289gdcf8gd8d8g0024gaef6b53d9f64" version="1">%%%|Immolation Aura Taunt Technical|</content>
+  <content contentuid="hbfd6acc6ga017g300cg2dcbg5014f5303172" version="1">%%%|Immolation Aura Taunt Technical|</content>
+  <content contentuid="hc2290361g3313g1cd5gd035g7d89d8c109af" version="2">Shattered Warglaive</content>
+  <content contentuid="h6f22dbf8g58e4g5953gfc25g781f9c507034" version="2">A bundle of bones and blood - and a soul-piercing demonic presence - is all that remains of the Flind's Warglaive. It would make a decent warglaive with a particularly nasty bite.</content>
+  <content contentuid="h123a2406g928cg9f7bg6598gc30c436b9141" version="3">Bone Warglaive +1</content>
+  <content contentuid="he6292df2g1291g912eg69d0gf0da7b9305ea" version="2">A common and effective warglaive, carried and wielded by Demon Hunters.</content>
+  <content contentuid="h000cf21fg4da7gdc45g2634g7a89068dfe1d" version="5">Lump's Warglaive</content>
+  <content contentuid="haf21ef5eg671cg358ag85b1gaed72fe011e5" version="5">Can only be equipped as a Main Hand Weapon.</content>
+  <content contentuid="h79ac1ae0g430eg5ddcgff57g811c54f93cba" version="5">Lump the Enlightened has proven himself worthy to fight alongside of a Demon Hunter...as their Main Hand Weapon.</content>
+  <content contentuid="ha7c8e0e9ga5d5gb1e1g8061g4c7e67e20410" version="6">Polma's Warglaive</content>
+  <content contentuid="h31259b44g76ceg9b88gf189g5851fcf4d343" version="6">Can only be equipped as an Off Hand Weapon.</content>
+  <content contentuid="he2159ef4g705dgb1ecg4b30gd5634017f589" version="6">Polma has proven herself worthy to fight alongside of a Demon Hunter...as their Off Hand Weapon</content>
+  <content contentuid="h82fc98dagbdcbgb4ceg1ed6ge6c440e64ed6" version="7">Hobgoblin Skull Warglaive</content>
+  <content contentuid="ha864fd64ge2e9g659bg90c0g6091bb311c9b" version="7">Can only be equipped as a Main Hand Weapon.</content>
+  <content contentuid="h945fa388g0004gcf3egf1ecg8c6dabafe2ee" version="7">The Main Hand Weapon of the previous Hobgoblin that Dror Ragzlin defeated to take the throne as leader of the Goblin tribe.</content>
+  <content contentuid="h98f2977egf3afgff0cg4fe8g4509b1655bb5" version="10">Tough Skull Warglaive</content>
+  <content contentuid="h3205fb4fgb404gc87eg1cefg958e13c7311e" version="10">Can only be equipped as an Off Hand Weapon.</content>
+  <content contentuid="h7e99f941g2389g4968gcb90gd212b1cd70a5" version="10">Crafted with the remains of a "birdie who once wanted to fly", it exudes a fleeting sensation of toughness and confidence. An Off Hand Weapon.</content>
+  <content contentuid="h683a6d40g4fabg68c2g06fcgd46089aad228" version="4">Totemic Skull Warglaive Ethel</content>
+  <content contentuid="h4254b36ag9cf1gf9afgd01ag52e71221bb6e" version="4">Can only be equipped as a Main Hand Weapon.</content>
+  <content contentuid="hb6104218g76acgb0d3gd221g3b76b8f412cd" version="4">Live worms wriggle beneath the crumbling surface of this warglaive's skull echoing the whispers of the dark woods and twisting branches of a dead tree.  A Main Hand Weapon.</content>
+  <content contentuid="hd067a1d0g8f3eg565fga20eg61c973267c9e" version="5">Brave Goblin Skull Warglaive</content>
+  <content contentuid="he64e3137gd58eg239dg4b18gf668b94a46ef" version="5">Can only be equipped as an Off Hand Weapon.</content>
+  <content contentuid="ha1970796gfe73g8201gc911gbea5bb0e70cc" version="5">The Off Hand Weapon of a Brave Goblin hoping to bring the Spider Matriarch's head to its tribe to become the new leader.</content>
+  <content contentuid="heb877b95g7148g905cga1ceg518e4cc02cae" version="4">Monster Slasher</content>
+  <content contentuid="hd324c77eg2d8ag5a91g4205gb8c2c2a84267" version="4">Monster-slaying is a rare calling, not for the faint of heart. It requires temperance, discipline, and usually a very big sharp weapon. The best thing about warglaives is that you can hack and slash your way through monstrosities.</content>
+  <content contentuid="h930c6dc5g475fg2667g1eceg1063a5144be6" version="2">Life Piercing Warglaive</content>
+  <content contentuid="h57698ed9gfab8g4531g2d5dg58e7460bbbf9" version="2">Can only be equipped as a Main Hand Weapon.</content>
+  <content contentuid="h72323a71g2419g8a64g0abfgf01f034f906b" version="2">Bringer of that which it is. It hurts, it really really hurts!</content>
+  <content contentuid="h17d061c2gcaacgeabfg0c23g4603022d2167" version="2">Life Cutting Warglaive</content>
+  <content contentuid="h8fb1e9e3gd899g4b62g9ff2g27a6b81945d2" version="2">Can only be equipped as an Off Hand Weapon.</content>
+  <content contentuid="h175d0162gec51g2ce2ge060gedf5e216e8e8" version="2">Odd to think that every adventurer were once normal folks. One wonders if they ever stopped to smell the roses, watch the rain fall, or ate creamed milk.</content>
+  <content contentuid="h3d547da6g66dagb096g7639gce78d414df72" version="2">Blooded Boney Warglaive</content>
+  <content contentuid="hcbeb0bb6gfc7dg7360g7d34g26ea22db79ea" version="2">Stained and reeking of blood and sinew, this warglaive once belonged to a Demon Hunter who was raised by Gnolls.</content>
+  <content contentuid="hfcbdc7fdgc33bg60f0ge2dfg54b4c9c01352" version="2">The Sparky Warglaive</content>
+  <content contentuid="h16d61421g14d7gfc46gf9b2g4f53371d4ff2" version="2">When Yrre the Sparkstruck was asked why they'd created a warglaive for a Demon Hunter, they simply replied, 'The question is - why not create them a weapon that makes their enemies go bzzzt?'</content>
+  <content contentuid="h4b5ba8e8gcbeeg5684gd286g2e45298d336d" version="2">HraftGlaive of War</content>
+  <content contentuid="h3cd46608g8611g65e8g1b81gcdc121b63034" version="2">A glaive crafted by a Dwarven smith weiled by a Demon Hunter who aided in the war with Amn.</content>
+  <content contentuid="h6ccb68ecg6136ge703g7ec1g6b2f7486d83b" version="1">%%%| Torment Helper to tag Taunter|</content>
+  <content contentuid="hc01458c6g18fbge774g0e24g2fcdfdabd97a" version="1">%%%| Torment Helper to tag Taunter|</content>
+  <content contentuid="h7f716b1dgcba2gcc75g4da6gb9f998014f64" version="1">Tormented</content>
+  <content contentuid="h5b61ce44g7a5cg5a9age143g5f7ef044b78a" version="1">Cannot attack creatures other than the spellcaster.</content>
+  <content contentuid="h815ed632gc0cbga004g42f6ge0d2be51b155" version="1">Tormented: Goaded</content>
+  <content contentuid="h424a84deg687eg60e0g8e4ag3f1815615a3f" version="1">&lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; against targets other than the spellcaster.</content>
+  <content contentuid="h66a0ae1eg977bg0f81gcc9eg085b68c7b6fc" version="1">Froced to attack the spellcaster if possible.</content>
+  <content contentuid="hf60083e0g86daga97ag21c7ga35e65e776dd" version="1">Shatter Souls</content>
+  <content contentuid="h28f868a7g4b63g677dgbc3ag904ef2d0f885" version="1">Shatter and absorb the souls of creatures within [1], regaining 10 &lt;LSTag Type="ActionResource" Tooltip="DH_SoulFragments"&gt;Soul Fragment&lt;/LSTag&gt;.  Does not trigger combat.</content>
+  <content contentuid="h7cb16328g7c15gbd06gf4acg31fe48a62d41" version="1">Fury of the Illidari</content>
+  <content contentuid="hc68d680cg170ag334fgecb3g592e109af69c" version="1">Fully restore your &lt;LSTag Type="ActionResource" Tooltip="DH_Fury"&gt;Fury&lt;/LSTag&gt; once per short rest.</content>
+  <content contentuid="hf389e0bcg801eg769dg6bbbg77583c3f6600" version="1">%%%| EMPTY |</content>
+  <content contentuid="h7ae7e7f8g6c51g9cbbgc09dg07a3b70be67f" version="1">%%%| EMPTY |</content>
+  <content contentuid="h93a8250dg604cg8833g775dg38348bc23167" version="1">(Set Bonus) Twin Blades of Azzinoth</content>
+  <content contentuid="h98bbaba2g0737g5f13g4931g6a2d93373688" version="6">&lt;br&gt;• Ritually bound to its wielder. The weapon can't be knocked out of the wielder's hand, and automatically returns to the wielder when &lt;LSTag Type="Spell" Tooltip="Throw_Throw"&gt;Thrown&lt;/LSTag&gt;.&lt;br&gt; • Gain a +1 bonus to Attack rolls, damage, and Spell Save DC for every foe you slay, up to a maximum of +3.</content>
+  <content contentuid="h551c8f0bg8abbg016dg25abg51881c4b2a6c" version="2">(Set Bonus) Havoc Demon Hunter</content>
+  <content contentuid="hc7562a25g00fbg964agbe1fg6d873915cacd" version="2">(Set Bonus) Vengeance Demon Hunter</content>
+  <content contentuid="hb1bba6e8gf15dg6ffcgababg11d0ec393c2b" version="2">%%%| Twin Blades Set Bonus|</content>
+  <content contentuid="hdbee4792g9b47g2d8bg771cg79f0c67832f6" version="1">%%%| EMPTY |</content>
+  <content contentuid="h6ae28351gbb7eg9166g74e8g0167b96a59c6" version="1">(Set Bonus) Twin Blades of Azzinoth</content>
+  <content contentuid="hd4da2b4cgabf9gfaf0ge87eg0c921dfceeb5" version="4">&lt;LSTag Type="Status" Tooltip="DH_WEAPON_BOND"&gt;Chaos Grip&lt;/LSTag&gt;&lt;br&gt;Ritually bound to its wielder. The weapon can't be knocked out of the wielder's hand, and automatically returns to the wielder when &lt;LSTag Type="Spell" Tooltip="Throw_Throw"&gt;Thrown&lt;/LSTag&gt;.&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Passive" Tooltip="MAG_Zhentarim_BloodfeederBlade_Rapier_Passive"&gt;Scarlet Remittance&lt;/LSTag&gt;&lt;br&gt;Gain a +[1] bonus to &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;, damage, and &lt;LSTag Tooltip="SpellDifficultyClass"&gt;Spell Save DC&lt;/LSTag&gt; for every foe you slay, up to a maximum of +[2].&lt;br&gt;</content>
+  <content contentuid="hb045cffcge6a3g227dgf6fdg8e026d3f780b" version="10" />
+  <content contentuid="h4f90bbbagbe68gab8ag7bb5gec16dd503402" version="15">&lt;LSTag Type="Image" Info="Inspiration"/&gt; &lt;LSTag Type="Passive" Tooltip="DH_WarglaivesOfAzzinothSetBonus"&gt;(Set Bonus) Twin Blades of Azzinoth&lt;/LSTag&gt;&lt;br&gt;          • &lt;LSTag Type="Status" Tooltip="DH_WEAPON_BOND"&gt;Chaos Grip&lt;/LSTag&gt;&lt;br&gt;          • &lt;LSTag Type="Passive" Tooltip="MAG_Zhentarim_BloodfeederBlade_Rapier_Passive"&gt;Scarlet Remittance&lt;/LSTag&gt;&lt;br&gt;</content>
+  <content contentuid="hb3ab535ege398g4720g830bgc8072b75d220" version="20">&lt;LSTag Type="Image" Info="Inspiration"/&gt; &lt;LSTag Type="Status" Tooltip="DH_WARGLAIVESOFAZZINOTH_SET_HAVOC"&gt;(Set Bonus) Havoc Demon Hunter&lt;/LSTag&gt;&lt;br&gt;          • &lt;LSTag Type="Passive" Tooltip="DH_FelFissure"&gt;Fel Fissure&lt;/LSTag&gt;&lt;br&gt;          • &lt;LSTag Type="Passive" Tooltip="DH_PreyUponTheWeak"&gt;Prey Upon the Weak&lt;/LSTag&gt;&lt;br&gt;</content>
+  <content contentuid="h9c846ae7gf5a5gd731gb6cbgf655067a411e" version="14">&lt;LSTag Type="Image" Info="Inspiration"/&gt; &lt;LSTag Type="Status" Tooltip="DH_WARGLAIVESOFAZZINOTH_SET_VENGEANCE"&gt;(Set Bonus) Vengeance Demon Hunter&lt;/LSTag&gt;&lt;br&gt;          • &lt;LSTag Type="Passive" Tooltip="MAG_MeleeDebuff_AttackDebuff2_OnDamage_Passive"&gt;Heavy Hitter&lt;/LSTag&gt;&lt;br&gt;          • &lt;LSTag Type="Passive" Tooltip="MAG_SpellResistance_Passive"&gt;Spell Resistance&lt;/LSTag&gt;&lt;br&gt;&lt;br&gt;</content>
+  <content contentuid="h5524204ag31a1g907fgd6efga2f92ef198fc" version="3">Fel Fissure</content>
+  <content contentuid="h4409578bg80begf13bgc9dcgfec0546a534a" version="1">Possibly inflict &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; on enemies hit for two turns. Duration is not refreshed on re-application.</content>
+  <content contentuid="ha673b128g2296g5ee4g83c8g3aef35e02974" version="6" />
+  <content contentuid="h1db8d9abgdbf0g7e89gc88fg7bce89b4a7d0" version="5" />
+  <content contentuid="h524e7aeagb29cgcadfgd234g5d3220d4b0f4" version="1">&lt;LSTag Tooltip="e0a008f0-ea1e-4545-9fa9-5a7b2c768bb6"&gt;This is the Status Name&lt;/LSTag&gt; </content>
+  <content contentuid="h57e23b9ege511g78b3g1e40g7e296b21bd7f" version="4">&lt;LSTag Type="Passive" Tooltip="DH_FelFissure"&gt;Fel Fissure&lt;/LSTag&gt;: Possibly inflict &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; on enemies hit for two turns. Duration is not refreshed on re-application.&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Passive" Tooltip="DH_PreyUponTheWeak"&gt;Prey Upon the Weak&lt;/LSTag&gt;: This weapon deals an additional &lt;LSTag Tooltip="Piercing"&gt;Piercing&lt;/LSTag&gt; damage against targets with 50% of their hit points or fewer.&lt;br&gt;</content>
+  <content contentuid="hdbad7e7dg5aecg2f3agce51gcb28205a6350" version="3">&lt;LSTag Type="Passive" Tooltip="MAG_MeleeDebuff_AttackDebuff2_OnDamage_Passive"&gt;Heavy Hitter&lt;/LSTag&gt;&lt;br&gt;Your weapon hits hard enough to send your target &lt;LSTag Type="Status" Tooltip="MAG_ATTACK_DEBUFF"&gt;Reeling&lt;/LSTag&gt; for 2 turns.&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Passive" Tooltip="MAG_SpellResistance_Passive"&gt;Spell Resistance&lt;/LSTag&gt;&lt;br&gt;You have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="SavingThrow"&gt;Saving throws&lt;/LSTag&gt; against spells.&lt;br&gt;</content>
+  <content contentuid="h611ac2a6gb430g889dgeb74gfa25b6371b2e" version="2">(Set Bonus) Havoc Demon Hunter</content>
+  <content contentuid="h507300a8g2efbgb541g0643ge9c22459f70e" version="3">&lt;LSTag Type="Passive" Tooltip="DH_FelFissure"&gt;Fel Fissure&lt;/LSTag&gt;&lt;br&gt;Possibly inflict &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; on enemies hit for two turns. Duration is not refreshed on re-application.&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Passive" Tooltip="DH_PreyUponTheWeak"&gt;Prey Upon the Weak&lt;/LSTag&gt;&lt;br&gt;This weapon deals an additional &lt;LSTag Tooltip="Piercing"&gt;Piercing&lt;/LSTag&gt; damage against targets with 50% of their hit points or fewer.&lt;br&gt;</content>
+  <content contentuid="h6477c987g1609g053dgd61egb65f80ab4101" version="2">(Set Bonus) Vengeance Demon Hunter</content>
+  <content contentuid="h2900e996g9ebag9a55g79a1gf115528bdc7c" version="2">&lt;LSTag Type="Passive" Tooltip="MAG_MeleeDebuff_AttackDebuff2_OnDamage_Passive"&gt;Heavy Hitter&lt;/LSTag&gt;&lt;br&gt;Your weapon hits hard enough to send your target &lt;LSTag Type="Status" Tooltip="MAG_ATTACK_DEBUFF"&gt;Reeling&lt;/LSTag&gt; for 2 turns.&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Passive" Tooltip="MAG_SpellResistance_Passive"&gt;Spell Resistance&lt;/LSTag&gt;&lt;br&gt;You have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="SavingThrow"&gt;Saving throws&lt;/LSTag&gt; against spells.&lt;br&gt;</content>
+  <content contentuid="h72859481g123dgc346g18cdg9037028d4ca2" version="1">%%%| Status to confirm is DemonHunter |</content>
+  <content contentuid="h48a7a35bgdc7dg7f08gd19bg9bc09fc2ea68" version="1">%%%| Status to confirm is DemonHunter |</content>
+  <content contentuid="h8c96182dg2de7g826cg951ag9a35ec72821b" version="1">%%%| Twin Blades Set Bonus: Vengeance |</content>
+  <content contentuid="hcaa8eba0ge74bg9665g8b14g21f4f2dc1c84" version="1">%%%| EMPTY |</content>
+  <content contentuid="h32814ce4g0024g7d52g73e9g9a3e8c7fd326" version="4">Warglaives of Azzinoth</content>
+  <content contentuid="hf8b88c53gfd26g0d8bg7990gd7c5438e959b" version="4">A message form Illidan Stormrage</content>
+  <content contentuid="hba3e5763g1a1agf30fgb520g9c1d1764fe76" version="2">A Tutorial Letter</content>
+  <content contentuid="h8c0d0a1cgf3f2g5fe7geb4fgcd61633b38c5" version="2">This letter is unread.</content>
+  <content contentuid="hfea291fag2cfeg7658g6c4bg2012275a2a7b" version="2">This is my tutorial letter text. &lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;i&gt;Go defeat the Netherbrain!&lt;/b&gt;&lt;/i&gt;&lt;br&gt;&lt;br&gt;- Love GrumpyWumpy</content>
+  <content contentuid="h4bef638fg10b2g4895gf8f1g0a92947adb23" version="3">My Illidari,&lt;br&gt;&lt;br&gt;Even when the Legion is gone, new threats will arise. There is no one I trust to face them more than you. Now that you have taken care of the mischiefs of the circus, my glaives location has been revealed. Follow and wield them to wreak havoc and vengeance upon your foes! &lt;b&gt;&lt;i&gt;YOU ARE NOW PREPARED!&lt;/b&gt;&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;i&gt;- Illidan Stormrage&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Warglaives of Azzinoth, Illidan&lt;/b&gt;&lt;br&gt;At the tallest peak where whispers conspire,&lt;br&gt;Three tolls of the bell will summon the fire.&lt;br&gt;Where chaos swells deep, and green flames ignite,&lt;br&gt;Awakening a weapon that sows fear and destruction in fight.&lt;br&gt;&lt;br&gt;&lt;b&gt;Warglaives of Azzinoth, Stormrage&lt;/b&gt;&lt;br&gt;In the hallowed temple where Ilmater’s justice resides,&lt;br&gt;A flickering flame keeps the darkness outside.&lt;br&gt;Beneath sacred stone where the faithful rest,&lt;br&gt;Extinguish the flame to awaken a weapon of chaos possessed.&lt;br&gt;&lt;br&gt;</content>
+  <content contentuid="h9d42fdd1g06b9ga7a3ge7a1gf112280c5037" version="1">This is Demon Hunter Class Book Placeholder</content>
+  <content contentuid="h4279bde8gf3fbg663ag054dg6dadacd00f4c" version="1">Demon Spike Heal</content>
+  <content contentuid="hf84b7e11g006fg94dagef62g600c70a9fca1" version="1">Additional Ki Point</content>
+  <content contentuid="h5cc383bdg384fg6ac3ge42fgff6337dd80e7" version="1">You gain an additional &lt;LSTag Type="ActionResource" Tooltip="KiPoint"&gt;Ki Point&lt;/LSTag&gt; to fuel your monk techniques.</content>
+  <content contentuid="h75af2c18g9fdfg6322ge315g4905da2f552e" version="1">Ki</content>
+  <content contentuid="hffbb76f7gf534g779fg114ag6ff04fb33180" version="1">Ki is the magic that flows through all living beings. You can use it to exceed your body's physical capabilities.</content>
+  <content contentuid="h4944f1f8g6618g12dbg78c7g2f65318cdc53" version="1">Imprison</content>
+  <content contentuid="ha80d2dc9gf0cegc7e9ga202g496e4effc65a" version="1">Paralysed</content>
+  <content contentuid="h5d26f189g7d99g4e1dgadcag82ef1d5d4a86" version="1">Affected entity can't move or take actions, bonus actions, or reactions.&lt;Br&gt;&lt;Br&gt;Attacks against the entity are always &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hits&lt;/LSTag&gt; if the attacker is within [1].</content>
+  <content contentuid="h20cce67bg5603g322fg3259gbca6a93535a3" version="1">%%%|Imprison Technical|</content>
+  <content contentuid="h596791ffg8d21g73f2g1f81g8c59af6d6c12" version="1">%%%|Imprison Technical|</content>
+  <content contentuid="hdc3812a7g74a2g59bcg42aag6148df39bb0b" version="1">%%%|Imprison Technical|</content>
+  <content contentuid="h7dc5ea5ag588dg200bg4f59gdfdd52d16785" version="2">%%%|Imprison Technical used to track new applications to keep only 1 application|</content>
+  <content contentuid="h758feba7g1e20g2429g0fb9gb0203c877256" version="6">Target one creature you can see within [1] and &lt;LSTag Type="Status" Tooltip="DH_IMPRISION"&gt;Imprison&lt;/LSTag&gt; it with Fel. &lt;LSTag Type="Status" Tooltip="DH_IMPRISION"&gt;Imprisoned&lt;/LSTag&gt; creatures will become incapacited.&lt;br&gt;&lt;br&gt;&lt;b&gt;Only one creature can be &lt;LSTag Type="Status" Tooltip="DH_IMPRISION"&gt;Imprisoned&lt;/LSTag&gt; at a time and any damage on that creature will cancel this effect.&lt;/b&gt;</content>
+  <content contentuid="h4904c109g891eg2381g7b40gdf62a0597780" version="3">Warglaives of the Undermountain King</content>
+  <content contentuid="h39d5c448gf156g06a8ge7eag86ec05e3952e" version="3">Snatched from the realm of the mad wizard Halaster Blackoak, this warglaive became a prized keepsake of a duergar king.</content>
+  <content contentuid="h6cf1d89cg9b7ag7c38gc465g17051f857afb" version="3">Defender's Warlgaive</content>
+  <content contentuid="h513cc8beg5971g5b35g9019g681ecd28d842" version="3">This warglaive was created to commemorate victory over the devil Belhifet. It has since made its way so far from Easthaven that the locals have long forgotten that chapter of their town's past.</content>
+  <content contentuid="h6e968844gc090ga1efgeba8gfc6c5fd78842" version="3">Larethian's Razor Warglaive</content>
+  <content contentuid="h934f41fcg0f8cgb3c3g3a78g600aab05526c" version="3">Deceptively light, the warglaive rasps through castle-forged plate as easily as Corellon Larethian's own anarchic holy sword through the hearts of the Legion.</content>
+  <content contentuid="hf9f63040g492cgf554gab19g60adb54f17b5" version="3">Witchbreaker Warglaive</content>
+  <content contentuid="h3acba11cgd3d1gdbfbg5ef3g17d4c7a54ae7" version="3">Thou shalt not suffer a witch to... well, keep doing whatever she's doing. It's probably malefic, involving toads and... and things.</content>
+  <content contentuid="h2163f86dge475g2f34g9191g8e46696b5ad0" version="15">Aldrochi Warblades</content>
+  <content contentuid="hbbf6e852g1e94g2728g9b17gcaaece09b04b" version="15">Can only be equipped as a Main Hand Weapon.</content>
+  <content contentuid="h44c2ceedgeea4g3ad5g3f82g291184d28b82" version="15">The Main Hand Weapon of the The Twin Blades of Azzinoth taken by Illidan Stormrage from a doom guard commander. </content>
+  <content contentuid="h39fb3ad1g56e3g663bge350gd82fdda0a0ac" version="13">Warglaive of Azzinoth, Stormrage</content>
+  <content contentuid="h81c69543g9158ge8e0ge671gbe8734581540" version="13">Can only be equipped as an Off Hand Weapon.</content>
+  <content contentuid="h1f3b310fgc92dg8aeag646dg41d37d09fadd" version="13">The Off Hand Weapon of the The Twin Blades of Azzinoth taken by Illidan Stormrage from a doom guard commander. </content>
+  <content contentuid="hdb39b5e5gd67egdc0egecb5g44f4c21c3542" version="1">Rathalon Test</content>
+  <content contentuid="h48150aceg86d2gf603gd3c7gf627a52a03de" version="3">Thundering Smite Warglaive</content>
+  <content contentuid="h5cc8395ag1520gb1b1gb2c0gc5ebf2b1eaba" version="3">Gnomish, Sylvan, Elvish, Celestial, even the Primordial Tongue - all of these and more have whispered blessings to fuse the thunder into these baldes.</content>
+  <content contentuid="h88bc4060g471ag4f2agd74eg5d73a88b38b6" version="1">Infernal Strike</content>
+  <content contentuid="h670908adg8621geca0g210ag397da063bc94" version="1">Leap through the air toward a targeted location, dealing [1] and [2]. Affected enemies must make a &lt;LSTag Tooltip="Charisma"&gt;Charisma&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or be &lt;LSTag Type="Status" Tooltip="DH_TORMENT"&gt;Tormented&lt;/LSTag&gt;, forcing them to attack you for 2 turns.</content>
+  <content contentuid="h3b108dd9g9db5g4447gfa82g48f4158b8764" version="1">Does not provoke &lt;LSTag Tooltip="OpportunityAttack"&gt;Opportunity Attacks&lt;/LSTag&gt;.  Allies will feel the heat of the strike, but will not take any damage.</content>
+  <content contentuid="heac6308bgc421g01e4g2c7fgf8346bf44cdf" version="1">Becoming dominated or possessed cancels the aura.</content>
+  <content contentuid="hd1386602g9efbg09b6g812bgbca33b0f188f" version="4">Warglaive of Arcane Force</content>
+  <content contentuid="h23edbdc0g1fd3g7f77g792egf70cd22779b3" version="4">The soft hum of power emanates from the allien metal.</content>
+  <content contentuid="h9d311cf8g404dg0fcagdfb5g67c61d2145ec" version="1">Arcane Retribution</content>
+  <content contentuid="hd290a490gf566g9a37g6463g3884c3f0d8df" version="1">Infuse your weapon attacks with arcane energy to deal an additional [1].</content>
+  <content contentuid="h7f1fab38gad55g1dbfg473bg7069deb5a965" version="1">Arcane Retribution</content>
+  <content contentuid="h38b77318g5afagca54g72e6g2b6dd1959178" version="1">Infuse your weapon attacks with arcane energy to deal an additional [1].</content>
+  <content contentuid="h6342049fge257g6071g8475g3c6ba6ad2314" version="4">Skin Ripper Warglaive</content>
+  <content contentuid="h74bbddcbgbb7ag4843g3dbfg9f2e892aa201" version="4">In mellow light, the warglaive's curved steel eerily resembles a grin.</content>
+  <content contentuid="h3d6a6198g439fg579dg7e9bg44e615b11c4f" version="6">&lt;br&gt;&lt;LSTag Type="Image" Info="Inspiration"/&gt; &lt;LSTag Type="Passive" Tooltip="DH_KazzaksWarglaiveSetBonus"&gt;(Set Bonus) Supreme Lord Kazzak's Wagrlaives&lt;/LSTag&gt;&lt;br&gt;          • &lt;LSTag Type="Passive" Tooltip="MAG_TheClover_Rearrangement_Passive"&gt;Organ Rearranger&lt;/LSTag&gt;&lt;br&gt;          • &lt;LSTag Type="Passive" Tooltip="DH_VengfulRedaction"&gt;Vengeful Redaction&lt;/LSTag&gt;&lt;br&gt;</content>
+  <content contentuid="h8571fa3ag5fdbgaee5g00dcgb69d6917bc18" version="3">&lt;LSTag Type="Image" Info="Inspiration"/&gt; &lt;LSTag Type="Passive" Tooltip="DH_KazzaksWarglaiveSetBonus_Havoc"&gt;(Set Bonus) Havoc Demon Hunter&lt;/LSTag&gt;&lt;br&gt;          • &lt;LSTag Type="Passive" Tooltip="DH_DanceOfTheLegion"&gt;Dance of the Legion&lt;/LSTag&gt;&lt;br&gt;</content>
+  <content contentuid="hbae1adcdg1ef4gaf2dga311g6a5e213647c5" version="5">&lt;LSTag Type="Image" Info="Inspiration"/&gt; &lt;LSTag Type="Passive" Tooltip="DH_KazzaksWarglaiveSetBonus_Vengeance"&gt;(Set Bonus) Vengeance Demon Hunter&lt;/LSTag&gt;&lt;br&gt;          • &lt;LSTag Type="Passive" Tooltip="DH_CaptureSoul"&gt;Capture Soul&lt;/LSTag&gt;&lt;br&gt;&lt;br&gt;</content>
+  <content contentuid="hcde7e24cga796gf32cg78afg109476524e77" version="2">(Set Bonus) Supreme Lord Kazzak's Burning Flame</content>
+  <content contentuid="h4194da14gff05ga641g2f65gc6d0e0516daf" version="3">&lt;LSTag Type="Passive" Tooltip="MAG_TheClover_Rearrangement_Passive"&gt;Organ Rearranger&lt;/LSTag&gt;&lt;br&gt;Reduce the number you need to roll a &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt; while attacking by 1. This effect can stack. When you roll 2 damage or less, reroll the dice, taking the highest result.&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Passive" Tooltip="DH_VengfulRedaction"&gt;Vengeful Redaction&lt;/LSTag&gt;&lt;br&gt;&lt;LSTag Type="Spell" Tooltip="Shout_DH_VengefulRetreat"&gt;Vengeful Retreat&lt;/LSTag&gt; has a 30% chance to refund [1] &lt;LSTag Type="ActionResource" Tooltip="DH_Fury"&gt;Fury&lt;/LSTag&gt; and incapacitate enemies for 2 turns.&lt;br&gt;</content>
+  <content contentuid="h0f902515g32b2g9ac8g5fb5g62ffde811e4d" version="1">Vengeful Redaction</content>
+  <content contentuid="h6a33ad54g475cg2440g1a20g639ece94199b" version="4">&lt;LSTag Type="Spell" Tooltip="Shout_DH_VengefulRetreat"&gt;Vengeful Retreat&lt;/LSTag&gt; has a 30% chance to refund [1] &lt;LSTag Tooltip="DH_Fury"&gt;Fury&lt;/LSTag&gt; and incapacitate enemies for 2 turns.&lt;br&gt;</content>
+  <content contentuid="h191ed8b1gfdf6gc662gfe09gb1fa32078303" version="1">Dance of the Legion</content>
+  <content contentuid="hb54fa79ag45acgece6g98b2g57543370baf2" version="3">&lt;LSTag Type="Spell" Tooltip="Projectile_DH_BladeDance"&gt;Blade Dance&lt;/LSTag&gt; has a 60% chance to refund 1-2 &lt;LSTag Tooltip="DH_SoulFragments"&gt;Soul Fragments&lt;/LSTag&gt;.</content>
+  <content contentuid="hf679e4d4g9cc8g75c3g05ffg98230f328e9f" version="1">Capture Soul</content>
+  <content contentuid="h7af12096g6591gf914g8d43g70be4a431ada" version="3">&lt;LSTag Type="Spell" Tooltip="Zone_DH_SoulCleave"&gt;Soul Cleave&lt;/LSTag&gt; has a 60% chance to refund 1-2 &lt;LSTag Tooltip="DH_SoulFragments"&gt;Soul Fragments&lt;/LSTag&gt;.</content>
+  <content contentuid="h97f6c3ffgde15ge5c2gbbcdg1a419494dfca" version="1">%%%| Kazzaks Burning Blades Set Bonus|</content>
+  <content contentuid="h30ea3907g5480ge770g358dga4da66cb7ce1" version="1">%%%| EMPTY |</content>
+  <content contentuid="h795fd9b2gebe0gb2e6gb0b1g2f350c5aae8d" version="2">(Set Bonus) Havoc Demon Hunter</content>
+  <content contentuid="hf9f65d25g9477g7d2dgb938g62956e6a7635" version="4">&lt;LSTag Type="Passive" Tooltip="DH_DanceOfTheLegion"&gt;Dance of the Legion&lt;/LSTag&gt;&lt;br&gt;&lt;LSTag Type="Spell" Tooltip="Projectile_DH_BladeDance"&gt;Blade Dance&lt;/LSTag&gt; has a chance to refund 1-2 &lt;LSTag Type="ActionResource" Tooltip="DH_SoulFragments"&gt;Soul Fragments&lt;/LSTag&gt;.</content>
+  <content contentuid="hf1f421a9g2dbbg6089gc12egd5c70279009c" version="2">(Set Bonus) Vengeance Demon Hunter</content>
+  <content contentuid="heb87eea2gb527gb4begc779gad4490e63c18" version="3">&lt;LSTag Type="Passive" Tooltip="DH_CaptureSoul"&gt;Capture Soul&lt;/LSTag&gt;&lt;br&gt;&lt;LSTag Type="Spell" Tooltip="Zone_DH_SoulCleave"&gt;Soul Cleave&lt;/LSTag&gt; has a chance to refund 1-2 &lt;LSTag Tooltip="DH_SoulFragments"&gt;Soul Fragments&lt;/LSTag&gt;.&lt;br&gt;</content>
+  <content contentuid="h772e1921g1536gb581g443fg4741fdf2bbeb" version="1">(Set Bonus) Havoc Demon Hunter</content>
+  <content contentuid="hee6ebcddgb2f3g566dged02g29e74f0147ea" version="3">&lt;LSTag Type="Passive" Tooltip="DH_DanceOfTheLegion"&gt;Dance of the Legion&lt;/LSTag&gt;&lt;br&gt;&lt;LSTag Type="Spell" Tooltip="Projectile_DH_BladeDance"&gt;Blade Dance&lt;/LSTag&gt; has a 60% chance to refund 1-2 &lt;LSTag Type="ActionResource" Tooltip="DH_SoulFragments"&gt;Soul Fragments&lt;/LSTag&gt;.</content>
+  <content contentuid="h3aacca5cgdb92g6c24gd2f2g8e0651d1ba86" version="1">(Set Bonus) Vengeance Demon Hunter</content>
+  <content contentuid="h8bae0ad7gd43eg1faeg0fc7gd27682acf97c" version="3">&lt;LSTag Type="Passive" Tooltip="DH_CaptureSoul"&gt;Capture Soul&lt;/LSTag&gt;&lt;br&gt;&lt;LSTag Type="Spell" Tooltip="Zone_DH_SoulCleave"&gt;Soul Cleave&lt;/LSTag&gt; has a 60% chance to refund 1-2 &lt;LSTag Tooltip="DH_SoulFragments"&gt;Soul Fragments&lt;/LSTag&gt;.&lt;br&gt;</content>
+  <content contentuid="h874a5ff9g352cg1a81ge741ge3a33781c020" version="1">%%%| Vengeful Redaction Technical|</content>
+  <content contentuid="h70cddcb8g677cg2b85g8d5cg734c99bf8937" version="1">%%%| EMPTY |</content>
+  <content contentuid="h7ad4fe0ag47d2g83a2gd892ge794e5d68d34" version="1">%%%| Vengeful Redaction Fury Technical|</content>
+  <content contentuid="h4a93bef9g75a3g7480g3389g4bb7823ff7e2" version="1">%%%| EMPTY |</content>
+  <content contentuid="hfe061a6bgd029g97dag79aag813f139686a6" version="1">%%%| Kazzaks Burning Blades Class Set Bonus|</content>
+  <content contentuid="h29488f8ag8e90gdc6fg7fd3g9eeaa599a5f9" version="1">%%%| Handles return of Soul Fragments |</content>
+</contentList>

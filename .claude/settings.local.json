@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"from PIL import Image; import PIL; print\\(PIL.__version__\\); img=Image.new\\(''RGBA'',\\(10,10\\)\\); img.save\\(''/tmp/test.dds'', format=''DDS'', pixel_format=''DXT5''\\)\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File Tools/convert_icon_dds.ps1 -InputPath \"RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/GUI/Assets/ClassIcons/RO_Archer.png\" -BaseName \"RO_Archer\")",
+      "Bash(git -C \"d:\\\\Mods for BG3\\\\ragnarok-online-mod\" log --oneline)",
+      "Bash(find 'd:/Mods for BG3/ragnarok-online-mod' -type f -name *SkillList*)"
+    ]
+  }
+}

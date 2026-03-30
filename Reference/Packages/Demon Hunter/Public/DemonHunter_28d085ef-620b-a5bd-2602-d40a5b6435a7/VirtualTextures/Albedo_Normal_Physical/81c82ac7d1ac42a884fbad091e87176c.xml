@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StackedTexture>
+  <Layers>
+    <Layer type="Albedo" source="($DATA)\Public\($MOD)\Assets\Weapons\VirtualTextures\WPN_GHGW_AzzinothWarglaives_A_0_GRAD" />
+    <Layer type="Normal" source="($DATA)\Public\($MOD)\Assets\Weapons\VirtualTextures\WPN_GHGW_AzzinothWarglaives_B_0_NM" />
+    <Layer type="Physical" source="($DATA)\Public\($MOD)\Assets\Weapons\VirtualTextures\WPN_GHGW_AzzinothWarglaives_B_0_PM" />
+  </Layers>
+</StackedTexture>

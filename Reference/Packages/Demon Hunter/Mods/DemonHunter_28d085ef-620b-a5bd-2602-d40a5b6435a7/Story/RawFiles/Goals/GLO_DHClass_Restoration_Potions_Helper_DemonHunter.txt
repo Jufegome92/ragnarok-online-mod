@@ -1,0 +1,16 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_DHClassRestorationStatus_DemonHunter("ALCH_POTION_REST_SLEEP_LESSER_RESTORATION");
+DB_DHClassRestorationStatus_DemonHunter("ALCH_POTION_REST_SLEEP_GREATER_RESTORATION");
+DB_DHClassRestorationStatus_DemonHunter("TUT_RESTORATION");
+KBSECTION
+IF
+StatusApplied(_Character, _Status, _, _)
+AND
+DB_DHClassRestorationStatus_DemonHunter(_Status)
+THEN
+ApplyStatus(_Character,"DH_ALCH_RESTORATION_HELPER",0.1,1,_Character);
+EXITSECTION
+
+ENDEXITSECTION

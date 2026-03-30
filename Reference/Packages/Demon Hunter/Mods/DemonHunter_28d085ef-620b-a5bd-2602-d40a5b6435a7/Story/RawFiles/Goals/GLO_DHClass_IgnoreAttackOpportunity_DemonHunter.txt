@@ -1,0 +1,31 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_DHClassIgnoreAttackOpportunitySpells_DemonHunter("Projectile_DH_InfernalStrike");
+KBSECTION
+// On Preview Spell
+IF
+StartedPreviewingSpell(_Character,_Spell,_, _)
+AND
+DB_DHClassIgnoreAttackOpportunitySpells_DemonHunter(_Spell)
+THEN
+AddBoosts(_Character, "IgnoreLeaveAttackRange", "", _Character);
+
+// At the end of Casting the Spell
+IF
+CastedSpell(_Character,_Spell,_,_,_)
+AND
+DB_DHClassIgnoreAttackOpportunitySpells_DemonHunter(_Spell)
+THEN
+RemoveBoosts((CHARACTER)_Character, "IgnoreLeaveAttackRange", 0, "", _Character);
+
+// Cancelled
+IF
+CastSpellFailed(_Character,_Spell,_,_,_)
+AND
+DB_DHClassIgnoreAttackOpportunitySpells_DemonHunter(_Spell)
+THEN
+RemoveBoosts((CHARACTER)_Character, "IgnoreLeaveAttackRange", 0, "", _Character);
+EXITSECTION
+
+ENDEXITSECTION

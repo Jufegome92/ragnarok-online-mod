@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="PassiveLists">
+        <node id="root">
+            <children>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="Demonic Feats Level 3"/>
+                    <attribute id="Passives" type="LSString" value="DH_AuraOfPain, DH_ChaosBrand,DH_DemonicWards,DH_FelfireHaste,DH_Flamebound,DH_IllidariKnowledge,DH_ShatteredRestoration"/>
+                    <attribute id="UUID" type="guid" value="507c49ce-a23d-4c1c-9016-fc2988d3b98c"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="Demonic Feats Level 6"/>
+                    <attribute id="Passives" type="LSString" value="DH_AuraOfPain,DH_ChaosBrand,DH_CharredWarblades,DH_DemonicWards,DH_FelfireHaste,DH_Flamebound,DH_FlamesOfFury,DH_IllidariKnowledge,DH_MasterOfTheGlaive,DH_ShatteredRestoration"/>
+                    <attribute id="UUID" type="guid" value="52dae3e4-1962-4d52-8e62-3fb64f5b6b2d"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="Havoc Feats Level 3"/>
+                    <attribute id="Passives" type="LSString" value="DH_DemonBaldes,DH_DemonHide,DH_FirstBlood,DH_InsatiableHunger"/>
+                    <attribute id="UUID" type="guid" value="d86d0e3d-c75e-491b-976b-c4d71ec5df8d"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="Havoc Feats Level 6"/>
+                    <attribute id="Passives" type="LSString" value="DH_BlindFury,DH_DeflectingDance,DH_DemonBaldes,DH_DemonHide,DH_DemonicApppetite,DH_FirstBlood,DH_InsatiableHunger"/>
+                    <attribute id="UUID" type="guid" value="5ec5a3ca-728b-4775-9717-e2d370f40abd"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="Vengeance Feats Level 3"/>
+                    <attribute id="Passives" type="LSString" value="DH_ArmyUntoOneself,DH_Retaliation,DH_Riposte_PASSIVE,DH_UntetheredFury"/>
+                    <attribute id="UUID" type="guid" value="053853e9-cc7c-40f0-8853-c7935129ec40"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="Vengeance Feats Level 6"/>
+                    <attribute id="Passives" type="LSString" value="DH_ArmyUntoOneself,DH_AscendingFlame,DH_Retaliation,DH_Riposte_PASSIVE,DH_RoaringFire,DH_RuinousBulwark,DH_StokeTheFlames,DH_UntetheredFury"/>
+                    <attribute id="UUID" type="guid" value="72e5c6ab-651c-495c-bae6-ceb63720f193"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="DefaultValues">
+        <node id="root">
+            <children>
+                <node id="DefaultValue">
+                    <attribute id="Add" type="LSString" value="Acrobatics;Athletics;Intimidation;Survival;Perception;Arcana"/>
+                    <attribute id="Level" type="int32" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="d46e4118-d735-4fb0-aee5-8371807489af"/>
+                </node>
+                <node id="DefaultValue">
+                    <attribute id="Add" type="LSString" value="Perception;Stealth;SleightOfHand;Athletics;Acrobatics;Persuasion;Deception;Intimidation;Survival;AnimalHandling;Arcana;History;Insight;Investigation;Medicine;Nature;Performance;Religion"/>
+                    <attribute id="Level" type="int32" value="8"/>
+                    <attribute id="SelectorId" type="LSString" value="SkilledSkills"/>
+                    <attribute id="TableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="UUID" type="guid" value="ac26f0f9-d261-4151-95b1-9a0259fd6066"/>
+                </node>
+                <node id="DefaultValue">
+                    <attribute id="Add" type="LSString" value="Perception;Stealth;SleightOfHand;Athletics;Acrobatics;Persuasion;Deception;Intimidation;Survival;AnimalHandling;Arcana;History;Insight;Investigation;Medicine;Nature;Performance;Religion"/>
+                    <attribute id="SelectorId" type="LSString" value="SkilledSkills"/>
+                    <attribute id="TableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="UUID" type="guid" value="46783e9d-2345-4841-ac2d-06d9928d6db8"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

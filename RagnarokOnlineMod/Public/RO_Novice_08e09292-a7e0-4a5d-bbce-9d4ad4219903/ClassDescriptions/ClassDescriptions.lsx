@@ -21,8 +21,25 @@
           <attribute id="PrimaryAbility" type="uint8" value="2" />
           <attribute id="ProgressionTableUUID" type="guid" value="1999f30f-1417-4ce5-a6a3-0ed91227f201" />
           <attribute id="SoundClassType" type="FixedString" value="Fighter" />
-          <attribute id="SpellCastingAbility" type="uint8" value="5" />
+          <attribute id="SpellCastingAbility" type="uint8" value="0" />
           <attribute id="UUID" type="guid" value="143a8a1c-09ca-4ccf-9d72-325873b33a17" />
+        </node>
+        <node id="ClassDescription">
+          <attribute id="BaseHp" type="int32" value="8" />
+          <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8" />
+          <attribute id="ClassEquipment" type="FixedString" value="EQP_CC_Ranger" />
+          <attribute id="HpPerLevel" type="int32" value="6" />
+          <attribute id="Description" type="TranslatedString" handle="h5ce0e1f0g7f9dg4de4ga7f4g0dc7259fd8b9" version="1" />
+          <attribute id="DisplayName" type="TranslatedString" handle="h2fbc5968g91c6g4f67ga30ag58c3a2be1d10" version="1" />
+          <attribute id="LearningStrategy" type="uint8" value="1" />
+          <attribute id="MustPrepareSpells" type="bool" value="false" />
+          <attribute id="Name" type="FixedString" value="RO_Archer" />
+          <attribute id="ParentGuid" type="guid" value="143a8a1c-09ca-4ccf-9d72-325873b33a17" />
+          <attribute id="PrimaryAbility" type="uint8" value="2" />
+          <attribute id="ProgressionTableUUID" type="guid" value="24de30d5-1bfb-4719-9dc0-cf84489b8de4" />
+          <attribute id="SoundClassType" type="FixedString" value="Ranger" />
+          <attribute id="SpellCastingAbility" type="uint8" value="5" />
+          <attribute id="UUID" type="guid" value="0d3cb5f2-6133-46ec-a0f7-a7b3b6cb7e67" />
         </node>
       </children>
     </node>

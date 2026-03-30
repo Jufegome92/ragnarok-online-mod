@@ -1,0 +1,22 @@
+game.configs.GlyphOfWarding_Radius = Config{
+    params={
+        Projectile = {
+            type = EParamType.String,
+            help = [[The projectile that explodes]],
+            required = false,
+            default = [[Projectile_Fireball_Trap]]
+        },
+		MineRadius = {
+            type = EParamType.Number,
+            help = [[Maximum distance from centre of mine that counts as stepping on it (capped by the bounds of the mine object)]],
+            required = false,
+            default = 4.0
+        },
+    },
+    root=StateRef{game.roots.DefaultTrap,
+        logic = StateRef{game.states.GlyphOfWarding_Radius,
+            Projectile = params.Projectile,
+			MineRadius = params.MineRadius,
+        },
+    }
+}

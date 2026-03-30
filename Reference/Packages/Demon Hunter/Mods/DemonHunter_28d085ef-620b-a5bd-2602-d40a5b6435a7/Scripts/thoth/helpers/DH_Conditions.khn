@@ -1,0 +1,19 @@
+local __util = require 'larian.util'
+
+function TryDisruptHigherLevel(startdc,ability,entity,target_entity)
+	--[[ 
+	A modification to TryCounterspellHigherLevel so it considers
+	character level instead of spell level.
+	Primarily used for Demon Hunter's Disrupt spell.
+	]]--
+	local entity = entity or context.Source
+	local target_entity = target_entity or context.Target
+	local ability = ability or context.PreferredCastingAbility
+	local startdc = startdc or 10
+	if target_entity.Level > entity.Level then
+		local disruptDC = startdc + (target_entity.Level - entity.Level)
+		local st = AbilityCheck(ability, disruptDC, false, false, 0, context.Observer, context.Observer)
+		return ConditionResult(st.Result,{},{},st.Chance)
+	end
+	return ConditionResult(true,{},{},1.0)    
+end

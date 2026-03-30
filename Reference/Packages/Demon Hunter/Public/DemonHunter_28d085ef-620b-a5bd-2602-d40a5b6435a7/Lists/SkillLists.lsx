@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="SkillLists">
+        <node id="root">
+            <children>
+                <node id="SkillList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Skill List"/>
+                    <attribute id="Skills" type="LSString" value="Acrobatics, Arcana, Athletics, Intimidation, Perception, Survival"/>
+                    <attribute id="UUID" type="guid" value="6595792b-6ea5-4f5b-b29b-08c63e76e16d"/>
+                </node>
+                <node id="SkillList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Havoc Skill List"/>
+                    <attribute id="Skills" type="LSString" value="Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, SleightOfHand, Stealth"/>
+                    <attribute id="UUID" type="guid" value="455a61d3-323b-4639-9787-38cc215f5b96"/>
+                </node>
+                <node id="SkillList">
+                    <attribute id="Name" type="FixedString" value="Demon Hunter Vengeance Skill List"/>
+                    <attribute id="Skills" type="LSString" value="Acrobatics, Athletics, Deception, History, Insight, Intimidation, Perception, Persuasion, Survival"/>
+                    <attribute id="UUID" type="guid" value="39b7b558-e9e9-4b37-80a4-76d7f1c803b5"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

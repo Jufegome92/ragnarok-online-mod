@@ -1,0 +1,10 @@
+new entry "DH_LAST_RESORT_DOWNED"
+type "StatusData"
+data "StatusType" "DOWNED"
+using "RELENTLESS_ENDURANCE_DOWNED"
+data "DisplayName" "h99a94a60gf4c6g2dfagd828gf892e9232940;1"
+data "DescriptionParams" ";"
+data "Icon" "Passive_DemonHunter_LastResort"
+data "OnApplyFunctors" "RemoveStatus(DH_LAST_RESORT);RegainHitPoints(MaxHP/5+MaxHP/5,Guaranteed);ApplyStatus(DH_METAMORPHOSIS_VENGEANCE_TECHNICAL,100,3)"
+data "OnSuccess" "RegainHitPoints(1)"
+

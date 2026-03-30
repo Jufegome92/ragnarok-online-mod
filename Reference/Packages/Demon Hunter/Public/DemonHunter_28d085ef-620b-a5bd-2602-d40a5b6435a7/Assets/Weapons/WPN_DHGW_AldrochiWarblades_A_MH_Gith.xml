@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings source="($SOURCE)\Assets\Weapons\WPN_DHGW_AldrochiWarblades_A_MH_Gith.fbx">
+  <SceneSettings>
+    <UseMikkTSpace>true</UseMikkTSpace>
+    <OptimizeMesh>true</OptimizeMesh>
+    <HighPrecisionUV>false</HighPrecisionUV>
+    <MeshOrderPreset>Default</MeshOrderPreset>
+    <UseBlendShapes>false</UseBlendShapes>
+    <GenerateLODMaterials>true</GenerateLODMaterials>
+    <LOD>
+      <CanFade>false</CanFade>
+      <FadeDistance>3.40282347E+38</FadeDistance>
+      <HasCustomLOD>false</HasCustomLOD>
+      <Levels />
+    </LOD>
+    <VertexColors />
+    <UVMaps>
+      <Node name="WPN_DHGW_AldrochiWarblades_MH_Gith_B_Mesh">
+        <UV name="map1">true</UV>
+      </Node>
+      <Node name="WPN_DHGW_AldrochiWarblades_MH_Gith_A_Mesh">
+        <UV name="map1">true</UV>
+      </Node>
+    </UVMaps>
+  </SceneSettings>
+</Settings>

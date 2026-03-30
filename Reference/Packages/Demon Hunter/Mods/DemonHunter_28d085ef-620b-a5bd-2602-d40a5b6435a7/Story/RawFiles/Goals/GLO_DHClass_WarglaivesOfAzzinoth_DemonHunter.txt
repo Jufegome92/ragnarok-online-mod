@@ -1,0 +1,440 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_DHClassWarglaivesAzzinoth_DemonHunter((GUIDSTRING)WPN_DHGW_AzzinothWarglaives_MH_d4f1073e-710e-4cdc-bd90-b9fe73a2389e);
+DB_DHClassWarglaivesAzzinoth_DemonHunter((GUIDSTRING)WPN_DHGW_AzzinothWarglaives_OH_a4f629f5-12df-4746-bf55-7a494e6c64c1);
+
+DB_DHClassWarglaivesAzzinothMainHand_DemonHunter((GUIDSTRING)WPN_DHGW_AzzinothWarglaives_MH_d4f1073e-710e-4cdc-bd90-b9fe73a2389e);
+DB_DHClassWarglaivesAzzinothOffHand_DemonHunter((GUIDSTRING)WPN_DHGW_AzzinothWarglaives_OH_a4f629f5-12df-4746-bf55-7a494e6c64c1);
+
+KBSECTION
+// Check if Item is the weapon to Evaluate
+QRY
+QRY_DH_WarglaiveAzzinoth_IsValid((ITEM)_Item)
+AND
+GetTemplate(_Item, _ItemRoot)
+AND
+DB_DHClassWarglaivesAzzinoth_DemonHunter(_ItemRoot)
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_DH_WarglaiveAzzinoth_IsSetEquipped((GUIDSTRING)_Character)
+AND
+GetEquippedItem((CHARACTER)_Character,"Melee Main Weapon",_MainHand)
+AND
+GetTemplate(_MainHand, _MainHandRoot)
+AND
+DB_DHClassWarglaivesAzzinothMainHand_DemonHunter(_MainHandRoot)
+AND
+GetEquippedItem((CHARACTER)_Character,"Melee Offhand Weapon",_OffHand)
+AND
+GetTemplate(_OffHand, _OffHandRoot)
+AND
+DB_DHClassWarglaivesAzzinothOffHand_DemonHunter(_OffHandRoot)
+THEN
+DB_QRYRTN_DH_WarglaiveAzzinoth_IsSetEquipped_MainHand(_MainHand);
+DB_QRYRTN_DH_WarglaiveAzzinoth_IsSetEquipped_OffHand(_OffHand);
+
+// Set Bonus Application Logic
+PROC
+PROC_DH_WarglaiveAzzinoth_DoSetBonus((GUIDSTRING)_Character)
+AND
+QRY_DH_WarglaiveAzzinoth_IsSetEquipped(_Character)
+AND
+QRY_DH_IsDemonHunter((GUIDSTRING)_Character)
+THEN
+AddPassive(_Character, "DH_WarglaivesOfAzzinothSetBonus");
+ApplyStatus(_Character, "DH_WARGLAIVESOFAZZINOTH_SET", -1.0, 1, _Character);
+
+// Set Havoc Bonus Application Logic
+PROC
+PROC_DH_WarglaiveAzzinoth_DoHavocSetBonus((GUIDSTRING)_Character)
+AND
+QRY_DH_WarglaiveAzzinoth_IsSetEquipped(_Character)
+AND
+DB_QRYRTN_DH_WarglaiveAzzinoth_IsSetEquipped_MainHand(_MainHand)
+AND
+DB_QRYRTN_DH_WarglaiveAzzinoth_IsSetEquipped_OffHand(_OffHand)
+AND
+QRY_DH_IsHavocDemonHunter(_Character)
+THEN
+ApplyStatus(_MainHand, "DH_WARGLAIVESOFAZZINOTH_SET_HAVOC", -1.0, 1, _Character);
+ApplyStatus(_OffHand, "DH_WARGLAIVESOFAZZINOTH_SET_HAVOC", -1.0, 1, _Character);
+
+// Set Vengeance Bonus Application Logic
+PROC
+PROC_DH_WarglaiveAzzinoth_DoVengeanceSetBonus((GUIDSTRING)_Character)
+AND
+QRY_DH_WarglaiveAzzinoth_IsSetEquipped(_Character)
+AND
+DB_QRYRTN_DH_WarglaiveAzzinoth_IsSetEquipped_MainHand(_MainHand)
+AND
+DB_QRYRTN_DH_WarglaiveAzzinoth_IsSetEquipped_OffHand(_OffHand)
+AND
+QRY_DH_IsVengeanceDemonHunter(_Character)
+THEN
+AddPassive(_Character, "DH_SpellResistance");
+ApplyStatus(_MainHand, "DH_WARGLAIVESOFAZZINOTH_SET_VENGEANCE", -1.0, 1, _Character);
+ApplyStatus(_OffHand, "DH_WARGLAIVESOFAZZINOTH_SET_VENGEANCE", -1.0, 1, _Character);
+
+PROC
+PROC_DH_WarglaiveAzzinoth_ApplyBonuses((GUIDSTRING)_Character)
+THEN
+PROC_DH_WarglaiveAzzinoth_DoSetBonus(_Character);
+PROC_DH_WarglaiveAzzinoth_DoHavocSetBonus(_Character);
+PROC_DH_WarglaiveAzzinoth_DoVengeanceSetBonus(_Character);
+
+//- Handle Application of Bonuses --
+IF 
+Equipped(_Item, _Character)
+AND
+QRY_DH_WarglaiveAzzinoth_IsValid(_Item)
+THEN
+PROC_DH_WarglaiveAzzinoth_DoSetBonus(_Character);
+PROC_DH_WarglaiveAzzinoth_DoHavocSetBonus(_Character);
+PROC_DH_WarglaiveAzzinoth_DoVengeanceSetBonus(_Character);
+
+// It seems that RespecCompleted Event is fired off before Tags/Passives are applied
+// So We also want to listen to Status change to make sure
+// On respec we are properly triggering changes.
+// Note that DH_IS_REALLY_DEMONHUNTER and the 
+// DH_DemonHunter_Class also forces the DemonHunter Tag as a boost to help the trigger.
+IF
+StatusApplied((CHARACTER)_Character,"DH_IS_REALLY_DEMONHUNTER",(GUIDSTRING)_Cause,_)
+THEN
+PROC_DH_WarglaiveAzzinoth_ApplyBonuses((GUIDSTRING)_Character);
+
+IF 
+LeveledUp(_Character)
+THEN
+PROC_DH_WarglaiveAzzinoth_ApplyBonuses((GUIDSTRING)_Character);
+
+// Were only using Respec Completed to force an
+// Evaluation on our weapon event, to reset any bonuses
+// Since LevelUP doesn't cover Leveling Down.
+IF 
+RespecCompleted(_Character)
+THEN
+PROC_DH_TriggerWeaponEvent((GUIDSTRING)_Character);
+
+// Handle Removal of Bonuses Applied
+IF
+Unequipped(_Item, _Character)
+AND
+QRY_DH_WarglaiveAzzinoth_IsValid(_Item)
+AND
+GetItemByTemplateInInventory((ITEMROOT)WPN_DHGW_AzzinothWarglaives_MH_d4f1073e-710e-4cdc-bd90-b9fe73a2389e,_Character,_MainHand)
+AND
+GetItemByTemplateInInventory((ITEMROOT)WPN_DHGW_AzzinothWarglaives_OH_a4f629f5-12df-4746-bf55-7a494e6c64c1,_Character,_OffHand)
+THEN
+RemovePassive(_Character, "DH_WarglaivesOfAzzinothSetBonus");
+RemovePassive(_Character, "DH_WarglaivesOfAzzinothVengeanceBonus");
+RemoveStatus(_Character, "DH_WARGLAIVESOFAZZINOTH_SET", _Character);
+RemoveStatus(_Character, "DH_WARGLAIVESOFAZZINOTH_SET_VENGEANCE", _Character);
+RemoveStatus(_MainHand,"DH_WEAPON_BOND",_Character);
+RemoveStatus(_OffHand,"DH_WEAPON_BOND",_Character);
+RemoveStatus(_MainHand,"DH_WARGLAIVESOFAZZINOTH_SET_HAVOC", _Character);
+RemoveStatus(_OffHand,"DH_WARGLAIVESOFAZZINOTH_SET_HAVOC", _Character);
+RemoveStatus(_Character, "DH_WARGLAIVESOFAZZINOTH_SET_VENGEANCE_SPELL_RESIST", _Character);
+RemoveStatus(_MainHand, "DH_WARGLAIVESOFAZZINOTH_SET_VENGEANCE",_Character);
+RemoveStatus(_OffHand, "DH_WARGLAIVESOFAZZINOTH_SET_VENGEANCE",_Character);
+RemovePassive(_Character, "DH_SpellResistance");
+
+
+// ------------- Reward and Acquisitions ---------------
+QRY
+QRY_DH_WarglaiveAzzinoth_Circus_RingMaster_Complete((GUIDSTRING)_Character)
+AND
+GetFlag((FLAG)WYR_Circus_Ringmaster_State_Rewarded_7a42ebcf-255e-853b-bad6-30cf36746c10, (GUIDSTRING)_Character, _wasRewarded)
+AND
+_wasRewarded == 1
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_DH_WarglaiveAzzinoth_CircusRingMaster_IsPermaDead((GUIDSTRING)_Character)
+AND 
+GetFlag((FLAG)WYR_Circus_Ringmaster_State_PermaDefeated_2a46bf3d-77e2-4f9e-9dbe-a9a635656b97, (GUIDSTRING)_Character, _Status)
+AND
+_Status == 1
+THEN
+DB_NOOP(1);
+
+//--- Quest Start Letter END
+QRY
+QRY_DH_WarglaiveAzzinoth_IsLetterReceived((GUIDSTRING)_Character)
+AND
+GetFlag((FLAG)DH_LOOT_Acquisition_WarglaivesOfAzzinoth_Letter_cfa68e53-f1e9-437b-b3d2-77ce4630519d, (GUIDSTRING)_Character, _wasReceived)
+AND
+_wasReceived == 1
+THEN
+DB_NOOP(1);
+
+PROC
+PROC_DH_WarglaiveAzzinoth_SetLetterReceived((GUIDSTRING)_Character)
+THEN
+SetFlag((FLAG)DH_LOOT_Acquisition_WarglaivesOfAzzinoth_Letter_cfa68e53-f1e9-437b-b3d2-77ce4630519d, _Character); // Flag we received Letter
+
+
+//--- Quest Start Letter START
+
+//--- As long as the condition that the quest was completed or she was killed.
+//--- Player will Receive a Letter from Illidan Stormrage instruction to where the weapons are.
+//
+//-- On Completion of Dribbles Quest 
+IF
+FlagSet((FLAG)WYR_Circus_Ringmaster_State_Rewarded_7a42ebcf-255e-853b-bad6-30cf36746c10, _Character, _)
+AND
+//-- we are getting host, it seems _Character(Speaker) from event doesnt recognize an owner 
+//-- to its entity, so it doesn't know what to do.  Even a GetCharacterOwner() doesn't work.
+GetHostCharacter(_Player) 
+THEN
+TemplateAddTo((ITEMROOT)BOOK_LOW_DH_WarglaivesAzzinoth_AcquisitionNote_f28f36d1-b5a4-4ec2-979c-c9994a200730, (GUIDSTRING)_Player, 1, 1);
+PROC_DH_WarglaiveAzzinoth_SetLetterReceived((GUIDSTRING)_Player); // Flag we received Letter
+
+//-- If Dribbles Quest was already Completed, and we havent received the reward
+IF
+SavegameLoaded()
+AND
+GetHostCharacter(_Character)
+AND
+QRY_DH_WarglaiveAzzinoth_Circus_RingMaster_Complete((GUIDSTRING)_Character)
+AND
+NOT QRY_DH_WarglaiveAzzinoth_IsLetterReceived((GUIDSTRING)_Character)
+THEN
+TemplateAddTo((ITEMROOT)BOOK_LOW_DH_WarglaivesAzzinoth_AcquisitionNote_f28f36d1-b5a4-4ec2-979c-c9994a200730, (GUIDSTRING)_Character, 1, 1);
+PROC_DH_WarglaiveAzzinoth_SetLetterReceived((GUIDSTRING)_Character); // Flag we were given the letter
+//--- Quest Start Letter END
+
+
+//--- Main Hand Weapon START
+QRY
+QRY_DH_WarglaiveAzzinoth_WasAwardedMainHand((GUIDSTRING)_Character)
+AND
+GetFlag((FLAG)DH_LOOT_Rewarded_WarglaivesOfAzzinoth_MH_83f84de2-ebbe-4408-9d3b-d63a533b2f21, (GUIDSTRING)_Character, _wasRewarded)
+AND
+_wasRewarded == 1
+THEN
+DB_NOOP(1);
+
+PROC
+PROC_DH_WarglaiveAzzinothMainHand_SetFlagAwarded((GUIDSTRING)_Character)
+THEN
+SetFlag((FLAG)DH_LOOT_Rewarded_WarglaivesOfAzzinoth_MH_83f84de2-ebbe-4408-9d3b-d63a533b2f21, _Character); // Flag we were rewarded
+
+PROC
+PROC_DHClassWarglaivesAzzinoth_PlayAcquisitionEffect((GUIDSTRING)_Object)
+AND
+GetPosition(_Object,_X,_Y,_Z)
+THEN
+PlayEffectAtPosition(VFX_Spells_Cast_Damage_Fel_Fire_GlyphOfWarding_Impact_01_581011b4-be56-f067-5c74-b1621d715f10, _X, _Y, _Z, 0.7);
+PlayEffectAtPosition(VFX_Spells_Cast_Cleric_Shout_DestructiveWave_Fel_TextKey_01_75725616-1803-bf1a-cb9a-cd826fffa104, _X, _Y, _Z, 1.0);
+PlayEffectAtPosition(VFX_Spells_Cast_Intent_Buff_TargetAoE_SpiritGuardians_Fel_CastFX_Textkey_01_29a6855f-e7d7-ae89-ca92-df5a41b93088, _X, _Y, _Z, 2.0);
+PlayEffectAtPosition(VFX_Spells_Cast_Cleric_Shout_DestructiveWave_Fel_TextKey_01_75725616-1803-bf1a-cb9a-cd826fffa104, _X, _Y, _Z, 1.0);
+PlayEffectAtPosition(VFX_Spells_Cast_Intent_Warlock_Fel_ShoutAoe_ArmsOfHadar_BodyFX_01_3c7aba5d-7d04-e871-9563-bc961e79ed22, _X, _Y, _Z, 2.0);
+
+// ---- Riddle for Bell Tower Solve, adding here just for reference incase I want to do more with this.
+// At the tallest peak where whispers conspire,
+// Three tolls of the bell will summon the fire.
+// Where chaos swells deep, and green flames ignite,
+// Awakening a weapon that sows fear and destruction in fight.
+
+//-- Force user to find the bell and ring it 3x to be awarded the loot.
+// Increment the bell counter.
+PROC
+PROC_DHClassWarglaivesAzzinothRingBell_Increment((ITEM)_Item)
+AND
+DB_DHClassWarglaivesAzzinothRingMasterBellCounter_DemonHunter(_Item,_CurrentCounterValue)
+AND
+IntegerSum(_CurrentCounterValue, 1, _IncrementedCounterValue)
+THEN
+NOT DB_DHClassWarglaivesAzzinothRingMasterBellCounter_DemonHunter(_Item,_CurrentCounterValue);  // Remove Old DB
+DB_DHClassWarglaivesAzzinothRingMasterBellCounter_DemonHunter(_Item,_IncrementedCounterValue);  // Set a New DB Value
+
+// Initialize the DB counter to track number of rings on the bell.
+IF
+TemplateUseStarted(_Character,TOOL_GEN_Tower_Bell_A_6051a6d2-88e9-4ab4-999c-f463632453eb,_Bell)
+AND
+NOT DB_DHClassWarglaivesAzzinothRingMasterBellCounter_DemonHunter(_Bell,_)
+THEN
+DB_DHClassWarglaivesAzzinothRingMasterBellCounter_DemonHunter(_Bell,0);
+
+// Increment the bell if the quest was completed and we have not been awarded.
+IF
+TemplateUseFinished(_Character,TOOL_GEN_Tower_Bell_A_6051a6d2-88e9-4ab4-999c-f463632453eb,_Bell,1)
+AND
+NOT QRY_DH_WarglaiveAzzinoth_WasAwardedMainHand((GUIDSTRING)_Character)
+AND
+QRY_DH_WarglaiveAzzinoth_Circus_RingMaster_Complete((GUIDSTRING)_Character)
+THEN
+PROC_DHClassWarglaivesAzzinothRingBell_Increment((ITEM)_Bell);
+
+// Increment Bell If Lucretious was Killed and we have not been awarded.
+IF
+TemplateUseFinished(_Character,TOOL_GEN_Tower_Bell_A_6051a6d2-88e9-4ab4-999c-f463632453eb,_Bell,1)
+AND
+NOT QRY_DH_WarglaiveAzzinoth_WasAwardedMainHand((GUIDSTRING)_Character)
+AND
+QRY_DH_WarglaiveAzzinoth_CircusRingMaster_IsPermaDead((GUIDSTRING)_Character)
+THEN
+PROC_DHClassWarglaivesAzzinothRingBell_Increment((ITEM)_Bell);
+
+// Award at the 3rd ring and reset the counter.
+PROC
+PROC_DHClassWarglaivesAzzinoth_MH_Award((GUIDSTRING)_Character,(ITEM)_Bell)
+AND
+DB_DHClassWarglaivesAzzinothRingMasterBellCounter_DemonHunter(_Bell,_CurrentCounterValue)
+AND
+_CurrentCounterValue >= 3
+THEN
+NOT DB_DHClassWarglaivesAzzinothRingMasterBellCounter_DemonHunter(_Bell,_CurrentCounterValue); // Remove Old DB
+DB_DHClassWarglaivesAzzinothRingMasterBellCounter_DemonHunter(_Bell,0);                        // Reset Counter
+PROC_DHClassWarglaivesAzzinoth_PlayAcquisitionEffect(_Bell);
+TemplateAddTo((ITEMROOT)WPN_DHGW_AzzinothWarglaives_MH_d4f1073e-710e-4cdc-bd90-b9fe73a2389e, (GUIDSTRING)_Character, 1, 1);
+PROC_DH_WarglaiveAzzinothMainHand_SetFlagAwarded((GUIDSTRING)_Character); // Flag we were rewarded
+
+IF
+TemplateUseFinished(_Character,TOOL_GEN_Tower_Bell_A_6051a6d2-88e9-4ab4-999c-f463632453eb,_Bell,1)
+AND
+NOT QRY_DH_WarglaiveAzzinoth_WasAwardedMainHand((GUIDSTRING)_Character)
+AND
+QRY_DH_WarglaiveAzzinoth_Circus_RingMaster_Complete((GUIDSTRING)_Character)
+THEN
+PROC_DHClassWarglaivesAzzinoth_MH_Award((GUIDSTRING)_Character,(ITEM)_Bell);
+
+// Increment Bell If Lucretious was Killed and we have not been awarded.
+IF
+TemplateUseFinished(_Character,TOOL_GEN_Tower_Bell_A_6051a6d2-88e9-4ab4-999c-f463632453eb,_Bell,1)
+AND
+NOT QRY_DH_WarglaiveAzzinoth_WasAwardedMainHand((GUIDSTRING)_Character)
+AND
+QRY_DH_WarglaiveAzzinoth_CircusRingMaster_IsPermaDead((GUIDSTRING)_Character)
+THEN
+PROC_DHClassWarglaivesAzzinoth_MH_Award((GUIDSTRING)_Character,(ITEM)_Bell);
+
+//--- Main Hand Weapon END
+
+
+//--- Main OffHand Weapon START
+QRY
+QRY_DH_WarglaiveAzzinoth_WasAwardedOffHand((GUIDSTRING)_Character)
+AND
+GetFlag((FLAG)DH_LOOT_Rewarded_WarglaivesOfAzzinoth_OH_c6fc0901-bccb-4dba-b3b6-ca4810dbcd1c, (GUIDSTRING)_Character, _wasRewarded)
+AND
+_wasRewarded == 1
+THEN
+DB_NOOP(1);
+
+PROC
+PROC_DH_WarglaiveAzzinothOffHand_SetFlagAwarded((GUIDSTRING)_Character)
+THEN
+SetFlag((FLAG)DH_LOOT_Rewarded_WarglaivesOfAzzinoth_OH_c6fc0901-bccb-4dba-b3b6-ca4810dbcd1c, _Character); // Flag we were rewarded
+
+PROC
+PROC_DHClassWarglaivesAzzinoth_OH_Award((GUIDSTRING)_Character,(GUIDSTRING)_Bonfire)
+THEN
+PROC_DHClassWarglaivesAzzinoth_PlayAcquisitionEffect(_Bonfire);
+TemplateAddTo((ITEMROOT)WPN_DHGW_AzzinothWarglaives_OH_a4f629f5-12df-4746-bf55-7a494e6c64c1, _Character, 1, 1);
+PROC_DH_WarglaiveAzzinothOffHand_SetFlagAwarded(_Character); // Flag we were rewarded
+
+// Award on fire extinguish if the quest was completed and we have not been awarded.
+IF 
+StatusApplied(_Bonfire,"WET",_Character,_)
+AND
+_Bonfire == LTS_Camp_Bonfire_A_000_31ea8b74-3047-4d05-a62f-4820cdf2cf3b
+AND
+NOT QRY_DH_WarglaiveAzzinoth_WasAwardedOffHand((GUIDSTRING)_Character)
+AND
+QRY_DH_WarglaiveAzzinoth_Circus_RingMaster_Complete((GUIDSTRING)_Character)
+THEN
+PROC_DHClassWarglaivesAzzinoth_OH_Award(_Character,_Bonfire);
+
+// Award on fire extinguish if Lucrectious is dead and we have not been awarded.
+IF 
+StatusApplied(_Bonfire,"WET",_Character,_)
+AND
+_Bonfire == LTS_Camp_Bonfire_A_000_31ea8b74-3047-4d05-a62f-4820cdf2cf3b
+AND
+NOT QRY_DH_WarglaiveAzzinoth_WasAwardedOffHand((GUIDSTRING)_Character)
+AND
+QRY_DH_WarglaiveAzzinoth_CircusRingMaster_IsPermaDead((GUIDSTRING)_Character)
+THEN
+PROC_DHClassWarglaivesAzzinoth_OH_Award(_Character,_Bonfire);
+
+// -- Riddle for the Campfire Solve
+// In the hallowed temple where IlmaterÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s justice resides,
+// A flickering flame keeps the darkness outside.
+// Beneath sacred stone where the faithful rest,
+// Extinguish the warmth to awaken a weapon of chaos possessed.
+
+//--- Main OffHand Weapon END
+
+
+
+
+//--- - MAIN HAND AWARD BUG FIX START (10/15/2024)
+// Version 1.1.0.10 had a bug with locking out the main hand award if the offhand was awarded first
+// This was because I was flagging the MH as a reward instead of the OH.  It was also
+// Causing the offhand to continously be rewarded each time the puzzle is retriggered.
+QRY
+QRY_DH_WarglaiveAzzinoth_WasAwardedMH_FLAGGED_BUG((GUIDSTRING)_Character)
+AND
+QRY_DH_WarglaiveAzzinoth_WasAwardedOffHand((GUIDSTRING)_Character)
+AND
+QRY_DH_WarglaiveAzzinoth_WasAwardedMainHand((GUIDSTRING)_Character)
+AND
+// Check if we flagged current session as bug fixed
+GetFlag((FLAG)DH_LOOT_Rewarded_WarglaivesOfAzzinoth_MH_RewardBugFix_03f552c7-0585-407a-8201-00f7bf48582d, (GUIDSTRING)_Character, _wasFixed)
+AND
+_wasFixed == 1
+THEN
+DB_NOOP(1);
+
+// Bug Fix Prep
+// We need to ensure that we flag the OH as awarded if it exists in the user's inventory
+// Since this wasn't getting flagged, we should flag this first on SavegameLoad before we even
+// do anything else.
+IF
+SavegameLoaded()
+AND
+GetHostCharacter(_Character)
+AND
+TemplateIsInInventory((ITEMROOT)WPN_DHGW_AzzinothWarglaives_OH_a4f629f5-12df-4746-bf55-7a494e6c64c1, (GUIDSTRING)_Character, 1)
+THEN
+PROC_DH_WarglaiveAzzinothOffHand_SetFlagAwarded(_Character);
+
+// Bug Fix Logic
+// Check if we have been flagged as fixed (Bail out if true)
+// Since the bug entailed the offhand acquisition was flagging the MH as being acquired
+// We can check the if OH and MH was awarded and the MH weapon is NOT in the inventory
+// This means we have a bugged save.  Remove the MH flag aquisition, so the player
+// Can re-ring the bell to acquire the weapon.
+IF
+SavegameLoaded()
+AND
+GetHostCharacter(_Character)
+AND
+NOT QRY_DH_WarglaiveAzzinoth_WasAwardedMH_FLAGGED_BUG((GUIDSTRING)_Character)
+AND
+QRY_DH_WarglaiveAzzinoth_WasAwardedOffHand((GUIDSTRING)_Character)
+AND
+QRY_DH_WarglaiveAzzinoth_WasAwardedMainHand((GUIDSTRING)_Character)
+AND
+TemplateIsInInventory((ITEMROOT)WPN_DHGW_AzzinothWarglaives_MH_d4f1073e-710e-4cdc-bd90-b9fe73a2389e, (GUIDSTRING)_Character, _Count)
+AND
+_Count == 0  // Not found in inventory
+THEN
+// Remove the MH Awarded Flag
+ClearFlag((FLAG)DH_LOOT_Rewarded_WarglaivesOfAzzinoth_MH_83f84de2-ebbe-4408-9d3b-d63a533b2f21, _Character);
+// Flag that we have fixed the issue to avoid further extra acquistion.
+// NOTE: There is a possibility that the user will end up with 2 MH if they load the game
+// and the MH is not in their inventory, e.g. drooped on floor while loading the save
+//  but thats ok at least we can retro fix previous saves.
+SetFlag((FLAG)DH_LOOT_Rewarded_WarglaivesOfAzzinoth_MH_RewardBugFix_03f552c7-0585-407a-8201-00f7bf48582d, _Character);
+
+
+//--- - MAIN HAND AWARD BUG FIX END
+EXITSECTION
+
+ENDEXITSECTION

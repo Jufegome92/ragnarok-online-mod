@@ -1,0 +1,7 @@
+new entry "OBJ_DH_WarglaiveAzzinothAquisition"
+type "Object"
+using "OBJ_Scroll"
+data "RootTemplate" "f28f36d1-b5a4-4ec2-979c-c9994a200730"
+data "ValueUUID" "7190ea94-c758-489b-ad39-c25d6c2ac038"
+data "Rarity" "Legendary"
+

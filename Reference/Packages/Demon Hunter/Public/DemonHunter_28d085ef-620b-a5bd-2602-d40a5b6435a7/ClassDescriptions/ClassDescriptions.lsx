@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="ClassDescriptions">
+        <node id="root">
+            <children>
+                <node id="ClassDescription">
+                    <attribute id="BaseHp" type="int32" value="8"/>
+                    <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8"/>
+                    <attribute id="ClassEquipment" type="FixedString" value="EQP_CC_DemonHunter_GrumpyWumpy"/>
+                    <attribute id="ClassHotbarColumns" type="int32" value="5"/>
+                    <attribute id="CommonHotbarColumns" type="int32" value="9"/>
+                    <attribute id="Description" type="TranslatedString" handle="h8e281c4cg31bfg890fg17ecg8466c22b18e6" version="2"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h0fc301b9g5b88ga55eg4880gfc8dbf55f859" version="1"/>
+                    <attribute id="HpPerLevel" type="int32" value="5"/>
+                    <attribute id="ItemsHotbarColumns" type="int32" value="2"/>
+                    <attribute id="LearningStrategy" type="uint8" value="1"/>
+                    <attribute id="MustPrepareSpells" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="DemonHunter"/>
+                    <attribute id="PrimaryAbility" type="uint8" value="2"/>
+                    <attribute id="ProgressionTableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="SoundClassType" type="FixedString" value="Barbarian"/>
+                    <attribute id="SpellCastingAbility" type="uint8" value="1"/>
+                    <attribute id="SubclassTitle" type="TranslatedString" handle="h66d470b6g10b1gfd9egb8d4g02a939142f63" version="1"/>
+                    <attribute id="UUID" type="guid" value="593b0be6-63b9-435e-8ef2-d2b21ea93003"/>
+                    <children>
+                        <node id="Tags">
+                            <attribute id="Object" type="guid" value="66c6bdcc-7d2c-48da-afdf-dfdaf88b9517"/>
+                        </node>
+                        <node id="Tags">
+                            <attribute id="Object" type="guid" value="02913f9a-f696-40cf-acdf-32032afab32c"/>
+                        </node>
+                    </children>
+                </node>
+                <node id="ClassDescription">
+                    <attribute id="BaseHp" type="int32" value="8"/>
+                    <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8"/>
+                    <attribute id="ClassHotbarColumns" type="int32" value="5"/>
+                    <attribute id="CommonHotbarColumns" type="int32" value="9"/>
+                    <attribute id="Description" type="TranslatedString" handle="hb26bc828gd091g0a76gd719g966fcfe8de98" version="2"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h5ddf2011g04c6gccaag202fg6b294e2920f8" version="2"/>
+                    <attribute id="HpPerLevel" type="int32" value="5"/>
+                    <attribute id="ItemsHotbarColumns" type="int32" value="2"/>
+                    <attribute id="LearningStrategy" type="uint8" value="1"/>
+                    <attribute id="MustPrepareSpells" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="HavocDemonHunter"/>
+                    <attribute id="ParentGuid" type="guid" value="593b0be6-63b9-435e-8ef2-d2b21ea93003"/>
+                    <attribute id="PrimaryAbility" type="uint8" value="2"/>
+                    <attribute id="ProgressionTableUUID" type="guid" value="180fb920-a6e8-4bfe-83a9-605fff79b5dd"/>
+                    <attribute id="ShortName" type="TranslatedString" handle="hc102d500g52e0gfd7ag60edg30817b5644ac" version="1"/>
+                    <attribute id="SoundClassType" type="FixedString" value="Rogue"/>
+                    <attribute id="SpellCastingAbility" type="uint8" value="1"/>
+                    <attribute id="UUID" type="guid" value="d5d2ee82-b20f-4099-95f2-ea5030e1e6b0"/>
+                    <children>
+                        <node id="Tags">
+                            <attribute id="Object" type="guid" value="34bbbc52-1c9f-4f9a-b3e4-8c1adfbde8f6"/>
+                        </node>
+                        <node id="Tags">
+                            <attribute id="Object" type="guid" value="02913f9a-f696-40cf-acdf-32032afab32c"/>
+                        </node>
+                        <node id="Tags">
+                            <attribute id="Object" type="guid" value="f8a0608b-666c-4be6-a49c-03b369c10bd2"/>
+                        </node>
+                    </children>
+                </node>
+                <node id="ClassDescription">
+                    <attribute id="BaseHp" type="int32" value="12"/>
+                    <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8"/>
+                    <attribute id="ClassHotbarColumns" type="int32" value="5"/>
+                    <attribute id="CommonHotbarColumns" type="int32" value="9"/>
+                    <attribute id="Description" type="TranslatedString" handle="h45d362acgf3a8gfb9dg3a85gc6d55192229d" version="2"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h56f9ed2bg1f69g95d9g2319g5da41bc6b68c" version="2"/>
+                    <attribute id="HpPerLevel" type="int32" value="8"/>
+                    <attribute id="ItemsHotbarColumns" type="int32" value="2"/>
+                    <attribute id="LearningStrategy" type="uint8" value="1"/>
+                    <attribute id="MustPrepareSpells" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="VengeanceDemonHunter"/>
+                    <attribute id="ParentGuid" type="guid" value="593b0be6-63b9-435e-8ef2-d2b21ea93003"/>
+                    <attribute id="PrimaryAbility" type="uint8" value="3"/>
+                    <attribute id="ProgressionTableUUID" type="guid" value="6f98ca2c-7a30-471f-b5eb-641af3f779ec"/>
+                    <attribute id="ShortName" type="TranslatedString" handle="h74907bb1g32b2g3d3bg3909g1c3cc241c3ba" version="1"/>
+                    <attribute id="SoundClassType" type="FixedString" value="Fighter"/>
+                    <attribute id="SpellCastingAbility" type="uint8" value="1"/>
+                    <attribute id="UUID" type="guid" value="fd8f9a47-89f7-4c21-b93c-737ab1d8e5bb"/>
+                    <children>
+                        <node id="Tags">
+                            <attribute id="Object" type="guid" value="bdbbffb3-81b5-40b7-b33c-71e0316cd3ba"/>
+                        </node>
+                        <node id="Tags">
+                            <attribute id="Object" type="guid" value="02913f9a-f696-40cf-acdf-32032afab32c"/>
+                        </node>
+                        <node id="Tags">
+                            <attribute id="Object" type="guid" value="1ae7017c-4884-4a43-bc4a-742fa0d201c0"/>
+                        </node>
+                    </children>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

@@ -1,0 +1,144 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+QRY
+QRY_DH_IsDemonHunter((GUIDSTRING)_Character)
+AND
+IsTagged(_Character, (TAG)DH_DEMONHUNTER_66c6bdcc-7d2c-48da-afdf-dfdaf88b9517, _isTagged)
+AND
+_isTagged == 1
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_DH_IsHavocDemonHunter((GUIDSTRING)_Character)
+AND
+IsTagged(_Character, (TAG)DH_HAVOC_34bbbc52-1c9f-4f9a-b3e4-8c1adfbde8f6, _isTagged)
+AND
+_isTagged == 1
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_DH_IsVengeanceDemonHunter((GUIDSTRING)_Character)
+AND
+IsTagged(_Character, (TAG)DH_VENGEANCE_bdbbffb3-81b5-40b7-b33c-71e0316cd3ba, _isTagged)
+AND
+_isTagged == 1
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_DH_IsWarglaive((ITEM)_Item)
+AND
+IsTagged(_Item, (TAG)WPN_DH_WARGLAIVE_ba9e75cc-3403-46b4-82c2-087b5f907cc4, _isTagged)
+AND
+_isTagged == 1
+THEN 
+DB_NOOP(1);
+
+// Force Trigger Weapon Event - Used for RespecCompleted
+PROC
+PROC_DH_TriggerWeaponEvent((GUIDSTRING)_Character)
+AND
+GetEquippedItem((CHARACTER)_Character,"Melee Main Weapon",_MainHand)
+AND
+GetEquippedItem((CHARACTER)_Character,"Melee Offhand Weapon",_OffHand)
+THEN
+Unequip(_Character, _MainHand);
+Equip(_Character, _MainHand);
+Unequip(_Character, _OffHand);
+Equip(_Character, _OffHand);
+
+// Main Hand - Check if Warglaive and Unequip if not DemonHunter
+PROC
+PROC_DH_CheckWarglaiveEquippedMainHand((GUIDSTRING)_Character)
+AND
+NOT QRY_DH_IsDemonHunter(_Character)
+AND
+GetEquippedItem((CHARACTER)_Character,"Melee Main Weapon",_Item)
+AND
+QRY_DH_IsWarglaive(_Item)
+THEN
+Unequip(_Character, _Item);
+
+// Off Hand - Check if Warglaive and Unequip if not DemonHunter
+PROC
+PROC_DH_CheckWarglaiveEquippedOffHand((GUIDSTRING)_Character)
+AND
+NOT QRY_DH_IsDemonHunter(_Character)
+AND
+GetEquippedItem((CHARACTER)_Character,"Melee Offhand Weapon",_Item)
+AND
+QRY_DH_IsWarglaive(_Item)
+THEN
+Unequip(_Character, _Item);
+
+PROC
+PROC_DH_CheckEquippedWeapons((GUIDSTRING)_Character)
+THEN
+PROC_DH_CheckWarglaiveEquippedMainHand(_Character);
+PROC_DH_CheckWarglaiveEquippedOffHand(_Character);
+
+//-- Events to trigger removal of warglaives
+IF 
+RespecCompleted(_Character)
+THEN
+PROC_DH_CheckEquippedWeapons(_Character);
+
+// It seems that RespecCompleted Event is fired off before Tags/Passives are applied
+// So We also want to listen to Status change to make sure
+// On respec we are properly triggering changes.
+// Note that DH_IS_REALLY_DEMONHUNTER and the 
+// DH_DemonHunter_Class also forces the DemonHunter Tag as a boost to help the trigger.
+IF
+StatusRemoved((CHARACTER)_Character,"DH_IS_REALLY_DEMONHUNTER",_,_)
+THEN
+PROC_DH_CheckEquippedWeapons((GUIDSTRING)_Character);
+
+// On Character Creation class tags are not applied
+// until post creation events are done. Because warglaives
+// UseCondition checks for Tagged('DH_DEMONHUNTER',context.Source)
+// It was not equipping the item on spawn, to cicumvent this on creation
+// The condition was removed from the starting weapon and its condition
+// for equipped is handled here intead.
+// We will attempt to equip the starting weapons on SetTag event instead.
+// Equipping will rely on the items actually being in the inventory
+// And there are no weapons equipped for a slot, and character is Level 1
+IF
+TagSet(_Character, (TAG)DH_DEMONHUNTER_66c6bdcc-7d2c-48da-afdf-dfdaf88b9517)
+AND
+GetLevel(_Character, 1)
+THEN
+IterateInventoryByTemplate(_Character, WPN_DHGW_Warglaive_A_0_5518ebdc-2281-459a-8aa2-f13eb843fff8, "DH_StartingWeapon_Check", "DH_StartingWeapon_Check_Completed");
+DB_DHClassStartingWeaponCheckCharacter_DemonHunter(_Character);
+
+IF // Main Hand
+EntityEvent(_Item, "DH_StartingWeapon_Check")
+AND
+DB_DHClassStartingWeaponCheckCharacter_DemonHunter(_Character)
+AND
+NOT GetEquippedItem((CHARACTER)_Character,"Melee Main Weapon",_)
+THEN
+Equip(_Character, (ITEM)_Item);
+
+IF // Off Hand
+EntityEvent(_Item, "DH_StartingWeapon_Check")
+AND
+DB_DHClassStartingWeaponCheckCharacter_DemonHunter(_Character)
+AND
+NOT GetEquippedItem((CHARACTER)_Character,"Melee Offhand Weapon",_)
+THEN
+Equip(_Character, (ITEM)_Item);
+
+IF
+EntityEvent(_Item, "DH_StartingWeapon_Check_Completed")
+AND
+DB_DHClassStartingWeaponCheckCharacter_DemonHunter(_Character)
+THEN
+NOT DB_DHClassStartingWeaponCheckCharacter_DemonHunter(_Character);
+EXITSECTION
+
+ENDEXITSECTION

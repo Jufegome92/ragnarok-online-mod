@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <contentList>
     <content contentuid="h1cc9cdc3g6c5fg404dg935bgbe20d9c6a491" version="1">Novice</content>
     <content contentuid="h9b984a65g31d3g4356g8f28g184cc61a7f6e" version="1">A soul reborn out of sequence, the Novice remembers fragments of another life: the training fields of Rune-Midgard, the climb from first job to second, and the solemn rite before the Valkyrie. Stripped of title, coin, and relic, they awaken in the Forgotten Realms with nothing but discipline and instinct. Their old techniques survive as rough muscle memory, but this world is different, crueler, and stranger. Every battle is a lesson, every companion a new chapter, and every choice a step toward becoming something greater than they were before.</content>
@@ -16,6 +16,8 @@
     <content contentuid="h4f08d5a8g8b0fg4a0ag93bbgfb8a8f7735af" version="1">First Aid improves to 1d8 healing at Novice level 9.</content>
     <content contentuid="h8f1f6b0eg9a07g4c31gb7a6g29eecf7a2ad2" version="1">Valkyrie's Blessing</content>
     <content contentuid="h1f53e0f4g4ea7g4689gaea2g5b832e0f1959" version="1">When you roll a 1 for an Attack Roll, Ability Check, or Saving Throw, reroll the die once and use the new result.</content>
+    <content contentuid="h2fbc5968g91c6g4f67ga30ag58c3a2be1d10" version="1">Archer</content>
+    <content contentuid="h5ce0e1f0g7f9dg4de4ga7f4g0dc7259fd8b9" version="1">A disciplined marksman path adapted from Rune-Midgard traditions. This first job establishes ranged fundamentals and uses Wisdom-based Mana growth.</content>
 </contentList>
 
 

@@ -1,0 +1,153 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_DHClassKazzakWarglaives_DemonHunter((GUIDSTRING)WPN_DHGW_KazzaksFieryWarglaives_MH_2d3523af-19db-41ed-9140-013b1174b21f);
+DB_DHClassKazzakWarglaives_DemonHunter((GUIDSTRING)WPN_DHGW_KazzaksFieryWarglaives_OH_38660d11-481f-42ff-87d6-e9f693513d20);
+
+DB_DHClassKazzakWarglaivesMainHand_DemonHunter((GUIDSTRING)WPN_DHGW_KazzaksFieryWarglaives_MH_2d3523af-19db-41ed-9140-013b1174b21f);
+DB_DHClassKazzakWarglaivesOffHand_DemonHunter((GUIDSTRING)WPN_DHGW_KazzaksFieryWarglaives_OH_38660d11-481f-42ff-87d6-e9f693513d20);
+
+
+KBSECTION
+// Check if Item is the weapon to Evaluate
+QRY
+QRY_DH_KazzakWarglaive_IsValid((ITEM)_Item)
+AND
+GetTemplate(_Item, _ItemRoot)
+AND
+DB_DHClassKazzakWarglaives_DemonHunter(_ItemRoot)
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_DH_KazzakWarglaive_IsSetEquipped((GUIDSTRING)_Character)
+AND
+GetEquippedItem((CHARACTER)_Character,"Melee Main Weapon",_MainHand)
+AND
+GetTemplate(_MainHand, _MainHandRoot)
+AND
+DB_DHClassKazzakWarglaivesMainHand_DemonHunter(_MainHandRoot)
+AND
+GetEquippedItem((CHARACTER)_Character,"Melee Offhand Weapon",_OffHand)
+AND
+GetTemplate(_OffHand, _OffHandRoot)
+AND
+DB_DHClassKazzakWarglaivesOffHand_DemonHunter(_OffHandRoot)
+THEN
+DB_QRYRTN_DH_KazzakWarglaive_IsSetEquipped_MainHand(_MainHand);
+DB_QRYRTN_DH_KazzakWarglaive_IsSetEquipped_OffHand(_OffHand);
+
+// Set Bonus Application Logic
+PROC
+PROC_DH_KazzakWarglaive_DoSetBonus((GUIDSTRING)_Character)
+AND
+QRY_DH_KazzakWarglaive_IsSetEquipped(_Character)
+AND
+QRY_DH_IsDemonHunter((GUIDSTRING)_Character)
+THEN
+AddPassive(_Character, "DH_KazzaksWarglaiveSetBonus");
+ApplyStatus(_Character, "DH_KAZZAKSWARGLAIVE_SET", -1.0, 1, _Character);
+
+// Set Havoc Bonus Application Logic
+PROC
+PROC_DH_KazzakWarglaive_DoHavocSetBonus((GUIDSTRING)_Character)
+AND
+QRY_DH_KazzakWarglaive_IsSetEquipped(_Character)
+AND
+DB_QRYRTN_DH_KazzakWarglaive_IsSetEquipped_MainHand(_MainHand)
+AND
+DB_QRYRTN_DH_KazzakWarglaive_IsSetEquipped_OffHand(_OffHand)
+AND
+QRY_DH_IsHavocDemonHunter(_Character)
+THEN
+AddPassive(_Character, "DH_KazzaksWarglaiveSetBonus_Havoc");
+AddPassive(_Character, "DH_DanceOfTheLegion");
+
+// Set Vengeance Bonus Application Logic
+PROC
+PROC_DH_KazzakWarglaive_DoVengeanceSetBonus((GUIDSTRING)_Character)
+AND
+QRY_DH_KazzakWarglaive_IsSetEquipped(_Character)
+AND
+DB_QRYRTN_DH_KazzakWarglaive_IsSetEquipped_MainHand(_MainHand)
+AND
+DB_QRYRTN_DH_KazzakWarglaive_IsSetEquipped_OffHand(_OffHand)
+AND
+QRY_DH_IsVengeanceDemonHunter(_Character)
+THEN
+AddPassive(_Character, "DH_KazzaksWarglaiveSetBonus_Vengeance");
+AddPassive(_Character, "DH_CaptureSoul");
+
+PROC
+PROC_DH_KazzakWarglaive_ApplyBonuses((GUIDSTRING)_Character)
+THEN
+PROC_DH_KazzakWarglaive_DoSetBonus(_Character);
+PROC_DH_KazzakWarglaive_DoHavocSetBonus(_Character);
+PROC_DH_KazzakWarglaive_DoVengeanceSetBonus(_Character);
+
+//- Handle Application of Bonuses --
+IF 
+Equipped(_Item, _Character)
+AND
+QRY_DH_KazzakWarglaive_IsValid(_Item)
+THEN
+PROC_DH_KazzakWarglaive_DoSetBonus(_Character);
+PROC_DH_KazzakWarglaive_DoHavocSetBonus(_Character);
+PROC_DH_KazzakWarglaive_DoVengeanceSetBonus(_Character);
+
+// It seems that RespecCompleted Event is fired off before Tags/Passives are applied
+// So We also want to listen to Status change to make sure
+// On respec we are properly triggering changes.
+// Note that DH_IS_REALLY_DEMONHUNTER and the 
+// DH_DemonHunter_Class also forces the DemonHunter Tag as a boost to help the trigger.
+IF
+StatusApplied((CHARACTER)_Character,"DH_IS_REALLY_DEMONHUNTER",(GUIDSTRING)_Cause,_)
+THEN
+PROC_DH_KazzakWarglaive_ApplyBonuses((GUIDSTRING)_Character);
+
+IF 
+LeveledUp(_Character)
+THEN
+PROC_DH_KazzakWarglaive_ApplyBonuses((GUIDSTRING)_Character);
+
+// Were only using Respec Completed to force an
+// Evaluation on our weapon event, to reset any bonuses
+// Since LevelUP doesn't cover Leveling Down.
+IF 
+RespecCompleted(_Character)
+THEN
+PROC_DH_TriggerWeaponEvent((GUIDSTRING)_Character);
+
+// Handle Removal of Bonuses Applied
+IF
+Unequipped(_Item, _Character)
+AND
+QRY_DH_KazzakWarglaive_IsValid(_Item)
+AND
+GetItemByTemplateInInventory((ITEMROOT)WPN_DHGW_KazzaksFieryWarglaives_MH_2d3523af-19db-41ed-9140-013b1174b21f,_Character,_MainHand)
+AND
+GetItemByTemplateInInventory((ITEMROOT)WPN_DHGW_KazzaksFieryWarglaives_OH_38660d11-481f-42ff-87d6-e9f693513d20,_Character,_OffHand)
+THEN
+RemovePassive(_Character, "DH_KazzaksWarglaiveSetBonus");
+RemoveStatus(_Character, "DH_KAZZAKSWARGLAIVE_SET", _Character);
+RemovePassive(_Character, "DH_KazzaksWarglaiveSetBonus_Havoc");
+RemovePassive(_Character, "DH_DanceOfTheLegion");
+RemovePassive(_Character, "DH_KazzaksWarglaiveSetBonus_Vengeance");
+RemovePassive(_Character, "DH_CaptureSoul");
+
+
+// Handle Soul Fragment Returns on Class Set Spells
+// To ensure we are only getting a single return on Soul Cleave and Blade Dance
+// and not per enemy hit
+IF 
+CastedSpell(_Character, "Zone_DH_SoulCleave", _,_,_)
+THEN
+RemoveStatus(_Character, "DH_KAZZAKCLASS_SET_TECHNICAL");
+
+IF 
+CastedSpell(_Character, "Projectile_DH_BladeDance", _,_,_)
+THEN
+RemoveStatus(_Character, "DH_KAZZAKCLASS_SET_TECHNICAL");
+EXITSECTION
+
+ENDEXITSECTION

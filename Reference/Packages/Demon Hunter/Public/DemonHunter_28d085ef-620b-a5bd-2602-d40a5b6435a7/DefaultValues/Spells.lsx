@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="DefaultValues">
+        <node id="root">
+            <children>
+                <node id="DefaultValue">
+                    <attribute id="Add" type="LSString" value="Target_Resistance"/>
+                    <attribute id="Level" type="int32" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="b841d474-8b12-4402-bf42-d6950a4fe4f8"/>
+                </node>
+                <node id="DefaultValue">
+                    <attribute id="Add" type="LSString" value="Target_Guidance"/>
+                    <attribute id="Level" type="int32" value="4"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="3f9fe80e-d9ed-4910-b432-6d8fdf4a0950"/>
+                </node>
+                <node id="DefaultValue">
+                    <attribute id="Add" type="LSString" value="Target_ChillTouch"/>
+                    <attribute id="Level" type="int32" value="5"/>
+                    <attribute id="TableUUID" type="guid" value="e970fef6-a795-42a2-8322-48fe33293026"/>
+                    <attribute id="UUID" type="guid" value="70af57d8-5dc0-4b0e-932e-3ea2a32a92b8"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

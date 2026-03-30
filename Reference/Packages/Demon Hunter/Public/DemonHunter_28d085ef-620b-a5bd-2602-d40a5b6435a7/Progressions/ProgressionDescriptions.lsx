@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="ProgressionDescriptions">
+        <node id="root">
+            <children>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h54e56e79gba32g3a75g3061gdf10bb74a7ab" version="2"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hdc2057dag1ff6ge791gb535g8b26bb3de415" version="2"/>
+                    <attribute id="SelectorId" type="FixedString" value="DemonicFeats"/>
+                    <attribute id="Type" type="FixedString" value="DemonHunter"/>
+                    <attribute id="UUID" type="guid" value="40b000ee-1591-4a60-af33-2ee921f114f4"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="hfabdded3g94c0ga280g731eg16431285e082" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="head04b53g3583g3e9egf575ge9c674624eee" version="2"/>
+                    <attribute id="SelectorId" type="FixedString" value="HavocTalents"/>
+                    <attribute id="Type" type="FixedString" value="HavocDemonHunter"/>
+                    <attribute id="UUID" type="guid" value="c33ffd27-559e-450f-a06e-11baf3703474"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h292e662cg5fdbg8a1fgde89g48d86549e73d" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hc831580fgfc78g5e94g9ed4g85f36cfb6150" version="2"/>
+                    <attribute id="SelectorId" type="FixedString" value="VengeanceTalents"/>
+                    <attribute id="Type" type="FixedString" value="VengeanceDemonHunter"/>
+                    <attribute id="UUID" type="guid" value="79001ea2-82e9-4ce3-8f65-7bdc550dfcc2"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="hd8cd5655g78d1ge675g419ag41aeb305565d" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h5438c789g8a0dgcce6g0db3g020094b7ee21" version="1"/>
+                    <attribute id="SelectorId" type="FixedString" value="HavocSpells"/>
+                    <attribute id="Type" type="FixedString" value="HavocDemonHunter"/>
+                    <attribute id="UUID" type="guid" value="4ea09cfa-73c7-4eb0-9ef8-4f7857252c99"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h306ea584gf91bg372ag8041g1d5ba2328ea7" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h6f26b8e2g324agffeeg3427g7ad4162ecd78" version="1"/>
+                    <attribute id="SelectorId" type="FixedString" value="VengeanceSpells"/>
+                    <attribute id="Type" type="FixedString" value="VengeanceDemonHunter"/>
+                    <attribute id="UUID" type="guid" value="bfeec91b-d632-48b1-9bec-9786c5e98f09"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h75f66392g0034g9194gca6ag95f1c6f510f4" version="2"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hee13161eg4321gc9d7g28d0g4d8dd8d3e52e" version="2"/>
+                    <attribute id="SelectorId" type="FixedString" value="DHSpells"/>
+                    <attribute id="Type" type="FixedString" value="DemonHunter"/>
+                    <attribute id="UUID" type="guid" value="b100dc19-7d0f-4c12-b8f1-13a9702ce2e6"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="hf9610e27g7d7fgaecbg9b3cgb730f7ce3aaf" version="2"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h33fd615dg611fge431g6786gebdbd14ead64" version="3"/>
+                    <attribute id="ExactMatch" type="FixedString" value="ActionResource(DH_Fury,10,0)"/>
+                    <attribute id="Hidden" type="bool" value="false"/>
+                    <attribute id="UUID" type="guid" value="e6b87084-2a92-4874-9d57-1e36247964a4"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h0db2e77fge1eeg52a6g1bbbg4e2dedd5cc87" version="2"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="he91b2c14g985fgf376g20a7g0a4f2bfba48d" version="4"/>
+                    <attribute id="ExactMatch" type="FixedString" value="ActionResource(DH_SoulFragments,3,0)"/>
+                    <attribute id="Hidden" type="bool" value="false"/>
+                    <attribute id="UUID" type="guid" value="a7f9c6c8-0129-42bf-b26a-fb10414d13c6"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h44b9c45bg1fb3g31e3g4193gb56289bd4279" version="3"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h1597eb38gc297g0355g28c1g8987b3a9e6cb" version="6"/>
+                    <attribute id="Hidden" type="bool" value="false"/>
+                    <attribute id="ParamMatch" type="FixedString" value="0:DH_SoulFragments"/>
+                    <attribute id="Type" type="FixedString" value="ActionResource"/>
+                    <attribute id="UUID" type="guid" value="0e057ec2-1e16-48c1-9cc4-2b9984da9100"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

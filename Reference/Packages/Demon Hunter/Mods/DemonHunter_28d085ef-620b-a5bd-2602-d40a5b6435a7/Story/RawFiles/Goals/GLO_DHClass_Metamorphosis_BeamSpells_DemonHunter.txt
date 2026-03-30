@@ -1,0 +1,42 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_DHClassMetaBeamSpells_DemonHunter("Zone_DH_EyeBeam");
+DB_DHClassMetaBeamSpells_DemonHunter("Zone_DH_FelDevastation");
+KBSECTION
+// On Preview Spell
+IF
+StartedPreviewingSpell(_Character,_Spell,_,_)
+AND
+DB_DHClassMetaBeamSpells_DemonHunter(_Spell)
+THEN
+Transform(_Character, DemonHunter_Metamorphosis_Template_063c9aa9-1562-4045-8bce-73d9d17b592e, (SHAPESHIFTRULE)DisguiseWithCustomLooksKeepNameAndIcon_b40d9ab4-57a7-4632-b8d7-188904b00606);
+
+// At the end of Casting the Spell
+IF
+CastedSpell(_Character,_Spell,_,_,_)
+AND
+DB_DHClassMetaBeamSpells_DemonHunter(_Spell)
+AND
+// If they already have this status dont remove
+NOT HasActiveStatus(_Character,"DH_METAMORPHOSIS_HAVOC_TECHNICAL",1)
+AND
+NOT HasActiveStatus(_Character,"DH_METAMORPHOSIS_VENGEANCE_TECHNICAL",1)
+THEN
+RemoveTransforms(_Character);
+
+// Cancelled
+IF
+CastSpellFailed(_Character,_Spell,_,_,_)
+AND
+DB_DHClassMetaBeamSpells_DemonHunter(_Spell)
+AND
+// If they already have this status dont remove
+NOT HasActiveStatus(_Character,"DH_METAMORPHOSIS_HAVOC_TECHNICAL",1)
+AND
+NOT HasActiveStatus(_Character,"DH_METAMORPHOSIS_VENGEANCE_TECHNICAL",1)
+THEN
+RemoveTransforms(_Character);
+EXITSECTION
+
+ENDEXITSECTION

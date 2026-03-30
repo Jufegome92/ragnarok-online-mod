@@ -1,0 +1,15 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_DHClassMetaHavocSpells_DemonHunter("Projectile_DH_Metamorphosis_Havoc");
+KBSECTION
+// At the end of Casting the Spell
+IF
+CastedSpell(_Character,_Spell,_,_,_)
+AND
+DB_DHClassMetaHavocSpells_DemonHunter(_Spell)
+THEN
+ApplyStatus(_Character, "DH_METAMORPHOSIS_HAVOC_TECHNICAL", 60.0, 1, _Character);
+EXITSECTION
+
+ENDEXITSECTION

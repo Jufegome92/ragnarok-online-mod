@@ -1,0 +1,1 @@
+powershell -ExecutionPolicy Bypass -File Tools/convert_icon_dds.ps1 -InputPath "RagnarokOnlineMod/Icons/archer_class.png" -BaseName "RO_Archer"

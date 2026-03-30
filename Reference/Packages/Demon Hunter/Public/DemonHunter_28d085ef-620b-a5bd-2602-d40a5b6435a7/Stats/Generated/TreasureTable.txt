@@ -1,0 +1,86 @@
+treasure itemtypes "Common","Uncommon","Rare","Epic","Legendary","Divine","Unique"
+new treasuretable "_ACT_1_WILDS"
+new treasuretable "DEN_Entrance_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "I_WPN_DH_Warglaive_1",9,0,0,0,0,0,0,0
+new treasuretable "DEN_Weaponsmith_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "I_WPN_DH_Warglaive_1",9,0,0,0,0,0,0,0
+new treasuretable "PLA_ConflictedFlind"
+CanMerge 1
+new subtable "-1"
+object category "I_WPN_DH_ShatteredWarglaive_Flind",1,0,0,0,0,0,0,0
+new treasuretable "PLA_ConflictedFlind_EA"
+CanMerge 1
+new subtable "-1"
+object category "I_WPN_DH_ShatteredWarglaive_Flind",1,0,0,0,0,0,0,0
+new treasuretable "PLA_ZhentarimTrader_Extra"
+CanMerge 1
+new subtable "1,1"
+object category "I_WPN_DH_Warglaive_1",9,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_WPN_DH_BoneWarglaive_1",9,0,0,0,0,0,0,0
+new treasuretable "GOB_Festivities_Trader"
+CanMerge 1
+new subtable "1,1"
+object category "I_WPN_DH_BoneWarglaive_1",9,0,0,0,0,0,0,0
+new subtable "-1"
+object category "I_WPN_DH_LifePiercingWarglaive_A",1,0,0,0,0,0,0,0
+new treasuretable "GOB_Quartermaster"
+CanMerge 1
+new subtable "1,1"
+object category "I_WPN_DH_BoneWarglaive_1",9,0,0,0,0,0,0,0
+new subtable "-1"
+object category "I_WPN_DH_BloodedBoneyWarglaive_A",1,0,0,0,0,0,0,0
+new treasuretable "FOR_SchoolOgre_Smart_Corpse"
+CanMerge 1
+new subtable "-1"
+object category "I_WPN_DH_OgreWarglaive_MH",1,0,0,0,0,0,0,0
+new treasuretable "HAG_Lair_RingChest"
+CanMerge 1
+new subtable "1,1"
+object category "I_WPN_DH_TotemicSkullWarglaive_B_MH",1,0,0,0,0,0,0,0
+new treasuretable "FOR_Spiders_SpiderQueen"
+CanMerge 1
+new subtable "-1"
+object category "I_WPN_DH_TotemicSkullWarglaive_B_OH",1,0,0,0,0,0,0,0
+new treasuretable "HAG_GurHunter"
+CanMerge 1
+new subtable "-1"
+object category "I_WPN_DH_MonsterSlasherWarglaive_A",1,0,0,0,0,0,0,0
+new treasuretable "PLA_Tavern_SaveFlorrick_QuestReward"
+CanMerge 1
+new subtable "-1"
+object category "I_WPN_DH_TheSparkyWarglaive_A",1,0,0,0,0,0,0,0
+new treasuretable "PLA_Tavern_Chest_Guest"
+CanMerge 1
+new subtable "-1"
+object category "I_WPN_DH_HraftGlaiveOfWar_A",1,0,0,0,0,0,0,0
+new treasuretable "_ACT_1_MOUNTAIN_PASS"
+new treasuretable "CRE_Expeditioner_Trade"
+CanMerge 1
+new subtable "-1"
+object category "I_WPN_DH_ThunderingSmiteWarglaive_A",1,0,0,0,0,0,0,0
+new treasuretable "CRE_GithQuartermistress_Trade"
+CanMerge 1
+new subtable "-1"
+object category "I_WPN_DH_WarglaiveOfTheUndermoutainKing_A",1,0,0,0,0,0,0,0
+new subtable "-1"
+object category "I_WPN_DH_DefendersWarglaive_A",1,0,0,0,0,0,0,0
+new subtable "-1"
+object category "I_WPN_DH_LarethiansRazorWarglaive_A",1,0,0,0,0,0,0,0
+new subtable "-1"
+object category "I_WPN_DH_WitchbreakerWarglaive_A",1,0,0,0,0,0,0,0
+new treasuretable "_ACT_1_UNDERDARK"
+new treasuretable "UND_KC_LavaElemental"
+CanMerge 1
+new subtable "-1"
+object category "I_WPN_DH_KazzaksFieryWarglaives_OH",1,0,0,0,0,0,0,0
+new treasuretable "_ACT_2"
+new treasuretable "HAV_Weaponsmith_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "I_WPN_DH_Warglaive_2",9,0,0,0,0,0,0,0
+new treasuretable "_ACT_3"

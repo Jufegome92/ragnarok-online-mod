@@ -1,0 +1,61 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+// Weapon/Race Variation
+//DB_DHClassWeaponModelVariation_DemonHunter((GUIDSTRING)WPN_DHGW_AldrochiWarblades_MH_45da93fe-53ba-46e2-9838-6a94ca1f32db, (GUIDSTRING)WPN_DHGW_AldrochiWarblades_MH_Gith_d0a777a7-a384-42f2-a604-ddbf0ffd8a1b);
+//DB_DHClassWeaponModelVariation_DemonHunter((GUIDSTRING)WPN_DHGW_AldrochiWarblades_OH_da678b25-a9bb-4d6b-b2ae-d7e8312c5ebf, (GUIDSTRING)WPN_DHGW_AldrochiWarblades_OH_Gith_4fa4531d-d222-48b2-924b-bf41a28ee5a0);
+
+DB_DHClassWeaponModelVariation_DemonHunter((GUIDSTRING)WPN_DHGW_AldrochiWarblades_MH_45da93fe-53ba-46e2-9838-6a94ca1f32db, (GUIDSTRING)WPN_DHGW_AldrochiWarblades_A_MH_Gith_274ffcac-03f1-4f65-8b40-798c59b0bbcf);
+DB_DHClassWeaponModelVariation_DemonHunter((GUIDSTRING)WPN_DHGW_AldrochiWarblades_OH_da678b25-a9bb-4d6b-b2ae-d7e8312c5ebf, (GUIDSTRING)WPN_DHGW_AldrochiWarblades_A_OH_Gith_c70d70ca-9db5-412b-89a8-07ead394a0f8);
+KBSECTION
+//--  Handle Weapon Race Variation Swaps BEGIN
+// We are doing weapon look variaion for some races
+// Becuase some of them hold the weapons on idle, so aggressively
+// So the models are adjusted to counteract the animation.
+PROC  // Githyanki
+PROC_DH_WeaponModelVariation_DoGithSwap((GUIDSTRING)_Character, (ITEM)_Item)
+AND
+QRY_DH_IsDemonHunter(_Character)
+AND
+GetRace((CHARACTER)_Character, 1, _Race)
+AND
+_Race == "Githyanki"
+AND
+GetTemplate(_Item, _Template)
+AND
+DB_DHClassWeaponModelVariation_DemonHunter(_Template,_ModelVersion)
+THEN
+Transform(_Item, _ModelVersion, (SHAPESHIFTRULE)PHYSICAL_4acc6277-6dcd-4110-9450-b9379beaedac);
+
+IF 
+Equipped(_Item, _Character)
+THEN
+PROC_DH_WeaponModelVariation_DoGithSwap(_Character, _Item);
+
+IF
+SavegameLoaded()
+THEN
+IterateCharacters("DH_Class_WeaponSwapCheck", "DH_Class_WeaponSwapCheck_Completed");
+
+IF
+LongRestFinished()
+THEN
+IterateCharacters("DH_Class_WeaponSwapCheck", "DH_Class_WeaponSwapCheck_Completed");
+
+IF 
+RestorePartyFinished()
+THEN
+IterateCharacters("DH_Class_WeaponSwapCheck", "DH_Class_WeaponSwapCheck_Completed");
+
+IF
+EntityEvent(_Character,"DH_Class_WeaponSwapCheck")
+THEN
+PROC_DH_TriggerWeaponEvent((GUIDSTRING)_Character);
+
+// TODO
+// REMOVE TRANSFORM ON UNEQUIP
+
+//--  Handle Weapon Race Variation Swaps END
+EXITSECTION
+
+ENDEXITSECTION
