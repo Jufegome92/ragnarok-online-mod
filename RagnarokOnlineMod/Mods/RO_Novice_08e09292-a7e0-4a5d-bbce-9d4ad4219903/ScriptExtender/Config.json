@@ -1,0 +1,7 @@
+{
+    "RequiredVersion": 5,
+    "ModTable": "RO_Novice_08e09292_a7e0_4a5d_bbce_9d4ad4219903",
+    "FeatureFlags": [
+        "Lua"
+    ]
+}

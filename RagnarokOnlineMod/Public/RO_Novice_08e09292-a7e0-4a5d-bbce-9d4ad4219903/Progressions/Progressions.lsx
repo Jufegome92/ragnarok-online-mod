@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<save>
+  <version major="4" minor="8" revision="0" build="200" />
+  <region id="Progressions">
+    <node id="root">
+      <children>
+        <node id="Progression">
+          <attribute id="Boosts" type="LSString" value="ActionResource(RO_MP,6,0)" />
+          <attribute id="Level" type="uint8" value="1" />
+          <attribute id="Name" type="LSString" value="RO_Novice" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_Novice_BasicSkill;RO_Novice_FirstAid_L1;RO_Novice_ValkyriesBlessing" />
+          <attribute id="ProgressionType" type="uint8" value="0" />
+          <attribute id="Selectors" type="LSString" value="SelectSkills(6a4f8598-3a17-42d1-beac-d7ced582bafa,2);SelectAbilityBonus(b9149c8e-52c8-46e5-9cb6-fc39301c05fe,AbilityBonus,2,1)" />
+          <attribute id="TableUUID" type="guid" value="1999f30f-1417-4ce5-a6a3-0ed91227f201" />
+          <attribute id="UUID" type="guid" value="550f0fe4-9780-4f15-a6cc-93cbb3c16e7f" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="5" />
+          <attribute id="Name" type="LSString" value="RO_Novice" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_Novice_FirstAid_L5" />
+          <attribute id="PassivesRemoved" type="LSString" value="RO_Novice_FirstAid_L1" />
+          <attribute id="ProgressionType" type="uint8" value="0" />
+          <attribute id="TableUUID" type="guid" value="5f3f2b2d-56b6-4a78-a9da-12959846364a" />
+          <attribute id="UUID" type="guid" value="9d506fd5-8d27-45df-aaca-fbecf18558c0" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="9" />
+          <attribute id="Name" type="LSString" value="RO_Novice" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_Novice_FirstAid_L9" />
+          <attribute id="PassivesRemoved" type="LSString" value="RO_Novice_FirstAid_L5" />
+          <attribute id="ProgressionType" type="uint8" value="0" />
+          <attribute id="TableUUID" type="guid" value="7681f7dc-b2fd-4c1c-a1a5-7d9a1d4e5f66" />
+          <attribute id="UUID" type="guid" value="c8764683-f0a0-4f86-a923-516d4f5fd477" />
+        </node>
+      </children>
+    </node>
+  </region>
+</save>
+

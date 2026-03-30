@@ -11,8 +11,8 @@
   "PAK": {
     "ExtractInputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Baldurs Gate 3\\Data\\Shared.pak",
     "ExtractOutputPath": "D:\\Mods for BG3\\ragnarok-online-mod\\Reference\\Packages\\Shared",
-    "CreateInputPath": "D:\\Mods for BG3\\dragon-nest-bg3-mod\\Mod_MVP",
-    "CreateOutputPath": "D:\\Mods for BG3\\dragon-nest-bg3-mod\\Packages\\DragonNestMod.pak",
+    "CreateInputPath": "D:\\Mods for BG3\\ragnarok-online-mod\\RagnarokOnlineMod",
+    "CreateOutputPath": "D:\\Mods for BG3\\ragnarok-online-mod\\Package\\RagnarokOnlineMod.pak",
     "CreatePackageVersion": 0,
     "CreatePackageCompression": 3
   },

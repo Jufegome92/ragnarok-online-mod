@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<contentList>
+    <content contentuid="h1cc9cdc3g6c5fg404dg935bgbe20d9c6a491" version="1">Novice</content>
+    <content contentuid="h9b984a65g31d3g4356g8f28g184cc61a7f6e" version="1">A soul reborn out of sequence, the Novice remembers fragments of another life: the training fields of Rune-Midgard, the climb from first job to second, and the solemn rite before the Valkyrie. Stripped of title, coin, and relic, they awaken in the Forgotten Realms with nothing but discipline and instinct. Their old techniques survive as rough muscle memory, but this world is different, crueler, and stranger. Every battle is a lesson, every companion a new chapter, and every choice a step toward becoming something greater than they were before.</content>
+    <content contentuid="h6c8b0f88g7a11g4d89ga0f3g2487d8273a91" version="1">Mana Points</content>
+    <content contentuid="h53b2d7eag2ce6g4fcbgbda6g06dfcf2b1ef1" version="1">The spiritual reserve used to perform Ragnarok-style techniques.</content>
+    <content contentuid="h34d9a571g0bafg4bc9ga8f8g3bc2c4c7c6b4" version="1">Not enough Mana Points.</content>
+    <content contentuid="h0fb6ce6fg2573g43f5g9a49g3cf9673e5f74" version="1">Basic Skill</content>
+    <content contentuid="ha0dbfd9bg1af9g4652ga529g756f7d2d4a09" version="1">Novice training from Rune-Midgard. Grants proficiency with Daggers, Shortswords, Clubs, and Shortbows.</content>
+    <content contentuid="h2919e73bgf0e6g4ab3ga99ag8d9f0e1f0d11" version="1">Play Dead</content>
+    <content contentuid="h7f9c6d47ga5f8g4666g8d8bg0e61f87f7c9a" version="1">Feign death for 4 turns. Costs 3 Mana Points. Usable once per Short Rest.</content>    <content contentuid="h9043b4f8g2a9ag4f6bga53eg445ab19db64a" version="1">First Aid</content>
+    <content contentuid="ha52f99d8g6f17g4f57gb3f8g52e9ddf0e3c6" version="1">A close-range emergency treatment. Heal a creature for 1d4 Hit Points. Costs 2 Mana Points.</content>
+    <content contentuid="h3c68f95bg0d5dg4d00g9fd3g7de36a35fb89" version="1">First Aid</content>
+    <content contentuid="h6179f434g7d6bg49e3ga44bg56e4572c08fd" version="1">Unlocks First Aid (1d4 healing).</content>
+    <content contentuid="h9f622d35g0533g4854gb2f7g64d2f2f7e9d2" version="1">First Aid improves to 1d6 healing at Novice level 5.</content>
+    <content contentuid="h4f08d5a8g8b0fg4a0ag93bbgfb8a8f7735af" version="1">First Aid improves to 1d8 healing at Novice level 9.</content>
+    <content contentuid="h8f1f6b0eg9a07g4c31gb7a6g29eecf7a2ad2" version="1">Valkyrie's Blessing</content>
+    <content contentuid="h1f53e0f4g4ea7g4689gaea2g5b832e0f1959" version="1">When you roll a 1 for an Attack Roll, Ability Check, or Saving Throw, reroll the die once and use the new result.</content>
+</contentList>
+
+
