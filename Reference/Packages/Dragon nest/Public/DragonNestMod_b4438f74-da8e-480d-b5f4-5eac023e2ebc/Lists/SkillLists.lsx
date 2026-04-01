@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="200"/>
+    <region id="SkillLists">
+        <node id="root">
+            <children>
+                <node id="SkillList">
+                    <attribute id="Name" type="FixedString" value="DNM Warrior Skill List"/>
+                    <attribute id="Skills" type="LSString" value="Athletics,Acrobatics,Intimidation,Survival"/>
+                    <attribute id="UUID" type="guid" value="d1e2f3a4-b5c6-789a-bcde-f01234567801"/>
+                </node>
+                <node id="SkillList">
+                    <attribute id="Name" type="FixedString" value="DNM Moonlord Expertise List"/>
+                    <attribute id="Skills" type="LSString" value="Athletics,Acrobatics,SleightOfHand,Stealth,Arcana,History,Investigation,Nature,Religion,AnimalHandling,Insight,Medicine,Perception,Survival,Deception,Intimidation,Performance,Persuasion"/>
+                    <attribute id="UUID" type="guid" value="e2f3a4b5-c6d7-89ab-cdef-012345678901"/>
+                </node>
+                <node id="SkillList">
+                    <attribute id="Name" type="FixedString" value="DNM Assassin Skill List"/>
+                    <attribute id="Skills" type="LSString" value="Acrobatics,Stealth,SleightOfHand,Perception"/>
+                    <attribute id="UUID" type="guid" value="a1b2c3d4-e5f6-4789-abcd-1234567890aa"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>
+

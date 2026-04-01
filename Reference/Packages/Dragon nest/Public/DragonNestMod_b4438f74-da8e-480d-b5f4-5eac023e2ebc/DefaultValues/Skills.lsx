@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="200"/>
+    <region id="DefaultValues">
+        <node id="root">
+            <children>
+                <node id="DefaultValue">
+                    <attribute id="Add" type="LSString" value="Athletics;Perception"/>
+                    <attribute id="Level" type="int32" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="02d6f7ce-29cc-4de9-bd61-56d348b4fd01"/>
+                    <attribute id="UUID" type="guid" value="d46e4118-d735-4fb0-aee5-8371807489af"/>
+                </node>
+                <node id="DefaultValue">
+                    <attribute id="Add" type="LSString" value="Arcana;Investigation"/>
+                    <attribute id="Level" type="int32" value="1"/>
+                    <attribute id="SelectorId" type="LSString" value="SkilledSkills"/>
+                    <attribute id="TableUUID" type="guid" value="b9c0d1e2-f3a4-5678-9abc-def012345601"/>
+                    <attribute id="UUID" type="guid" value="46783e9d-2345-4841-ac2d-06d9928d6db8"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

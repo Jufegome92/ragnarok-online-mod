@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="200"/>
+    <region id="ActionResourceDefinitions">
+        <node id="root">
+            <children>
+                <node id="ActionResourceDefinition">
+                    <attribute id="Description" type="TranslatedString" handle="h83b68dc7g7f2eg4728ga935g07bc4c348901" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h7d854728g4a95g4c7egad18g8eab4aef1201" version="1"/>
+                    <attribute id="Error" type="TranslatedString" handle="h9d4572f4g763ag4c3fg9cf4g58ac6bf51202" version="1"/>
+                    <attribute id="MaxLevel" type="uint32" value="0"/>
+                    <attribute id="Name" type="FixedString" value="DNM_DragonForce"/>
+                    <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+                    <attribute id="UUID" type="guid" value="a0696bc2-9f5d-4c6a-8b7a-3f1d5e0a7b2c"/>
+                </node>
+                <node id="ActionResourceDefinition">
+                    <attribute id="Description" type="TranslatedString" handle="h7c318f12g37f4g4e95gb8f6g0a7a37de4501" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h3bc1b5f6g7320g455dg9fefgb4f7ea2b5602" version="1"/>
+                    <attribute id="Error" type="TranslatedString" handle="h5fd8da91g5d70g4e4ag9ed2g89f575098603" version="1"/>
+                    <attribute id="MaxLevel" type="uint32" value="0"/>
+                    <attribute id="Name" type="FixedString" value="DNM_MagicEnergy"/>
+                    <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+                    <attribute id="UUID" type="guid" value="4ef7fe2e-cf0f-4b27-b3f8-9c1f98a278a3"/>
+                </node>                <node id="ActionResourceDefinition">
+                    <attribute id="Description" type="TranslatedString" handle="h5e9a8c22g4d3bg5a22gc02bg0c8b3d2e9902" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h4d8f7b11g3c2ag4f11gb91ag9b7a2c1d8801" version="1"/>
+                    <attribute id="Error" type="TranslatedString" handle="h6fab9d33g5e4cg6b33gd13cg1d9c4e3faa03" version="1"/>
+                    <attribute id="MaxLevel" type="uint32" value="0"/>
+                    <attribute id="Name" type="FixedString" value="DNM_BattleExertion"/>
+                    <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+                    <attribute id="UUID" type="guid" value="d94f0c92-7f4e-43d8-8b42-2f4b5789f2a1"/>
+                </node>            </children>
+        </node>
+    </region>
+</save>

@@ -1,0 +1,14 @@
+Vulture's Eye legacy long-range anti-disadvantage logic (archived)
+Date: 2026-03-31
+
+Original passive id:
+RO_Archer_VulturesEye_LongRangeNoDisadv
+
+Original boosts used in active gameplay before SE migration:
+IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(10)):Advantage(AttackRoll);
+IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(10)):Advantage(AttackRoll);
+IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(10)):Advantage(AttackTarget);
+IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(10)):Advantage(AttackTarget)
+
+Later temporary tweak changed threshold from 10 -> 18 to reduce false advantage near 11-12m.
+This file exists only as backup reference.

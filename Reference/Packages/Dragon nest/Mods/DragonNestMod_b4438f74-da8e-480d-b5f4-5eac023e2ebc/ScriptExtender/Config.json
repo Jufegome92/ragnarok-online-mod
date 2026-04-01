@@ -1,0 +1,7 @@
+{
+    "RequiredVersion": 5,
+    "ModTable": "DragonNestMod_b4438f74-da8e-480d-b5f4-5eac023e2ebc",
+    "FeatureFlags": [
+        "Lua"
+    ]
+}

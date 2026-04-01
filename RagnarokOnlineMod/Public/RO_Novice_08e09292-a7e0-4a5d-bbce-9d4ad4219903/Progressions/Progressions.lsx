@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <save>
   <version major="4" minor="8" revision="0" build="200" />
   <region id="Progressions">
@@ -10,7 +10,7 @@
           <attribute id="Name" type="LSString" value="RO_Novice" />
           <attribute id="PassivesAdded" type="LSString" value="RO_Novice_BasicSkill;RO_Novice_FirstAid_L1;RO_Novice_ValkyriesBlessing" />
           <attribute id="ProgressionType" type="uint8" value="0" />
-          <attribute id="Selectors" type="LSString" value="SelectSkills(6a4f8598-3a17-42d1-beac-d7ced582bafa,2);SelectAbilityBonus(b9149c8e-52c8-46e5-9cb6-fc39301c05fe,AbilityBonus,2,1)" />
+          <attribute id="Selectors" type="LSString" value="SelectSkills(f974ebd6-3725-4b90-bb5c-2b647d41615d,2);SelectAbilityBonus(b9149c8e-52c8-46e5-9cb6-fc39301c05fe,AbilityBonus,2,1)" />
           <attribute id="TableUUID" type="guid" value="1999f30f-1417-4ce5-a6a3-0ed91227f201" />
           <attribute id="UUID" type="guid" value="550f0fe4-9780-4f15-a6cc-93cbb3c16e7f" />
         </node>
@@ -109,12 +109,12 @@
         </node>
 
         <node id="Progression">
-          <attribute id="Boosts" type="LSString" value="ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Wisdom);Proficiency(LightArmor);Proficiency(Longbows);Proficiency(Crossbows);Proficiency(Perception);Proficiency(Survival)" />
+          <attribute id="Boosts" type="LSString" value="ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Wisdom);Proficiency(LightArmor);Proficiency(Longbows);Proficiency(HandCrossbows);Proficiency(LightCrossbows);Proficiency(HeavyCrossbows);ProficiencyBonus(Skill,Perception);ProficiencyBonus(Skill,Survival)" />
           <attribute id="Level" type="uint8" value="2" />
           <attribute id="Name" type="LSString" value="RO_Archer" />
-          <attribute id="PassivesAdded" type="LSString" value="RO_MP_Formula_WIS" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_MP_Formula_WIS;RO_Archer_OwlsEye;RO_Archer_VulturesEye;RO_Archer_DoubleStrafe" />
           <attribute id="ProgressionType" type="uint8" value="1" />
-          <attribute id="Selectors" type="LSString" value="SelectSkillsExpertise(6a4f8598-3a17-42d1-beac-d7ced582bafa,1)" />
+          <attribute id="Selectors" type="LSString" value="SelectSkillsExpertise(f974ebd6-3725-4b90-bb5c-2b647d41615d,1)" />
           <attribute id="TableUUID" type="guid" value="24de30d5-1bfb-4719-9dc0-cf84489b8de4" />
           <attribute id="UUID" type="guid" value="5b08dda4-26cd-49a3-9e2f-237e89f68d17" />
         </node>
@@ -135,6 +135,8 @@
         <node id="Progression">
           <attribute id="Level" type="uint8" value="5" />
           <attribute id="Name" type="LSString" value="RO_Archer" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_Archer_VulturesEye_L5;RO_Archer_DoubleStrafe_L5" />
+          <attribute id="PassivesRemoved" type="LSString" value="RO_Archer_VulturesEye;RO_Archer_DoubleStrafe" />
           <attribute id="ProgressionType" type="uint8" value="1" />
           <attribute id="TableUUID" type="guid" value="24de30d5-1bfb-4719-9dc0-cf84489b8de4" />
           <attribute id="UUID" type="guid" value="b0f0c98f-c4dd-4f02-8ea3-11fd72f563f6" />
@@ -163,6 +165,8 @@
         <node id="Progression">
           <attribute id="Level" type="uint8" value="9" />
           <attribute id="Name" type="LSString" value="RO_Archer" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_Archer_VulturesEye_L9;RO_Archer_DoubleStrafe_L9" />
+          <attribute id="PassivesRemoved" type="LSString" value="RO_Archer_VulturesEye_L5;RO_Archer_DoubleStrafe_L5" />
           <attribute id="ProgressionType" type="uint8" value="1" />
           <attribute id="TableUUID" type="guid" value="24de30d5-1bfb-4719-9dc0-cf84489b8de4" />
           <attribute id="UUID" type="guid" value="f085c9a2-fc83-4a89-8f35-feb77a7b27e3" />
@@ -184,6 +188,8 @@
         <node id="Progression">
           <attribute id="Level" type="uint8" value="12" />
           <attribute id="Name" type="LSString" value="RO_Archer" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_Archer_VulturesEye_L12;RO_Archer_DoubleStrafe_L12" />
+          <attribute id="PassivesRemoved" type="LSString" value="RO_Archer_VulturesEye_L9;RO_Archer_DoubleStrafe_L9" />
           <attribute id="ProgressionType" type="uint8" value="1" />
           <attribute id="TableUUID" type="guid" value="24de30d5-1bfb-4719-9dc0-cf84489b8de4" />
           <attribute id="UUID" type="guid" value="c29f3095-11a6-4128-9e86-b08ee29f830a" />
@@ -192,3 +198,8 @@
     </node>
   </region>
 </save>
+
+
+
+
+

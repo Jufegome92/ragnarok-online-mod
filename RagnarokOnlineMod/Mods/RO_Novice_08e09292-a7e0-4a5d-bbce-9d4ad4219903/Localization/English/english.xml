@@ -8,7 +8,8 @@
     <content contentuid="h0fb6ce6fg2573g43f5g9a49g3cf9673e5f74" version="1">Basic Skill</content>
     <content contentuid="ha0dbfd9bg1af9g4652ga529g756f7d2d4a09" version="1">Novice training from Rune-Midgard. Grants proficiency with Daggers, Shortswords, Clubs, and Shortbows.</content>
     <content contentuid="h2919e73bgf0e6g4ab3ga99ag8d9f0e1f0d11" version="1">Play Dead</content>
-    <content contentuid="h7f9c6d47ga5f8g4666g8d8bg0e61f87f7c9a" version="1">Feign death for 4 turns. Costs 3 Mana Points. Usable once per Short Rest.</content>    <content contentuid="h9043b4f8g2a9ag4f6bga53eg445ab19db64a" version="1">First Aid</content>
+    <content contentuid="h7f9c6d47ga5f8g4666g8d8bg0e61f87f7c9a" version="1">Feign death for 4 turns. Costs 3 Mana Points. Usable once per Short Rest.</content>
+    <content contentuid="h9043b4f8g2a9ag4f6bga53eg445ab19db64a" version="1">First Aid</content>
     <content contentuid="ha52f99d8g6f17g4f57gb3f8g52e9ddf0e3c6" version="1">A close-range emergency treatment. Heal a creature for 1d4 Hit Points. Costs 2 Mana Points.</content>
     <content contentuid="h3c68f95bg0d5dg4d00g9fd3g7de36a35fb89" version="1">First Aid</content>
     <content contentuid="h6179f434g7d6bg49e3ga44bg56e4572c08fd" version="1">Unlocks First Aid (1d4 healing).</content>
@@ -18,6 +19,29 @@
     <content contentuid="h1f53e0f4g4ea7g4689gaea2g5b832e0f1959" version="1">When you roll a 1 for an Attack Roll, Ability Check, or Saving Throw, reroll the die once and use the new result.</content>
     <content contentuid="h2fbc5968g91c6g4f67ga30ag58c3a2be1d10" version="1">Archer</content>
     <content contentuid="h5ce0e1f0g7f9dg4de4ga7f4g0dc7259fd8b9" version="1">A disciplined marksman path adapted from Rune-Midgard traditions. This first job establishes ranged fundamentals and uses Wisdom-based Mana growth.</content>
+    <content contentuid="h3a1c7e9bg2d4fg4b8ag6c2eg5f3a1b9e7d2" version="1">Owl's Eye</content>
+    <content contentuid="h4b2d8f0cg3e5ag5c9bg7d3fg6a4b2c0f8e3" version="1">Unlocks the Owl's Eye precision stance. Spend 1 Mana Point as a Bonus Action to gain +2 to attack rolls and reduce your critical hit threshold by 1.</content>
+    <content contentuid="h5c3e9a1dg4f6bg6d0cg8e4ag7b5c3d1a9f4" version="1">Adopt a precision stance, reading the target's movement for more accurate shots. Gain +2 to attack rolls and reduce your critical hit threshold by 1. Costs 1 Mana Point.</content>
+    <content contentuid="h6d4f0b2eg5a7cg7e1dg9f5bg8c6d4e2b0a5" version="1">Precision stance active. +2 to attack rolls. Critical hits on a 19 or 20.</content>
+    <content contentuid="h7e5a1c3fg6b8dg8f2eg0a6cg9d7e5f3c1b6" version="1">Owl's Eye</content>
+    <content contentuid="h8f6b2d4ag7c9eg9a3fg1b7dg0e8f6a4d2c7" version="1">Leave your Owl's Eye precision stance.</content>
+    <content contentuid="h9b57c8d1ga332g4d98ga4c7g34ea52ac7295" version="1">Vulture's Eye</content>
+    <content contentuid="h932286c6g5c5eg4a77gb3d0gd4e35ab9d6c9" version="1">Unlocks the Vulture's Eye pressure stance. Spend 1 Mana Point as a Bonus Action to ignore point-blank disadvantage with crossbows and deal +1d4 weapon damage against targets beyond 10m.</content>
+    <content contentuid="h82765052ge6e8g40f6ga992g7c006980033d" version="1">Adopt a long-range pressure stance focused on distant targets. Ignore point-blank disadvantage with crossbows and deal +1d4 weapon damage to targets beyond 10m. Costs 1 Mana Point.</content>
+    <content contentuid="h7d4da68bg4f65g43f8g8224g7c4f969e2d7b" version="1">Long-range pressure stance active. Ignore point-blank disadvantage with crossbows and deal +1d4 weapon damage beyond 10m.</content>
+    <content contentuid="h4f77e53dg2e95g4f4ag9a08g80d3d5c9ab0f" version="1">Vulture's Eye</content>
+    <content contentuid="hfb6cd4ebg8d61g4cf3g8f0bgf6d4f14db93a" version="1">Leave your Vulture's Eye pressure stance.</content>
+    <content contentuid="h0d6f7197g7749g4f0ag8f89g218d13d8a11e" version="1">Double Strafe</content>
+    <content contentuid="h5f6597e2g8dbag4a53gb534ga7486f78f652" version="1">Unlocks Double Strafe. Fire two rapid shots at the same target using your ranged weapon. Costs 2 Mana Points.</content>
+    <content contentuid="h0e6de66cg3eb7g4a7bg996eg0422ec22a9c0" version="1">Fire two quick shots at the same target. Each hit deals normal ranged weapon damage and applies weapon on-hit effects. Costs 2 Mana Points.</content>
+    <content contentuid="h95e85272gcaadg45eagb811g90ad58cb5415" version="1">Fire two quick shots at the same target. Each hit deals normal ranged weapon damage plus 1d4 bonus damage. Costs 2 Mana Points.</content>
+    <content contentuid="hbc2cf4ebg0307g4d8bg9f5dg6f2d89f5258f" version="1">Fire two quick shots at the same target. Each hit deals normal ranged weapon damage plus 1d6 bonus damage. Costs 2 Mana Points.</content>
+    <content contentuid="ha6efbc95gf352g4379ga5ceg3dd9ba2f009b" version="1">Fire two quick shots at the same target. Each hit deals normal ranged weapon damage plus 1d8 bonus damage. Costs 2 Mana Points.</content>
+    <content contentuid="h1dbf1cf5g4aa7g4a4fgb4f4g547d59d80c43" version="1">Double Strafe improves to +1d4 bonus damage per hit at Archer level 5.</content>
+    <content contentuid="ha170df07g05f8g43bagb3aag4cd7f386e09e" version="1">Double Strafe improves to +1d6 bonus damage per hit at Archer level 9.</content>
+    <content contentuid="h89a0c03eg4a3ag4f60g8f66gd74ad7f6f3ef" version="1">Double Strafe improves to +1d8 bonus damage per hit at Archer level 12.</content>
 </contentList>
+
+
 
 

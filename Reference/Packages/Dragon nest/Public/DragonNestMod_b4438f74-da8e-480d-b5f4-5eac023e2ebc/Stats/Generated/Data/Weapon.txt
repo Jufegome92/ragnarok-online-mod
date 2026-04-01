@@ -1,0 +1,30 @@
+﻿// ============================================================
+// Dragon Nest Mod - Shurikens
+// Clase base: hereda de WPN_HandCrossbow (usa su modelo/RootTemplate)
+// Si en el futuro se quiere otro modelo, sobreescribir RootTemplate
+// con el UUID del item template deseado.
+// ============================================================
+
+new entry "WPN_DNM_Shuriken"
+type "Weapon"
+using "WPN_HandCrossbow"
+data "Damage Type" "Piercing"
+data "Damage" "1d4"
+data "Proficiency Group" "HandCrossbows"
+data "Weight" "0.3"
+
+new entry "WPN_DNM_Shuriken_1"
+type "Weapon"
+using "WPN_DNM_Shuriken"
+data "ValueLevel" "3"
+data "Rarity" "Uncommon"
+data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical)"
+
+new entry "WPN_DNM_Shuriken_2"
+type "Weapon"
+using "WPN_DNM_Shuriken"
+data "ValueLevel" "6"
+data "Rarity" "Rare"
+data "DefaultBoosts" "WeaponEnchantment(2);WeaponProperty(Magical)"
+
+

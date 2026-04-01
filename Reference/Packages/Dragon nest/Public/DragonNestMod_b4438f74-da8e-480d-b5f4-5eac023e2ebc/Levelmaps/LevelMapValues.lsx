@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+  <version major="4" minor="0" revision="9" build="328"/>
+  <region id="LevelMapValues">
+    <node id="root">
+      <children>
+        <node id="LevelMapSeries">
+          <attribute id="Level1" type="LSString" value="1d4"/>
+          <attribute id="Level2" type="LSString" value="1d4"/>
+          <attribute id="Level3" type="LSString" value="1d6"/>
+          <attribute id="Level4" type="LSString" value="1d6"/>
+          <attribute id="Level5" type="LSString" value="1d6"/>
+          <attribute id="Level6" type="LSString" value="1d8"/>
+          <attribute id="Level7" type="LSString" value="1d8"/>
+          <attribute id="Level8" type="LSString" value="1d8"/>
+          <attribute id="Level9" type="LSString" value="1d10"/>
+          <attribute id="Level10" type="LSString" value="1d10"/>
+          <attribute id="Level11" type="LSString" value="1d10"/>
+          <attribute id="Level12" type="LSString" value="1d12"/>
+          <attribute id="Name" type="FixedString" value="DNM_ReaperMartialArts"/>
+          <attribute id="PreferredClassUUID" type="guid" value="f4a6c8e0-b1d2-43f4-a5b6-c7d8e9f0a1b3"/>
+          <attribute id="UUID" type="guid" value="a96bf00e-d5dd-4691-968e-5f34d64a3e8d"/>
+        </node>
+      </children>
+    </node>
+  </region>
+</save>

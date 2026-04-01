@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+    <content contentuid="h410c2816g5d7d4d75g8df5gb4a0df6c4f01" version="1">Warrior</content>
+    <content contentuid="h8aef8ec8g03cdg4b49g8ce1g5d79eb9c1f41" version="1">A Dragon Nest Warrior, a powerful melee combatant who masters both physical and magical sword techniques.</content>
+    <content contentuid="hc6d3a1b4g5e6f47a8gb901gc2d3e4f567890" version="1">Warrior Discipline</content>
+    <content contentuid="ha9b0c1d2ge3f4g5a6bg7c8dg9e0f12345678" version="1">Moonlord</content>
+    <content contentuid="hb8c9d0e1g2f3g4a5bg6c7dg8e9f01234567" version="1">An Intelligence-based sword mage who channels moonlight into devastating blade techniques and radiant beam attacks.</content>
+    <content contentuid="h1f7d8f3ag2c4bg4f8fg9b28g1bc3c7d9e101" version="1">Warrior Training</content>
+    <content contentuid="h2a8c9d4eg3f5ag40a9gb71ag2de4f8a0b202" version="1">Grants Light Armor and Medium Armor proficiency.</content>
+    <content contentuid="h3b9d0e5fg4a6bg41b0gc82bg3ef5a9b1c303" version="1">Moonlord Training</content>
+    <content contentuid="h4cad1f60g5b7cg42c1gd93cg4f06bac2d404" version="1">Grants sword techniques and scholarly discipline.</content>
+    <content contentuid="h5abbb4bbg8ce4g4ef6ga31cg53f1d8280c51" version="1">Impact Punch</content>
+    <content contentuid="h890f5a2dg6c7cg4ec0gaaf8g1f2d59c48a62" version="1">Strike with a swift empowered punch as a Bonus Action. This attack uses unarmed melee scaling and gains extra damage rolls at levels 5 and 9.</content>
+    <content contentuid="h7d854728g4a95g4c7egad18g8eab4aef1201" version="1">Dragon Force</content>
+    <content contentuid="h83b68dc7g7f2eg4728ga935g07bc4c348901" version="1">A Moonlord resource equal to Intelligence modifier multiplied by class level. Replenishes on Long Rest.</content>
+    <content contentuid="h9d4572f4g763ag4c3fg9cf4g58ac6bf51202" version="1">Not enough Dragon Force.</content>
+    <content contentuid="h1e1264d8g7069g4f0egb2c6g4bcb03b71303" version="1">Dragon Force Control</content>
+    <content contentuid="h0f8be6e3g50f3g42dbg8f22ga8f63a686404" version="1">Technical passive used by Script Extender to calculate Dragon Force.</content>
+    <content contentuid="h6c4f7d12g3a5bg4b92g8d1agf0e3c7b4a111" version="1">Blade Ward</content>
+    <content contentuid="h7d5e8f23g4b6cg4ca3g9e2bg0f1d4c8e5b222" version="1">Ward yourself against weapon blows for 3 turns. Costs 1 Dragon Force and uses a Bonus Action.</content>
+    <content contentuid="h3bc1b5f6g7320g455dg9fefgb4f7ea2b5602" version="1">Magic Energy</content>
+    <content contentuid="h7c318f12g37f4g4e95gb8f6g0a7a37de4501" version="1">A Moonlord combat resource. Maximum 6 at levels 1-4, 8 at levels 5-8, and 10 at level 9+. Refills to full when combat starts and resets after combat.</content>
+    <content contentuid="h5fd8da91g5d70g4e4ag9ed2g89f575098603" version="1">Not enough Magic Energy.</content>
+    <content contentuid="h7aa06e8bgd04ag4425gb423g7cc3b1617704" version="1">Magic Energy Control</content>
+    <content contentuid="h33d5f8e2gc0d2g4bffg9f6agf4ea1d6df705" version="1">Technical passive used by Script Extender to manage Magic Energy.</content>
+    <content contentuid="h6a5c2ee1g7a43g4bc8g8a55g5ea0ad7d8806" version="1">Impact Wave</content>
+    <content contentuid="h2e9c5c9ag2bcbg41b8g9e15gaf9257469d07" version="1">Release a narrow shockwave with your weapon. Creatures in the wave make a Dexterity save, taking weapon damage on a failed save. Costs 1 Battle Exertion.</content>
+    <content contentuid="h4d8f7b11g3c2ag4f11gb91ag9b7a2c1d8801" version="1">Battle Exertion</content>
+    <content contentuid="h5e9a8c22g4d3bg5a22gc02bg0c8b3d2e9902" version="1">Martial exertion used for advanced combat actions. Maximum equals proficiency bonus plus subclass spellcasting ability modifier. Refills to full when combat starts.</content>
+    <content contentuid="h6fab9d33g5e4cg6b33gd13cg1d9c4e3faa03" version="1">Not enough Battle Exertion.</content>
+    <content contentuid="h7abc0e44g6f5dg7c44ge24dg2e0d5f4abb04" version="1">Battle Exertion Control</content>
+    <content contentuid="h8bcd1f55g7a6eg8d55gf35eg3f1e6a5bcc05" version="1">Technical passive used by Script Extender to manage Battle Exertion.</content>
+    <content contentuid="h9a1f7c44g3d91g4f8bg9c4fg1f83c4a7d211" version="1">Moonlight Splitter</content>
+    <content contentuid="h2f4be601g90d4g4d2eg857eg6ea4c8c9f322" version="1">Launch 3 moonlight slashes. Each slash makes its own attack roll and deals weapon damage. Damage scales to 2 weapon rolls at level 5 and 3 weapon rolls at level 9. Costs 1 Battle Exertion.</content>
+    <content contentuid="h1d765c8cg31a6g49b2g8f5cg3ac9db6f0441" version="1">Moonlight Splitter accuracy penalty: -3 at levels 1-4, -2 at levels 5-8, and -1 at level 9+.</content>
+    <content contentuid="h3d7b9a1gc2e3g44f5ga0b1gc2d3e4f5a600" version="1">Assassin</content>
+    <content contentuid="h4e8a1c2gd3b4g45f6ga1b2gc3d4e5f6a701" version="1">A precise martial striker that relies on dexterity, stealth, and surgical timing.</content>
+    <content contentuid="h5f9b2d3ge4c5g46f7gb2c3gd4e5f6a7b802" version="1">Assassin Discipline</content>
+    <content contentuid="h2c6f8a1gb9d34g4f82gb11ag6d3e7a2b9c01" version="1">Assassin Training</content>
+    <content contentuid="h3d7a9b2gc0e45g5093gc22bg7e4f8b3cad02" version="1">Grants Light Armor proficiency.</content>
+    <content contentuid="h7b2e3f4ga5c6g48d9ge4f5ga6b7c8d9e014" version="1">Reaper</content>
+    <content contentuid="h6a1d2e3gf4b5g47c8gd3e4gf5a6b7c8d903" version="1">A weaponless assassin path that channels grim force through body control and disciplined will.</content>
+    <content contentuid="h8c3f4a5gb6d7g49e0gf5a6gb7c8d9e0f125" version="1">Reaper Training</content>
+    <content contentuid="h9d4a5b6gc7e8g50f1ga6b7gc8d9e0f1a236" version="1">Grants Deception and Insight proficiency.</content>
+    <content contentuid="ha0e5b6c7gd8f9g51a2gb7c8gd9e0f1a2b347" version="1">Reaper Dragon Force Control</content>
+    <content contentuid="hb1f6c7d8ge9a0g62b3gc8d9ge0f1a2b3c458" version="1">Technical passive used by Script Extender to calculate Dragon Force for Reaper.</content>
+    <content contentuid="hc2a7d8e9gf0b1g73c4gd9e0gf1a2b3c4d569" version="1">Reaper Battle Exertion Control</content>
+    <content contentuid="hd3b8e9f0ga1c2g84d5ge0f1ga2b3c4d5e670" version="1">Technical passive used by Script Extender to manage Battle Exertion for Reaper.</content>
+    <content contentuid="h4e62a8c1g91d4g4f2bg8aa4g7f2a9b6c9d10" version="1">Piercing Star</content>
+    <content contentuid="h5f73b9d2ga2e5g503cg9bb5g8a3bac7dae21" version="1">Launch a razor-thin piercing wave in a straight line. Uses unarmed attack scaling, costs 1 Battle Exertion, and gains extra damage rolls at levels 5 and 9.</content>
+    <content contentuid="h6a84c1e3gb4d6g4f26ga9d2g8f4bc0d7e532" version="1">Barrage</content>
+    <content contentuid="h7b95d2f4gc5e7g5037gbae3g9g5cd1e8f643" version="1">Strike the same target with a rapid 3-hit melee barrage. Costs 1 Battle Exertion and scales at levels 5 and 9.</content>
+</contentList>
+
+
+
+
+
+
+
+
+

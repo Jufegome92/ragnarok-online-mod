@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+  <version major="4" minor="8" revision="0" build="200" />
+  <region id="Progressions">
+    <node id="root">
+      <children>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="1" />
+          <attribute id="Name" type="LSString" value="DNM_Warrior" />
+          <attribute id="PassivesAdded" type="LSString" value="DNM_Warrior_Training" />
+          <attribute id="ProgressionType" type="uint8" value="0" />
+          <attribute id="Selectors" type="LSString" value="SelectSkills(d1e2f3a4-b5c6-789a-bcde-f01234567801,1);SelectAbilityBonus(b9149c8e-52c8-46e5-9cb6-fc39301c05fe,AbilityBonus,2,1)" />
+          <attribute id="TableUUID" type="guid" value="02d6f7ce-29cc-4de9-bd61-56d348b4fd01" />
+          <attribute id="UUID" type="guid" value="78c5fa1a-3d33-4c8f-89ea-ec5c2e7e4301" />
+          <children>
+            <node id="SubClasses">
+              <children>
+                <node id="SubClass">
+                  <attribute id="Object" type="guid" value="a8b9c0d1-e2f3-4567-89ab-cdef01234501" />
+                </node>
+              </children>
+            </node>
+          </children>
+        </node>
+
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="3" />
+          <attribute id="Name" type="LSString" value="DNM_Warrior" />
+          <attribute id="ProgressionType" type="uint8" value="0" />
+          <attribute id="Selectors" type="LSString" value="AddSpells(5a3e2c77-9b3a-4a9e-91cc-1d38d6b2f4a7)" />
+          <attribute id="TableUUID" type="guid" value="2f53c9a4-4f09-4db2-a0d7-5fdb5da3e16f" />
+          <attribute id="UUID" type="guid" value="f1787f3d-8e4a-4d58-96c9-33519fe5b442" />
+        </node>
+
+        <node id="Progression">
+          <attribute id="Boosts" type="LSString" value="ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThrow,Intelligence)" />
+          <attribute id="Level" type="uint8" value="1" />
+          <attribute id="Name" type="LSString" value="DNM_Moonlord" />
+          <attribute id="PassivesAdded" type="LSString" value="DNM_Moonlord_Training;DNM_Moonlord_DragonForce;DNM_Moonlord_BattleExertion;DNM_MoonlightSplitter_Penalty_3" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="Selectors" type="LSString" value="SelectSkillsExpertise(e2f3a4b5-c6d7-89ab-cdef-012345678901,1);AddSpells(7b0f0aa5-8c40-44e5-a9ae-3917c5a0d8d1)" />
+          <attribute id="TableUUID" type="guid" value="b9c0d1e2-f3a4-5678-9abc-def012345601" />
+          <attribute id="UUID" type="guid" value="c0d1e2f3-a4b5-6789-abcd-ef0123456701" />
+        </node>
+
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="5" />
+          <attribute id="Name" type="LSString" value="DNM_Moonlord" />
+          <attribute id="PassivesAdded" type="LSString" value="DNM_MoonlightSplitter_Penalty_2" />
+          <attribute id="PassivesRemoved" type="LSString" value="DNM_MoonlightSplitter_Penalty_3" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="fd9e4ae6-31d4-4ce0-9b7d-7a558f07f553" />
+          <attribute id="UUID" type="guid" value="f0a2e2bb-43e2-4f27-a2a2-7af149048f14" />
+        </node>
+
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="9" />
+          <attribute id="Name" type="LSString" value="DNM_Moonlord" />
+          <attribute id="PassivesAdded" type="LSString" value="DNM_MoonlightSplitter_Penalty_1" />
+          <attribute id="PassivesRemoved" type="LSString" value="DNM_MoonlightSplitter_Penalty_2" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="8bc09ee6-7988-47f5-8f6f-5251949f836e" />
+          <attribute id="UUID" type="guid" value="3dc9876d-4fe8-493e-a6c0-661f1ac2aa00" />
+        </node>
+
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="1" />
+          <attribute id="Name" type="LSString" value="DNM_Assassin" />
+          <attribute id="PassivesAdded" type="LSString" value="DNM_Assassin_Training" />
+          <attribute id="ProgressionType" type="uint8" value="0" />
+          <attribute id="Selectors" type="LSString" value="SelectSkills(a1b2c3d4-e5f6-4789-abcd-1234567890aa,2);SelectSkillsExpertise(e2f3a4b5-c6d7-89ab-cdef-012345678901,1);SelectAbilityBonus(b9149c8e-52c8-46e5-9cb6-fc39301c05fe,AbilityBonus,2,1)" />
+          <attribute id="TableUUID" type="guid" value="d2f4a6c8-e0b1-42d3-94f5-a6b7c8d9e0f1" />
+          <attribute id="UUID" type="guid" value="e3a5c7d9-f1b2-43e4-a5b6-c7d8e9f0a1b2" />
+          <children>
+            <node id="SubClasses">
+              <children>
+                <node id="SubClass">
+                  <attribute id="Object" type="guid" value="b5c7d9e1-f2a3-44b5-c6d7-e8f901a2b3c4" />
+                </node>
+              </children>
+            </node>
+          </children>
+        </node>
+
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="1" />
+          <attribute id="Name" type="LSString" value="DNM_Reaper" />
+          <attribute id="PassivesAdded" type="LSString" value="DNM_Reaper_Training;DNM_Reaper_DragonForce;DNM_Reaper_BattleExertion;DNM_Reaper_MartialArts_UnarmedDamage;DNM_Reaper_BarragePenalty_1" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="c6d8e0f2-a3b4-45c6-d7e8-f901a2b3c4d5" />
+          <attribute id="UUID" type="guid" value="d7e9f1a3-b4c5-46d7-e8f9-01a2b3c4d5e6" />
+        </node>
+
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="5" />
+          <attribute id="Name" type="LSString" value="DNM_Reaper" />
+          <attribute id="PassivesAdded" type="LSString" value="DNM_Reaper_BarragePenalty_5" />
+          <attribute id="PassivesRemoved" type="LSString" value="DNM_Reaper_BarragePenalty_1" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="18d37b70-52fd-4723-933c-615f899b26ad" />
+          <attribute id="UUID" type="guid" value="9199e131-9423-434d-a44d-62f845b4c8ef" />
+        </node>
+
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="9" />
+          <attribute id="Name" type="LSString" value="DNM_Reaper" />
+          <attribute id="PassivesAdded" type="LSString" value="DNM_Reaper_BarragePenalty_9" />
+          <attribute id="PassivesRemoved" type="LSString" value="DNM_Reaper_BarragePenalty_5" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="8a1117e3-aab4-4f5d-9719-36d4b82614ef" />
+          <attribute id="UUID" type="guid" value="472f5f60-035e-4b2b-8d7f-66b6438d9eb1" />
+        </node>
+      </children>
+    </node>
+  </region>
+</save>

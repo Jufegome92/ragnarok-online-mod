@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="200"/>
+    <region id="ClassDescriptions">
+        <node id="root">
+            <children>
+
+                <!-- Warrior (base class) -->
+                <node id="ClassDescription">
+                    <attribute id="BaseHp" type="int32" value="10"/>
+                    <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8"/>
+                    <attribute id="ClassEquipment" type="FixedString" value="EQP_CC_Fighter"/>
+                    <attribute id="ClassHotbarColumns" type="int32" value="5"/>
+                    <attribute id="CommonHotbarColumns" type="int32" value="9"/>
+                    <attribute id="Description" type="TranslatedString" handle="h8aef8ec8g03cdg4b49g8ce1g5d79eb9c1f41" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h410c2816g5d7d4d75g8df5gb4a0df6c4f01" version="1"/>
+                    <attribute id="HpPerLevel" type="int32" value="6"/>
+                    <attribute id="ItemsHotbarColumns" type="int32" value="2"/>
+                    <attribute id="LearningStrategy" type="uint8" value="1"/>
+                    <attribute id="Name" type="FixedString" value="DNM_Warrior"/>
+                    <attribute id="PrimaryAbility" type="uint8" value="1"/>
+                    <attribute id="ProgressionTableUUID" type="guid" value="02d6f7ce-29cc-4de9-bd61-56d348b4fd01"/>
+                    <attribute id="SubclassTitle" type="TranslatedString" handle="hc6d3a1b4g5e6f47a8gb901gc2d3e4f567890" version="1"/>
+                    <attribute id="SoundClassType" type="FixedString" value="Fighter"/>
+                    <attribute id="SpellCastingAbility" type="uint8" value="0"/>
+                    <attribute id="UUID" type="guid" value="f3efbd1a-3fcb-4a3e-9d4e-cda5c0f0b101"/>
+                    <children>
+                        <node id="Tags">
+                            <attribute id="Object" type="guid" value="1ae7017c-4884-4a43-bc4a-742fa0d201c0"/>
+                        </node>
+                    </children>
+                </node>
+
+                <!-- Moonlord (subclass of Warrior) -->
+                <node id="ClassDescription">
+                    <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8"/>
+                    <attribute id="Description" type="TranslatedString" handle="hb8c9d0e1g2f3g4a5bg6c7dg8e9f01234567" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="ha9b0c1d2ge3f4g5a6bg7c8dg9e0f12345678" version="1"/>
+                    <attribute id="LearningStrategy" type="uint8" value="1"/>
+                    <attribute id="Name" type="FixedString" value="DNM_Moonlord"/>
+                    <attribute id="ParentGuid" type="guid" value="f3efbd1a-3fcb-4a3e-9d4e-cda5c0f0b101"/>
+                    <attribute id="PrimaryAbility" type="uint8" value="4"/>
+                    <attribute id="ProgressionTableUUID" type="guid" value="b9c0d1e2-f3a4-5678-9abc-def012345601"/>
+                    <attribute id="ShortName" type="TranslatedString" handle="ha9b0c1d2ge3f4g5a6bg7c8dg9e0f12345678" version="1"/>
+                    <attribute id="SoundClassType" type="FixedString" value="Fighter"/>
+                    <attribute id="SpellCastingAbility" type="uint8" value="4"/>
+                    <attribute id="UUID" type="guid" value="a8b9c0d1-e2f3-4567-89ab-cdef01234501"/>
+                </node>
+                <!-- Assassin (base class) -->
+                <node id="ClassDescription">
+                    <attribute id="BaseHp" type="int32" value="10"/>
+                    <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8"/>
+                    <attribute id="ClassEquipment" type="FixedString" value="EQP_CC_DNM_Assassin"/>
+                    <attribute id="ClassHotbarColumns" type="int32" value="5"/>
+                    <attribute id="CommonHotbarColumns" type="int32" value="9"/>
+                    <attribute id="Description" type="TranslatedString" handle="h4e8a1c2gd3b4g45f6ga1b2gc3d4e5f6a701" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h3d7b9a1gc2e3g44f5ga0b1gc2d3e4f5a600" version="1"/>
+                    <attribute id="HpPerLevel" type="int32" value="6"/>
+                    <attribute id="ItemsHotbarColumns" type="int32" value="2"/>
+                    <attribute id="LearningStrategy" type="uint8" value="1"/>
+                    <attribute id="Name" type="FixedString" value="DNM_Assassin"/>
+                    <attribute id="PrimaryAbility" type="uint8" value="2"/>
+                    <attribute id="ProgressionTableUUID" type="guid" value="d2f4a6c8-e0b1-42d3-94f5-a6b7c8d9e0f1"/>
+                    <attribute id="SubclassTitle" type="TranslatedString" handle="h5f9b2d3ge4c5g46f7gb2c3gd4e5f6a7b802" version="1"/>
+                    <attribute id="SoundClassType" type="FixedString" value="Rogue"/>
+                    <attribute id="SpellCastingAbility" type="uint8" value="0"/>
+                    <attribute id="UUID" type="guid" value="f4a6c8e0-b1d2-43f4-a5b6-c7d8e9f0a1b3"/>
+                    <children>
+                        <node id="Tags">
+                            <attribute id="Object" type="guid" value="1ae7017c-4884-4a43-bc4a-742fa0d201c0"/>
+                        </node>
+                    </children>
+                </node>
+                <!-- Reaper (subclass of Assassin) -->
+                <node id="ClassDescription">
+                    <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8"/>
+                    <attribute id="Description" type="TranslatedString" handle="h6a1d2e3gf4b5g47c8gd3e4gf5a6b7c8d903" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h7b2e3f4ga5c6g48d9ge4f5ga6b7c8d9e014" version="1"/>
+                    <attribute id="LearningStrategy" type="uint8" value="1"/>
+                    <attribute id="Name" type="FixedString" value="DNM_Reaper"/>
+                    <attribute id="ParentGuid" type="guid" value="f4a6c8e0-b1d2-43f4-a5b6-c7d8e9f0a1b3"/>
+                    <attribute id="PrimaryAbility" type="uint8" value="5"/>
+                    <attribute id="ProgressionTableUUID" type="guid" value="c6d8e0f2-a3b4-45c6-d7e8-f901a2b3c4d5"/>
+                    <attribute id="ShortName" type="TranslatedString" handle="h7b2e3f4ga5c6g48d9ge4f5ga6b7c8d9e014" version="1"/>
+                    <attribute id="SoundClassType" type="FixedString" value="Rogue"/>
+                    <attribute id="SpellCastingAbility" type="uint8" value="5"/>
+                    <attribute id="UUID" type="guid" value="b5c7d9e1-f2a3-44b5-c6d7-e8f901a2b3c4"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>
+

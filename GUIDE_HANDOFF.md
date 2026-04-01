@@ -119,3 +119,51 @@ Después de validar Archer + MP en runtime:
 
 ---
 Este documento busca que cualquier nuevo chat continue sin reconstruir contexto histórico.
+
+## 10) Hallazgos recientes (Stances Archer)
+### Owl's Eye (estado actual)
+- Skill activa tipo stance (ON/OFF), no passive pura.
+- Se aplica correctamente en combate, consume `RO_MP`, y se remueve con skill OFF.
+- Bonus de attack roll visible en UI; critical threshold aplicado pero no siempre visible directamente en tooltip.
+
+### Vulture's Eye (estado actual)
+- Implementado como stance con escalado por hitos:
+  - Lv2: +25% rango efectivo, ignora desventaja point-blank con ballestas, +1d4 a distancia >10m.
+  - Lv5: +50% rango efectivo.
+  - Lv9: bonus de distancia sube a +1d6 (>10m).
+  - Lv12: reemplaza bonus de distancia por +1d12 SIEMPRE en ataques a distancia.
+- Cambio entre stances consume recurso correctamente y hace overwrite por `StackId` común.
+
+## 11) Lección clave: rango y desventaja
+Problema detectado:
+- En Stats puros no encontramos una condición robusta para "fuera del rango normal del arma equipada actual".
+- Solución previa basada en `Advantage(...)` por distancia fija causaba ventaja falsa en rangos medios (ej. 11-12m).
+
+Conclusión:
+- Para lógica de rango dependiente del arma equipada, usar Script Extender (SE).
+
+## 12) Migración a SE para Vulture's Eye
+### Qué quedó activo
+- Nuevo módulo SE: `ScriptExtender/Lua/RO_VulturesEye.lua`
+- Cargado desde: `ScriptExtender/Lua/BootstrapServer.lua`
+
+### Qué hace
+- Detecta si el personaje tiene una status de Vulture's Eye activa.
+- Detecta arma a distancia equipada.
+- Aplica un pasivo técnico anti-desventaja según umbral por arma (09/15/18m).
+- Limpia ese pasivo al salir de la stance o cambiar contexto.
+
+### Pasivos técnicos añadidos
+Archivo: `Stats/Generated/Data/Passive.txt`
+- `RO_Archer_VulturesEye_LongRangeNoDisadv_09`
+- `RO_Archer_VulturesEye_LongRangeNoDisadv_15`
+- `RO_Archer_VulturesEye_LongRangeNoDisadv_18`
+
+### Legacy archivado (no activo)
+- `Reference/Notes/Archived/VulturesEye_Legacy_LongRangeNoDisadv.txt`
+- Passive legacy renombrado a `RO_Archer_VulturesEye_LongRangeNoDisadv_Legacy` para evitar uso accidental.
+
+## 13) Regla práctica para próximas skills
+- Preferir `Stats/Progressions` cuando la lógica es estática y declarativa.
+- Usar `SE` solo cuando se necesite lógica dinámica/contextual (arma equipada, estado runtime, cálculos avanzados).
+- Mantener historial en `Reference/Notes/Archived/` cuando se retire una solución para facilitar rollback y auditoría.
