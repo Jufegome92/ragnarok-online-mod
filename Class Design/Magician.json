@@ -67,18 +67,20 @@
     "casting_system": {
       "name": "Overchannel",
       "description": "The Magician may invest additional MP into core spells to intensify their effects.",
+      "default_stacking_rule": "cumulative",
+      "baseline_scaling_rule": "All modular Magician skills gain milestone scaling automatically with character level. Overchannel only amplifies the current cast and never replaces the spell's natural level-based growth.",
       "tiers": {
         "base": {
           "additional_mp_cost": 0,
-          "effect": "Use the spell at its normal power level."
+          "effect": "Use the spell at its current milestone-scaled base power."
         },
         "intensified": {
-          "additional_mp_cost": 2,
-          "effect": "Improve the spell's numerical output, usually by adding hits, damage, or radius."
+          "additional_mp_cost": 1,
+          "effect": "Add a moderate amplification layer to the current cast."
         },
         "overload": {
-          "additional_mp_cost": 4,
-          "effect": "Unlock the strongest version of the spell, usually adding a stronger rider effect or an extra scaling layer."
+          "additional_mp_cost": 2,
+          "effect": "Add a premium rider effect or stronger amplification to the current cast."
         }
       }
     }
@@ -217,56 +219,12 @@
       ],
       "duration": "Instant",
       "range": "18m",
-      "description": "El Magician condensa energía elemental en una secuencia de impactos sobre un solo objetivo. La progresión principal del hechizo está en su número de impactos, simulando los niveles de Bolt de Ragnarok.",
+      "description": "El Magician condensa energía elemental en una secuencia de impactos sobre un solo objetivo. Su progresión principal está en la cantidad de impactos, simulando los niveles de Bolt de Ragnarok.",
       "base_effects": {
         "delivery_method": "Single spell attack roll; on hit, all impacts connect",
         "damage_per_hit": "1d4",
         "spellcasting_modifier_applies_once": true,
         "number_of_hits": 2
-      },
-      "element_variants": {
-        "Fire": {
-          "identity": "Highest raw single-target pressure",
-          "damage_type": "Fire",
-          "base_rider": "No additional rider at base tier",
-          "intensified_rider": "Add +1 flat damage per hit",
-          "overload_rider": "On hit, target must pass a Constitution save or become Burned for 1d4 turns"
-        },
-        "Cold": {
-          "identity": "Single-target slowing and setup",
-          "damage_type": "Cold",
-          "base_rider": "If at least half the hits land, target becomes Chilled for 1 turn",
-          "intensified_rider": "Chilled duration becomes 2 turns",
-          "overload_rider": "If target is already Chilled, it must pass a Constitution save or become Rooted for 1 turn"
-        },
-        "Lightning": {
-          "identity": "Disruption and volatility",
-          "damage_type": "Lightning",
-          "base_rider": "If at least half the hits land, target becomes Shocked for 1 turn",
-          "intensified_rider": "Shocked duration becomes 2 turns",
-          "overload_rider": "One extra impact arcs to a secondary enemy within 3m of the main target"
-        },
-        "Force": {
-          "identity": "Most reliable universal option",
-          "damage_type": "Force",
-          "base_rider": "+1 spell attack bonus for this cast",
-          "intensified_rider": "Add +1 flat damage per hit",
-          "overload_rider": "Gains +2 spell attack bonus for this cast"
-        }
-      },
-      "overchannel": {
-        "base": {
-          "total_mp_cost": 2,
-          "effect": "Use Element Bolt with its current milestone hit count."
-        },
-        "intensified": {
-          "total_mp_cost": 4,
-          "effect": "+1 hit and unlock the intensified rider of the chosen element."
-        },
-        "overload": {
-          "total_mp_cost": 6,
-          "effect": "+2 hits and unlock the overload rider of the chosen element."
-        }
       },
       "scaling": {
         "type": "multi_hit_progression",
@@ -309,9 +267,54 @@
           }
         ]
       },
+      "element_variants": {
+        "Fire": {
+          "identity": "Highest raw single-target pressure",
+          "damage_type": "Fire",
+          "base_rider": "No additional rider at base tier",
+          "intensified_rider": "+1 flat damage per hit for this cast",
+          "overload_rider": "On hit, target must pass a Constitution save or become Burned for 1 turn"
+        },
+        "Cold": {
+          "identity": "Single-target slowing and setup",
+          "damage_type": "Cold",
+          "base_rider": "If at least half the hits land, target becomes Chilled for 1 turn",
+          "intensified_rider": "Chilled duration becomes 2 turns for this cast",
+          "overload_rider": "If the target is already Chilled, it must pass a Constitution save or become Rooted for 1 turn"
+        },
+        "Lightning": {
+          "identity": "Disruption and volatility",
+          "damage_type": "Lightning",
+          "base_rider": "If at least half the hits land, target becomes Shocked for 1 turn",
+          "intensified_rider": "Shocked duration becomes 2 turns for this cast",
+          "overload_rider": "One extra impact arcs to a secondary enemy within 3m of the main target"
+        },
+        "Force": {
+          "identity": "Most reliable universal option",
+          "damage_type": "Force",
+          "base_rider": "+1 spell attack bonus for this cast",
+          "intensified_rider": "+1 flat damage per hit for this cast",
+          "overload_rider": "+2 spell attack bonus total for this cast and ignores minor force resistance"
+        }
+      },
+      "overchannel": {
+        "base": {
+          "total_mp_cost": 2,
+          "effect": "Use Element Bolt with its current milestone hit count and base rider."
+        },
+        "intensified": {
+          "total_mp_cost": 3,
+          "effect": "Use the base cast and add the intensified rider of the chosen element."
+        },
+        "overload": {
+          "total_mp_cost": 4,
+          "effect": "Use the base cast, add the intensified rider, and add the overload rider of the chosen element."
+        }
+      },
       "design_notes": [
-        "This replaces Fire Bolt, Cold Bolt, Lightning Bolt and Soul Strike as separate first-job spells.",
-        "Soul Strike is represented by the Force variant."
+        "Element Bolt already scales naturally through number of hits.",
+        "Overchannel should enhance the cast, not become the main way the spell stays relevant.",
+        "Soul Strike remains represented by the Force variant."
       ]
     },
 
@@ -396,15 +399,15 @@
             }
           },
           {
-            "level": 3,
+            "level": 6,
             "effects": {
-              "failed_save_third_penalty": "Enemy makes another Constitution save or becomes incapacitated"
+              "failed_save_secondary_penalty": "Target must pass an additional Constitution save or become Incapacitated until the end of its next turn"
             }
           },
           {
             "level": 9,
             "effects": {
-              "failed_save_third_penalty": "Target takes 1d4 bonus bludgeoning damage whenever hit by a physical attack"
+              "failed_save_tertiary_penalty": "Target takes 1d4 bonus bludgeoning damage whenever hit by a physical attack"
             }
           },
           {
@@ -430,7 +433,7 @@
       "range": "Self",
       "description": "El Magician recubre su cuerpo con una malla de energía que reduce el daño recibido a cambio de consumir MP al resistir.",
       "base_effects": {
-        "damage_reduction_flat": 3,
+        "damage_reduction_flat": 4,
         "mp_consumed_when_reduction_triggers": 1
       },
       "scaling": {
@@ -519,7 +522,7 @@
       ],
       "duration": "Variant-dependent",
       "range": "18m",
-      "description": "El Magician libera una manifestación elemental de área. La variante de Fuego representa explosión inmediata; la variante de Lightning representa descarga persistente y múltiple.",
+      "description": "El Magician libera una manifestación elemental de área. La variante de Fire representa burst inmediato; la variante de Lightning representa presión persistente.",
       "element_variants": {
         "Fire": {
           "identity": "Immediate burst AoE",
@@ -529,14 +532,36 @@
             "area_radius": "3m",
             "damage": "3d6 + intelligence_modifier"
           },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 5,
+                "effects": {
+                  "area_radius": "3m",
+                  "damage": "3d6 + intelligence_modifier"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "area_radius": "3m",
+                  "damage": "4d6 + intelligence_modifier"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "area_radius": "4m",
+                  "damage": "5d6 + intelligence_modifier"
+                }
+              }
+            ]
+          },
           "intensified_effect": {
-            "area_radius": "3m",
-            "damage": "4d6 + intelligence_modifier"
+            "effect": "Targets in the area must pass a Constitution save or become Burned for 1 turn."
           },
           "overload_effect": {
-            "area_radius": "4m",
-            "damage": "5d6 + intelligence_modifier",
-            "extra_rider": "Targets must pass a Constitution save or become Burned for 1 turn"
+            "effect": "The explosion leaves embers in the area until the start of your next turn; enemies entering or ending their turn there take 1d4 Fire damage."
           }
         },
         "Lightning": {
@@ -550,63 +575,63 @@
             "strikes_per_turn": 2,
             "damage_per_strike": "1d6"
           },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 5,
+                "effects": {
+                  "duration": "2 turns",
+                  "area_radius": "3m",
+                  "strikes_per_turn": 2,
+                  "damage_per_strike": "1d6"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "duration": "2 turns",
+                  "area_radius": "3m",
+                  "strikes_per_turn": 3,
+                  "damage_per_strike": "1d6"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "duration": "3 turns",
+                  "area_radius": "4m",
+                  "strikes_per_turn": 3,
+                  "damage_per_strike": "1d8"
+                }
+              }
+            ]
+          },
           "intensified_effect": {
-            "requires_concentration": true,
-            "duration": "2 turns",
-            "area_radius": "3m",
-            "strikes_per_turn": 3,
-            "damage_per_strike": "1d6"
+            "effect": "Enemies struck by the storm must pass a Constitution save or become Shocked for 1 turn."
           },
           "overload_effect": {
-            "requires_concentration": true,
-            "duration": "3 turns",
-            "area_radius": "4m",
-            "strikes_per_turn": 3,
-            "damage_per_strike": "1d8"
+            "effect": "The first strike each turn deals an additional 1d4 Lightning damage to Shocked enemies inside the area."
           }
         }
       },
       "overchannel": {
         "base": {
           "total_mp_cost": 4,
-          "effect": "Use the base Fire or Lightning AoE variant."
+          "effect": "Use the current milestone-scaled base Fire or Lightning AoE variant."
         },
         "intensified": {
-          "total_mp_cost": 6,
-          "effect": "Use the intensified version of the chosen AoE variant."
+          "total_mp_cost": 5,
+          "effect": "Use the base variant and add the intensified effect."
         },
         "overload": {
-          "total_mp_cost": 8,
-          "effect": "Use the overload version of the chosen AoE variant."
+          "total_mp_cost": 6,
+          "effect": "Use the base variant, add the intensified effect, and add the overload effect."
         }
       },
-      "scaling": {
-        "type": "milestone_access_and_power",
-        "milestones": [
-          {
-            "level": 5,
-            "effects": {
-              "Fire_variant_unlocked": true,
-              "Lightning_variant_unlocked": true
-            }
-          },
-          {
-            "level": 9,
-            "effects": {
-              "base_casts_gain_improved_numerical_scaling": true
-            }
-          },
-          {
-            "level": 12,
-            "effects": {
-              "overload_casts_gain_final_scaling": true
-            }
-          }
-        ]
-      },
       "design_notes": [
-        "This replaces Fire Ball and Thunder Storm as separate first-job buttons.",
-        "The Fire variant is burst; the Lightning variant is persistent pressure."
+        "Element AoE now scales automatically with level instead of hiding too much power in overchannel tiers.",
+        "Fire is burst-first; Lightning is persistent-control-first.",
+        "Overchannel should reward timing, not compensate for weak baseline scaling."
       ]
     },
 
@@ -627,7 +652,7 @@
       "base_effects": {
         "damage_type": "Fire",
         "wall_length": "6m",
-        "damage_on_enter_or_end_turn": "3d6 + intelligence_modifier"
+        "damage_on_enter_or_end_turn": "4d6 + intelligence_modifier"
       },
       "scaling": {
         "type": "milestone_zone_scaling",
@@ -705,7 +730,7 @@
       },
       {
         "name": "Element Bolt",
-        "cost_mp": "2 / 4 / 6"
+        "cost_mp": "2 / 3 / 4"
       },
       {
         "name": "Frost Diver",
@@ -725,7 +750,7 @@
       },
       {
         "name": "Element AoE",
-        "cost_mp": "4 / 6 / 8"
+        "cost_mp": "4 / 5 / 6"
       },
       {
         "name": "Fire Wall",

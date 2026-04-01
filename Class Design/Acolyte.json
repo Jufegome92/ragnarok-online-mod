@@ -70,9 +70,14 @@
       ]
     },
     "consecration": {
-      "description": "Through Aqua Benedicta, the Acolyte creates Holy Water Charges that can empower restoration, judgement, or blessing effects.",
+      "description": "Through Aqua Benedicta, the Acolyte creates Holy Water Charges that can empower restoration, judgement, blessing, or sanctuary effects.",
       "resource_name": "Holy Water Charges",
       "maximum_charges": 3
+    },
+    "overchannel_rules": {
+      "default_stacking_rule": "cumulative",
+      "description": "Intensified effects include the base effect. Overload effects include base and intensified effects unless explicitly stated otherwise.",
+      "baseline_scaling_rule": "All modular Acolyte skills gain milestone scaling automatically with character level. Overchannel only amplifies the current cast."
     }
   },
 
@@ -236,12 +241,39 @@
           "base_effect": {
             "healing": "1d6 + wisdom_modifier"
           },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 2,
+                "effects": {
+                  "healing": "1d6 + wisdom_modifier"
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "healing": "2d6 + wisdom_modifier"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "healing": "3d6 + wisdom_modifier"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "healing": "4d6 + wisdom_modifier"
+                }
+              }
+            ]
+          },
           "intensified_effect": {
-            "healing": "2d6 + wisdom_modifier"
+            "effect": "Target also gains 1d4 temporary hit points until the start of your next turn."
           },
           "overload_effect": {
-            "healing": "3d6 + wisdom_modifier",
-            "extra_rider": "Consumes 1 Holy Water Charge to also grant 1d4 temporary hit points"
+            "effect": "Consumes 1 Holy Water Charge. Target also removes one removable negative condition and temporary hit points become 1d6."
           }
         },
         "Cure": {
@@ -250,64 +282,60 @@
             "healing": "1d4 + wisdom_modifier",
             "remove_one_minor_negative_condition": true
           },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 2,
+                "effects": {
+                  "healing": "1d4 + wisdom_modifier",
+                  "remove_one_minor_negative_condition": true
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "healing": "2d4 + wisdom_modifier",
+                  "remove_one_major_or_two_minor_negative_conditions": true
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "healing": "2d6 + wisdom_modifier",
+                  "remove_one_major_or_two_minor_negative_conditions": true
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "healing": "3d6 + wisdom_modifier",
+                  "remove_one_major_and_all_minor_negative_conditions": true
+                }
+              }
+            ]
+          },
           "intensified_effect": {
-            "healing": "2d4 + wisdom_modifier",
-            "remove_one_major_or_two_minor_negative_conditions": true
+            "effect": "Target also gains advantage on its next saving throw before the end of its next turn."
           },
           "overload_effect": {
-            "healing": "2d6 + wisdom_modifier",
-            "remove_conditions": "Cleanse all removable negative conditions on target",
-            "extra_rider": "Consumes 1 Holy Water Charge"
+            "effect": "Consumes 1 Holy Water Charge. If the target had no removable condition, it instead gains 1d6 temporary hit points."
           }
         }
       },
       "overchannel": {
         "base": {
           "total_mp_cost": 2,
-          "effect": "Use Restoration at base potency."
+          "effect": "Use the current milestone-scaled base form of the chosen Restoration mode."
         },
         "intensified": {
-          "total_mp_cost": 4,
-          "effect": "Use the intensified form of the chosen Restoration mode."
+          "total_mp_cost": 3,
+          "effect": "Use the base form and add the intensified effect."
         },
         "overload": {
-          "total_mp_cost": 6,
-          "effect": "Use the overload form of the chosen Restoration mode."
+          "total_mp_cost": 4,
+          "effect": "Use the base form, add the intensified effect, and add the overload effect."
         }
-      },
-      "scaling": {
-        "type": "milestone_support_scaling",
-        "milestones": [
-          {
-            "level": 2,
-            "effects": {
-              "base_access": true
-            }
-          },
-          {
-            "level": 5,
-            "effects": {
-              "restoration_base_healing_bonus": 1
-            }
-          },
-          {
-            "level": 9,
-            "effects": {
-              "restoration_intensified_healing_bonus": 2
-            }
-          },
-          {
-            "level": 12,
-            "effects": {
-              "restoration_overload_efficiency": "Overload costs 1 less MP, minimum 1"
-            }
-          }
-        ]
-      },
-      "design_notes": [
-        "This replaces Heal and Cure as separate base buttons.",
-        "The Acolyte should always feel like it can choose between mending and cleansing."
-      ]
+      }
     },
 
     {
@@ -336,47 +364,102 @@
             "duration": "3 turns",
             "reveal_hidden_and_invisible_units_in_radius": "6m"
           },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 2,
+                "effects": {
+                  "duration": "3 turns",
+                  "reveal_hidden_and_invisible_units_in_radius": "6m"
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "duration": "4 turns",
+                  "reveal_hidden_and_invisible_units_in_radius": "9m"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "duration": "4 turns",
+                  "reveal_hidden_and_invisible_units_in_radius": "12m"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "revealed_enemies_cannot_hide_until_end_of_next_turn": true
+                }
+              }
+            ]
+          },
           "intensified_effect": {
-            "duration": "4 turns",
-            "reveal_hidden_and_invisible_units_in_radius": "9m"
+            "effect": "Revealed enemies take -1 to saving throws against holy effects until the start of your next turn."
           },
           "overload_effect": {
-            "duration": "4 turns",
-            "reveal_hidden_and_invisible_units_in_radius": "9m",
-            "extra_rider": "Enemies revealed by this rite take 1d4 radiant damage"
+            "effect": "Consumes 1 Holy Water Charge. Revealed enemies take 1d4 radiant damage and cannot take reactions until the start of their next turn."
           }
         },
         "Pneuma": {
-          "identity": "Protective sacred zone against ranged pressure",
+          "identity": "Protective sacred zone against ranged pressure and hostile magic",
+          "stacking_rule": "cumulative",
           "base_effect": {
             "range": "9m",
             "duration": "2 turns",
             "requires_concentration": true,
-            "effect": "Create a 3m radius zone that nullifies or heavily reduces ranged weapon damage entering it"
+            "area_radius": "3m",
+            "effect": "Allies inside the zone gain bonus AC against ranged attacks and spell attack rolls originating from outside the zone."
+          },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 2,
+                "effects": {
+                  "ac_bonus_against_ranged_and_spell_attack_rolls": 1
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "ac_bonus_against_ranged_and_spell_attack_rolls": 2
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "ac_bonus_against_ranged_and_spell_attack_rolls": 3
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "duration_turns": 3
+                }
+              }
+            ]
           },
           "intensified_effect": {
-            "duration": "3 turns",
-            "effect": "Zone also grants +1 AC against ranged spell attacks"
+            "effect": "Enemies attacking targets inside the zone with ranged attacks or spell attack rolls do so with Disadvantage."
           },
           "overload_effect": {
-            "duration": "3 turns",
-            "effect": "Zone nullifies ranged weapon damage and reduces incoming ranged spell damage by 50%",
-            "extra_rider": "Consumes 1 Holy Water Charge"
+            "effect": "Consumes 1 Holy Water Charge. Allies inside the zone gain Resistance to all non-melee damage originating from outside the zone."
           }
         }
       },
       "overchannel": {
         "base": {
           "total_mp_cost": 2,
-          "effect": "Use the base form of Ruwach or Pneuma."
+          "effect": "Use the current milestone-scaled base form of Ruwach or Pneuma."
         },
         "intensified": {
-          "total_mp_cost": 4,
-          "effect": "Use the intensified form of the chosen rite."
+          "total_mp_cost": 3,
+          "effect": "Use the base form and add the intensified effect."
         },
         "overload": {
-          "total_mp_cost": 5,
-          "effect": "Use the overload form of the chosen rite."
+          "total_mp_cost": 4,
+          "effect": "Use the base form, add the intensified effect, and add the overload effect."
         }
       }
     },
@@ -409,12 +492,27 @@
             "target": "Ally",
             "effect": "+1 attack rolls, +1 saving throws"
           },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 3,
+                "effects": {
+                  "bonus": "+1 attack rolls, +1 saving throws"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "bonus": "+2 attack rolls, +2 saving throws"
+                }
+              }
+            ]
+          },
           "intensified_effect": {
-            "effect": "+2 attack rolls, +2 saving throws"
+            "effect": "The target also gains +1 spell attack rolls and +1 healing received."
           },
           "overload_effect": {
-            "effect": "+2 attack rolls, +2 saving throws, +1d4 radiant damage on first successful hit each turn",
-            "extra_rider": "Consumes 1 Holy Water Charge"
+            "effect": "Consumes 1 Holy Water Charge. The target also deals +1d4 radiant damage on its first successful hit each turn."
           }
         },
         "Agility Rite": {
@@ -425,58 +523,89 @@
               "Decrease Agility"
             ]
           },
-          "submodes": {
-            "Increase Agility": {
-              "target": "Ally",
-              "effect": "+3m movement and +1 initiative"
-            },
-            "Decrease Agility": {
-              "target": "Enemy",
-              "effect": "-3m movement and disadvantage on opportunity attacks"
-            }
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 3,
+                "effects": {
+                  "Increase Agility": "+3m movement, +1 initiative",
+                  "Decrease Agility": "-3m movement, disadvantage on opportunity attacks"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "Increase Agility": "+6m movement, +2 initiative",
+                  "Decrease Agility": "-6m movement, -1 AC"
+                }
+              }
+            ]
           },
           "intensified_effect": {
-            "Increase Agility": "+3m movement, +1 initiative, +1 AC",
-            "Decrease Agility": "-3m movement, -1 AC"
+            "Increase Agility": "Also grants +1 AC.",
+            "Decrease Agility": "Target also cannot take reactions until the end of its next turn."
           },
           "overload_effect": {
-            "Increase Agility": "+6m movement, +1 initiative, +1 AC",
-            "Decrease Agility": "-6m movement, -1 AC, target cannot take reactions",
-            "extra_rider": "Consumes 1 Holy Water Charge"
+            "Increase Agility": "Consumes 1 Holy Water Charge. Target ignores difficult terrain and cannot be slowed for 1 turn.",
+            "Decrease Agility": "Consumes 1 Holy Water Charge. Target also suffers disadvantage on Dexterity saving throws for 1 turn."
           }
         },
         "Angelus": {
           "identity": "Physical protection through sacred reinforcement",
           "base_effect": {
             "target": "Ally or small allied area",
-            "effect": "Reduce incoming physical damage by 1"
+            "effect": "Reduce incoming physical damage."
+          },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 3,
+                "effects": {
+                  "physical_damage_reduction": 1
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "physical_damage_reduction": 2
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "physical_damage_reduction": 3
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "physical_damage_reduction": 4
+                }
+              }
+            ]
           },
           "intensified_effect": {
-            "effect": "Reduce incoming physical damage by 2"
+            "effect": "Target also gains 1d4 temporary hit points."
           },
           "overload_effect": {
-            "effect": "Reduce incoming physical damage by 2 and grant 1d6 temporary hit points",
-            "extra_rider": "Consumes 1 Holy Water Charge"
+            "effect": "Consumes 1 Holy Water Charge. Target also gains advantage on saving throws against forced movement and Prone."
           }
         }
       },
       "overchannel": {
         "base": {
           "total_mp_cost": 2,
-          "effect": "Use the base version of the chosen blessing."
+          "effect": "Use the current milestone-scaled base version of the chosen blessing."
         },
         "intensified": {
-          "total_mp_cost": 4,
-          "effect": "Use the intensified version of the chosen blessing."
+          "total_mp_cost": 3,
+          "effect": "Use the base version and add the intensified effect."
         },
         "overload": {
-          "total_mp_cost": 6,
-          "effect": "Use the overload version of the chosen blessing."
+          "total_mp_cost": 4,
+          "effect": "Use the base version, add the intensified effect, and add the overload effect."
         }
-      },
-      "design_notes": [
-        "This replaces Blessing, Increase Agility, Decrease Agility and Angelus as separate first-job buttons."
-      ]
+      }
     },
 
     {
@@ -506,12 +635,33 @@
             "damage_type": "Radiant",
             "damage": "2d6 + wisdom_modifier"
           },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 4,
+                "effects": {
+                  "damage": "2d6 + wisdom_modifier"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "damage": "3d6 + wisdom_modifier"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "damage": "4d6 + wisdom_modifier"
+                }
+              }
+            ]
+          },
           "intensified_effect": {
-            "damage": "3d6 + wisdom_modifier"
+            "effect": "The target cannot benefit from invisibility or stealth until the end of its next turn."
           },
           "overload_effect": {
-            "damage": "4d6 + wisdom_modifier",
-            "extra_rider": "Consumes 1 Holy Water Charge to blind the target for 1 turn on failed Constitution save"
+            "effect": "Consumes 1 Holy Water Charge. On failed Constitution save, the target is Blinded for 1 turn."
           }
         },
         "Signum Crucis": {
@@ -522,29 +672,51 @@
             "saving_throw": "Wisdom",
             "on_failed_save": "Target suffers -1 attack rolls and -1 saving throws for 2 turns"
           },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 4,
+                "effects": {
+                  "damage": "1d6 + wisdom_modifier",
+                  "on_failed_save": "-1 attack rolls, -1 saving throws for 2 turns"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "damage": "2d6 + wisdom_modifier",
+                  "on_failed_save": "-2 attack rolls, -1 saving throws for 2 turns"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "damage": "2d8 + wisdom_modifier",
+                  "on_failed_save": "-2 attack rolls, -2 saving throws for 2 turns"
+                }
+              }
+            ]
+          },
           "intensified_effect": {
-            "damage": "2d6 + wisdom_modifier",
-            "on_failed_save": "Target suffers -2 attack rolls and -1 saving throws for 2 turns"
+            "effect": "Against undead or demons, Signum Crucis also applies -1 AC."
           },
           "overload_effect": {
-            "damage": "2d8 + wisdom_modifier",
-            "on_failed_save": "Target suffers -2 attack rolls, -2 saving throws, and takes +1d4 radiant damage from holy sources for 2 turns",
-            "extra_rider": "Against undead or demons, Signum Crucis has disadvantage penalty increased by 1"
+            "effect": "Consumes 1 Holy Water Charge. Target also takes +1d4 radiant damage from holy sources for 2 turns."
           }
         }
       },
       "overchannel": {
         "base": {
           "total_mp_cost": 2,
-          "effect": "Use the base version of the chosen judgement."
+          "effect": "Use the current milestone-scaled base version of the chosen judgement."
         },
         "intensified": {
-          "total_mp_cost": 4,
-          "effect": "Use the intensified version of the chosen judgement."
+          "total_mp_cost": 3,
+          "effect": "Use the base version and add the intensified effect."
         },
         "overload": {
-          "total_mp_cost": 6,
-          "effect": "Use the overload version of the chosen judgement."
+          "total_mp_cost": 4,
+          "effect": "Use the base version, add the intensified effect, and add the overload effect."
         }
       }
     },
@@ -589,7 +761,7 @@
         ]
       },
       "synergies": [
-        "Empowers Restoration, Benediction and Judgement overload states",
+        "Empowers Restoration, Benediction, Judgement and Sanctuary Rite overload states",
         "Gives the Acolyte a distinct technical layer separate from raw MP"
       ],
       "design_notes": [
@@ -624,12 +796,33 @@
             "range": "Self or ally within 9m",
             "effect": "Teleport target up to 6m to a visible point"
           },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 6,
+                "effects": {
+                  "teleport_distance": "6m"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "teleport_distance": "9m"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "teleport_distance": "12m"
+                }
+              }
+            ]
+          },
           "intensified_effect": {
-            "effect": "Teleport target up to 9m"
+            "effect": "The teleported target ignores opportunity attacks until the end of the turn."
           },
           "overload_effect": {
-            "effect": "Teleport self and one adjacent ally up to 9m",
-            "extra_rider": "Consumes 1 Holy Water Charge"
+            "effect": "Consumes 1 Holy Water Charge. Teleport self and one adjacent ally, and both arrive cleansed of Slow or similar movement debuffs."
           }
         },
         "Warp Portal": {
@@ -648,15 +841,15 @@
       "overchannel": {
         "base": {
           "total_mp_cost": 3,
-          "effect": "Use the base form of the chosen passage."
+          "effect": "Use the current base version of the chosen passage."
         },
         "intensified": {
-          "total_mp_cost": 5,
-          "effect": "Use the intensified form of the chosen passage."
+          "total_mp_cost": 4,
+          "effect": "Use the base version and add the intensified effect."
         },
         "overload": {
-          "total_mp_cost": 6,
-          "effect": "Use the overload form of the chosen passage."
+          "total_mp_cost": 5,
+          "effect": "Use the base version, add the intensified effect, and add the overload effect."
         }
       },
       "design_notes": [
@@ -708,19 +901,19 @@
       },
       {
         "name": "Restoration",
-        "cost_mp": "2 / 4 / 6"
+        "cost_mp": "2 / 3 / 4"
       },
       {
         "name": "Sanctuary Rite",
-        "cost_mp": "2 / 4 / 5"
+        "cost_mp": "2 / 3 / 4"
       },
       {
         "name": "Benediction",
-        "cost_mp": "2 / 4 / 6"
+        "cost_mp": "2 / 3 / 4"
       },
       {
         "name": "Judgement",
-        "cost_mp": "2 / 4 / 6"
+        "cost_mp": "2 / 3 / 4"
       },
       {
         "name": "Aqua Benedicta",
@@ -728,7 +921,7 @@
       },
       {
         "name": "Pilgrim's Passage",
-        "cost_mp": "3 / 5 / 6"
+        "cost_mp": "3 / 4 / 5"
       }
     ]
   },
