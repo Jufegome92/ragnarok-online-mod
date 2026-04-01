@@ -1,19 +1,19 @@
-ï»¿# BG3 Ragnarok Mod - Handoff Guide
+# BG3 Ragnarok Mod - Handoff Guide
 
 ## 1) Objetivo actual
 Proyecto MVP para BG3 inspirado en Ragnarok Online.
 - Clase base: `RO_Novice`
 - Primera subclase implementada para pruebas: `RO_Archer`
-- Enfoque: iteraciÃ³n mÃ­nima viable (una feature por vez, test en juego, continuar)
+- Enfoque: iteración mínima viable (una feature por vez, test en juego, continuar)
 
 ## 2) Estructura clave del repo
 - Mod source: `RagnarokOnlineMod/`
-- DiseÃ±o funcional: `Class Design/*.json`
+- Diseño funcional: `Class Design/*.json`
 - Referencias: `Reference/Packages/...`
 - Herramientas: `Tools/`
 - PAK de salida: `Package/`
 
-Rutas crÃ­ticas:
+Rutas críticas:
 - Meta mod: `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/meta.lsx`
 - Class descriptions: `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/ClassDescriptions/ClassDescriptions.lsx`
 - Progressions: `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Progressions/Progressions.lsx`
@@ -27,7 +27,7 @@ Rutas crÃ­ticas:
 ## 3) Estado funcional implementado
 ### Novice (base)
 - Clase visible y seleccionable en character creation
-- DescripciÃ³n/lore en inglÃ©s
+- Descripción/lore en inglés
 - HP ajustado a 6 base (+CON)
 - Recurso custom `RO_MP` base 6
 - Passive `Basic Skill` con proficiencias de Novice
@@ -42,16 +42,16 @@ Rutas crÃ­ticas:
 - Icono de subclase en assets y registrado en GUI metadata
 
 ## 4) Sistema MP con Script Extender
-FÃ³rmula exacta pedida por diseÃ±o:
+Fórmula exacta pedida por diseño:
 `(4 + (2 * character_level)) + (character_level * floor(spellcasting_modifier / 2))`
 
 Notas:
-- Sin fallback forzado (se quitÃ³ para validar cÃ¡lculo real).
-- Novice base mantiene 6 MP por progresiÃ³n base.
-- Cuando existe pasivo marcador de fÃ³rmula (`RO_MP_Formula_*`), Lua aplica ajuste por pasivo tÃ©cnico `RO_MP_Adjust_*`.
+- Sin fallback forzado (se quitó para validar cálculo real).
+- Novice base mantiene 6 MP por progresión base.
+- Cuando existe pasivo marcador de fórmula (`RO_MP_Formula_*`), Lua aplica ajuste por pasivo técnico `RO_MP_Adjust_*`.
 - Para Archer se usa `RO_MP_Formula_WIS`.
 
-Archivos tÃ©cnicos:
+Archivos técnicos:
 - `ScriptExtender/Lua/RO_MPSystem.lua`
 - `Stats/Generated/Data/Passive_RO_MPSystem.txt`
 
@@ -64,10 +64,10 @@ Archivos tÃ©cnicos:
 3. Registrar rutas en `GUI/metadata.lsf` (obligatorio)
 
 ### Passive/Skill icons
-- DDS en rutas Tooltips/ControllerUI (segÃºn uso)
+- DDS en rutas Tooltips/ControllerUI (según uso)
 - `Icon` en `Passive.txt` o `Spell_*.txt` debe coincidir con nombre esperado
 
-### ConversiÃ³n PNG -> DDS
+### Conversión PNG -> DDS
 Script wrapper:
 - `Tools/convert_icon_dds.ps1`
 
@@ -76,7 +76,7 @@ Ejemplo:
 powershell -ExecutionPolicy Bypass -File .\Tools\convert_icon_dds.ps1 -InputPath "RagnarokOnlineMod/Icons/archer_class.png" -BaseName "RO_Archer" -OutDir "RagnarokOnlineMod/Icons/dds" -Sizes 24x24,380x380
 ```
 
-TambiÃ©n acepta `-Input` como alias.
+También acepta `-Input` como alias.
 
 ## 6) Empaquetado
 Comando principal:
@@ -92,7 +92,7 @@ $pak=(Resolve-Path '.\Package\RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903.pak
 & '.\Tools\ExportTool\Packed\Tools\Divine.exe' -g bg3 -a list-package -s $pak
 ```
 
-## 7) Checklist rÃ¡pido para otro chat
+## 7) Checklist rápido para otro chat
 1. Confirmar que `metadata.lsf` tiene entradas para cada icono de clase/subclase.
 2. Confirmar que `Progressions.lsx` tiene clase base + subclase en niveles correctos.
 3. Confirmar que `ScriptExtender/Config.json` incluye `"FeatureFlags": ["Lua"]` y `ModTable` correcto.
@@ -105,20 +105,20 @@ $pak=(Resolve-Path '.\Package\RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903.pak
    - MP esperado
 
 ## 8) Problemas vistos antes (y causa probable)
-- "Invalid file" al importar: normalmente por estructura/formato de archivos GUI o XML/LSX invÃ¡lido.
-- Icono no aparece: faltaba registro en `GUI/metadata.lsf` o path no coincidÃ­a.
-- MP se queda en 6: Lua no cargado o marcador de fÃ³rmula no aplicado en el nivel correcto.
+- "Invalid file" al importar: normalmente por estructura/formato de archivos GUI o XML/LSX inválido.
+- Icono no aparece: faltaba registro en `GUI/metadata.lsf` o path no coincidía.
+- MP se queda en 6: Lua no cargado o marcador de fórmula no aplicado en el nivel correcto.
 
-## 9) PrÃ³ximo paso recomendado
-DespuÃ©s de validar Archer + MP en runtime:
-- Implementar siguiente job (sugerido: `Acolyte` o `Swordman`) con el mismo patrÃ³n:
-  - marcador de fÃ³rmula (`RO_MP_Formula_*`) segÃºn spellcasting stat
-  - progression mÃ­nima viable
+## 9) Próximo paso recomendado
+Después de validar Archer + MP en runtime:
+- Implementar siguiente job (sugerido: `Acolyte` o `Swordman`) con el mismo patrón:
+  - marcador de fórmula (`RO_MP_Formula_*`) según spellcasting stat
+  - progression mínima viable
   - 1 skill funcional
   - test in-game
 
 ---
-Este documento busca que cualquier nuevo chat continue sin reconstruir contexto histÃ³rico.
+Este documento busca que cualquier nuevo chat continue sin reconstruir contexto histórico.
 
 ## 10) Hallazgos recientes (Stances Archer)
 ### Owl's Eye (estado actual)
@@ -132,38 +132,94 @@ Este documento busca que cualquier nuevo chat continue sin reconstruir contexto 
   - Lv5: +50% rango efectivo.
   - Lv9: bonus de distancia sube a +1d6 (>10m).
   - Lv12: reemplaza bonus de distancia por +1d12 SIEMPRE en ataques a distancia.
-- Cambio entre stances consume recurso correctamente y hace overwrite por `StackId` comÃºn.
+- Cambio entre stances consume recurso correctamente y hace overwrite por `StackId` común.
 
-## 11) LecciÃ³n clave: rango y desventaja
+## 11) Lección clave: rango y desventaja
 Problema detectado:
-- En Stats puros no encontramos una condiciÃ³n robusta para "fuera del rango normal del arma equipada actual".
-- SoluciÃ³n previa basada en `Advantage(...)` por distancia fija causaba ventaja falsa en rangos medios (ej. 11-12m).
+- En Stats puros no encontramos una condición robusta para "fuera del rango normal del arma equipada actual".
+- Solución previa basada en `Advantage(...)` por distancia fija causaba ventaja falsa en rangos medios (ej. 11-12m).
 
-ConclusiÃ³n:
-- Para lÃ³gica de rango dependiente del arma equipada, usar Script Extender (SE).
+Conclusión:
+- Para lógica de rango dependiente del arma equipada, usar Script Extender (SE).
 
-## 12) MigraciÃ³n a SE para Vulture's Eye
-### QuÃ© quedÃ³ activo
-- Nuevo mÃ³dulo SE: `ScriptExtender/Lua/RO_VulturesEye.lua`
+## 12) Migración a SE para Vulture's Eye
+### Qué quedó activo
+- Nuevo módulo SE: `ScriptExtender/Lua/RO_VulturesEye.lua`
 - Cargado desde: `ScriptExtender/Lua/BootstrapServer.lua`
 
-### QuÃ© hace
+### Qué hace
 - Detecta si el personaje tiene una status de Vulture's Eye activa.
 - Detecta arma a distancia equipada.
-- Aplica un pasivo tÃ©cnico anti-desventaja segÃºn umbral por arma (09/15/18m).
+- Aplica un pasivo técnico anti-desventaja según umbral por arma (09/15/18m).
 - Limpia ese pasivo al salir de la stance o cambiar contexto.
 
-### Pasivos tÃ©cnicos aÃ±adidos
+### Pasivos técnicos añadidos (actual)
 Archivo: `Stats/Generated/Data/Passive.txt`
-- `RO_Archer_VulturesEye_LongRangeNoDisadv_09`
-- `RO_Archer_VulturesEye_LongRangeNoDisadv_15`
-- `RO_Archer_VulturesEye_LongRangeNoDisadv_18`
+- `RO_Archer_VulturesEye_LongRangeNoDisadv_09_L2`
+- `RO_Archer_VulturesEye_LongRangeNoDisadv_09_L5`
+- `RO_Archer_VulturesEye_LongRangeNoDisadv_15_L2`
+- `RO_Archer_VulturesEye_LongRangeNoDisadv_15_L5`
+- `RO_Archer_VulturesEye_LongRangeNoDisadv_18_L2`
+- `RO_Archer_VulturesEye_LongRangeNoDisadv_18_L5`
 
 ### Legacy archivado (no activo)
 - `Reference/Notes/Archived/VulturesEye_Legacy_LongRangeNoDisadv.txt`
 - Passive legacy renombrado a `RO_Archer_VulturesEye_LongRangeNoDisadv_Legacy` para evitar uso accidental.
 
-## 13) Regla prÃ¡ctica para prÃ³ximas skills
-- Preferir `Stats/Progressions` cuando la lÃ³gica es estÃ¡tica y declarativa.
-- Usar `SE` solo cuando se necesite lÃ³gica dinÃ¡mica/contextual (arma equipada, estado runtime, cÃ¡lculos avanzados).
-- Mantener historial en `Reference/Notes/Archived/` cuando se retire una soluciÃ³n para facilitar rollback y auditorÃ­a.
+## 13) Regla práctica para próximas skills
+- Preferir `Stats/Progressions` cuando la lógica es estática y declarativa.
+- Usar `SE` solo cuando se necesite lógica dinámica/contextual (arma equipada, estado runtime, cálculos avanzados).
+- Mantener historial en `Reference/Notes/Archived/` cuando se retire una solución para facilitar rollback y auditoría.
+
+
+
+## 14) Estado validado en juego (checkpoint estable)
+Todo lo siguiente fue validado en runtime:
+- Cambio de stances funciona (`Owl's Eye` <-> `Vulture's Eye`) y consume `RO_MP`.
+- `Owl's Eye` aplica bonus de attack roll correctamente.
+- `Vulture's Eye`:
+  - ignora desventaja melee con ballestas,
+  - aumenta rango efectivo por tier,
+  - aplica daño extra por distancia (`+1d4`/`+1d6`) y en L12 (`+1d12` global).
+- `Double Strafe`:
+  - ejecuta 2 hits reales,
+  - hereda bonos de stance,
+  - aplica correctamente bonus de Vulture en ambos impactos.
+- Fuera del rango extendido vuelve a existir desventaja (no queda neutralizada infinito).
+
+## 15) Template de implementación (para futuros chats)
+### Paso A: Definir en Stats (base declarativa)
+1. Crear/actualizar spell o stance en `Spell_*.txt`.
+2. Crear/actualizar status en `Status_*.txt`.
+3. Exponer/otorgar vía `Passive.txt` + `Progressions.lsx`.
+4. Mantener naming consistente (`*_L2`, `*_L5`, `*_L9`, `*_L12`).
+
+### Paso B: Detectar si hace falta SE
+Usar Script Extender cuando haya lógica dinámica como:
+- arma equipada cambia reglas,
+- ventanas de distancia por tier,
+- multi-hit encadenado,
+- sincronización runtime por status/eventos.
+
+### Paso C: Patrón SE recomendado
+1. Crear módulo `ScriptExtender/Lua/<Feature>.lua`.
+2. Registrar en `BootstrapServer.lua` con `Ext.Require(...)`.
+3. Escuchar eventos mínimos necesarios (`StatusApplied/Removed`, equip change, etc.).
+4. Aplicar pasivos técnicos acotados y limpiarlos al salir del estado.
+5. Evitar fallback silencioso durante debug (para detectar errores rápido).
+
+### Paso D: Validación mínima en juego
+1. Skill/stance visible y casteable.
+2. Coste de recurso correcto.
+3. Aplicación/remoción de status esperada.
+4. Combat log confirma daño/rolls esperados por hit.
+5. Prueba borde de distancia (dentro y fuera del rango extendido).
+6. Prueba con al menos 2 armas de distinto rango (ej. hand crossbow y longbow).
+
+### Paso E: Si algo falla
+Orden de diagnóstico:
+1. Ver si falla visibilidad/desbloqueo (Progression/Passive).
+2. Ver si falla ejecución (SpellSuccess/RequirementConditions).
+3. Ver si falla herencia de bonos (context.Source vs target, OnDamage functors).
+4. Ver si falla por timing (resolver con listener SE + delay corto).
+5. Documentar hallazgo y dejar nota en este archivo.

@@ -62,7 +62,7 @@ data "StatsFunctors" "IF(IsAttackType(AttackType.RangedWeaponAttack)):DealDamage
 new entry "RO_Archer_VulturesEye_LongRangeNoDisadv_Legacy"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "Boosts" "IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(18)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(18)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(18)):Advantage(AttackTarget);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(18)):Advantage(AttackTarget)"
+data "Boosts" "IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(18) and not DistanceToTargetGreaterThan(25)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(18) and not DistanceToTargetGreaterThan(25)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(18) and not DistanceToTargetGreaterThan(25)):Advantage(AttackTarget);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(18) and not DistanceToTargetGreaterThan(25)):Advantage(AttackTarget)"
 new entry "RO_Archer_VulturesEye_L5"
 type "PassiveData"
 data "DisplayName" "h9b57c8d1ga332g4d98ga4c7g34ea52ac7295;1"
@@ -101,21 +101,35 @@ data "Conditions" "IsWeaponAttack() and HasDamageEffectFlag(DamageFlags.Hit)"
 data "StatsFunctors" "IF(IsAttackType(AttackType.RangedWeaponAttack)):DealDamage(1d12,MainRangedWeaponDamageType);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack)):DealDamage(1d12,OffhandRangedWeaponDamageType)"
 
 
-new entry "RO_Archer_VulturesEye_LongRangeNoDisadv_09"
+new entry "RO_Archer_VulturesEye_LongRangeNoDisadv_09_L2"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "Boosts" "IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(9)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(9)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(9)):Advantage(AttackTarget);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(9)):Advantage(AttackTarget)"
+data "Boosts" "IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(9) and not DistanceToTargetGreaterThan(11.25)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(9) and not DistanceToTargetGreaterThan(11.25)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(9) and not DistanceToTargetGreaterThan(11.25)):Advantage(AttackTarget);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(9) and not DistanceToTargetGreaterThan(11.25)):Advantage(AttackTarget)"
 
-new entry "RO_Archer_VulturesEye_LongRangeNoDisadv_15"
+new entry "RO_Archer_VulturesEye_LongRangeNoDisadv_09_L5"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "Boosts" "IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(15)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(15)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(15)):Advantage(AttackTarget);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(15)):Advantage(AttackTarget)"
+data "Boosts" "IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(9) and not DistanceToTargetGreaterThan(13.5)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(9) and not DistanceToTargetGreaterThan(13.5)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(9) and not DistanceToTargetGreaterThan(13.5)):Advantage(AttackTarget);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(9) and not DistanceToTargetGreaterThan(13.5)):Advantage(AttackTarget)"
 
-new entry "RO_Archer_VulturesEye_LongRangeNoDisadv_18"
+new entry "RO_Archer_VulturesEye_LongRangeNoDisadv_15_L2"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "Boosts" "IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(18)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(18)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(18)):Advantage(AttackTarget);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(18)):Advantage(AttackTarget)"
+data "Boosts" "IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(15) and not DistanceToTargetGreaterThan(18.75)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(15) and not DistanceToTargetGreaterThan(18.75)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(15) and not DistanceToTargetGreaterThan(18.75)):Advantage(AttackTarget);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(15) and not DistanceToTargetGreaterThan(18.75)):Advantage(AttackTarget)"
 
+new entry "RO_Archer_VulturesEye_LongRangeNoDisadv_15_L5"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "Boosts" "IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(15) and not DistanceToTargetGreaterThan(22.5)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(15) and not DistanceToTargetGreaterThan(22.5)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(15) and not DistanceToTargetGreaterThan(22.5)):Advantage(AttackTarget);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(15) and not DistanceToTargetGreaterThan(22.5)):Advantage(AttackTarget)"
+
+new entry "RO_Archer_VulturesEye_LongRangeNoDisadv_18_L2"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "Boosts" "IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(18) and not DistanceToTargetGreaterThan(22.5)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(18) and not DistanceToTargetGreaterThan(22.5)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(18) and not DistanceToTargetGreaterThan(22.5)):Advantage(AttackTarget);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(18) and not DistanceToTargetGreaterThan(22.5)):Advantage(AttackTarget)"
+
+new entry "RO_Archer_VulturesEye_LongRangeNoDisadv_18_L5"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "Boosts" "IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(18) and not DistanceToTargetGreaterThan(27)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(18) and not DistanceToTargetGreaterThan(27)):Advantage(AttackRoll);IF(IsAttackType(AttackType.RangedWeaponAttack) and DistanceToTargetGreaterThan(18) and not DistanceToTargetGreaterThan(27)):Advantage(AttackTarget);IF(IsAttackType(AttackType.RangedOffHandWeaponAttack) and DistanceToTargetGreaterThan(18) and not DistanceToTargetGreaterThan(27)):Advantage(AttackTarget)"
 
 new entry "RO_Archer_DoubleStrafe"
 type "PassiveData"
@@ -148,3 +162,5 @@ data "Description" "h89a0c03eg4a3ag4f60g8f66gd74ad7f6f3ef;1"
 data "Icon" "Action_SlashingFlourish_Ranged"
 data "Properties" "Hidden"
 data "Boosts" "UnlockSpell(Projectile_RO_DoubleStrafe_12,Singular)"
+
+

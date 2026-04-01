@@ -5,14 +5,20 @@ local VULTURE_STATUSES = {
     RO_ARCHER_VULTURES_EYE_L12 = true
 }
 
-local RANGE_PASSIVE_09 = "RO_Archer_VulturesEye_LongRangeNoDisadv_09"
-local RANGE_PASSIVE_15 = "RO_Archer_VulturesEye_LongRangeNoDisadv_15"
-local RANGE_PASSIVE_18 = "RO_Archer_VulturesEye_LongRangeNoDisadv_18"
+local RANGE_PASSIVE_09_L2 = "RO_Archer_VulturesEye_LongRangeNoDisadv_09_L2"
+local RANGE_PASSIVE_09_L5 = "RO_Archer_VulturesEye_LongRangeNoDisadv_09_L5"
+local RANGE_PASSIVE_15_L2 = "RO_Archer_VulturesEye_LongRangeNoDisadv_15_L2"
+local RANGE_PASSIVE_15_L5 = "RO_Archer_VulturesEye_LongRangeNoDisadv_15_L5"
+local RANGE_PASSIVE_18_L2 = "RO_Archer_VulturesEye_LongRangeNoDisadv_18_L2"
+local RANGE_PASSIVE_18_L5 = "RO_Archer_VulturesEye_LongRangeNoDisadv_18_L5"
 
 local ALL_RANGE_PASSIVES = {
-    RANGE_PASSIVE_09,
-    RANGE_PASSIVE_15,
-    RANGE_PASSIVE_18
+    RANGE_PASSIVE_09_L2,
+    RANGE_PASSIVE_09_L5,
+    RANGE_PASSIVE_15_L2,
+    RANGE_PASSIVE_15_L5,
+    RANGE_PASSIVE_18_L2,
+    RANGE_PASSIVE_18_L5
 }
 
 local REFRESH_INTERVAL_MS = 1200
@@ -31,14 +37,25 @@ local function hasPassive(character, passiveId)
     return result == 1
 end
 
-local function hasVultureStatus(character)
-    for status, _ in pairs(VULTURE_STATUSES) do
-        local active = pcallOsiris(Osi.HasActiveStatus, character, status)
-        if active == 1 then
-            return true
-        end
+local function getVultureTier(character)
+    -- L5/L9/L12 share the 50% range bucket.
+    if pcallOsiris(Osi.HasActiveStatus, character, "RO_ARCHER_VULTURES_EYE_L12") == 1 then
+        return "L5"
     end
-    return false
+
+    if pcallOsiris(Osi.HasActiveStatus, character, "RO_ARCHER_VULTURES_EYE_L9") == 1 then
+        return "L5"
+    end
+
+    if pcallOsiris(Osi.HasActiveStatus, character, "RO_ARCHER_VULTURES_EYE_L5") == 1 then
+        return "L5"
+    end
+
+    if pcallOsiris(Osi.HasActiveStatus, character, "RO_ARCHER_VULTURES_EYE") == 1 then
+        return "L2"
+    end
+
+    return nil
 end
 
 local function isPlayerOrFollower(character)
@@ -80,20 +97,21 @@ local function getRangedWeaponTemplateName(character)
     return ""
 end
 
-local function passiveForCharacter(character)
+local function passiveForCharacter(character, tier)
     local weaponName = getRangedWeaponTemplateName(character)
+    local isL5Plus = (tier == "L5")
 
     if weaponName ~= "" then
         if string.find(weaponName, "handcrossbow", 1, true) then
-            return RANGE_PASSIVE_09
+            return isL5Plus and RANGE_PASSIVE_09_L5 or RANGE_PASSIVE_09_L2
         end
 
         if string.find(weaponName, "shortbow", 1, true) then
-            return RANGE_PASSIVE_15
+            return isL5Plus and RANGE_PASSIVE_15_L5 or RANGE_PASSIVE_15_L2
         end
     end
 
-    return RANGE_PASSIVE_18
+    return isL5Plus and RANGE_PASSIVE_18_L5 or RANGE_PASSIVE_18_L2
 end
 
 local function refreshCharacter(character)
@@ -105,7 +123,8 @@ local function refreshCharacter(character)
         return
     end
 
-    if not hasVultureStatus(character) then
+    local tier = getVultureTier(character)
+    if not tier then
         removeAllRangePassives(character)
         tracked[character] = nil
         return
@@ -113,7 +132,7 @@ local function refreshCharacter(character)
 
     tracked[character] = true
 
-    local desired = passiveForCharacter(character)
+    local desired = passiveForCharacter(character, tier)
     if applied[character] == desired and hasPassive(character, desired) then
         return
     end

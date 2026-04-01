@@ -402,19 +402,19 @@
       "arrow_types": {
         "Fire Arrow": {
           "base_bonus_damage": "1d4",
-          "secondary_effect_at_6": "Burned on failed CON save"
+          "secondary_effect_at_5": "Burned on failed CON save"
         },
         "Poison Arrow": {
           "base_bonus_damage": "1d4",
-          "secondary_effect_at_6": "Poisoned on failed CON save"
+          "secondary_effect_at_5": "Poisoned on failed CON save"
         },
         "Shock Arrow": {
           "base_bonus_damage": "1d4",
-          "secondary_effect_at_6": "Shocked on failed CON save"
+          "secondary_effect_at_5": "Shocked on failed CON save"
         },
         "Radiant Arrow": {
           "base_bonus_damage": "1d4",
-          "secondary_effect_at_6": "Dazed on failed CON save"
+          "secondary_effect_at_5": "Dazed on failed CON save"
         }
       },
       "scaling": {
@@ -429,12 +429,7 @@
           {
             "level": 5,
             "effects": {
-              "bonus_damage_per_arrow": "1d6"
-            }
-          },
-          {
-            "level": 6,
-            "effects": {
+              "bonus_damage_per_arrow": "1d6",
               "secondary_effects_enabled": true,
               "secondary_effect_duration": "2 turns"
             }
