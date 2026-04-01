@@ -40,7 +40,33 @@
     <content contentuid="h1dbf1cf5g4aa7g4a4fgb4f4g547d59d80c43" version="1">Double Strafe improves to +1d4 bonus damage per hit at Archer level 5.</content>
     <content contentuid="ha170df07g05f8g43bagb3aag4cd7f386e09e" version="1">Double Strafe improves to +1d6 bonus damage per hit at Archer level 9.</content>
     <content contentuid="h89a0c03eg4a3ag4f60g8f66gd74ad7f6f3ef" version="1">Double Strafe improves to +1d8 bonus damage per hit at Archer level 12.</content>
+    <content contentuid="h2f33baaege660g902dgea5ag76768e9b70c5" version="1">Arrow Crafting</content>
+    <content contentuid="h82865d9bg9656gd389g0ba8g10f7aed91338" version="1">Unlocks Arrow Crafting. Prepare special arrows with 2 charges (1d4 bonus damage) for your next successful ranged hits.</content>
+    <content contentuid="hfd7e3217gbaa3g24ffg0098ga9173f10db4a" version="1">Arrow Crafting improves at Archer level 5: 1d6 bonus damage and secondary effects on failed Constitution save for 2 turns.</content>
+    <content contentuid="hf7599984g3b11g9493g9b3ag6fd8263238c5" version="1">Arrow Crafting improves at Archer level 9: 3 charges.</content>
+    <content contentuid="he54efba0gebc3g5026gd68bg1097bb393634" version="1">Arrow Crafting improves at Archer level 12: 1d8 bonus damage per empowered hit.</content>
+    <content contentuid="hf498fc4bg16ecg2d20gfa97g02f40ca96ad3" version="1">Fire Arrow</content>
+    <content contentuid="h50a1b31agc65agb874gaa2bg5f6a7a790e68" version="1">Prepare Fire Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d4 Fire damage.</content>
+    <content contentuid="h641761bbgd29fg013bg6408g40faa8e7dc37" version="1">Prepare Fire Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d6 Fire damage. On failed CON save, inflicts BURNING for 2 turns.</content>
+    <content contentuid="hc9380eddg0212g7ad5g81d4gb6f530902c39" version="1">Prepare Fire Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d6 Fire damage. On failed CON save, inflicts BURNING for 2 turns.</content>
+    <content contentuid="h4d42118bgb635g20d4g9d7fg61e2f7e9c32a" version="1">Prepare Fire Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d8 Fire damage. On failed CON save, inflicts BURNING for 2 turns.</content>
+    <content contentuid="hc6d2da93g9c74g05f9g49c2g8aec57ef231c" version="1">Poison Arrow</content>
+    <content contentuid="hb67ea1d9gd358g2e3cgf6e0gdd0c4cbd4d61" version="1">Prepare Poison Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d4 Poison damage.</content>
+    <content contentuid="hdd003099gdeb7g7fe4g03bag5e0aedc23b1d" version="1">Prepare Poison Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d6 Poison damage. On failed CON save, inflicts POISONED for 2 turns.</content>
+    <content contentuid="h3d4f3118gf2f3gd1dag7f8agb969d80a0975" version="1">Prepare Poison Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d6 Poison damage. On failed CON save, inflicts POISONED for 2 turns.</content>
+    <content contentuid="h3f2ab24fgca56ge957gab90g1c41874d9a33" version="1">Prepare Poison Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d8 Poison damage. On failed CON save, inflicts POISONED for 2 turns.</content>
+    <content contentuid="hd6ff5da8gcc42ge047gca94gb93e5e4f9025" version="1">Shock Arrow</content>
+    <content contentuid="h496664e8gd132gddbfg49c2g2773e11ad147" version="1">Prepare Shock Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d4 Lightning damage.</content>
+    <content contentuid="h9a954609gd947g9ab3g8aa9ge7b98b436c75" version="1">Prepare Shock Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d6 Lightning damage. On failed CON save, inflicts SHOCKED for 2 turns.</content>
+    <content contentuid="h12362568g1becg57b8gb0f6gafcaed55f4ca" version="1">Prepare Shock Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d6 Lightning damage. On failed CON save, inflicts SHOCKED for 2 turns.</content>
+    <content contentuid="hc172def9g357egc51fg996fg92d369bd4910" version="1">Prepare Shock Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d8 Lightning damage. On failed CON save, inflicts SHOCKED for 2 turns.</content>
+    <content contentuid="ha696ed76g4cc1g4e85g5138gf72456628b19" version="1">Radiant Arrow</content>
+    <content contentuid="h6094ae22g2e76g814ag4725gcb438e7dde33" version="1">Prepare Radiant Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d4 Radiant damage.</content>
+    <content contentuid="ha130c9b0g029bgd069g71e9ge77c51f67982" version="1">Prepare Radiant Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d6 Radiant damage. On failed CON save, inflicts DAZED for 2 turns.</content>
+    <content contentuid="h842986b0g4ec8ged8ag02a3g810466876e61" version="1">Prepare Radiant Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d6 Radiant damage. On failed CON save, inflicts DAZED for 2 turns.</content>
+    <content contentuid="hf270fe91gd90eg83deg441cg19d4e72ebc83" version="1">Prepare Radiant Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d8 Radiant damage. On failed CON save, inflicts DAZED for 2 turns.</content>
 </contentList>
+
 
 
 

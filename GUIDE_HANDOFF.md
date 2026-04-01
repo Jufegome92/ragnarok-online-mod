@@ -223,3 +223,52 @@ Orden de diagnóstico:
 3. Ver si falla herencia de bonos (context.Source vs target, OnDamage functors).
 4. Ver si falla por timing (resolver con listener SE + delay corto).
 5. Documentar hallazgo y dejar nota en este archivo.
+
+## 16) Arrow Crafting + Double Strafe (estado final estable)
+### Resumen
+- Arrow Crafting quedó migrado a Script Extender para controlar proc por impacto real.
+- Se eliminó la dependencia de passives OnDamage para aplicar daño elemental de Arrow Craft.
+- Consumo de cargas y daño elemental ahora se resuelven en flujo único de SE.
+
+### Problemas observados y causa raíz
+1. Doble proc con `Vulture's Eye` en segundo hit de `Double Strafe`.
+- Causa: múltiples eventos/functors sobre followup disparaban más de una aplicación elemental.
+
+2. Cargas consumidas sin daño elemental visible.
+- Causa: el enfoque con `UseSpell` técnico desde SE no estaba aplicando daño de forma confiable en este contexto.
+
+### Solución final aplicada
+- En `RO_ArrowCraft.lua`:
+  - `UsingSpellOnTarget` registra intentos válidos de ataque con `StoryActionID`.
+  - `AttackedBy` confirma hit real (`damageAmount > 0`) y ejecuta proc UNA sola vez por acción.
+  - El proc aplica `Status` técnico al objetivo (`RO_ARCHER_ARROWCRAFT_PROC_*`) con `OnApplyFunctors`.
+  - Luego consume exactamente 1 carga (`3->2`, `2->1`, `1->0`) y limpia estado de crafting al agotar.
+
+- En `Status_RO_Archer.txt`:
+  - Se agregaron statuses técnicos `RO_ARCHER_ARROWCRAFT_PROC_*` (16 variantes: 4 elementos x 4 tiers).
+  - Cada status usa `OnApplyFunctors` con daño elemental inmediato.
+  - Tiers con efecto secundario usan DC dinámica:
+    - `CalculateSpellDC(Ability.Wisdom,context.Source)`
+    - Equivale a `8 + Proficiency Bonus + Wisdom Modifier`.
+
+### Archivos clave de esta feature
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/ScriptExtender/Lua/RO_ArrowCraft.lua`
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/ScriptExtender/Lua/RO_DoubleStrafe.lua`
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/ScriptExtender/Lua/BootstrapServer.lua`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Status_RO_Archer.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Shout.txt`
+
+### Nota de mantenimiento
+- Los spells técnicos `Target_RO_ArrowCraft_Proc_*` en `Spell_Target.txt` quedaron como intento intermedio y no son necesarios para la versión final estable basada en status on-hit.
+- Mantener `RO_ArrowCraft.lua` como fuente de verdad para proc/consumo.
+
+### Checklist de regresión (rápido)
+1. Ataque normal con Fire/Poison/Shock/Radiant Arrow:
+- aplica daño elemental y consume 1 carga.
+2. `Double Strafe`:
+- aplica daño elemental en ambos hits (uno por hit) sin duplicar en followup.
+3. Con `Vulture's Eye` activo:
+- no duplica daño elemental adicional por hit.
+4. Agotar cargas:
+- remueve `RO_ARCHER_ARROW_CHARGE_*` y limpia estado de arrow crafting.

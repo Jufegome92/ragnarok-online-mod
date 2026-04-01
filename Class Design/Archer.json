@@ -346,14 +346,14 @@
           {
             "level": 5,
             "effects": {
-              "area_of_effect": "70-degree cone",
+              "area_of_effect": "60-degree cone",
               "bonus_damage": "1d4"
             }
           },
           {
             "level": 9,
             "effects": {
-              "area_of_effect": "90-degree cone",
+              "area_of_effect": "75-degree cone",
               "bonus_damage": "1d6"
             }
           },
@@ -361,6 +361,7 @@
             "level": 12,
             "effects": {
               "range": "15m",
+              "area_of_effect": "90-degree cone",
               "bonus_damage": "1d8"
             }
           }
