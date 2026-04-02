@@ -28,6 +28,7 @@ type "SpellData"
 data "SpellType" "Projectile"
 using "Projectile_RO_DoubleStrafe"
 data "Description" "ha6efbc95gf352g4379ga5ceg3dd9ba2f009b;1"
+data "UseCosts" "ActionPoint:1;RO_MP:1"
 
 new entry "Projectile_RO_DoubleStrafe_Followup"
 type "SpellData"

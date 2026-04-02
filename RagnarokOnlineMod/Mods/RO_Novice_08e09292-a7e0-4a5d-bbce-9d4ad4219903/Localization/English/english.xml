@@ -65,7 +65,19 @@
     <content contentuid="ha130c9b0g029bgd069g71e9ge77c51f67982" version="1">Prepare Radiant Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d6 Radiant damage. On failed CON save, inflicts DAZED for 2 turns.</content>
     <content contentuid="h842986b0g4ec8ged8ag02a3g810466876e61" version="1">Prepare Radiant Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d6 Radiant damage. On failed CON save, inflicts DAZED for 2 turns.</content>
     <content contentuid="hf270fe91gd90eg83deg441cg19d4e72ebc83" version="1">Prepare Radiant Arrow for 2 turns. Your next successful ranged hits consume charges and deal +1d8 Radiant damage. On failed CON save, inflicts DAZED for 2 turns.</content>
-</contentList>
+    <content contentuid="h4d10cb2agf791g4b1ag9a6ag514e1d3c9f20" version="1">Improve Concentration</content>
+    <content contentuid="h7b2e4fa1g8135g4fa6ga3f8g0ad8d64d6a21" version="1">Unlocks Improve Concentration. Spend 3 Mana Points as a Bonus Action to enter concentration for 2 turns, gaining +1 to ranged attack rolls and +1 AC.</content>
+    <content contentuid="h2f8d3cb4ga3d2g4e85g9c11g5d2a7e18b0c1" version="1">Improve Concentration improves at Archer level 6: +2 ranged attack rolls and +2 AC.</content>
+    <content contentuid="h8e4f1a73g66b5g4d0ag8ab9gf2f99415c3d2" version="1">Improve Concentration improves at Archer level 9: duration increases to 3 turns.</content>
+    <content contentuid="h5c9ae210g4bf0g4c10g99fag9d62b7e84a11" version="1">Improve Concentration improves at Archer level 12: Double Strafe costs 1 less Mana Point (minimum 1).</content>
+    <content contentuid="h1a47dc65g10d6g4db4ga744g5e8fb9d913c3" version="1">Focus your breathing and stance under pressure. For 2 turns, gain +1 to ranged attack rolls and +1 AC while maintaining Concentration. Costs 3 Mana Points.</content>
+    <content contentuid="h3fb8c2e1g22f0g4f77gb9dfg9c1b4054e2a4" version="1">Focus your breathing and stance under pressure. For 2 turns, gain +2 to ranged attack rolls and +2 AC while maintaining Concentration. Costs 3 Mana Points.</content>
+    <content contentuid="h9ab72d11g7edbg4f3agbf5fg84e2f6a314b5" version="1">Focus your breathing and stance under pressure. For 3 turns, gain +2 to ranged attack rolls and +2 AC while maintaining Concentration. Costs 3 Mana Points.</content>
+    <content contentuid="h6d2f8a90g9d45g4e38g95abg1bc3d0f94e16" version="1">Focus your breathing and stance under pressure. For 3 turns, gain +2 to ranged attack rolls and +2 AC while maintaining Concentration. Your Double Strafe also costs 1 less Mana Point (minimum 1). Costs 3 Mana Points.</content>
+    <content contentuid="h74d9ef31g3f74g4f0fga8dfg4c99f624f2b9" version="1">Concentration maintained: +1 to ranged attack rolls and +1 AC.</content>
+    <content contentuid="h0e7cd5f9ga2f1g4c35ga0b8gda67d0a93cd8" version="1">Concentration maintained: +2 to ranged attack rolls and +2 AC.</content>
+    <content contentuid="h5f4ce0d7g6868g4e38g9073g5f1a4013f80f" version="1">Concentration maintained: +2 to ranged attack rolls and +2 AC. Duration increased.</content>
+    <content contentuid="h3b2208f5g6230g4fd9gb42agf02cc57494a7" version="1">Concentration maintained: +2 to ranged attack rolls and +2 AC. Double Strafe MP efficiency improved.</content></contentList>
 
 
 

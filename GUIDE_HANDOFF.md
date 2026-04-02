@@ -272,3 +272,60 @@ Orden de diagnóstico:
 - no duplica daño elemental adicional por hit.
 4. Agotar cargas:
 - remueve `RO_ARCHER_ARROW_CHARGE_*` y limpia estado de arrow crafting.
+
+## 17) Archer Skill: Improve Concentration (L4/L6/L9/L12)
+### Resumen
+- Se implementó `Improve Concentration` como skill activa del Archer desde nivel 4.
+- Es `Bonus Action`, cuesta `3 MP`, requiere `Concentration`.
+- Escalado aplicado:
+  - L4: +1 ranged attack rolls, +1 AC, 2 turnos.
+  - L6: +2 ranged attack rolls, +2 AC, 2 turnos.
+  - L9: +2 ranged attack rolls, +2 AC, 3 turnos.
+  - L12: +2 ranged attack rolls, +2 AC, 3 turnos.
+
+### Implementación técnica
+1. `Status_RO_Archer.txt`
+- Nuevos statuses:
+  - `RO_ARCHER_IMPROVE_CONCENTRATION_L4`
+  - `RO_ARCHER_IMPROVE_CONCENTRATION_L6`
+  - `RO_ARCHER_IMPROVE_CONCENTRATION_L9`
+  - `RO_ARCHER_IMPROVE_CONCENTRATION_L12`
+- Boosts: `RollBonus(RangedWeaponAttack,...)`, `RollBonus(RangedOffHandWeaponAttack,...)`, `AC(...)`.
+
+2. `Spell_Shout.txt`
+- Nuevos spells:
+  - `Shout_RO_ImproveConcentration`
+  - `Shout_RO_ImproveConcentration_6`
+  - `Shout_RO_ImproveConcentration_9`
+  - `Shout_RO_ImproveConcentration_12`
+- Todos con `UseCosts "BonusActionPoint:1;RO_MP:3"` y `SpellFlags` con `IsConcentration`.
+
+3. `Passive.txt`
+- Nuevos passives por tier:
+  - `RO_Archer_ImproveConcentration`
+  - `RO_Archer_ImproveConcentration_L6`
+  - `RO_Archer_ImproveConcentration_L9`
+  - `RO_Archer_ImproveConcentration_L12`
+- Desbloquean el shout correspondiente por tier.
+
+4. `Progressions.lsx`
+- Archer L4: agrega `RO_Archer_ImproveConcentration`.
+- Archer L6: reemplaza por `RO_Archer_ImproveConcentration_L6`.
+- Archer L9: reemplaza por `RO_Archer_ImproveConcentration_L9`.
+- Archer L12: reemplaza por `RO_Archer_ImproveConcentration_L12`.
+
+5. `english.xml`
+- Se añadieron name/description entries para passives, shouts y statuses.
+
+### Eficiencia L12 (MP)
+- Se aplicó reducción de coste en `Double Strafe` tier 12 de forma explícita:
+  - `Projectile_RO_DoubleStrafe_12` ahora usa `ActionPoint:1;RO_MP:1`.
+- Esto implementa el `-1 MP (minimum 1)` para la skill de ataque de batalla actual del Archer.
+
+### Archivos tocados
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Status_RO_Archer.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Shout.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Projectile_RO_Archer.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Progressions/Progressions.lsx`
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml`

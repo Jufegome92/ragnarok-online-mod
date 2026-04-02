@@ -315,3 +315,35 @@ data "StatsFunctors" "IF(HasStatus('RO_ARCHER_ARROWCRAFT_FOLLOWUP_GATE',context.
 
 
 
+
+new entry "RO_Archer_ImproveConcentration"
+type "PassiveData"
+data "DisplayName" "h4d10cb2agf791g4b1ag9a6ag514e1d3c9f20;1"
+data "Description" "h7b2e4fa1g8135g4fa6ga3f8g0ad8d64d6a21;1"
+data "Icon" "Spell_Abjuration_BladeWard"
+data "Properties" "ForceShowInCC;Highlighted"
+data "Boosts" "UnlockSpell(Shout_RO_ImproveConcentration,Singular)"
+
+new entry "RO_Archer_ImproveConcentration_L6"
+type "PassiveData"
+data "DisplayName" "h4d10cb2agf791g4b1ag9a6ag514e1d3c9f20;1"
+data "Description" "h2f8d3cb4ga3d2g4e85g9c11g5d2a7e18b0c1;1"
+data "Icon" "Spell_Abjuration_BladeWard"
+data "Properties" "ForceShowInCC;Highlighted"
+data "Boosts" "UnlockSpell(Shout_RO_ImproveConcentration_6,Singular)"
+
+new entry "RO_Archer_ImproveConcentration_L9"
+type "PassiveData"
+data "DisplayName" "h4d10cb2agf791g4b1ag9a6ag514e1d3c9f20;1"
+data "Description" "h8e4f1a73g66b5g4d0ag8ab9gf2f99415c3d2;1"
+data "Icon" "Spell_Abjuration_BladeWard"
+data "Properties" "ForceShowInCC;Highlighted"
+data "Boosts" "UnlockSpell(Shout_RO_ImproveConcentration_9,Singular)"
+
+new entry "RO_Archer_ImproveConcentration_L12"
+type "PassiveData"
+data "DisplayName" "h4d10cb2agf791g4b1ag9a6ag514e1d3c9f20;1"
+data "Description" "h5c9ae210g4bf0g4c10g99fag9d62b7e84a11;1"
+data "Icon" "Spell_Abjuration_BladeWard"
+data "Properties" "ForceShowInCC;Highlighted"
+data "Boosts" "UnlockSpell(Shout_RO_ImproveConcentration_12,Singular)"
