@@ -117,4 +117,10 @@
     <content contentuid="h09b3d7f1cg0a98g4a9ga3f1g9b2d5e7c1a86" version="1">Element Bolt (Lightning, Intensified): if the hit lands, the target becomes Shocked for 2 turns. Costs 3 Mana Points.</content>
     <content contentuid="h1ac4e8g2dg1b09g4b0gb4a2g0c3e6f8d2b97" version="1">Element Bolt - Lightning (Overload)</content>
     <content contentuid="h2bd5f9a3eg2c10g4c1gc5b3g1d4f7a9e3c08" version="1">Element Bolt (Lightning, Overload): gain +1 to the attack roll; on hit applies Shocked for 2 turns, then arcs one extra impact to a secondary enemy within 5m when available. Costs 4 Mana Points.</content>
-</contentList>
+    <content contentuid="h3d1f5a9bg4e11g4a11ga7c3g1d4f6a8b2c10" version="1">Element Bolt - Base</content>
+    <content contentuid="h4e2a6b0cg5f22g4b22gb8d4g2e5a7b9c3d21" version="1">Choose an element for a base Element Bolt cast (2 MP).</content>
+    <content contentuid="h5f3b7c1dg6a33g4c33gc9e5g3f6b8c0d4e32" version="1">Element Bolt - Intensified</content>
+    <content contentuid="h6a4c8d2eg7b44g4d44gd0f6g4a7c9d1e5f43" version="1">Choose an element for an intensified Element Bolt cast (3 MP).</content>
+    <content contentuid="h7b5d9e3fg8c55g4e55ge1a7g5b8d0e2f6a54" version="1">Element Bolt - Overload</content>
+    <content contentuid="h8c6e0f4ag9d66g4f66gf2b8g6c9e1f3a7b65" version="1">Choose an element for an overload Element Bolt cast (4 MP).</content></contentList>
+
