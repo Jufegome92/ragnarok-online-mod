@@ -517,3 +517,33 @@ data "Description" "ha0f6c2e4ag7b90g4c29gd3f0g5a8c1e3b5d54;1"
 data "Icon" "Spell_Enchantment_HoldPerson"
 data "Properties" "Hidden"
 data "Boosts" "UnlockSpell(Target_RO_Magician_StoneCurse_12,Singular)"
+
+new entry "RO_Magician_DC_L2"
+type "PassiveData"
+data "Properties" "Hidden"
+data "Boosts" "SpellSaveDC(2)"
+
+new entry "RO_Magician_DC_L3"
+type "PassiveData"
+data "Properties" "Hidden"
+data "Boosts" "SpellSaveDC(3)"
+
+new entry "RO_Magician_DC_L5"
+type "PassiveData"
+data "Properties" "Hidden"
+data "Boosts" "SpellSaveDC(4)"
+
+new entry "RO_Magician_DC_L7"
+type "PassiveData"
+data "Properties" "Hidden"
+data "Boosts" "SpellSaveDC(5)"
+
+new entry "RO_Magician_DC_L9"
+type "PassiveData"
+data "Properties" "Hidden"
+data "Boosts" "SpellSaveDC(6)"
+
+new entry "RO_Magician_DC_L11"
+type "PassiveData"
+data "Properties" "Hidden"
+data "Boosts" "SpellSaveDC(7)"

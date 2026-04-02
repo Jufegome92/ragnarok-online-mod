@@ -204,7 +204,7 @@
           <attribute id="Boosts" type="LSString" value="ProficiencyBonus(SavingThrow,Intelligence);ProficiencyBonus(SavingThrow,Constitution);Proficiency(Daggers);Proficiency(Quarterstaffs);Proficiency(Clubs);ProficiencyBonus(Skill,Arcana);ProficiencyBonus(Skill,History)" />
           <attribute id="Level" type="uint8" value="2" />
           <attribute id="Name" type="LSString" value="RO_Magician" />
-          <attribute id="PassivesAdded" type="LSString" value="RO_MP_Formula_INT;RO_Magician_ElementBolt;RO_Magician_IncreaseSpiritualPower_L2;RO_Magician_Sight_L2" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_MP_Formula_INT;RO_Magician_ElementBolt;RO_Magician_IncreaseSpiritualPower_L2;RO_Magician_Sight_L2;RO_Magician_DC_L2" />
           <attribute id="ProgressionType" type="uint8" value="1" />
           <attribute id="Selectors" type="LSString" value="SelectSkillsExpertise(f974ebd6-3725-4b90-bb5c-2b647d41615d,1)" />
           <attribute id="TableUUID" type="guid" value="40181c31-dcee-4c81-9da1-8f3381a6585d" />
@@ -213,7 +213,8 @@
         <node id="Progression">
           <attribute id="Level" type="uint8" value="3" />
           <attribute id="Name" type="LSString" value="RO_Magician" />
-          <attribute id="PassivesAdded" type="LSString" value="RO_Magician_FrostDiver_L3;RO_Magician_StoneCurse_L3" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_Magician_FrostDiver_L3;RO_Magician_StoneCurse_L3;RO_Magician_DC_L3" />
+          <attribute id="PassivesRemoved" type="LSString" value="RO_Magician_DC_L2" />
           <attribute id="ProgressionType" type="uint8" value="1" />
           <attribute id="TableUUID" type="guid" value="40181c31-dcee-4c81-9da1-8f3381a6585d" />
           <attribute id="UUID" type="guid" value="35e7fb61-f0d5-417f-9a80-ab841de087aa" />
@@ -231,8 +232,8 @@
           <attribute id="ProgressionType" type="uint8" value="1" />
           <attribute id="TableUUID" type="guid" value="40181c31-dcee-4c81-9da1-8f3381a6585d" />
           <attribute id="UUID" type="guid" value="b7303dae-db95-4938-b6ac-928060bd13d7" />
-          <attribute id="PassivesAdded" type="LSString" value="RO_Magician_IncreaseSpiritualPower_L5" />
-          <attribute id="PassivesRemoved" type="LSString" value="RO_Magician_IncreaseSpiritualPower_L2" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_Magician_IncreaseSpiritualPower_L5;RO_Magician_DC_L5" />
+          <attribute id="PassivesRemoved" type="LSString" value="RO_Magician_IncreaseSpiritualPower_L2;RO_Magician_DC_L3" />
         </node>
         <node id="Progression">
           <attribute id="Level" type="uint8" value="6" />
@@ -246,6 +247,8 @@
         <node id="Progression">
           <attribute id="Level" type="uint8" value="7" />
           <attribute id="Name" type="LSString" value="RO_Magician" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_Magician_DC_L7" />
+          <attribute id="PassivesRemoved" type="LSString" value="RO_Magician_DC_L5" />
           <attribute id="ProgressionType" type="uint8" value="1" />
           <attribute id="TableUUID" type="guid" value="40181c31-dcee-4c81-9da1-8f3381a6585d" />
           <attribute id="UUID" type="guid" value="2b61cf36-e26f-4216-ac4e-42ee6c5134ff" />
@@ -263,8 +266,8 @@
           <attribute id="ProgressionType" type="uint8" value="1" />
           <attribute id="TableUUID" type="guid" value="40181c31-dcee-4c81-9da1-8f3381a6585d" />
           <attribute id="UUID" type="guid" value="f34f9100-88f8-44f2-a3ae-912b25f38936" />
-          <attribute id="PassivesAdded" type="LSString" value="RO_Magician_IncreaseSpiritualPower_L9;RO_Magician_Sight_L9;RO_Magician_FrostDiver_L9;RO_Magician_StoneCurse_L9" />
-          <attribute id="PassivesRemoved" type="LSString" value="RO_Magician_IncreaseSpiritualPower_L5;RO_Magician_Sight_L2;RO_Magician_FrostDiver_L3;RO_Magician_StoneCurse_L6" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_Magician_IncreaseSpiritualPower_L9;RO_Magician_Sight_L9;RO_Magician_FrostDiver_L9;RO_Magician_StoneCurse_L9;RO_Magician_DC_L9" />
+          <attribute id="PassivesRemoved" type="LSString" value="RO_Magician_IncreaseSpiritualPower_L5;RO_Magician_Sight_L2;RO_Magician_FrostDiver_L3;RO_Magician_StoneCurse_L6;RO_Magician_DC_L7" />
         </node>
         <node id="Progression">
           <attribute id="Level" type="uint8" value="10" />
@@ -276,6 +279,8 @@
         <node id="Progression">
           <attribute id="Level" type="uint8" value="11" />
           <attribute id="Name" type="LSString" value="RO_Magician" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_Magician_DC_L11" />
+          <attribute id="PassivesRemoved" type="LSString" value="RO_Magician_DC_L9" />
           <attribute id="ProgressionType" type="uint8" value="1" />
           <attribute id="TableUUID" type="guid" value="40181c31-dcee-4c81-9da1-8f3381a6585d" />
           <attribute id="UUID" type="guid" value="22348792-c699-4a40-879f-05b23fa61f7f" />
