@@ -13,7 +13,7 @@
           <attribute id="MaxLevel" type="uint32" value="0" />
           <attribute id="Name" type="FixedString" value="RO_MP" />
           <attribute id="PartyActionResource" type="bool" value="false" />
-          <attribute id="ReplenishType" type="FixedString" value="LongRest" />
+          <attribute id="ReplenishType" type="FixedString" value="Rest" />
           <attribute id="ShowOnActionResourcePanel" type="bool" value="true" />
           <attribute id="UUID" type="guid" value="67667d68-aeeb-41f8-9baf-7ec188df1324" />
           <attribute id="UpdatesSpellPowerLevel" type="bool" value="false" />

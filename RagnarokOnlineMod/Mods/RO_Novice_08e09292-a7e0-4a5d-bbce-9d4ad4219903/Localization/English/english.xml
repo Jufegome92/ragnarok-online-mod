@@ -21,13 +21,13 @@
     <content contentuid="h5ce0e1f0g7f9dg4de4ga7f4g0dc7259fd8b9" version="1">A disciplined marksman path adapted from Rune-Midgard traditions. This first job establishes ranged fundamentals and uses Wisdom-based Mana growth.</content>
     <content contentuid="h3a1c7e9bg2d4fg4b8ag6c2eg5f3a1b9e7d2" version="1">Owl's Eye</content>
     <content contentuid="h4b2d8f0cg3e5ag5c9bg7d3fg6a4b2c0f8e3" version="1">Unlocks the Owl's Eye precision stance. Spend 1 Mana Point as a Bonus Action to gain +2 to attack rolls and reduce your critical hit threshold by 1.</content>
-    <content contentuid="h5c3e9a1dg4f6bg6d0cg8e4ag7b5c3d1a9f4" version="1">Adopt a precision stance, reading the target's movement for more accurate shots. Gain +2 to attack rolls and reduce your critical hit threshold by 1. Costs 1 Mana Point.</content>
+    <content contentuid="h5c3e9a1dg4f6bg6d0cg8e4ag7b5c3d1a9f4" version="1">Adopt a precision stance, reading the target's movement for more accurate shots. Gain +2 to attack rolls and reduce your critical hit threshold by 1 until your next Short Rest. Costs 1 Mana Point.</content>
     <content contentuid="h6d4f0b2eg5a7cg7e1dg9f5bg8c6d4e2b0a5" version="1">Precision stance active. +2 to attack rolls. Critical hits on a 19 or 20.</content>
     <content contentuid="h7e5a1c3fg6b8dg8f2eg0a6cg9d7e5f3c1b6" version="1">Owl's Eye</content>
     <content contentuid="h8f6b2d4ag7c9eg9a3fg1b7dg0e8f6a4d2c7" version="1">Leave your Owl's Eye precision stance.</content>
     <content contentuid="h9b57c8d1ga332g4d98ga4c7g34ea52ac7295" version="1">Vulture's Eye</content>
     <content contentuid="h932286c6g5c5eg4a77gb3d0gd4e35ab9d6c9" version="1">Unlocks the Vulture's Eye pressure stance. Spend 1 Mana Point as a Bonus Action to ignore point-blank disadvantage with crossbows and deal +1d4 weapon damage against targets beyond 10m.</content>
-    <content contentuid="h82765052ge6e8g40f6ga992g7c006980033d" version="1">Adopt a long-range pressure stance focused on distant targets. Ignore point-blank disadvantage with crossbows and deal +1d4 weapon damage to targets beyond 10m. Costs 1 Mana Point.</content>
+    <content contentuid="h82765052ge6e8g40f6ga992g7c006980033d" version="1">Adopt a long-range pressure stance focused on distant targets. Ignore point-blank disadvantage with crossbows and deal +1d4 weapon damage to targets beyond 10m until your next Short Rest. Costs 1 Mana Point.</content>
     <content contentuid="h7d4da68bg4f65g43f8g8224g7c4f969e2d7b" version="1">Long-range pressure stance active. Ignore point-blank disadvantage with crossbows and deal +1d4 weapon damage beyond 10m.</content>
     <content contentuid="h4f77e53dg2e95g4f4ag9a08g80d3d5c9ab0f" version="1">Vulture's Eye</content>
     <content contentuid="hfb6cd4ebg8d61g4cf3g8f0bgf6d4f14db93a" version="1">Leave your Vulture's Eye pressure stance.</content>
@@ -77,9 +77,10 @@
     <content contentuid="h74d9ef31g3f74g4f0fga8dfg4c99f624f2b9" version="1">Concentration maintained: +1 to ranged attack rolls and +1 AC.</content>
     <content contentuid="h0e7cd5f9ga2f1g4c35ga0b8gda67d0a93cd8" version="1">Concentration maintained: +2 to ranged attack rolls and +2 AC.</content>
     <content contentuid="h5f4ce0d7g6868g4e38g9073g5f1a4013f80f" version="1">Concentration maintained: +2 to ranged attack rolls and +2 AC. Duration increased.</content>
-    <content contentuid="h3b2208f5g6230g4fd9gb42agf02cc57494a7" version="1">Concentration maintained: +2 to ranged attack rolls and +2 AC. Double Strafe MP efficiency improved.</content></contentList>
-
-
-
-
+    <content contentuid="h3b2208f5g6230g4fd9gb42agf02cc57494a7" version="1">Concentration maintained: +2 to ranged attack rolls and +2 AC. Double Strafe MP efficiency improved.</content>
+    <content contentuid="h2ae6a8d5g1cf2g4d65g8f0eg9c2a4b6d7e81" version="1">Arrow Shower</content>
+    <content contentuid="h7b6f0aa2gc109g42a7g8d3fg4ec07f6f53b2" version="1">Unleash a 60-degree cone of arrows (10m). Each enemy hit takes ranged weapon damage +1d4 and must pass a Strength save or be pushed 2m. Costs 4 Mana Points.</content>
+    <content contentuid="h4b7fb3e1g90d1g4c5ag83cdg58d4ef86a0c9" version="1">Unleash a 75-degree cone of arrows (10m). Each enemy hit takes ranged weapon damage +1d6 and must pass a Strength save or be pushed 2m. Costs 4 Mana Points.</content>
+    <content contentuid="h1ec5b9a3gaf71g4f77ga31bg903ff1c2d6be" version="1">Unleash a 90-degree cone of arrows (15m). Each enemy hit takes ranged weapon damage +1d8 and must pass a Strength save or be pushed 2m. Costs 4 Mana Points.</content>
+</contentList>
 
