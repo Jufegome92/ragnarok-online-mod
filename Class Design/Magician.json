@@ -472,7 +472,7 @@
       "requires": [
         "Self, ally, or valid target tile within 9m"
       ],
-      "duration": "2 turns",
+      "duration": "3 turns",
       "range": "9m",
       "description": "El Magician erige una barrera temporal que bloquea impactos cuerpo a cuerpo y le permite sobrevivir en espacios donde normalmente sería aniquilado.",
       "base_effects": {
@@ -496,13 +496,14 @@
           {
             "level": 9,
             "effects": {
-              "duration_turns": 3
+              "duration_turns": 4,
+              "protected_melee_hits_negated": 4
             }
           },
           {
             "level": 12,
             "effects": {
-              "protected_melee_hits_negated": 4
+              "protected_melee_hits_negated": 5
             }
           }
         ]
@@ -592,7 +593,7 @@
                   "duration": "2 turns",
                   "area_radius": "3m",
                   "strikes_per_turn": 3,
-                  "damage_per_strike": "1d6"
+                  "damage_per_strike": "1d8"
                 }
               },
               {
@@ -601,7 +602,7 @@
                   "duration": "3 turns",
                   "area_radius": "4m",
                   "strikes_per_turn": 3,
-                  "damage_per_strike": "1d8"
+                  "damage_per_strike": "1d10"
                 }
               }
             ]

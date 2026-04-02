@@ -133,7 +133,20 @@
     <content contentuid="h18ebf5a9dg2f55g4eb1gf6a0g5b7d9e1a3c54" version="1">Sight</content>
     <content contentuid="h29fc06b0eg3a66g4fc2ga7b1g6c8e0f2b4d65" version="1">Disturb light and illusion around you. For 3 turns, reveal hidden and invisible enemies in a 6m aura. Costs 1 Mana Point.</content>
     <content contentuid="h3a0d17c1fg4b77g4ad3gb8c2g7d9f1a3c5e76" version="1">Disturb light and illusion around you. For 4 turns, reveal hidden and invisible enemies in a 6m aura. Costs 1 Mana Point.</content>
-    <content contentuid="h4b1e28d2ag5c88g4be4gc9d3g8e0a2b4d6f87" version="1">Disturb light and illusion around you. For 4 turns, reveal hidden and invisible enemies in a 9m aura. Costs 1 Mana Point.</content></contentList>
-
-
-
+    <content contentuid="h4b1e28d2ag5c88g4be4gc9d3g8e0a2b4d6f87" version="1">Disturb light and illusion around you. For 4 turns, reveal hidden and invisible enemies in a 9m aura. Costs 1 Mana Point.</content>
+    <content contentuid="h5c1f7a9dg2b31g4f14ga8c5g9d2e6f1b3a77" version="1">Frost Diver</content>
+    <content contentuid="h6d2a8b0eg3c42g4a25gb9d6g0e3f7a2c4b88" version="1">Unlocks Frost Diver. Deal 2d6 + spellcasting modifier Cold damage; target must pass a Constitution save or become Frozen for 1 turn. Costs 4 Mana Points.</content>
+    <content contentuid="h7e3b9c1fg4d53g4b36gc0e7g1f4a8b3d5c99" version="1">Frost Diver improves at Magician level 9: damage becomes 3d6 + spellcasting modifier and Frozen duration becomes 2 turns.</content>
+    <content contentuid="h8f4c0d2ag5e64g4c47gd1f8g2a5b9c4e6d10" version="1">Frost Diver improves at Magician level 12: damage becomes 4d6 + spellcasting modifier.</content>
+    <content contentuid="h9a5d1e3bg6f75g4d58ge2a9g3b6c0d5f7e21" version="1">Blast a target with violent cold. Deal 2d6 + spellcasting modifier Cold damage. On failed Constitution save, the target becomes Frozen for 1 turn. Costs 4 Mana Points.</content>
+    <content contentuid="h0b6e2f4cg7a86g4e69gf3b0g4c7d1e6a8f32" version="1">Blast a target with violent cold. Deal 3d6 + spellcasting modifier Cold damage. On failed Constitution save, the target becomes Frozen for 2 turns. Costs 4 Mana Points.</content>
+    <content contentuid="h1c7f3a5dg8b97g4f70ga4c1g5d8e2f7b9a43" version="1">Blast a target with violent cold. Deal 4d6 + spellcasting modifier Cold damage. On failed Constitution save, the target becomes Frozen for 2 turns. Costs 4 Mana Points.</content>
+    <content contentuid="h2d8a4c6eg9f12g4a81gb5d2g7e0a3c5f7b66" version="1">Stone Curse</content>
+    <content contentuid="h7c3f9b1dg4e67g4fd6ga0c7g2d5f8b0e2a21" version="1">Unlocks Stone Curse. Target must pass a Constitution save or become Restrained for 2 turns. Costs 3 Mana Points.</content>
+    <content contentuid="h8d4a0c2eg5f78g4a07gb1d8g3e6a9c1f3b32" version="1">Stone Curse improves at Magician level 6: on failed primary save, target must pass a second Constitution save or become Incapacitated until the end of its next turn.</content>
+    <content contentuid="h9e5b1d3fg6a89g4b18gc2e9g4f7b0d2a4c43" version="1">Stone Curse improves at Magician level 9: while cursed, the target takes an extra 1d4 bludgeoning damage whenever hit by a physical attack.</content>
+    <content contentuid="ha0f6c2e4ag7b90g4c29gd3f0g5a8c1e3b5d54" version="1">Stone Curse improves at Magician level 12: Restrained duration increases to 3 turns (other Stone Curse penalties retained).</content>
+    <content contentuid="h3e9b5d7fg0a23g4b92gc6e3g8f1b4d6a8c77" version="1">Attempt to petrify a target with arcane mineral force. On failed Constitution save, the target becomes Restrained for 2 turns. Costs 3 Mana Points.</content>
+    <content contentuid="h4f0c6e8ag1b34g4ca3gd7f4g9a2c5e7b9d88" version="1">Attempt to petrify a target with arcane mineral force. On failed Constitution save, the target becomes Restrained for 2 turns. Then it must pass a second Constitution save or become Incapacitated until the end of its next turn. Costs 3 Mana Points.</content>
+    <content contentuid="h5a1d7f9bg2c45g4db4ge8a5g0b3d6f8c0e99" version="1">Attempt to petrify a target with arcane mineral force. On failed Constitution save, the target becomes Restrained for 2 turns. Then it must pass a second Constitution save or become Incapacitated until the end of its next turn. While cursed, the target also takes an extra 1d4 bludgeoning damage whenever hit by a physical attack. Costs 3 Mana Points.</content>
+    <content contentuid="h6b2e8a0cg3d56g4ec5gf9b6g1c4e7a9d1f10" version="1">Attempt to petrify a target with arcane mineral force. On failed Constitution save, the target becomes Restrained for 3 turns. Then it must pass a second Constitution save or become Incapacitated until the end of its next turn. While cursed, the target also takes an extra 1d4 bludgeoning damage whenever hit by a physical attack. Costs 3 Mana Points.</content></contentList>

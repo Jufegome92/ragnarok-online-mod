@@ -486,3 +486,45 @@ Pegar esto al inicio del nuevo chat:
 2. "Trabajaremos en `<skill/feature>` de `<Class Design/*.json>` sin romper lo ya estable." 
 3. "Antes de editar, lista archivos objetivo y estrategia (Stats vs SE)." 
 4. "Después de cambios, actualiza `GUIDE_HANDOFF.md` con causa raíz + solución + archivos tocados + tests." 
+
+## 20) Magician Skill: Frost Diver (L3/L9/L12)
+### Resumen
+- Se implementó `Frost Diver` para Magician como skill de control single-target con save de Constitución.
+- Coste: `4 MP`, tipo `Action`, rango `18m`.
+- Fórmula de DC en runtime: `SourceSpellDC()` (equivale a `8 + proficiency + spellcasting ability modifier`).
+
+### Escalado aplicado
+- L3: `2d6 + SpellCastingAbilityModifier` (Cold), y en save fallido aplica `FROZEN` por 1 turno.
+- L9: `3d6 + SpellCastingAbilityModifier` (Cold), y en save fallido aplica `FROZEN` por 2 turnos.
+- L12: `4d6 + SpellCastingAbilityModifier` (Cold), y en save fallido aplica `FROZEN` por 2 turnos.
+
+### Implementación técnica
+1. `Spell_Target.txt`
+- Nuevos spells:
+  - `Target_RO_Magician_FrostDiver`
+  - `Target_RO_Magician_FrostDiver_9`
+  - `Target_RO_Magician_FrostDiver_12`
+- `SpellRoll`: `not SavingThrow(Ability.Constitution, SourceSpellDC())`.
+- `SpellSuccess`/`SpellFail` configurados para mantener daño en ambos casos y status solo en save fallido.
+
+2. `Passive.txt`
+- Nuevos passives de unlock por tier:
+  - `RO_Magician_FrostDiver_L3`
+  - `RO_Magician_FrostDiver_L9`
+  - `RO_Magician_FrostDiver_L12`
+
+3. `Progressions.lsx`
+- Magician L3: agrega `RO_Magician_FrostDiver_L3`.
+- Magician L9: agrega `RO_Magician_FrostDiver_L9` y remueve `RO_Magician_FrostDiver_L3`.
+- Magician L12: agrega `RO_Magician_FrostDiver_L12` y remueve `RO_Magician_FrostDiver_L9`.
+
+4. `english.xml`
+- Se añadieron entries de localización para:
+  - nombre y descripciones de passive por tier,
+  - nombre del spell y descripciones por tier.
+
+### Archivos tocados
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Target.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Progressions/Progressions.lsx`
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml`
