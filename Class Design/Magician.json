@@ -271,23 +271,23 @@
         "Fire": {
           "identity": "Highest raw single-target pressure",
           "damage_type": "Fire",
-          "base_rider": "No additional rider at base tier",
-          "intensified_rider": "+1 flat damage per hit for this cast",
-          "overload_rider": "On hit, target must pass a Constitution save or become Burned for 1 turn"
+          "base_rider": "+1 spell attack bonus for this cast",
+          "intensified_rider": "If at least half the hits land, target becomes Burning for 2 turn",
+          "overload_rider": "+1 spell attack bonus for this cast, target becomes Burning Fiercely for 2 turn"
         },
         "Cold": {
           "identity": "Single-target slowing and setup",
           "damage_type": "Cold",
-          "base_rider": "If at least half the hits land, target becomes Chilled for 1 turn",
-          "intensified_rider": "Chilled duration becomes 2 turns for this cast",
-          "overload_rider": "If the target is already Chilled, it must pass a Constitution save or become Rooted for 1 turn"
+          "base_rider": "+1 spell attack bonus for this cast",
+          "intensified_rider": "If at least half the hits land, target becomes Chilled for 2 turn",
+          "overload_rider": "+1 spell attack bonus for this cast, target becomes Chilled and Ensnared for 2 turns"
         },
         "Lightning": {
           "identity": "Disruption and volatility",
           "damage_type": "Lightning",
-          "base_rider": "If at least half the hits land, target becomes Shocked for 1 turn",
-          "intensified_rider": "Shocked duration becomes 2 turns for this cast",
-          "overload_rider": "One extra impact arcs to a secondary enemy within 3m of the main target"
+          "base_rider": "+1 spell attack bonus for this cast",
+          "intensified_rider": "If at least half the hits land, target becomes Shocked for 2 turns",
+          "overload_rider": "+1 spell attack bonus for this cast, One extra impact arcs to a secondary enemy within 5m of the main target"
         },
         "Force": {
           "identity": "Most reliable universal option",

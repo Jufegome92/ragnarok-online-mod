@@ -89,4 +89,32 @@
     <content contentuid="h6ea5a1d4g12f2g4db0gaef0g4e3228f8d743" version="1">Unlocks Arrow Repel. Close-range ranged strike that pushes enemies back 3m and deals +1d4 bonus damage. Costs 2 Mana Points.</content>
     <content contentuid="h7d882cc6gc067g4978ga236g90e0f2d50b42" version="1">Arrow Repel improves at Archer level 9: push increases to 4m, bonus damage becomes +1d6, and the attack is made with Advantage.</content>
     <content contentuid="h9f03ca63g2e0fg4f71ga6f3g6d96323b1d9e" version="1">Arrow Repel improves at Archer level 12: bonus damage becomes +1d8 and failed CON save applies Chest Trauma for 2 turns.</content>
+    <content contentuid="h6d8ad4e5g1bb4g4f9cg9e12g2a7a1d54c101" version="1">Magician</content>
+    <content contentuid="h9d21b63cg5b44g4bbfg8c56g3f4ad71e9022" version="1">A fragile first-job caster from Rune-Midgard focused on elemental control and Intelligence-based Mana growth.</content>
+    <content contentuid="h1f8c2a3bg4d5eg4a61g91fag8f2b3c6d9a11" version="1">Element Bolt - Force</content>
+    <content contentuid="h2b7d9e1ag5c6fg4e72ga2b3g7d8e4f1a6b22" version="1">Launch a condensed force bolt. Gain +1 to the attack roll; on hit deal 2d4 + spellcasting modifier Force damage. Costs 2 Mana Points.</content>
+    <content contentuid="h3c9e1f7ag6b42g4fa8ga3f4g2d1e9a7b5c33" version="1">Element Bolt</content>
+    <content contentuid="h4d8f2a6bg7c53g4ab9gb4e5g3f2a1b8c6d44" version="1">Unlocks Element Bolt Overchannel variants for Magician: Force, Fire, Cold, and Lightning in Base (2 MP), Intensified (3 MP), and Overload (4 MP).</content>
+    <content contentuid="h5e2a1d7cg8f21g4b37ga5d6g1c2e3f4a5b55" version="1">Element Bolt - Force (Intensified)</content>
+    <content contentuid="h6f3b2e8dg9a32g4c48gb6e7g2d3f4a5b6c66" version="1">Element Bolt (Force, Intensified): adds +1 damage per die to this cast (2d4 becomes 2d4+2), then + spellcasting modifier. Costs 3 Mana Points.</content>
+    <content contentuid="h7a4c3f9eg0b43g4d59gc7f8g3e4a5b6c7d77" version="1">Element Bolt - Force (Overload)</content>
+    <content contentuid="h8b5d4a0fg1c54g4e60gd8a9g4f5b6c7d8e88" version="1">Element Bolt (Force, Overload): gain +1 to the attack roll. On hit, damage is resolved as if the target were vulnerable to Force (double Force damage). Costs 4 Mana Points.</content>
+    <content contentuid="h1e4f8a2bg5d33g4da1ga2c6g4e7f0b2a6d31" version="1">Element Bolt - Fire</content>
+    <content contentuid="h2f5a9b3cg6e44g4eb2gb3d7g5f8a1c3b7e42" version="1">Launch a condensed fire bolt. Gain +1 to the attack roll; on hit deal 2d4 + spellcasting modifier Fire damage. Costs 2 Mana Points.</content>
+    <content contentuid="h3a6b0c4dg7f55g4fc3gc4e8g6a9b2d4c8f53" version="1">Element Bolt - Fire (Intensified)</content>
+    <content contentuid="h4b7c1d5eg8a66g4ad4gd5f9g7b0c3e5d9a64" version="1">Element Bolt (Fire, Intensified): if the hit lands, the target becomes Burning for 2 turns. Costs 3 Mana Points.</content>
+    <content contentuid="h5c8d2e6fg9b77g4be5ge6a0g8c1d4f6e0b75" version="1">Element Bolt - Fire (Overload)</content>
+    <content contentuid="h6d9e3f7ag0c88g4cf6gf7b1g9d2e5a7f1c86" version="1">Element Bolt (Fire, Overload): gain +1 to the attack roll; on hit applies Burning for 2 turns and an extra burst of Fire damage to represent Burning Fiercely. Costs 4 Mana Points.</content>
+    <content contentuid="h7e0f4a8bg1d99g4d07ga8c2g0e3f6b8a2d97" version="1">Element Bolt - Cold</content>
+    <content contentuid="h8f1a5b9cg2e10g4e18gb9d3g1f4a7c9b3e08" version="1">Launch a condensed cold bolt. Gain +1 to the attack roll; on hit deal 2d4 + spellcasting modifier Cold damage. Costs 2 Mana Points.</content>
+    <content contentuid="h9a2b6c0dg3f21g4f29gc0e4g2a5b8d0c4f19" version="1">Element Bolt - Cold (Intensified)</content>
+    <content contentuid="ha3b7d1e5fg4a32g4a3agd1f5g3b6c9e1d5a20" version="1">Element Bolt (Cold, Intensified): if the hit lands, the target becomes Chilled for 2 turns. Costs 3 Mana Points.</content>
+    <content contentuid="hb4c8e2f6ag5b43g4b4gbe2a6g4c7d0f2e6b31" version="1">Element Bolt - Cold (Overload)</content>
+    <content contentuid="hc5d9f3a7bg6c54g4c5gcf3b7g5d8e1a3f7c42" version="1">Element Bolt (Cold, Overload): gain +1 to the attack roll; on hit applies Chilled and Ensnared for 2 turns. Costs 4 Mana Points.</content>
+    <content contentuid="hd6e0a4b8cg7d65g4d6gd0c8g6e9a2b4g8d53" version="1">Element Bolt - Lightning</content>
+    <content contentuid="he7f1b5c9dg8e76g4e7ge1d9g7f0b3c5a9e64" version="1">Launch a condensed lightning bolt. Gain +1 to the attack roll; on hit deal 2d4 + spellcasting modifier Lightning damage. Costs 2 Mana Points.</content>
+    <content contentuid="hf8a2c6e0bg9f87g4f8gf2e0g8a1c4d6b0f75" version="1">Element Bolt - Lightning (Intensified)</content>
+    <content contentuid="h09b3d7f1cg0a98g4a9ga3f1g9b2d5e7c1a86" version="1">Element Bolt (Lightning, Intensified): if the hit lands, the target becomes Shocked for 2 turns. Costs 3 Mana Points.</content>
+    <content contentuid="h1ac4e8g2dg1b09g4b0gb4a2g0c3e6f8d2b97" version="1">Element Bolt - Lightning (Overload)</content>
+    <content contentuid="h2bd5f9a3eg2c10g4c1gc5b3g1d4f7a9e3c08" version="1">Element Bolt (Lightning, Overload): gain +1 to the attack roll; on hit applies Shocked for 2 turns, then arcs one extra impact to a secondary enemy within 5m when available. Costs 4 Mana Points.</content>
 </contentList>

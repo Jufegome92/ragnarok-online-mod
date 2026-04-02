@@ -1,4 +1,4 @@
-﻿new entry "RO_Archer_OwlsEye"
+new entry "RO_Archer_OwlsEye"
 type "PassiveData"
 data "DisplayName" "h3a1c7e9bg2d4fg4b8ag6c2eg5f3a1b9e7d2;1"
 data "Description" "h4b2d8f0cg3e5ag5c9bg7d3fg6a4b2c0f8e3;1"
@@ -397,3 +397,11 @@ data "Icon" "Action_MobileShooting"
 data "Properties" "Hidden"
 data "Boosts" "UnlockSpell(Projectile_RO_ArrowRepel_12,Singular);IF(SpellId('Projectile_RO_ArrowRepel_6') or SpellId('Projectile_RO_ArrowRepel_9') or SpellId('Projectile_RO_ArrowRepel_12')):IgnorePointBlankDisadvantage(Loading)"
 
+
+new entry "RO_Magician_ElementBolt"
+type "PassiveData"
+data "DisplayName" "h3c9e1f7ag6b42g4fa8ga3f4g2d1e9a7b5c33;1"
+data "Description" "h4d8f2a6bg7c53g4ab9gb4e5g3f2a1b8c6d44;1"
+data "Icon" "Spell_Evocation_ChromaticOrb"
+data "Properties" "ForceShowInCC;Highlighted"
+data "Boosts" "UnlockSpell(Projectile_RO_Magician_ElementBolt,Singular);UnlockSpell(Projectile_RO_Magician_ElementBolt_Intensified,Singular);UnlockSpell(Projectile_RO_Magician_ElementBolt_Overload,Singular);UnlockSpell(Projectile_RO_Magician_ElementBolt_Fire,Singular);UnlockSpell(Projectile_RO_Magician_ElementBolt_Fire_Intensified,Singular);UnlockSpell(Projectile_RO_Magician_ElementBolt_Fire_Overload,Singular);UnlockSpell(Projectile_RO_Magician_ElementBolt_Cold,Singular);UnlockSpell(Projectile_RO_Magician_ElementBolt_Cold_Intensified,Singular);UnlockSpell(Projectile_RO_Magician_ElementBolt_Cold_Overload,Singular);UnlockSpell(Projectile_RO_Magician_ElementBolt_Lightning,Singular);UnlockSpell(Projectile_RO_Magician_ElementBolt_Lightning_Intensified,Singular);UnlockSpell(Projectile_RO_Magician_ElementBolt_Lightning_Overload,Singular);IF(SpellId('Projectile_RO_Magician_ElementBolt') or SpellId('Projectile_RO_Magician_ElementBolt_Overload') or SpellId('Projectile_RO_Magician_ElementBolt_Fire') or SpellId('Projectile_RO_Magician_ElementBolt_Fire_Overload') or SpellId('Projectile_RO_Magician_ElementBolt_Cold') or SpellId('Projectile_RO_Magician_ElementBolt_Cold_Overload') or SpellId('Projectile_RO_Magician_ElementBolt_Lightning') or SpellId('Projectile_RO_Magician_ElementBolt_Lightning_Overload')):RollBonus(Attack,1)"
