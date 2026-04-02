@@ -122,5 +122,18 @@
     <content contentuid="h5f3b7c1dg6a33g4c33gc9e5g3f6b8c0d4e32" version="1">Element Bolt - Intensified</content>
     <content contentuid="h6a4c8d2eg7b44g4d44gd0f6g4a7c9d1e5f43" version="1">Choose an element for an intensified Element Bolt cast (3 MP).</content>
     <content contentuid="h7b5d9e3fg8c55g4e55ge1a7g5b8d0e2f6a54" version="1">Element Bolt - Overload</content>
-    <content contentuid="h8c6e0f4ag9d66g4f66gf2b8g6c9e1f3a7b65" version="1">Choose an element for an overload Element Bolt cast (4 MP).</content></contentList>
+    <content contentuid="h8c6e0f4ag9d66g4f66gf2b8g6c9e1f3a7b65" version="1">Choose an element for an overload Element Bolt cast (4 MP).</content>    <content contentuid="h9f2a4b6cg1d77g4a10gb5c3g7e0a2d4c6b11" version="1">Increase Spiritual Power</content>
+    <content contentuid="ha0b3c5d7eg2e88g4b21gc6d4g8f1b3e5d7c22" version="1">Deepens your spiritual reserve. Maximum Mana Points increase by 2.</content>
+    <content contentuid="hb1c4d6e8fg3f99g4c32gd7e5g9a2c4f6e8d33" version="1">Increase Spiritual Power improves at Magician level 5: maximum Mana Points increase by 4.</content>
+    <content contentuid="hc2d5e7f9ag4a10g4d43ge8f6g0b3d5a7f9e44" version="1">Increase Spiritual Power improves at Magician level 9: maximum Mana Points increase by 6.</content>
+    <content contentuid="hd3e6f8a0bg5b21g4e54gf9a7g1c4e6b8a0f55" version="1">Increase Spiritual Power improves at Magician level 12: maximum Mana Points increase by 8.</content>    <content contentuid="he4a7c1d5fg8b11g4a77gb2c6g1d3f5a7c9e10" version="1">Sight</content>
+    <content contentuid="hf5b8d2e6ag9c22g4b88gc3d7g2e4a6b8d0f21" version="1">Unlocks Sight. Spend 1 Mana Point as a Bonus Action to reveal hidden and invisible enemies around you in a 6m aura for 3 turns.</content>
+    <content contentuid="h06c9e3f7bg0d33g4c99gd4e8g3f5b7c9e1a32" version="1">Sight improves at Magician level 9: duration increases to 4 turns.</content>
+    <content contentuid="h17dae4a8cg1e44g4da0ge5f9g4a6c8d0f2b43" version="1">Sight improves at Magician level 12: reveal aura radius increases to 9m.</content>
+    <content contentuid="h18ebf5a9dg2f55g4eb1gf6a0g5b7d9e1a3c54" version="1">Sight</content>
+    <content contentuid="h29fc06b0eg3a66g4fc2ga7b1g6c8e0f2b4d65" version="1">Disturb light and illusion around you. For 3 turns, reveal hidden and invisible enemies in a 6m aura. Costs 1 Mana Point.</content>
+    <content contentuid="h3a0d17c1fg4b77g4ad3gb8c2g7d9f1a3c5e76" version="1">Disturb light and illusion around you. For 4 turns, reveal hidden and invisible enemies in a 6m aura. Costs 1 Mana Point.</content>
+    <content contentuid="h4b1e28d2ag5c88g4be4gc9d3g8e0a2b4d6f87" version="1">Disturb light and illusion around you. For 4 turns, reveal hidden and invisible enemies in a 9m aura. Costs 1 Mana Point.</content></contentList>
+
+
 
