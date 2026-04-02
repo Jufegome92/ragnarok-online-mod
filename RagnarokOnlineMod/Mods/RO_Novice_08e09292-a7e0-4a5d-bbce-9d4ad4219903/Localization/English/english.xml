@@ -82,5 +82,11 @@
     <content contentuid="h7b6f0aa2gc109g42a7g8d3fg4ec07f6f53b2" version="1">Unleash a 60-degree cone of arrows (10m). Each enemy hit takes ranged weapon damage +1d4 and must pass a Strength save or be pushed 2m. Costs 4 Mana Points.</content>
     <content contentuid="h4b7fb3e1g90d1g4c5ag83cdg58d4ef86a0c9" version="1">Unleash a 75-degree cone of arrows (10m). Each enemy hit takes ranged weapon damage +1d6 and must pass a Strength save or be pushed 2m. Costs 4 Mana Points.</content>
     <content contentuid="h1ec5b9a3gaf71g4f77ga31bg903ff1c2d6be" version="1">Unleash a 90-degree cone of arrows (15m). Each enemy hit takes ranged weapon damage +1d8 and must pass a Strength save or be pushed 2m. Costs 4 Mana Points.</content>
+    <content contentuid="h4c5a8d92g8b93g4af7ga6b4g8f0f6e10d1a2" version="1">Arrow Repel</content>
+    <content contentuid="h5a0d7c2bg4d11g4c95g8a2dg6d9a3f71f9a8" version="1">Repel a nearby enemy with a close-range shot. On hit, deal ranged weapon damage +1d4 and push the target 3m. Costs 2 Mana Points.</content>
+    <content contentuid="h1f07db21g9b6dg4638ga2abg4df6a7b5ce10" version="1">Repel a nearby enemy with a close-range shot made with Advantage. On hit, deal ranged weapon damage +1d6 and push the target 4m. Costs 2 Mana Points.</content>
+    <content contentuid="h9c4f2ea7g3be6g47e2g9f1ag0120a7d3b4fc" version="1">Repel a nearby enemy with a close-range shot made with Advantage. On hit, deal ranged weapon damage +1d8 and push the target 4m. On failed CON save, inflict Chest Trauma for 2 turns. Costs 2 Mana Points.</content>
+    <content contentuid="h6ea5a1d4g12f2g4db0gaef0g4e3228f8d743" version="1">Unlocks Arrow Repel. Close-range ranged strike that pushes enemies back 3m and deals +1d4 bonus damage. Costs 2 Mana Points.</content>
+    <content contentuid="h7d882cc6gc067g4978ga236g90e0f2d50b42" version="1">Arrow Repel improves at Archer level 9: push increases to 4m, bonus damage becomes +1d6, and the attack is made with Advantage.</content>
+    <content contentuid="h9f03ca63g2e0fg4f71ga6f3g6d96323b1d9e" version="1">Arrow Repel improves at Archer level 12: bonus damage becomes +1d8 and failed CON save applies Chest Trauma for 2 turns.</content>
 </contentList>
-

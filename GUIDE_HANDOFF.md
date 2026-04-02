@@ -329,3 +329,160 @@ Orden de diagnóstico:
 - `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Projectile_RO_Archer.txt`
 - `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Progressions/Progressions.lsx`
 - `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml`
+
+## 18) Archer completado (estado final)
+### Alcance
+Archer queda funcional end-to-end hasta nivel 12 con identidad Ragnarok:
+- Stances: `Owl's Eye`, `Vulture's Eye`
+- Núcleo ofensivo: `Double Strafe`
+- Utilidad: `Arrow Crafting` (4 elementos, 2 cargas), `Improve Concentration`
+- AoE/Control: `Arrow Shower`
+- Anti-melee spacing tool: `Arrow Repel`
+
+### Reglas finales confirmadas
+1. `Arrow Crafting`
+- Sistema final controlado por Script Extender.
+- Consume cargas por hit confirmado.
+- `Double Strafe` consume correctamente 1 carga por impacto.
+- DC de secundarios en tiers altos: `CalculateSpellDC(Ability.Wisdom,context.Source)` = `8 + proficiency + WIS mod`.
+
+2. `Arrow Shower`
+- Skill de acción con coste MP, sin cooldown de Short Rest.
+- Debe depender de MP (como el resto del kit), no de recarga por descanso corto.
+
+3. `Arrow Repel`
+- Aplica daño de arma + bonus por tier.
+- Empuja objetivo según tier definido.
+- Interactúa con el kit Archer (stances/buffs); se añadió compatibilidad para consumo de Arrow Craft cuando corresponde.
+
+4. `Owl's Eye` vs `Vulture's Eye` en melee
+- Regla de diseño: ataques a distancia en melee tienen desventaja salvo excepciones.
+- `Vulture's Eye` ignora point-blank disadvantage desde su adquisición.
+- `Owl's Eye` no ignora point-blank en tiers bajos; su bypass está planteado para tier alto del diseño.
+- `Arrow Repel` tiene ignore point-blank condicionado al propio spell (no es bypass global para todos los ataques).
+
+5. Recursos/descansos (target final)
+- `RO_MP` debe recargar en Long Rest.
+- `Owl's Eye` y `Vulture's Eye` deben figurar con duración/recovery alineada a Short Rest (según decisión de diseño cerrada en iteración).
+
+### Archivos clave del cierre Archer
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Status_RO_Archer.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Shout.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Projectile_RO_Archer.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Progressions/Progressions.lsx`
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml`
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/ScriptExtender/Lua/RO_ArrowCraft.lua`
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/ScriptExtender/Lua/RO_DoubleStrafe.lua`
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/ScriptExtender/Lua/BootstrapServer.lua`
+
+### Regresión mínima para revalidar en siguiente chat
+1. Ataque normal, `Double Strafe`, `Arrow Shower`, `Arrow Repel` con y sin Arrow Craft activo.
+2. Verificar consumo de cargas por hit y limpieza al agotar.
+3. Verificar que `Vulture's Eye` ignora desventaja point-blank y que fuera de ese caso no hay bypass global accidental.
+4. Verificar tooltips/name/description/icon para skills nuevas (sin `Not Found` ni `?`).
+5. Verificar que el gating principal de skills sea MP (no short-rest cooldown involuntario).
+
+### Estado de proyecto
+- Archer: `COMPLETADO` para MVP.
+- Siguiente fase recomendada: iniciar siguiente job (Acolyte/Swordman o la clase priorizada) reutilizando patrón `Stats + SE solo donde sea dinámico`.
+
+## 19) Playbook para nuevos chats (contexto rápido y consistente)
+Objetivo: que cualquier chat nuevo pueda continuar sin perder tiempo ni romper consistencia.
+
+### A) Orden recomendado de trabajo por skill
+1. Leer diseño fuente en `Class Design/<Class>.json`.
+2. Confirmar nivel, coste MP, tipo de acción, duración, escalado y sinergias.
+3. Definir si se resuelve 100% en Stats o requiere SE:
+- Stats: reglas declarativas estables (costes, boosts directos, unlocks, duration).
+- SE: lógica contextual/dinámica (multi-hit, ventanas por arma/rango, consumo por hit confirmado, sincronización de followups).
+4. Implementar primero versión mínima funcional.
+5. Probar en juego.
+6. Ajustar edge cases.
+7. Documentar en este handoff lo que cambió y por qué.
+
+### B) Dónde mirar referencias antes de implementar
+1. Referencia interna del proyecto:
+- `Reference/` (mods ejemplo y notas archivadas).
+2. Implementaciones ya estables de este mod:
+- `Double Strafe`, `Arrow Crafting`, `Improve Concentration`, `Arrow Shower`, `Arrow Repel`.
+3. Buscar patrones con `rg` antes de copiar lógica.
+
+Consultas útiles:
+```powershell
+rg -n "RO_Archer|ArrowCraft|DoubleStrafe|ArrowShower|ArrowRepel" RagnarokOnlineMod/Public
+rg -n "Ext.Osiris|Ext.Events|StatusApplied|AttackedBy|UsingSpellOnTarget" RagnarokOnlineMod/Mods/*/ScriptExtender/Lua
+```
+
+### C) Método estándar para crear una skill nueva
+1. `Spell_*.txt`
+- Crear spell (o shout/zone/projectile según tipo).
+- Definir `UseCosts` con `RO_MP`.
+- Definir `SpellProperties`/functors base.
+
+2. `Status_*.txt` (si aplica)
+- Crear status para buffs/debuffs/procs.
+- Agregar `Boosts` o `OnApplyFunctors`.
+
+3. `Passive.txt`
+- Crear passive de unlock por tier (`_Lx`).
+- Evitar duplicar nombres/UUIDs conceptuales.
+
+4. `Progressions.lsx`
+- Entregar passive/spell en el nivel correcto.
+- Reemplazar tiers anteriores cuando corresponda.
+
+5. `english.xml`
+- Agregar nombre/descripcion para skills, passives y statuses.
+- Evitar `Not Found` en tooltip.
+
+6. Iconos
+- Reusar iconos vanilla válidos o registrar custom assets correctamente.
+- Si aparece `?`, revisar key de icono + metadata/ruta.
+
+7. SE (solo si hace falta)
+- Crear módulo en `ScriptExtender/Lua/`.
+- Registrar en `BootstrapServer.lua`.
+- Mantener una sola fuente de verdad para la lógica crítica.
+
+### D) Criterio para decidir Stats vs SE
+Usar Stats si:
+- El efecto depende solo del caster/target sin estado complejo temporal.
+- No depende de confirmar impacto real por evento.
+
+Usar SE si:
+- Hay multi-hit con followups.
+- Se debe consumir recurso por hit confirmado.
+- Hay condiciones por contexto runtime (arma equipada, rango real, acción ligada por `StoryActionID`, etc.).
+
+### E) Checklist de validación por skill (rápido)
+1. Tooltip correcto: nombre, descripción, coste, duración.
+2. Gating correcto: acción/bonus action + MP.
+3. Sin cooldown oculto no deseado (si la skill no lo define).
+4. Daño/efecto aparece en combat log.
+5. Escalado por nivel correcto.
+6. Interacción con stances/buffs del Archer correcta.
+7. No duplica procs ni consume de más.
+8. Al reempaquetar, la versión cargada en juego refleja cambios.
+
+### F) Si en juego no se refleja un cambio
+1. Reempaquetar PAK.
+2. Confirmar mod activo en BG3MM.
+3. Verificar que el archivo editado está dentro del PAK.
+4. Revisar colisiones con mods de referencia/otros mods.
+5. Confirmar que la localización coincide con nuevas keys.
+
+### G) Qué actualizar siempre en el handoff al cerrar una tarea
+1. Qué problema había (síntoma).
+2. Causa raíz encontrada.
+3. Solución final aplicada.
+4. Archivos tocados.
+5. Riesgos/edge-cases pendientes.
+6. Checklist de regresión mínima.
+
+### H) Plantilla corta para iniciar un chat nuevo
+Pegar esto al inicio del nuevo chat:
+1. "Lee `GUIDE_HANDOFF.md` completo primero." 
+2. "Trabajaremos en `<skill/feature>` de `<Class Design/*.json>` sin romper lo ya estable." 
+3. "Antes de editar, lista archivos objetivo y estrategia (Stats vs SE)." 
+4. "Después de cambios, actualiza `GUIDE_HANDOFF.md` con causa raíz + solución + archivos tocados + tests." 
