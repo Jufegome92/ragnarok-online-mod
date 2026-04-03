@@ -484,26 +484,26 @@
           {
             "level": 4,
             "effects": {
-              "protected_melee_hits_negated": 2
+              "protected_melee_hits_negated": 3
             }
           },
           {
             "level": 6,
             "effects": {
-              "protected_melee_hits_negated": 3
+              "protected_melee_hits_negated": 4
             }
           },
           {
             "level": 9,
             "effects": {
               "duration_turns": 4,
-              "protected_melee_hits_negated": 4
+              "protected_melee_hits_negated": 5
             }
           },
           {
             "level": 12,
             "effects": {
-              "protected_melee_hits_negated": 5
+              "protected_melee_hits_negated": 6
             }
           }
         ]
@@ -601,7 +601,7 @@
                 "effects": {
                   "duration": "3 turns",
                   "area_radius": "4m",
-                  "strikes_per_turn": 3,
+                  "strikes_per_turn": 4,
                   "damage_per_strike": "1d10"
                 }
               }
