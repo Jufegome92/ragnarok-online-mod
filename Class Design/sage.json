@@ -1,0 +1,937 @@
+{
+  "base_class": "Novice",
+  "first_job": "Magician",
+  "second_job": "Sage",
+
+  "granted_at_character_level": 6,
+  "second_job_selector_group": [
+    "Sage",
+    "Wizard"
+  ],
+
+  "inherits_from_first_job": {
+    "spellcasting_ability": "Intelligence",
+    "spellcasting_save_dc_formula": "8 + proficiency_bonus + intelligence_modifier",
+    "mana_points_formula": "(4 + (2 * character_level)) + (character_level * floor(spellcasting_modifier / 2))",
+    "core_magician_systems_retained": [
+      "Element Bolt",
+      "Frost Diver",
+      "Stone Curse",
+      "Energy Coat",
+      "Safety Wall",
+      "Element AoE",
+      "Fire Wall",
+      "Increase Spiritual Power",
+      "Sight"
+    ]
+  },
+
+  "design_identity": {
+    "role": "Scholar-Caster / Anti-Mage / Field Controller / Enchanter",
+    "combat_style": "Analyzes enemies, enchants allies, manipulates elemental fields, and interferes with hostile magic",
+    "strengths": [
+      "Excellent magical utility",
+      "Strong anti-caster tools",
+      "Offensive support through weapon enchantment",
+      "Excellent battlefield shaping"
+    ],
+    "weaknesses": [
+      "Lower direct damage ceiling than Wizard",
+      "Relies on setup and system mastery",
+      "Less explosive if forced into simple damage races"
+    ]
+  },
+
+  "core_systems": {
+    "scholarly_magic": {
+      "description": "The Sage does not simply cast stronger magic; it studies, redirects, enchants, and denies magic.",
+      "pillars": [
+        "Arcane Analysis",
+        "Earth Sorcery",
+        "Elemental Imbue",
+        "Arcane Technique",
+        "Spell Control",
+        "Geomantic Field",
+        "Arcane Denial"
+      ]
+    },
+    "arcane_technique_rules": {
+      "description": "Arcane Technique is a family of stances. Only one Arcane Technique stance can be active at a time.",
+      "stances": [
+        "Advanced Book",
+        "Free Cast",
+        "Auto Spell"
+      ]
+    },
+    "auto_spell_rules": {
+      "description": "Auto Spell uses a reduced Trigger Bolt rather than the full Element Bolt spell.",
+      "trigger_bolt_definition": {
+        "uses_same_element_as_selected_stance": true,
+        "uses_element_bolt_base_rider_only": true,
+        "cannot_use_intensified_or_overload": true,
+        "cost_mp": 0,
+        "max_triggers_per_turn": 1,
+        "hit_count_rule": "Trigger Bolt uses half of the current Element Bolt hit count, rounded up"
+      }
+    }
+  },
+
+  "progression": {
+    "level_6": {
+      "class_state": "Sage",
+      "features_gained": [
+        "Arcane Analysis",
+        "Earth Sorcery"
+      ]
+    },
+    "level_7": {
+      "features_gained": [
+        "Elemental Imbue"
+      ]
+    },
+    "level_8": {
+      "features_gained": [
+        "Arcane Technique"
+      ]
+    },
+    "level_9": {
+      "features_gained": [
+        "Spell Control"
+      ]
+    },
+    "level_10": {
+      "features_gained": [
+        "Geomantic Field"
+      ]
+    },
+    "level_11": {
+      "features_gained": [
+        "Arcane Denial"
+      ]
+    },
+    "level_12": {
+      "features_gained": [
+        "Professor's Thesis"
+      ]
+    }
+  },
+
+  "skills": [
+    {
+      "id": "sage_arcane_analysis",
+      "name": "Arcane Analysis",
+      "learned_at_level": 6,
+      "category": "Utility",
+      "action_type": "Bonus Action",
+      "cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Valid target within 18m"
+      ],
+      "duration": "3 turns",
+      "range": "18m",
+      "description": "The Sage studies the target's nature, exposing magical structure, resistances, and exploitable weaknesses.",
+      "base_effects": {
+        "choose_one": [
+          "Monster Property",
+          "Dragonology"
+        ]
+      },
+      "analysis_variants": {
+        "Monster Property": {
+          "identity": "General magical analysis",
+          "base_effect": {
+            "reveal_target_resistances_and_vulnerabilities": true,
+            "sage_and_allies_gain_bonus_spell_attack_against_target": 1
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 6,
+                "effects": {
+                  "sage_and_allies_gain_bonus_spell_attack_against_target": 1
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "ignore_minor_elemental_resistance_against_target": true
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "target_takes_bonus_damage_from_enchanted_weapons": "1d4"
+                }
+              }
+            ]
+          }
+        },
+        "Dragonology": {
+          "identity": "Specialized analysis against powerful magical creatures",
+          "base_effect": {
+            "bonus_against_dragonic_ancient_or_primordial_targets": 2,
+            "gain_advantage_on_saves_vs_fear_breath_or_roar_from_target": true
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 6,
+                "effects": {
+                  "bonus_against_dragonic_ancient_or_primordial_targets": 2
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "target_suffers_minus_1_spell_save_dc_against_your_effects": true
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "bonus_against_dragonic_ancient_or_primordial_targets": 4
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+
+    {
+      "id": "sage_earth_sorcery",
+      "name": "Earth Sorcery",
+      "learned_at_level": 6,
+      "category": "Attack",
+      "action_type": "Action",
+      "base_cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Valid target or target area within 18m"
+      ],
+      "duration": "Variant-dependent",
+      "range": "18m",
+      "description": "The Sage weaponizes earth-aligned arcana through spikes, ruptures, and seismic revelation.",
+      "base_effects": {
+        "choose_one": [
+          "Earth Spike",
+          "Heaven's Drive"
+        ]
+      },
+      "earth_variants": {
+        "Earth Spike": {
+          "identity": "Single-target earth pressure",
+          "base_effect": {
+            "damage_type": "Earth",
+            "damage": "2d6 + intelligence_modifier"
+          },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 6,
+                "effects": {
+                  "damage": "2d6 + intelligence_modifier"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "damage": "3d6 + intelligence_modifier"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "damage": "4d6 + intelligence_modifier"
+                }
+              }
+            ]
+          },
+          "intensified_effect": {
+            "effect": "Target suffers -1 AC until the start of your next turn."
+          },
+          "overload_effect": {
+            "effect": "Target must pass a Strength save or become Staggered until the end of its next turn."
+          }
+        },
+        "Heaven's Drive": {
+          "identity": "Area earth rupture and anti-stealth detection",
+          "base_effect": {
+            "damage_type": "Earth",
+            "area_radius": "3m",
+            "damage": "2d4 + intelligence_modifier",
+            "reveals_hidden_or_burrowed_targets": true
+          },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 6,
+                "effects": {
+                  "damage": "2d4 + intelligence_modifier",
+                  "area_radius": "3m"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "damage": "3d4 + intelligence_modifier"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "damage": "4d4 + intelligence_modifier",
+                  "area_radius": "4m"
+                }
+              }
+            ]
+          },
+          "intensified_effect": {
+            "effect": "Enemies in the area must pass a Strength save or lose 3m movement until the end of their next turn."
+          },
+          "overload_effect": {
+            "effect": "Enemies revealed by Heaven's Drive also lose the ability to Hide until the end of their next turn."
+          }
+        }
+      },
+      "overchannel": {
+        "base": {
+          "total_mp_cost": 2,
+          "effect": "Use the current milestone-scaled base form of Earth Spike or Heaven's Drive."
+        },
+        "intensified": {
+          "total_mp_cost": 3,
+          "effect": "Use the base form and add the intensified effect."
+        },
+        "overload": {
+          "total_mp_cost": 4,
+          "effect": "Use the base form, add the intensified effect, and add the overload effect."
+        }
+      }
+    },
+
+    {
+      "id": "sage_elemental_imbue",
+      "name": "Elemental Imbue",
+      "learned_at_level": 7,
+      "category": "Support",
+      "action_type": "Bonus Action",
+      "base_cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Self or ally within 9m wielding a weapon"
+      ],
+      "duration": "3 turns",
+      "range": "9m",
+      "description": "The Sage enchants a weapon with an elemental property, turning an ally into an extension of its arcane scholarship.",
+      "base_effects": {
+        "choose_one": [
+          "Flame Launcher",
+          "Frost Weapon",
+          "Lightning Loader",
+          "Seismic Weapon"
+        ]
+      },
+      "imbue_variants": {
+        "Flame Launcher": {
+          "base_effect": {
+            "weapon_gains_bonus_damage": "1d4 Fire"
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 7,
+                "effects": {
+                  "weapon_gains_bonus_damage": "1d4 Fire"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "weapon_gains_bonus_damage": "1d6 Fire"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "weapon_gains_bonus_damage": "1d8 Fire"
+                }
+              }
+            ]
+          },
+          "intensified_effect": {
+            "effect": "On first hit each turn, target becomes Burning for 1 turn."
+          },
+          "overload_effect": {
+            "effect": "Burning applied by this imbue deals +1d4 damage."
+          }
+        },
+        "Frost Weapon": {
+          "base_effect": {
+            "weapon_gains_bonus_damage": "1d4 Cold"
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 7,
+                "effects": {
+                  "weapon_gains_bonus_damage": "1d4 Cold"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "weapon_gains_bonus_damage": "1d6 Cold"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "weapon_gains_bonus_damage": "1d8 Cold"
+                }
+              }
+            ]
+          },
+          "intensified_effect": {
+            "effect": "On first hit each turn, target becomes Chilled for 1 turn."
+          },
+          "overload_effect": {
+            "effect": "If the target is already Chilled, it must pass a Constitution save or become Rooted for 1 turn."
+          }
+        },
+        "Lightning Loader": {
+          "base_effect": {
+            "weapon_gains_bonus_damage": "1d4 Lightning"
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 7,
+                "effects": {
+                  "weapon_gains_bonus_damage": "1d4 Lightning"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "weapon_gains_bonus_damage": "1d6 Lightning"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "weapon_gains_bonus_damage": "1d8 Lightning"
+                }
+              }
+            ]
+          },
+          "intensified_effect": {
+            "effect": "On first hit each turn, target becomes Shocked for 1 turn."
+          },
+          "overload_effect": {
+            "effect": "If the target is Shocked, the hit deals an additional 1d4 Lightning damage."
+          }
+        },
+        "Seismic Weapon": {
+          "base_effect": {
+            "weapon_gains_bonus_damage": "1d4 Earth"
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 7,
+                "effects": {
+                  "weapon_gains_bonus_damage": "1d4 Earth"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "weapon_gains_bonus_damage": "1d6 Earth"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "weapon_gains_bonus_damage": "1d8 Earth"
+                }
+              }
+            ]
+          },
+          "intensified_effect": {
+            "effect": "On first hit each turn, target suffers -1 AC until the start of its next turn."
+          },
+          "overload_effect": {
+            "effect": "Target must pass a Strength save or become Staggered until the end of its next turn."
+          }
+        }
+      },
+      "overchannel": {
+        "base": {
+          "total_mp_cost": 2,
+          "effect": "Use the current milestone-scaled base version of the chosen imbue."
+        },
+        "intensified": {
+          "total_mp_cost": 3,
+          "effect": "Use the base version and add the intensified effect."
+        },
+        "overload": {
+          "total_mp_cost": 4,
+          "effect": "Use the base version, add the intensified effect, and add the overload effect."
+        }
+      }
+    },
+
+    {
+      "id": "sage_arcane_technique",
+      "name": "Arcane Technique",
+      "learned_at_level": 8,
+      "category": "Stance",
+      "action_type": "Bonus Action",
+      "cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "Until switched off, replaced by another Arcane Technique, or combat ends",
+      "description": "The Sage adopts one arcane combat technique, altering how it fights, moves, or triggers supplementary magic.",
+      "base_effects": {
+        "choose_one": [
+          "Advanced Book",
+          "Free Cast",
+          "Auto Spell"
+        ]
+      },
+      "stance_variants": {
+        "Advanced Book": {
+          "identity": "Scholarly battlecasting through tomes",
+          "base_effects": {
+            "tome_or_focus_attacks_use_intelligence_for_attack_rolls": true,
+            "spell_attack_bonus": 1
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 8,
+                "effects": {
+                  "spell_attack_bonus": 1
+                }
+              },
+              {
+                "level": 10,
+                "effects": {
+                  "spell_attack_bonus": 2
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "tome_attacks_deal_bonus_force_damage": "1d4"
+                }
+              }
+            ]
+          }
+        },
+        "Free Cast": {
+          "identity": "Fluid casting and repositioning",
+          "base_effects": {
+            "after_casting_a_spell_you_may_move_without_triggering_opportunity_attacks": "3m"
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 8,
+                "effects": {
+                  "free_movement_after_cast": "3m"
+                }
+              },
+              {
+                "level": 10,
+                "effects": {
+                  "free_movement_after_cast": "6m"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "casting_no_longer_reduces_remaining_movement_this_turn": true
+                }
+              }
+            ]
+          }
+        },
+        "Auto Spell": {
+          "identity": "Reactive elemental discharge through combat rhythm",
+          "base_effects": {
+            "choose_one_element_for_trigger_bolt": [
+              "Fire",
+              "Cold",
+              "Lightning",
+              "Force"
+            ],
+            "making_the_attack_action_with_a_valid_weapon_or_tome_enables_catalyst_strike": true,
+            "catalyst_strike_damage": "1d4 + intelligence_modifier"
+          },
+          "trigger_rules": {
+            "after_attack_action_roll_1d6": true,
+            "base_trigger_threshold": "6+",
+            "if_at_least_one_attack_hit_threshold": "5+",
+            "if_both_attack_and_catalyst_strike_hit_threshold": "4+",
+            "on_trigger": "Cast a Trigger Bolt of the selected element at base tier only",
+            "trigger_bolt_hit_count_rule": "Half current Element Bolt hit count, rounded up",
+            "trigger_bolt_cost_mp": 0,
+            "max_triggers_per_turn": 1
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 8,
+                "effects": {
+                  "catalyst_strike_damage": "1d4 + intelligence_modifier"
+                }
+              },
+              {
+                "level": 10,
+                "effects": {
+                  "catalyst_strike_damage": "1d6 + intelligence_modifier"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "trigger_thresholds_improve_by_1": true
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+
+    {
+      "id": "sage_spell_control",
+      "name": "Spell Control",
+      "learned_at_level": 9,
+      "category": "Utility",
+      "action_type": "Reaction or Action",
+      "base_cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Variant-dependent"
+      ],
+      "duration": "Variant-dependent",
+      "range": "Variant-dependent",
+      "description": "The Sage manipulates magical flow itself, cancelling, absorbing, or disrupting spellcasting.",
+      "base_effects": {
+        "choose_one": [
+          "Cast Cancel",
+          "Magic Rod",
+          "Spell Breaker"
+        ]
+      },
+      "control_variants": {
+        "Cast Cancel": {
+          "identity": "Voluntary magical reset",
+          "base_effect": {
+            "end_one_of_your_active_concentration_or_prepared_arcane_effects": true,
+            "restore_mp": 1
+          },
+          "intensified_effect": {
+            "effect": "Also gain 3m movement and advantage on your next spell attack this turn."
+          },
+          "overload_effect": {
+            "effect": "Restore 2 MP instead of 1 and become immune to opportunity attacks until end of turn."
+          }
+        },
+        "Magic Rod": {
+          "identity": "Absorb hostile spell pressure",
+          "base_effect": {
+            "trigger": "When targeted by a spell attack or direct hostile spell effect",
+            "reduce_incoming_magic_damage": "1d8 + intelligence_modifier"
+          },
+          "intensified_effect": {
+            "effect": "Also restore 1 MP if damage was reduced to 0."
+          },
+          "overload_effect": {
+            "effect": "If damage was reduced to 0, your next Element Bolt this turn gains intensified effects for free."
+          }
+        },
+        "Spell Breaker": {
+          "identity": "Aggressive anti-caster interruption",
+          "base_effect": {
+            "range": "18m",
+            "effect": "Target must pass a Constitution save or lose Concentration / have its cast disrupted"
+          },
+          "intensified_effect": {
+            "effect": "On failed save, target also suffers -1 spell attack rolls and spell save DC until the end of its next turn."
+          },
+          "overload_effect": {
+            "effect": "On failed save, target is Silenced until the end of its next turn."
+          }
+        }
+      },
+      "overchannel": {
+        "base": {
+          "total_mp_cost": 2,
+          "effect": "Use the base version of the chosen spell control mode."
+        },
+        "intensified": {
+          "total_mp_cost": 3,
+          "effect": "Use the base version and add the intensified effect."
+        },
+        "overload": {
+          "total_mp_cost": 4,
+          "effect": "Use the base version, add the intensified effect, and add the overload effect."
+        }
+      }
+    },
+
+    {
+      "id": "sage_geomantic_field",
+      "name": "Geomantic Field",
+      "learned_at_level": 10,
+      "category": "Zone Control",
+      "action_type": "Action",
+      "base_cost_mp": 4,
+      "requires_concentration": true,
+      "requires": [
+        "Valid target area within 18m"
+      ],
+      "duration": "3 turns",
+      "range": "18m",
+      "description": "The Sage establishes an elemental field that changes how magic and movement behave inside the area.",
+      "base_effects": {
+        "choose_one": [
+          "Volcano",
+          "Deluge",
+          "Violent Gale"
+        ]
+      },
+      "field_variants": {
+        "Volcano": {
+          "base_effect": {
+            "area_radius": "4m",
+            "allied_fire_damage_bonus_in_field": "1d4",
+            "enemies_in_field_take": "1d4 Fire damage at end of turn"
+          },
+          "intensified_effect": {
+            "effect": "Enemies in the field suffer -1 Fire resistance tier or equivalent minor fire vulnerability."
+          },
+          "overload_effect": {
+            "effect": "Burning enemies in the field take an additional 1d4 Fire damage."
+          }
+        },
+        "Deluge": {
+          "base_effect": {
+            "area_radius": "4m",
+            "enemies_in_field_have_minus_3m_movement": true,
+            "allies_in_field_gain_fire_damage_reduction": 2
+          },
+          "intensified_effect": {
+            "effect": "Enemies in the field become Wet or equivalent water-soaked state."
+          },
+          "overload_effect": {
+            "effect": "Cold effects applied in the field last 1 additional turn."
+          }
+        },
+        "Violent Gale": {
+          "base_effect": {
+            "area_radius": "4m",
+            "allies_in_field_gain_plus_3m_movement": true,
+            "enemies_entering_field_must_pass_strength_save_or_be_pushed_2m": true
+          },
+          "intensified_effect": {
+            "effect": "Lightning damage against enemies in the field gains +1d4 damage."
+          },
+          "overload_effect": {
+            "effect": "Shocked enemies in the field cannot take reactions."
+          }
+        }
+      },
+      "overchannel": {
+        "base": {
+          "total_mp_cost": 4,
+          "effect": "Use the base version of the chosen geomantic field."
+        },
+        "intensified": {
+          "total_mp_cost": 5,
+          "effect": "Use the base version and add the intensified effect."
+        },
+        "overload": {
+          "total_mp_cost": 6,
+          "effect": "Use the base version, add the intensified effect, and add the overload effect."
+        }
+      }
+    },
+
+    {
+      "id": "sage_arcane_denial",
+      "name": "Arcane Denial",
+      "learned_at_level": 11,
+      "category": "Utility",
+      "action_type": "Action",
+      "base_cost_mp": 4,
+      "requires_concentration": false,
+      "requires": [
+        "Variant-dependent"
+      ],
+      "duration": "Variant-dependent",
+      "range": "18m",
+      "description": "The Sage suppresses hostile magical influence, either by protecting terrain or stripping active magic away.",
+      "base_effects": {
+        "choose_one": [
+          "Land Protector",
+          "Dispell"
+        ]
+      },
+      "denial_variants": {
+        "Land Protector": {
+          "base_effect": {
+            "area_radius": "4m",
+            "duration": "3 turns",
+            "effect": "Remove hostile magical surfaces in the area and prevent new hostile magical terrain effects from appearing inside it"
+          },
+          "intensified_effect": {
+            "effect": "Allies inside the area gain advantage on saves against environmental magical effects."
+          },
+          "overload_effect": {
+            "effect": "The area also suppresses enemy geomantic or summoned ground effects that enter it."
+          }
+        },
+        "Dispell": {
+          "base_effect": {
+            "effect": "Remove one magical buff or magical ongoing effect from the target"
+          },
+          "intensified_effect": {
+            "effect": "Remove up to two magical buffs or one buff and one surface-linked magical effect"
+          },
+          "overload_effect": {
+            "effect": "If the target was under a magical buff, it also suffers disadvantage on Concentration saves until the end of its next turn."
+          }
+        }
+      },
+      "overchannel": {
+        "base": {
+          "total_mp_cost": 4,
+          "effect": "Use the base version of the chosen denial effect."
+        },
+        "intensified": {
+          "total_mp_cost": 5,
+          "effect": "Use the base version and add the intensified effect."
+        },
+        "overload": {
+          "total_mp_cost": 6,
+          "effect": "Use the base version, add the intensified effect, and add the overload effect."
+        }
+      }
+    },
+
+    {
+      "id": "sage_professors_thesis",
+      "name": "Professor's Thesis",
+      "learned_at_level": 12,
+      "category": "Passive",
+      "action_type": "Passive",
+      "cost_mp": 0,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "Permanent",
+      "description": "The Sage's systems finally converge into true professorial mastery.",
+      "base_effects": {
+        "targets_affected_by_arcane_analysis_take_bonus_damage_from_your_imbues_and_fields": "1d4",
+        "spell_control_costs_1_less_mp_against_analyzed_targets_minimum_1": true,
+        "while_standing_in_your_own_geomantic_field_your_arcane_denial_gains_advantage_on_checks_or_save_dc_bonus": 1
+      }
+    }
+  ],
+
+  "summary_tables": {
+    "skill_unlocks": [
+      {
+        "level": 6,
+        "skills": [
+          "Arcane Analysis",
+          "Earth Sorcery"
+        ]
+      },
+      {
+        "level": 7,
+        "skills": [
+          "Elemental Imbue"
+        ]
+      },
+      {
+        "level": 8,
+        "skills": [
+          "Arcane Technique"
+        ]
+      },
+      {
+        "level": 9,
+        "skills": [
+          "Spell Control"
+        ]
+      },
+      {
+        "level": 10,
+        "skills": [
+          "Geomantic Field"
+        ]
+      },
+      {
+        "level": 11,
+        "skills": [
+          "Arcane Denial"
+        ]
+      },
+      {
+        "level": 12,
+        "skills": [
+          "Professor's Thesis"
+        ]
+      }
+    ],
+    "quick_costs": [
+      {
+        "name": "Arcane Analysis",
+        "cost_mp": 2
+      },
+      {
+        "name": "Earth Sorcery",
+        "cost_mp": "2 / 3 / 4"
+      },
+      {
+        "name": "Elemental Imbue",
+        "cost_mp": "2 / 3 / 4"
+      },
+      {
+        "name": "Arcane Technique",
+        "cost_mp": 2
+      },
+      {
+        "name": "Spell Control",
+        "cost_mp": "2 / 3 / 4"
+      },
+      {
+        "name": "Geomantic Field",
+        "cost_mp": "4 / 5 / 6"
+      },
+      {
+        "name": "Arcane Denial",
+        "cost_mp": "4 / 5 / 6"
+      },
+      {
+        "name": "Professor's Thesis",
+        "cost_mp": 0
+      }
+    ]
+  },
+
+  "core_design_rules": [
+    "Sage is not a stronger Magician; it is a more technical one.",
+    "The class emphasizes magical analysis, anti-caster utility, weapon enchantment, and terrain control.",
+    "Arcane Technique defines how the Sage behaves in combat through stances rather than passive-only bonuses.",
+    "Auto Spell uses Trigger Bolt instead of the full Element Bolt spell.",
+    "Professor identity emerges through higher-level control tools like Geomantic Field and Arcane Denial.",
+    "Abracadabra is intentionally excluded due to excessive system complexity for this implementation."
+  ]
+}
