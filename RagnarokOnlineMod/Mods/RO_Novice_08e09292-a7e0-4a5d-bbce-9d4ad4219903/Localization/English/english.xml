@@ -167,5 +167,27 @@
     <content contentuid="he4b6c8f0ag3d45g4c78gd1e4g7f0a3b6c9d12" version="1">Create a protective barrier on yourself or an ally. For 3 turns, it negates up to 4 incoming melee hits. Costs 4 Mana Points. Concentration.</content>
     <content contentuid="hf5c7d9a1bg4e56g4d89ge2f5g8a1b4c7d0e23" version="1">Create a protective barrier on yourself or an ally. For 4 turns, it negates up to 5 incoming melee hits. Costs 4 Mana Points. Concentration.</content>
     <content contentuid="h06d8e0b2cg5f67g4e90gf3a6g9b2c5d8e1f34" version="1">Create a protective barrier on yourself or an ally. For 3 turns, it negates up to 6 incoming melee hits. Costs 4 Mana Points. Concentration.</content>
-    <content contentuid="h5bc3d5a7bg0e12g4d45ge8f1g4a7b0c3d6e89" version="1">Protected by a safety wall. Negates incoming melee hits while charges remain.</content></contentList>
+    <content contentuid="h5bc3d5a7bg0e12g4d45ge8f1g4a7b0c3d6e89" version="1">Protected by a safety wall. Negates incoming melee hits while charges remain.</content>    <content contentuid="h4d8c4b9gf8c9g4019ga7d1g7f0d2e4a9b38" version="1">Element AoE</content>
+    <content contentuid="h5e9d5c0ga9d0g412agb8e2g8a1e3f5b0c49" version="1">Unlocks Element AoE. Choose Fire or Lightning in Base (4 MP), Intensified (5 MP), or Overload (6 MP).</content>
+    <content contentuid="h6f0e6d1gb0e1g423bgc9f3g9b2f4a6c1d50" version="1">Element AoE improves at Magician level 9: base damage increases.</content>
+    <content contentuid="h701f7e2gc1f2g434cgda04ga3c5b7d2e61" version="1">Element AoE improves at Magician level 12: area radius increases and damage improves again.</content>
+    <content contentuid="h12a0e6b1gf0c1g4a21gb13ag9f2d4e6a1b10" version="1">Element AoE - Base</content>
+    <content contentuid="h23b1f7c2ga1d2g4b32gc24bg0a3e5f7b2c21" version="1">Choose Fire or Lightning Element AoE (Base). Costs 4 Mana Points.</content>
+    <content contentuid="h34c2a8d3gb2e3g4c43gd35cg1b4f6a8c3d32" version="1">Element AoE - Intensified</content>
+    <content contentuid="h45d3b9e4gc3f4g4d54ge46dg2c5a7b9d4e43" version="1">Choose Fire or Lightning Element AoE (Intensified). Costs 5 Mana Points.</content>
+    <content contentuid="h56e4c0f5gd4a5g4e65gf57eg3d6b8c0e5f54" version="1">Element AoE - Overload</content>
+    <content contentuid="h67f5d1a6ge5b6g4f76ga68fg4e7c9d1f6a65" version="1">Choose Fire or Lightning Element AoE (Overload). Costs 6 Mana Points.</content>
+    <content contentuid="h78a6e2b7gf6c7g4a87gb79ag5f8d0e2a7b76" version="1">Element AoE - Fire</content>
+    <content contentuid="h89b7f3c8ga7d8g4b98gc80bg6a9e1f3b8c87" version="1">Explode a 3m circular area with fire. Deals 3d6 + spellcasting modifier Fire damage. Costs 4 Mana Points.</content>
+    <content contentuid="h9ac8a4d9gb8e9g4ca9gd91cg7b0f2a4c9d98" version="1">Element AoE - Fire (Intensified)</content>
+    <content contentuid="habd9b5e0gc9f0g4dba0gea2dg8c1a3b5d0ea9" version="1">Explode a 3m circular area with fire. Deals 3d6 + spellcasting modifier Fire damage. Targets must pass a Constitution save or become Burning for 1 turn. Costs 5 Mana Points.</content>
+    <content contentuid="hbc0a6f1gd0a1g4ecb1gfb3eg9d2b4c6e1fb0" version="1">Element AoE - Fire (Overload)</content>
+    <content contentuid="hcd1b7a2ge1b2g4fdc2g0c4fg0e3c5d7f2ac1" version="1">Explode a 3m circular area with fire. Deals 3d6 + spellcasting modifier Fire damage, applies Burning on failed Constitution save, and adds 1d4 Fire damage. Costs 6 Mana Points.</content>
+    <content contentuid="hde2c8b3gf2c3g4aed3g1d5ag1f4d6e8a3bd2" version="1">Element AoE - Lightning</content>
+    <content contentuid="hef3d9c4ga3d4g4bfe4g2e6bg2a5e7f9b4ce3" version="1">Detonate a 3m circular lightning area. Deals 2d6 Lightning damage. Costs 4 Mana Points.</content>
+    <content contentuid="h0f4e0d5gb4e5g4c0f5g3f7cg3b6f8a0c5df4" version="1">Element AoE - Lightning (Intensified)</content>
+    <content contentuid="h1a5f1e6gc5f6g4d1a6g4a8dg4c7a9b1d6e05" version="1">Detonate a 3m circular lightning area. Deals 2d6 Lightning damage. Targets struck must pass a Constitution save or become Shocked for 1 turn. Costs 5 Mana Points.</content>
+    <content contentuid="h2b6a2f7gd6a7g4e2b7g5b9eg5d8b0c2e7f16" version="1">Element AoE - Lightning (Overload)</content>
+    <content contentuid="h3c7b3a8ge7b8g4f3c8g6c0fg6e9c1d3f8a27" version="1">Detonate a 3m circular lightning area. Deals 2d6 Lightning damage, applies Shocked on failed Constitution save, and deals an extra 1d4 Lightning to Shocked targets. Costs 6 Mana Points.</content></contentList>
+
 

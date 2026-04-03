@@ -528,3 +528,85 @@ Pegar esto al inicio del nuevo chat:
 - `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
 - `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Progressions/Progressions.lsx`
 - `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml`
+
+## 21) Magician Skill: Element AoE (L5/L9/L12) - MVP Stats
+### Resumen
+- Se implementó `Element AoE` para Magician con estructura modular `Base / Intensified / Overload` y variantes `Fire` + `Lightning`.
+- Costes activos:
+  - Base: `4 MP`
+  - Intensified: `5 MP`
+  - Overload: `6 MP`
+- Gating por progresión:
+  - L5: desbloquea tier base de la skill.
+  - L9: reemplaza por versión mejorada de daño.
+  - L12: reemplaza por versión final con mayor radio y daño.
+
+### Implementación técnica
+1. Nuevo archivo de spells:
+- `Stats/Generated/Data/Spell_Zone_RO_Magician.txt`
+- Contenedores por tier y milestone:
+  - `Zone_RO_Magician_ElementAoE_Base_5/_9/_12`
+  - `Zone_RO_Magician_ElementAoE_Intensified_5/_9/_12`
+  - `Zone_RO_Magician_ElementAoE_Overload_5/_9/_12`
+- Variantes por elemento:
+  - Fire: `Zone_RO_Magician_ElementAoE_Fire_*`, `..._Intensified_*`, `..._Overload_*`
+  - Lightning: `Zone_RO_Magician_ElementAoE_Lightning_*`, `..._Intensified_*`, `..._Overload_*`
+
+2. Passives de unlock:
+- `RO_Magician_ElementAoE_L5`
+- `RO_Magician_ElementAoE_L9`
+- `RO_Magician_ElementAoE_L12`
+
+3. Progression conectada:
+- L5 agrega `RO_Magician_ElementAoE_L5`.
+- L9 agrega `RO_Magician_ElementAoE_L9` y remueve `RO_Magician_ElementAoE_L5`.
+- L12 agrega `RO_Magician_ElementAoE_L12` y remueve `RO_Magician_ElementAoE_L9`.
+
+### Escalado implementado
+- Fire:
+  - L5: `3d6 + SpellCastingAbilityModifier`
+  - L9: `4d6 + SpellCastingAbilityModifier`
+  - L12: `5d6 + SpellCastingAbilityModifier` + radio mayor (`Base 4`)
+- Lightning:
+  - L5: `2d6`
+  - L9: `3d8`
+  - L12: `4d10` + radio mayor (`Base 4`)
+
+### Riders por overchannel (MVP)
+- Fire Intensified: CON save o `BURNING` 1 turno.
+- Fire Overload: añade daño extra `1d4 Fire`.
+- Lightning Intensified: CON save o `SHOCKED` 1 turno.
+- Lightning Overload: daño extra `1d4 Lightning` si el objetivo está `SHOCKED`.
+
+### Nota de alcance (importante)
+- Esta entrega es `MVP en Stats` (sin Script Extender).
+- La parte de "storm zone" persistente por turnos de Lightning en diseño original quedó simplificada a explosión AoE instantánea.
+- Si se quiere comportamiento persistente robusto por turnos (strikes por turno, trigger al entrar/salir), conviene migrar esa parte a SE en iteración posterior.
+
+### Archivos tocados
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Zone_RO_Magician.txt` (nuevo)
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Progressions/Progressions.lsx`
+
+## 22) Magician Element AoE - Hotfix UI/Shape
+### Problema
+- En juego aparecía `Not Found` para nombre/descripción de variantes de Element AoE.
+- El área se mostraba no circular.
+
+### Causa raíz
+- `DisplayName`/`Description` se habían dejado como texto directo en stats (sin `contentuid` de localización), lo que en esta ruta terminó resolviendo a `Not Found`.
+- Las variantes base estaban con `Shape = Square`.
+
+### Fix aplicado
+- `Spell_Zone_RO_Magician.txt`:
+  - Se cambiaron `DisplayName`/`Description` de contenedores y variantes L5 a contentuids nuevos.
+  - Se cambió `Shape` de las variantes base Fire/Lightning a `Circle`.
+- `Passive.txt`:
+  - `RO_Magician_ElementAoE_L5/L9/L12` ahora usan contentuids para `DisplayName`/`Description`.
+- `Localization/English/english.xml`:
+  - Se añadieron entradas para los contentuids nuevos de Element AoE.
+
+### Archivos tocados
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Zone_RO_Magician.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml`

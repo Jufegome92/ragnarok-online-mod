@@ -620,3 +620,52 @@ data "Conditions" "(HasStatus('RO_MAGICIAN_SAFETY_WALL_AURA_L4',context.Target) 
 data "StatsFunctors" "IF(HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_6',context.Target)):ApplyStatus(SELF,RO_MAGICIAN_SAFETY_WALL_CHARGE_5,100,-1);IF(HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_6',context.Target)):RemoveStatus(SELF,RO_MAGICIAN_SAFETY_WALL_CHARGE_6);IF(HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_2',context.Target)):RemoveStatus(SELF,RO_MAGICIAN_SAFETY_WALL_CHARGE_2);IF(HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_3',context.Target)):ApplyStatus(SELF,RO_MAGICIAN_SAFETY_WALL_CHARGE_2,100,-1);IF(HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_3',context.Target)):RemoveStatus(SELF,RO_MAGICIAN_SAFETY_WALL_CHARGE_3);IF(HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_4',context.Target)):ApplyStatus(SELF,RO_MAGICIAN_SAFETY_WALL_CHARGE_3,100,-1);IF(HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_4',context.Target)):RemoveStatus(SELF,RO_MAGICIAN_SAFETY_WALL_CHARGE_4);IF(HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_5',context.Target)):ApplyStatus(SELF,RO_MAGICIAN_SAFETY_WALL_CHARGE_4,100,-1);IF(HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_5',context.Target)):RemoveStatus(SELF,RO_MAGICIAN_SAFETY_WALL_CHARGE_5);IF(not (HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_2',context.Target) or HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_3',context.Target) or HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_4',context.Target) or HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_5',context.Target) or HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_6',context.Target))):RemoveStatus(SELF,RO_MAGICIAN_SAFETY_WALL_AURA_L4);IF(not (HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_2',context.Target) or HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_3',context.Target) or HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_4',context.Target) or HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_5',context.Target) or HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_6',context.Target))):RemoveStatus(SELF,RO_MAGICIAN_SAFETY_WALL_AURA_L6);IF(not (HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_2',context.Target) or HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_3',context.Target) or HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_4',context.Target) or HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_5',context.Target) or HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_6',context.Target))):RemoveStatus(SELF,RO_MAGICIAN_SAFETY_WALL_AURA_L9);IF(not (HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_2',context.Target) or HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_3',context.Target) or HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_4',context.Target) or HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_5',context.Target) or HasStatus('RO_MAGICIAN_SAFETY_WALL_CHARGE_6',context.Target))):RemoveStatus(SELF,RO_MAGICIAN_SAFETY_WALL_AURA_L12)"
 
 
+
+new entry "RO_Magician_ElementAoE_L5"
+type "PassiveData"
+data "DisplayName" "h4d8c4b9gf8c9g4019ga7d1g7f0d2e4a9b38;1"
+data "Description" "h5e9d5c0ga9d0g412agb8e2g8a1e3f5b0c49;1"
+data "Icon" "Spell_Evocation_Fireball"
+data "Properties" "ForceShowInCC;Highlighted"
+data "Boosts" "UnlockSpell(Zone_RO_Magician_ElementAoE_Base_5,Singular);UnlockSpell(Zone_RO_Magician_ElementAoE_Intensified_5,Singular);UnlockSpell(Zone_RO_Magician_ElementAoE_Overload_5,Singular)"
+
+new entry "RO_Magician_ElementAoE_L9"
+type "PassiveData"
+data "DisplayName" "h4d8c4b9gf8c9g4019ga7d1g7f0d2e4a9b38;1"
+data "Description" "h6f0e6d1gb0e1g423bgc9f3g9b2f4a6c1d50;1"
+data "Icon" "Spell_Evocation_Fireball"
+data "Properties" "Hidden"
+data "Boosts" "UnlockSpell(Zone_RO_Magician_ElementAoE_Base_9,Singular);UnlockSpell(Zone_RO_Magician_ElementAoE_Intensified_9,Singular);UnlockSpell(Zone_RO_Magician_ElementAoE_Overload_9,Singular)"
+
+new entry "RO_Magician_ElementAoE_L12"
+type "PassiveData"
+data "DisplayName" "h4d8c4b9gf8c9g4019ga7d1g7f0d2e4a9b38;1"
+data "Description" "h701f7e2gc1f2g434cgda04ga3c5b7d2e61;1"
+data "Icon" "Spell_Evocation_Fireball"
+data "Properties" "Hidden"
+data "Boosts" "UnlockSpell(Zone_RO_Magician_ElementAoE_Base_12,Singular);UnlockSpell(Zone_RO_Magician_ElementAoE_Intensified_12,Singular);UnlockSpell(Zone_RO_Magician_ElementAoE_Overload_12,Singular)"
+
+
+new entry "RO_Magician_FireWall_L6"
+type "PassiveData"
+data "DisplayName" "hc4f6a8b0gc6d7g489bg2f59gf8b0d2e6a8b5;1"
+data "Description" "hd5a7b9c1gd7e8g490cg3a60g0c1e3f7b9c6;1"
+data "Icon" "Spell_Evocation_WallOfFire"
+data "Properties" "ForceShowInCC;Highlighted"
+data "Boosts" "UnlockSpell(Wall_RO_Magician_FireWall_6,Singular)"
+
+new entry "RO_Magician_FireWall_L9"
+type "PassiveData"
+data "DisplayName" "hc4f6a8b0gc6d7g489bg2f59gf8b0d2e6a8b5;1"
+data "Description" "he6b8c0d2ge8f9g4a1dg4b71g1d2f4a8c0d7;1"
+data "Icon" "Spell_Evocation_WallOfFire"
+data "Properties" "Hidden"
+data "Boosts" "UnlockSpell(Wall_RO_Magician_FireWall_9,Singular)"
+
+new entry "RO_Magician_FireWall_L12"
+type "PassiveData"
+data "DisplayName" "hc4f6a8b0gc6d7g489bg2f59gf8b0d2e6a8b5;1"
+data "Description" "hf7c9d1e3gf9a0g4b2eg5c82g2e3a5b9d1e8;1"
+data "Icon" "Spell_Evocation_WallOfFire"
+data "Properties" "Hidden"
+data "Boosts" "UnlockSpell(Wall_RO_Magician_FireWall_12,Singular)"
