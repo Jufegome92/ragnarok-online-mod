@@ -1,0 +1,632 @@
+{
+  "class": "Novice",
+  "subclass": "Merchant",
+
+  "granted_at_character_level": 2,
+
+  "hit_points": {
+    "base": 8,
+    "per_level": 8,
+    "constitution_modifier_applies": true,
+    "formula_note": "At Merchant levels, gain 8 HP + Constitution modifier per level."
+  },
+
+  "spellcasting_ability": "Charisma",
+  "spellcasting_save_dc_formula": "8 + proficiency_bonus + charisma_modifier",
+
+  "mana_points": {
+    "base_formula": "4 + (2 * character_level)",
+    "modifier_scaling": "character_level * floor(spellcasting_modifier / 2)",
+    "total_formula": "(4 + (2 * character_level)) + (character_level * floor(spellcasting_modifier / 2))",
+    "formula_note": "For Merchant, spellcasting_modifier uses Charisma."
+  },
+
+  "proficiencies": {
+    "saving_throws": [
+      "Strength",
+      "Charisma"
+    ],
+    "armor": [
+      "Light Armor",
+      "Medium Armor",
+      "Shield"
+    ],
+    "weapons": [
+      "Club",
+      "Mace",
+      "Morningstar",
+      "Handaxe",
+      "Battleaxe",
+      "Warhammer",
+      "Spear",
+      "Trident",
+      "Quarterstaff"
+    ],
+    "tools": [],
+    "skills": {
+      "fixed": [
+        "Persuasion",
+        "Investigation"
+      ],
+      "expertise": 1
+    }
+  },
+
+  "design_identity": {
+    "role": "Bruiser / Tactical Support / Resource Fighter",
+    "combat_style": "Generates Capital, deploys Cart modes, bursts with Mammonite, and reshapes combat through logistics and impact.",
+    "strengths": [
+      "Strong single-target burst",
+      "Distinct battlefield control through cart mechanics",
+      "Flexible support through Supply Station",
+      "Can convert momentum into damage"
+    ],
+    "weaknesses": [
+      "Needs setup to reach peak value",
+      "Depends on Pushcart for several strong tools",
+      "Less consistent if denied Capital generation"
+    ]
+  },
+
+  "core_systems": {
+    "capital": {
+      "description": "Capital is the Merchant's combat economy resource.",
+      "resource_name": "Capital",
+      "maximum_charges": 3,
+      "generation_rules": [
+        "Loud Exclamation grants 1 Capital",
+        "Appraisal grants 1 Capital if the analyzed target dies",
+        "Supply Station may grant 1 Capital depending on Cart Mode",
+        "A source can generate Capital only once per turn unless explicitly stated otherwise"
+      ]
+    },
+    "cart_system": {
+      "description": "Pushcart enables Cart-based abilities. Change Cart selects the current operational mode.",
+      "modes": [
+        "Cargo Cart",
+        "Battle Cart",
+        "Utility Cart"
+      ]
+    }
+  },
+
+  "progression": {
+    "level_2": {
+      "class_state": "Merchant",
+      "features_gained": [
+        "Tradecraft",
+        "Mammonite"
+      ]
+    },
+    "level_3": {
+      "features_gained": [
+        "Pushcart",
+        "Change Cart"
+      ]
+    },
+    "level_4": {
+      "features_gained": [
+        "Loud Exclamation"
+      ]
+    },
+    "level_5": {
+      "features_gained": [
+        "Supply Station"
+      ]
+    },
+    "level_6": {
+      "features_gained": [
+        "Cart Revolution"
+      ],
+      "transition_note": "Nivel ideal para comenzar la especialización hacia el Second Job."
+    }
+  },
+
+  "skills": [
+    {
+      "id": "merchant_tradecraft",
+      "name": "Tradecraft",
+      "learned_at_level": 2,
+      "category": "Stance",
+      "action_type": "Bonus Action",
+      "cost_mp": 1,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "Until switched off, replaced by another Tradecraft mode, or combat ends",
+      "description": "The Merchant adopts a practical commercial stance, either optimizing stock usage or appraising enemies for profit.",
+      "base_effects": {
+        "choose_one": [
+          "Stockpile",
+          "Appraisal"
+        ]
+      },
+      "tradecraft_variants": {
+        "Stockpile": {
+          "identity": "Efficiency, reserve management and cart synergy",
+          "base_effects": {
+            "first_cart_skill_each_turn_costs_1_less_mp_minimum_1": true,
+            "supply_station_generates_1_additional_capital": true
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 2,
+                "effects": {
+                  "first_cart_skill_each_turn_costs_1_less_mp_minimum_1": true
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "mammonite_gains_bonus_damage_if_you_have_2_or_more_capital": "1d4"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "first_two_cart_skills_each_combat_cost_1_less_mp_minimum_1": true
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "increase_capital_maximum_by_1_for_2_turns_when_using_loud_exclamation_once_per_combat": true
+                }
+              }
+            ]
+          }
+        },
+        "Appraisal": {
+          "identity": "Assessment, exploitation and profit from weakness",
+          "base_effects": {
+            "mark_target_within_18m": true,
+            "bonus_attack_rolls_against_marked_target": 1,
+            "bonus_damage_against_marked_target": 1
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 2,
+                "effects": {
+                  "bonus_attack_rolls_against_marked_target": 1,
+                  "bonus_damage_against_marked_target": 1
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "reveal_target_resistances_or_defensive_profile": true
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "allies_gain_bonus_damage_against_marked_target": 1
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "if_marked_target_dies_merchant_and_one_ally_gain_1_capital_or_equivalent_momentum_bonus": true
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+
+    {
+      "id": "merchant_mammonite",
+      "name": "Mammonite",
+      "learned_at_level": 2,
+      "category": "Attack",
+      "action_type": "Action",
+      "cost_mp": 2,
+      "additional_cost": "1 Capital",
+      "requires_concentration": false,
+      "requires": [
+        "Melee weapon equipped",
+        "Enemy in melee range"
+      ],
+      "duration": "Instant",
+      "description": "The Merchant spends hard-earned combat capital for a brutally efficient melee strike.",
+      "base_effects": {
+        "damage_profile": "Weapon-based melee damage",
+        "bonus_damage": "1d8"
+      },
+      "scaling": {
+        "type": "milestone_damage_scaling",
+        "milestones": [
+          {
+            "level": 2,
+            "effects": {
+              "bonus_damage": "1d10"
+            }
+          },
+          {
+            "level": 5,
+            "effects": {
+              "bonus_damage": "2d10"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "bonus_damage": "3d10"
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "bonus_damage": "4d10"
+            }
+          }
+        ]
+      },
+      "synergies": [
+        "Battle Cart improves accuracy and delivery",
+        "Stockpile improves efficiency and burst thresholds",
+        "Appraisal improves hit reliability against analyzed targets"
+      ],
+      "design_notes": [
+        "This is the Merchant's signature burst strike.",
+        "It should feel expensive and satisfying."
+      ]
+    },
+
+    {
+      "id": "merchant_pushcart",
+      "name": "Pushcart",
+      "learned_at_level": 3,
+      "category": "Utility",
+      "action_type": "Bonus Action",
+      "cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "Until dismissed, replaced, or combat ends",
+      "description": "The Merchant deploys its cart and enables Cart-based combat functions.",
+      "base_effects": {
+        "pushcart_active": true,
+        "unlock_skills": [
+          "Change Cart",
+          "Supply Station",
+          "Cart Revolution"
+        ]
+      },
+      "scaling": {
+        "type": "milestone_system_scaling",
+        "milestones": [
+          {
+            "level": 3,
+            "effects": {
+              "pushcart_active": true
+            }
+          },
+          {
+            "level": 6,
+            "effects": {
+              "gain_minor_passive_bonus_based_on_cart_mode": true
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "merchant_gains_advantage_against_forced_movement_while_pushcart_is_active": true
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "first_cart_mode_change_each_combat_costs_0_mp": true
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "merchant_change_cart",
+      "name": "Change Cart",
+      "learned_at_level": 3,
+      "category": "Stance",
+      "action_type": "Bonus Action",
+      "cost_mp": 1,
+      "requires_concentration": false,
+      "requires": [
+        "Pushcart active"
+      ],
+      "duration": "Until changed again or combat ends",
+      "description": "The Merchant changes the operational mode of the cart to adapt its battlefield role.",
+      "base_effects": {
+        "choose_one": [
+          "Cargo Cart",
+          "Battle Cart",
+          "Utility Cart"
+        ]
+      },
+      "cart_modes": {
+        "Cargo Cart": {
+          "identity": "Support and economic efficiency",
+          "base_effects": {
+            "supply_station_support_effects_improved": true,
+            "generate_1_additional_capital_the_first_time_you_use_a_support_skill_each_turn": true,
+            "cart_revolution_area_increased": true,
+            "cart_revolution_bonus_damage_penalty": -1
+          }
+        },
+        "Battle Cart": {
+          "identity": "Damage and physical pressure",
+          "base_effects": {
+            "mammonite_bonus_attack_roll": 1,
+            "cart_revolution_bonus_damage": "1d4",
+            "push_distance_bonus": 1
+          }
+        },
+        "Utility Cart": {
+          "identity": "Movement, repositioning and tactical access",
+          "base_effects": {
+            "movement_bonus_meters": 3,
+            "supply_station_grants_mobility_or_cleanse_effects": true,
+            "cart_revolution_push_distance_bonus": 1
+          }
+        }
+      }
+    },
+
+    {
+      "id": "merchant_loud_exclamation",
+      "name": "Loud Exclamation",
+      "learned_at_level": 4,
+      "category": "Buff",
+      "action_type": "Bonus Action",
+      "cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "2 turns",
+      "range": "6m aura",
+      "description": "The Merchant unleashes a booming call that sharpens combat momentum and rallies nearby allies.",
+      "base_effects": {
+        "allies_gain_bonus_attack_rolls": 1,
+        "merchant_gains_1_capital": true
+      },
+      "scaling": {
+        "type": "milestone_support_scaling",
+        "milestones": [
+          {
+            "level": 4,
+            "effects": {
+              "allies_gain_bonus_attack_rolls": 1,
+              "merchant_gains_1_capital": true
+            }
+          },
+          {
+            "level": 6,
+            "effects": {
+              "allies_gain_temporary_hit_points": "1d4"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "duration_turns": 3
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "allies_gain_bonus_damage_on_first_hit_each_turn": 1
+            }
+          }
+        ]
+      },
+      "synergies": [
+        "Feeds Mammonite through Capital generation",
+        "Improves Cart-based momentum and team pressure"
+      ]
+    },
+
+    {
+      "id": "merchant_supply_station",
+      "name": "Supply Station",
+      "learned_at_level": 5,
+      "category": "Utility",
+      "action_type": "Action",
+      "cost_mp": 3,
+      "requires_concentration": false,
+      "requires": [
+        "Pushcart active",
+        "Valid target point within 9m"
+      ],
+      "duration": "3 turns",
+      "range": "9m",
+      "description": "The Merchant deploys a temporary support station whose benefits depend on the current Cart mode.",
+      "base_effects": {
+        "deploy_supply_station": true
+      },
+      "station_effects_by_mode": {
+        "Cargo Cart": {
+          "effects": [
+            "Allies entering the station gain 1d4 temporary hit points",
+            "The Merchant gains 1 Capital",
+            "Once per turn, one ally may recover 1 MP"
+          ]
+        },
+        "Battle Cart": {
+          "effects": [
+            "Allies gain +1 damage on their first successful hit each turn",
+            "If an enemy dies near the station, the Merchant gains 1 Capital"
+          ]
+        },
+        "Utility Cart": {
+          "effects": [
+            "Allies entering the station gain +3m movement",
+            "Allies entering the station remove one minor negative condition"
+          ]
+        }
+      },
+      "scaling": {
+        "type": "milestone_station_scaling",
+        "milestones": [
+          {
+            "level": 5,
+            "effects": {
+              "duration_turns": 3
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "station_radius_increased": true
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "one_mode_effect_of_current_cart_is_improved": true
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "merchant_cart_revolution",
+      "name": "Cart Revolution",
+      "learned_at_level": 6,
+      "category": "Attack",
+      "action_type": "Action",
+      "cost_mp": 4,
+      "requires_concentration": false,
+      "requires": [
+        "Pushcart active"
+      ],
+      "duration": "Instant",
+      "range": "Self-centered area",
+      "description": "The Merchant swings the cart with violent force, crushing formations and knocking enemies away.",
+      "base_effects": {
+        "damage_type": "Physical",
+        "damage": "2d6 + strength_modifier",
+        "push_distance_meters": 2
+      },
+      "mode_interactions": {
+        "Cargo Cart": {
+          "effect": "Cart Revolution gains increased area but deals 1 less bonus damage die."
+        },
+        "Battle Cart": {
+          "effect": "Cart Revolution gains +1d4 damage and enemies that fail their save become Staggered until end of next turn."
+        },
+        "Utility Cart": {
+          "effect": "Cart Revolution gains +1 push distance and the Merchant may reposition 2m without provoking opportunity attacks after use."
+        }
+      },
+      "scaling": {
+        "type": "milestone_area_control_scaling",
+        "milestones": [
+          {
+            "level": 6,
+            "effects": {
+              "damage": "2d6 + strength_modifier",
+              "push_distance_meters": 2
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "damage": "3d6 + strength_modifier",
+              "push_distance_meters": 3
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "damage": "4d6 + strength_modifier"
+            }
+          }
+        ]
+      },
+      "synergies": [
+        "Battle Cart turns this into a true bruiser control tool",
+        "Cargo Cart emphasizes space control",
+        "Utility Cart emphasizes displacement and movement play"
+      ]
+    }
+  ],
+
+  "summary_tables": {
+    "skill_unlocks": [
+      {
+        "level": 2,
+        "skills": [
+          "Tradecraft",
+          "Mammonite"
+        ]
+      },
+      {
+        "level": 3,
+        "skills": [
+          "Pushcart",
+          "Change Cart"
+        ]
+      },
+      {
+        "level": 4,
+        "skills": [
+          "Loud Exclamation"
+        ]
+      },
+      {
+        "level": 5,
+        "skills": [
+          "Supply Station"
+        ]
+      },
+      {
+        "level": 6,
+        "skills": [
+          "Cart Revolution"
+        ]
+      }
+    ],
+    "quick_costs": [
+      {
+        "name": "Tradecraft",
+        "cost_mp": 1
+      },
+      {
+        "name": "Mammonite",
+        "cost_mp": "2 + 1 Capital"
+      },
+      {
+        "name": "Pushcart",
+        "cost_mp": 2
+      },
+      {
+        "name": "Change Cart",
+        "cost_mp": 1
+      },
+      {
+        "name": "Loud Exclamation",
+        "cost_mp": 2
+      },
+      {
+        "name": "Supply Station",
+        "cost_mp": 3
+      },
+      {
+        "name": "Cart Revolution",
+        "cost_mp": 4
+      }
+    ]
+  },
+
+  "core_design_rules": [
+    "The Merchant is battle-oriented and uses economic flavor as combat mechanics rather than literal shop simulation.",
+    "Capital is a combat resource and should not depend directly on the player's gold inventory.",
+    "Pushcart is the central enabling system of the class.",
+    "Change Cart should alter combat behavior in meaningful ways rather than being cosmetic only.",
+    "Mammonite is the Merchant's signature burst attack.",
+    "Supply Station is the BG3-friendly reinterpretation of Vending.",
+    "Cart Revolution is the Merchant's defining cart-based area attack and control skill."
+  ]
+}
