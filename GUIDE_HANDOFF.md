@@ -610,3 +610,50 @@ Pegar esto al inicio del nuevo chat:
 - `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Zone_RO_Magician.txt`
 - `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
 - `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml`
+
+## 23) Magician cierre (Element AoE + Fire Wall + Stone Curse)
+### Estado actual consolidado
+- `Element AoE` quedo con targeting tipo Fireball (`SpellType = Projectile`, `TargetRadius = 18`, radio de impacto por variante), con zona circular movible antes de confirmar cast.
+- `Element AoE Fire` y `Element AoE Lightning` estan en modelo de detonacion instantanea (sin zona persistente por turnos).
+- `Fire Wall` quedo funcionando como control de zona persistente, separado de Element AoE.
+- `Stone Curse` se mantiene en coste de diseno `3 MP`.
+
+### Ajustes de balance/diseno confirmados
+- `Fire Wall`:
+  - L6: `5d8`
+  - L9: `6d8`
+  - L12: `7d8`, `wall_length 8m`, `duration 3 turns`
+- `Element AoE`:
+  - Costes por overchannel: `4 / 5 / 6 MP`
+  - Fire: `3d6 -> 4d6 -> 5d6` (con spellcasting modifier)
+  - Lightning: `2d6 -> 3d8 -> 4d10`
+
+### Causa raiz de errores vistos durante esta iteracion
+1. El cast se cancelaba al hacer click:
+- Causa principal: configuracion de spell/targeting inconsistente para el flujo de area seleccionable.
+- Solucion: unificar a patron projectile AoE (igual naturaleza que Fireball).
+
+2. Area gigante tipo cono en lugar de circulo controlable:
+- Causa principal: mezcla de configuracion de zone/cone heredada en variantes previas.
+- Solucion: normalizar variantes a detonacion con radio (`AreaRadius/ExplodeRadius`) y contenedor projectile.
+
+3. Riesgo de crash en level-up (nivel 7) durante edicion:
+- Se detecto corrupcion en `Class Design/Magician.json` (entradas invalidas tipo `$13`) en una pasada intermedia.
+- Se reparo y se dejo JSON valido y coherente con implementacion final.
+
+### Archivos de referencia para continuar Magician
+- Diseno: `Class Design/Magician.json`
+- AoE: `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Zone_RO_Magician.txt`
+- Fire Wall: `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Wall_RO_Magician.txt`
+- Progresion: `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Progressions/Progressions.lsx`
+- Localizacion: `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml`
+
+### Regresion minima recomendada (rapida)
+1. Subir Magician de nivel `5 -> 8` y validar que no haya crash en `7`.
+2. Probar `Element AoE` Fire/Lightning:
+- aparece preview circular movible,
+- respeta alcance `18m`,
+- aplica dano correcto por milestone.
+3. Probar `Fire Wall` en L6/L9/L12:
+- dano por cruce/fin de turno segun tier,
+- duracion y longitud correctas.
