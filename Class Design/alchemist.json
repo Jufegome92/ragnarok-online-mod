@@ -1,0 +1,911 @@
+{
+  "base_class": "Novice",
+  "first_job": "Merchant",
+  "second_job": "Alchemist",
+
+  "granted_at_character_level": 6,
+  "second_job_selector_group": [
+    "Blacksmith",
+    "Alchemist"
+  ],
+
+  "inherits_from_first_job": {
+    "retained_merchant_systems": [
+      "Capital",
+      "Tradecraft",
+      "Mammonite",
+      "Pushcart",
+      "Change Cart",
+      "Loud Exclamation",
+      "Supply Station",
+      "Cart Revolution"
+    ],
+    "capital_role_in_second_job": "secondary",
+    "capital_note": "Capital remains available for inherited Merchant skills, but it is no longer the main engine of the class."
+  },
+
+  "second_job_overrides": {
+    "spellcasting_ability": "Intelligence",
+    "spellcasting_save_dc_formula": "8 + proficiency_bonus + intelligence_modifier",
+    "mana_points_formula": "(4 + (2 * character_level)) + (character_level * floor(spellcasting_modifier / 2))"
+  },
+
+  "design_identity": {
+    "role": "Technical Support / Bomber / Biotech Summoner",
+    "combat_style": "Generates Reagents, applies volatile formulas, empowers allies with pitchers, and controls the battlefield through homunculus and living deployables.",
+    "strengths": [
+      "Strong support flexibility",
+      "Hybrid offensive and utility chemistry",
+      "Access to summon-based pressure",
+      "Excellent status and resource interactions"
+    ],
+    "weaknesses": [
+      "Requires setup to reach full value",
+      "More system-heavy than Blacksmith",
+      "Less straightforward burst if Reagents are poorly managed"
+    ]
+  },
+
+  "core_systems": {
+    "reagents": {
+      "description": "Reagents are the Alchemist's main secondary combat resource.",
+      "resource_name": "Reagents",
+      "maximum_charges": 3,
+      "generation_rules": [
+        "Chemical Doctrine is the main source of Reagents",
+        "Some advanced skills may generate or refund Reagents",
+        "A source can generate Reagents only once per turn unless explicitly stated otherwise"
+      ]
+    },
+    "homunculus_system": {
+      "description": "The Alchemist uses a single summonable Homunculus whose behavior changes through protocols rather than maintaining multiple summon types.",
+      "protocols": [
+        "Aggressive",
+        "Supportive",
+        "Defensive"
+      ]
+    }
+  },
+
+  "progression": {
+    "level_6": {
+      "class_state": "Alchemist",
+      "features_gained": [
+        "Chemical Doctrine",
+        "Volatile Formula"
+      ]
+    },
+    "level_7": {
+      "features_gained": [
+        "Potion Pitcher"
+      ]
+    },
+    "level_8": {
+      "features_gained": [
+        "Axe Technique"
+      ]
+    },
+    "level_9": {
+      "features_gained": [
+        "Homunculus Bond"
+      ]
+    },
+    "level_10": {
+      "features_gained": [
+        "Chemical Protection"
+      ]
+    },
+    "level_11": {
+      "features_gained": [
+        "Bioculture"
+      ]
+    },
+    "level_12": {
+      "features_gained": [
+        "Creator's Formula"
+      ]
+    }
+  },
+
+  "skills": [
+    {
+      "id": "alchemist_chemical_doctrine",
+      "name": "Chemical Doctrine",
+      "learned_at_level": 6,
+      "category": "Stance",
+      "action_type": "Bonus Action",
+      "cost_mp": 1,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "Until switched off, replaced by another Doctrine, or combat ends",
+      "description": "The Alchemist adopts a preparation doctrine that determines how materials are refined and converted into battlefield value.",
+      "base_effects": {
+        "choose_one": [
+          "Pharmacy",
+          "Plant Cultivation",
+          "Learning Potion"
+        ]
+      },
+      "doctrine_variants": {
+        "Pharmacy": {
+          "identity": "Support refinement and stable alchemical throughput",
+          "base_effects": {
+            "first_support_or_protection_skill_each_turn_costs_1_less_mp_minimum_1": true,
+            "using_potion_pitcher_or_chemical_protection_generates_1_reagent_once_per_turn": true
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 6,
+                "effects": {
+                  "first_support_or_protection_skill_each_turn_costs_1_less_mp_minimum_1": true
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "potion_pitcher_intensified_effects_gain_plus_1_turn_duration": true
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "first_reagent_spent_each_combat_is_refunded": true
+                }
+              }
+            ]
+          }
+        },
+        "Plant Cultivation": {
+          "identity": "Biological growth and living material generation",
+          "base_effects": {
+            "gain_1_reagent_at_start_of_combat": true,
+            "bioculture_deployables_gain_bonus_duration": 1
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 6,
+                "effects": {
+                  "gain_1_reagent_at_start_of_combat": true
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "bioculture_summons_gain_bonus_hit_points": "1d6 + intelligence_modifier"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "first_time_each_turn_an_enemy_is_affected_by_your_plant_or_mine_gain_1_reagent": true
+                }
+              }
+            ]
+          }
+        },
+        "Learning Potion": {
+          "identity": "Analytical chemistry and exploitative adaptation",
+          "base_effects": {
+            "mark_target_within_18m": true,
+            "your_alchemical_save_dc_against_marked_target": 1
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 6,
+                "effects": {
+                  "your_alchemical_save_dc_against_marked_target": 1
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "your_alchemical_damage_against_marked_target_bonus": "1d4"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "if_marked_target_suffers_burning_poisoned_corroded_or_ensnared_gain_1_reagent_once_per_turn": true
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+
+    {
+      "id": "alchemist_volatile_formula",
+      "name": "Volatile Formula",
+      "learned_at_level": 6,
+      "category": "Attack",
+      "action_type": "Action",
+      "base_cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Valid target or target area within 18m"
+      ],
+      "duration": "Variant-dependent",
+      "range": "18m",
+      "description": "The Alchemist deploys an unstable combat formula, choosing between explosive, corrosive, or hybrid reactions.",
+      "base_effects": {
+        "choose_one": [
+          "Demonstration",
+          "Acid Terror",
+          "Acid Demonstration"
+        ]
+      },
+      "formula_variants": {
+        "Demonstration": {
+          "identity": "Explosive fire-aligned formula",
+          "base_effect": {
+            "damage_type": "Fire",
+            "area_radius": "2m",
+            "damage": "2d6 + intelligence_modifier"
+          },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 6,
+                "effects": {
+                  "damage": "2d6 + intelligence_modifier"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "damage": "3d6 + intelligence_modifier"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "damage": "4d6 + intelligence_modifier",
+                  "area_radius": "3m"
+                }
+              }
+            ]
+          },
+          "intensified_effect": {
+            "effect": "Targets in the area must pass a Constitution save or become Burning for 1 turn."
+          },
+          "overload_effect": {
+            "effect": "Consumes 1 Reagent. The formula leaves an unstable burning residue in the area until the start of your next turn, dealing 1d4 Fire damage to enemies entering or ending their turn there."
+          }
+        },
+        "Acid Terror": {
+          "identity": "Direct corrosive pressure",
+          "base_effect": {
+            "damage_type": "Acid",
+            "damage": "2d6 + intelligence_modifier",
+            "effect": "Target suffers -1 AC for 2 turns"
+          },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 6,
+                "effects": {
+                  "damage": "2d6 + intelligence_modifier",
+                  "ac_penalty": 1
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "damage": "3d6 + intelligence_modifier",
+                  "ac_penalty": 2
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "damage": "4d6 + intelligence_modifier",
+                  "ac_penalty": 2
+                }
+              }
+            ]
+          },
+          "intensified_effect": {
+            "effect": "The AC penalty lasts 3 turns instead."
+          },
+          "overload_effect": {
+            "effect": "Consumes 1 Reagent. The target also becomes Corroded, taking an additional 1d4 physical damage from weapon hits for 2 turns."
+          }
+        },
+        "Acid Demonstration": {
+          "identity": "Hybrid creator-grade volatile compound",
+          "base_effect": {
+            "damage_type": "Fire and Acid",
+            "area_radius": "2m",
+            "damage": "2d4 Fire + 2d4 Acid + intelligence_modifier"
+          },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 6,
+                "effects": {
+                  "damage": "2d4 Fire + 2d4 Acid + intelligence_modifier"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "damage": "3d4 Fire + 3d4 Acid + intelligence_modifier"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "damage": "4d4 Fire + 4d4 Acid + intelligence_modifier",
+                  "area_radius": "3m"
+                }
+              }
+            ]
+          },
+          "intensified_effect": {
+            "effect": "Targets in the area suffer -1 AC until the start of your next turn."
+          },
+          "overload_effect": {
+            "effect": "Consumes 1 Reagent. Enemies that fail a Constitution save become Burning and Corroded for 1 turn."
+          }
+        }
+      },
+      "overchannel": {
+        "base": {
+          "total_mp_cost": 2,
+          "effect": "Use the current milestone-scaled base form of the chosen formula."
+        },
+        "intensified": {
+          "total_mp_cost": 3,
+          "effect": "Use the base form and add the intensified effect."
+        },
+        "overload": {
+          "total_mp_cost": 4,
+          "effect": "Use the base form, add the intensified effect, and add the overload effect."
+        }
+      }
+    },
+
+    {
+      "id": "alchemist_potion_pitcher",
+      "name": "Potion Pitcher",
+      "learned_at_level": 7,
+      "category": "Support",
+      "action_type": "Action",
+      "base_cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Self or ally within 9m"
+      ],
+      "duration": "Variant-dependent",
+      "range": "9m",
+      "description": "The Alchemist hurls a prepared compound at an ally, choosing between recovery, stimulation, or berserk enhancement.",
+      "base_effects": {
+        "choose_one": [
+          "Restorative Pitch",
+          "Stim Pitch",
+          "Berserk Pitch"
+        ]
+      },
+      "pitch_variants": {
+        "Restorative Pitch": {
+          "base_effect": {
+            "healing": "1d6 + intelligence_modifier"
+          },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 7,
+                "effects": {
+                  "healing": "1d6 + intelligence_modifier"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "healing": "2d6 + intelligence_modifier"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "healing": "3d6 + intelligence_modifier"
+                }
+              }
+            ]
+          },
+          "intensified_effect": {
+            "effect": "Target also gains 1d4 temporary hit points."
+          },
+          "overload_effect": {
+            "effect": "Consumes 1 Reagent. Target also removes one removable negative condition."
+          }
+        },
+        "Stim Pitch": {
+          "base_effect": {
+            "effect": "Target gains +1 attack rolls and +3m movement for 2 turns."
+          },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 7,
+                "effects": {
+                  "attack_bonus": 1,
+                  "movement_bonus": "3m"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "attack_bonus": 1,
+                  "movement_bonus": "6m"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "attack_bonus": 2,
+                  "movement_bonus": "6m"
+                }
+              }
+            ]
+          },
+          "intensified_effect": {
+            "effect": "Target also gains +1 AC for the duration."
+          },
+          "overload_effect": {
+            "effect": "Consumes 1 Reagent. Target ignores difficult terrain and does not provoke opportunity attacks until the end of its next turn."
+          }
+        },
+        "Berserk Pitch": {
+          "base_effect": {
+            "effect": "Target gains +2 damage and +3m movement, but suffers -1 AC for 2 turns."
+          },
+          "base_scaling": {
+            "milestones": [
+              {
+                "level": 7,
+                "effects": {
+                  "damage_bonus": 2,
+                  "movement_bonus": "3m",
+                  "ac_penalty": 1
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "damage_bonus": 3,
+                  "movement_bonus": "3m",
+                  "ac_penalty": 1
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "damage_bonus": 4,
+                  "movement_bonus": "6m",
+                  "ac_penalty": 1
+                }
+              }
+            ]
+          },
+          "intensified_effect": {
+            "effect": "The target gains advantage on its first melee attack before the end of its next turn."
+          },
+          "overload_effect": {
+            "effect": "Consumes 1 Reagent. The target's first melee hit each turn deals an additional 1d6 damage for the duration."
+          }
+        }
+      },
+      "overchannel": {
+        "base": {
+          "total_mp_cost": 2,
+          "effect": "Use the current milestone-scaled base version of the chosen pitch."
+        },
+        "intensified": {
+          "total_mp_cost": 3,
+          "effect": "Use the base version and add the intensified effect."
+        },
+        "overload": {
+          "total_mp_cost": 4,
+          "effect": "Use the base version, add the intensified effect, and add the overload effect."
+        }
+      }
+    },
+
+    {
+      "id": "alchemist_axe_technique",
+      "name": "Axe Technique",
+      "learned_at_level": 8,
+      "category": "Stance",
+      "action_type": "Bonus Action",
+      "cost_mp": 1,
+      "requires_concentration": false,
+      "requires": [
+        "Axe equipped"
+      ],
+      "duration": "Until switched off, replaced, or combat ends",
+      "description": "The Alchemist treats the axe as a surgical combat tool for delivering compounds and exploiting weakened targets.",
+      "base_effects": {
+        "axe_attack_roll_bonus": 1
+      },
+      "scaling": {
+        "milestones": [
+          {
+            "level": 8,
+            "effects": {
+              "axe_attack_roll_bonus": 1
+            }
+          },
+          {
+            "level": 10,
+            "effects": {
+              "first_axe_hit_against_target_affected_by_your_formula_deals_bonus_damage": "1d4"
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "first_axe_hit_against_target_affected_by_your_formula_deals_bonus_damage": "1d6",
+              "axe_hits_refresh_minor_formula_duration_by_1_turn_once_per_turn": true
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "alchemist_homunculus_bond",
+      "name": "Homunculus Bond",
+      "learned_at_level": 9,
+      "category": "System Skill",
+      "action_type": "Action or Bonus Action",
+      "base_cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Variant-dependent"
+      ],
+      "duration": "Variant-dependent",
+      "range": "Self or homunculus range",
+      "description": "The Alchemist establishes, maintains, and reinforces a living bond with a single engineered companion.",
+      "base_effects": {
+        "choose_one": [
+          "Call Homunculus",
+          "Change Protocol",
+          "Rest",
+          "Resurrect Homunculus"
+        ]
+      },
+      "bond_variants": {
+        "Call Homunculus": {
+          "base_effect": {
+            "summon_homunculus": true,
+            "choose_one_protocol": [
+              "Aggressive",
+              "Supportive",
+              "Defensive"
+            ]
+          },
+          "protocols": {
+            "Aggressive": {
+              "effect": "The homunculus gains bonus damage and prioritizes attacking marked or afflicted enemies."
+            },
+            "Supportive": {
+              "effect": "The homunculus gains support behaviors, including minor healing or reagent-related interactions."
+            },
+            "Defensive": {
+              "effect": "The homunculus gains bonus hit points and improved interception behavior."
+            }
+          }
+        },
+        "Change Protocol": {
+          "base_effect": {
+            "effect": "Switch the active homunculus to Aggressive, Supportive, or Defensive protocol."
+          }
+        },
+        "Rest": {
+          "base_effect": {
+            "effect": "Heal the homunculus for 2d6 + intelligence_modifier."
+          },
+          "intensified_effect": {
+            "effect": "The homunculus also gains 1d4 temporary hit points."
+          },
+          "overload_effect": {
+            "effect": "Consumes 1 Reagent. The homunculus also removes one removable negative condition."
+          }
+        },
+        "Resurrect Homunculus": {
+          "base_effect": {
+            "effect": "If the homunculus is defeated, restore it with 50% hit points."
+          },
+          "limitations": {
+            "uses": "1 per Short Rest"
+          },
+          "overload_effect": {
+            "effect": "Consumes 1 Reagent. The restored homunculus also returns with a protocol-specific bonus for 2 turns."
+          }
+        }
+      },
+      "bioethics_passive": {
+        "description": "Bioethics is represented as the default obedience and control framework of the bond system.",
+        "effects": [
+          "The homunculus does not suffer control penalties while the Alchemist is conscious",
+          "Changing protocol does not dismiss the summon"
+        ]
+      },
+      "overchannel": {
+        "base": {
+          "total_mp_cost": 2,
+          "effect": "Use the base version of the selected bond function."
+        },
+        "intensified": {
+          "total_mp_cost": 3,
+          "effect": "Use the base version and add the intensified effect if available."
+        },
+        "overload": {
+          "total_mp_cost": 4,
+          "effect": "Use the base version, add the intensified effect if available, and add the overload effect if available."
+        }
+      }
+    },
+
+    {
+      "id": "alchemist_chemical_protection",
+      "name": "Chemical Protection",
+      "learned_at_level": 10,
+      "category": "Buff",
+      "action_type": "Bonus Action",
+      "base_cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Self or ally within 9m"
+      ],
+      "duration": "3 turns",
+      "range": "9m",
+      "description": "The Alchemist applies protective compounds that preserve equipment, flesh, and active chemistry against hostile interference.",
+      "base_effects": {
+        "choose_one": [
+          "Weapon Protection",
+          "Armor Protection",
+          "Biochemical Protection"
+        ]
+      },
+      "protection_variants": {
+        "Weapon Protection": {
+          "base_effect": {
+            "effect": "Target gains +1 attack rolls and cannot be Disarmed by non-boss effects."
+          },
+          "intensified_effect": {
+            "effect": "Target also deals +1 damage on weapon hits."
+          },
+          "overload_effect": {
+            "effect": "Consumes 1 Reagent. The protected weapon ignores minor physical damage reduction."
+          }
+        },
+        "Armor Protection": {
+          "base_effect": {
+            "effect": "Target gains +1 AC and resistance to Acid damage."
+          },
+          "intensified_effect": {
+            "effect": "Target also gains resistance to Fire damage."
+          },
+          "overload_effect": {
+            "effect": "Consumes 1 Reagent. The target reduces incoming physical damage by 1."
+          }
+        },
+        "Biochemical Protection": {
+          "base_effect": {
+            "effect": "Target gains advantage on saves against Poisoned, Diseased, Burning, and Corroded."
+          },
+          "intensified_effect": {
+            "effect": "If the target is already suffering one of those conditions, reduce its remaining duration by 1 turn."
+          },
+          "overload_effect": {
+            "effect": "Consumes 1 Reagent. The target becomes immune to Poisoned and Corroded for the duration."
+          }
+        }
+      },
+      "overchannel": {
+        "base": {
+          "total_mp_cost": 2,
+          "effect": "Use the base version of the chosen protection."
+        },
+        "intensified": {
+          "total_mp_cost": 3,
+          "effect": "Use the base version and add the intensified effect."
+        },
+        "overload": {
+          "total_mp_cost": 4,
+          "effect": "Use the base version, add the intensified effect, and add the overload effect."
+        }
+      }
+    },
+
+    {
+      "id": "alchemist_bioculture",
+      "name": "Bioculture",
+      "learned_at_level": 11,
+      "category": "Deployable",
+      "action_type": "Action",
+      "base_cost_mp": 3,
+      "additional_cost": "1 Reagent",
+      "requires_concentration": false,
+      "requires": [
+        "Valid point within 18m"
+      ],
+      "duration": "Variant-dependent",
+      "range": "18m",
+      "description": "The Alchemist deploys cultivated organisms, traps, or growths that convert living chemistry into battlefield pressure.",
+      "base_effects": {
+        "choose_one": [
+          "Bio Cannibalize",
+          "Sphere Mine",
+          "Cultivated Growth"
+        ]
+      },
+      "bioculture_variants": {
+        "Bio Cannibalize": {
+          "base_effect": {
+            "effect": "Summon an offensive plant creature for 3 turns."
+          },
+          "intensified_effect": {
+            "effect": "The plant gains bonus hit points and its first successful attack each turn applies Ensnared or Poisoned."
+          },
+          "overload_effect": {
+            "effect": "The plant deals an additional 1d4 damage against enemies already affected by your formulas."
+          }
+        },
+        "Sphere Mine": {
+          "base_effect": {
+            "effect": "Deploy a mine that explodes when an enemy enters its trigger radius or at the start of your next turn.",
+            "damage": "3d6 Acid or Fire damage (choose on deployment)"
+          },
+          "intensified_effect": {
+            "effect": "The mine also applies Burning or Corroded depending on the chosen damage type."
+          },
+          "overload_effect": {
+            "effect": "The explosion radius increases by 1m and revealed enemies cannot Hide until the end of their next turn."
+          }
+        },
+        "Cultivated Growth": {
+          "base_effect": {
+            "effect": "Deploy a support growth for 3 turns. Allies entering or starting turn near it gain 1d4 temporary hit points or the Alchemist gains 1 Reagent once per turn."
+          },
+          "intensified_effect": {
+            "effect": "The growth also grants +1 movement speed tier or removes one minor negative condition."
+          },
+          "overload_effect": {
+            "effect": "If your homunculus is active, it also heals 1d6 at the start of its turn while near the growth."
+          }
+        }
+      },
+      "overchannel": {
+        "base": {
+          "total_mp_cost": "3 + 1 Reagent",
+          "effect": "Use the base version of the chosen bioculture deployment."
+        },
+        "intensified": {
+          "total_mp_cost": "4 + 1 Reagent",
+          "effect": "Use the base version and add the intensified effect."
+        },
+        "overload": {
+          "total_mp_cost": "5 + 1 Reagent",
+          "effect": "Use the base version, add the intensified effect, and add the overload effect."
+        }
+      }
+    },
+
+    {
+      "id": "alchemist_creators_formula",
+      "name": "Creator's Formula",
+      "learned_at_level": 12,
+      "category": "Passive",
+      "action_type": "Passive",
+      "cost_mp": 0,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "Permanent",
+      "description": "The Alchemist's systems of reagents, formulas, biology, and support finally converge into true creator-level synthesis.",
+      "base_effects": {
+        "first_alchemical_skill_each_turn_that_would_consume_a_reagent_consumes_1_less_reagent_minimum_0": true,
+        "enemies_affected_by_your_burning_poisoned_corroded_or_ensnared_states_take_bonus_damage_from_homunculus_axe_hits_and_bioculture": "1d4",
+        "if_homunculus_is_active_your_first_volatile_formula_or_potion_pitcher_each_turn_gains_intensified_effects_for_free": true
+      }
+    }
+  ],
+
+  "summary_tables": {
+    "skill_unlocks": [
+      {
+        "level": 6,
+        "skills": [
+          "Chemical Doctrine",
+          "Volatile Formula"
+        ]
+      },
+      {
+        "level": 7,
+        "skills": [
+          "Potion Pitcher"
+        ]
+      },
+      {
+        "level": 8,
+        "skills": [
+          "Axe Technique"
+        ]
+      },
+      {
+        "level": 9,
+        "skills": [
+          "Homunculus Bond"
+        ]
+      },
+      {
+        "level": 10,
+        "skills": [
+          "Chemical Protection"
+        ]
+      },
+      {
+        "level": 11,
+        "skills": [
+          "Bioculture"
+        ]
+      },
+      {
+        "level": 12,
+        "skills": [
+          "Creator's Formula"
+        ]
+      }
+    ],
+    "quick_costs": [
+      {
+        "name": "Chemical Doctrine",
+        "cost_mp": 1
+      },
+      {
+        "name": "Volatile Formula",
+        "cost_mp": "2 / 3 / 4"
+      },
+      {
+        "name": "Potion Pitcher",
+        "cost_mp": "2 / 3 / 4"
+      },
+      {
+        "name": "Axe Technique",
+        "cost_mp": 1
+      },
+      {
+        "name": "Homunculus Bond",
+        "cost_mp": "2 / 3 / 4"
+      },
+      {
+        "name": "Chemical Protection",
+        "cost_mp": "2 / 3 / 4"
+      },
+      {
+        "name": "Bioculture",
+        "cost_mp": "3 / 4 / 5 + 1 Reagent"
+      },
+      {
+        "name": "Creator's Formula",
+        "cost_mp": 0
+      }
+    ]
+  },
+
+  "core_design_rules": [
+    "Alchemist is not Merchant with more items; it is a branch that turns material management into chemistry, biology, and formula-based combat.",
+    "Reagents are the class's main second-job resource.",
+    "Capital remains inherited but secondary, mainly for legacy Merchant tools like Mammonite.",
+    "The Homunculus should be implemented as one summon with multiple protocols, not as many separate summon classes at first.",
+    "Volatile Formula is the main offensive signature of the class.",
+    "Potion Pitcher defines the support side of the Alchemist.",
+    "Bioculture and Homunculus Bond are the main Creator-facing systems."
+  ]
+}
