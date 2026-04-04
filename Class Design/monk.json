@@ -1,0 +1,931 @@
+{
+  "base_class": "Novice",
+  "first_job": "Acolyte",
+  "second_job": "Monk",
+
+  "granted_at_character_level": 6,
+  "second_job_selector_group": [
+    "Priest",
+    "Monk"
+  ],
+
+  "inherits_from_first_job": {
+    "spellcasting_ability": "Wisdom",
+    "spellcasting_save_dc_formula": "8 + proficiency_bonus + wisdom_modifier",
+    "mana_points_formula": "(4 + (2 * character_level)) + (character_level * floor(spellcasting_modifier / 2))",
+    "retained_acolyte_systems": [
+      "Sacred Doctrine",
+      "Restoration",
+      "Sanctuary Rite",
+      "Benediction",
+      "Judgement",
+      "Aqua Benedicta",
+      "Pilgrim's Passage"
+    ]
+  },
+
+  "design_identity": {
+    "role": "Martial Burst / Combo Specialist / Backline Hunter",
+    "combat_style": "Build Spirit, choose between pressure or combo routes, and convert rhythm into explosive finishers.",
+    "strengths": [
+      "Strong anti-backline pressure",
+      "Powerful single-target combo path against elites",
+      "Excellent mobility",
+      "High burst through Spirit conversion"
+    ],
+    "weaknesses": [
+      "Needs setup for peak value",
+      "Combo route is weaker against fragile targets",
+      "Can feel exposed if Spirit and stance choice are mismanaged"
+    ]
+  },
+
+  "core_systems": {
+    "spirit_spheres": {
+      "description": "Spirit Spheres are the Monk's main combat resource.",
+      "resource_name": "Spirit Spheres",
+      "maximum_charges": 5,
+      "generation_rules": [
+        "Call Spirits generates Spirit Spheres directly",
+        "Absorb Spirits generates 1 Spirit Sphere when its condition is met",
+        "Martial Flow can generate 1 Spirit Sphere on success",
+        "Dangerous Soul Collect is the emergency burst generator"
+      ]
+    },
+    "martial_stances": {
+      "description": "Only one Monk stance can be active at a time.",
+      "stances": [
+        "Iron Hand",
+        "Dodge",
+        "Steel Body"
+      ]
+    },
+    "combo_windows": {
+      "description": "Combo Arts use temporary windows instead of action-combat speed.",
+      "statuses": [
+        "Finish Window",
+        "Crush Window"
+      ]
+    },
+    "martial_flow": {
+      "description": "Martial Flow is the Monk's controlled randomness engine and only supports the combo route.",
+      "trigger_rules": {
+        "after_attack_action_and_follow_up_strike_roll_1d6": true,
+        "if_no_attacks_hit_trigger_threshold": "6+",
+        "if_one_attack_hit_trigger_threshold": "5+",
+        "if_both_attacks_hit_trigger_threshold": "4+"
+      },
+      "on_success_choose_one": [
+        "Gain 1 Spirit Sphere",
+        "Gain Finish Window if you do not already have it",
+        "Gain +1 AC until your next turn"
+      ]
+    }
+  },
+
+  "progression": {
+    "level_6": {
+      "class_state": "Monk",
+      "features_gained": [
+        "Spirit Gathering",
+        "Iron Hand"
+      ]
+    },
+    "level_7": {
+      "features_gained": [
+        "Pressure Arts"
+      ]
+    },
+    "level_8": {
+      "features_gained": [
+        "Combo Arts"
+      ]
+    },
+    "level_9": {
+      "features_gained": [
+        "Body Relocation",
+        "Dodge"
+      ]
+    },
+    "level_10": {
+      "features_gained": [
+        "Blade Stop",
+        "Steel Body"
+      ]
+    },
+    "level_11": {
+      "features_gained": [
+        "Critical Explosion",
+        "Dangerous Soul Collect"
+      ]
+    },
+    "level_12": {
+      "features_gained": [
+        "Asura Strike"
+      ]
+    }
+  },
+
+  "skills": [
+    {
+      "id": "monk_spirit_gathering",
+      "name": "Spirit Gathering",
+      "learned_at_level": 6,
+      "category": "System Skill",
+      "action_type": "Bonus Action / Passive / Reaction",
+      "base_cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Variant-dependent"
+      ],
+      "duration": "Variant-dependent",
+      "description": "The Monk gathers, restores, and absorbs spiritual force to maintain offensive rhythm.",
+      "base_effects": {
+        "choose_one": [
+          "Call Spirits",
+          "Spirit Recovery",
+          "Absorb Spirits"
+        ]
+      },
+      "variants": {
+        "Call Spirits": {
+          "base_effect": {
+            "gain_spirit_spheres": 2
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 6,
+                "effects": {
+                  "gain_spirit_spheres": 2
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "if_current_spirit_spheres_are_0_gain_spirit_spheres": 3
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "after_using_call_spirits_gain_1_bonus_attack_roll_on_next_monk_skill_this_turn": true
+                }
+              }
+            ]
+          }
+        },
+        "Spirit Recovery": {
+          "base_effect": {
+            "effect": "The first time each combat you start your turn with 0 Spirit Spheres, gain 1 Spirit Sphere."
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 6,
+                "effects": {
+                  "triggers_once_per_combat": true
+                }
+              },
+              {
+                "level": 10,
+                "effects": {
+                  "also_gain_1d4_temporary_hit_points_when_triggered": true
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "can_trigger_twice_per_combat": true
+                }
+              }
+            ]
+          }
+        },
+        "Absorb Spirits": {
+          "base_effect": {
+            "effect": "Once per turn, when a creature within 9m is reduced to 0 HP or loses Concentration due to your Monk skill, gain 1 Spirit Sphere."
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 6,
+                "effects": {
+                  "gain_spirit_spheres": 1
+                }
+              },
+              {
+                "level": 10,
+                "effects": {
+                  "range_meters": 12
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "also_triggers_when_you_incapacitate_a_target_with_combo_or_pressure_arts": true
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+
+    {
+      "id": "monk_iron_hand",
+      "name": "Iron Hand",
+      "learned_at_level": 6,
+      "category": "Stance",
+      "action_type": "Bonus Action",
+      "cost_mp": 1,
+      "requires_concentration": false,
+      "requires": [
+        "Unarmed or Monk weapon equipped"
+      ],
+      "duration": "Until switched off, replaced by another stance, or combat ends",
+      "description": "The Monk hardens body and technique into a direct offensive posture.",
+      "base_effects": {
+        "unarmed_and_monk_weapon_attacks_count_as_magical": true,
+        "bonus_damage_unarmed_and_monk_weapons": 1
+      },
+      "scaling": {
+        "milestones": [
+          {
+            "level": 6,
+            "effects": {
+              "bonus_damage_unarmed_and_monk_weapons": 1
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "bonus_attack_rolls_unarmed_and_monk_weapons": 1
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "first_hit_each_turn_deals_bonus_damage": "1d4"
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "monk_pressure_arts",
+      "name": "Pressure Arts",
+      "learned_at_level": 7,
+      "category": "Attack / Utility",
+      "action_type": "Action or Bonus Action",
+      "base_cost_mp": 1,
+      "requires_concentration": false,
+      "requires": [
+        "Variant-dependent"
+      ],
+      "duration": "Variant-dependent",
+      "range": "Variant-dependent",
+      "description": "The Monk uses precise ranged and disruption techniques to hunt backline enemies and fragile targets.",
+      "base_effects": {
+        "choose_one": [
+          "Finger Offensive",
+          "Palm Push Strike",
+          "Investigate"
+        ]
+      },
+      "variants": {
+        "Finger Offensive": {
+          "action_type": "Action",
+          "cost": "1 to 5 Spirit Spheres",
+          "range": "18m",
+          "base_effect": {
+            "effect": "Fire one spirit projectile per Spirit Sphere spent.",
+            "damage_per_projectile": "1d4 + wisdom_modifier"
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 7,
+                "effects": {
+                  "damage_per_projectile": "1d4 + wisdom_modifier"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "damage_per_projectile": "1d6 + wisdom_modifier"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "damage_per_projectile": "1d8 + wisdom_modifier"
+                }
+              }
+            ]
+          }
+        },
+        "Palm Push Strike": {
+          "action_type": "Action",
+          "cost_mp": 2,
+          "range": "9m",
+          "base_effect": {
+            "damage": "1d8 + wisdom_modifier",
+            "push_distance_meters": 3,
+            "on_failed_save": "Target loses reactions until the end of its next turn."
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 7,
+                "effects": {
+                  "push_distance_meters": 3
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "push_distance_meters": 4,
+                  "bonus_damage": "1d4"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "push_distance_meters": 5,
+                  "on_failed_save": "Target becomes Dazed until the end of its next turn."
+                }
+              }
+            ]
+          }
+        },
+        "Investigate": {
+          "action_type": "Bonus Action",
+          "cost_mp": 1,
+          "range": "18m",
+          "duration": "2 turns",
+          "base_effect": {
+            "effect": "Analyze the target's weak points.",
+            "target_ac_penalty_against_your_monk_skills": 1,
+            "your_pressure_arts_bonus_attack_rolls_against_target": 1
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 7,
+                "effects": {
+                  "target_ac_penalty_against_your_monk_skills": 1
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "target_save_penalty_against_your_spirit_techniques": 1
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "first_time_each_turn_you_hit_the_investigated_target_gain_1_spirit_sphere": true
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+
+    {
+      "id": "monk_combo_arts",
+      "name": "Combo Arts",
+      "learned_at_level": 8,
+      "category": "Combo System",
+      "action_type": "Action / Bonus Action / Passive",
+      "base_cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Variant-dependent"
+      ],
+      "duration": "Variant-dependent",
+      "description": "The Monk opens, advances, and finishes martial sequences designed for durable enemies.",
+      "base_effects": {
+        "contains": [
+          "Triple Attack",
+          "Chain Combo",
+          "Combo Finish",
+          "Tiger Knuckle Fist",
+          "Chain Crush Combo",
+          "Martial Flow"
+        ]
+      },
+      "combo_engine": {
+        "Triple Attack": {
+          "type": "Passive",
+          "effect": "When you take the Attack Action with an unarmed strike or Monk weapon, you also make a Follow-Up Strike.",
+          "follow_up_strike_damage": "1d4 + martial_modifier",
+          "counts_for_martial_flow": true,
+          "scaling": {
+            "milestones": [
+              {
+                "level": 8,
+                "effects": {
+                  "follow_up_strike_damage": "1d4 + martial_modifier"
+                }
+              },
+              {
+                "level": 10,
+                "effects": {
+                  "follow_up_strike_damage": "1d6 + martial_modifier"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "if_both_attacks_hit_improve_martial_flow_thresholds_by_1": true
+                }
+              }
+            ]
+          }
+        },
+        "Chain Combo": {
+          "action_type": "Action",
+          "cost_mp": 2,
+          "base_effect": {
+            "damage_profile": "Weapon-based or unarmed strike",
+            "if_hit_gain_finish_window": true
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 8,
+                "effects": {
+                  "if_hit_gain_finish_window": true
+                }
+              },
+              {
+                "level": 10,
+                "effects": {
+                  "bonus_damage": "1d4"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "if_target_is_investigated_gain_bonus_attack_roll": 1
+                }
+              }
+            ]
+          }
+        },
+        "Combo Finish": {
+          "action_type": "Bonus Action",
+          "cost_mp": 2,
+          "requires": [
+            "Finish Window"
+          ],
+          "base_effect": {
+            "damage": "1d6 + martial_modifier",
+            "consume_finish_window": true,
+            "gain_crush_window": true
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 8,
+                "effects": {
+                  "damage": "1d6 + martial_modifier"
+                }
+              },
+              {
+                "level": 10,
+                "effects": {
+                  "damage": "1d8 + martial_modifier"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "target_ac_penalty_until_end_of_next_turn": 1
+                }
+              }
+            ]
+          }
+        },
+        "Tiger Knuckle Fist": {
+          "action_type": "Action",
+          "cost_mp": 3,
+          "requires": [
+            "Finish Window or Crush Window"
+          ],
+          "base_effect": {
+            "damage": "2d6 + martial_modifier"
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 8,
+                "effects": {
+                  "damage": "2d6 + martial_modifier"
+                }
+              },
+              {
+                "level": 10,
+                "effects": {
+                  "damage": "3d6 + martial_modifier"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "on_failed_save": "Target becomes Staggered and loses reactions until the end of its next turn."
+                }
+              }
+            ]
+          }
+        },
+        "Chain Crush Combo": {
+          "action_type": "Action",
+          "cost_mp": 4,
+          "requires": [
+            "Crush Window"
+          ],
+          "base_effect": {
+            "damage": "3 hits of 1d4 + martial_modifier",
+            "consume_crush_window": true
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 8,
+                "effects": {
+                  "damage": "3 hits of 1d4 + martial_modifier"
+                }
+              },
+              {
+                "level": 10,
+                "effects": {
+                  "damage": "3 hits of 1d6 + martial_modifier"
+                }
+              },
+              {
+                "level": 12,
+                "effects": {
+                  "bonus_damage_against_investigated_or_iron_hand_affected_targets": "1d4"
+                }
+              }
+            ]
+          }
+        },
+        "Martial Flow": {
+          "type": "Passive Trigger",
+          "effect": "After Attack Action plus Follow-Up Strike, roll 1d6 using the current Martial Flow rules.",
+          "on_success_choose_one": [
+            "Gain 1 Spirit Sphere",
+            "Gain Finish Window if you do not already have it",
+            "Gain +1 AC until your next turn"
+          ]
+        }
+      }
+    },
+
+    {
+      "id": "monk_body_relocation",
+      "name": "Body Relocation",
+      "learned_at_level": 9,
+      "category": "Mobility",
+      "action_type": "Bonus Action",
+      "cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Visible destination"
+      ],
+      "duration": "Instant",
+      "range": "Self",
+      "description": "The Monk instantly repositions through spiritual stepwork.",
+      "base_effects": {
+        "teleport_distance_meters": 9
+      },
+      "scaling": {
+        "milestones": [
+          {
+            "level": 9,
+            "effects": {
+              "teleport_distance_meters": 9
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "teleport_distance_meters": 12,
+              "next_pressure_art_this_turn_bonus_attack_roll": 1
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "monk_dodge",
+      "name": "Dodge",
+      "learned_at_level": 9,
+      "category": "Stance",
+      "action_type": "Bonus Action",
+      "cost_mp": 1,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "Until switched off, replaced by another stance, or combat ends",
+      "description": "The Monk adopts an evasive posture built on prediction and motion.",
+      "base_effects": {
+        "armor_class_bonus": 1,
+        "first_attack_against_you_each_turn_has_disadvantage": true
+      },
+      "scaling": {
+        "milestones": [
+          {
+            "level": 9,
+            "effects": {
+              "armor_class_bonus": 1
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "armor_class_bonus": 2
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "monk_blade_stop",
+      "name": "Blade Stop",
+      "learned_at_level": 10,
+      "category": "Reaction",
+      "action_type": "Reaction",
+      "cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "When a creature makes a melee attack against you"
+      ],
+      "duration": "Instant plus rider",
+      "description": "The Monk intercepts or traps a melee strike before it fully lands.",
+      "base_effects": {
+        "effect": "Force the attacker to make a save or have the attack negated or heavily reduced.",
+        "on_failed_save": "The attacker cannot take reactions until the end of its next turn."
+      },
+      "scaling": {
+        "milestones": [
+          {
+            "level": 10,
+            "effects": {
+              "on_failed_save": "The attacker cannot take reactions until the end of its next turn."
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "on_failed_save": "The attacker is also Disarmed or repositioned by 1m if valid."
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "monk_steel_body",
+      "name": "Steel Body",
+      "learned_at_level": 10,
+      "category": "Stance",
+      "action_type": "Bonus Action",
+      "cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "Until switched off, replaced by another stance, or combat ends",
+      "description": "The Monk hardens body and breath into a posture of brutal endurance.",
+      "base_effects": {
+        "physical_damage_reduction": 2
+      },
+      "scaling": {
+        "milestones": [
+          {
+            "level": 10,
+            "effects": {
+              "physical_damage_reduction": 2
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "physical_damage_reduction": 3,
+              "advantage_on_saves_against_forced_movement_and_prone": true
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "monk_critical_explosion",
+      "name": "Critical Explosion",
+      "learned_at_level": 11,
+      "category": "Buff",
+      "action_type": "Bonus Action",
+      "cost_mp": 3,
+      "additional_cost": "2 Spirit Spheres",
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "2 turns",
+      "description": "The Monk ignites its internal force into an explosive state of martial clarity.",
+      "base_effects": {
+        "bonus_damage_unarmed_and_monk_skills": 2,
+        "martial_flow_thresholds_improve_by_1": true
+      },
+      "scaling": {
+        "milestones": [
+          {
+            "level": 11,
+            "effects": {
+              "bonus_damage_unarmed_and_monk_skills": 2,
+              "martial_flow_thresholds_improve_by_1": true
+            }
+          },
+          {
+            "level": 12,
+            "effects": {
+              "duration_turns": 3,
+              "armor_class_bonus": 1
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "monk_dangerous_soul_collect",
+      "name": "Dangerous Soul Collect",
+      "learned_at_level": 11,
+      "category": "Resource Burst",
+      "action_type": "Action",
+      "cost_mp": 4,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "Instant plus drawback",
+      "limitations": {
+        "uses": "1 per Short Rest"
+      },
+      "description": "The Monk forcefully gathers unstable spiritual energy for an immediate surge of power.",
+      "base_effects": {
+        "gain_spirit_spheres": 3,
+        "if_current_spirit_spheres_are_2_or_less_set_spirit_spheres_to": 5,
+        "drawback": "-1 AC and no reactions until the start of your next turn"
+      }
+    },
+
+    {
+      "id": "monk_asura_strike",
+      "name": "Asura Strike",
+      "learned_at_level": 12,
+      "category": "Finisher",
+      "action_type": "Action",
+      "cost_mp": 4,
+      "additional_cost": "All current Spirit Spheres",
+      "requires_concentration": false,
+      "requires": [
+        "Target in melee range"
+      ],
+      "duration": "Instant plus drawback",
+      "description": "The Monk releases all accumulated spirit into a devastating single-target blow.",
+      "base_effects": {
+        "base_damage": "2d8 + wisdom_modifier",
+        "additional_damage_per_spirit_sphere_spent": "1d8",
+        "end_your_turn_after_use": true,
+        "set_spirit_spheres_to": 0,
+        "drawback": "You cannot take reactions until the start of your next turn."
+      },
+      "scaling": {
+        "milestones": [
+          {
+            "level": 12,
+            "effects": {
+              "base_damage": "2d8 + wisdom_modifier",
+              "additional_damage_per_spirit_sphere_spent": "1d8"
+            }
+          }
+        ]
+      },
+      "conditional_bonus": {
+        "if_4_or_more_spirit_spheres_were_spent": {
+          "on_failed_save": "Target becomes Prone or Stunned until the end of its next turn."
+        }
+      }
+    }
+  ],
+
+  "summary_tables": {
+    "skill_unlocks": [
+      {
+        "level": 6,
+        "skills": [
+          "Spirit Gathering",
+          "Iron Hand"
+        ]
+      },
+      {
+        "level": 7,
+        "skills": [
+          "Pressure Arts"
+        ]
+      },
+      {
+        "level": 8,
+        "skills": [
+          "Combo Arts"
+        ]
+      },
+      {
+        "level": 9,
+        "skills": [
+          "Body Relocation",
+          "Dodge"
+        ]
+      },
+      {
+        "level": 10,
+        "skills": [
+          "Blade Stop",
+          "Steel Body"
+        ]
+      },
+      {
+        "level": 11,
+        "skills": [
+          "Critical Explosion",
+          "Dangerous Soul Collect"
+        ]
+      },
+      {
+        "level": 12,
+        "skills": [
+          "Asura Strike"
+        ]
+      }
+    ],
+    "quick_costs": [
+      {
+        "name": "Spirit Gathering",
+        "cost_mp": "2 / passive / passive"
+      },
+      {
+        "name": "Iron Hand",
+        "cost_mp": 1
+      },
+      {
+        "name": "Pressure Arts",
+        "cost_mp": "Finger Offensive: 1-5 Spirit / Palm Push: 2 MP / Investigate: 1 MP"
+      },
+      {
+        "name": "Combo Arts",
+        "cost_mp": "Chain Combo: 2 / Combo Finish: 2 / Tiger Knuckle Fist: 3 / Chain Crush Combo: 4"
+      },
+      {
+        "name": "Body Relocation",
+        "cost_mp": 2
+      },
+      {
+        "name": "Dodge",
+        "cost_mp": 1
+      },
+      {
+        "name": "Blade Stop",
+        "cost_mp": 2
+      },
+      {
+        "name": "Steel Body",
+        "cost_mp": 2
+      },
+      {
+        "name": "Critical Explosion",
+        "cost_mp": "3 + 2 Spirit"
+      },
+      {
+        "name": "Dangerous Soul Collect",
+        "cost_mp": 4
+      },
+      {
+        "name": "Asura Strike",
+        "cost_mp": "4 + all Spirit"
+      }
+    ]
+  },
+
+  "core_design_rules": [
+    "Monk has two distinct combat paths: Pressure Arts for fragile backline targets and Combo Arts for durable enemies.",
+    "The combo engine should not be the default answer to every target type.",
+    "Martial Flow provides randomness as bonus momentum, not as permission for the turn to matter.",
+    "Triple Attack is implemented as a Follow-Up Strike engine rather than full martial Extra Attack progression.",
+    "Spirit Spheres are the main burst resource and connect pressure, combo, and finisher play.",
+    "Asura Strike is the ultimate Spirit conversion tool and should remain expensive, committal, and decisive."
+  ]
+}
