@@ -371,7 +371,7 @@
       "learned_at_level": 3,
       "category": "Control",
       "action_type": "Action",
-      "cost_mp": 4,
+      "cost_mp": 3,
       "requires_concentration": false,
       "requires": [
         "Valid target in line of sight"
@@ -517,13 +517,13 @@
       "category": "Attack",
       "action_type": "Action",
       "base_cost_mp": 4,
-      "requires_concentration": "Depends on chosen variant",
+      "requires_concentration": false,
       "requires": [
         "Valid target area within range"
       ],
-      "duration": "Variant-dependent",
+      "duration": "Instant",
       "range": "18m",
-      "description": "El Magician libera una manifestación elemental de área. La variante de Fire representa burst inmediato; la variante de Lightning representa presión persistente.",
+      "description": "El Magician libera una manifestación elemental de área. Fire y Lightning son detonaciones instantáneas con identidad distinta.",
       "element_variants": {
         "Fire": {
           "identity": "Immediate burst AoE",
@@ -566,52 +566,43 @@
           }
         },
         "Lightning": {
-          "identity": "Persistent AoE pressure",
+          "identity": "Immediate burst AoE",
           "damage_type": "Lightning",
           "base_effect": {
-            "delivery": "Storm zone",
-            "requires_concentration": true,
-            "duration": "2 turns",
+            "delivery": "Instant explosion",
             "area_radius": "3m",
-            "strikes_per_turn": 2,
-            "damage_per_strike": "1d6"
+            "damage": "2d6 + intelligence_modifier"
           },
           "base_scaling": {
             "milestones": [
               {
                 "level": 5,
                 "effects": {
-                  "duration": "2 turns",
                   "area_radius": "3m",
-                  "strikes_per_turn": 2,
-                  "damage_per_strike": "1d6"
+                  "damage": "2d6 + intelligence_modifier"
                 }
               },
               {
                 "level": 9,
                 "effects": {
-                  "duration": "2 turns",
                   "area_radius": "3m",
-                  "strikes_per_turn": 3,
-                  "damage_per_strike": "1d8"
+                  "damage": "3d8 + intelligence_modifier"
                 }
               },
               {
                 "level": 12,
                 "effects": {
-                  "duration": "3 turns",
                   "area_radius": "4m",
-                  "strikes_per_turn": 4,
-                  "damage_per_strike": "1d10"
+                  "damage": "4d10 + intelligence_modifier"
                 }
               }
             ]
           },
           "intensified_effect": {
-            "effect": "Enemies struck by the storm must pass a Constitution save or become Shocked for 1 turn."
+            "effect": "Targets in the area must pass a Constitution save or become Shocked for 1 turn."
           },
           "overload_effect": {
-            "effect": "The first strike each turn deals an additional 1d4 Lightning damage to Shocked enemies inside the area."
+            "effect": "Deals an additional 1d4 Lightning damage to Shocked enemies in the area."
           }
         }
       },
@@ -631,7 +622,7 @@
       },
       "design_notes": [
         "Element AoE now scales automatically with level instead of hiding too much power in overchannel tiers.",
-        "Fire is burst-first; Lightning is persistent-control-first.",
+        "Fire y Lightning son detonaciones instantaneas con identidades distintas.",
         "Overchannel should reward timing, not compensate for weak baseline scaling."
       ]
     },
@@ -653,7 +644,7 @@
       "base_effects": {
         "damage_type": "Fire",
         "wall_length": "6m",
-        "damage_on_enter_or_end_turn": "4d6 + intelligence_modifier"
+        "damage_on_enter_or_end_turn": "5d8"
       },
       "scaling": {
         "type": "milestone_zone_scaling",
@@ -662,19 +653,20 @@
             "level": 6,
             "effects": {
               "wall_length": "6m",
-              "damage_on_enter_or_end_turn": "4d6 + intelligence_modifier"
+              "damage_on_enter_or_end_turn": "5d8"
             }
           },
           {
             "level": 9,
             "effects": {
-              "damage_on_enter_or_end_turn": "5d6 + intelligence_modifier"
+              "damage_on_enter_or_end_turn": "6d8"
             }
           },
           {
             "level": 12,
             "effects": {
               "wall_length": "8m",
+              "damage_on_enter_or_end_turn": "7d8",
               "duration_turns": 3
             }
           }
@@ -739,7 +731,7 @@
       },
       {
         "name": "Stone Curse",
-        "cost_mp": 4
+        "cost_mp": 3
       },
       {
         "name": "Energy Coat",

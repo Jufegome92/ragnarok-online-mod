@@ -188,6 +188,19 @@
     <content contentuid="h0f4e0d5gb4e5g4c0f5g3f7cg3b6f8a0c5df4" version="1">Element AoE - Lightning (Intensified)</content>
     <content contentuid="h1a5f1e6gc5f6g4d1a6g4a8dg4c7a9b1d6e05" version="1">Detonate a 3m circular lightning area. Deals 2d6 Lightning damage. Targets struck must pass a Constitution save or become Shocked for 1 turn. Costs 5 Mana Points.</content>
     <content contentuid="h2b6a2f7gd6a7g4e2b7g5b9eg5d8b0c2e7f16" version="1">Element AoE - Lightning (Overload)</content>
-    <content contentuid="h3c7b3a8ge7b8g4f3c8g6c0fg6e9c1d3f8a27" version="1">Detonate a 3m circular lightning area. Deals 2d6 Lightning damage, applies Shocked on failed Constitution save, and deals an extra 1d4 Lightning to Shocked targets. Costs 6 Mana Points.</content></contentList>
+    <content contentuid="h3c7b3a8ge7b8g4f3c8g6c0fg6e9c1d3f8a27" version="1">Detonate a 3m circular lightning area. Deals 2d6 Lightning damage, applies Shocked on failed Constitution save, and deals an extra 1d4 Lightning to Shocked targets. Costs 6 Mana Points.</content>
+    <content contentuid="hc4f6a8b0gc6d7g489bg2f59gf8b0d2e6a8b5" version="1">Fire Wall</content>
+    <content contentuid="hd5a7b9c1gd7e8g490cg3a60g0c1e3f7b9c6" version="1">Unlocks Fire Wall. Place a flaming barrier line up to 6m long within 12m. Lasts 2 turns and scorches enemies that cross or end turn in it. Costs 4 Mana Points. Concentration.</content>
+    <content contentuid="he6b8c0d2ge8f9g4a1dg4b71g1d2f4a8c0d7" version="1">Fire Wall improves at Magician level 9: wall damage increases to 6d8.</content>
+    <content contentuid="hf7c9d1e3gf9a0g4b2eg5c82g2e3a5b9d1e8" version="1">Fire Wall improves at Magician level 12: wall damage increases to 7d8, wall length increases to 8m, and duration increases to 3 turns.</content>
+    <content contentuid="h80b2c4d6ge2f3g445dgeb15gb4d6f8a2c4d1" version="1">Fire Wall</content>
+    <content contentuid="h91c3d5e7gf3a4g456egfc26gc5e7a9b3d5e2" version="1">Create a wall of fire up to 6m long within 12m. The wall lasts 2 turns and deals 5d8 Fire damage to enemies that cross it or end their turn in it. Costs 4 Mana Points. Concentration.</content>
+    <content contentuid="ha2d4e6f8ga4b5g467fg0d37gd6f8b0c4e6f3" version="1">Create a wall of fire up to 6m long within 12m. The wall lasts 2 turns and deals 6d8 Fire damage to enemies that cross it or end their turn in it. Costs 4 Mana Points. Concentration.</content>
+    <content contentuid="hb3e5f7a9gb5c6g478ag1e48ge7a9c1d5f7a4" version="1">Create a wall of fire up to 8m long within 12m. The wall lasts 3 turns and deals 7d8 Fire damage to enemies that cross it or end their turn in it. Costs 4 Mana Points. Concentration.</content>
+  </contentList>
+
+
+
+
 
 
