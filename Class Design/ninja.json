@@ -1,0 +1,1176 @@
+{
+  "class": "Ninja",
+  "archetype": "Extended",
+  "granted_at_character_level": 1,
+
+  "hit_points": {
+    "base": 8,
+    "per_level": 6,
+    "constitution_modifier_applies": true,
+    "formula_note": "At Ninja levels, gain 6 HP + Constitution modifier per level."
+  },
+
+  "spellcasting_ability": "Wisdom",
+  "spellcasting_save_dc_formula": "8 + proficiency_bonus + wisdom_modifier",
+
+  "mana_points": {
+    "base_formula": "4 + (2 * character_level)",
+    "modifier_scaling": "character_level * floor(spellcasting_modifier / 2)",
+    "total_formula": "(4 + (2 * character_level)) + (character_level * floor(spellcasting_modifier / 2))",
+    "formula_note": "For Ninja, spellcasting_modifier uses Wisdom."
+  },
+
+  "proficiencies": {
+    "saving_throws": [
+      "Dexterity",
+      "Wisdom"
+    ],
+    "armor": [
+      "Light Armor"
+    ],
+    "weapons": [
+      "Dagger",
+      "Shortsword",
+      "Scimitar",
+      "Quarterstaff",
+      "Unarmed"
+    ],
+    "tools": [],
+    "skills": {
+      "fixed": [
+        "Stealth",
+        "Acrobatics"
+      ],
+      "expertise": 1
+    }
+  },
+
+  "design_identity": {
+    "role": "Skirmisher / Backline Hunter / Ninjutsu Hybrid",
+    "combat_style": "Switches between Throwing, Shadow Arts, and Ninpou to harass, reposition, control fields, and finish targets.",
+    "strengths": [
+      "Excellent mobility",
+      "Strong anti-backline pressure",
+      "Flexible mix of physical and magical tools",
+      "Can switch between safe pressure and high-commitment burst"
+    ],
+    "weaknesses": [
+      "Needs smart stance usage to maximize value",
+      "Less durable when caught in direct attrition",
+      "Final Strike is highly committal"
+    ]
+  },
+
+  "core_systems": {
+    "ninja_stances": {
+      "description": "The Ninja uses three combat stances. Only one stance may be active at a time.",
+      "stances": [
+        "Throwing Mastery",
+        "Shadow Arts",
+        "Ninpou Training"
+      ],
+      "rules": {
+        "first_stance_change_each_turn_is_free": true,
+        "free_change_consumes_bonus_action": false,
+        "additional_stance_changes_same_turn_allowed": false,
+        "off_branch_skills_remain_usable": true,
+        "matching_stance_grants_bonus_or_premium_effects": true
+      }
+    },
+    "ninja_discipline_scaling": {
+      "global_milestones": [
+        1,
+        5,
+        9
+      ]
+    },
+    "soul_system": {
+      "description": "Soul is the central concentration buff of the class and amplifies every branch rather than creating a separate branch."
+    }
+  },
+
+  "progression": {
+    "level_1": {
+      "class_state": "Ninja",
+      "features_gained": [
+        "Ninja Discipline",
+        "Thrown Technique"
+      ]
+    },
+    "level_2": {
+      "features_gained": [
+        "Shadow Jump",
+        "Mist Slash"
+      ]
+    },
+    "level_3": {
+      "features_gained": [
+        "Ninpou Bolt"
+      ]
+    },
+    "level_4": {
+      "features_gained": [
+        "Reverse Tatami",
+        "Shadow Slash"
+      ]
+    },
+    "level_5": {
+      "features_gained": [
+        "Ninpou Field",
+        "Illusionary Shadow"
+      ]
+    },
+    "level_6": {
+      "features_gained": [
+        "Cast-off Cicada Shell"
+      ]
+    },
+    "level_7": {
+      "features_gained": [
+        "Ninpou Burst"
+      ]
+    },
+    "level_8": {
+      "features_gained": [
+        "Soul"
+      ]
+    },
+    "level_9": {
+      "features_gained": [
+        "Major Skill Scaling Milestone"
+      ]
+    },
+    "level_10": {
+      "features_gained": [
+        "Advanced Cross-Branch Synergy"
+      ]
+    },
+    "level_11": {
+      "features_gained": [
+        "Final Strike"
+      ]
+    },
+    "level_12": {
+      "features_gained": [
+        "Master Ninja"
+      ]
+    }
+  },
+
+  "skills": [
+    {
+      "id": "ninja_discipline",
+      "name": "Ninja Discipline",
+      "learned_at_level": 1,
+      "category": "Stance",
+      "action_type": "Free once per turn",
+      "cost_mp": 0,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "Until changed or combat ends",
+      "description": "The Ninja adopts a combat discipline that enhances one branch of its kit without locking the others.",
+      "base_effects": {
+        "choose_one": [
+          "Throwing Mastery",
+          "Shadow Arts",
+          "Ninpou Training"
+        ]
+      },
+      "stance_variants": {
+        "Throwing Mastery": {
+          "identity": "Thrown weapon precision and efficiency",
+          "base_effects": {
+            "thrown_technique_attack_roll_bonus": 1,
+            "first_thrown_technique_each_turn_costs_1_less_mp_minimum_1": true,
+            "huuma_shuriken_small_aoe_enabled": true
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 1,
+                "effects": {
+                  "thrown_technique_attack_roll_bonus": 1
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "thrown_technique_bonus_damage": 1
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "first_thrown_technique_each_turn_gains_bonus_damage": "1d4",
+                  "huuma_shuriken_push_distance_meters": 2
+                }
+              }
+            ]
+          }
+        },
+        "Shadow Arts": {
+          "identity": "Mobility, assassination and evasive tempo",
+          "base_effects": {
+            "first_shadow_art_each_turn_costs_1_less_mp_minimum_1": true,
+            "after_using_a_shadow_art_gain_free_movement_meters": 3
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 1,
+                "effects": {
+                  "after_using_a_shadow_art_gain_free_movement_meters": 3
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "shadow_jump_and_shadow_slash_gain_bonus_attack_or_accuracy": 1
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "after_shadow_slash_gain_veiled": true,
+                  "if_shadow_slash_hits_an_isolated_target_or_defeats_target_gain_invisibility_until_end_of_turn_or_until_attacking": true
+                }
+              }
+            ]
+          }
+        },
+        "Ninpou Training": {
+          "identity": "Magical focus, efficiency and elemental amplification",
+          "base_effects": {
+            "ninpou_spell_attack_bonus": 1,
+            "first_ninpou_each_turn_costs_1_less_mp_minimum_1": true
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 1,
+                "effects": {
+                  "ninpou_spell_attack_bonus": 1
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "ninpou_save_dc_bonus": 1
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "bolt_field_and_burst_synergy_bonus_damage": "1d4"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+
+    {
+      "id": "ninja_thrown_technique",
+      "name": "Thrown Technique",
+      "learned_at_level": 1,
+      "category": "Attack",
+      "action_type": "Action",
+      "base_cost_mp": 1,
+      "requires_concentration": false,
+      "requires": [
+        "Valid visible target or point"
+      ],
+      "duration": "Instant",
+      "range": "18m",
+      "description": "The Ninja chooses between light shuriken pressure, precise kunai disruption, or a heavy Huuma throw with a small impact area.",
+      "base_effects": {
+        "choose_one": [
+          "Throw Shuriken",
+          "Throw Kunai",
+          "Throw Huuma Shuriken"
+        ]
+      },
+      "variants": {
+        "Throw Shuriken": {
+          "base_effect": {
+            "damage": "1d6 + dexterity_modifier"
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 1,
+                "effects": {
+                  "damage": "1d6 + dexterity_modifier"
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "damage": "1d8 + dexterity_modifier"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "damage": "1d8 + dexterity_modifier + 1d4"
+                }
+              }
+            ]
+          }
+        },
+        "Throw Kunai": {
+          "base_effect": {
+            "damage": "1d8 + dexterity_modifier",
+            "effect": "Target suffers -1 AC against your next attack or technique until the end of your next turn."
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 1,
+                "effects": {
+                  "damage": "1d8 + dexterity_modifier"
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "damage": "1d10 + dexterity_modifier"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "damage": "1d10 + dexterity_modifier + 1d4",
+                  "apply_marked_or_bleeding": true
+                }
+              }
+            ]
+          }
+        },
+        "Throw Huuma Shuriken": {
+          "base_cost_mp": 2,
+          "base_effect": {
+            "center_target_damage": "2d6 + dexterity_modifier",
+            "small_aoe_radius_meters": 2,
+            "secondary_targets_damage": "1d6"
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 1,
+                "effects": {
+                  "center_target_damage": "2d6 + dexterity_modifier",
+                  "secondary_targets_damage": "1d6"
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "center_target_damage": "3d6 + dexterity_modifier",
+                  "secondary_targets_damage": "1d8"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "center_target_damage": "4d6 + dexterity_modifier",
+                  "secondary_targets_damage": "2d6"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+
+    {
+      "id": "ninja_shadow_jump",
+      "name": "Shadow Jump",
+      "learned_at_level": 2,
+      "category": "Mobility",
+      "action_type": "Bonus Action",
+      "cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Visible destination"
+      ],
+      "duration": "Instant",
+      "range": "Self",
+      "description": "The Ninja disappears into shadow and reappears at a new position.",
+      "base_effects": {
+        "teleport_distance_meters": 9
+      },
+      "scaling": {
+        "milestones": [
+          {
+            "level": 2,
+            "effects": {
+              "teleport_distance_meters": 9
+            }
+          },
+          {
+            "level": 5,
+            "effects": {
+              "teleport_distance_meters": 12
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "teleport_distance_meters": 15,
+              "next_attack_or_technique_bonus_attack_roll": 1
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "ninja_mist_slash",
+      "name": "Mist Slash",
+      "learned_at_level": 2,
+      "category": "Attack",
+      "action_type": "Action",
+      "cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Enemy in melee or short dash-strike range"
+      ],
+      "duration": "Instant",
+      "description": "A fast slash that leaves the Ninja moving through the target's space like mist.",
+      "base_effects": {
+        "damage_profile": "Weapon-based melee damage",
+        "free_reposition_after_hit_meters": 3,
+        "no_opportunity_attacks_on_reposition": true
+      },
+      "scaling": {
+        "milestones": [
+          {
+            "level": 2,
+            "effects": {
+              "free_reposition_after_hit_meters": 3
+            }
+          },
+          {
+            "level": 5,
+            "effects": {
+              "bonus_damage": "1d4"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "if_target_is_isolated_gain_advantage_or_bonus_attack_roll": 1
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "ninja_ninpou_bolt",
+      "name": "Ninpou Bolt",
+      "learned_at_level": 3,
+      "category": "Attack",
+      "action_type": "Action",
+      "base_cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Valid target within 18m"
+      ],
+      "duration": "Instant",
+      "range": "18m",
+      "description": "The Ninja uses a focused elemental ninpou strike against a single target.",
+      "base_effects": {
+        "choose_one": [
+          "Crimson Fire Blossom",
+          "Lightning Spear of Ice",
+          "Wind Blade"
+        ]
+      },
+      "variants": {
+        "Crimson Fire Blossom": {
+          "damage_type": "Fire",
+          "base_effect": {
+            "damage": "2d6 + wisdom_modifier"
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 3,
+                "effects": {
+                  "damage": "2d6 + wisdom_modifier"
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "damage": "3d6 + wisdom_modifier"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "damage": "4d6 + wisdom_modifier"
+                }
+              }
+            ]
+          },
+          "field_synergy": {
+            "with_crimson_fire_formation": "Targets in or affected by the field take an additional 1d4 Fire damage."
+          }
+        },
+        "Lightning Spear of Ice": {
+          "damage_type": "Cold",
+          "base_effect": {
+            "damage": "2d6 + wisdom_modifier"
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 3,
+                "effects": {
+                  "damage": "2d6 + wisdom_modifier"
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "damage": "3d6 + wisdom_modifier"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "damage": "4d6 + wisdom_modifier"
+                }
+              }
+            ]
+          },
+          "field_synergy": {
+            "with_water_escape_technique": "Targets in or affected by the field take an additional 1d4 Cold damage and suffer stronger movement penalties."
+          }
+        },
+        "Wind Blade": {
+          "damage_type": "Thunder",
+          "base_effect": {
+            "damage": "2d6 + wisdom_modifier"
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 3,
+                "effects": {
+                  "damage": "2d6 + wisdom_modifier"
+                }
+              },
+              {
+                "level": 5,
+                "effects": {
+                  "damage": "3d6 + wisdom_modifier"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "damage": "4d6 + wisdom_modifier"
+                }
+              }
+            ]
+          },
+          "field_synergy": {
+            "with_lightning_crash": "Targets affected by the field take an additional 1d4 Thunder damage and lose reactions on failed save."
+          }
+        }
+      }
+    },
+
+    {
+      "id": "ninja_reverse_tatami",
+      "name": "Reverse Tatami",
+      "learned_at_level": 4,
+      "category": "Reaction",
+      "action_type": "Reaction",
+      "cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "When targeted by a ranged attack or spell attack"
+      ],
+      "duration": "Instant plus rider",
+      "description": "The Ninja throws up a defensive response against incoming ranged pressure.",
+      "base_effects": {
+        "gain_bonus_ac_against_triggering_attack": 3
+      },
+      "scaling": {
+        "milestones": [
+          {
+            "level": 4,
+            "effects": {
+              "gain_bonus_ac_against_triggering_attack": 3
+            }
+          },
+          {
+            "level": 5,
+            "effects": {
+              "if_attack_still_hits_reduce_damage_by": "1d4"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "if_attack_misses_attacker_becomes_off_balance_or_loses_reactions": true
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "ninja_shadow_slash",
+      "name": "Shadow Slash",
+      "learned_at_level": 4,
+      "category": "Attack",
+      "action_type": "Action",
+      "cost_mp": 3,
+      "requires_concentration": false,
+      "requires": [
+        "Visible target"
+      ],
+      "duration": "Instant plus rider",
+      "range": "Gap-closing strike",
+      "description": "The Ninja cuts through distance itself and appears at the target with a lethal shadow strike.",
+      "base_effects": {
+        "damage_profile": "Weapon-based melee damage",
+        "dash_to_target": true
+      },
+      "scaling": {
+        "milestones": [
+          {
+            "level": 4,
+            "effects": {
+              "dash_to_target": true
+            }
+          },
+          {
+            "level": 5,
+            "effects": {
+              "if_target_has_no_adjacent_allies_bonus_damage": "1d6"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "if_shadow_arts_stance_is_active_gain_veiled_until_start_of_next_turn": true,
+              "if_target_is_isolated_or_defeated_gain_invisibility_until_end_of_turn_or_until_attacking": true
+            }
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "ninja_ninpou_field",
+      "name": "Ninpou Field",
+      "learned_at_level": 5,
+      "category": "Zone Control",
+      "action_type": "Action",
+      "base_cost_mp": 3,
+      "requires_concentration": true,
+      "requires": [
+        "Valid target point or self depending on mode"
+      ],
+      "duration": "3 turns",
+      "range": "18m or self",
+      "description": "The Ninja establishes an elemental support field that controls space and empowers a related bolt.",
+      "base_effects": {
+        "choose_one": [
+          "Crimson Fire Formation",
+          "Water Escape Technique",
+          "Lightning Crash"
+        ]
+      },
+      "variants": {
+        "Crimson Fire Formation": {
+          "base_effect": {
+            "area_radius_meters": 3,
+            "placement_damage_or_end_turn_damage": "1d4 Fire",
+            "push_on_placement_meters": 2
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 5,
+                "effects": {
+                  "placement_damage_or_end_turn_damage": "1d4 Fire"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "placement_damage_or_end_turn_damage": "1d6 Fire"
+                }
+              }
+            ]
+          },
+          "synergy": {
+            "crimson_fire_blossom_bonus_damage": "1d4"
+          }
+        },
+        "Water Escape Technique": {
+          "base_effect": {
+            "area_radius_meters": 3,
+            "enemies_in_field_lose_movement_meters": 3,
+            "enemies_in_field_suffer_dexterity_or_initiative_penalty": 1
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 5,
+                "effects": {
+                  "enemies_in_field_lose_movement_meters": 3
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "enemies_in_field_lose_movement_meters": 6,
+                  "target_ac_penalty": 1
+                }
+              }
+            ]
+          },
+          "synergy": {
+            "lightning_spear_of_ice_bonus_damage": "1d4"
+          }
+        },
+        "Lightning Crash": {
+          "base_effect": {
+            "self_centered_aura_radius_meters": 3,
+            "enemies_entering_or_starting_turn_near_you_take": "1d4 Thunder"
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 5,
+                "effects": {
+                  "damage": "1d4 Thunder"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "damage": "1d6 Thunder",
+                  "failed_save_loses_reactions": true
+                }
+              }
+            ]
+          },
+          "synergy": {
+            "wind_blade_bonus_damage": "1d4"
+          }
+        }
+      }
+    },
+
+    {
+      "id": "ninja_illusionary_shadow",
+      "name": "Illusionary Shadow",
+      "learned_at_level": 5,
+      "category": "Buff",
+      "action_type": "Bonus Action",
+      "cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "2 turns",
+      "description": "The Ninja creates deceptive afterimages that distort enemy aim.",
+      "base_effects": {
+        "first_attack_against_you_each_turn_has_disadvantage": true
+      },
+      "scaling": {
+        "milestones": [
+          {
+            "level": 5,
+            "effects": {
+              "first_attack_against_you_each_turn_has_disadvantage": true
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "duration_turns": 3
+            }
+          }
+        ]
+      },
+      "shadow_arts_bonus": {
+        "if_shadow_arts_stance_is_active": {
+          "effect": "The first enemy attack that misses you grants 3m free movement."
+        }
+      }
+    },
+
+    {
+      "id": "ninja_cast_off_cicada_shell",
+      "name": "Cast-off Cicada Shell",
+      "learned_at_level": 6,
+      "category": "Reaction",
+      "action_type": "Reaction",
+      "cost_mp": 3,
+      "requires_concentration": false,
+      "requires": [
+        "When you would be hit by an attack"
+      ],
+      "duration": "Instant plus rider",
+      "description": "The Ninja leaves behind an afterimage shell and escapes the brunt of the strike.",
+      "base_effects": {
+        "negate_or_heavily_reduce_triggering_attack": true,
+        "reposition_meters": 6
+      },
+      "scaling": {
+        "milestones": [
+          {
+            "level": 6,
+            "effects": {
+              "reposition_meters": 6
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "reposition_meters": 9,
+              "become_untargetable_for_the_rest_of_that_attack_resolution": true
+            }
+          }
+        ]
+      },
+      "shadow_arts_bonus": {
+        "if_shadow_arts_stance_is_active": {
+          "effect": "Your next Shadow Slash or Thrown Technique before end of turn gains +1 attack roll."
+        }
+      }
+    },
+
+    {
+      "id": "ninja_ninpou_burst",
+      "name": "Ninpou Burst",
+      "learned_at_level": 7,
+      "category": "Attack",
+      "action_type": "Action",
+      "base_cost_mp": 4,
+      "requires_concentration": false,
+      "requires": [
+        "Valid target area within 18m"
+      ],
+      "duration": "Instant",
+      "range": "18m",
+      "description": "The Ninja releases a large elemental ninpou technique in an area.",
+      "base_effects": {
+        "choose_one": [
+          "Dragon Fire Formation",
+          "Falling Ice Pillar",
+          "North Wind"
+        ]
+      },
+      "variants": {
+        "Dragon Fire Formation": {
+          "damage_type": "Fire",
+          "base_effect": {
+            "area_radius_meters": 3,
+            "damage": "3d6 + wisdom_modifier"
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 7,
+                "effects": {
+                  "damage": "3d6 + wisdom_modifier"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "damage": "4d6 + wisdom_modifier"
+                }
+              }
+            ]
+          }
+        },
+        "Falling Ice Pillar": {
+          "damage_type": "Cold",
+          "base_effect": {
+            "area_radius_meters": 3,
+            "damage": "3d6 + wisdom_modifier",
+            "on_failed_save": "Targets lose 3m movement until the end of their next turn."
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 7,
+                "effects": {
+                  "damage": "3d6 + wisdom_modifier"
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "damage": "4d6 + wisdom_modifier",
+                  "stronger_movement_penalty": true
+                }
+              }
+            ]
+          }
+        },
+        "North Wind": {
+          "damage_type": "Thunder",
+          "base_effect": {
+            "area_radius_meters": 3,
+            "damage": "3d6 + wisdom_modifier",
+            "push_distance_meters": 2
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "level": 7,
+                "effects": {
+                  "damage": "3d6 + wisdom_modifier",
+                  "push_distance_meters": 2
+                }
+              },
+              {
+                "level": 9,
+                "effects": {
+                  "damage": "4d6 + wisdom_modifier",
+                  "push_distance_meters": 3
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+
+    {
+      "id": "ninja_soul",
+      "name": "Soul",
+      "learned_at_level": 8,
+      "category": "Buff",
+      "action_type": "Bonus Action",
+      "cost_mp": 3,
+      "requires_concentration": true,
+      "requires": [],
+      "duration": "3 turns",
+      "description": "The Ninja enters a heightened state that empowers every branch of the class at once.",
+      "base_effects": {
+        "thrown_techniques_bonus_attack_roll": 1,
+        "ninjou_spell_attack_or_save_dc_bonus": 1,
+        "shadow_arts_bonus_movement_meters": 3,
+        "final_strike_bonus_damage": "1d8"
+      },
+      "scaling": {
+        "milestones": [
+          {
+            "level": 8,
+            "effects": {
+              "thrown_techniques_bonus_attack_roll": 1,
+              "ninjou_spell_attack_or_save_dc_bonus": 1,
+              "shadow_arts_bonus_movement_meters": 3,
+              "final_strike_bonus_damage": "1d8"
+            }
+          },
+          {
+            "level": 9,
+            "effects": {
+              "first_technique_each_turn_costs_1_less_mp_minimum_1": true
+            }
+          }
+        ]
+      },
+      "high_level_bonus": {
+        "if_active_at_level_12": {
+          "effect": "Final Strike and Ninpou Burst gain an additional 1d8 damage."
+        }
+      }
+    },
+
+    {
+      "id": "ninja_final_strike",
+      "name": "Final Strike",
+      "learned_at_level": 11,
+      "category": "Finisher",
+      "action_type": "Action",
+      "cost_mp": 4,
+      "requires_concentration": false,
+      "requires": [
+        "Target in melee range"
+      ],
+      "duration": "Instant plus drawback",
+      "description": "The Ninja commits fully to a decisive finishing attack, sacrificing safety for overwhelming damage.",
+      "base_effects": {
+        "damage_profile": "Weapon-based melee damage plus 4d8 bonus damage",
+        "drawback": "-2 AC and cannot take reactions until the start of your next turn"
+      },
+      "soul_bonus": {
+        "if_soul_is_active": {
+          "effect": "Final Strike gains an additional 1d8 bonus damage."
+        }
+      },
+      "high_level_bonus": {
+        "if_used_at_level_12_while_soul_is_active": {
+          "effect": "Final Strike gains an additional 1d8 damage and the target must pass a Constitution save or become Dazed until the end of its next turn."
+        }
+      }
+    },
+
+    {
+      "id": "ninja_master_ninja",
+      "name": "Master Ninja",
+      "learned_at_level": 12,
+      "category": "Passive",
+      "action_type": "Passive",
+      "cost_mp": 0,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "Permanent",
+      "description": "The Ninja's throwing, shadow movement, and ninpou finally operate as one seamless style.",
+      "base_effects": {
+        "while_a_stance_is_active_the_first_matching_skill_each_turn_costs_1_less_mp_minimum_1": true,
+        "after_using_a_shadow_art_your_next_thrown_technique_or_ninpou_this_turn_gains_bonus_attack_or_save_dc": 1,
+        "enemies_affected_by_your_ninpou_field_take_bonus_damage_from_your_matching_ninpou_bolt": "1d4",
+        "first_stance_change_each_turn_remains_free_and_also_grants_3m_free_movement": true
+      }
+    }
+  ],
+
+  "summary_tables": {
+    "skill_unlocks": [
+      {
+        "level": 1,
+        "skills": [
+          "Ninja Discipline",
+          "Thrown Technique"
+        ]
+      },
+      {
+        "level": 2,
+        "skills": [
+          "Shadow Jump",
+          "Mist Slash"
+        ]
+      },
+      {
+        "level": 3,
+        "skills": [
+          "Ninpou Bolt"
+        ]
+      },
+      {
+        "level": 4,
+        "skills": [
+          "Reverse Tatami",
+          "Shadow Slash"
+        ]
+      },
+      {
+        "level": 5,
+        "skills": [
+          "Ninpou Field",
+          "Illusionary Shadow"
+        ]
+      },
+      {
+        "level": 6,
+        "skills": [
+          "Cast-off Cicada Shell"
+        ]
+      },
+      {
+        "level": 7,
+        "skills": [
+          "Ninpou Burst"
+        ]
+      },
+      {
+        "level": 8,
+        "skills": [
+          "Soul"
+        ]
+      },
+      {
+        "level": 11,
+        "skills": [
+          "Final Strike"
+        ]
+      },
+      {
+        "level": 12,
+        "skills": [
+          "Master Ninja"
+        ]
+      }
+    ],
+    "quick_costs": [
+      {
+        "name": "Ninja Discipline",
+        "cost_mp": 0
+      },
+      {
+        "name": "Thrown Technique",
+        "cost_mp": "Shuriken 1 / Kunai 1 / Huuma 2"
+      },
+      {
+        "name": "Shadow Jump",
+        "cost_mp": 2
+      },
+      {
+        "name": "Mist Slash",
+        "cost_mp": 2
+      },
+      {
+        "name": "Ninpou Bolt",
+        "cost_mp": 2
+      },
+      {
+        "name": "Reverse Tatami",
+        "cost_mp": 2
+      },
+      {
+        "name": "Shadow Slash",
+        "cost_mp": 3
+      },
+      {
+        "name": "Ninpou Field",
+        "cost_mp": 3
+      },
+      {
+        "name": "Illusionary Shadow",
+        "cost_mp": 2
+      },
+      {
+        "name": "Cast-off Cicada Shell",
+        "cost_mp": 3
+      },
+      {
+        "name": "Ninpou Burst",
+        "cost_mp": 4
+      },
+      {
+        "name": "Soul",
+        "cost_mp": 3
+      },
+      {
+        "name": "Final Strike",
+        "cost_mp": 4
+      }
+    ]
+  },
+
+  "core_design_rules": [
+    "Ninja is a full 1-12 extended class and uses 1/5/9 as its primary scaling milestones where applicable.",
+    "Throwing Mastery, Shadow Arts, and Ninpou Training are stances that enhance branches rather than hard-locking access to them.",
+    "The first stance change each turn is free and exists to encourage adaptation rather than punish flexibility.",
+    "Huuma Shuriken is a small-area thrown attack, not a pure single-target strike.",
+    "Soul is the central buff of the class and should meaningfully support Throwing, Shadow Arts, Ninpou, and Final Strike.",
+    "Final Strike is intentionally high-commitment and should feel dangerous to use."
+  ]
+}
