@@ -29,6 +29,9 @@
                 <node id="SubClass">
                   <attribute id="Object" type="guid" value="4b4551a2-6db3-49bb-9aa8-23960bc56103" />
                 </node>
+                <node id="SubClass">
+                  <attribute id="Object" type="guid" value="1ddd77a1-cf7a-44cc-a67c-155383570c9b" />
+                </node>
               </children>
             </node>
           </children>
@@ -294,6 +297,86 @@
           <attribute id="UUID" type="guid" value="70be8278-51dc-4312-a858-936b1cb4b8a7" />
           <attribute id="PassivesAdded" type="LSString" value="RO_Magician_IncreaseSpiritualPower_L12;RO_Magician_Sight_L12;RO_Magician_FrostDiver_L12;RO_Magician_StoneCurse_L12;RO_Magician_EnergyCoat_L12;RO_Magician_SafetyWall_L12;RO_Magician_ElementAoE_L12;RO_Magician_FireWall_L12" />
           <attribute id="PassivesRemoved" type="LSString" value="RO_Magician_IncreaseSpiritualPower_L9;RO_Magician_Sight_L9;RO_Magician_FrostDiver_L9;RO_Magician_StoneCurse_L9;RO_Magician_EnergyCoat_L9;RO_Magician_SafetyWall_L9;RO_Magician_ElementAoE_L9;RO_Magician_FireWall_L9" />
+        </node>
+        <node id="Progression">
+          <attribute id="Boosts" type="LSString" value="ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Constitution);Proficiency(LightArmor);Proficiency(MediumArmor);Proficiency(Shields);Proficiency(Clubs);Proficiency(Maces);Proficiency(Quarterstaffs);Proficiency(Flails);Proficiency(Morningstars);Proficiency(Warpicks);ProficiencyBonus(Skill,Insight);ProficiencyBonus(Skill,Religion)" />
+          <attribute id="Level" type="uint8" value="2" />
+          <attribute id="Name" type="LSString" value="RO_Acolyte" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_MP_Formula_WIS;RO_Acolyte_SacredDoctrine" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="Selectors" type="LSString" value="SelectSkillsExpertise(f974ebd6-3725-4b90-bb5c-2b647d41615d,1)" />
+          <attribute id="TableUUID" type="guid" value="63579466-dd7f-4b25-a45e-b430d10618d3" />
+          <attribute id="UUID" type="guid" value="5402fb30-9870-4d68-9d50-b1f9ab6a7dbf" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="3" />
+          <attribute id="Name" type="LSString" value="RO_Acolyte" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="63579466-dd7f-4b25-a45e-b430d10618d3" />
+          <attribute id="UUID" type="guid" value="c69c47c1-5ef5-4d4a-84c0-0ec451c15996" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="4" />
+          <attribute id="Name" type="LSString" value="RO_Acolyte" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="63579466-dd7f-4b25-a45e-b430d10618d3" />
+          <attribute id="UUID" type="guid" value="1764d93d-b21c-4702-893c-8cdeea71706c" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="5" />
+          <attribute id="Name" type="LSString" value="RO_Acolyte" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="63579466-dd7f-4b25-a45e-b430d10618d3" />
+          <attribute id="UUID" type="guid" value="eff1edbc-b68f-4935-9c4c-f5f6237e55a2" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="6" />
+          <attribute id="Name" type="LSString" value="RO_Acolyte" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="63579466-dd7f-4b25-a45e-b430d10618d3" />
+          <attribute id="UUID" type="guid" value="5396db30-70e0-4a0d-90cd-be887d7e3852" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="7" />
+          <attribute id="Name" type="LSString" value="RO_Acolyte" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="63579466-dd7f-4b25-a45e-b430d10618d3" />
+          <attribute id="UUID" type="guid" value="50473e6d-a35b-4ea8-9522-f62ce6414ec6" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="8" />
+          <attribute id="Name" type="LSString" value="RO_Acolyte" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="63579466-dd7f-4b25-a45e-b430d10618d3" />
+          <attribute id="UUID" type="guid" value="892149e8-b142-4330-8338-a1298cd8578c" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="9" />
+          <attribute id="Name" type="LSString" value="RO_Acolyte" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="63579466-dd7f-4b25-a45e-b430d10618d3" />
+          <attribute id="UUID" type="guid" value="cd10a9cd-d7c9-4b28-839e-eaf8659ed99c" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="10" />
+          <attribute id="Name" type="LSString" value="RO_Acolyte" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="63579466-dd7f-4b25-a45e-b430d10618d3" />
+          <attribute id="UUID" type="guid" value="86fae0ca-5163-4b7d-9698-7630ee16da69" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="11" />
+          <attribute id="Name" type="LSString" value="RO_Acolyte" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="63579466-dd7f-4b25-a45e-b430d10618d3" />
+          <attribute id="UUID" type="guid" value="a6281cc7-7426-4e93-a05c-e017d920824b" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="12" />
+          <attribute id="Name" type="LSString" value="RO_Acolyte" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="63579466-dd7f-4b25-a45e-b430d10618d3" />
+          <attribute id="UUID" type="guid" value="ef65d933-6a65-456a-b8c2-07322c579e6e" />
         </node>
       </children>
     </node>

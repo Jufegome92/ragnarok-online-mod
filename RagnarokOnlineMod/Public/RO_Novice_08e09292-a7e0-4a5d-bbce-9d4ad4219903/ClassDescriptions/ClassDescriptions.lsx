@@ -58,6 +58,23 @@
           <attribute id="SpellCastingAbility" type="uint8" value="4" />
           <attribute id="UUID" type="guid" value="4b4551a2-6db3-49bb-9aa8-23960bc56103" />
         </node>
+        <node id="ClassDescription">
+          <attribute id="BaseHp" type="int32" value="8" />
+          <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8" />
+          <attribute id="ClassEquipment" type="FixedString" value="EQP_CC_Cleric" />
+          <attribute id="HpPerLevel" type="int32" value="6" />
+          <attribute id="Description" type="TranslatedString" handle="hf12a06e6g4d67g49f4ga844gdf5ae2ef90c5" version="1" />
+          <attribute id="DisplayName" type="TranslatedString" handle="h0eb03266gb57dg4f7fg8709g8c9bea5b1f39" version="1" />
+          <attribute id="LearningStrategy" type="uint8" value="1" />
+          <attribute id="MustPrepareSpells" type="bool" value="false" />
+          <attribute id="Name" type="FixedString" value="RO_Acolyte" />
+          <attribute id="ParentGuid" type="guid" value="143a8a1c-09ca-4ccf-9d72-325873b33a17" />
+          <attribute id="PrimaryAbility" type="uint8" value="5" />
+          <attribute id="ProgressionTableUUID" type="guid" value="63579466-dd7f-4b25-a45e-b430d10618d3" />
+          <attribute id="SoundClassType" type="FixedString" value="Cleric" />
+          <attribute id="SpellCastingAbility" type="uint8" value="5" />
+          <attribute id="UUID" type="guid" value="1ddd77a1-cf7a-44cc-a67c-155383570c9b" />
+        </node>
       </children>
     </node>
   </region>

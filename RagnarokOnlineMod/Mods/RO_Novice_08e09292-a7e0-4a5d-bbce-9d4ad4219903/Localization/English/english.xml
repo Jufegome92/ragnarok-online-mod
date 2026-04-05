@@ -197,6 +197,20 @@
     <content contentuid="h91c3d5e7gf3a4g456egfc26gc5e7a9b3d5e2" version="1">Create a wall of fire up to 6m long within 12m. The wall lasts 2 turns and deals 5d8 Fire damage to enemies that cross it or end their turn in it. Costs 4 Mana Points. Concentration.</content>
     <content contentuid="ha2d4e6f8ga4b5g467fg0d37gd6f8b0c4e6f3" version="1">Create a wall of fire up to 6m long within 12m. The wall lasts 2 turns and deals 6d8 Fire damage to enemies that cross it or end their turn in it. Costs 4 Mana Points. Concentration.</content>
     <content contentuid="hb3e5f7a9gb5c6g478ag1e48ge7a9c1d5f7a4" version="1">Create a wall of fire up to 8m long within 12m. The wall lasts 3 turns and deals 7d8 Fire damage to enemies that cross it or end their turn in it. Costs 4 Mana Points. Concentration.</content>
+    <content contentuid="h0eb03266gb57dg4f7fg8709g8c9bea5b1f39" version="1">Acolyte</content>
+    <content contentuid="hf12a06e6g4d67g49f4ga844gdf5ae2ef90c5" version="1">A devoted first-job support from Rune-Midgard who channels sacred rites through Wisdom. Acolytes protect allies, cleanse afflictions, and punish profane foes while growing Mana through disciplined faith.</content>
+    <content contentuid="h5b2f7e01g3a9cg4b7dg8e61g1c3e5f7a9d11" version="1">Sacred Doctrine</content>
+    <content contentuid="h6c3a8f12g4b0dg4c8eg9f72g2d4f6a8b0e22" version="1">Unlocks Sacred Doctrine stances. Spend 1 Mana Point as a Bonus Action to adopt Divine Protection or Demon Bane.</content>
+    <content contentuid="ha0e7f2d1g8b5cg4c2eg3d16g5e7a9c1d3f65" version="1">Divine Protection</content>
+    <content contentuid="hb1f8a3e2g9c6dg4d3fg4e27g6f8b0d2e4a76" version="1">Adopt a protective doctrine. Gain flat reduction against physical damage while active. Costs 1 Mana Point.</content>
+    <content contentuid="hc2a9b4f3g0d7eg4e4ag5f38g7a9c1e3f5b87" version="1">Leave Divine Protection.</content>
+    <content contentuid="hd3b0c5a4g1e8fg4f5bg6a49g8b0d2f4a6c98" version="1">Demon Bane</content>
+    <content contentuid="he4c1d6b5g2f9ag4a6cg7b50g9c1e3a5b7d09" version="1">Adopt an offensive doctrine. Gain +1 flat bonus damage while active. Costs 1 Mana Point.</content>
+    <content contentuid="hf5d2e7c6g3a0bg4b7dg8c61g0d2f4b6c8e10" version="1">Leave Demon Bane.</content>
+    <content contentuid="h6c3a8f12g4b1dg4e8ag9f72g1a3c5d7e9f21" version="1">Divine Protection</content>
+    <content contentuid="h7d4b9a23g5c2eg4f9bg0a83g2b4d6e8f0a32" version="1">Doctrine active: reduce incoming Slashing, Piercing, and Bludgeoning damage by 2.</content>
+    <content contentuid="h8e5c0b34g6d3fg4a0cg1b94g3c5e7f9a1b43" version="1">Demon Bane</content>
+    <content contentuid="h9f6d1c45g7e4ag4b1dg2ca5g4d6f8a0b2c54" version="1">Doctrine active: gain +1 flat damage.</content>
   </contentList>
 
 
