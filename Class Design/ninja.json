@@ -1,7 +1,14 @@
 {
-  "class": "Ninja",
-  "archetype": "Extended",
-  "granted_at_character_level": 1,
+  "class": "Novice",
+  "subclass": "Ninja",
+  "granted_at_character_level": 2,
+
+  "progression_basis": {
+    "uses_character_level_for_scaling": true,
+    "novice_occupies_level_1": true,
+    "baseline_unlock_level": 2,
+    "major_scaling_milestones": [5, 9]
+  },
 
   "hit_points": {
     "base": 8,
@@ -32,14 +39,14 @@
       "Dagger",
       "Shortsword",
       "Scimitar",
-      "Quarterstaff",
-      "Unarmed"
+      "Sickles",
+      "Handaxes"
     ],
     "tools": [],
     "skills": {
       "fixed": [
         "Stealth",
-        "Acrobatics"
+        "Arcana"
       ],
       "expertise": 1
     }
@@ -77,35 +84,24 @@
         "matching_stance_grants_bonus_or_premium_effects": true
       }
     },
-    "ninja_discipline_scaling": {
-      "global_milestones": [
-        1,
-        5,
-        9
-      ]
-    },
     "soul_system": {
       "description": "Soul is the central concentration buff of the class and amplifies every branch rather than creating a separate branch."
     }
   },
 
   "progression": {
-    "level_1": {
+    "level_2": {
       "class_state": "Ninja",
       "features_gained": [
         "Ninja Discipline",
-        "Thrown Technique"
-      ]
-    },
-    "level_2": {
-      "features_gained": [
-        "Shadow Jump",
-        "Mist Slash"
+        "Thrown Technique",
+        "Shadow Jump"
       ]
     },
     "level_3": {
       "features_gained": [
-        "Ninpou Bolt"
+        "Ninpou Bolt",
+        "Mist Slash"
       ]
     },
     "level_4": {
@@ -161,7 +157,7 @@
     {
       "id": "ninja_discipline",
       "name": "Ninja Discipline",
-      "learned_at_level": 1,
+      "learned_at_level": 2,
       "category": "Stance",
       "action_type": "Free once per turn",
       "cost_mp": 0,
@@ -187,19 +183,19 @@
           "scaling": {
             "milestones": [
               {
-                "level": 1,
+                "character_level": 2,
                 "effects": {
                   "thrown_technique_attack_roll_bonus": 1
                 }
               },
               {
-                "level": 5,
+                "character_level": 5,
                 "effects": {
                   "thrown_technique_bonus_damage": 1
                 }
               },
               {
-                "level": 9,
+                "character_level": 9,
                 "effects": {
                   "first_thrown_technique_each_turn_gains_bonus_damage": "1d4",
                   "huuma_shuriken_push_distance_meters": 2
@@ -217,19 +213,19 @@
           "scaling": {
             "milestones": [
               {
-                "level": 1,
+                "character_level": 2,
                 "effects": {
                   "after_using_a_shadow_art_gain_free_movement_meters": 3
                 }
               },
               {
-                "level": 5,
+                "character_level": 5,
                 "effects": {
                   "shadow_jump_and_shadow_slash_gain_bonus_attack_or_accuracy": 1
                 }
               },
               {
-                "level": 9,
+                "character_level": 9,
                 "effects": {
                   "after_shadow_slash_gain_veiled": true,
                   "if_shadow_slash_hits_an_isolated_target_or_defeats_target_gain_invisibility_until_end_of_turn_or_until_attacking": true
@@ -247,19 +243,19 @@
           "scaling": {
             "milestones": [
               {
-                "level": 1,
+                "character_level": 2,
                 "effects": {
                   "ninpou_spell_attack_bonus": 1
                 }
               },
               {
-                "level": 5,
+                "character_level": 5,
                 "effects": {
                   "ninpou_save_dc_bonus": 1
                 }
               },
               {
-                "level": 9,
+                "character_level": 9,
                 "effects": {
                   "bolt_field_and_burst_synergy_bonus_damage": "1d4"
                 }
@@ -273,7 +269,7 @@
     {
       "id": "ninja_thrown_technique",
       "name": "Thrown Technique",
-      "learned_at_level": 1,
+      "learned_at_level": 2,
       "category": "Attack",
       "action_type": "Action",
       "base_cost_mp": 1,
@@ -299,19 +295,19 @@
           "scaling": {
             "milestones": [
               {
-                "level": 1,
+                "character_level": 2,
                 "effects": {
                   "damage": "1d6 + dexterity_modifier"
                 }
               },
               {
-                "level": 5,
+                "character_level": 5,
                 "effects": {
                   "damage": "1d8 + dexterity_modifier"
                 }
               },
               {
-                "level": 9,
+                "character_level": 9,
                 "effects": {
                   "damage": "1d8 + dexterity_modifier + 1d4"
                 }
@@ -327,19 +323,19 @@
           "scaling": {
             "milestones": [
               {
-                "level": 1,
+                "character_level": 2,
                 "effects": {
                   "damage": "1d8 + dexterity_modifier"
                 }
               },
               {
-                "level": 5,
+                "character_level": 5,
                 "effects": {
                   "damage": "1d10 + dexterity_modifier"
                 }
               },
               {
-                "level": 9,
+                "character_level": 9,
                 "effects": {
                   "damage": "1d10 + dexterity_modifier + 1d4",
                   "apply_marked_or_bleeding": true
@@ -358,21 +354,21 @@
           "scaling": {
             "milestones": [
               {
-                "level": 1,
+                "character_level": 2,
                 "effects": {
                   "center_target_damage": "2d6 + dexterity_modifier",
                   "secondary_targets_damage": "1d6"
                 }
               },
               {
-                "level": 5,
+                "character_level": 5,
                 "effects": {
                   "center_target_damage": "3d6 + dexterity_modifier",
                   "secondary_targets_damage": "1d8"
                 }
               },
               {
-                "level": 9,
+                "character_level": 9,
                 "effects": {
                   "center_target_damage": "4d6 + dexterity_modifier",
                   "secondary_targets_damage": "2d6"
@@ -404,19 +400,19 @@
       "scaling": {
         "milestones": [
           {
-            "level": 2,
+            "character_level": 2,
             "effects": {
               "teleport_distance_meters": 9
             }
           },
           {
-            "level": 5,
+            "character_level": 5,
             "effects": {
               "teleport_distance_meters": 12
             }
           },
           {
-            "level": 9,
+            "character_level": 9,
             "effects": {
               "teleport_distance_meters": 15,
               "next_attack_or_technique_bonus_attack_roll": 1
@@ -429,7 +425,7 @@
     {
       "id": "ninja_mist_slash",
       "name": "Mist Slash",
-      "learned_at_level": 2,
+      "learned_at_level": 3,
       "category": "Attack",
       "action_type": "Action",
       "cost_mp": 2,
@@ -447,19 +443,19 @@
       "scaling": {
         "milestones": [
           {
-            "level": 2,
+            "character_level": 3,
             "effects": {
               "free_reposition_after_hit_meters": 3
             }
           },
           {
-            "level": 5,
+            "character_level": 5,
             "effects": {
               "bonus_damage": "1d4"
             }
           },
           {
-            "level": 9,
+            "character_level": 9,
             "effects": {
               "if_target_is_isolated_gain_advantage_or_bonus_attack_roll": 1
             }
@@ -498,19 +494,19 @@
           "scaling": {
             "milestones": [
               {
-                "level": 3,
+                "character_level": 3,
                 "effects": {
                   "damage": "2d6 + wisdom_modifier"
                 }
               },
               {
-                "level": 5,
+                "character_level": 5,
                 "effects": {
                   "damage": "3d6 + wisdom_modifier"
                 }
               },
               {
-                "level": 9,
+                "character_level": 9,
                 "effects": {
                   "damage": "4d6 + wisdom_modifier"
                 }
@@ -529,19 +525,19 @@
           "scaling": {
             "milestones": [
               {
-                "level": 3,
+                "character_level": 3,
                 "effects": {
                   "damage": "2d6 + wisdom_modifier"
                 }
               },
               {
-                "level": 5,
+                "character_level": 5,
                 "effects": {
                   "damage": "3d6 + wisdom_modifier"
                 }
               },
               {
-                "level": 9,
+                "character_level": 9,
                 "effects": {
                   "damage": "4d6 + wisdom_modifier"
                 }
@@ -560,19 +556,19 @@
           "scaling": {
             "milestones": [
               {
-                "level": 3,
+                "character_level": 3,
                 "effects": {
                   "damage": "2d6 + wisdom_modifier"
                 }
               },
               {
-                "level": 5,
+                "character_level": 5,
                 "effects": {
                   "damage": "3d6 + wisdom_modifier"
                 }
               },
               {
-                "level": 9,
+                "character_level": 9,
                 "effects": {
                   "damage": "4d6 + wisdom_modifier"
                 }
@@ -605,19 +601,19 @@
       "scaling": {
         "milestones": [
           {
-            "level": 4,
+            "character_level": 4,
             "effects": {
               "gain_bonus_ac_against_triggering_attack": 3
             }
           },
           {
-            "level": 5,
+            "character_level": 5,
             "effects": {
               "if_attack_still_hits_reduce_damage_by": "1d4"
             }
           },
           {
-            "level": 9,
+            "character_level": 9,
             "effects": {
               "if_attack_misses_attacker_becomes_off_balance_or_loses_reactions": true
             }
@@ -647,19 +643,19 @@
       "scaling": {
         "milestones": [
           {
-            "level": 4,
+            "character_level": 4,
             "effects": {
               "dash_to_target": true
             }
           },
           {
-            "level": 5,
+            "character_level": 5,
             "effects": {
               "if_target_has_no_adjacent_allies_bonus_damage": "1d6"
             }
           },
           {
-            "level": 9,
+            "character_level": 9,
             "effects": {
               "if_shadow_arts_stance_is_active_gain_veiled_until_start_of_next_turn": true,
               "if_target_is_isolated_or_defeated_gain_invisibility_until_end_of_turn_or_until_attacking": true
@@ -700,13 +696,13 @@
           "scaling": {
             "milestones": [
               {
-                "level": 5,
+                "character_level": 5,
                 "effects": {
                   "placement_damage_or_end_turn_damage": "1d4 Fire"
                 }
               },
               {
-                "level": 9,
+                "character_level": 9,
                 "effects": {
                   "placement_damage_or_end_turn_damage": "1d6 Fire"
                 }
@@ -726,13 +722,13 @@
           "scaling": {
             "milestones": [
               {
-                "level": 5,
+                "character_level": 5,
                 "effects": {
                   "enemies_in_field_lose_movement_meters": 3
                 }
               },
               {
-                "level": 9,
+                "character_level": 9,
                 "effects": {
                   "enemies_in_field_lose_movement_meters": 6,
                   "target_ac_penalty": 1
@@ -752,13 +748,13 @@
           "scaling": {
             "milestones": [
               {
-                "level": 5,
+                "character_level": 5,
                 "effects": {
                   "damage": "1d4 Thunder"
                 }
               },
               {
-                "level": 9,
+                "character_level": 9,
                 "effects": {
                   "damage": "1d6 Thunder",
                   "failed_save_loses_reactions": true
@@ -790,13 +786,13 @@
       "scaling": {
         "milestones": [
           {
-            "level": 5,
+            "character_level": 5,
             "effects": {
               "first_attack_against_you_each_turn_has_disadvantage": true
             }
           },
           {
-            "level": 9,
+            "character_level": 9,
             "effects": {
               "duration_turns": 3
             }
@@ -830,13 +826,13 @@
       "scaling": {
         "milestones": [
           {
-            "level": 6,
+            "character_level": 6,
             "effects": {
               "reposition_meters": 6
             }
           },
           {
-            "level": 9,
+            "character_level": 9,
             "effects": {
               "reposition_meters": 9,
               "become_untargetable_for_the_rest_of_that_attack_resolution": true
@@ -882,13 +878,13 @@
           "scaling": {
             "milestones": [
               {
-                "level": 7,
+                "character_level": 7,
                 "effects": {
                   "damage": "3d6 + wisdom_modifier"
                 }
               },
               {
-                "level": 9,
+                "character_level": 9,
                 "effects": {
                   "damage": "4d6 + wisdom_modifier"
                 }
@@ -906,13 +902,13 @@
           "scaling": {
             "milestones": [
               {
-                "level": 7,
+                "character_level": 7,
                 "effects": {
                   "damage": "3d6 + wisdom_modifier"
                 }
               },
               {
-                "level": 9,
+                "character_level": 9,
                 "effects": {
                   "damage": "4d6 + wisdom_modifier",
                   "stronger_movement_penalty": true
@@ -931,14 +927,14 @@
           "scaling": {
             "milestones": [
               {
-                "level": 7,
+                "character_level": 7,
                 "effects": {
                   "damage": "3d6 + wisdom_modifier",
                   "push_distance_meters": 2
                 }
               },
               {
-                "level": 9,
+                "character_level": 9,
                 "effects": {
                   "damage": "4d6 + wisdom_modifier",
                   "push_distance_meters": 3
@@ -960,7 +956,7 @@
       "requires_concentration": true,
       "requires": [],
       "duration": "3 turns",
-      "description": "The Ninja enters a heightened state that empowers every branch of the class at once.",
+      "description": "The Ninja enters a heightened state that empowers every branch of the class.",
       "base_effects": {
         "thrown_techniques_bonus_attack_roll": 1,
         "ninjou_spell_attack_or_save_dc_bonus": 1,
@@ -970,7 +966,7 @@
       "scaling": {
         "milestones": [
           {
-            "level": 8,
+            "character_level": 8,
             "effects": {
               "thrown_techniques_bonus_attack_roll": 1,
               "ninjou_spell_attack_or_save_dc_bonus": 1,
@@ -979,7 +975,7 @@
             }
           },
           {
-            "level": 9,
+            "character_level": 9,
             "effects": {
               "first_technique_each_turn_costs_1_less_mp_minimum_1": true
             }
@@ -987,7 +983,7 @@
         ]
       },
       "high_level_bonus": {
-        "if_active_at_level_12": {
+        "if_active_at_character_level_12": {
           "effect": "Final Strike and Ninpou Burst gain an additional 1d8 damage."
         }
       }
@@ -1016,7 +1012,7 @@
         }
       },
       "high_level_bonus": {
-        "if_used_at_level_12_while_soul_is_active": {
+        "if_used_at_character_level_12_while_soul_is_active": {
           "effect": "Final Strike gains an additional 1d8 damage and the target must pass a Constitution save or become Dazed until the end of its next turn."
         }
       }
@@ -1045,23 +1041,18 @@
   "summary_tables": {
     "skill_unlocks": [
       {
-        "level": 1,
-        "skills": [
-          "Ninja Discipline",
-          "Thrown Technique"
-        ]
-      },
-      {
         "level": 2,
         "skills": [
-          "Shadow Jump",
-          "Mist Slash"
+          "Ninja Discipline",
+          "Thrown Technique",
+          "Shadow Jump"
         ]
       },
       {
         "level": 3,
         "skills": [
-          "Ninpou Bolt"
+          "Ninpou Bolt",
+          "Mist Slash"
         ]
       },
       {
@@ -1166,7 +1157,9 @@
   },
 
   "core_design_rules": [
-    "Ninja is a full 1-12 extended class and uses 1/5/9 as its primary scaling milestones where applicable.",
+    "Ninja begins at character level 2 because level 1 belongs to Novice.",
+    "Ninja uses character-level scaling, not subclass-level scaling.",
+    "The main scaling baselines are acquisition level plus major upgrades at character levels 5 and 9 where applicable.",
     "Throwing Mastery, Shadow Arts, and Ninpou Training are stances that enhance branches rather than hard-locking access to them.",
     "The first stance change each turn is free and exists to encourage adaptation rather than punish flexibility.",
     "Huuma Shuriken is a small-area thrown attack, not a pure single-target strike.",
