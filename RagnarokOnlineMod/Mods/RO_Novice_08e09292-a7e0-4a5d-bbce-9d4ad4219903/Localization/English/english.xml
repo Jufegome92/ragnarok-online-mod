@@ -266,7 +266,34 @@
     <content contentuid="h2ninjashadowjg0011" version="1">After Shadow Jump, gain +1 Attack Roll on your next attack or technique this turn.</content>
     <content contentuid="h2ninjashadowjg0012" version="1">Shadow Jump Momentum+</content>
     <content contentuid="h2ninjashadowjg0013" version="1">After Shadow Jump, gain +1 Attack Roll and +1d6 bonus damage on your next attack or technique this turn.</content>
+    <content contentuid="h2ninjamistslashg0001" version="1">Mist Slash</content>
+    <content contentuid="h2ninjamistslashg0002" version="1">Slash a target within 6m with a mist-infused strike. Reposition 3m after hit without provoking opportunity attacks. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjamistslashg0003" version="1">Slash a target within 6m. Deals weapon damage +1d6 and grants 3m safe reposition after hit. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjamistslashg0004" version="1">Slash a target within 6m. Deals weapon damage +2d6, gains +1 Attack Roll, and grants 3m safe reposition after hit. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjamistslashg0005" version="1">Unlocks Mist Slash at Ninja level 3.</content>
+    <content contentuid="h2ninjamistslashg0006" version="1">Mist Slash improves at Ninja level 5.</content>
+    <content contentuid="h2ninjamistslashg0007" version="1">Mist Slash improves at Ninja level 9.</content>
+    <content contentuid="h2ninjamistslashg0010" version="1">Mist Reposition</content>
+    <content contentuid="h2ninjamistslashg0011" version="1">After landing Mist Slash, gain 3m movement and move without provoking opportunity attacks this turn.</content>
+    <content contentuid="h2ninjaninpoubg0001" version="1">Crimson Fire Blossom</content>
+    <content contentuid="h2ninjaninpoubg0002" version="1">Launch a focused fire ninpou bolt at a target within 18m. Deals 2d6 + Intelligence Modifier Fire damage. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjaninpoubg0003" version="1">Lightning Spear of Ice</content>
+    <content contentuid="h2ninjaninpoubg0004" version="1">Launch a focused ice ninpou bolt at a target within 18m. Deals 2d6 + Intelligence Modifier Cold damage. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjaninpoubg0005" version="1">Wind Blade</content>
+    <content contentuid="h2ninjaninpoubg0006" version="1">Launch a focused wind ninpou bolt at a target within 18m. Deals 2d6 + Intelligence Modifier Thunder damage. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjaninpoubg0007" version="1">Launch a focused fire ninpou bolt at a target within 18m. Deals 3d6 + Intelligence Modifier Fire damage. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjaninpoubg0008" version="1">Launch a focused ice ninpou bolt at a target within 18m. Deals 3d6 + Intelligence Modifier Cold damage. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjaninpoubg0009" version="1">Launch a focused wind ninpou bolt at a target within 18m. Deals 3d6 + Intelligence Modifier Thunder damage. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjaninpoubg0010" version="1">Launch a focused fire ninpou bolt at a target within 18m. Deals 4d6 + Intelligence Modifier Fire damage. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjaninpoubg0011" version="1">Launch a focused ice ninpou bolt at a target within 18m. Deals 4d6 + Intelligence Modifier Cold damage. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjaninpoubg0012" version="1">Launch a focused wind ninpou bolt at a target within 18m. Deals 4d6 + Intelligence Modifier Thunder damage. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjaninpoubg0013" version="1">Ninpou Bolt</content>
+    <content contentuid="h2ninjaninpoubg0014" version="1">Unlocks Ninpou Bolt variants (Crimson Fire Blossom, Lightning Spear of Ice, Wind Blade) at Ninja level 3.</content>
+    <content contentuid="h2ninjaninpoubg0015" version="1">Ninpou Bolt improves at Ninja level 5.</content>
+    <content contentuid="h2ninjaninpoubg0016" version="1">Ninpou Bolt improves at Ninja level 9.</content>
   </contentList>
+
+
 
 
 

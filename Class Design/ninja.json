@@ -442,7 +442,7 @@
       "name": "Mist Slash",
       "learned_at_level": 3,
       "category": "Attack",
-      "action_type": "Action",
+      "action_type": "Bonus Action",
       "cost_mp": 2,
       "requires_concentration": false,
       "requires": [
@@ -466,13 +466,14 @@
           {
             "character_level": 5,
             "effects": {
-              "bonus_damage": "1d4"
+              "bonus_damage": "1d6"
             }
           },
           {
             "character_level": 9,
             "effects": {
-              "if_target_is_isolated_gain_advantage_or_bonus_attack_roll": 1
+              "if_target_is_isolated_gain_advantage_or_bonus_attack_roll": 1,
+              "bonus_damage": "2d6"
             }
           }
         ]
@@ -529,7 +530,7 @@
             ]
           },
           "field_synergy": {
-            "with_crimson_fire_formation": "Targets in or affected by the field take an additional 1d4 Fire damage."
+            "with_crimson_fire_formation": "Targets in or affected by the field take an additional 1d10 Fire damage."
           }
         },
         "Lightning Spear of Ice": {
@@ -560,7 +561,7 @@
             ]
           },
           "field_synergy": {
-            "with_water_escape_technique": "Targets in or affected by the field take an additional 1d4 Cold damage and suffer stronger movement penalties."
+            "with_water_escape_technique": "Targets in or affected by the field take an additional 1d6 Cold damage and reduce movement speed by 5."
           }
         },
         "Wind Blade": {
@@ -591,7 +592,7 @@
             ]
           },
           "field_synergy": {
-            "with_lightning_crash": "Targets affected by the field take an additional 1d4 Thunder damage and lose reactions on failed save."
+            "with_lightning_crash": "Targets affected by the field take an additional 1d6 Thunder damage and lose reactions on failed save."
           }
         }
       }

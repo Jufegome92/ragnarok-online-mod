@@ -1122,3 +1122,110 @@ Pegar esto al inicio del nuevo chat:
 1. Verificar que aparece solo `Ninja Training` (ON/OFF) en lugar de 6 botones sueltos.
 2. Verificar que `Thrown Technique` abre las 3 variantes seg�n tier.
 3. Verificar que cada variante sigue consumiendo su MP correcto y aplica su efecto.
+
+## 37) Nivel 3 - Mist Slash (MVP funcional)
+### S�ntoma / objetivo
+- Se solicit� implementar `Mist Slash` para nivel 3 (Bonus Action, 2 MP), con escalado en 5/9 y reposicionamiento seguro tras impactar.
+
+### Causa ra�z previa
+- La subclase Ninja no ten�a skill ofensiva de nivel 3 conectada en runtime.
+
+### Soluci�n final aplicada
+- Se a�adieron spells de `Mist Slash`:
+  - `Projectile_RO_Ninja_MistSlash_3`
+  - `Projectile_RO_Ninja_MistSlash_5`
+  - `Projectile_RO_Ninja_MistSlash_9`
+- Perfil de ejecuci�n:
+  - ataque melee basado en arma principal (`Projectile_MainHandAttack` + `ExecuteWeaponFunctors(MainHand)`),
+  - coste `BonusActionPoint:1;RO_MP:2`,
+  - alcance corto (`TargetRadius` 6).
+- Escalado:
+  - L3: da�o de arma.
+  - L5: da�o de arma + `1d6`.
+  - L9: da�o de arma + `2d6` y `+1 Attack Roll` para la t�cnica de L9.
+- Reposicionamiento seguro tras hit:
+  - statuses `RO_NINJA_MIST_SLASH_REPOSITION_L3/L5/L9` aplicados en `SpellSuccess`, con:
+    - `ActionResource(Movement,3,0)`
+    - `IgnoreLeaveAttackRange()`
+- Se a�adieron passives y progresi�n:
+  - `RO_Ninja_MistSlash_L3` en nivel 3.
+  - upgrade a `RO_Ninja_MistSlash_L5` en nivel 5 (remove L3).
+  - upgrade a `RO_Ninja_MistSlash_L9` en nivel 9 (remove L5).
+- Se agreg� localizaci�n completa de skill, upgrades y buff de reposition.
+
+### Archivos tocados
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Projectile_RO_Ninja.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Status_RO_Ninja.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Progressions/Progressions.lsx`
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml`
+
+### Riesgos
+- La condici�n "target aislado" de dise�o se aproxim� en MVP con `+1 Attack Roll` en variante L9 (sin detector de aislamiento a�n).
+- El comportamiento de "sin opportunity attacks" depende de `IgnoreLeaveAttackRange()` en status; validar visualmente en combate.
+
+### Regresi�n m�nima
+1. A nivel 3 aparece `Mist Slash` y consume Bonus Action + 2 MP.
+2. Al impactar, el personaje gana 3m de movimiento y puede reposicionarse sin OA.
+3. En nivel 5 y 9 sube da�o seg�n dise�o (`+1d6`, luego `+2d6`).
+4. En nivel 9 `Mist Slash` gana +1 al ataque.
+
+## 38) Nivel 3 - Ninpou Bolt (MVP separado por elemento)
+### Sintoma / objetivo
+- Se solicito implementar `Ninpou Bolt` para Ninja nivel 3 mientras se prueba nivel 2, priorizando MVP estable.
+- Requisito de implementacion: 3 skills separadas (sin contenedor por ahora):
+  - `Crimson Fire Blossom`
+  - `Lightning Spear of Ice`
+  - `Wind Blade`
+
+### Causa raiz previa
+- `Ninpou Bolt` solo existia en `Class Design/ninja.json`; no habia runtime wiring en Stats/Progression/Localization.
+
+### Solucion final aplicada
+- Se agregaron 9 spells de proyectil en `Spell_Projectile_RO_Ninja.txt`:
+  - Tier nivel 3:
+    - `Projectile_RO_Ninja_NinpouBolt_Fire_3`
+    - `Projectile_RO_Ninja_NinpouBolt_Cold_3`
+    - `Projectile_RO_Ninja_NinpouBolt_Wind_3`
+  - Tier nivel 5:
+    - `Projectile_RO_Ninja_NinpouBolt_Fire_5`
+    - `Projectile_RO_Ninja_NinpouBolt_Cold_5`
+    - `Projectile_RO_Ninja_NinpouBolt_Wind_5`
+  - Tier nivel 9:
+    - `Projectile_RO_Ninja_NinpouBolt_Fire_9`
+    - `Projectile_RO_Ninja_NinpouBolt_Cold_9`
+    - `Projectile_RO_Ninja_NinpouBolt_Wind_9`
+- Configuracion comun MVP:
+  - `ActionPoint:1;RO_MP:2`
+  - `TargetRadius:18`
+  - `SpellRoll: Attack(AttackType.RangedSpellAttack)`
+  - Escalado de dano por tier:
+    - L3: `2d6 + IntelligenceModifier`
+    - L5: `3d6 + IntelligenceModifier`
+    - L9: `4d6 + IntelligenceModifier`
+- Se agregaron passives de unlock/escalado:
+  - `RO_Ninja_NinpouBolt_L3` (visible)
+  - `RO_Ninja_NinpouBolt_L5` (hidden)
+  - `RO_Ninja_NinpouBolt_L9` (hidden)
+- Se conecto progresion Ninja:
+  - Nivel 3 agrega `RO_Ninja_NinpouBolt_L3`.
+  - Nivel 5 agrega `RO_Ninja_NinpouBolt_L5` y remueve `RO_Ninja_NinpouBolt_L3`.
+  - Nivel 9 agrega `RO_Ninja_NinpouBolt_L9` y remueve `RO_Ninja_NinpouBolt_L5`.
+- Se agrego localizacion EN para nombres/descripciones de las 3 variantes y descripciones de milestone del passive.
+
+### Archivos tocados
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Projectile_RO_Ninja.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Progressions/Progressions.lsx`
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml`
+
+### Riesgos
+- Las sinergias avanzadas con `Ninpou Field` (bonus damage/slow/reaction lock) no se cablearon todavia para evitar acoplarse a statuses/campos que aun no estan cerrados.
+- `Wind Blade` usa dano `Thunder` con icono lightning por disponibilidad de iconografia estable.
+
+### Regresion minima
+1. Ninja nivel 3: aparecen las 3 skills separadas de Ninpou Bolt y cada una consume 2 MP.
+2. Verificar ataque a distancia magico (Ranged Spell Attack) y dano elemental correcto por variante.
+3. Ninja nivel 5: las 3 variantes pasan a 3d6 + INT.
+4. Ninja nivel 9: las 3 variantes pasan a 4d6 + INT.
+5. Confirmar que `Mist Slash` y kit de nivel 2 siguen visibles y funcionales.
