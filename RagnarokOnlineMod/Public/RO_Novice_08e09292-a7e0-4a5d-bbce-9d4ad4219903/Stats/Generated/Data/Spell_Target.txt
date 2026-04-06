@@ -284,3 +284,36 @@ data "RootSpellID" "Target_RO_Magician_SafetyWall"
 
 
 
+
+new entry "Target_RO_Ninja_ShadowJump_2"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_MistyStep"
+data "SpellSchool" "Illusion"
+data "SpellRange" "9"
+data "UseCosts" "BonusActionPoint:1;RO_MP:2"
+data "Icon" "Spell_Conjuration_MistyStep"
+data "DisplayName" "h2ninjashadowjg0001;1"
+data "Description" "h2ninjashadowjg0002;1"
+data "SpellFlags" "HasSomaticComponent;IsSpell"
+
+new entry "Target_RO_Ninja_ShadowJump_5"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_RO_Ninja_ShadowJump_2"
+data "SpellRange" "12"
+data "SpellProperties" "ApplyStatus(RO_NINJA_SHADOW_JUMP_BUFF_L5,100,1)"
+data "Description" "h2ninjashadowjg0003;1"
+data "TooltipStatusApply" "ApplyStatus(RO_NINJA_SHADOW_JUMP_BUFF_L5,100,1)"
+data "RootSpellID" "Target_RO_Ninja_ShadowJump_2"
+
+new entry "Target_RO_Ninja_ShadowJump_9"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_RO_Ninja_ShadowJump_2"
+data "SpellRange" "15"
+data "SpellProperties" "ApplyStatus(RO_NINJA_SHADOW_JUMP_BUFF_L9,100,1)"
+data "Description" "h2ninjashadowjg0004;1"
+data "TooltipStatusApply" "ApplyStatus(RO_NINJA_SHADOW_JUMP_BUFF_L9,100,1)"
+data "RootSpellID" "Target_RO_Ninja_ShadowJump_2"
+

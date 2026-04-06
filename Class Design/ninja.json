@@ -17,20 +17,20 @@
     "formula_note": "At Ninja levels, gain 6 HP + Constitution modifier per level."
   },
 
-  "spellcasting_ability": "Wisdom",
-  "spellcasting_save_dc_formula": "8 + proficiency_bonus + wisdom_modifier",
+  "spellcasting_ability": "Intelligence",
+  "spellcasting_save_dc_formula": "8 + proficiency_bonus + intelligence_modifier",
 
   "mana_points": {
     "base_formula": "4 + (2 * character_level)",
     "modifier_scaling": "character_level * floor(spellcasting_modifier / 2)",
     "total_formula": "(4 + (2 * character_level)) + (character_level * floor(spellcasting_modifier / 2))",
-    "formula_note": "For Ninja, spellcasting_modifier uses Wisdom."
+    "formula_note": "For Ninja, spellcasting_modifier uses Intelligence."
   },
 
   "proficiencies": {
     "saving_throws": [
       "Dexterity",
-      "Wisdom"
+      "Intelligence"
     ],
     "armor": [
       "Light Armor"
@@ -191,14 +191,17 @@
               {
                 "character_level": 5,
                 "effects": {
-                  "thrown_technique_bonus_damage": 1
+                  "thrown_technique_attack_roll_bonus": 2,
+                  "thrown_technique_bonus_damage": "1d4"
                 }
               },
               {
                 "character_level": 9,
                 "effects": {
-                  "first_thrown_technique_each_turn_gains_bonus_damage": "1d4",
-                  "huuma_shuriken_push_distance_meters": 2
+                  
+                  "thrown_technique_attack_roll_bonus": 3,
+                  "thrown_technique_bonus_damage": "1d6",
+                  "huuma_shuriken_increased_distance_meters": 5
                 }
               }
             ]
@@ -228,6 +231,7 @@
                 "character_level": 9,
                 "effects": {
                   "after_shadow_slash_gain_veiled": true,
+                  "shadow_jump_and_shadow_slash_gain_bonus_attack_or_accuracy": 2,
                   "if_shadow_slash_hits_an_isolated_target_or_defeats_target_gain_invisibility_until_end_of_turn_or_until_attacking": true
                 }
               }
@@ -238,6 +242,7 @@
           "identity": "Magical focus, efficiency and elemental amplification",
           "base_effects": {
             "ninpou_spell_attack_bonus": 1,
+            "ninpou_save_dc_bonus": 1,
             "first_ninpou_each_turn_costs_1_less_mp_minimum_1": true
           },
           "scaling": {
@@ -245,19 +250,23 @@
               {
                 "character_level": 2,
                 "effects": {
-                  "ninpou_spell_attack_bonus": 1
+                  "ninpou_spell_attack_bonus": 1,
+                  "ninpou_save_dc_bonus": 1
                 }
               },
               {
                 "character_level": 5,
                 "effects": {
-                  "ninpou_save_dc_bonus": 1
+                  "ninpou_save_dc_bonus": 2,
+                  "ninpou_spell_attack_bonus": 3
                 }
               },
               {
                 "character_level": 9,
                 "effects": {
-                  "bolt_field_and_burst_synergy_bonus_damage": "1d4"
+                  "ninjutsu_bonus_damage": "1d8",
+                  "ninpou_save_dc_bonus": 3,
+                  "ninpou_spell_attack_bonus": 4
                 }
               }
             ]
@@ -278,7 +287,7 @@
         "Valid visible target or point"
       ],
       "duration": "Instant",
-      "range": "18m",
+      "range": "Varies by throw (Shuriken 18m, Kunai 10m, Huuma 10m)",
       "description": "The Ninja chooses between light shuriken pressure, precise kunai disruption, or a heavy Huuma throw with a small impact area.",
       "base_effects": {
         "choose_one": [
@@ -290,6 +299,7 @@
       "variants": {
         "Throw Shuriken": {
           "base_effect": {
+            "attack_roll_bonus": 2,
             "damage": "1d6 + dexterity_modifier"
           },
           "scaling": {
@@ -309,7 +319,7 @@
               {
                 "character_level": 9,
                 "effects": {
-                  "damage": "1d8 + dexterity_modifier + 1d4"
+                  "damage": "2d8 + dexterity_modifier"
                 }
               }
             ]
@@ -337,7 +347,7 @@
               {
                 "character_level": 9,
                 "effects": {
-                  "damage": "1d10 + dexterity_modifier + 1d4",
+                  "damage": "2d10 + dexterity_modifier",
                   "apply_marked_or_bleeding": true
                 }
               }
@@ -348,7 +358,7 @@
           "base_cost_mp": 2,
           "base_effect": {
             "center_target_damage": "2d6 + dexterity_modifier",
-            "small_aoe_radius_meters": 2,
+            "small_aoe_radius_meters": 3,
             "secondary_targets_damage": "1d6"
           },
           "scaling": {
@@ -364,6 +374,7 @@
                 "character_level": 5,
                 "effects": {
                   "center_target_damage": "3d6 + dexterity_modifier",
+                  "small_aoe_radius_meters": 4,
                   "secondary_targets_damage": "1d8"
                 }
               },
@@ -371,6 +382,7 @@
                 "character_level": 9,
                 "effects": {
                   "center_target_damage": "4d6 + dexterity_modifier",
+                  "small_aoe_radius_meters": 4,
                   "secondary_targets_damage": "2d6"
                 }
               }
@@ -408,14 +420,17 @@
           {
             "character_level": 5,
             "effects": {
-              "teleport_distance_meters": 12
+              "teleport_distance_meters": 12,
+              "next_attack_or_technique_bonus_attack_roll": 1
             }
           },
           {
             "character_level": 9,
             "effects": {
               "teleport_distance_meters": 15,
-              "next_attack_or_technique_bonus_attack_roll": 1
+              "next_attack_or_technique_bonus_attack_roll": 1,
+              "next_attack_or_technique_bonus_attack_damage": "1d6"
+              
             }
           }
         ]
@@ -476,7 +491,7 @@
         "Valid target within 18m"
       ],
       "duration": "Instant",
-      "range": "18m",
+      "range": "Varies by throw (Shuriken 18m, Kunai 10m, Huuma 10m)",
       "description": "The Ninja uses a focused elemental ninpou strike against a single target.",
       "base_effects": {
         "choose_one": [
@@ -489,26 +504,26 @@
         "Crimson Fire Blossom": {
           "damage_type": "Fire",
           "base_effect": {
-            "damage": "2d6 + wisdom_modifier"
+            "damage": "2d6 + intelligence_modifier"
           },
           "scaling": {
             "milestones": [
               {
                 "character_level": 3,
                 "effects": {
-                  "damage": "2d6 + wisdom_modifier"
+                  "damage": "2d6 + intelligence_modifier"
                 }
               },
               {
                 "character_level": 5,
                 "effects": {
-                  "damage": "3d6 + wisdom_modifier"
+                  "damage": "3d6 + intelligence_modifier"
                 }
               },
               {
                 "character_level": 9,
                 "effects": {
-                  "damage": "4d6 + wisdom_modifier"
+                  "damage": "4d6 + intelligence_modifier"
                 }
               }
             ]
@@ -520,26 +535,26 @@
         "Lightning Spear of Ice": {
           "damage_type": "Cold",
           "base_effect": {
-            "damage": "2d6 + wisdom_modifier"
+            "damage": "2d6 + intelligence_modifier"
           },
           "scaling": {
             "milestones": [
               {
                 "character_level": 3,
                 "effects": {
-                  "damage": "2d6 + wisdom_modifier"
+                  "damage": "2d6 + intelligence_modifier"
                 }
               },
               {
                 "character_level": 5,
                 "effects": {
-                  "damage": "3d6 + wisdom_modifier"
+                  "damage": "3d6 + intelligence_modifier"
                 }
               },
               {
                 "character_level": 9,
                 "effects": {
-                  "damage": "4d6 + wisdom_modifier"
+                  "damage": "4d6 + intelligence_modifier"
                 }
               }
             ]
@@ -551,26 +566,26 @@
         "Wind Blade": {
           "damage_type": "Thunder",
           "base_effect": {
-            "damage": "2d6 + wisdom_modifier"
+            "damage": "2d6 + intelligence_modifier"
           },
           "scaling": {
             "milestones": [
               {
                 "character_level": 3,
                 "effects": {
-                  "damage": "2d6 + wisdom_modifier"
+                  "damage": "2d6 + intelligence_modifier"
                 }
               },
               {
                 "character_level": 5,
                 "effects": {
-                  "damage": "3d6 + wisdom_modifier"
+                  "damage": "3d6 + intelligence_modifier"
                 }
               },
               {
                 "character_level": 9,
                 "effects": {
-                  "damage": "4d6 + wisdom_modifier"
+                  "damage": "4d6 + intelligence_modifier"
                 }
               }
             ]
@@ -859,7 +874,7 @@
         "Valid target area within 18m"
       ],
       "duration": "Instant",
-      "range": "18m",
+      "range": "Varies by throw (Shuriken 18m, Kunai 10m, Huuma 10m)",
       "description": "The Ninja releases a large elemental ninpou technique in an area.",
       "base_effects": {
         "choose_one": [
@@ -873,20 +888,20 @@
           "damage_type": "Fire",
           "base_effect": {
             "area_radius_meters": 3,
-            "damage": "3d6 + wisdom_modifier"
+            "damage": "3d6 + intelligence_modifier"
           },
           "scaling": {
             "milestones": [
               {
                 "character_level": 7,
                 "effects": {
-                  "damage": "3d6 + wisdom_modifier"
+                  "damage": "3d6 + intelligence_modifier"
                 }
               },
               {
                 "character_level": 9,
                 "effects": {
-                  "damage": "4d6 + wisdom_modifier"
+                  "damage": "4d6 + intelligence_modifier"
                 }
               }
             ]
@@ -896,7 +911,7 @@
           "damage_type": "Cold",
           "base_effect": {
             "area_radius_meters": 3,
-            "damage": "3d6 + wisdom_modifier",
+            "damage": "3d6 + intelligence_modifier",
             "on_failed_save": "Targets lose 3m movement until the end of their next turn."
           },
           "scaling": {
@@ -904,13 +919,13 @@
               {
                 "character_level": 7,
                 "effects": {
-                  "damage": "3d6 + wisdom_modifier"
+                  "damage": "3d6 + intelligence_modifier"
                 }
               },
               {
                 "character_level": 9,
                 "effects": {
-                  "damage": "4d6 + wisdom_modifier",
+                  "damage": "4d6 + intelligence_modifier",
                   "stronger_movement_penalty": true
                 }
               }
@@ -921,7 +936,7 @@
           "damage_type": "Thunder",
           "base_effect": {
             "area_radius_meters": 3,
-            "damage": "3d6 + wisdom_modifier",
+            "damage": "3d6 + intelligence_modifier",
             "push_distance_meters": 2
           },
           "scaling": {
@@ -929,14 +944,14 @@
               {
                 "character_level": 7,
                 "effects": {
-                  "damage": "3d6 + wisdom_modifier",
+                  "damage": "3d6 + intelligence_modifier",
                   "push_distance_meters": 2
                 }
               },
               {
                 "character_level": 9,
                 "effects": {
-                  "damage": "4d6 + wisdom_modifier",
+                  "damage": "4d6 + intelligence_modifier",
                   "push_distance_meters": 3
                 }
               }
@@ -1167,3 +1182,6 @@
     "Final Strike is intentionally high-commitment and should feel dangerous to use."
   ]
 }
+
+
+

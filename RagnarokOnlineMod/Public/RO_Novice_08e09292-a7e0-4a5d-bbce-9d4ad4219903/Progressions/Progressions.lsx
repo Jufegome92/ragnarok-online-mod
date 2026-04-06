@@ -32,6 +32,9 @@
                 <node id="SubClass">
                   <attribute id="Object" type="guid" value="1ddd77a1-cf7a-44cc-a67c-155383570c9b" />
                 </node>
+                <node id="SubClass">
+                  <attribute id="Object" type="guid" value="9502a58a-c36b-43f1-ac5c-b3f1449a584b" />
+                </node>
               </children>
             </node>
           </children>
@@ -378,9 +381,95 @@
           <attribute id="TableUUID" type="guid" value="63579466-dd7f-4b25-a45e-b430d10618d3" />
           <attribute id="UUID" type="guid" value="ef65d933-6a65-456a-b8c2-07322c579e6e" />
         </node>
+        <node id="Progression">
+          <attribute id="Boosts" type="LSString" value="ProficiencyBonus(SavingThrow,Dexterity);ProficiencyBonus(SavingThrow,Intelligence);Proficiency(LightArmor);Proficiency(Daggers);Proficiency(Shortswords);Proficiency(Scimitars);Proficiency(Sickles);Proficiency(Handaxes);ProficiencyBonus(Skill,Stealth);ProficiencyBonus(Skill,Arcana)" />
+          <attribute id="Level" type="uint8" value="2" />
+          <attribute id="Name" type="LSString" value="RO_Ninja" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_MP_Formula_INT;RO_Ninja_Discipline;RO_Ninja_ThrownTechnique_L2;RO_Ninja_ThrowingMastery_Bonus;RO_Ninja_ShurikenPrecision;RO_Ninja_ShadowJump_L2" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="Selectors" type="LSString" value="SelectSkillsExpertise(f974ebd6-3725-4b90-bb5c-2b647d41615d,1)" />
+          <attribute id="TableUUID" type="guid" value="fedc62af-817a-47b8-abf2-0a8de2694f70" />
+          <attribute id="UUID" type="guid" value="78af6820-17e4-4b9b-8705-e4fea7985525" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="3" />
+          <attribute id="Name" type="LSString" value="RO_Ninja" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="fedc62af-817a-47b8-abf2-0a8de2694f70" />
+          <attribute id="UUID" type="guid" value="388e78a5-e7c6-4d55-aac8-57b42fccdb6a" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="4" />
+          <attribute id="Name" type="LSString" value="RO_Ninja" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="fedc62af-817a-47b8-abf2-0a8de2694f70" />
+          <attribute id="UUID" type="guid" value="3de424bb-ae72-41ab-83cc-0cc7030a4b34" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="5" />
+          <attribute id="Name" type="LSString" value="RO_Ninja" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_Ninja_ThrownTechnique_L5;RO_Ninja_ShadowJump_L5" />
+          <attribute id="PassivesRemoved" type="LSString" value="RO_Ninja_ThrownTechnique_L2;RO_Ninja_ShadowJump_L2" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="fedc62af-817a-47b8-abf2-0a8de2694f70" />
+          <attribute id="UUID" type="guid" value="810e8627-ebf4-4e0b-8a75-c5106b9d5f66" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="6" />
+          <attribute id="Name" type="LSString" value="RO_Ninja" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="fedc62af-817a-47b8-abf2-0a8de2694f70" />
+          <attribute id="UUID" type="guid" value="62e64103-738a-4ccf-8ba8-442727c87393" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="7" />
+          <attribute id="Name" type="LSString" value="RO_Ninja" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="fedc62af-817a-47b8-abf2-0a8de2694f70" />
+          <attribute id="UUID" type="guid" value="50509268-14d0-4acc-a159-6ae92c8824b9" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="8" />
+          <attribute id="Name" type="LSString" value="RO_Ninja" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="fedc62af-817a-47b8-abf2-0a8de2694f70" />
+          <attribute id="UUID" type="guid" value="3a0d5aff-d097-447d-871f-34b4a304f718" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="9" />
+          <attribute id="Name" type="LSString" value="RO_Ninja" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_Ninja_ThrownTechnique_L9;RO_Ninja_ShadowJump_L9;RO_Ninja_ShadowJump_L9_DamageBonus" />
+          <attribute id="PassivesRemoved" type="LSString" value="RO_Ninja_ThrownTechnique_L5;RO_Ninja_ShadowJump_L5" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="fedc62af-817a-47b8-abf2-0a8de2694f70" />
+          <attribute id="UUID" type="guid" value="2bfc06eb-ecf0-49eb-b80a-0dd466862f90" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="10" />
+          <attribute id="Name" type="LSString" value="RO_Ninja" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="fedc62af-817a-47b8-abf2-0a8de2694f70" />
+          <attribute id="UUID" type="guid" value="b6e72ca2-7677-45b9-92a7-aaa0b9d80e28" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="11" />
+          <attribute id="Name" type="LSString" value="RO_Ninja" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="fedc62af-817a-47b8-abf2-0a8de2694f70" />
+          <attribute id="UUID" type="guid" value="f2a73ced-4b67-4130-b736-fe29b6a1e90c" />
+        </node>
+        <node id="Progression">
+          <attribute id="Level" type="uint8" value="12" />
+          <attribute id="Name" type="LSString" value="RO_Ninja" />
+          <attribute id="ProgressionType" type="uint8" value="1" />
+          <attribute id="TableUUID" type="guid" value="fedc62af-817a-47b8-abf2-0a8de2694f70" />
+          <attribute id="UUID" type="guid" value="ba5fe8d2-3539-440c-a350-05ed9cc687d9" />
+        </node>
       </children>
     </node>
   </region>
 </save>
+
+
 
 

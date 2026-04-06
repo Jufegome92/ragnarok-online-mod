@@ -75,7 +75,25 @@
           <attribute id="SpellCastingAbility" type="uint8" value="5" />
           <attribute id="UUID" type="guid" value="1ddd77a1-cf7a-44cc-a67c-155383570c9b" />
         </node>
+        <node id="ClassDescription">
+          <attribute id="BaseHp" type="int32" value="8" />
+          <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8" />
+          <attribute id="ClassEquipment" type="FixedString" value="EQP_CC_Rogue" />
+          <attribute id="HpPerLevel" type="int32" value="6" />
+          <attribute id="Description" type="TranslatedString" handle="h4f1c2a7bg8d3e4g9a10gb2c3g5d6e7f8a901" version="1" />
+          <attribute id="DisplayName" type="TranslatedString" handle="h3e2d1c0bg9a8f7g6e5dg4c3b2a1f0e9d8c7" version="1" />
+          <attribute id="LearningStrategy" type="uint8" value="1" />
+          <attribute id="MustPrepareSpells" type="bool" value="false" />
+          <attribute id="Name" type="FixedString" value="RO_Ninja" />
+          <attribute id="ParentGuid" type="guid" value="143a8a1c-09ca-4ccf-9d72-325873b33a17" />
+          <attribute id="PrimaryAbility" type="uint8" value="2" />
+          <attribute id="ProgressionTableUUID" type="guid" value="fedc62af-817a-47b8-abf2-0a8de2694f70" />
+          <attribute id="SoundClassType" type="FixedString" value="Rogue" />
+          <attribute id="SpellCastingAbility" type="uint8" value="4" />
+          <attribute id="UUID" type="guid" value="9502a58a-c36b-43f1-ac5c-b3f1449a584b" />
+        </node>
       </children>
     </node>
   </region>
 </save>
+

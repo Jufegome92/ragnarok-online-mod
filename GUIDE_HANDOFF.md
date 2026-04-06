@@ -4,16 +4,16 @@
 Proyecto MVP para BG3 inspirado en Ragnarok Online.
 - Clase base: `RO_Novice`
 - Primera subclase implementada para pruebas: `RO_Archer`
-- Enfoque: iteración mínima viable (una feature por vez, test en juego, continuar)
+- Enfoque: iteraciï¿½n mï¿½nima viable (una feature por vez, test en juego, continuar)
 
 ## 2) Estructura clave del repo
 - Mod source: `RagnarokOnlineMod/`
-- Diseño funcional: `Class Design/*.json`
+- Diseï¿½o funcional: `Class Design/*.json`
 - Referencias: `Reference/Packages/...`
 - Herramientas: `Tools/`
 - PAK de salida: `Package/`
 
-Rutas críticas:
+Rutas crï¿½ticas:
 - Meta mod: `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/meta.lsx`
 - Class descriptions: `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/ClassDescriptions/ClassDescriptions.lsx`
 - Progressions: `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Progressions/Progressions.lsx`
@@ -27,7 +27,7 @@ Rutas críticas:
 ## 3) Estado funcional implementado
 ### Novice (base)
 - Clase visible y seleccionable en character creation
-- Descripción/lore en inglés
+- Descripciï¿½n/lore en inglï¿½s
 - HP ajustado a 6 base (+CON)
 - Recurso custom `RO_MP` base 6
 - Passive `Basic Skill` con proficiencias de Novice
@@ -42,16 +42,16 @@ Rutas críticas:
 - Icono de subclase en assets y registrado en GUI metadata
 
 ## 4) Sistema MP con Script Extender
-Fórmula exacta pedida por diseño:
+Fï¿½rmula exacta pedida por diseï¿½o:
 `(4 + (2 * character_level)) + (character_level * floor(spellcasting_modifier / 2))`
 
 Notas:
-- Sin fallback forzado (se quitó para validar cálculo real).
-- Novice base mantiene 6 MP por progresión base.
-- Cuando existe pasivo marcador de fórmula (`RO_MP_Formula_*`), Lua aplica ajuste por pasivo técnico `RO_MP_Adjust_*`.
+- Sin fallback forzado (se quitï¿½ para validar cï¿½lculo real).
+- Novice base mantiene 6 MP por progresiï¿½n base.
+- Cuando existe pasivo marcador de fï¿½rmula (`RO_MP_Formula_*`), Lua aplica ajuste por pasivo tï¿½cnico `RO_MP_Adjust_*`.
 - Para Archer se usa `RO_MP_Formula_WIS`.
 
-Archivos técnicos:
+Archivos tï¿½cnicos:
 - `ScriptExtender/Lua/RO_MPSystem.lua`
 - `Stats/Generated/Data/Passive_RO_MPSystem.txt`
 
@@ -64,10 +64,10 @@ Archivos técnicos:
 3. Registrar rutas en `GUI/metadata.lsf` (obligatorio)
 
 ### Passive/Skill icons
-- DDS en rutas Tooltips/ControllerUI (según uso)
+- DDS en rutas Tooltips/ControllerUI (segï¿½n uso)
 - `Icon` en `Passive.txt` o `Spell_*.txt` debe coincidir con nombre esperado
 
-### Conversión PNG -> DDS
+### Conversiï¿½n PNG -> DDS
 Script wrapper:
 - `Tools/convert_icon_dds.ps1`
 
@@ -76,7 +76,7 @@ Ejemplo:
 powershell -ExecutionPolicy Bypass -File .\Tools\convert_icon_dds.ps1 -InputPath "RagnarokOnlineMod/Icons/archer_class.png" -BaseName "RO_Archer" -OutDir "RagnarokOnlineMod/Icons/dds" -Sizes 24x24,380x380
 ```
 
-También acepta `-Input` como alias.
+Tambiï¿½n acepta `-Input` como alias.
 
 ## 6) Empaquetado
 Comando principal:
@@ -92,7 +92,7 @@ $pak=(Resolve-Path '.\Package\RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903.pak
 & '.\Tools\ExportTool\Packed\Tools\Divine.exe' -g bg3 -a list-package -s $pak
 ```
 
-## 7) Checklist rápido para otro chat
+## 7) Checklist rï¿½pido para otro chat
 1. Confirmar que `metadata.lsf` tiene entradas para cada icono de clase/subclase.
 2. Confirmar que `Progressions.lsx` tiene clase base + subclase en niveles correctos.
 3. Confirmar que `ScriptExtender/Config.json` incluye `"FeatureFlags": ["Lua"]` y `ModTable` correcto.
@@ -105,20 +105,20 @@ $pak=(Resolve-Path '.\Package\RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903.pak
    - MP esperado
 
 ## 8) Problemas vistos antes (y causa probable)
-- "Invalid file" al importar: normalmente por estructura/formato de archivos GUI o XML/LSX inválido.
-- Icono no aparece: faltaba registro en `GUI/metadata.lsf` o path no coincidía.
-- MP se queda en 6: Lua no cargado o marcador de fórmula no aplicado en el nivel correcto.
+- "Invalid file" al importar: normalmente por estructura/formato de archivos GUI o XML/LSX invï¿½lido.
+- Icono no aparece: faltaba registro en `GUI/metadata.lsf` o path no coincidï¿½a.
+- MP se queda en 6: Lua no cargado o marcador de fï¿½rmula no aplicado en el nivel correcto.
 
-## 9) Próximo paso recomendado
-Después de validar Archer + MP en runtime:
-- Implementar siguiente job (sugerido: `Acolyte` o `Swordman`) con el mismo patrón:
-  - marcador de fórmula (`RO_MP_Formula_*`) según spellcasting stat
-  - progression mínima viable
+## 9) Prï¿½ximo paso recomendado
+Despuï¿½s de validar Archer + MP en runtime:
+- Implementar siguiente job (sugerido: `Acolyte` o `Swordman`) con el mismo patrï¿½n:
+  - marcador de fï¿½rmula (`RO_MP_Formula_*`) segï¿½n spellcasting stat
+  - progression mï¿½nima viable
   - 1 skill funcional
   - test in-game
 
 ---
-Este documento busca que cualquier nuevo chat continue sin reconstruir contexto histórico.
+Este documento busca que cualquier nuevo chat continue sin reconstruir contexto histï¿½rico.
 
 ## 10) Hallazgos recientes (Stances Archer)
 ### Owl's Eye (estado actual)
@@ -132,28 +132,28 @@ Este documento busca que cualquier nuevo chat continue sin reconstruir contexto 
   - Lv5: +50% rango efectivo.
   - Lv9: bonus de distancia sube a +1d6 (>10m).
   - Lv12: reemplaza bonus de distancia por +1d12 SIEMPRE en ataques a distancia.
-- Cambio entre stances consume recurso correctamente y hace overwrite por `StackId` común.
+- Cambio entre stances consume recurso correctamente y hace overwrite por `StackId` comï¿½n.
 
-## 11) Lección clave: rango y desventaja
+## 11) Lecciï¿½n clave: rango y desventaja
 Problema detectado:
-- En Stats puros no encontramos una condición robusta para "fuera del rango normal del arma equipada actual".
-- Solución previa basada en `Advantage(...)` por distancia fija causaba ventaja falsa en rangos medios (ej. 11-12m).
+- En Stats puros no encontramos una condiciï¿½n robusta para "fuera del rango normal del arma equipada actual".
+- Soluciï¿½n previa basada en `Advantage(...)` por distancia fija causaba ventaja falsa en rangos medios (ej. 11-12m).
 
-Conclusión:
-- Para lógica de rango dependiente del arma equipada, usar Script Extender (SE).
+Conclusiï¿½n:
+- Para lï¿½gica de rango dependiente del arma equipada, usar Script Extender (SE).
 
-## 12) Migración a SE para Vulture's Eye
-### Qué quedó activo
-- Nuevo módulo SE: `ScriptExtender/Lua/RO_VulturesEye.lua`
+## 12) Migraciï¿½n a SE para Vulture's Eye
+### Quï¿½ quedï¿½ activo
+- Nuevo mï¿½dulo SE: `ScriptExtender/Lua/RO_VulturesEye.lua`
 - Cargado desde: `ScriptExtender/Lua/BootstrapServer.lua`
 
-### Qué hace
+### Quï¿½ hace
 - Detecta si el personaje tiene una status de Vulture's Eye activa.
 - Detecta arma a distancia equipada.
-- Aplica un pasivo técnico anti-desventaja según umbral por arma (09/15/18m).
+- Aplica un pasivo tï¿½cnico anti-desventaja segï¿½n umbral por arma (09/15/18m).
 - Limpia ese pasivo al salir de la stance o cambiar contexto.
 
-### Pasivos técnicos añadidos (actual)
+### Pasivos tï¿½cnicos aï¿½adidos (actual)
 Archivo: `Stats/Generated/Data/Passive.txt`
 - `RO_Archer_VulturesEye_LongRangeNoDisadv_09_L2`
 - `RO_Archer_VulturesEye_LongRangeNoDisadv_09_L5`
@@ -166,10 +166,10 @@ Archivo: `Stats/Generated/Data/Passive.txt`
 - `Reference/Notes/Archived/VulturesEye_Legacy_LongRangeNoDisadv.txt`
 - Passive legacy renombrado a `RO_Archer_VulturesEye_LongRangeNoDisadv_Legacy` para evitar uso accidental.
 
-## 13) Regla práctica para próximas skills
-- Preferir `Stats/Progressions` cuando la lógica es estática y declarativa.
-- Usar `SE` solo cuando se necesite lógica dinámica/contextual (arma equipada, estado runtime, cálculos avanzados).
-- Mantener historial en `Reference/Notes/Archived/` cuando se retire una solución para facilitar rollback y auditoría.
+## 13) Regla prï¿½ctica para prï¿½ximas skills
+- Preferir `Stats/Progressions` cuando la lï¿½gica es estï¿½tica y declarativa.
+- Usar `SE` solo cuando se necesite lï¿½gica dinï¿½mica/contextual (arma equipada, estado runtime, cï¿½lculos avanzados).
+- Mantener historial en `Reference/Notes/Archived/` cuando se retire una soluciï¿½n para facilitar rollback y auditorï¿½a.
 
 
 
@@ -180,74 +180,74 @@ Todo lo siguiente fue validado en runtime:
 - `Vulture's Eye`:
   - ignora desventaja melee con ballestas,
   - aumenta rango efectivo por tier,
-  - aplica daño extra por distancia (`+1d4`/`+1d6`) y en L12 (`+1d12` global).
+  - aplica daï¿½o extra por distancia (`+1d4`/`+1d6`) y en L12 (`+1d12` global).
 - `Double Strafe`:
   - ejecuta 2 hits reales,
   - hereda bonos de stance,
   - aplica correctamente bonus de Vulture en ambos impactos.
 - Fuera del rango extendido vuelve a existir desventaja (no queda neutralizada infinito).
 
-## 15) Template de implementación (para futuros chats)
+## 15) Template de implementaciï¿½n (para futuros chats)
 ### Paso A: Definir en Stats (base declarativa)
 1. Crear/actualizar spell o stance en `Spell_*.txt`.
 2. Crear/actualizar status en `Status_*.txt`.
-3. Exponer/otorgar vía `Passive.txt` + `Progressions.lsx`.
+3. Exponer/otorgar vï¿½a `Passive.txt` + `Progressions.lsx`.
 4. Mantener naming consistente (`*_L2`, `*_L5`, `*_L9`, `*_L12`).
 
 ### Paso B: Detectar si hace falta SE
-Usar Script Extender cuando haya lógica dinámica como:
+Usar Script Extender cuando haya lï¿½gica dinï¿½mica como:
 - arma equipada cambia reglas,
 - ventanas de distancia por tier,
 - multi-hit encadenado,
-- sincronización runtime por status/eventos.
+- sincronizaciï¿½n runtime por status/eventos.
 
-### Paso C: Patrón SE recomendado
-1. Crear módulo `ScriptExtender/Lua/<Feature>.lua`.
+### Paso C: Patrï¿½n SE recomendado
+1. Crear mï¿½dulo `ScriptExtender/Lua/<Feature>.lua`.
 2. Registrar en `BootstrapServer.lua` con `Ext.Require(...)`.
-3. Escuchar eventos mínimos necesarios (`StatusApplied/Removed`, equip change, etc.).
-4. Aplicar pasivos técnicos acotados y limpiarlos al salir del estado.
-5. Evitar fallback silencioso durante debug (para detectar errores rápido).
+3. Escuchar eventos mï¿½nimos necesarios (`StatusApplied/Removed`, equip change, etc.).
+4. Aplicar pasivos tï¿½cnicos acotados y limpiarlos al salir del estado.
+5. Evitar fallback silencioso durante debug (para detectar errores rï¿½pido).
 
-### Paso D: Validación mínima en juego
+### Paso D: Validaciï¿½n mï¿½nima en juego
 1. Skill/stance visible y casteable.
 2. Coste de recurso correcto.
-3. Aplicación/remoción de status esperada.
-4. Combat log confirma daño/rolls esperados por hit.
+3. Aplicaciï¿½n/remociï¿½n de status esperada.
+4. Combat log confirma daï¿½o/rolls esperados por hit.
 5. Prueba borde de distancia (dentro y fuera del rango extendido).
 6. Prueba con al menos 2 armas de distinto rango (ej. hand crossbow y longbow).
 
 ### Paso E: Si algo falla
-Orden de diagnóstico:
+Orden de diagnï¿½stico:
 1. Ver si falla visibilidad/desbloqueo (Progression/Passive).
-2. Ver si falla ejecución (SpellSuccess/RequirementConditions).
+2. Ver si falla ejecuciï¿½n (SpellSuccess/RequirementConditions).
 3. Ver si falla herencia de bonos (context.Source vs target, OnDamage functors).
 4. Ver si falla por timing (resolver con listener SE + delay corto).
 5. Documentar hallazgo y dejar nota en este archivo.
 
 ## 16) Arrow Crafting + Double Strafe (estado final estable)
 ### Resumen
-- Arrow Crafting quedó migrado a Script Extender para controlar proc por impacto real.
-- Se eliminó la dependencia de passives OnDamage para aplicar daño elemental de Arrow Craft.
-- Consumo de cargas y daño elemental ahora se resuelven en flujo único de SE.
+- Arrow Crafting quedï¿½ migrado a Script Extender para controlar proc por impacto real.
+- Se eliminï¿½ la dependencia de passives OnDamage para aplicar daï¿½o elemental de Arrow Craft.
+- Consumo de cargas y daï¿½o elemental ahora se resuelven en flujo ï¿½nico de SE.
 
-### Problemas observados y causa raíz
+### Problemas observados y causa raï¿½z
 1. Doble proc con `Vulture's Eye` en segundo hit de `Double Strafe`.
-- Causa: múltiples eventos/functors sobre followup disparaban más de una aplicación elemental.
+- Causa: mï¿½ltiples eventos/functors sobre followup disparaban mï¿½s de una aplicaciï¿½n elemental.
 
-2. Cargas consumidas sin daño elemental visible.
-- Causa: el enfoque con `UseSpell` técnico desde SE no estaba aplicando daño de forma confiable en este contexto.
+2. Cargas consumidas sin daï¿½o elemental visible.
+- Causa: el enfoque con `UseSpell` tï¿½cnico desde SE no estaba aplicando daï¿½o de forma confiable en este contexto.
 
-### Solución final aplicada
+### Soluciï¿½n final aplicada
 - En `RO_ArrowCraft.lua`:
-  - `UsingSpellOnTarget` registra intentos válidos de ataque con `StoryActionID`.
-  - `AttackedBy` confirma hit real (`damageAmount > 0`) y ejecuta proc UNA sola vez por acción.
-  - El proc aplica `Status` técnico al objetivo (`RO_ARCHER_ARROWCRAFT_PROC_*`) con `OnApplyFunctors`.
+  - `UsingSpellOnTarget` registra intentos vï¿½lidos de ataque con `StoryActionID`.
+  - `AttackedBy` confirma hit real (`damageAmount > 0`) y ejecuta proc UNA sola vez por acciï¿½n.
+  - El proc aplica `Status` tï¿½cnico al objetivo (`RO_ARCHER_ARROWCRAFT_PROC_*`) con `OnApplyFunctors`.
   - Luego consume exactamente 1 carga (`3->2`, `2->1`, `1->0`) y limpia estado de crafting al agotar.
 
 - En `Status_RO_Archer.txt`:
-  - Se agregaron statuses técnicos `RO_ARCHER_ARROWCRAFT_PROC_*` (16 variantes: 4 elementos x 4 tiers).
-  - Cada status usa `OnApplyFunctors` con daño elemental inmediato.
-  - Tiers con efecto secundario usan DC dinámica:
+  - Se agregaron statuses tï¿½cnicos `RO_ARCHER_ARROWCRAFT_PROC_*` (16 variantes: 4 elementos x 4 tiers).
+  - Cada status usa `OnApplyFunctors` con daï¿½o elemental inmediato.
+  - Tiers con efecto secundario usan DC dinï¿½mica:
     - `CalculateSpellDC(Ability.Wisdom,context.Source)`
     - Equivale a `8 + Proficiency Bonus + Wisdom Modifier`.
 
@@ -260,22 +260,22 @@ Orden de diagnóstico:
 - `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Shout.txt`
 
 ### Nota de mantenimiento
-- Los spells técnicos `Target_RO_ArrowCraft_Proc_*` en `Spell_Target.txt` quedaron como intento intermedio y no son necesarios para la versión final estable basada en status on-hit.
+- Los spells tï¿½cnicos `Target_RO_ArrowCraft_Proc_*` en `Spell_Target.txt` quedaron como intento intermedio y no son necesarios para la versiï¿½n final estable basada en status on-hit.
 - Mantener `RO_ArrowCraft.lua` como fuente de verdad para proc/consumo.
 
-### Checklist de regresión (rápido)
+### Checklist de regresiï¿½n (rï¿½pido)
 1. Ataque normal con Fire/Poison/Shock/Radiant Arrow:
-- aplica daño elemental y consume 1 carga.
+- aplica daï¿½o elemental y consume 1 carga.
 2. `Double Strafe`:
-- aplica daño elemental en ambos hits (uno por hit) sin duplicar en followup.
+- aplica daï¿½o elemental en ambos hits (uno por hit) sin duplicar en followup.
 3. Con `Vulture's Eye` activo:
-- no duplica daño elemental adicional por hit.
+- no duplica daï¿½o elemental adicional por hit.
 4. Agotar cargas:
 - remueve `RO_ARCHER_ARROW_CHARGE_*` y limpia estado de arrow crafting.
 
 ## 17) Archer Skill: Improve Concentration (L4/L6/L9/L12)
 ### Resumen
-- Se implementó `Improve Concentration` como skill activa del Archer desde nivel 4.
+- Se implementï¿½ `Improve Concentration` como skill activa del Archer desde nivel 4.
 - Es `Bonus Action`, cuesta `3 MP`, requiere `Concentration`.
 - Escalado aplicado:
   - L4: +1 ranged attack rolls, +1 AC, 2 turnos.
@@ -283,7 +283,7 @@ Orden de diagnóstico:
   - L9: +2 ranged attack rolls, +2 AC, 3 turnos.
   - L12: +2 ranged attack rolls, +2 AC, 3 turnos.
 
-### Implementación técnica
+### Implementaciï¿½n tï¿½cnica
 1. `Status_RO_Archer.txt`
 - Nuevos statuses:
   - `RO_ARCHER_IMPROVE_CONCENTRATION_L4`
@@ -315,10 +315,10 @@ Orden de diagnóstico:
 - Archer L12: reemplaza por `RO_Archer_ImproveConcentration_L12`.
 
 5. `english.xml`
-- Se añadieron name/description entries para passives, shouts y statuses.
+- Se aï¿½adieron name/description entries para passives, shouts y statuses.
 
 ### Eficiencia L12 (MP)
-- Se aplicó reducción de coste en `Double Strafe` tier 12 de forma explícita:
+- Se aplicï¿½ reducciï¿½n de coste en `Double Strafe` tier 12 de forma explï¿½cita:
   - `Projectile_RO_DoubleStrafe_12` ahora usa `ActionPoint:1;RO_MP:1`.
 - Esto implementa el `-1 MP (minimum 1)` para la skill de ataque de batalla actual del Archer.
 
@@ -334,7 +334,7 @@ Orden de diagnóstico:
 ### Alcance
 Archer queda funcional end-to-end hasta nivel 12 con identidad Ragnarok:
 - Stances: `Owl's Eye`, `Vulture's Eye`
-- Núcleo ofensivo: `Double Strafe`
+- Nï¿½cleo ofensivo: `Double Strafe`
 - Utilidad: `Arrow Crafting` (4 elementos, 2 cargas), `Improve Concentration`
 - AoE/Control: `Arrow Shower`
 - Anti-melee spacing tool: `Arrow Repel`
@@ -347,23 +347,23 @@ Archer queda funcional end-to-end hasta nivel 12 con identidad Ragnarok:
 - DC de secundarios en tiers altos: `CalculateSpellDC(Ability.Wisdom,context.Source)` = `8 + proficiency + WIS mod`.
 
 2. `Arrow Shower`
-- Skill de acción con coste MP, sin cooldown de Short Rest.
+- Skill de acciï¿½n con coste MP, sin cooldown de Short Rest.
 - Debe depender de MP (como el resto del kit), no de recarga por descanso corto.
 
 3. `Arrow Repel`
-- Aplica daño de arma + bonus por tier.
-- Empuja objetivo según tier definido.
-- Interactúa con el kit Archer (stances/buffs); se añadió compatibilidad para consumo de Arrow Craft cuando corresponde.
+- Aplica daï¿½o de arma + bonus por tier.
+- Empuja objetivo segï¿½n tier definido.
+- Interactï¿½a con el kit Archer (stances/buffs); se aï¿½adiï¿½ compatibilidad para consumo de Arrow Craft cuando corresponde.
 
 4. `Owl's Eye` vs `Vulture's Eye` en melee
-- Regla de diseño: ataques a distancia en melee tienen desventaja salvo excepciones.
-- `Vulture's Eye` ignora point-blank disadvantage desde su adquisición.
-- `Owl's Eye` no ignora point-blank en tiers bajos; su bypass está planteado para tier alto del diseño.
+- Regla de diseï¿½o: ataques a distancia en melee tienen desventaja salvo excepciones.
+- `Vulture's Eye` ignora point-blank disadvantage desde su adquisiciï¿½n.
+- `Owl's Eye` no ignora point-blank en tiers bajos; su bypass estï¿½ planteado para tier alto del diseï¿½o.
 - `Arrow Repel` tiene ignore point-blank condicionado al propio spell (no es bypass global para todos los ataques).
 
 5. Recursos/descansos (target final)
 - `RO_MP` debe recargar en Long Rest.
-- `Owl's Eye` y `Vulture's Eye` deben figurar con duración/recovery alineada a Short Rest (según decisión de diseño cerrada en iteración).
+- `Owl's Eye` y `Vulture's Eye` deben figurar con duraciï¿½n/recovery alineada a Short Rest (segï¿½n decisiï¿½n de diseï¿½o cerrada en iteraciï¿½n).
 
 ### Archivos clave del cierre Archer
 - `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
@@ -376,7 +376,7 @@ Archer queda funcional end-to-end hasta nivel 12 con identidad Ragnarok:
 - `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/ScriptExtender/Lua/RO_DoubleStrafe.lua`
 - `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/ScriptExtender/Lua/BootstrapServer.lua`
 
-### Regresión mínima para revalidar en siguiente chat
+### Regresiï¿½n mï¿½nima para revalidar en siguiente chat
 1. Ataque normal, `Double Strafe`, `Arrow Shower`, `Arrow Repel` con y sin Arrow Craft activo.
 2. Verificar consumo de cargas por hit y limpieza al agotar.
 3. Verificar que `Vulture's Eye` ignora desventaja point-blank y que fuera de ese caso no hay bypass global accidental.
@@ -385,38 +385,38 @@ Archer queda funcional end-to-end hasta nivel 12 con identidad Ragnarok:
 
 ### Estado de proyecto
 - Archer: `COMPLETADO` para MVP.
-- Siguiente fase recomendada: iniciar siguiente job (Acolyte/Swordman o la clase priorizada) reutilizando patrón `Stats + SE solo donde sea dinámico`.
+- Siguiente fase recomendada: iniciar siguiente job (Acolyte/Swordman o la clase priorizada) reutilizando patrï¿½n `Stats + SE solo donde sea dinï¿½mico`.
 
-## 19) Playbook para nuevos chats (contexto rápido y consistente)
+## 19) Playbook para nuevos chats (contexto rï¿½pido y consistente)
 Objetivo: que cualquier chat nuevo pueda continuar sin perder tiempo ni romper consistencia.
 
 ### A) Orden recomendado de trabajo por skill
-1. Leer diseño fuente en `Class Design/<Class>.json`.
-2. Confirmar nivel, coste MP, tipo de acción, duración, escalado y sinergias.
+1. Leer diseï¿½o fuente en `Class Design/<Class>.json`.
+2. Confirmar nivel, coste MP, tipo de acciï¿½n, duraciï¿½n, escalado y sinergias.
 3. Definir si se resuelve 100% en Stats o requiere SE:
 - Stats: reglas declarativas estables (costes, boosts directos, unlocks, duration).
-- SE: lógica contextual/dinámica (multi-hit, ventanas por arma/rango, consumo por hit confirmado, sincronización de followups).
-4. Implementar primero versión mínima funcional.
+- SE: lï¿½gica contextual/dinï¿½mica (multi-hit, ventanas por arma/rango, consumo por hit confirmado, sincronizaciï¿½n de followups).
+4. Implementar primero versiï¿½n mï¿½nima funcional.
 5. Probar en juego.
 6. Ajustar edge cases.
-7. Documentar en este handoff lo que cambió y por qué.
+7. Documentar en este handoff lo que cambiï¿½ y por quï¿½.
 
-### B) Dónde mirar referencias antes de implementar
+### B) Dï¿½nde mirar referencias antes de implementar
 1. Referencia interna del proyecto:
 - `Reference/` (mods ejemplo y notas archivadas).
 2. Implementaciones ya estables de este mod:
 - `Double Strafe`, `Arrow Crafting`, `Improve Concentration`, `Arrow Shower`, `Arrow Repel`.
-3. Buscar patrones con `rg` antes de copiar lógica.
+3. Buscar patrones con `rg` antes de copiar lï¿½gica.
 
-Consultas útiles:
+Consultas ï¿½tiles:
 ```powershell
 rg -n "RO_Archer|ArrowCraft|DoubleStrafe|ArrowShower|ArrowRepel" RagnarokOnlineMod/Public
 rg -n "Ext.Osiris|Ext.Events|StatusApplied|AttackedBy|UsingSpellOnTarget" RagnarokOnlineMod/Mods/*/ScriptExtender/Lua
 ```
 
-### C) Método estándar para crear una skill nueva
+### C) Mï¿½todo estï¿½ndar para crear una skill nueva
 1. `Spell_*.txt`
-- Crear spell (o shout/zone/projectile según tipo).
+- Crear spell (o shout/zone/projectile segï¿½n tipo).
 - Definir `UseCosts` con `RO_MP`.
 - Definir `SpellProperties`/functors base.
 
@@ -437,13 +437,13 @@ rg -n "Ext.Osiris|Ext.Events|StatusApplied|AttackedBy|UsingSpellOnTarget" Ragnar
 - Evitar `Not Found` en tooltip.
 
 6. Iconos
-- Reusar iconos vanilla válidos o registrar custom assets correctamente.
+- Reusar iconos vanilla vï¿½lidos o registrar custom assets correctamente.
 - Si aparece `?`, revisar key de icono + metadata/ruta.
 
 7. SE (solo si hace falta)
-- Crear módulo en `ScriptExtender/Lua/`.
+- Crear mï¿½dulo en `ScriptExtender/Lua/`.
 - Registrar en `BootstrapServer.lua`.
-- Mantener una sola fuente de verdad para la lógica crítica.
+- Mantener una sola fuente de verdad para la lï¿½gica crï¿½tica.
 
 ### D) Criterio para decidir Stats vs SE
 Usar Stats si:
@@ -453,59 +453,59 @@ Usar Stats si:
 Usar SE si:
 - Hay multi-hit con followups.
 - Se debe consumir recurso por hit confirmado.
-- Hay condiciones por contexto runtime (arma equipada, rango real, acción ligada por `StoryActionID`, etc.).
+- Hay condiciones por contexto runtime (arma equipada, rango real, acciï¿½n ligada por `StoryActionID`, etc.).
 
-### E) Checklist de validación por skill (rápido)
-1. Tooltip correcto: nombre, descripción, coste, duración.
-2. Gating correcto: acción/bonus action + MP.
+### E) Checklist de validaciï¿½n por skill (rï¿½pido)
+1. Tooltip correcto: nombre, descripciï¿½n, coste, duraciï¿½n.
+2. Gating correcto: acciï¿½n/bonus action + MP.
 3. Sin cooldown oculto no deseado (si la skill no lo define).
-4. Daño/efecto aparece en combat log.
+4. Daï¿½o/efecto aparece en combat log.
 5. Escalado por nivel correcto.
-6. Interacción con stances/buffs del Archer correcta.
-7. No duplica procs ni consume de más.
-8. Al reempaquetar, la versión cargada en juego refleja cambios.
+6. Interacciï¿½n con stances/buffs del Archer correcta.
+7. No duplica procs ni consume de mï¿½s.
+8. Al reempaquetar, la versiï¿½n cargada en juego refleja cambios.
 
 ### F) Si en juego no se refleja un cambio
 1. Reempaquetar PAK.
 2. Confirmar mod activo en BG3MM.
-3. Verificar que el archivo editado está dentro del PAK.
+3. Verificar que el archivo editado estï¿½ dentro del PAK.
 4. Revisar colisiones con mods de referencia/otros mods.
-5. Confirmar que la localización coincide con nuevas keys.
+5. Confirmar que la localizaciï¿½n coincide con nuevas keys.
 
-### G) Qué actualizar siempre en el handoff al cerrar una tarea
-1. Qué problema había (síntoma).
-2. Causa raíz encontrada.
-3. Solución final aplicada.
+### G) Quï¿½ actualizar siempre en el handoff al cerrar una tarea
+1. Quï¿½ problema habï¿½a (sï¿½ntoma).
+2. Causa raï¿½z encontrada.
+3. Soluciï¿½n final aplicada.
 4. Archivos tocados.
 5. Riesgos/edge-cases pendientes.
-6. Checklist de regresión mínima.
+6. Checklist de regresiï¿½n mï¿½nima.
 
 ### H) Plantilla corta para iniciar un chat nuevo
 Pegar esto al inicio del nuevo chat:
 1. "Lee `GUIDE_HANDOFF.md` completo primero." 
 2. "Trabajaremos en `<skill/feature>` de `<Class Design/*.json>` sin romper lo ya estable." 
 3. "Antes de editar, lista archivos objetivo y estrategia (Stats vs SE)." 
-4. "Después de cambios, actualiza `GUIDE_HANDOFF.md` con causa raíz + solución + archivos tocados + tests." 
+4. "Despuï¿½s de cambios, actualiza `GUIDE_HANDOFF.md` con causa raï¿½z + soluciï¿½n + archivos tocados + tests." 
 
 ## 20) Magician Skill: Frost Diver (L3/L9/L12)
 ### Resumen
-- Se implementó `Frost Diver` para Magician como skill de control single-target con save de Constitución.
+- Se implementï¿½ `Frost Diver` para Magician como skill de control single-target con save de Constituciï¿½n.
 - Coste: `4 MP`, tipo `Action`, rango `18m`.
-- Fórmula de DC en runtime: `SourceSpellDC()` (equivale a `8 + proficiency + spellcasting ability modifier`).
+- Fï¿½rmula de DC en runtime: `SourceSpellDC()` (equivale a `8 + proficiency + spellcasting ability modifier`).
 
 ### Escalado aplicado
 - L3: `2d6 + SpellCastingAbilityModifier` (Cold), y en save fallido aplica `FROZEN` por 1 turno.
 - L9: `3d6 + SpellCastingAbilityModifier` (Cold), y en save fallido aplica `FROZEN` por 2 turnos.
 - L12: `4d6 + SpellCastingAbilityModifier` (Cold), y en save fallido aplica `FROZEN` por 2 turnos.
 
-### Implementación técnica
+### Implementaciï¿½n tï¿½cnica
 1. `Spell_Target.txt`
 - Nuevos spells:
   - `Target_RO_Magician_FrostDiver`
   - `Target_RO_Magician_FrostDiver_9`
   - `Target_RO_Magician_FrostDiver_12`
 - `SpellRoll`: `not SavingThrow(Ability.Constitution, SourceSpellDC())`.
-- `SpellSuccess`/`SpellFail` configurados para mantener daño en ambos casos y status solo en save fallido.
+- `SpellSuccess`/`SpellFail` configurados para mantener daï¿½o en ambos casos y status solo en save fallido.
 
 2. `Passive.txt`
 - Nuevos passives de unlock por tier:
@@ -519,7 +519,7 @@ Pegar esto al inicio del nuevo chat:
 - Magician L12: agrega `RO_Magician_FrostDiver_L12` y remueve `RO_Magician_FrostDiver_L9`.
 
 4. `english.xml`
-- Se añadieron entries de localización para:
+- Se aï¿½adieron entries de localizaciï¿½n para:
   - nombre y descripciones de passive por tier,
   - nombre del spell y descripciones por tier.
 
@@ -531,17 +531,17 @@ Pegar esto al inicio del nuevo chat:
 
 ## 21) Magician Skill: Element AoE (L5/L9/L12) - MVP Stats
 ### Resumen
-- Se implementó `Element AoE` para Magician con estructura modular `Base / Intensified / Overload` y variantes `Fire` + `Lightning`.
+- Se implementï¿½ `Element AoE` para Magician con estructura modular `Base / Intensified / Overload` y variantes `Fire` + `Lightning`.
 - Costes activos:
   - Base: `4 MP`
   - Intensified: `5 MP`
   - Overload: `6 MP`
-- Gating por progresión:
+- Gating por progresiï¿½n:
   - L5: desbloquea tier base de la skill.
-  - L9: reemplaza por versión mejorada de daño.
-  - L12: reemplaza por versión final con mayor radio y daño.
+  - L9: reemplaza por versiï¿½n mejorada de daï¿½o.
+  - L12: reemplaza por versiï¿½n final con mayor radio y daï¿½o.
 
-### Implementación técnica
+### Implementaciï¿½n tï¿½cnica
 1. Nuevo archivo de spells:
 - `Stats/Generated/Data/Spell_Zone_RO_Magician.txt`
 - Contenedores por tier y milestone:
@@ -574,14 +574,14 @@ Pegar esto al inicio del nuevo chat:
 
 ### Riders por overchannel (MVP)
 - Fire Intensified: CON save o `BURNING` 1 turno.
-- Fire Overload: añade daño extra `1d4 Fire`.
+- Fire Overload: aï¿½ade daï¿½o extra `1d4 Fire`.
 - Lightning Intensified: CON save o `SHOCKED` 1 turno.
-- Lightning Overload: daño extra `1d4 Lightning` si el objetivo está `SHOCKED`.
+- Lightning Overload: daï¿½o extra `1d4 Lightning` si el objetivo estï¿½ `SHOCKED`.
 
 ### Nota de alcance (importante)
 - Esta entrega es `MVP en Stats` (sin Script Extender).
-- La parte de "storm zone" persistente por turnos de Lightning en diseño original quedó simplificada a explosión AoE instantánea.
-- Si se quiere comportamiento persistente robusto por turnos (strikes por turno, trigger al entrar/salir), conviene migrar esa parte a SE en iteración posterior.
+- La parte de "storm zone" persistente por turnos de Lightning en diseï¿½o original quedï¿½ simplificada a explosiï¿½n AoE instantï¿½nea.
+- Si se quiere comportamiento persistente robusto por turnos (strikes por turno, trigger al entrar/salir), conviene migrar esa parte a SE en iteraciï¿½n posterior.
 
 ### Archivos tocados
 - `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Zone_RO_Magician.txt` (nuevo)
@@ -590,21 +590,21 @@ Pegar esto al inicio del nuevo chat:
 
 ## 22) Magician Element AoE - Hotfix UI/Shape
 ### Problema
-- En juego aparecía `Not Found` para nombre/descripción de variantes de Element AoE.
-- El área se mostraba no circular.
+- En juego aparecï¿½a `Not Found` para nombre/descripciï¿½n de variantes de Element AoE.
+- El ï¿½rea se mostraba no circular.
 
-### Causa raíz
-- `DisplayName`/`Description` se habían dejado como texto directo en stats (sin `contentuid` de localización), lo que en esta ruta terminó resolviendo a `Not Found`.
+### Causa raï¿½z
+- `DisplayName`/`Description` se habï¿½an dejado como texto directo en stats (sin `contentuid` de localizaciï¿½n), lo que en esta ruta terminï¿½ resolviendo a `Not Found`.
 - Las variantes base estaban con `Shape = Square`.
 
 ### Fix aplicado
 - `Spell_Zone_RO_Magician.txt`:
   - Se cambiaron `DisplayName`/`Description` de contenedores y variantes L5 a contentuids nuevos.
-  - Se cambió `Shape` de las variantes base Fire/Lightning a `Circle`.
+  - Se cambiï¿½ `Shape` de las variantes base Fire/Lightning a `Circle`.
 - `Passive.txt`:
   - `RO_Magician_ElementAoE_L5/L9/L12` ahora usan contentuids para `DisplayName`/`Description`.
 - `Localization/English/english.xml`:
-  - Se añadieron entradas para los contentuids nuevos de Element AoE.
+  - Se aï¿½adieron entradas para los contentuids nuevos de Element AoE.
 
 ### Archivos tocados
 - `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Zone_RO_Magician.txt`
@@ -657,3 +657,428 @@ Pegar esto al inicio del nuevo chat:
 3. Probar `Fire Wall` en L6/L9/L12:
 - dano por cruce/fin de turno segun tier,
 - duracion y longitud correctas.
+
+## 24) Ninja skeleton inicial (sin skills) - listo para carga
+### Sintoma
+- La subclase `Ninja` estaba definida en `Class Design/ninja.json`, pero no existia en runtime (`ClassDescriptions`, `Progressions`, `Localization`), por lo que no podia seleccionarse/cargar en juego.
+
+### Causa raiz
+- Faltaba el wiring minimo para registrar la subclase:
+  - `ClassDescription` con UUID/tabla propia,
+  - inclusion en selector de subclases de Novice nivel 2,
+  - progresion base con proficiencias y marcador MP,
+  - localizacion de nombre/descripcion.
+
+### Solucion final
+- Se agrego `RO_Ninja` como subclase hija de `RO_Novice` con perfil MVP sin skills:
+  - HP base/per level: `8 / 6`
+  - Primary ability: `Dexterity`
+  - Spellcasting ability: `Wisdom`
+  - Class equipment/sound profile: `Rogue`
+- Se conecto al selector de subclase de Novice (nivel 2).
+- Se creo tabla de progresion `RO_Ninja` (niveles 2-12):
+  - Nivel 2: saving throws `DEX/WIS`, proficiencias de armadura/armas y skills (`Stealth`, `Arcana`), expertise selector (1), `RO_MP_Formula_WIS`.
+  - Niveles 3-12: nodos vacios (skeleton estable sin skills).
+- Se agrego localizacion de clase (`Ninja` + descripcion base).
+
+### Archivos tocados
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/ClassDescriptions/ClassDescriptions.lsx`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Progressions/Progressions.lsx`
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml`
+
+### Riesgos
+- No se agregaron skills ni iconos de Ninja en esta iteracion; la clase debe cargar, pero visualmente puede requerir icono especifico despues.
+- `SelectSkillsExpertise(...)` usa el mismo patron de subclases existentes; validar en juego que la seleccion de expertise se presente como esperado para Ninja.
+
+### Regresion minima
+1. Crear personaje Novice y subir a nivel 2.
+2. Verificar que `Ninja` aparezca como opcion de subclase y sea seleccionable.
+3. Confirmar que no hay `Not Found` en nombre/descripcion de subclase.
+4. Validar que se apliquen:
+- saving throws `DEX/WIS`,
+- proficiencias (`Light Armor`, `Daggers`, `Shortswords`, `Scimitars`, `Sickles`, `Handaxes`),
+- skill proficiencies (`Stealth`, `Arcana`) + 1 expertise,
+- formula MP por `RO_MP_Formula_WIS`.
+## 25) Ninja no aparecia + Ninja Discipline (MVP INT, sin SE)
+### Sintoma
+- `Ninja` no aparecia en el selector de subclase al subir `Novice` a nivel 2.
+- Al iniciar el trabajo de la primera skill (`Ninja Discipline`), faltaba wiring runtime completo (statuses + localizacion), y habia riesgo de `Not Found`.
+
+### Causa raiz
+1. `ClassDescriptions.lsx` quedo corrupto en el bloque de `RO_Ninja` (linea rota `\$14" />`), por lo que la definicion de subclase no podia cargarse correctamente.
+2. La subclase estaba originalmente modelada con `Wisdom`, pero el objetivo de diseno para Ninpou en esta iteracion paso a `Intelligence`.
+3. `Ninja Discipline` tenia passive + shouts, pero no existia archivo de statuses de Ninja (`Status_RO_Ninja.txt`) ni todas las entradas de localizacion.
+
+### Solucion final
+- Se reparo el bloque completo de `RO_Ninja` en `ClassDescriptions.lsx` y se dejo:
+  - `Name = RO_Ninja`
+  - `ParentGuid = RO_Novice`
+  - `ProgressionTableUUID = fedc62af-817a-47b8-abf2-0a8de2694f70`
+  - `SpellCastingAbility = 4 (Intelligence)`
+- Se mantuvo progression de Ninja en nivel 2 con:
+  - `RO_MP_Formula_INT`
+  - `RO_Ninja_Discipline`
+  - saving throws `DEX/INT`.
+- Se implemento MVP funcional de `Ninja Discipline` (sin SE):
+  - passive unlock ya presente (`RO_Ninja_Discipline`),
+  - shouts ON/OFF por cada rama,
+  - nuevo `Status_RO_Ninja.txt` con 3 disciplinas y `StackId` comun `RO_NINJA_DISCIPLINE` + `StackType Overwrite`.
+- Se completo localizacion para:
+  - passive Ninja Discipline,
+  - shouts ON/OFF,
+  - statuses activos,
+  - descripcion base de subclase Ninja alineada a `Intelligence`.
+- Se alineo `Class Design/ninja.json` a `Intelligence`:
+  - spellcasting ability,
+  - formula de DC,
+  - nota de MP,
+  - saving throws,
+  - referencias de `wisdom_modifier` a `intelligence_modifier` en skills ninpou.
+
+### Archivos tocados
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/ClassDescriptions/ClassDescriptions.lsx`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Progressions/Progressions.lsx`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Shout.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Status_RO_Ninja.txt` (nuevo)
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml`
+- `Class Design/ninja.json`
+
+### Riesgos
+- `Ninja Discipline` queda en MVP declarativo (Stats): no implementa aun la regla exacta de "first stance change each turn is free"; para esa precision puede requerir SE.
+- Las bonificaciones por rama estan en tier base (L2): escalados L5/L9 y efectos avanzados siguen pendientes.
+- Si el PAK instalado esta bloqueado por proceso (BG3/BG3MM), los cambios no se reflejaran hasta cerrar el bloqueo y copiar el PAK nuevo.
+
+### Regresion minima
+1. Subir `Novice` a nivel 2 y confirmar que `Ninja` aparece y es seleccionable.
+2. Confirmar que no hay `Not Found` en nombre/descripcion de Ninja ni en Ninja Discipline.
+3. Activar cada disciplina (`Throwing/Shadow/Ninpou`) y validar que:
+- solo una quede activa a la vez (overwrite por `StackId`),
+- la version OFF retire la disciplina correcta.
+4. Verificar en ficha que Ninja usa `INT` para caster context (DC/Spell Attack esperado de Ninpou en siguientes skills).
+
+## 26) Ninja Skill: Thrown Technique (L2/L5/L9) - MVP Stats
+### Sintoma
+- Ninja ya cargaba y tenia `Ninja Discipline`, pero faltaba su ataque base de rama Throwing (`Thrown Technique`) para continuar el kit nivel 2.
+
+### Causa raiz
+- No existian spells/passives/runtime wiring para la skill en `Stats/Progressions/Localization`.
+
+### Solucion final
+- Se implemento `Thrown Technique` con contenedor y 3 variantes en `Spell_Projectile_RO_Ninja.txt`:
+  - `Throw Shuriken` (18m, 1 MP)
+  - `Throw Kunai` (18m, 1 MP, aplica `Exposed Armor`)
+  - `Throw Huuma Shuriken` (2m impacto, 2 MP)
+- Se agrego escalado por milestone:
+  - L2: `1d6 / 1d8 / 2d6`
+  - L5: `1d8 / 1d10 / 3d6`
+  - L9: `2d8 / 2d10(+Bleeding) / 4d6`
+- Se agrego passive de unlock por tiers:
+  - `RO_Ninja_ThrownTechnique_L2`
+  - `RO_Ninja_ThrownTechnique_L5`
+  - `RO_Ninja_ThrownTechnique_L9`
+- Se conecto en progression Ninja:
+  - L2 agrega `RO_Ninja_ThrownTechnique_L2`
+  - L5 reemplaza por `RO_Ninja_ThrownTechnique_L5`
+  - L9 reemplaza por `RO_Ninja_ThrownTechnique_L9`
+- Se agrego status tecnico `RO_NINJA_KUNAI_EXPOSED` (`AC(-1)`) y localizacion completa de skill/tiers/status.
+
+### Archivos tocados
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Projectile_RO_Ninja.txt` (nuevo)
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Status_RO_Ninja.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Progressions/Progressions.lsx`
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml`
+
+### Riesgos
+- `Throw Kunai` se implementa en MVP como `-1 AC` general por 2 turnos, no estrictamente "solo contra tu siguiente ataque".
+- `Throw Huuma Shuriken` en MVP usa AoE de impacto uniforme (no separa dano centro/secundario con precision total).
+- Para comportamiento exacto de esas dos reglas, puede requerirse SE en iteracion posterior.
+
+### Regresion minima
+1. Nivel 2 Ninja: verificar que aparece `Thrown Technique` en hotbar.
+2. Verificar contenedor con 3 variantes (`Shuriken/Kunai/Huuma`) y costes MP `1/1/2`.
+3. Verificar escalado en nivel 5 y 9 (passive swap y tooltip/dano).
+4. Verificar que Kunai aplique `Exposed Armor` y en L9 ademas `Bleeding`.
+5. Verificar que Huuma golpee en area pequena (2m) sin `Not Found` en nombre/descripcion/icono.
+
+## 27) Hotfix Thrown Technique no visible en hotbar
+### Sintoma
+- `Thrown Technique` aparecia como passive en ficha, pero el contenedor/skills (`Shuriken/Kunai/Huuma`) no aparecian en hotbar.
+
+### Causa raiz
+- Los proyectiles de Thrown Technique estaban configurados con `AttackType.RangedWeaponAttack`.
+- En runtime, sin contexto de arma/rango compatible, el juego puede ocultar esas skills en barra.
+
+### Solucion final
+- En `Spell_Projectile_RO_Ninja.txt` se cambio `SpellRoll` de Thrown Technique a `AttackType.RangedSpellAttack` (L2 base, heredado por L5/L9).
+- Se ajusto tooltip de ataque a `RangedSpellAttack`.
+- Se reempaqueto el mod.
+
+### Archivos tocados
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Projectile_RO_Ninja.txt`
+- `Package/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903.pak`
+
+### Riesgos
+- `Throwing Mastery` actualmente bonifica `RangedWeaponAttack`; al usar `RangedSpellAttack`, ese +1 de stance no aplica todavia a Thrown Technique. Se puede resolver en siguiente iteracion con bonus condicionado por `SpellId` o ajuste de boosts.
+
+### Regresion minima
+1. Ninja L2: verificar que `Thrown Technique` aparece en hotbar/spellbook.
+2. Abrir contenedor y confirmar `Throw Shuriken`, `Throw Kunai`, `Throw Huuma Shuriken`.
+3. Verificar costes MP `1/1/2` y cast sobre enemigo visible a 18m.
+
+## 28) Hotfix Throwing Mastery no aplicaba a Thrown Technique
+### Sintoma
+- Tras el hotfix de visibilidad, `Thrown Technique` aparecia en hotbar, pero el +1 de `Throwing Mastery` no se aplicaba en las tiradas.
+
+### Causa raiz
+- `Throwing Mastery` seguia usando `RollBonus(RangedWeaponAttack,...)`.
+- `Thrown Technique` se movio a `RangedSpellAttack` para evitar ocultamiento en barra.
+
+### Solucion final
+- Se cambio el boost de `RO_NINJA_DISCIPLINE_THROWING` a condicion por `SpellId` de todas las variantes de `Thrown Technique` (L2/L5/L9) y se aplica `RollBonus(Attack,1)` solo en esas skills.
+
+### Archivo tocado
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Status_RO_Ninja.txt`
+
+### Regresion minima
+1. Activar `Throwing Mastery`.
+2. Usar `Throw Shuriken`, `Throw Kunai`, `Throw Huuma` en L2 y confirmar +1 al ataque.
+3. Subir a L5/L9 y confirmar que el +1 sigue aplicando en las variantes tier altas.
+4. Confirmar que ataques no relacionados no reciben ese +1.
+
+## 29) Hotfix critico: Throwing Mastery + Thrown Technique no cargaban bien
+### Sintoma
+- `Throwing Mastery` casteaba pero no aplicaba estado visible/bonificador y no habilitaba salida.
+- `Thrown Technique` no aparecia en hotbar pese a tener passive otorgado.
+
+### Causa raiz
+- El boost condicional con `IF(SpellId(...))` en status resulto inestable para este caso y rompia aplicacion efectiva del status.
+- `Spell_Projectile_RO_Ninja.txt` usaba `DexterityModifier` en formulas de dano; ese token no se usa en otros spells del repo y podia cortar parse/carga del archivo completo.
+
+### Solucion final
+- `RO_NINJA_DISCIPLINE_THROWING`: boost simplificado a `SpellAttackRollBonus(1)` (estable).
+- `Thrown Technique`: se removio `+DexterityModifier` de formulas para asegurar carga del archivo y visibilidad de skills.
+- Se actualizo localizacion para reflejar dano actual sin modificador.
+
+### Archivos tocados
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Status_RO_Ninja.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Projectile_RO_Ninja.txt`
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml`
+
+### Riesgo pendiente
+- Este fix prioriza estabilidad/visibilidad. El scaling con DEX queda pendiente para reintroducir con expresion validada (o via SE) en siguiente iteracion.
+
+### Regresion minima
+1. Activar `Throwing Mastery` y validar que aparece estado + opcion OFF.
+2. Confirmar que aparece `Thrown Technique` en hotbar.
+3. Abrir contenedor y validar `Shuriken/Kunai/Huuma` visibles y casteables.
+4. Verificar costes MP `1/1/2` y efectos de Kunai (`Exposed Armor`, y Bleeding en L9).
+
+## 30) Hotfix fallback estable: Thrown Technique directo + Throwing Mastery estable
+### Sintoma
+- Persistian dos fallos: `Throwing Mastery` no aplicaba correctamente y `Thrown Technique` no aparecia en barra.
+
+### Causa raiz (hipotesis validada por comportamiento)
+- Configuracion con contenedor + formulas previas estaba provocando que las skills no quedaran visibles/cargadas de forma consistente en runtime.
+- `Throwing Mastery` con condicion avanzada no era estable en este estado.
+
+### Solucion final aplicada (prioridad: funcionalidad inmediata)
+- `Thrown Technique` se dejo como 3 skills directas por tier (sin dependencia de contenedor):
+  - `Throw Shuriken`
+  - `Throw Kunai`
+  - `Throw Huuma Shuriken`
+- Passive unlock por tier ahora desbloquea directamente las 3 skills correspondientes.
+- `Throwing Mastery` se simplifico a boost estable:
+  - `RollBonus(RangedWeaponAttack,1);SpellAttackRollBonus(1)`
+- Se preservo `Shadow Arts` y `Ninpou` sin cambios funcionales.
+
+### Archivos tocados
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Projectile_RO_Ninja.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Status_RO_Ninja.txt`
+- `Package/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903.pak`
+
+### Riesgos
+- Este fix prioriza disponibilidad y test in-game rapido sobre pureza de diseno del contenedor.
+- Si se quiere volver al UX de contenedor unico, debe reintroducirse despues de validar sintaxis/carga de forma incremental.
+
+### Regresion minima
+1. En Ninja L2 deben aparecer en hotbar/spellbook: `Throw Shuriken`, `Throw Kunai`, `Throw Huuma Shuriken`.
+2. Activar `Throwing Mastery` y confirmar estado activo + opcion OFF.
+3. Verificar que `Shadow Arts` y `Ninpou` siguen funcionando como antes.
+4. Probar cast real de las 3 tecnicas y consumo MP esperado (1/1/2).
+
+## 31) Ninja Throwing Mastery + Thrown Technique (hotfix estable MVP)
+### Sï¿½ntoma reportado
+- `Throwing Mastery` se casteaba pero no dejaba condiciï¿½n/bono activo y no habilitaba salida OFF.
+- `Thrown Technique` mostraba comportamiento inestable: faltaba `Throw Shuriken` y las acciones de throw no eran consistentes al usarse.
+- `Throw Kunai` mostraba tooltip confuso por duraciï¿½n (`2 turns`) y en pruebas no quedaba claro el coste MP.
+
+### Causa raï¿½z
+1. La boost de `RO_NINJA_DISCIPLINE_THROWING` incluï¿½a una expresiï¿½n no estable para este contexto, provocando que el estado no se consolidara correctamente.
+2. La implementaciï¿½n de throws dependï¿½a de una estructura con herencias parciales que introdujo comportamiento inconsistente en desbloqueo/ejecuciï¿½n.
+3. Parte del feedback visual (tooltip de estado) mezclaba informaciï¿½n ï¿½til con ruido para la UX de test.
+
+### Soluciï¿½n final aplicada
+- Se dejï¿½ `Throwing Mastery` con status simple y vï¿½lido (`SpellAttackRollBonus(1)`) y se moviï¿½ el `+1 Attack Roll` de throws a un passive oculto condicional por estado activo + `SpellId` de throws ninja:
+  - nuevo passive: `RO_Ninja_ThrowingMastery_Bonus`.
+- Se reescribiï¿½ `Thrown Technique` como 3 skills directas y explï¿½citas (sin contenedor):
+  - `Projectile_RO_Ninja_ThrowShuriken_*`
+  - `Projectile_RO_Ninja_ThrowKunai_*`
+  - `Projectile_RO_Ninja_ThrowHuuma_*`
+- Se normalizaron costes/rangos:
+  - Shuriken: 18m, 1 MP.
+  - Kunai: 10m, 1 MP.
+  - Huuma: 10m, 2 MP, radio 2m.
+- Se agregï¿½ `DexterityModifier` al daï¿½o base/escalados para alinear con diseï¿½o.
+- Se reforzï¿½ `Shout_RO_NinjaDiscipline_Throwing` con `TargetConditions "Self()"` y tooltip de estado aplicado.
+
+### Archivos tocados
+- `Class Design/ninja.json`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Progressions/Progressions.lsx`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Projectile_RO_Ninja.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Shout.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Status_RO_Ninja.txt`
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml`
+
+### Riesgos abiertos
+- `Huuma` aï¿½n no aplica explï¿½citamente daï¿½o secundario diferenciado por objetivo en el mismo impacto (MVP actual: daï¿½o principal + configuraciï¿½n AoE de radio).
+- El uso de `DexterityModifier` en `DealDamage(...)` depende del parser/runtime del juego; si BG3 ignora esa parte, puede requerir ajuste con fï¿½rmula alternativa.
+
+### Regresiï¿½n mï¿½nima a validar
+1. Subir a Novice 2 -> Ninja y confirmar que aparecen 3 acciones: Shuriken/Kunai/Huuma.
+2. Verificar costes: 1/1/2 MP respectivamente.
+3. Activar Throwing Mastery y confirmar:
+   - aparece estado activo,
+   - aparece opciï¿½n OFF,
+   - los throws ganan +1 al ataque (combat log).
+4. Cambiar a Shadow/Ninpou y confirmar que Throwing bonus deja de aplicar.
+
+## 32) Ninja Throws: desventaja por "outside normal range" (hotfix)
+### Sï¿½ntoma
+- `Throw Shuriken`, `Throw Kunai` y `Throw Huuma Shuriken` mostraban `Disadvantage` con motivo `Target outside normal range` incluso en situaciones donde la intenciï¿½n era un rango fijo de skill.
+
+### Causa raï¿½z
+- Los throws estaban configurados con `HasHighGroundRangeExtension`, lo que habilita disparo fuera del rango normal con desventaja.
+- Ademï¿½s, al usar `RangedWeaponAttack`, el cï¿½lculo puede depender del contexto de arma equipada y generar comportamiento confuso para tï¿½cnicas custom.
+
+### Soluciï¿½n final
+- En `Spell_Projectile_RO_Ninja.txt`:
+  - `SpellRoll` de throws ninja migrado a `Attack(AttackType.RangedSpellAttack)`.
+  - `TooltipAttackSave` actualizado a `RangedSpellAttack`.
+  - `SpellFlags` simplificado a `HasSomaticComponent;IsSpell;IsHarmful` (sin `HasHighGroundRangeExtension`).
+- Resultado esperado: los throws respetan su rango base (18/10/10) sin extenderse con desventaja por fuera de rango normal.
+
+### Archivos tocados
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Projectile_RO_Ninja.txt`
+
+### Riesgos
+- `RangedSpellAttack` usa pipeline de spell attack; validar que la sensaciï¿½n de precisiï¿½n se mantenga segï¿½n el balance esperado de Ninja.
+
+### Regresiï¿½n mï¿½nima
+1. Con Ninja L2, verificar que Shuriken/Kunai/Huuma ya no muestren `Target outside normal range` + desventaja al apuntar dentro de su rango.
+2. Verificar que fuera de rango simplemente no permita seleccionar/castear el objetivo.
+3. Confirmar que consumo MP (1/1/2) y daï¿½o siguen correctos.
+
+## 33) Balance pass solicitado (Shuriken/Kunai/Huuma)
+### Sï¿½ntoma
+- `Shuriken` quedaba opacado por `Kunai` (mismo coste, menos daï¿½o y sin utilidad extra).
+- `Kunai` aplicaba `-1 AC` por demasiado tiempo para su coste.
+- `Huuma` se sentï¿½a correcto en coste, pero con radio bajo para rol AoE.
+
+### Causa raï¿½z
+- Balance inicial demasiado lineal: `Kunai` era estrictamente mejor que `Shuriken` en casi todo.
+
+### Soluciï¿½n final aplicada
+- `Shuriken`: se aï¿½adiï¿½ identidad de precisiï¿½n con `+2 Attack Roll` (pasivo oculto condicional por `SpellId` de shuriken).
+- `Kunai`: `RO_NINJA_KUNAI_EXPOSED` ahora dura `1` turno (antes `2`).
+- `Huuma`:
+  - L2: radio aumentado a `3m`.
+  - L5 y L9: radio aumentado a `4m`.
+  - Coste se mantiene en `2 MP`.
+
+### Archivos tocados
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Progressions/Progressions.lsx`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Projectile_RO_Ninja.txt`
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml`
+- `Class Design/ninja.json`
+
+### Riesgos
+- El `+2 Attack Roll` de Shuriken puede dejarlo muy consistente en objetivos de AC media; validar en combate real.
+
+### Regresiï¿½n mï¿½nima
+1. Confirmar Shuriken con mejor tasa de impacto respecto a Kunai en mismo objetivo.
+2. Confirmar Kunai aplica `Exposed Armor` y expira en 1 turno.
+3. Confirmar Huuma L2 impacta en 3m y L5+ en 4m.
+4. Confirmar costes MP: Shuriken 1, Kunai 1, Huuma 2.
+
+## 34) Ninja Shadow Jump (L2/L5/L9) - MVP funcional
+### Sï¿½ntoma / objetivo
+- Se solicitï¿½ implementar `Shadow Jump` como siguiente skill de Ninja:
+  - L2: teleport 9m, Bonus Action, 2 MP.
+  - L5: teleport 12m + bono al siguiente ataque/tï¿½cnica.
+  - L9: teleport 15m + bono al siguiente ataque/tï¿½cnica + daï¿½o extra.
+
+### Causa raï¿½z previa
+- La subclase Ninja aï¿½n no tenï¿½a `Shadow Jump` conectado en runtime (spell + passive + progression + loc).
+
+### Soluciï¿½n final aplicada
+- Se implementaron 3 spells target basados en `Target_MistyStep`:
+  - `Target_RO_Ninja_ShadowJump_2` (9m)
+  - `Target_RO_Ninja_ShadowJump_5` (12m + status L5)
+  - `Target_RO_Ninja_ShadowJump_9` (15m + status L9)
+- Se aï¿½adieron statuses:
+  - `RO_NINJA_SHADOW_JUMP_BUFF_L5` -> `+1 Attack Roll`
+  - `RO_NINJA_SHADOW_JUMP_BUFF_L9` -> `+1 Attack Roll`
+- Se aï¿½adiï¿½ passive tï¿½cnico L9 de daï¿½o:
+  - `RO_Ninja_ShadowJump_L9_DamageBonus` (OnDamage, +1d6 Force mientras status L9 estï¿½ activo).
+- Se aï¿½adieron passives de unlock por milestone:
+  - `RO_Ninja_ShadowJump_L2`
+  - `RO_Ninja_ShadowJump_L5`
+  - `RO_Ninja_ShadowJump_L9`
+- Se conectï¿½ en `Progressions.lsx`:
+  - L2 agrega `RO_Ninja_ShadowJump_L2`.
+  - L5 agrega `RO_Ninja_ShadowJump_L5` y remueve `L2`.
+  - L9 agrega `RO_Ninja_ShadowJump_L9` + `RO_Ninja_ShadowJump_L9_DamageBonus` y remueve `L5`.
+- Se agregaron textos de localizaciï¿½n para skill, upgrades y momentum buff.
+
+### Archivos tocados
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Target.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Status_RO_Ninja.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Progressions/Progressions.lsx`
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml`
+
+### Riesgos
+- En L9, el +1d6 se implementï¿½ como passive `OnDamage` mientras el buff estï¿½ activo; si se hacen mï¿½ltiples hits en ese turno, puede aplicarse mï¿½s de una vez.
+
+### Regresiï¿½n mï¿½nima
+1. Ninja L2: aparece `Shadow Jump` (9m), consume Bonus Action + 2 MP.
+2. Ninja L5: salta 12m y muestra buff de +1 Attack Roll.
+3. Ninja L9: salta 15m, mantiene +1 Attack Roll y aï¿½ade +1d6 Force en ataque/tï¿½cnica durante el buff.
+
+## 35) Shadow Jump icon fix (question mark)
+### Sï¿½ntoma
+- `Shadow Jump` aparecï¿½a con icono de `?` en UI.
+
+### Causa raï¿½z
+- Se usï¿½ clave de icono no vï¿½lida: `Spell_Illusion_MistyStep`.
+
+### Soluciï¿½n final
+- Se reemplazï¿½ por clave vï¿½lida y conocida del juego: `Spell_Conjuration_MistyStep`.
+- Se aplicï¿½ en spell, statuses de buff y passives de unlock para consistencia visual.
+
+### Archivos tocados
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Target.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Status_RO_Ninja.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
+
+### Riesgos
+- Si un entorno especï¿½fico no expone esa clave, el fallback serï¿½a `Spell_Conjuration_DimensionDoor`.
+
+### Regresiï¿½n mï¿½nima
+1. Verificar icono de `Shadow Jump` en barra y hoja de personaje.
+2. Verificar icono del buff tras usar `Shadow Jump` L5/L9.
