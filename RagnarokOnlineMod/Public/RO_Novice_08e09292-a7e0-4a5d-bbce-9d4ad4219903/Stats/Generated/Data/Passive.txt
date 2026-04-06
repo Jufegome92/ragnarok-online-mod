@@ -682,7 +682,7 @@ data "DisplayName" "h1ninjadisciplineg0001;1"
 data "Description" "h1ninjadisciplineg0002;1"
 data "Icon" "Action_MobileShooting"
 data "Properties" "ForceShowInCC;Highlighted"
-data "Boosts" "UnlockSpell(Shout_RO_NinjaDiscipline_Throwing);UnlockSpell(Shout_RO_NinjaDiscipline_Throwing_Off,Singular);UnlockSpell(Shout_RO_NinjaDiscipline_Shadow);UnlockSpell(Shout_RO_NinjaDiscipline_Shadow_Off,Singular);UnlockSpell(Shout_RO_NinjaDiscipline_Ninpou);UnlockSpell(Shout_RO_NinjaDiscipline_Ninpou_Off,Singular)"
+data "Boosts" "UnlockSpell(Shout_RO_NinjaTraining_On,Singular);UnlockSpell(Shout_RO_NinjaTraining_Off,Singular)"
 
 
 new entry "RO_Ninja_ThrownTechnique_L2"
@@ -691,7 +691,7 @@ data "DisplayName" "h2ninjathrowng0017;1"
 data "Description" "h2ninjathrowng0018;1"
 data "Icon" "Action_SlashingFlourish_Ranged"
 data "Properties" "ForceShowInCC;Highlighted"
-data "Boosts" "UnlockSpell(Projectile_RO_Ninja_ThrowShuriken_2,Singular);UnlockSpell(Projectile_RO_Ninja_ThrowKunai_2,Singular);UnlockSpell(Projectile_RO_Ninja_ThrowHuuma_2,Singular)"
+data "Boosts" "UnlockSpell(Projectile_RO_Ninja_ThrownTechnique_2,Singular)"
 
 new entry "RO_Ninja_ThrownTechnique_L5"
 type "PassiveData"
@@ -699,7 +699,7 @@ data "DisplayName" "h2ninjathrowng0017;1"
 data "Description" "h2ninjathrowng0019;1"
 data "Icon" "Action_SlashingFlourish_Ranged"
 data "Properties" "Hidden"
-data "Boosts" "UnlockSpell(Projectile_RO_Ninja_ThrowShuriken_5,Singular);UnlockSpell(Projectile_RO_Ninja_ThrowKunai_5,Singular);UnlockSpell(Projectile_RO_Ninja_ThrowHuuma_5,Singular)"
+data "Boosts" "UnlockSpell(Projectile_RO_Ninja_ThrownTechnique_5,Singular)"
 
 new entry "RO_Ninja_ThrownTechnique_L9"
 type "PassiveData"
@@ -707,7 +707,7 @@ data "DisplayName" "h2ninjathrowng0017;1"
 data "Description" "h2ninjathrowng0020;1"
 data "Icon" "Action_SlashingFlourish_Ranged"
 data "Properties" "Hidden"
-data "Boosts" "UnlockSpell(Projectile_RO_Ninja_ThrowShuriken_9,Singular);UnlockSpell(Projectile_RO_Ninja_ThrowKunai_9,Singular);UnlockSpell(Projectile_RO_Ninja_ThrowHuuma_9,Singular)"
+data "Boosts" "UnlockSpell(Projectile_RO_Ninja_ThrownTechnique_9,Singular)"
 
 
 new entry "RO_Ninja_ThrowingMastery_Bonus"
@@ -750,4 +750,5 @@ data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnDamage"
 data "Conditions" "HasStatus('RO_NINJA_SHADOW_JUMP_BUFF_L9',context.Source) and HasDamageEffectFlag(DamageFlags.Hit) and (IsWeaponAttack() or IsSpell())"
 data "StatsFunctors" "DealDamage(1d6,Force)"
+
 

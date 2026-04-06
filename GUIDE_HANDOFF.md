@@ -1082,3 +1082,43 @@ Pegar esto al inicio del nuevo chat:
 ### Regresi�n m�nima
 1. Verificar icono de `Shadow Jump` en barra y hoja de personaje.
 2. Verificar icono del buff tras usar `Shadow Jump` L5/L9.
+
+## 36) Containerizaci�n UI (Ninja Training + Thrown Technique)
+### S�ntoma / objetivo
+- Hab�a demasiadas skills sueltas en barra para Ninja.
+- Se pidi� agrupar:
+  - `Throwing Mastery`, `Shadow Arts`, `Ninpou Training` en un solo skill contenedor.
+  - `Throw Shuriken`, `Throw Kunai`, `Throw Huuma` dentro de `Thrown Technique`.
+
+### Causa ra�z
+- Desbloqueo actual otorgaba cada sub-skill individualmente, saturando la barra.
+
+### Soluci�n final aplicada
+- `Ninja Discipline` migrado a patr�n contenedor y renombrado visualmente a `Ninja Training`:
+  - contenedor ON: `Shout_RO_NinjaTraining_On`
+  - contenedor OFF: `Shout_RO_NinjaTraining_Off`
+  - subskills ON/OFF ahora usan `SpellContainerID`.
+- Iconograf�a unificada por pedido:
+  - activaciones: icono �nico `Action_MobileShooting`
+  - desactivaciones: icono �nico `Action_SlashingFlourish_Ranged`
+- `Thrown Technique` migrado a contenedor por tier:
+  - `Projectile_RO_Ninja_ThrownTechnique_2`
+  - `Projectile_RO_Ninja_ThrownTechnique_5`
+  - `Projectile_RO_Ninja_ThrownTechnique_9`
+  - subskills de shuriken/kunai/huuma enlazadas con `SpellContainerID`.
+- Passives actualizados para desbloquear contenedores (no variantes sueltas).
+- Localizaci�n ajustada para mostrar `Ninja Training` y acci�n de apagado (`Cancel Training`).
+
+### Archivos tocados
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Shout.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Projectile_RO_Ninja.txt`
+- `RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt`
+- `RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml`
+
+### Riesgos
+- Como en cualquier contenedor de BG3, si una variante no cumple `RequirementConditions`, puede no mostrarse en ese momento; esto es esperado.
+
+### Regresi�n m�nima
+1. Verificar que aparece solo `Ninja Training` (ON/OFF) en lugar de 6 botones sueltos.
+2. Verificar que `Thrown Technique` abre las 3 variantes seg�n tier.
+3. Verificar que cada variante sigue consumiendo su MP correcto y aplica su efecto.

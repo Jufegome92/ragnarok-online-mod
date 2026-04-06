@@ -214,8 +214,8 @@
   
     <content contentuid="h3e2d1c0bg9a8f7g6e5dg4c3b2a1f0e9d8c7" version="1">Ninja</content>
     <content contentuid="h4f1c2a7bg8d3e4g9a10gb2c3g5d6e7f8a901" version="1">A high-mobility first-job skirmisher from Rune-Midgard who blends stealth weapon arts with Intelligence-driven ninpou discipline.</content>
-    <content contentuid="h1ninjadisciplineg0001" version="1">Ninja Discipline</content>
-    <content contentuid="h1ninjadisciplineg0002" version="1">Adopt one ninja discipline. Only one discipline can be active at a time.</content>
+    <content contentuid="h1ninjadisciplineg0001" version="1">Ninja Training</content>
+    <content contentuid="h1ninjadisciplineg0002" version="1">Choose your active ninja discipline. Only one can be active at a time.</content>
     <content contentuid="h1ninjadisciplineg0003" version="1">Throwing Mastery</content>
     <content contentuid="h1ninjadisciplineg0004" version="1">Adopt Throwing Mastery. Gain +1 attack rolls with thrown/ranged techniques.</content>
     <content contentuid="h1ninjadisciplineg0005" version="1">Leave Throwing Mastery.</content>
@@ -231,6 +231,8 @@
     <content contentuid="h1ninjadisciplineg0015" version="1">Discipline active: gain +3m movement.</content>
     <content contentuid="h1ninjadisciplineg0016" version="1">Ninpou Training</content>
     <content contentuid="h1ninjadisciplineg0017" version="1">Discipline active: +1 Spell Attack and +1 Spell Save DC.</content>
+    <content contentuid="h1ninjadisciplineg0018" version="1">Cancel Training</content>
+    <content contentuid="h1ninjadisciplineg0019" version="1">Deactivate your current ninja discipline.</content>
     <content contentuid="h2ninjathrowng0001" version="1">Thrown Technique</content>
     <content contentuid="h2ninjathrowng0002" version="1">Choose one technique: Throw Shuriken, Throw Kunai, or Throw Huuma Shuriken. Costs 1 Mana Point.</content>
     <content contentuid="h2ninjathrowng0003" version="1">Throw Shuriken</content>
@@ -265,6 +267,8 @@
     <content contentuid="h2ninjashadowjg0012" version="1">Shadow Jump Momentum+</content>
     <content contentuid="h2ninjashadowjg0013" version="1">After Shadow Jump, gain +1 Attack Roll and +1d6 bonus damage on your next attack or technique this turn.</content>
   </contentList>
+
+
 
 
 
