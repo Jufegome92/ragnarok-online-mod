@@ -753,6 +753,16 @@ type "PassiveData"
 data "Properties" "IsHidden"
 data "Boosts" "IF(HasStatus('RO_NINJA_DISCIPLINE_THROWING',context.Source) and (SpellId('Projectile_RO_Ninja_RazorShuriken_5') or SpellId('Projectile_RO_Ninja_CripplingKunai_5') or SpellId('Projectile_RO_Ninja_DisruptingSenbon_5') or SpellId('Projectile_RO_Ninja_RazorShuriken_9') or SpellId('Projectile_RO_Ninja_CripplingKunai_9') or SpellId('Projectile_RO_Ninja_DisruptingSenbon_9'))):RollBonus(Attack,1);IF(HasStatus('RO_NINJA_DISCIPLINE_THROWING',context.Source) and (SpellId('Projectile_RO_Ninja_RazorShuriken_5') or SpellId('Projectile_RO_Ninja_CripplingKunai_5') or SpellId('Projectile_RO_Ninja_DisruptingSenbon_5') or SpellId('Projectile_RO_Ninja_RazorShuriken_9') or SpellId('Projectile_RO_Ninja_CripplingKunai_9') or SpellId('Projectile_RO_Ninja_DisruptingSenbon_9')) and (HasStatus('BLEEDING',context.Target) or HasStatus('OFF_BALANCED',context.Target) or HasStatus('DAZED',context.Target) or HasStatus('SLOWED',context.Target) or HasStatus('RO_NINJA_REELING',context.Target) or HasStatus('RO_NINJA_HAMSTRUNG',context.Target) or HasStatus('RO_NINJA_MAIMED',context.Target) or HasStatus('RO_NINJA_KUNAI_EXPOSED',context.Target))):RollBonus(Attack,1)"
 
+new entry "RO_Ninja_ThrowingMastery_Scale_L5"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "Boosts" "IF(HasStatus('RO_NINJA_DISCIPLINE_THROWING',context.Source) and (HasStatus('BLEEDING',context.Target) or HasStatus('OFF_BALANCED',context.Target) or HasStatus('DAZED',context.Target) or HasStatus('SLOWED',context.Target) or HasStatus('RO_NINJA_REELING',context.Target) or HasStatus('RO_NINJA_HAMSTRUNG',context.Target) or HasStatus('RO_NINJA_MAIMED',context.Target))):RollBonus(Attack,1);IF(HasStatus('RO_NINJA_DISCIPLINE_THROWING',context.Source) and (HasStatus('BLEEDING',context.Target) or HasStatus('OFF_BALANCED',context.Target) or HasStatus('DAZED',context.Target) or HasStatus('SLOWED',context.Target) or HasStatus('RO_NINJA_REELING',context.Target) or HasStatus('RO_NINJA_HAMSTRUNG',context.Target) or HasStatus('RO_NINJA_MAIMED',context.Target))):DamageBonus(1d4,Piercing)"
+
+new entry "RO_Ninja_ThrowingMastery_Scale_L9"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "Boosts" "IF(HasStatus('RO_NINJA_DISCIPLINE_THROWING',context.Source) and (HasStatus('BLEEDING',context.Target) or HasStatus('OFF_BALANCED',context.Target) or HasStatus('DAZED',context.Target) or HasStatus('SLOWED',context.Target) or HasStatus('RO_NINJA_REELING',context.Target) or HasStatus('RO_NINJA_HAMSTRUNG',context.Target) or HasStatus('RO_NINJA_MAIMED',context.Target))):RollBonus(Attack,1);IF(HasStatus('RO_NINJA_DISCIPLINE_THROWING',context.Source) and (HasStatus('BLEEDING',context.Target) or HasStatus('OFF_BALANCED',context.Target) or HasStatus('DAZED',context.Target) or HasStatus('SLOWED',context.Target) or HasStatus('RO_NINJA_REELING',context.Target) or HasStatus('RO_NINJA_HAMSTRUNG',context.Target) or HasStatus('RO_NINJA_MAIMED',context.Target))):DamageBonus(1d6,Piercing)"
+
 new entry "RO_Ninja_ShurikenPrecision"
 type "PassiveData"
 data "Properties" "IsHidden"
