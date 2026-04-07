@@ -402,6 +402,7 @@
         <node id="Progression">
           <attribute id="Level" type="uint8" value="4" />
           <attribute id="Name" type="LSString" value="RO_Ninja" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_Ninja_ReverseTatami" />
           <attribute id="ProgressionType" type="uint8" value="1" />
           <attribute id="TableUUID" type="guid" value="fedc62af-817a-47b8-abf2-0a8de2694f70" />
           <attribute id="UUID" type="guid" value="3de424bb-ae72-41ab-83cc-0cc7030a4b34" />

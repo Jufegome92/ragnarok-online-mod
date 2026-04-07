@@ -321,6 +321,9 @@
     <content contentuid="h2ninjathrowartg0020" version="1">Throwing Art improves at Ninja level 9. Deals 4d6 + Dexterity Modifier damage per variant.</content>
     <content contentuid="h3ninjarazorconcg0001" version="1">Shaken Concentration</content>
     <content contentuid="h3ninjarazorconcg0002" version="1">Struck by a Razor Shuriken while bleeding. Disadvantage on the next Concentration saving throw.</content>
+    <content contentuid="h4ninjarevtatg0001" version="1">Reverse Tatami</content>
+    <content contentuid="h4ninjarevtatg0002" version="1">When targeted by a ranged or spell attack, spend your Reaction and 2 MP to raise your AC by 3 against that attack.</content>
+    <content contentuid="h4ninjarevtatg0003" version="1">Learned the art of Reverse Tatami. When targeted by a ranged or spell attack, you may spend your Reaction and 2 MP to gain +3 AC against the triggering attack.</content>
   </contentList>
 
 
