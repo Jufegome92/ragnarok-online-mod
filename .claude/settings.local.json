@@ -8,7 +8,8 @@
       "Bash(find 'd:/Mods for BG3/ragnarok-online-mod/Reference/Packages/Final Fantasy Tactics/Stats/Generated/Data/' -type f -name *.txt)",
       "Bash(find 'd:/Mods for BG3/ragnarok-online-mod/Reference/Packages/Mystra Spells/Public/*/Stats/Generated/Data/' -type f -name *.txt)",
       "Bash(find 'd:\\\\Mods for BG3\\\\ragnarok-online-mod' -type f -name *.lsx -path *ActionResource*)",
-      "Bash(grep -r RO_MP 'd:\\\\Mods for BG3\\\\ragnarok-online-mod\\\\RagnarokOnlineMod' --include=*.lsx --include=*.lua)"
+      "Bash(grep -r RO_MP 'd:\\\\Mods for BG3\\\\ragnarok-online-mod\\\\RagnarokOnlineMod' --include=*.lsx --include=*.lua)",
+      "Bash(python3 -c ':*)"
     ]
   }
 }

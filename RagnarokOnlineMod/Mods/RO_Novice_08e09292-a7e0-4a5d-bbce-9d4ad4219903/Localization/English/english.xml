@@ -301,6 +301,12 @@
     <content contentuid="h2ninjaninpoubg0014" version="1">Unlocks Ninpou Bolt variants (Crimson Fire Blossom, Lightning Spear of Ice, Wind Blade) at Ninja level 3.</content>
     <content contentuid="h2ninjaninpoubg0015" version="1">Ninpou Bolt improves at Ninja level 5.</content>
     <content contentuid="h2ninjaninpoubg0016" version="1">Ninpou Bolt improves at Ninja level 9.</content>
+    <content contentuid="h3ninjareelingg0001" version="1">Reeling</content>
+    <content contentuid="h3ninjareelingg0002" version="1">Reeling from a Ninja's technique. -1 to Attack Rolls.</content>
+    <content contentuid="h3ninjahamstrungg0001" version="1">Hamstrung</content>
+    <content contentuid="h3ninjahamstrungg0002" version="1">Hamstrung by a Ninja's Crippling Kunai. Reduced Movement.</content>
+    <content contentuid="h3ninjamaimedg0001" version="1">Maimed</content>
+    <content contentuid="h3ninjamaimedg0002" version="1">Maimed by a Ninja's Crippling Kunai. Severely reduced Movement and Disadvantage on Attack Rolls.</content>
   </contentList>
 
 
