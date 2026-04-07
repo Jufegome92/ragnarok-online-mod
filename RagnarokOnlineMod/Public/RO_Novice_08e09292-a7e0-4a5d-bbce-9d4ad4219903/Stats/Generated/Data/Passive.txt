@@ -718,10 +718,19 @@ data "Properties" "Hidden"
 data "Boosts" "UnlockSpell(Projectile_RO_Ninja_ThrownTechnique_9,Singular)"
 
 
+new entry "RO_Ninja_ThrowingArt_L3"
+type "PassiveData"
+data "DisplayName" "h2ninjathrowartg0009;1"
+data "Description" "h2ninjathrowartg0010;1"
+data "Icon" "Action_MobileShooting"
+data "Properties" "ForceShowInCC;Highlighted"
+data "Boosts" "UnlockSpell(Projectile_RO_Ninja_ThrowingArt_3,Singular)"
+
+
 new entry "RO_Ninja_ThrowingMastery_Bonus"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "Boosts" "IF(HasStatus('RO_NINJA_DISCIPLINE_THROWING',context.Source) and (SpellId('Projectile_RO_Ninja_ThrowShuriken_2') or SpellId('Projectile_RO_Ninja_ThrowShuriken_5') or SpellId('Projectile_RO_Ninja_ThrowShuriken_9') or SpellId('Projectile_RO_Ninja_ThrowKunai_2') or SpellId('Projectile_RO_Ninja_ThrowKunai_5') or SpellId('Projectile_RO_Ninja_ThrowKunai_9') or SpellId('Projectile_RO_Ninja_ThrowHuuma_2') or SpellId('Projectile_RO_Ninja_ThrowHuuma_5') or SpellId('Projectile_RO_Ninja_ThrowHuuma_9'))):RollBonus(Attack,1);IF(HasStatus('RO_NINJA_DISCIPLINE_THROWING',context.Source) and (SpellId('Projectile_RO_Ninja_ThrowShuriken_2') or SpellId('Projectile_RO_Ninja_ThrowShuriken_5') or SpellId('Projectile_RO_Ninja_ThrowShuriken_9') or SpellId('Projectile_RO_Ninja_ThrowKunai_2') or SpellId('Projectile_RO_Ninja_ThrowKunai_5') or SpellId('Projectile_RO_Ninja_ThrowKunai_9') or SpellId('Projectile_RO_Ninja_ThrowHuuma_2') or SpellId('Projectile_RO_Ninja_ThrowHuuma_5') or SpellId('Projectile_RO_Ninja_ThrowHuuma_9')) and (HasStatus('BLEEDING',context.Target) or HasStatus('OFF_BALANCED',context.Target) or HasStatus('DAZED',context.Target) or HasStatus('SLOWED',context.Target) or HasStatus('RO_NINJA_REELING',context.Target) or HasStatus('RO_NINJA_HAMSTRUNG',context.Target) or HasStatus('RO_NINJA_MAIMED',context.Target) or HasStatus('RO_NINJA_KUNAI_EXPOSED',context.Target))):RollBonus(Attack,1)"
+data "Boosts" "IF(HasStatus('RO_NINJA_DISCIPLINE_THROWING',context.Source) and (SpellId('Projectile_RO_Ninja_ThrowShuriken_2') or SpellId('Projectile_RO_Ninja_ThrowShuriken_5') or SpellId('Projectile_RO_Ninja_ThrowShuriken_9') or SpellId('Projectile_RO_Ninja_ThrowKunai_2') or SpellId('Projectile_RO_Ninja_ThrowKunai_5') or SpellId('Projectile_RO_Ninja_ThrowKunai_9') or SpellId('Projectile_RO_Ninja_ThrowHuuma_2') or SpellId('Projectile_RO_Ninja_ThrowHuuma_5') or SpellId('Projectile_RO_Ninja_ThrowHuuma_9') or SpellId('Projectile_RO_Ninja_RazorShuriken_3') or SpellId('Projectile_RO_Ninja_CripplingKunai_3') or SpellId('Projectile_RO_Ninja_DisruptingSenbon_3'))):RollBonus(Attack,1);IF(HasStatus('RO_NINJA_DISCIPLINE_THROWING',context.Source) and (SpellId('Projectile_RO_Ninja_ThrowShuriken_2') or SpellId('Projectile_RO_Ninja_ThrowShuriken_5') or SpellId('Projectile_RO_Ninja_ThrowShuriken_9') or SpellId('Projectile_RO_Ninja_ThrowKunai_2') or SpellId('Projectile_RO_Ninja_ThrowKunai_5') or SpellId('Projectile_RO_Ninja_ThrowKunai_9') or SpellId('Projectile_RO_Ninja_ThrowHuuma_2') or SpellId('Projectile_RO_Ninja_ThrowHuuma_5') or SpellId('Projectile_RO_Ninja_ThrowHuuma_9') or SpellId('Projectile_RO_Ninja_RazorShuriken_3') or SpellId('Projectile_RO_Ninja_CripplingKunai_3') or SpellId('Projectile_RO_Ninja_DisruptingSenbon_3')) and (HasStatus('BLEEDING',context.Target) or HasStatus('OFF_BALANCED',context.Target) or HasStatus('DAZED',context.Target) or HasStatus('SLOWED',context.Target) or HasStatus('RO_NINJA_REELING',context.Target) or HasStatus('RO_NINJA_HAMSTRUNG',context.Target) or HasStatus('RO_NINJA_MAIMED',context.Target) or HasStatus('RO_NINJA_KUNAI_EXPOSED',context.Target))):RollBonus(Attack,1)"
 
 new entry "RO_Ninja_ShurikenPrecision"
 type "PassiveData"

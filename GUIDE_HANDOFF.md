@@ -1851,3 +1851,90 @@ Pegar esto al inicio del nuevo chat:
 2. L5: Shadow Jump solo targetea hasta 12m y da +1 Attack +1d4 en siguiente hit.
 3. L9: Shadow Jump solo targetea hasta 15m y da +2 Attack +1d6 en siguiente hit.
 4. Confirmar que el buff se consume en el primer hit valido (no persiste).
+
+## 55) Migracion B1 - Throwing Art (MVP runtime)
+### Sintoma / objetivo
+- `Throwing Art` no existia en runtime aunque estaba definido en el diseno (nivel 3).
+- Objetivo B1: implementar MVP funcional con 3 variantes y escalado por tier, sin romper kit estable.
+
+### Solucion final aplicada
+- `Spell_Projectile_RO_Ninja.txt`
+  - Se agrego contenedor `Projectile_RO_Ninja_ThrowingArt_3` con variantes:
+    - `Projectile_RO_Ninja_RazorShuriken_3`
+    - `Projectile_RO_Ninja_CripplingKunai_3`
+    - `Projectile_RO_Ninja_DisruptingSenbon_3`
+  - Se agregaron upgrades:
+    - `Projectile_RO_Ninja_ThrowingArt_5` + variantes `_5`
+    - `Projectile_RO_Ninja_ThrowingArt_9` + variantes `_9`
+  - Coste: `Action + 2 MP`.
+  - Rango: `18m`.
+  - Tipo de ataque: `RangedSpellAttack`.
+  - MVP de condiciones por variante:
+    - Razor: `Bleeding` en fallo CON.
+    - Crippling: `Slowed` en fallo CON.
+    - Disrupting: `RO_NINJA_REELING` en fallo CON.
+
+- `Status_RO_Ninja.txt`
+  - Nuevo status `RO_NINJA_REELING` (`RollBonus(Attack,-1)`) con textos de Reeling.
+
+- `Passive.txt`
+  - Nuevos passives:
+    - `RO_Ninja_ThrowingArt_L3`
+    - `RO_Ninja_ThrowingArt_L5`
+    - `RO_Ninja_ThrowingArt_L9`
+  - `RO_Ninja_ThrowingMastery_Bonus` extendido para incluir las 9 variantes de Throwing Art en su lista de spells.
+
+- `Progressions.lsx`
+  - Nivel 3 agrega `RO_Ninja_ThrowingArt_L3`.
+  - Nivel 5 reemplaza por `RO_Ninja_ThrowingArt_L5`.
+  - Nivel 9 reemplaza por `RO_Ninja_ThrowingArt_L9`.
+
+- `english.xml`
+  - Localizacion EN agregada para contenedor, variantes L3/L5/L9 y passives de Throwing Art.
+
+### Regresion minima
+1. Nivel 3: aparece Throwing Art con 3 variantes (Razor/Crippling/Senbon).
+2. Cada variante consume `Action + 2 MP`.
+3. Razor aplica Bleeding en fallo CON.
+4. Crippling aplica Slowed en fallo CON.
+5. Senbon aplica Reeling en fallo CON.
+6. Nivel 5/9: se ven upgrades de dano y reemplazo de passive correcto.
+
+## 56) Fase B reinicio seguro - B1.0 Throwing Art (solo nivel 3)
+### Objetivo
+- Retomar Fase B sin reintroducir riesgo de crash.
+- Entregar una version minima de Throwing Art en runtime para validar estabilidad antes de escalar a tiers 5/9.
+
+### Solucion aplicada
+- Se agrego Throwing Art nivel 3 como contenedor con 3 variantes:
+  - Projectile_RO_Ninja_RazorShuriken_3
+  - Projectile_RO_Ninja_CripplingKunai_3
+  - Projectile_RO_Ninja_DisruptingSenbon_3
+- Coste en las 3 variantes: Action + 2 MP.
+- Rango: 18m.
+- Efectos MVP:
+  - Razor: 2d6 + DEX Slashing, Bleeding en fallo CON (2 turnos).
+  - Crippling: 2d6 + DEX Piercing, Slowed en fallo CON (2 turnos).
+  - Senbon: 2d6 + DEX Piercing, aplica Reeling en fallo CON (3 turnos) reutilizando RO_NINJA_KUNAI_EXPOSED.
+- Se agrego passive de unlock:
+  - RO_Ninja_ThrowingArt_L3.
+- Se cableo en progression de Ninja nivel 3 y se mantiene removido al nivel 5 (ya existia en PassivesRemoved).
+- RO_Ninja_ThrowingMastery_Bonus se extendio para reconocer las 3 variantes de Throwing Art dentro del bonus de disciplina Throwing.
+- Se agregaron textos EN para Throwing Art + variantes + passive.
+
+### Archivos tocados
+- RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Spell_Projectile_RO_Ninja.txt
+- RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Stats/Generated/Data/Passive.txt
+- RagnarokOnlineMod/Public/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Progressions/Progressions.lsx
+- RagnarokOnlineMod/Mods/RO_Novice_08e09292-a7e0-4a5d-bbce-9d4ad4219903/Localization/English/english.xml
+
+### Riesgos controlados
+- No se agregaron statuses nuevos en B1.0 (se reutiliza RO_NINJA_KUNAI_EXPOSED para Reeling).
+- No se tocaron tiers 5/9 de Throwing Art en esta iteracion.
+
+### Regresion minima recomendada
+1. Confirmar que el juego entra al menu principal (sin CTD).
+2. Ninja nivel 3: aparece Throwing Art con 3 variantes.
+3. Cada variante consume Action + 2 MP.
+4. Razor aplica Bleeding (fallo CON), Crippling aplica Slowed, Senbon aplica Reeling.
+5. Con disciplina Throwing activa, confirmar bonus de Throwing Mastery en las 3 variantes.

@@ -266,6 +266,16 @@
     <content contentuid="h2ninjashadowjg0011" version="1">After Shadow Jump, gain +1 Attack Roll on your next attack or technique this turn.</content>
     <content contentuid="h2ninjashadowjg0012" version="1">Shadow Jump Momentum+</content>
     <content contentuid="h2ninjashadowjg0013" version="1">After Shadow Jump, gain +2 Attack Roll and +1d6 bonus damage on your next attack or technique this turn.</content>
+    <content contentuid="h2ninjathrowartg0001" version="1">Throwing Art</content>
+    <content contentuid="h2ninjathrowartg0002" version="1">Choose one technique: Razor Shuriken, Crippling Kunai, or Disrupting Senbon. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjathrowartg0003" version="1">Razor Shuriken</content>
+    <content contentuid="h2ninjathrowartg0004" version="1">Throw a razor shuriken at a target within 18m. Deals 2d6 + Dexterity Modifier Slashing damage; on failed CON save, applies Bleeding for 2 turns. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjathrowartg0005" version="1">Crippling Kunai</content>
+    <content contentuid="h2ninjathrowartg0006" version="1">Throw a crippling kunai at a target within 18m. Deals 2d6 + Dexterity Modifier Piercing damage; on failed CON save, applies Slowed for 2 turns. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjathrowartg0007" version="1">Disrupting Senbon</content>
+    <content contentuid="h2ninjathrowartg0008" version="1">Throw senbon needles at a target within 18m. Deals 2d6 + Dexterity Modifier Piercing damage; on failed CON save, applies Reeling for 3 turns (-1 Attack Rolls). Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjathrowartg0009" version="1">Throwing Art</content>
+    <content contentuid="h2ninjathrowartg0010" version="1">Unlocks Throwing Art (Razor Shuriken, Crippling Kunai, Disrupting Senbon) at Ninja level 3.</content>
     <content contentuid="h2ninjamistslashg0001" version="1">Mist Slash</content>
     <content contentuid="h2ninjamistslashg0002" version="1">Slash a target within 6m with a mist-infused strike. Reposition 3m after hit without provoking opportunity attacks. Costs 2 Mana Points.</content>
     <content contentuid="h2ninjamistslashg0003" version="1">Slash a target within 6m. Deals weapon damage +1d6 and grants 3m safe reposition after hit. Costs 2 Mana Points.</content>
