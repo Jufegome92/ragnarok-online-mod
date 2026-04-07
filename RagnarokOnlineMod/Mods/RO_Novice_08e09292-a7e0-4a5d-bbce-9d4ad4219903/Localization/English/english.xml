@@ -307,6 +307,16 @@
     <content contentuid="h3ninjahamstrungg0002" version="1">Hamstrung by a Ninja's Crippling Kunai. Reduced Movement.</content>
     <content contentuid="h3ninjamaimedg0001" version="1">Maimed</content>
     <content contentuid="h3ninjamaimedg0002" version="1">Maimed by a Ninja's Crippling Kunai. Severely reduced Movement and Disadvantage on Attack Rolls.</content>
+    <content contentuid="h2ninjathrowartg0011" version="1">Throwing Art</content>
+    <content contentuid="h2ninjathrowartg0012" version="1">Throwing Art improves at Ninja level 5. Deals 3d6 + Dexterity Modifier damage per variant.</content>
+    <content contentuid="h2ninjathrowartg0013" version="1">Razor Shuriken (Lv5). Deals 3d6 + Dexterity Modifier Slashing damage. Bonus 1d6 vs targets already Bleeding. On failed CON save, applies Bleeding for 2 turns. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjathrowartg0014" version="1">Crippling Kunai (Lv5). Deals 3d6 + Dexterity Modifier Piercing damage. On failed CON save, applies Hamstrung for 2 turns. If target already Hamstrung and fails: also applies Maimed for 1 turn. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjathrowartg0015" version="1">Disrupting Senbon (Lv5). Deals 3d6 + Dexterity Modifier Piercing damage. On failed CON save, applies Reeling for 3 turns. If target already Reeling and fails: also applies Dazed for 1 turn. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjathrowartg0016" version="1">Razor Shuriken (Lv9). Deals 4d6 + Dexterity Modifier Slashing damage. Bonus 1d8 vs targets already Bleeding. On failed CON save, applies Bleeding for 2 turns. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjathrowartg0017" version="1">Crippling Kunai (Lv9). Deals 4d6 + Dexterity Modifier Piercing damage. Bonus 1d8 vs Hamstrung or Maimed targets. On failed CON save, applies Hamstrung for 2 turns. If target already Hamstrung and fails: also applies Maimed for 1 turn. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjathrowartg0018" version="1">Disrupting Senbon (Lv9). Deals 4d6 + Dexterity Modifier Piercing damage. On failed CON save, applies Reeling for 3 turns. If target already Reeling and fails: also applies Dazed for 2 turns. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjathrowartg0019" version="1">Throwing Art</content>
+    <content contentuid="h2ninjathrowartg0020" version="1">Throwing Art improves at Ninja level 9. Deals 4d6 + Dexterity Modifier damage per variant.</content>
   </contentList>
 
 
