@@ -217,55 +217,55 @@
     <content contentuid="h1ninjadisciplineg0001" version="1">Ninja Training</content>
     <content contentuid="h1ninjadisciplineg0002" version="1">Choose your active ninja discipline. Only one can be active at a time.</content>
     <content contentuid="h1ninjadisciplineg0003" version="1">Throwing Mastery</content>
-    <content contentuid="h1ninjadisciplineg0004" version="1">Adopt Throwing Mastery. Gain +1 attack rolls with thrown/ranged techniques.</content>
+    <content contentuid="h1ninjadisciplineg0004" version="1">Adopt Throwing Mastery. Gain +1 attack rolls with thrown techniques, and +1 additional against conditioned targets, until your next Short Rest.</content>
     <content contentuid="h1ninjadisciplineg0005" version="1">Leave Throwing Mastery.</content>
     <content contentuid="h1ninjadisciplineg0006" version="1">Shadow Arts</content>
-    <content contentuid="h1ninjadisciplineg0007" version="1">Adopt Shadow Arts. Gain +3m movement while active.</content>
+    <content contentuid="h1ninjadisciplineg0007" version="1">Adopt Shadow Arts. Gain +3m movement while active until your next Short Rest.</content>
     <content contentuid="h1ninjadisciplineg0008" version="1">Leave Shadow Arts.</content>
     <content contentuid="h1ninjadisciplineg0009" version="1">Ninpou Training</content>
-    <content contentuid="h1ninjadisciplineg0010" version="1">Adopt Ninpou Training. Gain +1 Spell Attack and +1 Spell Save DC while active.</content>
+    <content contentuid="h1ninjadisciplineg0010" version="1">Adopt Ninpou Training. Gain +1 Spell Attack and +1 Spell Save DC while active until your next Short Rest.</content>
     <content contentuid="h1ninjadisciplineg0011" version="1">Leave Ninpou Training.</content>
     <content contentuid="h1ninjadisciplineg0012" version="1">Throwing Mastery</content>
-    <content contentuid="h1ninjadisciplineg0013" version="1">Discipline active: +1 attack rolls with thrown/ranged techniques.</content>
+    <content contentuid="h1ninjadisciplineg0013" version="1">Discipline active until your next Short Rest: +1 attack rolls with thrown techniques (+1 additional vs conditioned targets).</content>
     <content contentuid="h1ninjadisciplineg0014" version="1">Shadow Arts</content>
-    <content contentuid="h1ninjadisciplineg0015" version="1">Discipline active: gain +3m movement.</content>
+    <content contentuid="h1ninjadisciplineg0015" version="1">Discipline active until your next Short Rest: gain +3m movement.</content>
     <content contentuid="h1ninjadisciplineg0016" version="1">Ninpou Training</content>
-    <content contentuid="h1ninjadisciplineg0017" version="1">Discipline active: +1 Spell Attack and +1 Spell Save DC.</content>
+    <content contentuid="h1ninjadisciplineg0017" version="1">Discipline active until your next Short Rest: +1 Spell Attack and +1 Spell Save DC.</content>
     <content contentuid="h1ninjadisciplineg0018" version="1">Cancel Training</content>
     <content contentuid="h1ninjadisciplineg0019" version="1">Deactivate your current ninja discipline.</content>
     <content contentuid="h2ninjathrowng0001" version="1">Thrown Technique</content>
     <content contentuid="h2ninjathrowng0002" version="1">Choose one technique: Throw Shuriken, Throw Kunai, or Throw Huuma Shuriken. Costs 1 Mana Point.</content>
     <content contentuid="h2ninjathrowng0003" version="1">Throw Shuriken</content>
-    <content contentuid="h2ninjathrowng0004" version="1">Throw a shuriken at a target within 18m. Deals 1d6 + Dexterity Modifier Piercing damage. Costs 1 Mana Point.</content>
+    <content contentuid="h2ninjathrowng0004" version="1">Throw a shuriken at a target within 18m. Deals 1d6 + Dexterity Modifier Piercing damage, plus 1d4 against conditioned targets. Costs 1 Mana Point.</content>
     <content contentuid="h2ninjathrowng0005" version="1">Throw Kunai</content>
-    <content contentuid="h2ninjathrowng0006" version="1">Throw a kunai at a target within 10m. Deals 1d8 + Dexterity Modifier Piercing damage and applies Exposed Armor (-1 AC) for 1 turn. Costs 1 Mana Point.</content>
+    <content contentuid="h2ninjathrowng0006" version="1">Throw a kunai at a target within 10m. Deals 1d8 + Dexterity Modifier Piercing damage; on failed CON save, applies Reeling for 2 turns (-1 Attack Rolls). Costs 1 Mana Point.</content>
     <content contentuid="h2ninjathrowng0007" version="1">Throw Huuma Shuriken</content>
-    <content contentuid="h2ninjathrowng0008" version="1">Launch a heavy huuma shuriken at a target within 10m, impacting a 3m area. Deals 2d6 + Dexterity Modifier Piercing damage. Costs 2 Mana Points.</content>
-    <content contentuid="h2ninjathrowng0009" version="1">Thrown Technique improves at level 5: Shuriken 1d8, Kunai 1d10, Huuma 3d6.</content>
-    <content contentuid="h2ninjathrowng0010" version="1">Throw a shuriken at a target within 18m. Deals 1d8 + Dexterity Modifier Piercing damage. Costs 1 Mana Point.</content>
-    <content contentuid="h2ninjathrowng0011" version="1">Throw a kunai at a target within 10m. Deals 1d10 + Dexterity Modifier Piercing damage and applies Exposed Armor (-1 AC) for 1 turn. Costs 1 Mana Point.</content>
-    <content contentuid="h2ninjathrowng0012" version="1">Launch a heavy huuma shuriken at a target within 10m, impacting a 4m area. Deals 3d6 + Dexterity Modifier Piercing damage. Costs 2 Mana Points.</content>
-    <content contentuid="h2ninjathrowng0013" version="1">Thrown Technique improves at level 9: Shuriken 2d8, Kunai 2d10 (+Bleeding), Huuma 4d6.</content>
-    <content contentuid="h2ninjathrowng0014" version="1">Throw a shuriken at a target within 18m. Deals 2d8 + Dexterity Modifier Piercing damage. Costs 1 Mana Point.</content>
-    <content contentuid="h2ninjathrowng0015" version="1">Throw a kunai at a target within 10m. Deals 2d10 + Dexterity Modifier Piercing damage, applies Exposed Armor (-1 AC) for 1 turn, and inflicts Bleeding. Costs 1 Mana Point.</content>
-    <content contentuid="h2ninjathrowng0016" version="1">Launch a heavy huuma shuriken at a target within 10m, impacting a 4m area. Deals 4d6 + Dexterity Modifier Piercing damage. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjathrowng0008" version="1">Launch a heavy huuma shuriken at a target within 10m, impacting a 3m area. Deals 2d6 + Dexterity Modifier Piercing damage, plus 1d4 against conditioned targets. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjathrowng0009" version="1">Thrown Technique improves at level 5: Shuriken 1d8 (+1d6 vs conditioned), Kunai 1d10 (Reeling 3 turns), Huuma 3d6 (+1d6 vs conditioned).</content>
+    <content contentuid="h2ninjathrowng0010" version="1">Throw a shuriken at a target within 18m. Deals 1d8 + Dexterity Modifier Piercing damage, plus 1d6 against conditioned targets. Costs 1 Mana Point.</content>
+    <content contentuid="h2ninjathrowng0011" version="1">Throw a kunai at a target within 10m. Deals 1d10 + Dexterity Modifier Piercing damage; on failed CON save, applies Reeling for 3 turns (-1 Attack Rolls). Costs 1 Mana Point.</content>
+    <content contentuid="h2ninjathrowng0012" version="1">Launch a heavy huuma shuriken at a target within 10m, impacting a 4m area. Deals 3d6 + Dexterity Modifier Piercing damage, plus 1d6 against conditioned targets. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjathrowng0013" version="1">Thrown Technique improves at level 9: Shuriken 2d8 (+1d8 vs conditioned), Kunai 2d10 (Reeling), Huuma 4d6 (+1d8 vs conditioned, can inflict Off Balance).</content>
+    <content contentuid="h2ninjathrowng0014" version="1">Throw a shuriken at a target within 18m. Deals 2d8 + Dexterity Modifier Piercing damage, plus 1d8 against conditioned targets. Costs 1 Mana Point.</content>
+    <content contentuid="h2ninjathrowng0015" version="1">Throw a kunai at a target within 10m. Deals 2d10 + Dexterity Modifier Piercing damage; on failed CON save, applies Reeling for 3 turns (-1 Attack Rolls). Costs 1 Mana Point.</content>
+    <content contentuid="h2ninjathrowng0016" version="1">Launch a heavy huuma shuriken at a target within 10m, impacting a 4m area. Deals 4d6 + Dexterity Modifier Piercing damage, plus 1d8 against conditioned targets; conditioned targets that fail STR save become Off Balance. Costs 2 Mana Points.</content>
     <content contentuid="h2ninjathrowng0017" version="1">Thrown Technique</content>
     <content contentuid="h2ninjathrowng0018" version="1">Unlocks Thrown Technique (Shuriken/Kunai/Huuma) at Ninja level 2.</content>
     <content contentuid="h2ninjathrowng0019" version="1">Thrown Technique damage improves at Ninja level 5.</content>
-    <content contentuid="h2ninjathrowng0020" version="1">Thrown Technique damage improves at Ninja level 9 and Kunai gains Bleeding.</content>
-    <content contentuid="h2ninjathrowng0021" version="1">Exposed Armor</content>
-    <content contentuid="h2ninjathrowng0022" version="1">Armor exposed by kunai impact: -1 AC.</content>
+    <content contentuid="h2ninjathrowng0020" version="1">Thrown Technique damage improves at Ninja level 9, with stronger conditioned payoffs and Kunai Reeling pressure.</content>
+    <content contentuid="h2ninjathrowng0021" version="1">Reeling</content>
+    <content contentuid="h2ninjathrowng0022" version="1">Thrown off balance by kunai impact: -1 Attack Rolls.</content>
     <content contentuid="h2ninjashadowjg0001" version="1">Shadow Jump</content>
-    <content contentuid="h2ninjashadowjg0002" version="1">Teleport through shadows up to 9m. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjashadowjg0002" version="1">Teleport through shadows up to 9m. Your next attack or technique this turn gains +1 Attack Roll. Costs 2 Mana Points.</content>
     <content contentuid="h2ninjashadowjg0003" version="1">Teleport through shadows up to 12m. Your next attack or technique this turn gains +1 Attack Roll. Costs 2 Mana Points.</content>
-    <content contentuid="h2ninjashadowjg0004" version="1">Teleport through shadows up to 15m. Your next attack or technique this turn gains +1 Attack Roll and +1d6 bonus damage. Costs 2 Mana Points.</content>
+    <content contentuid="h2ninjashadowjg0004" version="1">Teleport through shadows up to 15m. Your next attack or technique this turn gains +2 Attack Roll and +1d6 bonus damage. Costs 2 Mana Points.</content>
     <content contentuid="h2ninjashadowjg0005" version="1">Unlocks Shadow Jump at Ninja level 2.</content>
     <content contentuid="h2ninjashadowjg0006" version="1">Shadow Jump improves at Ninja level 5.</content>
-    <content contentuid="h2ninjashadowjg0007" version="1">Shadow Jump improves at Ninja level 9 and gains bonus damage.</content>
+    <content contentuid="h2ninjashadowjg0007" version="1">Shadow Jump improves at Ninja level 9 (+2 Attack Roll on next hit and +1d6 bonus damage).</content>
     <content contentuid="h2ninjashadowjg0010" version="1">Shadow Jump Momentum</content>
     <content contentuid="h2ninjashadowjg0011" version="1">After Shadow Jump, gain +1 Attack Roll on your next attack or technique this turn.</content>
     <content contentuid="h2ninjashadowjg0012" version="1">Shadow Jump Momentum+</content>
-    <content contentuid="h2ninjashadowjg0013" version="1">After Shadow Jump, gain +1 Attack Roll and +1d6 bonus damage on your next attack or technique this turn.</content>
+    <content contentuid="h2ninjashadowjg0013" version="1">After Shadow Jump, gain +2 Attack Roll and +1d6 bonus damage on your next attack or technique this turn.</content>
     <content contentuid="h2ninjamistslashg0001" version="1">Mist Slash</content>
     <content contentuid="h2ninjamistslashg0002" version="1">Slash a target within 6m with a mist-infused strike. Reposition 3m after hit without provoking opportunity attacks. Costs 2 Mana Points.</content>
     <content contentuid="h2ninjamistslashg0003" version="1">Slash a target within 6m. Deals weapon damage +1d6 and grants 3m safe reposition after hit. Costs 2 Mana Points.</content>

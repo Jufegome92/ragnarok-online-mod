@@ -2,31 +2,29 @@
   "class": "Novice",
   "subclass": "Ninja",
   "granted_at_character_level": 2,
-
   "progression_basis": {
     "uses_character_level_for_scaling": true,
     "novice_occupies_level_1": true,
     "baseline_unlock_level": 2,
-    "major_scaling_milestones": [5, 9]
+    "major_scaling_milestones": [
+      5,
+      9
+    ]
   },
-
   "hit_points": {
     "base": 8,
     "per_level": 6,
     "constitution_modifier_applies": true,
     "formula_note": "At Ninja levels, gain 6 HP + Constitution modifier per level."
   },
-
   "spellcasting_ability": "Intelligence",
   "spellcasting_save_dc_formula": "8 + proficiency_bonus + intelligence_modifier",
-
   "mana_points": {
     "base_formula": "4 + (2 * character_level)",
     "modifier_scaling": "character_level * floor(spellcasting_modifier / 2)",
     "total_formula": "(4 + (2 * character_level)) + (character_level * floor(spellcasting_modifier / 2))",
     "formula_note": "For Ninja, spellcasting_modifier uses Intelligence."
   },
-
   "proficiencies": {
     "saving_throws": [
       "Dexterity",
@@ -51,23 +49,28 @@
       "expertise": 1
     }
   },
-
   "design_identity": {
-    "role": "Skirmisher / Backline Hunter / Ninjutsu Hybrid",
-    "combat_style": "Switches between Throwing, Shadow Arts, and Ninpou to harass, reposition, control fields, and finish targets.",
+    "role": "Skirmisher / Tactical Debuffer / Hybrid Finisher",
+    "combat_style": "Switches between Throwing, Shadow Arts, and Ninpou to pressure priority targets, control movement, punish vulnerable enemies, and adapt to enemy defenses.",
+    "branch_fantasies": {
+      "throwing_mastery": "Physical pressure branch. Uses Bleeding, Reeling, Hamstrung, Maimed, and execution sequencing to disable or isolate targets.",
+      "shadow_arts": "Mobility and assassination branch. Uses teleportation, repositioning, evasive tempo, and isolated-target payoffs.",
+      "ninpou_training": "Elemental casting branch. Uses bolts, fields, and bursts for ranged magical damage and spatial control."
+    },
     "strengths": [
       "Excellent mobility",
       "Strong anti-backline pressure",
-      "Flexible mix of physical and magical tools",
-      "Can switch between safe pressure and high-commitment burst"
+      "Has both physical and magical threat profiles",
+      "Can pivot between poke, setup, control, and execution",
+      "Throwing can punish high-magic-resistance enemies without feeling like a fallback"
     ],
     "weaknesses": [
-      "Needs smart stance usage to maximize value",
-      "Less durable when caught in direct attrition",
-      "Final Strike is highly committal"
+      "Needs sequencing and stance management to maximize value",
+      "Durability remains modest in direct attrition",
+      "Several premium effects depend on prior setup or conditioned targets",
+      "Final Strike is powerful but committal"
     ]
   },
-
   "core_systems": {
     "ninja_stances": {
       "description": "The Ninja uses three combat stances. Only one stance may be active at a time.",
@@ -84,11 +87,39 @@
         "matching_stance_grants_bonus_or_premium_effects": true
       }
     },
+    "throwing_condition_model": {
+      "description": "Throwing is a full branch, not a fallback. It mirrors Ninpou's single-target / control / burst structure, but expresses power through physical conditions instead of elemental spell damage.",
+      "preferred_conditions": [
+        "Bleeding",
+        "Reeling",
+        "Hamstrung",
+        "Maimed",
+        "Off Balance",
+        "Dazed",
+        "Slowed"
+      ],
+      "condition_ladder": {
+        "tier_1_setup": [
+          "Bleeding",
+          "Reeling"
+        ],
+        "tier_2_control": [
+          "Hamstrung"
+        ],
+        "tier_3_payoff": [
+          "Maimed",
+          "Off Balance"
+        ],
+        "tier_4_premium_payoff": [
+          "Dazed",
+          "Slowed"
+        ]
+      }
+    },
     "soul_system": {
-      "description": "Soul is the central concentration buff of the class and amplifies every branch rather than creating a separate branch."
+      "description": "Soul is the central concentration buff of the class. It amplifies every branch and makes setup-to-payoff turns more explosive."
     }
   },
-
   "progression": {
     "level_2": {
       "class_state": "Ninja",
@@ -100,6 +131,7 @@
     },
     "level_3": {
       "features_gained": [
+        "Throwing Art",
         "Ninpou Bolt",
         "Mist Slash"
       ]
@@ -112,6 +144,7 @@
     },
     "level_5": {
       "features_gained": [
+        "Throwing Field",
         "Ninpou Field",
         "Illusionary Shadow"
       ]
@@ -123,6 +156,7 @@
     },
     "level_7": {
       "features_gained": [
+        "Shuriken Barrage",
         "Ninpou Burst"
       ]
     },
@@ -138,7 +172,7 @@
     },
     "level_10": {
       "features_gained": [
-        "Advanced Cross-Branch Synergy"
+        "Flow of the Three Arts"
       ]
     },
     "level_11": {
@@ -152,7 +186,6 @@
       ]
     }
   },
-
   "skills": [
     {
       "id": "ninja_discipline",
@@ -174,41 +207,52 @@
       },
       "stance_variants": {
         "Throwing Mastery": {
-          "identity": "Thrown weapon precision and efficiency",
+          "identity": "Physical precision, debuff application, and execution sequencing.",
           "base_effects": {
-            "thrown_technique_attack_roll_bonus": 1,
-            "first_thrown_technique_each_turn_costs_1_less_mp_minimum_1": true,
-            "huuma_shuriken_small_aoe_enabled": true
+            "first_throwing_skill_each_turn_costs_1_less_mp_minimum_1": true,
+            "throwing_skill_attack_roll_bonus_against_conditioned_targets": 1,
+            "conditioned_targets_definition": [
+              "Bleeding",
+              "Reeling",
+              "Hamstrung",
+              "Maimed",
+              "Off Balance",
+              "Dazed",
+              "Slowed"
+            ]
           },
           "scaling": {
             "milestones": [
               {
                 "character_level": 2,
                 "effects": {
-                  "thrown_technique_attack_roll_bonus": 1
+                  "throwing_skill_attack_roll_bonus_against_conditioned_targets": 1
                 }
               },
               {
                 "character_level": 5,
                 "effects": {
-                  "thrown_technique_attack_roll_bonus": 2,
-                  "thrown_technique_bonus_damage": "1d4"
+                  "throwing_skill_attack_roll_bonus_against_conditioned_targets": 2,
+                  "throwing_skills_bonus_damage_against_conditioned_targets": "1d4"
                 }
               },
               {
                 "character_level": 9,
                 "effects": {
-                  
-                  "thrown_technique_attack_roll_bonus": 3,
-                  "thrown_technique_bonus_damage": "1d6",
-                  "huuma_shuriken_increased_distance_meters": 5
+                  "throwing_skill_attack_roll_bonus_against_conditioned_targets": 3,
+                  "throwing_skills_bonus_damage_against_conditioned_targets": "1d6",
+                  "once_per_turn_if_a_throwing_skill_applies_a_condition_to_an_already_conditioned_target_upgrade_to_a_premium_rider": true,
+                  "premium_rider_examples": [
+                    "Hamstrung to Maimed until end of next turn",
+                    "Reeling to Dazed until end of next turn"
+                  ]
                 }
               }
             ]
           }
         },
         "Shadow Arts": {
-          "identity": "Mobility, assassination and evasive tempo",
+          "identity": "Mobility, evasion, isolated-target pressure, and assassination tempo.",
           "base_effects": {
             "first_shadow_art_each_turn_costs_1_less_mp_minimum_1": true,
             "after_using_a_shadow_art_gain_free_movement_meters": 3
@@ -224,22 +268,23 @@
               {
                 "character_level": 5,
                 "effects": {
-                  "shadow_jump_and_shadow_slash_gain_bonus_attack_or_accuracy": 1
+                  "shadow_arts_bonus_attack_or_accuracy_against_isolated_targets": 1,
+                  "first_shadow_art_each_turn_bonus_damage_against_isolated_targets": "1d4"
                 }
               },
               {
                 "character_level": 9,
                 "effects": {
-                  "after_shadow_slash_gain_veiled": true,
-                  "shadow_jump_and_shadow_slash_gain_bonus_attack_or_accuracy": 2,
-                  "if_shadow_slash_hits_an_isolated_target_or_defeats_target_gain_invisibility_until_end_of_turn_or_until_attacking": true
+                  "after_shadow_slash_or_mist_slash_hit_gain_veiled_until_start_of_next_turn_if_target_is_isolated_or_conditioned": true,
+                  "shadow_arts_bonus_attack_or_accuracy_against_isolated_targets": 2,
+                  "first_shadow_art_each_turn_bonus_damage_against_isolated_targets": "1d6"
                 }
               }
             ]
           }
         },
         "Ninpou Training": {
-          "identity": "Magical focus, efficiency and elemental amplification",
+          "identity": "Elemental casting, field control, and magical amplification.",
           "base_effects": {
             "ninpou_spell_attack_bonus": 1,
             "ninpou_save_dc_bonus": 1,
@@ -257,16 +302,17 @@
               {
                 "character_level": 5,
                 "effects": {
+                  "ninpou_spell_attack_bonus": 2,
                   "ninpou_save_dc_bonus": 2,
-                  "ninpou_spell_attack_bonus": 3
+                  "ninpou_bonus_damage": "1d4"
                 }
               },
               {
                 "character_level": 9,
                 "effects": {
-                  "ninjutsu_bonus_damage": "1d8",
+                  "ninpou_spell_attack_bonus": 3,
                   "ninpou_save_dc_bonus": 3,
-                  "ninpou_spell_attack_bonus": 4
+                  "ninpou_bonus_damage": "1d8"
                 }
               }
             ]
@@ -274,7 +320,6 @@
         }
       }
     },
-
     {
       "id": "ninja_thrown_technique",
       "name": "Thrown Technique",
@@ -287,8 +332,8 @@
         "Valid visible target or point"
       ],
       "duration": "Instant",
-      "range": "Varies by throw (Shuriken 18m, Kunai 10m, Huuma 10m)",
-      "description": "The Ninja chooses between light shuriken pressure, precise kunai disruption, or a heavy Huuma throw with a small impact area.",
+      "range": "Shuriken 18m, Kunai 10m, Huuma 10m",
+      "description": "The Ninja chooses between light pressure, condition setup, or a small-area heavy throw. This is the branch's reliable baseline tool.",
       "base_effects": {
         "choose_one": [
           "Throw Shuriken",
@@ -298,68 +343,79 @@
       },
       "variants": {
         "Throw Shuriken": {
+          "role": "Cheap pressure and setup follow-up",
           "base_effect": {
             "attack_roll_bonus": 2,
-            "damage": "1d6 + dexterity_modifier"
+            "damage": "1d6 + dexterity_modifier",
+            "bonus_damage_if_target_is_conditioned": "1d4"
           },
           "scaling": {
             "milestones": [
               {
                 "character_level": 2,
                 "effects": {
-                  "damage": "1d6 + dexterity_modifier"
+                  "damage": "1d6 + dexterity_modifier",
+                  "bonus_damage_if_target_is_conditioned": "1d4"
                 }
               },
               {
                 "character_level": 5,
                 "effects": {
-                  "damage": "1d8 + dexterity_modifier"
+                  "damage": "1d8 + dexterity_modifier",
+                  "bonus_damage_if_target_is_conditioned": "1d6"
                 }
               },
               {
                 "character_level": 9,
                 "effects": {
-                  "damage": "2d8 + dexterity_modifier"
+                  "damage": "2d8 + dexterity_modifier",
+                  "bonus_damage_if_target_is_conditioned": "1d8"
                 }
               }
             ]
           }
         },
         "Throw Kunai": {
+          "role": "Reliable precision debuff",
           "base_effect": {
             "damage": "1d8 + dexterity_modifier",
-            "effect": "Target suffers -1 AC against your next attack or technique until the end of your next turn."
+            "on_failed_save": "Apply Reeling for 2 turns"
           },
+          "save_type": "Constitution",
           "scaling": {
             "milestones": [
               {
                 "character_level": 2,
                 "effects": {
-                  "damage": "1d8 + dexterity_modifier"
+                  "damage": "1d8 + dexterity_modifier",
+                  "on_failed_save": "Apply Reeling for 2 turns"
                 }
               },
               {
                 "character_level": 5,
                 "effects": {
-                  "damage": "1d10 + dexterity_modifier"
+                  "damage": "1d10 + dexterity_modifier",
+                  "on_failed_save": "Apply Reeling for 3 turns"
                 }
               },
               {
                 "character_level": 9,
                 "effects": {
                   "damage": "2d10 + dexterity_modifier",
-                  "apply_marked_or_bleeding": true
+                  "if_target_already_has_reeling_and_fails_save_again": "Lose Reactions until start of next turn"
                 }
               }
             ]
           }
         },
         "Throw Huuma Shuriken": {
+          "role": "Small-area heavy throw and payoff",
           "base_cost_mp": 2,
           "base_effect": {
             "center_target_damage": "2d6 + dexterity_modifier",
             "small_aoe_radius_meters": 3,
-            "secondary_targets_damage": "1d6"
+            "secondary_targets_damage": "1d6",
+            "bonus_damage_to_conditioned_targets": "1d4"
           },
           "scaling": {
             "milestones": [
@@ -367,7 +423,8 @@
                 "character_level": 2,
                 "effects": {
                   "center_target_damage": "2d6 + dexterity_modifier",
-                  "secondary_targets_damage": "1d6"
+                  "secondary_targets_damage": "1d6",
+                  "bonus_damage_to_conditioned_targets": "1d4"
                 }
               },
               {
@@ -375,7 +432,8 @@
                 "effects": {
                   "center_target_damage": "3d6 + dexterity_modifier",
                   "small_aoe_radius_meters": 4,
-                  "secondary_targets_damage": "1d8"
+                  "secondary_targets_damage": "1d8",
+                  "bonus_damage_to_conditioned_targets": "1d6"
                 }
               },
               {
@@ -383,15 +441,17 @@
                 "effects": {
                   "center_target_damage": "4d6 + dexterity_modifier",
                   "small_aoe_radius_meters": 4,
-                  "secondary_targets_damage": "2d6"
-                }
+                  "secondary_targets_damage": "2d6",
+                  "bonus_damage_to_conditioned_targets": "1d8",
+                  "conditioned_center_target_on_failed_save": "Become Off Balance until end of next turn"
+                },
+                "save_type": "Strength"
               }
             ]
           }
         }
       }
     },
-
     {
       "id": "ninja_shadow_jump",
       "name": "Shadow Jump",
@@ -405,7 +465,7 @@
       ],
       "duration": "Instant",
       "range": "Self",
-      "description": "The Ninja disappears into shadow and reappears at a new position.",
+      "description": "The Ninja disappears into shadow and reappears at a new position, setting up its next technique.",
       "base_effects": {
         "teleport_distance_meters": 9
       },
@@ -414,29 +474,157 @@
           {
             "character_level": 2,
             "effects": {
-              "teleport_distance_meters": 9
+              "teleport_distance_meters": 9,
+              "next_attack_or_technique_bonus_attack_roll": 1
             }
           },
           {
             "character_level": 5,
             "effects": {
               "teleport_distance_meters": 12,
-              "next_attack_or_technique_bonus_attack_roll": 1
+              "next_attack_or_technique_bonus_attack_roll": 1,
+              "next_attack_or_technique_bonus_attack_damage": "1d4"
             }
           },
           {
             "character_level": 9,
             "effects": {
               "teleport_distance_meters": 15,
-              "next_attack_or_technique_bonus_attack_roll": 1,
+              "next_attack_or_technique_bonus_attack_roll": 2,
               "next_attack_or_technique_bonus_attack_damage": "1d6"
-              
             }
           }
         ]
       }
     },
-
+    {
+      "id": "ninja_throwing_art",
+      "name": "Throwing Art",
+      "learned_at_level": 3,
+      "category": "Attack",
+      "action_type": "Action",
+      "base_cost_mp": 2,
+      "requires_concentration": false,
+      "requires": [
+        "Valid target within 18m"
+      ],
+      "duration": "Instant plus rider",
+      "range": "18m",
+      "description": "The Ninja performs a specialized throwing technique that defines the branch's single-target tactical identity.",
+      "base_effects": {
+        "choose_one": [
+          "Razor Shuriken",
+          "Crippling Kunai",
+          "Disrupting Senbon"
+        ]
+      },
+      "variants": {
+        "Razor Shuriken": {
+          "role": "Single-target damage setup and anti-caster pressure",
+          "damage_type": "Slashing",
+          "base_effect": {
+            "damage": "2d6 + dexterity_modifier",
+            "on_failed_save": "Apply Bleeding for 2 turns"
+          },
+          "save_type": "Constitution",
+          "scaling": {
+            "milestones": [
+              {
+                "character_level": 3,
+                "effects": {
+                  "damage": "2d6 + dexterity_modifier",
+                  "on_failed_save": "Apply Bleeding for 2 turns"
+                }
+              },
+              {
+                "character_level": 5,
+                "effects": {
+                  "damage": "3d6 + dexterity_modifier",
+                  "bonus_damage_if_target_already_bleeding": "1d6"
+                }
+              },
+              {
+                "character_level": 9,
+                "effects": {
+                  "damage": "4d6 + dexterity_modifier",
+                  "bonus_damage_if_target_already_bleeding": "1d8",
+                  "if_target_is_concentrating_and_bleeding": "Its next Concentration save before end of your next turn is made with Disadvantage"
+                }
+              }
+            ]
+          }
+        },
+        "Crippling Kunai": {
+          "role": "Movement control and setup for execution",
+          "damage_type": "Piercing",
+          "base_effect": {
+            "damage": "2d6 + dexterity_modifier",
+            "on_failed_save": "Apply Hamstrung for 2 turns"
+          },
+          "save_type": "Constitution",
+          "scaling": {
+            "milestones": [
+              {
+                "character_level": 3,
+                "effects": {
+                  "damage": "2d6 + dexterity_modifier",
+                  "on_failed_save": "Apply Hamstrung for 2 turns"
+                }
+              },
+              {
+                "character_level": 5,
+                "effects": {
+                  "damage": "3d6 + dexterity_modifier",
+                  "if_target_is_already_hamstrung_and_fails_save": "Become Maimed until end of next turn"
+                }
+              },
+              {
+                "character_level": 9,
+                "effects": {
+                  "damage": "4d6 + dexterity_modifier",
+                  "if_target_is_already_hamstrung_and_fails_save": "Become Maimed until end of next turn",
+                  "bonus_damage_against_hamstrung_or_maimed_targets": "1d8"
+                }
+              }
+            ]
+          }
+        },
+        "Disrupting Senbon": {
+          "role": "Accuracy suppression and anti-setup utility",
+          "damage_type": "Piercing",
+          "base_effect": {
+            "damage": "2d6 + dexterity_modifier",
+            "on_failed_save": "Apply Reeling for 3 turns"
+          },
+          "save_type": "Constitution",
+          "scaling": {
+            "milestones": [
+              {
+                "character_level": 3,
+                "effects": {
+                  "damage": "2d6 + dexterity_modifier",
+                  "on_failed_save": "Apply Reeling for 3 turns"
+                }
+              },
+              {
+                "character_level": 5,
+                "effects": {
+                  "damage": "3d6 + dexterity_modifier",
+                  "if_target_already_has_reeling_and_fails_save_again": "Lose Reactions until start of next turn"
+                }
+              },
+              {
+                "character_level": 9,
+                "effects": {
+                  "damage": "4d6 + dexterity_modifier",
+                  "if_target_already_has_reeling_and_fails_save_again": "Become Dazed until end of next turn"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
     {
       "id": "ninja_mist_slash",
       "name": "Mist Slash",
@@ -472,14 +660,13 @@
           {
             "character_level": 9,
             "effects": {
-              "if_target_is_isolated_gain_advantage_or_bonus_attack_roll": 1,
-              "bonus_damage": "2d6"
+              "bonus_damage": "2d6",
+              "if_target_is_isolated_or_conditioned": "Gain Advantage or +1 attack roll"
             }
           }
         ]
       }
     },
-
     {
       "id": "ninja_ninpou_bolt",
       "name": "Ninpou Bolt",
@@ -492,7 +679,7 @@
         "Valid target within 18m"
       ],
       "duration": "Instant",
-      "range": "Varies by throw (Shuriken 18m, Kunai 10m, Huuma 10m)",
+      "range": "18m",
       "description": "The Ninja uses a focused elemental ninpou strike against a single target.",
       "base_effects": {
         "choose_one": [
@@ -530,7 +717,7 @@
             ]
           },
           "field_synergy": {
-            "with_crimson_fire_formation": "Targets in or affected by the field take an additional 1d10 Fire damage."
+            "with_crimson_fire_formation": "Targets in or affected by the field take an additional 1d8 Fire damage."
           }
         },
         "Lightning Spear of Ice": {
@@ -561,7 +748,7 @@
             ]
           },
           "field_synergy": {
-            "with_water_escape_technique": "Targets in or affected by the field take an additional 1d6 Cold damage and reduce movement speed by 5."
+            "with_water_escape_technique": "Targets in or affected by the field take an additional 1d6 Cold damage and lose 3m movement."
           }
         },
         "Wind Blade": {
@@ -592,12 +779,11 @@
             ]
           },
           "field_synergy": {
-            "with_lightning_crash": "Targets affected by the field take an additional 1d6 Thunder damage and lose reactions on failed save."
+            "with_lightning_crash": "Targets affected by the field take an additional 1d6 Thunder damage and lose Reactions on failed save."
           }
         }
       }
     },
-
     {
       "id": "ninja_reverse_tatami",
       "name": "Reverse Tatami",
@@ -637,7 +823,6 @@
         ]
       }
     },
-
     {
       "id": "ninja_shadow_slash",
       "name": "Shadow Slash",
@@ -673,14 +858,123 @@
           {
             "character_level": 9,
             "effects": {
-              "if_shadow_arts_stance_is_active_gain_veiled_until_start_of_next_turn": true,
-              "if_target_is_isolated_or_defeated_gain_invisibility_until_end_of_turn_or_until_attacking": true
+              "if_target_is_isolated_or_conditioned": "Gain Invisibility until end of turn or until attacking",
+              "bonus_damage_against_conditioned_targets": "1d6"
             }
           }
         ]
       }
     },
-
+    {
+      "id": "ninja_throwing_field",
+      "name": "Throwing Field",
+      "learned_at_level": 5,
+      "category": "Zone Control",
+      "action_type": "Action",
+      "base_cost_mp": 3,
+      "requires_concentration": true,
+      "requires": [
+        "Valid target point within 18m"
+      ],
+      "duration": "3 turns",
+      "range": "18m",
+      "description": "The Ninja deploys a prepared control zone made of blades, caltrops, or wire. This is the Throwing branch's space-control skill.",
+      "base_effects": {
+        "choose_one": [
+          "Razor Wire Field",
+          "Caltrop Spread",
+          "Suppression Grid"
+        ]
+      },
+      "variants": {
+        "Razor Wire Field": {
+          "role": "Damage field and bleed setup",
+          "base_effect": {
+            "area_radius_meters": 3,
+            "terrain_effect": "Difficult Terrain",
+            "start_or_enter_damage": "1d4 Slashing",
+            "on_failed_save": "Apply Bleeding until end of next turn"
+          },
+          "save_type": "Constitution",
+          "scaling": {
+            "milestones": [
+              {
+                "character_level": 5,
+                "effects": {
+                  "start_or_enter_damage": "1d4 Slashing"
+                }
+              },
+              {
+                "character_level": 9,
+                "effects": {
+                  "start_or_enter_damage": "1d6 Slashing",
+                  "if_target_already_bleeding_and_fails_save_again": "Take additional 1d6 Slashing"
+                }
+              }
+            ]
+          },
+          "synergy": {
+            "with_razor_shuriken_and_thousand_needle_gale": "These skills deal an additional 1d6 damage against targets standing in the field."
+          }
+        },
+        "Caltrop Spread": {
+          "role": "Movement denial and setup for maiming",
+          "base_effect": {
+            "area_radius_meters": 3,
+            "terrain_effect": "Difficult Terrain",
+            "on_failed_save": "Apply Hamstrung until end of next turn"
+          },
+          "save_type": "Constitution",
+          "scaling": {
+            "milestones": [
+              {
+                "character_level": 5,
+                "effects": {
+                  "on_failed_save": "Apply Hamstrung until end of next turn"
+                }
+              },
+              {
+                "character_level": 9,
+                "effects": {
+                  "if_target_already_hamstrung_and_fails_save_again": "Become Maimed until end of current turn",
+                  "conditioned_targets_in_field_take_bonus_damage_from_huuma_and_crippling_kunai": "1d6"
+                }
+              }
+            ]
+          },
+          "synergy": {
+            "with_crippling_kunai_and_huuma_severing_wheel": "Targets already Hamstrung or Maimed are much easier to finish."
+          }
+        },
+        "Suppression Grid": {
+          "role": "Accuracy suppression and premium disable setup",
+          "base_effect": {
+            "area_radius_meters": 3,
+            "on_failed_save": "Apply Reeling for 2 turns"
+          },
+          "save_type": "Constitution",
+          "scaling": {
+            "milestones": [
+              {
+                "character_level": 5,
+                "effects": {
+                  "on_failed_save": "Apply Reeling for 2 turns"
+                }
+              },
+              {
+                "character_level": 9,
+                "effects": {
+                  "if_target_already_has_reeling_and_fails_save_again": "Become Dazed until end of current turn"
+                }
+              }
+            ]
+          },
+          "synergy": {
+            "with_disrupting_senbon_and_suppression_barrage": "Repeated failed saves can lock down reactions and attack quality."
+          }
+        }
+      }
+    },
     {
       "id": "ninja_ninpou_field",
       "name": "Ninpou Field",
@@ -784,7 +1078,6 @@
         }
       }
     },
-
     {
       "id": "ninja_illusionary_shadow",
       "name": "Illusionary Shadow",
@@ -821,7 +1114,6 @@
         }
       }
     },
-
     {
       "id": "ninja_cast_off_cicada_shell",
       "name": "Cast-off Cicada Shell",
@@ -858,11 +1150,118 @@
       },
       "shadow_arts_bonus": {
         "if_shadow_arts_stance_is_active": {
-          "effect": "Your next Shadow Slash or Thrown Technique before end of turn gains +1 attack roll."
+          "effect": "Your next Shadow Slash, Mist Slash, or Throwing Art before end of turn gains +1 attack roll."
         }
       }
     },
-
+    {
+      "id": "ninja_shuriken_barrage",
+      "name": "Shuriken Barrage",
+      "learned_at_level": 7,
+      "category": "Attack",
+      "action_type": "Action",
+      "base_cost_mp": 4,
+      "requires_concentration": false,
+      "requires": [
+        "Valid target area within 18m"
+      ],
+      "duration": "Instant",
+      "range": "18m",
+      "description": "The Ninja unleashes a high-output throwing technique. This is the Throwing branch's burst skill.",
+      "base_effects": {
+        "choose_one": [
+          "Thousand Needle Gale",
+          "Huuma Severing Wheel",
+          "Suppression Barrage"
+        ]
+      },
+      "variants": {
+        "Thousand Needle Gale": {
+          "role": "Area damage and bleed payoff",
+          "damage_type": "Piercing",
+          "base_effect": {
+            "area_radius_meters": 3,
+            "damage": "3d6 + dexterity_modifier",
+            "bonus_damage_to_bleeding_targets": "1d6"
+          },
+          "scaling": {
+            "milestones": [
+              {
+                "character_level": 7,
+                "effects": {
+                  "damage": "3d6 + dexterity_modifier",
+                  "bonus_damage_to_bleeding_targets": "1d6"
+                }
+              },
+              {
+                "character_level": 9,
+                "effects": {
+                  "damage": "4d6 + dexterity_modifier",
+                  "bonus_damage_to_bleeding_targets": "1d8",
+                  "targets_that_fail_save_and_are_already_bleeding": "Take additional 1d6 Piercing"
+                }
+              }
+            ]
+          }
+        },
+        "Huuma Severing Wheel": {
+          "role": "Burst against slowed or trapped targets",
+          "damage_type": "Slashing",
+          "base_effect": {
+            "area_radius_meters": 3,
+            "damage": "3d6 + dexterity_modifier",
+            "conditioned_targets_bonus_damage": "1d6",
+            "hamstrung_or_maimed_targets_on_failed_save": "Become Off Balance until end of next turn"
+          },
+          "save_type": "Strength",
+          "scaling": {
+            "milestones": [
+              {
+                "character_level": 7,
+                "effects": {
+                  "damage": "3d6 + dexterity_modifier"
+                }
+              },
+              {
+                "character_level": 9,
+                "effects": {
+                  "damage": "4d6 + dexterity_modifier",
+                  "conditioned_targets_bonus_damage": "1d8",
+                  "hamstrung_or_maimed_targets_on_failed_save": "Fall Prone instead of only becoming Off Balance"
+                }
+              }
+            ]
+          }
+        },
+        "Suppression Barrage": {
+          "role": "Accuracy lockdown and premium disable",
+          "damage_type": "Piercing",
+          "base_effect": {
+            "area_radius_meters": 3,
+            "damage": "3d6 + dexterity_modifier",
+            "reeling_targets_on_failed_save": "Become Dazed until end of next turn"
+          },
+          "save_type": "Constitution",
+          "scaling": {
+            "milestones": [
+              {
+                "character_level": 7,
+                "effects": {
+                  "damage": "3d6 + dexterity_modifier"
+                }
+              },
+              {
+                "character_level": 9,
+                "effects": {
+                  "damage": "4d6 + dexterity_modifier",
+                  "if_target_is_already_reeling_and_fails_save_again": "Become Slowed until end of next turn"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
     {
       "id": "ninja_ninpou_burst",
       "name": "Ninpou Burst",
@@ -875,7 +1274,7 @@
         "Valid target area within 18m"
       ],
       "duration": "Instant",
-      "range": "Varies by throw (Shuriken 18m, Kunai 10m, Huuma 10m)",
+      "range": "18m",
       "description": "The Ninja releases a large elemental ninpou technique in an area.",
       "base_effects": {
         "choose_one": [
@@ -961,7 +1360,6 @@
         }
       }
     },
-
     {
       "id": "ninja_soul",
       "name": "Soul",
@@ -974,8 +1372,10 @@
       "duration": "3 turns",
       "description": "The Ninja enters a heightened state that empowers every branch of the class.",
       "base_effects": {
-        "thrown_techniques_bonus_attack_roll": 1,
-        "ninjou_spell_attack_or_save_dc_bonus": 1,
+        "throwing_skills_bonus_attack_roll": 1,
+        "throwing_skills_bonus_condition_save_dc": 1,
+        "throwing_skills_bonus_damage_against_conditioned_targets": "1d6",
+        "ninpou_spell_attack_or_save_dc_bonus": 1,
         "shadow_arts_bonus_movement_meters": 3,
         "final_strike_bonus_damage": "1d8"
       },
@@ -984,8 +1384,10 @@
           {
             "character_level": 8,
             "effects": {
-              "thrown_techniques_bonus_attack_roll": 1,
-              "ninjou_spell_attack_or_save_dc_bonus": 1,
+              "throwing_skills_bonus_attack_roll": 1,
+              "throwing_skills_bonus_condition_save_dc": 1,
+              "throwing_skills_bonus_damage_against_conditioned_targets": "1d6",
+              "ninpou_spell_attack_or_save_dc_bonus": 1,
               "shadow_arts_bonus_movement_meters": 3,
               "final_strike_bonus_damage": "1d8"
             }
@@ -1000,11 +1402,28 @@
       },
       "high_level_bonus": {
         "if_active_at_character_level_12": {
-          "effect": "Final Strike and Ninpou Burst gain an additional 1d8 damage."
+          "effect": "Final Strike, Shuriken Barrage, and Ninpou Burst gain an additional 1d8 damage."
         }
       }
     },
-
+    {
+      "id": "ninja_flow_of_the_three_arts",
+      "name": "Flow of the Three Arts",
+      "learned_at_level": 10,
+      "category": "Passive",
+      "action_type": "Passive",
+      "cost_mp": 0,
+      "requires_concentration": false,
+      "requires": [],
+      "duration": "Permanent",
+      "description": "The three branches of the class now intentionally feed one another instead of functioning as isolated toolboxes.",
+      "base_effects": {
+        "after_shadow_jump_your_next_throwing_art_or_ninpou_bolt_this_turn_gains_bonus_attack_or_save_dc": 1,
+        "after_a_throwing_skill_hits_a_conditioned_target_your_next_shadow_art_this_turn_costs_1_less_mp_minimum_1": true,
+        "targets_in_your_throwing_field_take_bonus_damage_from_throwing_art_and_shuriken_barrage": "1d4",
+        "targets_in_your_ninpou_field_take_bonus_damage_from_ninpou_bolt_and_ninpou_burst": "1d4"
+      }
+    },
     {
       "id": "ninja_final_strike",
       "name": "Final Strike",
@@ -1014,13 +1433,40 @@
       "cost_mp": 4,
       "requires_concentration": false,
       "requires": [
-        "Target in melee range"
+        "Valid target in melee or within 10m depending on mode"
       ],
       "duration": "Instant plus drawback",
-      "description": "The Ninja commits fully to a decisive finishing attack, sacrificing safety for overwhelming damage.",
+      "description": "The Ninja commits fully to a decisive finishing attack. This finisher supports both melee and throwing fantasies.",
       "base_effects": {
-        "damage_profile": "Weapon-based melee damage plus 4d8 bonus damage",
-        "drawback": "-2 AC and cannot take reactions until the start of your next turn"
+        "choose_one": [
+          "Execution Cut",
+          "Execution Throw"
+        ]
+      },
+      "variants": {
+        "Execution Cut": {
+          "role": "Melee finisher",
+          "requirements": [
+            "Target in melee range"
+          ],
+          "base_effect": {
+            "damage_profile": "Weapon-based melee damage plus 4d8 bonus damage",
+            "bonus_damage_against_conditioned_targets": "1d8",
+            "drawback": "-2 AC and cannot take Reactions until the start of your next turn"
+          }
+        },
+        "Execution Throw": {
+          "role": "Ranged finisher for Throwing builds",
+          "requirements": [
+            "Target within 10m",
+            "Target is Bleeding, Reeling, Hamstrung, Maimed, Off Balance, Dazed, Slowed, or below 50 percent HP"
+          ],
+          "base_effect": {
+            "damage_profile": "Thrown weapon damage plus 4d8 bonus damage",
+            "bonus_damage_against_conditioned_targets": "1d8",
+            "drawback": "-2 AC and cannot take Reactions until the start of your next turn"
+          }
+        }
       },
       "soul_bonus": {
         "if_soul_is_active": {
@@ -1028,12 +1474,11 @@
         }
       },
       "high_level_bonus": {
-        "if_used_at_character_level_12_while_soul_is_active": {
-          "effect": "Final Strike gains an additional 1d8 damage and the target must pass a Constitution save or become Dazed until the end of its next turn."
+        "if_used_at_character_level_12_while_soul_is_active_against_a_conditioned_target": {
+          "effect": "Target must pass a Constitution save or become Dazed until the end of its next turn."
         }
       }
     },
-
     {
       "id": "ninja_master_ninja",
       "name": "Master Ninja",
@@ -1047,13 +1492,15 @@
       "description": "The Ninja's throwing, shadow movement, and ninpou finally operate as one seamless style.",
       "base_effects": {
         "while_a_stance_is_active_the_first_matching_skill_each_turn_costs_1_less_mp_minimum_1": true,
-        "after_using_a_shadow_art_your_next_thrown_technique_or_ninpou_this_turn_gains_bonus_attack_or_save_dc": 1,
-        "enemies_affected_by_your_ninpou_field_take_bonus_damage_from_your_matching_ninpou_bolt": "1d4",
-        "first_stance_change_each_turn_remains_free_and_also_grants_3m_free_movement": true
+        "after_using_a_shadow_art_your_next_throwing_skill_or_ninpou_this_turn_gains_bonus_attack_or_save_dc": 1,
+        "after_using_a_throwing_skill_against_a_conditioned_target_your_next_shadow_art_this_turn_gains_bonus_damage": "1d6",
+        "enemies_affected_by_your_throwing_field_take_bonus_damage_from_your_throwing_art_and_shuriken_barrage": "1d6",
+        "enemies_affected_by_your_ninpou_field_take_bonus_damage_from_your_matching_ninpou_bolt": "1d6",
+        "first_stance_change_each_turn_remains_free_and_also_grants_3m_free_movement": true,
+        "final_strike_against_conditioned_targets_gains_bonus_damage": "1d8"
       }
     }
   ],
-
   "summary_tables": {
     "skill_unlocks": [
       {
@@ -1067,6 +1514,7 @@
       {
         "level": 3,
         "skills": [
+          "Throwing Art",
           "Ninpou Bolt",
           "Mist Slash"
         ]
@@ -1081,6 +1529,7 @@
       {
         "level": 5,
         "skills": [
+          "Throwing Field",
           "Ninpou Field",
           "Illusionary Shadow"
         ]
@@ -1094,6 +1543,7 @@
       {
         "level": 7,
         "skills": [
+          "Shuriken Barrage",
           "Ninpou Burst"
         ]
       },
@@ -1101,6 +1551,12 @@
         "level": 8,
         "skills": [
           "Soul"
+        ]
+      },
+      {
+        "level": 10,
+        "skills": [
+          "Flow of the Three Arts"
         ]
       },
       {
@@ -1130,6 +1586,10 @@
         "cost_mp": 2
       },
       {
+        "name": "Throwing Art",
+        "cost_mp": 2
+      },
+      {
         "name": "Mist Slash",
         "cost_mp": 2
       },
@@ -1146,6 +1606,10 @@
         "cost_mp": 3
       },
       {
+        "name": "Throwing Field",
+        "cost_mp": 3
+      },
+      {
         "name": "Ninpou Field",
         "cost_mp": 3
       },
@@ -1158,6 +1622,10 @@
         "cost_mp": 3
       },
       {
+        "name": "Shuriken Barrage",
+        "cost_mp": 4
+      },
+      {
         "name": "Ninpou Burst",
         "cost_mp": 4
       },
@@ -1166,23 +1634,25 @@
         "cost_mp": 3
       },
       {
+        "name": "Flow of the Three Arts",
+        "cost_mp": 0
+      },
+      {
         "name": "Final Strike",
         "cost_mp": 4
       }
     ]
   },
-
   "core_design_rules": [
     "Ninja begins at character level 2 because level 1 belongs to Novice.",
     "Ninja uses character-level scaling, not subclass-level scaling.",
     "The main scaling baselines are acquisition level plus major upgrades at character levels 5 and 9 where applicable.",
     "Throwing Mastery, Shadow Arts, and Ninpou Training are stances that enhance branches rather than hard-locking access to them.",
     "The first stance change each turn is free and exists to encourage adaptation rather than punish flexibility.",
-    "Huuma Shuriken is a small-area thrown attack, not a pure single-target strike.",
-    "Soul is the central buff of the class and should meaningfully support Throwing, Shadow Arts, Ninpou, and Final Strike.",
+    "Throwing is a full branch with its own single-target skill, control field, and burst skill.",
+    "Throwing should outperform Ninpou against conditioned or magic-resistant targets, while Ninpou should remain better at raw elemental area pressure and spell-based ranged damage.",
+    "Shadow Arts should remain the tempo and mobility branch, not the branch with the highest raw ranged damage.",
+    "Soul must meaningfully support Throwing, Shadow Arts, Ninpou, and Final Strike.",
     "Final Strike is intentionally high-commitment and should feel dangerous to use."
   ]
 }
-
-
-

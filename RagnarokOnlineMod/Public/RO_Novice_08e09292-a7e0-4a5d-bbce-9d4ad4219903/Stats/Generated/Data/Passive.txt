@@ -685,6 +685,14 @@ data "Properties" "ForceShowInCC;Highlighted"
 data "Boosts" "UnlockSpell(Shout_RO_NinjaTraining_On,Singular);UnlockSpell(Shout_RO_NinjaTraining_Off,Singular)"
 
 
+
+new entry "RO_Ninja_Discipline_L5"
+type "PassiveData"
+data "DisplayName" "h1ninjadisciplineg0001;1"
+data "Description" "h1ninjadisciplineg0002;1"
+data "Icon" "Action_MobileShooting"
+data "Properties" "Hidden"
+data "Boosts" "UnlockSpell(Shout_RO_NinjaTraining_On_5,Singular);UnlockSpell(Shout_RO_NinjaTraining_Off_5,Singular)"
 new entry "RO_Ninja_ThrownTechnique_L2"
 type "PassiveData"
 data "DisplayName" "h2ninjathrowng0017;1"
@@ -713,7 +721,7 @@ data "Boosts" "UnlockSpell(Projectile_RO_Ninja_ThrownTechnique_9,Singular)"
 new entry "RO_Ninja_ThrowingMastery_Bonus"
 type "PassiveData"
 data "Properties" "IsHidden"
-data "Boosts" "IF(HasStatus('RO_NINJA_DISCIPLINE_THROWING',context.Source) and (SpellId('Projectile_RO_Ninja_ThrowShuriken_2') or SpellId('Projectile_RO_Ninja_ThrowShuriken_5') or SpellId('Projectile_RO_Ninja_ThrowShuriken_9') or SpellId('Projectile_RO_Ninja_ThrowKunai_2') or SpellId('Projectile_RO_Ninja_ThrowKunai_5') or SpellId('Projectile_RO_Ninja_ThrowKunai_9') or SpellId('Projectile_RO_Ninja_ThrowHuuma_2') or SpellId('Projectile_RO_Ninja_ThrowHuuma_5') or SpellId('Projectile_RO_Ninja_ThrowHuuma_9'))):RollBonus(Attack,1)"
+data "Boosts" "IF(HasStatus('RO_NINJA_DISCIPLINE_THROWING',context.Source) and (SpellId('Projectile_RO_Ninja_ThrowShuriken_2') or SpellId('Projectile_RO_Ninja_ThrowShuriken_5') or SpellId('Projectile_RO_Ninja_ThrowShuriken_9') or SpellId('Projectile_RO_Ninja_ThrowKunai_2') or SpellId('Projectile_RO_Ninja_ThrowKunai_5') or SpellId('Projectile_RO_Ninja_ThrowKunai_9') or SpellId('Projectile_RO_Ninja_ThrowHuuma_2') or SpellId('Projectile_RO_Ninja_ThrowHuuma_5') or SpellId('Projectile_RO_Ninja_ThrowHuuma_9'))):RollBonus(Attack,1);IF(HasStatus('RO_NINJA_DISCIPLINE_THROWING',context.Source) and (SpellId('Projectile_RO_Ninja_ThrowShuriken_2') or SpellId('Projectile_RO_Ninja_ThrowShuriken_5') or SpellId('Projectile_RO_Ninja_ThrowShuriken_9') or SpellId('Projectile_RO_Ninja_ThrowKunai_2') or SpellId('Projectile_RO_Ninja_ThrowKunai_5') or SpellId('Projectile_RO_Ninja_ThrowKunai_9') or SpellId('Projectile_RO_Ninja_ThrowHuuma_2') or SpellId('Projectile_RO_Ninja_ThrowHuuma_5') or SpellId('Projectile_RO_Ninja_ThrowHuuma_9')) and (HasStatus('BLEEDING',context.Target) or HasStatus('OFF_BALANCED',context.Target) or HasStatus('DAZED',context.Target) or HasStatus('SLOWED',context.Target) or HasStatus('RO_NINJA_REELING',context.Target) or HasStatus('RO_NINJA_HAMSTRUNG',context.Target) or HasStatus('RO_NINJA_MAIMED',context.Target) or HasStatus('RO_NINJA_KUNAI_EXPOSED',context.Target))):RollBonus(Attack,1)"
 
 new entry "RO_Ninja_ShurikenPrecision"
 type "PassiveData"
@@ -744,12 +752,12 @@ data "Icon" "Spell_Conjuration_MistyStep"
 data "Properties" "Hidden"
 data "Boosts" "UnlockSpell(Target_RO_Ninja_ShadowJump_9,Singular)"
 
-new entry "RO_Ninja_ShadowJump_L9_DamageBonus"
+new entry "RO_Ninja_ShadowJump_Followup"
 type "PassiveData"
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnDamage"
-data "Conditions" "HasStatus('RO_NINJA_SHADOW_JUMP_BUFF_L9',context.Source) and HasDamageEffectFlag(DamageFlags.Hit) and (IsWeaponAttack() or IsSpell())"
-data "StatsFunctors" "DealDamage(1d6,Force)"
+data "Conditions" "(HasStatus('RO_NINJA_SHADOW_JUMP_BUFF_L2',context.Source) or HasStatus('RO_NINJA_SHADOW_JUMP_BUFF_L5',context.Source) or HasStatus('RO_NINJA_SHADOW_JUMP_BUFF_L9',context.Source)) and HasDamageEffectFlag(DamageFlags.Hit) and (IsWeaponAttack() or IsSpell())"
+data "StatsFunctors" "IF(HasStatus('RO_NINJA_SHADOW_JUMP_BUFF_L5',context.Source)):DealDamage(1d4,Force);IF(HasStatus('RO_NINJA_SHADOW_JUMP_BUFF_L9',context.Source)):DealDamage(1d6,Force);IF(HasStatus('RO_NINJA_SHADOW_JUMP_BUFF_L2',context.Source)):RemoveStatus(SELF,RO_NINJA_SHADOW_JUMP_BUFF_L2);IF(HasStatus('RO_NINJA_SHADOW_JUMP_BUFF_L5',context.Source)):RemoveStatus(SELF,RO_NINJA_SHADOW_JUMP_BUFF_L5);IF(HasStatus('RO_NINJA_SHADOW_JUMP_BUFF_L9',context.Source)):RemoveStatus(SELF,RO_NINJA_SHADOW_JUMP_BUFF_L9)"
 
 
 
