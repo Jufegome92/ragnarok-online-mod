@@ -317,6 +317,8 @@
     <content contentuid="h2ninjathrowartg0018" version="1">Disrupting Senbon (Lv9). Deals 4d6 + Dexterity Modifier Piercing damage. On failed CON save, applies Reeling for 3 turns. If target already Reeling and fails: also applies Dazed for 2 turns. Costs 2 Mana Points.</content>
     <content contentuid="h2ninjathrowartg0019" version="1">Throwing Art</content>
     <content contentuid="h2ninjathrowartg0020" version="1">Throwing Art improves at Ninja level 9. Deals 4d6 + Dexterity Modifier damage per variant.</content>
+    <content contentuid="h3ninjarazorconcg0001" version="1">Shaken Concentration</content>
+    <content contentuid="h3ninjarazorconcg0002" version="1">Struck by a Razor Shuriken while bleeding. Disadvantage on the next Concentration saving throw.</content>
   </contentList>
 
 
