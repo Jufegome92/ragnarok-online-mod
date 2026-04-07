@@ -285,6 +285,8 @@
     <content contentuid="h2ninjamistslashg0007" version="1">Mist Slash improves at Ninja level 9.</content>
     <content contentuid="h2ninjamistslashg0010" version="1">Mist Reposition</content>
     <content contentuid="h2ninjamistslashg0011" version="1">After landing Mist Slash, gain 3m movement and move without provoking opportunity attacks this turn.</content>
+    <content contentuid="h2ninjamistslashg0012" version="1">Predator's Strike</content>
+    <content contentuid="h2ninjamistslashg0013" version="1">Struck a conditioned target with Mist Slash. +1 to the next Attack Roll.</content>
     <content contentuid="h2ninjaninpoubg0001" version="1">Crimson Fire Blossom</content>
     <content contentuid="h2ninjaninpoubg0002" version="1">Launch a focused fire ninpou bolt at a target within 18m. Deals 2d6 + Intelligence Modifier Fire damage. Costs 2 Mana Points.</content>
     <content contentuid="h2ninjaninpoubg0003" version="1">Lightning Spear of Ice</content>

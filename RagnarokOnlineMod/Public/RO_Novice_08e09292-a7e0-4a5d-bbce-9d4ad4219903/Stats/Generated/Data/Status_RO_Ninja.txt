@@ -103,6 +103,15 @@ data "Boosts" "RollBonus(Attack,2)"
 data "StatusGroups" "SG_RemoveOnRespec"
 
 
+new entry "RO_NINJA_MIST_SLASH_PREDATOR"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "h2ninjamistslashg0012;1"
+data "Description" "h2ninjamistslashg0013;1"
+data "Icon" "Spell_Conjuration_MistyStep"
+data "Boosts" "RollBonus(Attack,1)"
+data "StatusGroups" "SG_RemoveOnRespec"
+
 new entry "RO_NINJA_MIST_SLASH_REPOSITION_L3"
 type "StatusData"
 data "StatusType" "BOOST"
