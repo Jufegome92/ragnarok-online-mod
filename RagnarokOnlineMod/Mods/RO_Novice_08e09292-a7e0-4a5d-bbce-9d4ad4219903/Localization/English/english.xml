@@ -327,6 +327,15 @@
     <content contentuid="h4ninjashadowslashg0001" version="1">Shadow Slash</content>
     <content contentuid="h4ninjashadowslashg0002" version="1">Cut through the distance and strike a target within 9m with your melee weapon. Costs 3 Mana Points.</content>
     <content contentuid="h4ninjashadowslashg0003" version="1">Learned Shadow Slash. Strike a target within 9m with your melee weapon, closing the gap in an instant. Costs 3 Mana Points.</content>
+    <content contentuid="h5ninjathrfieldg0001" version="1">Throwing Field</content>
+    <content contentuid="h5ninjathrfieldg0002" version="1">Deploy a control zone: Razor Wire, Caltrop Spread, or Suppression Grid. Concentration. Costs 3 Mana Points.</content>
+    <content contentuid="h5ninjathrfieldg0003" version="1">Learned Throwing Field. Deploy a persistent control zone of your choice to bleed, cripple, or suppress enemies within the area.</content>
+    <content contentuid="h5ninjarazorwireg0001" version="1">Razor Wire Field</content>
+    <content contentuid="h5ninjarazorwireg0002" version="1">Throw razor wire that unfurls into a zone around the target. On hit: deal 1d4 Slashing damage. Constitution saving throw or become Bleeding. The wire zone creates Difficult Terrain and persists while you Concentrate. Costs 3 Mana Points.</content>
+    <content contentuid="h5ninjacaltropg0001" version="1">Caltrop Spread</content>
+    <content contentuid="h5ninjacaltropg0002" version="1">Scatter caltrops around the target. On hit: Constitution saving throw or become Hamstrung. The caltrop zone creates Difficult Terrain and persists while you Concentrate. Costs 3 Mana Points.</content>
+    <content contentuid="h5ninjasuppgridg0001" version="1">Suppression Grid</content>
+    <content contentuid="h5ninjasuppgridg0002" version="1">Deploy a suppression web around the target. On hit: Constitution saving throw or become Reeling for 2 turns. The web zone creates Difficult Terrain and persists while you Concentrate. Costs 3 Mana Points.</content>
   </contentList>
 
 

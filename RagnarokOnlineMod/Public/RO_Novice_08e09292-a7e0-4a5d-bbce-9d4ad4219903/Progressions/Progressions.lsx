@@ -410,7 +410,7 @@
         <node id="Progression">
           <attribute id="Level" type="uint8" value="5" />
           <attribute id="Name" type="LSString" value="RO_Ninja" />
-          <attribute id="PassivesAdded" type="LSString" value="RO_Ninja_Discipline_L5;RO_Ninja_ThrownTechnique_L5;RO_Ninja_ShadowJump_L5;RO_Ninja_MistSlash_L5;RO_Ninja_NinpouBolt_L5;RO_Ninja_ThrowingArt_L5;RO_Ninja_ThrowingMastery_Bonus_L5L9;RO_Ninja_ThrowingMastery_Scale_L5" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_Ninja_ThrowingField_L5;RO_Ninja_Discipline_L5;RO_Ninja_ThrownTechnique_L5;RO_Ninja_ShadowJump_L5;RO_Ninja_MistSlash_L5;RO_Ninja_NinpouBolt_L5;RO_Ninja_ThrowingArt_L5;RO_Ninja_ThrowingMastery_Bonus_L5L9;RO_Ninja_ThrowingMastery_Scale_L5" />
           <attribute id="PassivesRemoved" type="LSString" value="RO_Ninja_Discipline;RO_Ninja_ThrownTechnique_L2;RO_Ninja_ShadowJump_L2;RO_Ninja_MistSlash_L3;RO_Ninja_NinpouBolt_L3;RO_Ninja_ThrowingArt_L3" />
           <attribute id="ProgressionType" type="uint8" value="1" />
           <attribute id="TableUUID" type="guid" value="fedc62af-817a-47b8-abf2-0a8de2694f70" />
@@ -440,8 +440,8 @@
         <node id="Progression">
           <attribute id="Level" type="uint8" value="9" />
           <attribute id="Name" type="LSString" value="RO_Ninja" />
-          <attribute id="PassivesAdded" type="LSString" value="RO_Ninja_ThrownTechnique_L9;RO_Ninja_ShadowJump_L9;RO_Ninja_MistSlash_L9;RO_Ninja_NinpouBolt_L9;RO_Ninja_ThrowingArt_L9;RO_Ninja_ThrowingMastery_Scale_L9" />
-          <attribute id="PassivesRemoved" type="LSString" value="RO_Ninja_ThrownTechnique_L5;RO_Ninja_ShadowJump_L5;RO_Ninja_MistSlash_L5;RO_Ninja_NinpouBolt_L5;RO_Ninja_ShadowJump_L9_DamageBonus;RO_Ninja_ThrowingArt_L5;RO_Ninja_ThrowingMastery_Scale_L5" />
+          <attribute id="PassivesAdded" type="LSString" value="RO_Ninja_ThrowingField_L9;RO_Ninja_ThrownTechnique_L9;RO_Ninja_ShadowJump_L9;RO_Ninja_MistSlash_L9;RO_Ninja_NinpouBolt_L9;RO_Ninja_ThrowingArt_L9;RO_Ninja_ThrowingMastery_Scale_L9" />
+          <attribute id="PassivesRemoved" type="LSString" value="RO_Ninja_ThrowingField_L5;RO_Ninja_ThrownTechnique_L5;RO_Ninja_ShadowJump_L5;RO_Ninja_MistSlash_L5;RO_Ninja_NinpouBolt_L5;RO_Ninja_ShadowJump_L9_DamageBonus;RO_Ninja_ThrowingArt_L5;RO_Ninja_ThrowingMastery_Scale_L5" />
           <attribute id="ProgressionType" type="uint8" value="1" />
           <attribute id="TableUUID" type="guid" value="fedc62af-817a-47b8-abf2-0a8de2694f70" />
           <attribute id="UUID" type="guid" value="2bfc06eb-ecf0-49eb-b80a-0dd466862f90" />
