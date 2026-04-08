@@ -324,6 +324,9 @@
     <content contentuid="h4ninjarevtatg0001" version="1">Reverse Tatami</content>
     <content contentuid="h4ninjarevtatg0002" version="1">When targeted by a ranged or spell attack, spend your Reaction and 2 MP to raise your AC by 3 against that attack.</content>
     <content contentuid="h4ninjarevtatg0003" version="1">Learned the art of Reverse Tatami. When targeted by a ranged or spell attack, you may spend your Reaction and 2 MP to gain +3 AC against the triggering attack.</content>
+    <content contentuid="h4ninjashadowslashg0001" version="1">Shadow Slash</content>
+    <content contentuid="h4ninjashadowslashg0002" version="1">Cut through the distance and strike a target within 9m with your melee weapon. Costs 3 Mana Points.</content>
+    <content contentuid="h4ninjashadowslashg0003" version="1">Learned Shadow Slash. Strike a target within 9m with your melee weapon, closing the gap in an instant. Costs 3 Mana Points.</content>
   </contentList>
 
 

@@ -811,7 +811,7 @@
           {
             "character_level": 5,
             "effects": {
-              "if_attack_still_hits_reduce_damage_by": "1d4"
+              "if_attack_still_hits_reduce_damage_by": "1d6"
             }
           },
           {
@@ -859,7 +859,7 @@
             "character_level": 9,
             "effects": {
               "if_target_is_isolated_or_conditioned": "Gain Invisibility until end of turn or until attacking",
-              "bonus_damage_against_conditioned_targets": "1d6"
+              "bonus_damage_against_conditioned_targets": "1d10"
             }
           }
         ]
